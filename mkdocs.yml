@@ -1,0 +1,85 @@
+site_name: Manager Brain
+site_description: Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA
+site_url: https://manager-brain.github.io
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Modo claro
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Modo escuro
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: pt
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+nav:
+  - Home: INDEX.md
+  - Produto:
+    - O que é o Manager: _shared/produto.md
+    - Arquitetura: _shared/arquitetura.md
+    - Padrões: _shared/padroes.md
+  - Times:
+    - Tecnologia (Marvel): _shared/time-tecnologia.md
+    - Marketing (HIMYM): _shared/time-marketing.md
+    - Gestão (Suits): _shared/time-gestao.md
+  - Features — Gestor:
+    - Home: features/home/README.md
+    - Colaboradores: features/colaboradores/README.md
+    - Relatórios IA: features/relatorios/README.md
+    - Organização: features/hierarquia/README.md
+  - Features — Colaborador:
+    - Meu Painel: features/meu-painel/README.md
+    - Meus Relatórios: features/meus-relatorios/README.md
+    - Meu Perfil: features/meu-perfil/README.md
+  - Relatórios — Detalhes:
+    - Pipeline Técnico: features/relatorios/pipeline.md
+    - Contrato JSON: features/relatorios/contrato-relatorio-json.md
+    - Histórias: features/relatorios/historias.md
+    - Testes: features/relatorios/testes.md
+  - Componentes:
+    - Agent Desktop: features/agent/README.md
+    - Tours: features/tour/README.md
+  - Donna:
+    - Pendências: donna/pendencias.md
+    - Diário: donna/diario.md
+    - Notas: donna/notas.md
+  - Sprint: sprint/atual.md
