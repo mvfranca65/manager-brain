@@ -1,0 +1,2577 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/features/agent-android-jornada-v2/design-spec/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Design spec - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#0-mudanca-de-identidade-decisao-central" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Design spec
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-mudanca-de-identidade-decisao-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Mudança de identidade — decisão central
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0. Mudança de identidade — decisão central">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-proposta-decisao-final-pendente-de-stevemarcos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming — PROPOSTA, decisão final pendente de @Steve/Marcos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-tabela-de-vocabulario-texto-velho-texto-novo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Tabela de vocabulário — texto velho → texto novo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-design-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Design tokens
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Design tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Cores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-tipografia-roboto-fonte-padrao-android-sem-custom-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Tipografia (Roboto — fonte padrão Android, sem custom font)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-espacamento-dp-grid-base-4dp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Espaçamento (dp) — grid base 4dp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-raio-de-borda-dp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Raio de borda (dp)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-icones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Ícones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tela-1-refino-1-sem-cartao-decisao-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Tela 1 — Refino 1 "Sem cartão": DECISÃO FINAL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tela 1 — Refino 1 &#34;Sem cartão&#34;: DECISÃO FINAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-refino-1-sem-cartao-decisao-final-escolhido-pelo-marcos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Refino 1 — "Sem cartão" (DECISÃO FINAL — escolhido pelo Marcos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-refino-2-hero-solto-superficie-minima-no-formulario-descartado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Refino 2 — "Hero solto + superfície mínima no formulário" (DESCARTADO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-nota-de-implementacao-para-sam-o-bug-de-centralizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Nota de implementação para @Sam — o bug de centralização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-arquivo-historico-comparacao-original-a-vs-b-nao-usar-mais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Arquivo histórico — comparação original A vs. B (não usar mais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tela-2-resolvendo-o-loader-solto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tela 2 — resolvendo o loader solto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tela-3-substituindo-o-alertdialog-cru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Tela 3 — substituindo o AlertDialog cru
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-tela-de-permissoes-nova-o-que-faltava" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Tela de permissões (nova) — o que faltava
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tela-4-hierarquia-de-verdade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Tela 4 — hierarquia de verdade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Tela 4 — hierarquia de verdade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-estrutura-3-blocos-10-linhas-de-informacao-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Estrutura (3 blocos, ~10 linhas de informação total)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-os-3-estados-do-hero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Os 3 estados do hero
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-estados-adicionais-fora-das-4-telas-originais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Estados adicionais fora das 4 telas originais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Estados adicionais fora das 4 telas originais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-erro-de-matricula-invalida-tela-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Erro de matrícula inválida (Tela 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-sem-conexao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Sem conexão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-fluxo-de-permissoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Fluxo de permissões
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-especificacao-de-componentes-para-sam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Especificação de componentes (para @Sam)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Especificação de componentes (para @Sam)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-herostatuscard-novo-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 HeroStatusCard (novo componente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-permissionchecklistrow-novo-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 PermissionChecklistRow (novo componente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-inlinefielderror-ajuste-ao-componente-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 InlineFieldError (ajuste ao componente existente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-loadingbutton-ajuste-ao-botao-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 LoadingButton (ajuste ao botão existente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-confirmidentitybottomsheet-substitui-vinculardialogfragments-uso-de-materialalertdialogbuilder-cru-para-a-confirmacao-o-vinculardialogfragment-de-loadingretry-continua-como-dialog-mas-ganha-estilo-consistente-com-os-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 ConfirmIdentityBottomSheet (substitui VincularDialogFragment's uso de MaterialAlertDialogBuilder cru para a confirmação — o VincularDialogFragment de loading/retry continua como dialog, mas ganha estilo consistente com os cards)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-acessibilidade-wcag-aplicado-ao-contexto-mobile-nativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Acessibilidade (WCAG aplicado ao contexto mobile nativo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-resumo-de-desvios-do-design-system-do-portal-e-por-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Resumo de desvios do design system do portal — e por quê
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-pendencias-explicitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Pendências explícitas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Design spec</h1>
+
+<blockquote>
+<p><strong>STATUS:</strong> Layout FECHADO — Variante A + Refino 1 "Sem cartão" + Telas 1, 2, 3 e 4 todas APROVADAS (Marcos, 2026-08-14: "gostei demais"). Único item em aberto: decisão de naming do @Steve/Marcos (§0).
+<strong>DATA:</strong> 2026-08-14 (atualizado no mesmo dia — rodada 3: Refino 1 aplicado também à Tela 2 e aos estados de erro/sem conexão da Tela 1)
+<strong>DONO:</strong> @Groot (UX/UI Designer)
+<strong>PARA:</strong> @Sam (implementação Kotlin), Marcos (decisão), @Steve (naming), @Tony (revisão arquitetural — telas novas de permissão)
+<strong>ESCOPO:</strong> Redesenho completo da jornada visual do Agent Mobile Android (BYOD) — mudança de identidade "agent/monitor" → "proteção/segurança"
+<strong>REFERÊNCIA DE CÓDIGO:</strong> <code>manager-srv-agent-android/app/src/main/kotlin/com/trivion/manageragent/ui/</code> (<code>PermissionDispatchActivity</code>, <code>AgentStatusActivity</code>, <code>VincularDialogFragment</code>, <code>PermissionStepMachine</code>) + <code>res/layout/*.xml</code> + <code>res/values/{colors,strings}.xml</code></p>
+</blockquote>
+<hr />
+<h2 id="0-mudanca-de-identidade-decisao-central">0. Mudança de identidade — decisão central<a class="headerlink" href="#0-mudanca-de-identidade-decisao-central" title="Permanent link">&para;</a></h2>
+<p><strong>Problema:</strong> o app hoje se apresenta como "MANAGER · AGENT MOBILE" / "Status do Agent" — vocabulário de vigilância corporativa instalado num celular pessoal (BYOD). Marcos pediu que pareça um app de segurança/proteção, não um observador.</p>
+<p><strong>Direção adotada em todo o redesenho:</strong>
+- Nunca usar "Agent", "Monitor", "Observador", "Monitoramento" na UI.
+- Vocabulário de referência: apps de segurança pessoal (antivírus). Estado positivo dominante no topo ("Proteção ativa"), com um escudo como ícone-âncora em toda a jornada.
+- Detalhes técnicos (fila local, sessão, ambiente staging/prod) saem da camada de linguagem principal e vão para uma seção secundária "Detalhes técnicos" — <strong>mesmo padrão já usado no relatório semanal do Manager</strong> (Score IA visível vs. Detalhes Técnicos escondidos). Reaproveitar esse idioma do produto em vez de inventar um novo.
+- Cor de estado desacoplada do indigo de marca: verde = protegido, âmbar = atenção, vermelho = interrompido — como qualquer app de segurança. O indigo continua como cor de ação/marca (botões, links, ícone de app). <strong>Desvio deliberado</strong> do "só indigo" do portal — justificado porque o portal é uma ferramenta de gestão (não precisa de semáforo de segurança) e o app mobile precisa comunicar estado de proteção à primeira vista, sem o colaborador ter que ler texto.</p>
+<h3 id="naming-proposta-decisao-final-pendente-de-stevemarcos">Naming — PROPOSTA, decisão final pendente de @Steve/Marcos<a class="headerlink" href="#naming-proposta-decisao-final-pendente-de-stevemarcos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Opção</th>
+<th>Nome exibido</th>
+<th>Rationale</th>
+<th>Risco</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A (recomendada)</strong></td>
+<td><strong>iManager Proteção</strong></td>
+<td>Mantém o vínculo com "iManager", nome que o gestor já comunicou ao colaborador no convite de instalação (<code>_shared/produto.md</code> §1 — iManager é o nome comercial). Troca "Agent" por "Proteção", que é o que muda a percepção. Menor risco de confundir o colaborador que já ouviu falar de "iManager" pelo RH.</td>
+<td>Ainda carrega "Manager" na raiz — se o colaborador pesquisar o nome, chega ao produto de gestão</td>
+</tr>
+<tr>
+<td><strong>B (alternativa)</strong></td>
+<td><strong>Trivion Shield</strong></td>
+<td>Rompe completamente com "Manager", 100% linguagem de segurança, mais parecido com Malwarebytes/Norton.</td>
+<td>Quebra a ponte com o que o colaborador já ouviu no onboarding — pode parecer um app diferente, gerando desconfiança ("por que tem um app que eu não conheço no meu celular?")</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recomendação do @Groot: Opção A.</strong> Nos mockups abaixo, o nome usado é <strong>"iManager Proteção"</strong> como placeholder de trabalho — não é decisão final. <code>@Sam</code> não deve hardcodar strings de nome de produto sem confirmação de @Steve/Marcos.</p>
+<p><strong>Pendência explícita:</strong> nome final, se muda o ícone do launcher/label do pacote (<code>app_name</code> em <code>strings.xml</code>), e se afeta o texto que o RH/gestor usa para pedir a instalação (fora do escopo deste redesenho — comunicação/onboarding é @Steve).</p>
+<hr />
+<h2 id="1-tabela-de-vocabulario-texto-velho-texto-novo">1. Tabela de vocabulário — texto velho → texto novo<a class="headerlink" href="#1-tabela-de-vocabulario-texto-velho-texto-novo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>String resource</th>
+<th>Texto atual</th>
+<th>Texto novo</th>
+<th>Onde aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>permission_brand</code></td>
+<td><code>Manager · Agent Mobile</code></td>
+<td><code>IMANAGER · PROTEÇÃO</code> (eyebrow, uppercase, letterspacing)</td>
+<td>Tela 1, topo do card</td>
+</tr>
+<tr>
+<td><code>permission_title</code></td>
+<td><code>Configure seu acesso</code></td>
+<td><code>Ativar proteção</code></td>
+<td>Tela 1, título</td>
+</tr>
+<tr>
+<td><code>permission_subtitle</code></td>
+<td><code>Informe seus dados para vincular este aparelho à sua empresa.</code></td>
+<td><code>Confirme sua identidade para ativar a proteção neste aparelho.</code></td>
+<td>Tela 1, subtítulo</td>
+</tr>
+<tr>
+<td><code>permission_empresa_prefix</code></td>
+<td><code>Empresa:</code> (bug: falta espaço na composição atual, verificar concatenação em <code>PermissionDispatchActivity.kt:139</code>)</td>
+<td><code>Empresa ·</code> (separador visual, não dois-pontos colado)</td>
+<td>Chip da empresa</td>
+</tr>
+<tr>
+<td><code>permission_identificador_hint</code></td>
+<td><code>Matrícula ou e-mail funcional</code></td>
+<td><code>Matrícula ou e-mail funcional</code> (mantido — já é claro)</td>
+<td>Campo de input</td>
+</tr>
+<tr>
+<td><code>permission_termos_prefix</code> + <code>permission_termos_link</code></td>
+<td><code>Li e aceito os</code> + <code>Termos de Uso</code></td>
+<td><code>Li e aceito os</code> + <code>Termos de Uso e Privacidade</code></td>
+<td>Checkbox</td>
+</tr>
+<tr>
+<td><code>permission_botao_continuar</code></td>
+<td><code>Continuar</code></td>
+<td><code>Ativar proteção</code></td>
+<td>Botão primário</td>
+</tr>
+<tr>
+<td><code>permission_validando</code></td>
+<td><code>Validando identificador…</code></td>
+<td><code>Confirmando identidade…</code></td>
+<td>Estado de loading (agora dentro do botão, ver §4)</td>
+</tr>
+<tr>
+<td><code>permission_confirmar_colaborador_titulo</code></td>
+<td><code>Confirmar colaborador</code></td>
+<td><code>Confirmar identidade</code></td>
+<td>Bottom sheet (era AlertDialog)</td>
+</tr>
+<tr>
+<td><code>permission_confirmar_colaborador_mensagem</code></td>
+<td><code>Você é %1$s?</code></td>
+<td><code>Você é %1$s?</code> (mantido)</td>
+<td>Bottom sheet</td>
+</tr>
+<tr>
+<td><code>permission_confirmar_colaborador_sim</code></td>
+<td><code>Sim, sou eu</code></td>
+<td><code>Sim, sou eu</code> (mantido)</td>
+<td>Botão primário do sheet</td>
+</tr>
+<tr>
+<td><code>permission_confirmar_colaborador_nao</code></td>
+<td><code>Não, corrigir</code></td>
+<td><code>Não, corrigir</code> (mantido)</td>
+<td>Botão secundário do sheet</td>
+</tr>
+<tr>
+<td><code>permission_erro_id_nao_encontrado</code></td>
+<td><code>Identificador não encontrado. Verifique com seu gestor.</code></td>
+<td>mantido, mas exibido <strong>inline no campo</strong> (erro do <code>TextInputLayout</code>), não como texto solto abaixo do botão</td>
+<td>Tela 1, estado de erro</td>
+</tr>
+<tr>
+<td><code>permission_step_accessibility</code></td>
+<td><code>Habilite o Serviço de Acessibilidade do ManagerAgent</code></td>
+<td><code>Ative a permissão de Acessibilidade</code> (some a referência a "ManagerAgent" — ver §6, tela de checklist)</td>
+<td>Tela de permissões (nova)</td>
+</tr>
+<tr>
+<td><code>permission_step_usage_stats</code></td>
+<td><code>Permita acesso ao histórico de uso de apps</code></td>
+<td><code>Permita ver quais apps você usa</code></td>
+<td>Tela de permissões</td>
+</tr>
+<tr>
+<td><code>permission_step_notification</code></td>
+<td><code>Permita notificações do ManagerAgent</code></td>
+<td><code>Permita notificações</code></td>
+<td>Tela de permissões</td>
+</tr>
+<tr>
+<td><code>permission_step_phone</code></td>
+<td><code>Permita acesso ao estado do telefone</code></td>
+<td><code>Permita identificar chamadas (sem número)</code></td>
+<td>Tela de permissões</td>
+</tr>
+<tr>
+<td><code>permission_step_oem</code></td>
+<td><code>Configure a inicialização automática do ManagerAgent</code></td>
+<td><code>Mantenha a proteção ativa ao reiniciar o aparelho</code></td>
+<td>Tela de permissões</td>
+</tr>
+<tr>
+<td><code>vincular_processing</code></td>
+<td><code>Vinculando este aparelho</code></td>
+<td><code>Ativando proteção</code></td>
+<td>Bottom sheet de vínculo</td>
+</tr>
+<tr>
+<td><code>vincular_processing_description</code></td>
+<td><code>Mantenha esta tela aberta...</code></td>
+<td><code>Mantenha esta tela aberta. Isso leva poucos segundos.</code></td>
+<td>idem</td>
+</tr>
+<tr>
+<td><code>vincular_failed</code></td>
+<td><code>Não foi possível concluir o vínculo</code></td>
+<td><code>Não conseguimos ativar a proteção</code></td>
+<td>idem, estado de falha</td>
+</tr>
+<tr>
+<td><code>status_title</code></td>
+<td><code>Status do Agent</code></td>
+<td><em>(some como título de texto — vira o hero de estado, ver §5)</em></td>
+<td>Tela 4</td>
+</tr>
+<tr>
+<td><code>status_service_running</code></td>
+<td><code>Serviço: em execução</code></td>
+<td><code>Proteção em tempo real: ativa</code> (linguagem antivírus) — vai para seção "Atividade"</td>
+<td>Tela 4</td>
+</tr>
+<tr>
+<td><code>status_service_waiting</code></td>
+<td><code>Serviço: aguardando inicialização</code></td>
+<td><code>Proteção iniciando…</code></td>
+<td>Tela 4</td>
+</tr>
+<tr>
+<td><code>status_session_unlocked</code> / <code>_locked</code></td>
+<td><code>Sessão: ativa</code> / <code>Sessão: bloqueada</code></td>
+<td><code>Conexão com a empresa: ativa</code> / <code>em espera</code> — renomeado porque "sessão" é jargão técnico sem sentido pro colaborador</td>
+<td>Tela 4, "Detalhes técnicos"</td>
+</tr>
+<tr>
+<td><code>status_permissions_local</code></td>
+<td><code>Permissões: verifique nas configurações do aparelho</code></td>
+<td><strong>substituído por checklist real</strong> — cada permissão com status individual + ação "Corrigir" (ver §5)</td>
+<td>Tela 4</td>
+</tr>
+<tr>
+<td><code>status_queue</code></td>
+<td><code>Fila local: %1$d eventos</code></td>
+<td><code>Dados aguardando envio: %1$d</code> — vai para "Detalhes técnicos", não é mais frase solta</td>
+<td>Tela 4, técnico</td>
+</tr>
+<tr>
+<td><code>status_refresh</code></td>
+<td><code>Atualizar diagnóstico</code></td>
+<td><code>Verificar agora</code></td>
+<td>Botão primário</td>
+</tr>
+<tr>
+<td><code>status_export</code></td>
+<td><code>Exportar diagnóstico</code></td>
+<td><code>Exportar diagnóstico para o suporte</code></td>
+<td>Botão secundário</td>
+</tr>
+<tr>
+<td><em>(sem string hoje)</em></td>
+<td>—</td>
+<td><code>Proteção ativa</code> / <code>Proteção parcial</code> / <code>Proteção interrompida</code></td>
+<td>Hero de estado, novo (ver §5)</td>
+</tr>
+<tr>
+<td><em>(sem string hoje)</em></td>
+<td>—</td>
+<td><code>Última verificação: há %1$s</code></td>
+<td>Hero, novo</td>
+</tr>
+<tr>
+<td><em>(sem string hoje)</em></td>
+<td>—</td>
+<td><code>Sem conexão com a internet</code></td>
+<td>Banner offline, novo (ver §7)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Termos banidos em qualquer texto novo:</strong> "Agent", "Monitor", "Monitoramento", "Observador", "Vigilância", "Rastreamento". Termo preferido para a ação de fundo: <strong>"proteção"</strong>, <strong>"verificação"</strong>, <strong>"sincronização"</strong>.</p>
+<hr />
+<h2 id="2-design-tokens">2. Design tokens<a class="headerlink" href="#2-design-tokens" title="Permanent link">&para;</a></h2>
+<h3 id="21-cores">2.1 Cores<a class="headerlink" href="#21-cores" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Hex</th>
+<th>Uso</th>
+<th>Origem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>color.brand.indigo</code></td>
+<td><code>#4F46E5</code></td>
+<td>Ações primárias, links, ícone do app, marca</td>
+<td>Portal (mantido)</td>
+</tr>
+<tr>
+<td><code>color.brand.indigoDark</code></td>
+<td><code>#3730A3</code></td>
+<td>Estado pressed de botões indigo</td>
+<td>Portal (mantido)</td>
+</tr>
+<tr>
+<td><code>color.brand.indigoTint</code></td>
+<td><code>#EEF2FF</code></td>
+<td>Fundo de chip, fundo de ícone secundário</td>
+<td>Portal (mantido, já existe como <code>manager_chip_background</code>)</td>
+</tr>
+<tr>
+<td><code>color.state.safe</code></td>
+<td><code>#16A34A</code></td>
+<td>Texto/ícone do estado "Proteção ativa"</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td><code>color.state.safeBg</code></td>
+<td><code>#F0FDF4</code></td>
+<td>Fundo do hero card no estado seguro</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td><code>color.state.safeBorder</code></td>
+<td><code>#BBF7D0</code></td>
+<td>Borda do hero card no estado seguro</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td><code>color.state.warning</code></td>
+<td><code>#D97706</code></td>
+<td>Texto/ícone do estado "Proteção parcial"</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td><code>color.state.warningBg</code></td>
+<td><code>#FFFBEB</code></td>
+<td>Fundo do hero card no estado de atenção</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td><code>color.state.warningBorder</code></td>
+<td><code>#FDE68A</code></td>
+<td>Borda do hero card no estado de atenção</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td><code>color.state.danger</code></td>
+<td><code>#DC2626</code></td>
+<td>Texto/ícone do estado "Proteção interrompida"</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td><code>color.state.dangerBg</code></td>
+<td><code>#FEF2F2</code></td>
+<td>Fundo do hero card no estado de erro</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td><code>color.state.dangerBorder</code></td>
+<td><code>#FECACA</code></td>
+<td>Borda do hero card no estado de erro</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td><code>color.bg.screen</code></td>
+<td><code>#F8FAFC</code></td>
+<td>Fundo de tela</td>
+<td>Portal (mantido, <code>manager_background</code>)</td>
+</tr>
+<tr>
+<td><code>color.bg.card</code></td>
+<td><code>#FFFFFF</code></td>
+<td>Fundo de card</td>
+<td>Portal (mantido)</td>
+</tr>
+<tr>
+<td><code>color.border.default</code></td>
+<td><code>#E5E7EB</code></td>
+<td>Borda de cards secundários</td>
+<td>Portal (mantido)</td>
+</tr>
+<tr>
+<td><code>color.text.primary</code></td>
+<td><code>#1E293B</code></td>
+<td>Títulos — <strong>alinhado ao header do portal</strong> (<code>#1e293b</code>); código atual usa <code>#0F172A</code>, unificar nesta leva</td>
+<td>Ajuste de paridade</td>
+</tr>
+<tr>
+<td><code>color.text.body</code></td>
+<td><code>#334155</code></td>
+<td>Corpo de texto</td>
+<td>Ajuste (levemente mais escuro que o <code>manager_muted</code> atual <code>#475569</code> para textos de leitura primária, ex. descrição do hero)</td>
+</tr>
+<tr>
+<td><code>color.text.muted</code></td>
+<td><code>#64748B</code></td>
+<td>Texto secundário, legendas</td>
+<td>Ajuste leve sobre <code>manager_muted</code> (<code>#475569</code>) para dar mais contraste hierárquico entre "corpo" e "muted"</td>
+</tr>
+<tr>
+<td><code>color.divider.subtle</code></td>
+<td><code>#F1F5F9</code></td>
+<td>Fundo de linha de checklist / seção zebra</td>
+<td><strong>Novo</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-tipografia-roboto-fonte-padrao-android-sem-custom-font">2.2 Tipografia (Roboto — fonte padrão Android, sem custom font)<a class="headerlink" href="#22-tipografia-roboto-fonte-padrao-android-sem-custom-font" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Estilo</th>
+<th>Tamanho (sp)</th>
+<th>Peso</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type.eyebrow</code></td>
+<td>11sp</td>
+<td>700, letter-spacing 1.5sp, uppercase</td>
+<td>"IMANAGER · PROTEÇÃO"</td>
+</tr>
+<tr>
+<td><code>type.heroTitle</code></td>
+<td>24sp</td>
+<td>700</td>
+<td>"Proteção ativa" / "Ativar proteção"</td>
+</tr>
+<tr>
+<td><code>type.screenTitle</code></td>
+<td>20sp</td>
+<td>700</td>
+<td>Títulos de card secundário ("Permissões", "Dispositivo")</td>
+</tr>
+<tr>
+<td><code>type.body</code></td>
+<td>15sp</td>
+<td>400, line-height 22sp</td>
+<td>Textos de descrição</td>
+</tr>
+<tr>
+<td><code>type.bodyMuted</code></td>
+<td>14sp</td>
+<td>400, line-height 20sp</td>
+<td>Subtítulos, legendas</td>
+</tr>
+<tr>
+<td><code>type.label</code></td>
+<td>13sp</td>
+<td>600</td>
+<td>Rótulos de linha ("Empresa", "Versão")</td>
+</tr>
+<tr>
+<td><code>type.button</code></td>
+<td>16sp</td>
+<td>600</td>
+<td>Texto de botão</td>
+</tr>
+<tr>
+<td><code>type.caption</code></td>
+<td>12sp</td>
+<td>400</td>
+<td>Versão do app, rodapé</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-espacamento-dp-grid-base-4dp">2.3 Espaçamento (dp) — grid base 4dp<a class="headerlink" href="#23-espacamento-dp-grid-base-4dp" title="Permanent link">&para;</a></h3>
+<p><code>4, 8, 12, 16, 20, 24, 28, 32, 40</code></p>
+<ul>
+<li>Padding de tela: <code>24dp</code> (mantido do código atual)</li>
+<li>Padding de card hero: <code>28dp</code></li>
+<li>Padding de card secundário: <code>20dp</code></li>
+<li>Gap entre seções verticais: <code>20dp</code></li>
+<li>Gap entre linhas dentro de um card: <code>14dp</code></li>
+<li>Altura mínima de toque (botões, linhas clicáveis): <code>48dp</code> (regra <code>mobile-design</code> — nunca abaixo de 44-48dp)</li>
+</ul>
+<h3 id="24-raio-de-borda-dp">2.4 Raio de borda (dp)<a class="headerlink" href="#24-raio-de-borda-dp" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Raio</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hero card (estado de proteção)</td>
+<td><code>20dp</code></td>
+<td>Maior que o portal (14px) — deliberado, para dar sensação mais suave/pessoal, coerente com apps de segurança consumer, não dashboard corporativo</td>
+</tr>
+<tr>
+<td>Card secundário (Dispositivo, Permissões, Detalhes técnicos)</td>
+<td><code>16dp</code></td>
+<td>Próximo do portal, mantém parentesco visual</td>
+</tr>
+<tr>
+<td>Botão primário/secundário</td>
+<td><code>14dp</code></td>
+<td>Alinhado ao portal (<code>border-radius: 14px</code>)</td>
+</tr>
+<tr>
+<td>Chip</td>
+<td><code>999dp</code> (pill)</td>
+<td>Mantido do código atual (<code>Chip</code> do Material Components)</td>
+</tr>
+<tr>
+<td>Bottom sheet (Tela 3)</td>
+<td><code>20dp</code> só nos cantos superiores</td>
+<td>Padrão Material bottom sheet</td>
+</tr>
+<tr>
+<td>Input (TextInputLayout outlined)</td>
+<td><code>12dp</code></td>
+<td>Mantido do código atual</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-icones">2.5 Ícones<a class="headerlink" href="#25-icones" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ícone-âncora: <strong>escudo</strong> (<code>shield</code>), estilo outline com preenchimento sutil no estado ativo. Usado no launcher (nova proposta de ícone — fora do escopo de asset final, mas a direção é: escudo indigo sobre fundo branco/claro, sem elementos de "olho" ou "lupa" que reforcem vigilância).</li>
+<li>Tamanho do ícone hero: <code>72dp</code> (badge circular)</li>
+<li>Tamanho de ícones de linha (checklist, permissões): <code>24dp</code></li>
+<li>Biblioteca recomendada para @Sam: Material Symbols (<code>shield</code>, <code>check_circle</code>, <code>warning</code>, <code>error</code>, <code>sync</code>, <code>lock</code>, <code>visibility_off</code> — evitar <code>remove_red_eye</code>/<code>visibility</code> em qualquer contexto, ironia óbvia com vigilância)</li>
+</ul>
+<hr />
+<h2 id="3-tela-1-refino-1-sem-cartao-decisao-final">3. Tela 1 — Refino 1 "Sem cartão": DECISÃO FINAL<a class="headerlink" href="#3-tela-1-refino-1-sem-cartao-decisao-final" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Fechado 2026-08-14 (rodada 3):</strong> Marcos escolheu o <strong>Refino 1 "Sem cartão"</strong> — "gostei demais". É a decisão final de layout da Tela 1. O mesmo tratamento (sem cartão, centralização vertical real, 2 clusters com respiro desigual, rodapé de versão ancorado fora do fluxo) foi replicado na <strong>Tela 2</strong> (§4) e nos dois estados adicionais de erro/sem conexão da Tela 1 (§8.1-8.2). Telas 3 e 4 permanecem congeladas, sem alteração, desde a aprovação de 2026-08-14 (rodada 2).</p>
+<p>Histórico da decisão: rodada 1 comparou Variante A ("Shield Hero") vs. Variante B ("Split Panel") → A aprovada. Rodada 2 comparou Refino 1 ("Sem cartão") vs. Refino 2 ("Hero solto + superfície mínima") dentro da Variante A → Refino 1 aprovado. Rodada 3 (esta) estendeu o Refino 1 às demais telas de Tela 1 que ainda usavam o card antigo.</p>
+</blockquote>
+<p>O diagnóstico por trás do feedback tem duas causas distintas, e os dois refinos abaixo atacam as duas:</p>
+<ol>
+<li><strong>Densidade de conteúdo:</strong> o card original (ver §3.3) empilhava 9 elementos num único container com borda (ícone, eyebrow, título, subtítulo, chip, campo, checkbox, botão, rodapé). Não é o <em>tamanho</em> do card que pesa — é a quantidade de elementos visuais distintos dentro dele.</li>
+<li><strong>Centralização vertical real:</strong> no mockup original, o bloco de conteúdo ficava ancorado perto do topo da tela (<code>padding-top</code> fixo), deixando espaço morto embaixo — por isso não parecia centralizado, mesmo com conteúdo relativamente compacto.</li>
+</ol>
+<h3 id="31-refino-1-sem-cartao-decisao-final-escolhido-pelo-marcos">3.1 Refino 1 — "Sem cartão" (DECISÃO FINAL — escolhido pelo Marcos)<a class="headerlink" href="#31-refino-1-sem-cartao-decisao-final-escolhido-pelo-marcos" title="Permanent link">&para;</a></h3>
+<p>O card é dissolvido por completo: sem borda, sem sombra, sem cor de fundo diferenciada — o conteúdo senta direto no fundo da tela (<code>color.bg.screen</code>). Mudanças em relação ao card original:</p>
+<ul>
+<li><strong>Chip da empresa removido.</strong> A informação da empresa entra dentro do próprio subtítulo: <em>"Confirme sua identidade para proteger este aparelho na iManager Tecnologia."</em> — isso elimina um componente inteiro (chip = borda + fundo + padding próprios) sem perder a informação.</li>
+<li><strong>Ícone reduzido</strong> de <code>72dp</code> (badge circular com fundo) para <code>44dp</code> solto, sem badge/fundo circular — menos "objeto" visual, mais integrado ao texto.</li>
+<li><strong>Agrupamento em 2 clusters</strong> com espaçamento desigual: dentro de cada cluster o espaçamento é apertado (<code>8-10dp</code>, elementos relacionados), <em>entre</em> os clusters o espaçamento é generoso (<code>40dp</code>) — cluster 1 = identidade (ícone + eyebrow + título + subtítulo), cluster 2 = ação (campo + checkbox + botão). Esse contraste de espaçamento é o que faz o olho ler "duas coisas simples", não "uma pilha de nove".</li>
+<li><strong>Centralização vertical real:</strong> o bloco inteiro (os 2 clusters) fica dentro de um container <code>justify-content: center</code> que ocupa a altura útil da tela (descontando status bar). O rodapé de versão sai do fluxo do bloco e fica fixado a <code>22dp</code> do rodapé da tela (<code>position: absolute</code>, ancorado no container pai, não no bloco centralizado) — assim o texto de versão nunca "puxa" o centro do bloco pra cima.</li>
+</ul>
+<p><strong>Este é o padrão canônico para toda a Tela 1 e a Tela 2 a partir de agora</strong> — aplica-se a:
+- Tela 1, estado padrão (§ acima)
+- Tela 1, estado de erro de identificador — mesmo layout, campo em estado de erro nativo do <code>TextInputLayout</code> (ver §8.1)
+- Tela 1, estado sem conexão — mesmo layout, banner de offline acima do bloco centralizado, botão desabilitado (ver §8.2)
+- Tela 2, "Confirmando identidade" — mesmo layout, campo e checkbox em <code>alpha 0.5</code>, botão em estado de loading (ver §4)</p>
+<h3 id="32-refino-2-hero-solto-superficie-minima-no-formulario-descartado">3.2 Refino 2 — "Hero solto + superfície mínima no formulário" (DESCARTADO)<a class="headerlink" href="#32-refino-2-hero-solto-superficie-minima-no-formulario-descartado" title="Permanent link">&para;</a></h3>
+<p>Mesma centralização vertical e o mesmo cluster de identidade solto no fundo (ícone <code>44dp</code>, eyebrow, título, subtítulo com empresa embutida). A diferença: o <strong>grupo de ação</strong> (campo + checkbox + botão) ganha uma superfície sutil — fundo branco puro (<code>#FFFFFF</code>) contra o fundo levemente acinzentado da tela (<code>#F8FAFC</code>), raio <code>16dp</code>, <strong>sem borda, sem sombra</strong>. O contraste de cor (branco vs. cinza muito claro) já é suficiente para o olho perceber "isso é um grupo", sem precisar de linha ou elevação.</p>
+<p>Isso reduz o card de 9 elementos para 3 (campo, checkbox, botão) — a hero (ícone/título/subtítulo) deixa de fazer parte do "container" visualmente.</p>
+<p><strong>Diferença prática entre os dois refinos:</strong> Refino 1 é mais radical (zero superfície em toda a tela); Refino 2 mantém uma pista visual mínima de agrupamento em torno da ação. Ambos resolvem a densidade e a centralização.</p>
+<p><strong>Decisão: Refino 1.</strong> Marcos escolheu ao ver os dois lado a lado em <code>mockups.html</code> ("gostei demais"). O Refino 2 não é mais uma opção viva — fica registrado no HTML só como histórico da comparação, marcado como "descartado".</p>
+<h3 id="33-nota-de-implementacao-para-sam-o-bug-de-centralizacao">3.3 Nota de implementação para @Sam — o bug de centralização<a class="headerlink" href="#33-nota-de-implementacao-para-sam-o-bug-de-centralizacao" title="Permanent link">&para;</a></h3>
+<p>O XML atual (<code>activity_permission_dispatch.xml:15-18</code>) já declara <code>android:layout_gravity="center_vertical"</code> no <code>MaterialCardView</code> dentro do <code>FrameLayout</code>. Se em staging o card não pareceu centralizado, a causa provável não é a gravity em si, mas o <strong>volume de conteúdo somado ao padding fixo</strong> — um card com 9 elementos empilhados frequentemente já ocupa quase toda a altura útil da tela, tornando "centralizado" imperceptível na prática. Com o conteúdo reduzido pelos refinos acima, a centralização volta a ser visualmente óbvia. Ainda assim, ao implementar:</p>
+<ul>
+<li>Trocar o <code>FrameLayout</code> + <code>layout_gravity="center_vertical"</code> por um <code>ConstraintLayout</code> com o grupo de conteúdo ancorado por <code>app:layout_constraintTop_toTopOf</code> + <code>app:layout_constraintBottom_toTopOf</code> num guideline, ou por <code>app:layout_constraintVertical_bias="0.5"</code> — mais previsível do que gravity dentro de <code>NestedScrollView</code>/<code>FrameLayout</code> quando o teclado abre (o teclado reduz a altura útil; vale testar os dois refinos com o teclado aberto, já que o campo de input é o elemento que o dispara).</li>
+<li>O rodapé de versão (<code>tvAppVersion</code>) deixa de ser filho do grupo centralizado e passa a ser ancorado direto no <code>ConstraintLayout</code> raiz, <code>app:layout_constraintBottom_toBottomOf="parent"</code> com margem fixa — para não competir pelo centro vertical com o resto do conteúdo.</li>
+</ul>
+<h3 id="34-arquivo-historico-comparacao-original-a-vs-b-nao-usar-mais">3.4 Arquivo histórico — comparação original A vs. B (não usar mais)<a class="headerlink" href="#34-arquivo-historico-comparacao-original-a-vs-b-nao-usar-mais" title="Permanent link">&para;</a></h3>
+<p>A primeira rodada deste redesenho comparou a Variante A ("Shield Hero", card único) com uma Variante B ("Split Panel", bloco de cor sólida no topo + formulário abaixo, mais institucional/MDM). Marcos aprovou a Variante A nessa comparação. A Variante B foi removida do <code>mockups.html</code> nesta rodada — não é mais uma opção viva, fica só registrada aqui para histórico da decisão.</p>
+<hr />
+<h2 id="4-tela-2-resolvendo-o-loader-solto">4. Tela 2 — resolvendo o loader solto<a class="headerlink" href="#4-tela-2-resolvendo-o-loader-solto" title="Permanent link">&para;</a></h2>
+<p><strong>Problema original:</strong> spinner ciano solto embaixo do botão "Continuar", desconectado da ação.</p>
+<p><strong>Solução adotada:</strong> o próprio botão primário assume estado de loading, dentro do layout sem cartão do Refino 1 (§3.1) — mesmos 2 clusters, mesma centralização vertical, mesmo rodapé de versão ancorado.
+- Texto do botão muda de "Ativar proteção" → "Confirmando identidade…"
+- Ícone de spinner (<code>16dp</code>, branco, mesma cor do texto do botão) aparece à <strong>esquerda do texto</strong>, dentro do botão
+- Botão fica <code>disabled</code> (não clicável, mas mantém a cor indigo em opacidade 100% — não fica cinza, para não parecer "erro"; usar <code>alpha 0.9</code> no texto/ícone é suficiente para indicar estado ocupado)
+- Campo de input e checkbox de termos ficam com <code>alpha 0.5</code> e <code>enabled=false</code> durante o loading — reforça visualmente "isso está em andamento, não mexa"
+- Remove-se completamente o <code>ProgressBar</code> + <code>tvStatus</code> soltos abaixo do botão (<code>activity_permission_dispatch.xml:147-165</code>) — a função desse texto (erro/status) passa a viver <strong>inline no campo</strong> (ver §8.1, "erro de identificador")</p>
+<p>Isso é o padrão nativo de qualquer botão de submit em Material Design (<code>CircularProgressIndicator</code> dentro do <code>MaterialButton</code> via <code>icon</code> + <code>iconGravity=start</code>), sem precisar de view extra nem cor fora da paleta (o ciano do estado atual não faz mais sentido — o spinner agora herda a cor branca do texto do botão).</p>
+<p><strong>Atualizado 2026-08-14 (rodada 3):</strong> esta tela, que já estava aprovada no formato com card, foi refeita no <code>mockups.html</code> sem cartão, para bater com a decisão final do Refino 1 — o card em si nunca fez parte do que Marcos aprovou como "excelente" nessa tela (o elogio era sobre a resolução do loader, não sobre o container). Nenhuma mudança de comportamento, só de container visual.</p>
+<hr />
+<h2 id="5-tela-3-substituindo-o-alertdialog-cru">5. Tela 3 — substituindo o AlertDialog cru<a class="headerlink" href="#5-tela-3-substituindo-o-alertdialog-cru" title="Permanent link">&para;</a></h2>
+<p><strong>Problema original:</strong> <code>MaterialAlertDialogBuilder</code> puro, sem estilização — foge do design system, título/botões no padrão cru do Android.</p>
+<p><strong>Solução adotada:</strong> <code>BottomSheetDialogFragment</code> (Material Components já está na dependência do projeto via <code>com.google.android.material</code>), consistente com o resto da coleção de componentes:
+- Sobe do rodapé da tela, cantos superiores <code>20dp</code>, drag handle (<code>4dp × 32dp</code>, cinza claro) no topo — sinaliza "isso é dispensável/arrastável", mais amigável que um modal bloqueante centralizado
+- Avatar circular com iniciais do nome (<code>56dp</code>, fundo <code>indigoTint</code>, texto indigo) — dá um toque pessoal/humano à confirmação
+- Título "Confirmar identidade" (<code>type.screenTitle</code>)
+- Texto "Você é <strong>{Nome Completo}</strong>?" (nome em negrito)
+- Botão primário full-width "Sim, sou eu" (indigo, <code>14dp</code> de raio) — <strong>no topo</strong>, dentro da zona de alcance do polegar (regra Fitts's Law do <code>mobile-design</code>: ação mais provável primeiro e mais perto do polegar)
+- Botão secundário abaixo, estilo texto (não outlined) "Não, corrigir" — ação menos destrutiva mas menos provável, visualmente mais leve
+- <code>isCancelable = false</code> mantido (mesma regra de negócio atual — não pode ser dispensado tocando fora)</p>
+<hr />
+<h2 id="6-tela-de-permissoes-nova-o-que-faltava">6. Tela de permissões (nova) — o que faltava<a class="headerlink" href="#6-tela-de-permissoes-nova-o-que-faltava" title="Permanent link">&para;</a></h2>
+<p>Hoje o encadeamento de permissões (<code>PermissionStepMachine</code>) manda o colaborador direto para telas do Android Settings, uma atrás da outra, só com uma linha de texto (<code>tvStatus</code>) mudando por trás. Sem tela própria, é desorientador — o colaborador não sabe quantos passos faltam nem por quê.</p>
+<p><strong>Nova tela "Configurando proteção"</strong> (mostrada <strong>antes de cada <code>Intent</code> de Settings ser disparada</strong>, substitui o <code>showStatus()</code> atual):</p>
+<ul>
+<li>Título fixo: "Configurando proteção" (<code>type.screenTitle</code>)</li>
+<li>Indicador de progresso: "Passo 2 de 4" + barra de progresso linear fina (<code>4dp</code> altura, indigo sobre trilho <code>color.divider.subtle</code>)</li>
+<li>Lista checklist vertical dos 4 passos canônicos (+ OEM condicional), cada linha com:</li>
+<li>Ícone de estado à esquerda: <code>check_circle</code> verde (concluído) / círculo indigo preenchido com número (atual) / círculo outline cinza (pendente)</li>
+<li>Texto do passo (vocabulário novo da tabela §1: "Ative a permissão de Acessibilidade" etc.)</li>
+<li>Subtexto de uma linha explicando o "porquê" em linguagem de proteção, ex: <em>"Isso nos permite identificar quando você está protegido durante o uso do aparelho."</em></li>
+<li>Botão primário "Abrir configurações" — dispara o <code>Intent</code> correspondente ao passo atual (mesma lógica de <code>executeStep</code>, só que agora com uma tela intermediária em vez de pular direto)</li>
+<li>Rodapé com link texto "Por que preciso disso?" → abre um modal curto explicando cada permissão em linguagem simples (não é blocker, é FAQ opcional)</li>
+</ul>
+<p>Isso não muda a máquina de estados (<code>PermissionStepMachine.nextStep</code> continua igual) — muda só a apresentação: em vez de <code>showStatus(String)</code> alterar um <code>TextView</code>, a Activity passa a navegar para esta tela de checklist entre cada <code>Intent</code>. <strong>Ajuste arquitetural — @Tony revisa antes de @Sam implementar</strong>, porque isso adiciona uma tela real (hoje é zero-UI entre steps).</p>
+<hr />
+<h2 id="7-tela-4-hierarquia-de-verdade">7. Tela 4 — hierarquia de verdade<a class="headerlink" href="#7-tela-4-hierarquia-de-verdade" title="Permanent link">&para;</a></h2>
+<h3 id="71-estrutura-3-blocos-10-linhas-de-informacao-total">7.1 Estrutura (3 blocos, ~10 linhas de informação total)<a class="headerlink" href="#71-estrutura-3-blocos-10-linhas-de-informacao-total" title="Permanent link">&para;</a></h3>
+<p><strong>Bloco 1 — Hero de estado (dominante, topo)</strong>
+Card grande, cor de fundo/borda conforme estado (§2.1), ícone de escudo <code>72dp</code> como badge:
+1. Ícone de estado (escudo + check / escudo + ! / escudo + x)
+2. Título do estado: "Proteção ativa" / "Proteção parcial" / "Proteção interrompida"
+3. Subtítulo de uma linha com o resumo humano do que está acontecendo
+4. "Última verificação: há 2 min" (ou "há 3 horas" no erro)
+5. <em>(só nos estados atenção/erro)</em> botão de ação dentro do hero: "Corrigir agora" / "Tentar novamente"</p>
+<p><strong>Bloco 2 — "Dispositivo" (card secundário, raio 16dp)</strong>
+6. Empresa vinculada (ex. "iManager Tecnologia")
+7. Identificador vinculado (matrícula/e-mail, mascarado parcialmente: <code>joao.***@empresa.com</code>)
+8. Versão do app (<code>iManager Proteção 1.0.13</code>) — ambiente (staging/prod) só aparece aqui em builds não-prod, como badge pequeno, nunca em prod</p>
+<p><strong>Bloco 3 — "Permissões" (card secundário, raio 16dp)</strong>
+9. Checklist real das 4 permissões (Acessibilidade, Uso de apps, Notificações, Telefone), cada uma com ícone check/warning + ação inline "Corrigir" quando faltando — <strong>substitui a frase vaga <code>status_permissions_local</code></strong></p>
+<p><strong>Bloco 4 — "Atividade" (card secundário, colapsável — equivalente aos "Detalhes Técnicos" do relatório semanal)</strong>
+10. Proteção em tempo real: ativa/parada · Conexão com a empresa: ativa/em espera · Dados aguardando envio: N · (link "Ver mais" se precisar expandir)</p>
+<p><strong>Ações (rodapé, fora dos cards)</strong>
+- Botão primário: "Verificar agora"
+- Botão secundário outlined: "Exportar diagnóstico para o suporte"
+- Link texto: "Informações do aplicativo"</p>
+<p>Isso soma exatamente ~10 linhas de informação (itens 1-10) organizadas em 4 blocos com hierarquia clara, deixando espaço para o que o @Tony ainda está definindo (novos dados do Agent Windows) — o Bloco 3 (Permissões) e o Bloco 4 (Atividade) são extensíveis: qualquer item novo entra como mais uma linha dentro do bloco certo, sem precisar redesenhar a tela.</p>
+<h3 id="72-os-3-estados-do-hero">7.2 Os 3 estados do hero<a class="headerlink" href="#72-os-3-estados-do-hero" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Cor</th>
+<th>Ícone</th>
+<th>Título</th>
+<th>Subtítulo</th>
+<th>Ação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OK</strong></td>
+<td><code>color.state.safe</code> / <code>safeBg</code> / <code>safeBorder</code></td>
+<td>escudo + check</td>
+<td>"Proteção ativa"</td>
+<td>"Tudo funcionando normalmente."</td>
+<td>nenhuma (some)</td>
+</tr>
+<tr>
+<td><strong>Atenção</strong></td>
+<td><code>color.state.warning</code> / <code>warningBg</code> / <code>warningBorder</code></td>
+<td>escudo + <code>!</code></td>
+<td>"Proteção parcial"</td>
+<td>"1 permissão pendente. Sua atividade pode não ser registrada corretamente."</td>
+<td>"Corrigir agora" → leva à tela de permissões (§6), já filtrada só no passo faltante</td>
+</tr>
+<tr>
+<td><strong>Erro</strong></td>
+<td><code>color.state.danger</code> / <code>dangerBg</code> / <code>dangerBorder</code></td>
+<td>escudo + <code>x</code></td>
+<td>"Proteção interrompida"</td>
+<td>"Não conseguimos enviar seus dados há 3 horas."</td>
+<td>"Tentar novamente" → força uma tentativa de sincronização imediata</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-estados-adicionais-fora-das-4-telas-originais">8. Estados adicionais fora das 4 telas originais<a class="headerlink" href="#8-estados-adicionais-fora-das-4-telas-originais" title="Permanent link">&para;</a></h2>
+<h3 id="81-erro-de-matricula-invalida-tela-1">8.1 Erro de matrícula inválida (Tela 1)<a class="headerlink" href="#81-erro-de-matricula-invalida-tela-1" title="Permanent link">&para;</a></h3>
+<p>Em vez do texto solto <code>tvStatus</code> abaixo do botão (layout atual, <code>activity_permission_dispatch.xml:155-165</code>), o erro vira <strong>estado nativo do <code>TextInputLayout</code></strong>, dentro do layout sem cartão do Refino 1 (§3.1):
+- Borda do campo muda de <code>color.border.default</code> para <code>color.state.danger</code>
+- Texto de erro (<code>errorText</code> do Material <code>TextInputLayout</code>) aparece embaixo do campo, cor <code>color.state.danger</code>, <code>12sp</code>
+- Ícone de erro (<code>error</code> outline) aparece dentro do campo, lado direito
+- Mensagem: reaproveita as strings já existentes (<code>permission_erro_id_nao_encontrado</code> etc. — a tabela §1 já mapeia as que mudam de tom)
+- O botão volta ao estado normal (não fica em loading), habilitado para nova tentativa assim que o campo for editado
+- <strong>Atualizado 2026-08-14 (rodada 3):</strong> telas de estado (<code>mockups.html</code> bloco 2) refeitas sem cartão, para bater com a decisão final do Refino 1 — mesma centralização vertical, mesmos 2 clusters, rodapé de versão ancorado.</p>
+<h3 id="82-sem-conexao">8.2 Sem conexão<a class="headerlink" href="#82-sem-conexao" title="Permanent link">&para;</a></h3>
+<p>Dois pontos de ocorrência:
+- <strong>Tela 1 (antes de enviar):</strong> banner fino no topo da tela, fora do bloco centralizado do Refino 1, fundo <code>color.state.warningBg</code>, texto <code>color.state.warning</code>, ícone de wifi cortado: "Sem conexão com a internet — verifique sua rede." O botão "Ativar proteção" fica desabilitado enquanto o banner estiver visível. O bloco de conteúdo abaixo do banner mantém a mesma centralização vertical do Refino 1 — o banner não desloca o centro do bloco, só reduz um pouco a área útil acima dele.
+- <strong>Tela 4 (app já vinculado):</strong> mapeia direto para o hero de estado <strong>"Erro"</strong> (§7.2) — reaproveita o mesmo componente, sem criar um 4º estado. Subtítulo muda dinamicamente conforme a causa (sem internet vs. servidor fora vs. token expirado), mas a apresentação visual é a mesma. Tela 4 está congelada — não houve alteração nesta rodada.</p>
+<h3 id="83-fluxo-de-permissoes">8.3 Fluxo de permissões<a class="headerlink" href="#83-fluxo-de-permissoes" title="Permanent link">&para;</a></h3>
+<p>Coberto integralmente em §6 — é o item que mais faltava (<code>PermissionStepMachine</code> já existe no código como máquina de estados pura, mas sem nenhuma tela própria por trás).</p>
+<hr />
+<h2 id="9-especificacao-de-componentes-para-sam">9. Especificação de componentes (para @Sam)<a class="headerlink" href="#9-especificacao-de-componentes-para-sam" title="Permanent link">&para;</a></h2>
+<h3 id="91-herostatuscard-novo-componente">9.1 <code>HeroStatusCard</code> (novo componente)<a class="headerlink" href="#91-herostatuscard-novo-componente" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>MaterialCardView</code>, <code>cardCornerRadius=20dp</code>, <code>strokeWidth=1dp</code>, <code>cardElevation=0dp</code> (usa <code>strokeColor</code> do estado, não sombra, para não pesar visualmente)</li>
+<li>Padding interno <code>28dp</code></li>
+<li>Ícone: <code>72dp</code>, centralizado, <code>ImageView</code> com <code>tint</code> do estado sobre um <code>background</code> circular (<code>indigoTint</code>/<code>safeBg</code>/etc conforme estado — ver nota abaixo)</li>
+<li><strong>Nota de contraste:</strong> o círculo de fundo do ícone usa a cor <code>*Bg</code> do próprio estado (ex. <code>safeBg</code> no estado OK), não o <code>indigoTint</code> fixo — isso reforça a leitura de cor à distância</li>
+<li>Título: <code>type.heroTitle</code>, cor do estado (<code>safe</code>/<code>warning</code>/<code>danger</code>)</li>
+<li>Subtítulo: <code>type.body</code>, <code>color.text.body</code></li>
+<li>Timestamp: <code>type.caption</code>, <code>color.text.muted</code></li>
+<li>Botão de ação (quando aplicável): <code>MaterialButton</code>, full-width, <code>48dp</code> altura, cor de fundo = cor do estado (ex. botão âmbar no estado atenção)</li>
+</ul>
+<h3 id="92-permissionchecklistrow-novo-componente">9.2 <code>PermissionChecklistRow</code> (novo componente)<a class="headerlink" href="#92-permissionchecklistrow-novo-componente" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Altura mínima <code>48dp</code> (touch target)</li>
+<li>Ícone de status <code>24dp</code> à esquerda</li>
+<li>Texto do passo <code>type.label</code> + subtexto <code>type.bodyMuted</code> (2 linhas, opcional)</li>
+<li>Ação inline "Corrigir" (<code>TextButton</code>, <code>type.label</code>, cor indigo) à direita, só visível quando status ≠ concluído</li>
+<li>Divider <code>1dp</code> <code>color.divider.subtle</code> entre linhas</li>
+</ul>
+<h3 id="93-inlinefielderror-ajuste-ao-componente-existente">9.3 <code>InlineFieldError</code> (ajuste ao componente existente)<a class="headerlink" href="#93-inlinefielderror-ajuste-ao-componente-existente" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Usa <code>TextInputLayout.setError(String)</code> nativo do Material Components — <strong>não é componente novo</strong>, é uso correto do que já existe na dependência (<code>com.google.android.material.textfield.TextInputLayout</code>), hoje subutilizado porque o erro está sendo mostrado num <code>TextView</code> solto ao invés de no próprio campo</li>
+</ul>
+<h3 id="94-loadingbutton-ajuste-ao-botao-existente">9.4 <code>LoadingButton</code> (ajuste ao botão existente)<a class="headerlink" href="#94-loadingbutton-ajuste-ao-botao-existente" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>MaterialButton</code> com <code>app:icon="@drawable/ic_spinner"</code> (ou <code>CircularProgressIndicator</code> sobreposto via <code>FrameLayout</code> se preferir animação nativa) + <code>app:iconGravity="textStart"</code> + troca de <code>text</code> via <code>setText()</code></li>
+<li>Não é um componente novo de biblioteca — é um padrão de estado (<code>isLoading: Boolean</code>) aplicado ao <code>MaterialButton</code> já existente</li>
+</ul>
+<h3 id="95-confirmidentitybottomsheet-substitui-vinculardialogfragments-uso-de-materialalertdialogbuilder-cru-para-a-confirmacao-o-vinculardialogfragment-de-loadingretry-continua-como-dialog-mas-ganha-estilo-consistente-com-os-cards">9.5 <code>ConfirmIdentityBottomSheet</code> (substitui <code>VincularDialogFragment</code>'s uso de <code>MaterialAlertDialogBuilder</code> cru para a confirmação — o <code>VincularDialogFragment</code> de loading/retry continua como dialog, mas ganha estilo consistente com os cards)<a class="headerlink" href="#95-confirmidentitybottomsheet-substitui-vinculardialogfragments-uso-de-materialalertdialogbuilder-cru-para-a-confirmacao-o-vinculardialogfragment-de-loadingretry-continua-como-dialog-mas-ganha-estilo-consistente-com-os-cards" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>BottomSheetDialogFragment</code></li>
+<li><code>shapeAppearance</code> custom: <code>cornerSizeTopLeft/TopRight = 20dp</code>, <code>cornerSizeBottomLeft/BottomRight = 0dp</code></li>
+<li>Avatar: <code>ShapeableImageView</code> ou <code>TextView</code> circular com iniciais, <code>56dp</code>, <code>indigoTint</code> de fundo, texto indigo <code>20sp</code> bold</li>
+</ul>
+<hr />
+<h2 id="10-acessibilidade-wcag-aplicado-ao-contexto-mobile-nativo">10. Acessibilidade (WCAG aplicado ao contexto mobile nativo)<a class="headerlink" href="#10-acessibilidade-wcag-aplicado-ao-contexto-mobile-nativo" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Contraste mínimo 4.5:1 verificado para todas as combinações texto/fundo dos 3 estados (verde/âmbar/vermelho sobre seus respectivos <code>*Bg</code> claros — todos ≥ 4.6:1 com os hex propostos)</li>
+<li>Nunca usar cor isoladamente para comunicar estado — todo estado tem ícone + texto redundante (escudo+check / escudo+! / escudo+x, nunca só a cor da borda)</li>
+<li>Todo alvo de toque ≥ <code>48dp</code> (checklist rows, botões, ícones de fechar/dispensar)</li>
+<li><code>contentDescription</code> obrigatório em todos os ícones de estado (ex. "Proteção ativa", não "escudo verde")</li>
+<li>Bottom sheet e checklist de permissões devem ser navegáveis via TalkBack em ordem lógica (topo→baixo, ação de confirmar antes da de corrigir)</li>
+<li>Texto nunca abaixo de <code>12sp</code> (caption é o piso)</li>
+</ul>
+<hr />
+<h2 id="11-resumo-de-desvios-do-design-system-do-portal-e-por-que">11. Resumo de desvios do design system do portal — e por quê<a class="headerlink" href="#11-resumo-de-desvios-do-design-system-do-portal-e-por-que" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Desvio</th>
+<th>Portal</th>
+<th>App mobile</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paleta de estado</td>
+<td>Só indigo</td>
+<td>Verde/âmbar/vermelho + indigo</td>
+<td>App precisa de leitura de "seguro/atenção/erro" à primeira vista, como qualquer app de segurança pessoal. Portal é ferramenta de gestão, não precisa desse semáforo.</td>
+</tr>
+<tr>
+<td>Raio do hero card</td>
+<td><code>14px</code> fixo</td>
+<td><code>20dp</code> no hero, <code>16dp</code> nos cards secundários, <code>14dp</code> nos botões</td>
+<td>Suaviza a sensação "instalação corporativa" → mais parecido com apps de segurança consumer. Botões mantêm o raio do portal para não perder o parentesco de marca.</td>
+</tr>
+<tr>
+<td>Cor de título</td>
+<td><code>#1e293b</code></td>
+<td><code>#1E293B</code> (igual)</td>
+<td>Sem desvio — na verdade é uma correção: o app hoje usa <code>#0F172A</code>, ajustado nesta leva para bater com o portal.</td>
+</tr>
+<tr>
+<td>Ícone de app</td>
+<td>N/A</td>
+<td>Escudo (não usa o ícone atual do launcher)</td>
+<td>Ver §2.5 — fora do escopo de asset final, mas a direção visual está definida aqui.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="12-pendencias-explicitas">12. Pendências explícitas<a class="headerlink" href="#12-pendencias-explicitas" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Nome final do produto</strong> — @Steve/Marcos decide entre "iManager Proteção" (recomendado) e "Trivion Shield", ou propõe um terceiro. Bloqueia: <code>app_name</code> em <code>strings.xml</code>, ícone do launcher, texto usado no convite de instalação do RH. <strong>Único item de layout/naming ainda em aberto.</strong></li>
+<li>~~Qual refino de densidade da Tela 1~~ — <strong>RESOLVIDO 2026-08-14.</strong> Refino 1 "Sem cartão" é a decisão final (§3.1). Aplicado em toda a Tela 1 e na Tela 2.</li>
+<li><strong>Ícone do launcher final</strong> — este spec define a direção (escudo, indigo, sem "olho"/"lupa"), mas o asset final (adaptive icon 108dp, safe zone 66dp) não foi produzido — não é atividade de wireframe/HTML, precisa de arte final.</li>
+<li><strong>Tela de permissões é uma tela nova</strong> (§6) — muda a experiência hoje "zero-UI" do <code>PermissionStepMachine</code>. @Tony precisa revisar antes de @Sam implementar, porque adiciona uma <code>Activity</code>/<code>Fragment</code> nova ao fluxo que hoje não existe.</li>
+<li><strong>Quais dados novos entram no Bloco 3/4 da Tela 4</strong> — depende do que @Tony está definindo em paralelo com base no Agent Windows. A estrutura deste spec já comporta itens novos sem redesenho (blocos extensíveis), mas o conteúdo exato não foi definido aqui. Tela 4 está congelada quanto ao layout aprovado; isso só adiciona linhas dentro dos blocos já existentes.</li>
+<li><strong>Bug do espaço no chip "Empresa:"</strong> — mencionado por Marcos na tela atual; no código-fonte (<code>PermissionDispatchActivity.kt:139</code>) a string <code>permission_empresa_prefix</code> já termina com espaço (<code>"Empresa: "</code>), então o bug pode estar em outro ponto da concatenação ou em como o <code>Chip</code> do Material Components corta espaços nas bordas do texto. <strong>Ficou moot com a decisão final do Refino 1</strong> — o chip não existe mais em nenhuma tela; a informação da empresa vive no subtítulo em texto corrido. Nada a investigar.</li>
+<li>~~Réplica do refino escolhido nos estados de erro/sem conexão da Tela 1~~ — <strong>RESOLVIDO 2026-08-14 (rodada 3).</strong> Os dois estados adicionais (<code>mockups.html</code> bloco 2) e a Tela 2 (bloco 3) foram atualizados para o layout sem cartão do Refino 1 — centralização vertical real, 2 clusters, rodapé de versão ancorado.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

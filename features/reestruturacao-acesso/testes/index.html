@@ -1,0 +1,2075 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/reestruturacao-acesso/testes/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Testes: Reestruturacao de Acesso - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#testes-reestruturacao-de-acesso" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Testes: Reestruturacao de Acesso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ra-34-login-primeiro-acesso-bloqueio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA-34 — Login + Primeiro Acesso + Bloqueio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RA-34 — Login + Primeiro Acesso + Bloqueio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t341-login-de-gestor-caminho-feliz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.1 — Login de gestor (caminho feliz)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t342-login-de-colaborador-com-acesso-caminho-feliz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.2 — Login de colaborador com acesso (caminho feliz)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t343-login-com-credenciais-invalidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.3 — Login com credenciais invalidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t344-login-de-usuario-sem-acesso-ao-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.4 — Login de usuario sem acesso ao portal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t345-login-de-usuario-com-primeiro-acesso-pendente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.5 — Login de usuario com primeiro acesso pendente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t346-primeiro-acesso-completo-caminho-feliz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.6 — Primeiro acesso completo (caminho feliz)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t347-primeiro-acesso-com-dados-invalidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.7 — Primeiro acesso com dados invalidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t348-primeiro-acesso-com-usuario-que-ja-tem-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.8 — Primeiro acesso com usuario que ja tem senha
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t349-primeiro-acesso-com-senhas-diferentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.9 — Primeiro acesso com senhas diferentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t3410-primeiro-acesso-com-senha-curta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.10 — Primeiro acesso com senha curta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t3411-pagina-sem-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T34.11 — Pagina /sem-acesso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ra-35-crud-com-2-perfis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA-35 — CRUD com 2 Perfis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RA-35 — CRUD com 2 Perfis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t351-criar-gestor-sem-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T35.1 — Criar gestor (sem senha)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t352-criar-colaborador-com-acesso-ao-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T35.2 — Criar colaborador com acesso ao portal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t353-criar-colaborador-sem-acesso-ao-portal-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T35.3 — Criar colaborador sem acesso ao portal (default)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t354-editar-flag-acessa_portal-no-detalhe-do-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T35.4 — Editar flag acessa_portal no detalhe do colaborador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t355-editar-flag-acessa_portal-na-hierarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T35.5 — Editar flag acessa_portal na hierarquia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t356-gestores-aninhados-na-hierarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T35.6 — Gestores aninhados na hierarquia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t357-verificar-que-nao-existe-mais-referencia-a-administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T35.7 — Verificar que nao existe mais referencia a "Administrador"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ra-36-visao-do-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA-36 — Visao do Colaborador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RA-36 — Visao do Colaborador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t361-meu-painel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T36.1 — Meu Painel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t362-meus-relatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T36.2 — Meus Relatorios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t363-meus-relatorios-sem-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T36.3 — Meus Relatorios sem dados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t364-meu-perfil-campos-editaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T36.4 — Meu Perfil (campos editaveis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t365-meu-perfil-alterar-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T36.5 — Meu Perfil (alterar senha)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t366-tours-ocultos-para-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T36.6 — Tours ocultos para colaborador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t367-colaborador-nao-acessa-rotas-de-gestor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T36.7 — Colaborador nao acessa rotas de gestor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ra-37-excel-sem-senha-e-sem-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA-37 — Excel sem Senha e sem Perfil
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RA-37 — Excel sem Senha e sem Perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t371-download-template-excel-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T37.1 — Download template Excel de usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t372-upload-excel-de-usuarios-valido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T37.2 — Upload Excel de usuarios valido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t373-download-template-excel-de-colaboradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T37.3 — Download template Excel de colaboradores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t374-upload-excel-de-colaboradores-com-acesso-ao-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T37.4 — Upload Excel de colaboradores com acesso ao portal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t375-upload-excel-de-colaboradores-sem-coluna-acessa_portal-preenchida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T37.5 — Upload Excel de colaboradores sem coluna acessa_portal preenchida
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-geral-pos-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist geral pos-testes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="testes-reestruturacao-de-acesso">Testes: Reestruturacao de Acesso<a class="headerlink" href="#testes-reestruturacao-de-acesso" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Responsavel: @Natasha
+Atualizado em: 2026-03-31</p>
+</blockquote>
+<hr />
+<h2 id="ra-34-login-primeiro-acesso-bloqueio">RA-34 — Login + Primeiro Acesso + Bloqueio<a class="headerlink" href="#ra-34-login-primeiro-acesso-bloqueio" title="Permanent link">&para;</a></h2>
+<h3 id="t341-login-de-gestor-caminho-feliz">T34.1 — Login de gestor (caminho feliz)<a class="headerlink" href="#t341-login-de-gestor-caminho-feliz" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-condicao:</strong> Gestor criado com primeiro acesso ja realizado (tem senha)
+1. Acessar /login
+2. Informar identificador + senha corretos
+3. <strong>Esperado:</strong> Redireciona para /home, menu completo visivel (Home, Colaboradores, Relatorios, Organizacao, Perfil)</p>
+<h3 id="t342-login-de-colaborador-com-acesso-caminho-feliz">T34.2 — Login de colaborador com acesso (caminho feliz)<a class="headerlink" href="#t342-login-de-colaborador-com-acesso-caminho-feliz" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-condicao:</strong> Colaborador com <code>acessa_portal=true</code> e senha ja criada
+1. Acessar /login
+2. Informar identificador + senha corretos
+3. <strong>Esperado:</strong> Redireciona para /meu-painel, menu reduzido (Meu Painel, Meus Relatorios, Meu Perfil)</p>
+<h3 id="t343-login-com-credenciais-invalidas">T34.3 — Login com credenciais invalidas<a class="headerlink" href="#t343-login-com-credenciais-invalidas" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Acessar /login</li>
+<li>Informar identificador inexistente ou senha errada</li>
+<li><strong>Esperado:</strong> Mensagem de erro generica "Nao foi possivel entrar. Verifique usuario e senha." Permanece na pagina de login.</li>
+</ol>
+<h3 id="t344-login-de-usuario-sem-acesso-ao-portal">T34.4 — Login de usuario sem acesso ao portal<a class="headerlink" href="#t344-login-de-usuario-sem-acesso-ao-portal" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-condicao:</strong> Colaborador com <code>acessa_portal=false</code>
+1. Acessar /login
+2. Informar identificador + senha
+3. <strong>Esperado:</strong> Redireciona para /sem-acesso. Pagina mostra "Acesso nao autorizado" + mensagem + botao "Voltar ao login"</p>
+<h3 id="t345-login-de-usuario-com-primeiro-acesso-pendente">T34.5 — Login de usuario com primeiro acesso pendente<a class="headerlink" href="#t345-login-de-usuario-com-primeiro-acesso-pendente" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-condicao:</strong> Gestor ou colaborador recem-criado (senha_hash = null)
+1. Acessar /login
+2. Informar identificador + qualquer senha
+3. <strong>Esperado:</strong> Mensagem "Voce ainda nao criou sua senha. Use o link 'Primeiro acesso' abaixo." Link visivel na pagina.</p>
+<h3 id="t346-primeiro-acesso-completo-caminho-feliz">T34.6 — Primeiro acesso completo (caminho feliz)<a class="headerlink" href="#t346-primeiro-acesso-completo-caminho-feliz" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-condicao:</strong> Usuario recem-criado com acessa_portal=true e sem senha
+1. Acessar /login
+2. Clicar no link "Primeiro acesso? Crie sua senha"
+3. <strong>Esperado:</strong> Redireciona para /primeiro-acesso. Step 1 visivel.
+4. Informar identificador + email corporativo corretos
+5. Clicar "Validar"
+6. <strong>Esperado:</strong> Mostra "Ola, {nome}!" e avanca para Step 2
+7. Informar nova senha (min 8 chars) + confirmar senha
+8. Clicar "Criar senha"
+9. <strong>Esperado:</strong> Toast de sucesso. Redireciona para /login apos ~2 segundos.
+10. Fazer login com identificador + nova senha
+11. <strong>Esperado:</strong> Login bem-sucedido</p>
+<h3 id="t347-primeiro-acesso-com-dados-invalidos">T34.7 — Primeiro acesso com dados invalidos<a class="headerlink" href="#t347-primeiro-acesso-com-dados-invalidos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Acessar /primeiro-acesso</li>
+<li>Informar identificador correto + email errado</li>
+<li>Clicar "Validar"</li>
+<li><strong>Esperado:</strong> Mensagem de erro inline "Dados invalidos ou primeiro acesso ja realizado"</li>
+</ol>
+<h3 id="t348-primeiro-acesso-com-usuario-que-ja-tem-senha">T34.8 — Primeiro acesso com usuario que ja tem senha<a class="headerlink" href="#t348-primeiro-acesso-com-usuario-que-ja-tem-senha" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-condicao:</strong> Usuario que ja completou o primeiro acesso
+1. Acessar /primeiro-acesso
+2. Informar identificador + email corretos
+3. Clicar "Validar"
+4. <strong>Esperado:</strong> Mensagem de erro (primeiro acesso ja realizado)</p>
+<h3 id="t349-primeiro-acesso-com-senhas-diferentes">T34.9 — Primeiro acesso com senhas diferentes<a class="headerlink" href="#t349-primeiro-acesso-com-senhas-diferentes" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Acessar /primeiro-acesso</li>
+<li>Validar identificador + email com sucesso (Step 1)</li>
+<li>No Step 2, informar senha "12345678" e confirmar "87654321"</li>
+<li><strong>Esperado:</strong> Erro de validacao "As senhas nao coincidem". Botao desabilitado.</li>
+</ol>
+<h3 id="t3410-primeiro-acesso-com-senha-curta">T34.10 — Primeiro acesso com senha curta<a class="headerlink" href="#t3410-primeiro-acesso-com-senha-curta" title="Permanent link">&para;</a></h3>
+<ol>
+<li>No Step 2, informar senha "123" + confirmar "123"</li>
+<li><strong>Esperado:</strong> Erro de validacao sobre tamanho minimo (8 chars)</li>
+</ol>
+<h3 id="t3411-pagina-sem-acesso">T34.11 — Pagina /sem-acesso<a class="headerlink" href="#t3411-pagina-sem-acesso" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Acessar /sem-acesso diretamente na URL</li>
+<li><strong>Esperado:</strong> Pagina exibida com icone, titulo "Acesso nao autorizado", mensagem e botao "Voltar ao login"</li>
+<li>Clicar "Voltar ao login"</li>
+<li><strong>Esperado:</strong> Redireciona para /login</li>
+</ol>
+<hr />
+<h2 id="ra-35-crud-com-2-perfis">RA-35 — CRUD com 2 Perfis<a class="headerlink" href="#ra-35-crud-com-2-perfis" title="Permanent link">&para;</a></h2>
+<h3 id="t351-criar-gestor-sem-senha">T35.1 — Criar gestor (sem senha)<a class="headerlink" href="#t351-criar-gestor-sem-senha" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Logar como gestor</li>
+<li>Ir em Organizacao &gt; Hierarquia</li>
+<li>Clicar "Novo usuario"</li>
+<li>Na Central de Gestao, clicar "Criar Novo Gestor"</li>
+<li><strong>Esperado:</strong> Modal abre com titulo "Criar Novo Gestor". NAO deve haver campos de senha. NAO deve haver seletor de perfil (Admin/Gestor).</li>
+<li>Preencher nome, sobrenome, email, departamento, cargo, identificador</li>
+<li>Clicar criar</li>
+<li><strong>Esperado:</strong> Sucesso. Gestor aparece na hierarquia com badge "Gestor"</li>
+</ol>
+<h3 id="t352-criar-colaborador-com-acesso-ao-portal">T35.2 — Criar colaborador com acesso ao portal<a class="headerlink" href="#t352-criar-colaborador-com-acesso-ao-portal" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Na Central de Gestao, aba "Colaboradores"</li>
+<li>Clicar "Criar Novo Colaborador"</li>
+<li><strong>Esperado:</strong> Modal com campo "Acessa o portal?" (select Sim/Nao, default Nao)</li>
+<li>Preencher dados + selecionar "Sim" em "Acessa o portal?"</li>
+<li>Criar</li>
+<li><strong>Esperado:</strong> Colaborador criado com acessa_portal=true</li>
+</ol>
+<h3 id="t353-criar-colaborador-sem-acesso-ao-portal-default">T35.3 — Criar colaborador sem acesso ao portal (default)<a class="headerlink" href="#t353-criar-colaborador-sem-acesso-ao-portal-default" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Criar colaborador sem alterar o campo "Acessa o portal?" (deixar default)</li>
+<li><strong>Esperado:</strong> Colaborador criado com acessa_portal=false</li>
+</ol>
+<h3 id="t354-editar-flag-acessa_portal-no-detalhe-do-colaborador">T35.4 — Editar flag acessa_portal no detalhe do colaborador<a class="headerlink" href="#t354-editar-flag-acessa_portal-no-detalhe-do-colaborador" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-condicao:</strong> Colaborador com acessa_portal=false
+1. Ir em Colaboradores &gt; clicar no colaborador &gt; aba Detalhes
+2. Localizar campo "Acessa o portal?" na secao "Dados na Empresa"
+3. <strong>Esperado:</strong> Mostra "Nao" (select editavel para gestores)
+4. Alterar para "Sim"
+5. <strong>Esperado:</strong> Toast de sucesso. Valor salvo no backend.
+6. Recarregar pagina
+7. <strong>Esperado:</strong> Campo mostra "Sim"</p>
+<h3 id="t355-editar-flag-acessa_portal-na-hierarquia">T35.5 — Editar flag acessa_portal na hierarquia<a class="headerlink" href="#t355-editar-flag-acessa_portal-na-hierarquia" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ir em Organizacao &gt; Hierarquia</li>
+<li>Clicar para editar um colaborador no organograma</li>
+<li><strong>Esperado:</strong> Campo "Acessa o portal?" visivel no formulario de edicao</li>
+<li>Alterar valor</li>
+<li><strong>Esperado:</strong> Valor salvo corretamente</li>
+</ol>
+<h3 id="t356-gestores-aninhados-na-hierarquia">T35.6 — Gestores aninhados na hierarquia<a class="headerlink" href="#t356-gestores-aninhados-na-hierarquia" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Criar Gestor A (sem gestor acima — topo)</li>
+<li>Criar Gestor B com Gestor A como responsavel</li>
+<li>Criar Time sob Gestor B</li>
+<li>Criar Colaborador no time</li>
+<li><strong>Esperado:</strong> Hierarquia exibida corretamente: A &gt; B &gt; Time &gt; Colaborador. Todos com badges corretos.</li>
+</ol>
+<h3 id="t357-verificar-que-nao-existe-mais-referencia-a-administrador">T35.7 — Verificar que nao existe mais referencia a "Administrador"<a class="headerlink" href="#t357-verificar-que-nao-existe-mais-referencia-a-administrador" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navegar por todas as telas do sistema</li>
+<li><strong>Esperado:</strong> Nenhuma referencia a "Administrador", "Admin", "ADM", "Visualizador", "VIS" em labels, badges, tooltips ou mensagens. Tudo deve ser "Gestor" ou "Colaborador".</li>
+</ol>
+<hr />
+<h2 id="ra-36-visao-do-colaborador">RA-36 — Visao do Colaborador<a class="headerlink" href="#ra-36-visao-do-colaborador" title="Permanent link">&para;</a></h2>
+<h3 id="t361-meu-painel">T36.1 — Meu Painel<a class="headerlink" href="#t361-meu-painel" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-condicao:</strong> Login como colaborador com acesso
+1. Apos login, verificar que aterrissa em /meu-painel
+2. <strong>Esperado:</strong> Saudacao "Ola, {nome}!", cards de score/status/KPIs
+3. Verificar menu lateral
+4. <strong>Esperado:</strong> Apenas "Meu Painel", "Meus Relatorios", "Meu Perfil" visiveis. Nada de Colaboradores, Organizacao, Home.</p>
+<h3 id="t362-meus-relatorios">T36.2 — Meus Relatorios<a class="headerlink" href="#t362-meus-relatorios" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clicar em "Meus Relatorios" no menu</li>
+<li><strong>Esperado:</strong> Pagina /meus-relatorios carrega. Mostra navegador de semanas.</li>
+<li>Selecionar uma semana</li>
+<li><strong>Esperado:</strong> Relatorio individual do colaborador logado exibido (mesmo componente usado na visao do gestor)</li>
+</ol>
+<h3 id="t363-meus-relatorios-sem-dados">T36.3 — Meus Relatorios sem dados<a class="headerlink" href="#t363-meus-relatorios-sem-dados" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-condicao:</strong> Colaborador sem semanas de dados
+1. Acessar /meus-relatorios
+2. <strong>Esperado:</strong> Estado vazio com mensagem (nenhum relatorio disponivel)</p>
+<h3 id="t364-meu-perfil-campos-editaveis">T36.4 — Meu Perfil (campos editaveis)<a class="headerlink" href="#t364-meu-perfil-campos-editaveis" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clicar em "Meu Perfil"</li>
+<li><strong>Esperado:</strong> Pagina de perfil carrega com dados do colaborador</li>
+<li>Verificar secao "Dados na Empresa"</li>
+<li><strong>Esperado:</strong> Exibida como somente leitura (badge "Somente leitura" visivel)</li>
+<li>Clicar "Editar perfil"</li>
+<li><strong>Esperado:</strong> Modal abre com campos editaveis: telefone, email pessoal, estado civil, genero, data nascimento. Campos bloqueados: nome, sobrenome, email corporativo, cargo, departamento.</li>
+</ol>
+<h3 id="t365-meu-perfil-alterar-senha">T36.5 — Meu Perfil (alterar senha)<a class="headerlink" href="#t365-meu-perfil-alterar-senha" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Na pagina de perfil, secao "Seguranca"</li>
+<li>Preencher senha atual + nova senha + confirmar</li>
+<li><strong>Esperado:</strong> Senha alterada com sucesso</li>
+</ol>
+<h3 id="t366-tours-ocultos-para-colaborador">T36.6 — Tours ocultos para colaborador<a class="headerlink" href="#t366-tours-ocultos-para-colaborador" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Na pagina de perfil</li>
+<li><strong>Esperado:</strong> Secao "Tours e Onboarding" NAO aparece para colaboradores</li>
+</ol>
+<h3 id="t367-colaborador-nao-acessa-rotas-de-gestor">T36.7 — Colaborador nao acessa rotas de gestor<a class="headerlink" href="#t367-colaborador-nao-acessa-rotas-de-gestor" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Logado como colaborador, tentar acessar /home diretamente na URL</li>
+<li><strong>Esperado:</strong> Redirecionado para /meu-painel (ou bloqueado pelo guard)</li>
+<li>Tentar /colaboradores</li>
+<li><strong>Esperado:</strong> Redirecionado</li>
+<li>Tentar /organizacao</li>
+<li><strong>Esperado:</strong> Redirecionado</li>
+<li>Tentar /relatorios</li>
+<li><strong>Esperado:</strong> Redirecionado</li>
+</ol>
+<hr />
+<h2 id="ra-37-excel-sem-senha-e-sem-perfil">RA-37 — Excel sem Senha e sem Perfil<a class="headerlink" href="#ra-37-excel-sem-senha-e-sem-perfil" title="Permanent link">&para;</a></h2>
+<h3 id="t371-download-template-excel-de-usuarios">T37.1 — Download template Excel de usuarios<a class="headerlink" href="#t371-download-template-excel-de-usuarios" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Logar como gestor</li>
+<li>Ir em Organizacao &gt; Hierarquia &gt; Novo usuario &gt; Importar via Excel</li>
+<li>Baixar o modelo Excel</li>
+<li><strong>Esperado:</strong> Planilha com 8 colunas: Identificador, Nome, Sobrenome, Email, Departamento, Cargo, Gestor responsavel, Times. NAO deve ter colunas "Perfil" e "Senha".</li>
+</ol>
+<h3 id="t372-upload-excel-de-usuarios-valido">T37.2 — Upload Excel de usuarios valido<a class="headerlink" href="#t372-upload-excel-de-usuarios-valido" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Preencher planilha com dados validos (sem perfil, sem senha)</li>
+<li>Fazer upload</li>
+<li><strong>Esperado:</strong> Validacao passa. Usuarios criados como GESTOR. Sem senha (primeiro acesso pendente).</li>
+</ol>
+<h3 id="t373-download-template-excel-de-colaboradores">T37.3 — Download template Excel de colaboradores<a class="headerlink" href="#t373-download-template-excel-de-colaboradores" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Na Central de Gestao &gt; aba Colaboradores &gt; Importar via Excel</li>
+<li>Baixar modelo</li>
+<li><strong>Esperado:</strong> Planilha com 16 colunas (A-P). Ultima coluna (P) deve ser "Acessa o portal?" com dropdown Sim/Nao.</li>
+</ol>
+<h3 id="t374-upload-excel-de-colaboradores-com-acesso-ao-portal">T37.4 — Upload Excel de colaboradores com acesso ao portal<a class="headerlink" href="#t374-upload-excel-de-colaboradores-com-acesso-ao-portal" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Preencher planilha com colaboradores. Coluna "Acessa o portal?" = "Sim" para alguns</li>
+<li>Fazer upload</li>
+<li><strong>Esperado:</strong> Colaboradores criados. Os marcados com "Sim" tem acessa_portal=true. Os demais (vazio ou "Nao") tem acessa_portal=false.</li>
+</ol>
+<h3 id="t375-upload-excel-de-colaboradores-sem-coluna-acessa_portal-preenchida">T37.5 — Upload Excel de colaboradores sem coluna acessa_portal preenchida<a class="headerlink" href="#t375-upload-excel-de-colaboradores-sem-coluna-acessa_portal-preenchida" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Preencher planilha deixando coluna P vazia</li>
+<li>Fazer upload</li>
+<li><strong>Esperado:</strong> Todos criados com acessa_portal=false (default)</li>
+</ol>
+<hr />
+<h2 id="checklist-geral-pos-testes">Checklist geral pos-testes<a class="headerlink" href="#checklist-geral-pos-testes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] Nenhuma referencia a "Administrador", "Admin", "ADM", "VIEWER", "VIS" em toda a UI</li>
+<li>[ ] Login diferencia corretamente os 3 tipos de erro</li>
+<li>[ ] Primeiro acesso funciona de ponta a ponta</li>
+<li>[ ] Tela /sem-acesso aparece para usuarios bloqueados</li>
+<li>[ ] Gestor ve menu completo, colaborador ve menu reduzido</li>
+<li>[ ] Colaborador so ve seus proprios dados (painel, relatorios, perfil)</li>
+<li>[ ] Colaborador nao consegue acessar rotas de gestor</li>
+<li>[ ] Perfil do colaborador mostra campos da empresa como somente leitura</li>
+<li>[ ] Excel de usuarios nao tem colunas Perfil e Senha</li>
+<li>[ ] Excel de colaboradores tem coluna "Acessa o portal?"</li>
+<li>[ ] Flag acessa_portal editavel no detalhe e na hierarquia</li>
+<li>[ ] Gestores aninhados funcionam na hierarquia</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

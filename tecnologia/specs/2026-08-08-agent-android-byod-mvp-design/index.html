@@ -1,0 +1,3549 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/specs/2026-08-08-agent-android-byod-mvp-design/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>2026 08 08 agent android byod mvp design - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agent-mobile-android-byod-mvp-so-apk" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2026 08 08 agent android byod mvp design
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-contexto-e-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Contexto e problema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Contexto e problema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-situacao-hoje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Situação hoje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-icp-do-modulo-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 ICP do módulo mobile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-objetivo-desta-rodada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Objetivo desta rodada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-escopo-e-nao-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Escopo e não-escopo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Escopo e não-escopo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-dentro-do-escopo-desta-spec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Dentro do escopo desta spec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-fora-do-escopo-rodadas-futuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Fora do escopo (rodadas futuras)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-alteracoes-necessarias-no-backend-so-documentar-nao-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Alterações necessárias no backend (só documentar, não fazer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-decisoes-arquiteturais-chave-brainstorm-2026-08-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Decisões arquiteturais chave (brainstorm 2026-08-08)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-arquitetura-macro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Arquitetura macro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Arquitetura macro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-como-o-android-se-encaixa-no-ecossistema-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Como o Android se encaixa no ecossistema Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-principios-inegociaveis-desta-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Princípios inegociáveis desta arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-componentes-internos-do-apk-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Componentes internos do APK (15)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Componentes internos do APK (15)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-lista-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Lista completa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-anti-padrao-explicito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Anti-padrão explícito
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mapeamento-de-eventos-windows-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Mapeamento de eventos Windows → Android
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Mapeamento de eventos Windows → Android">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-tipos-suportados-no-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Tipos suportados no MVP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-novo-tipo-android-especifico-mapeado-pra-backend-futuro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Novo tipo Android-específico (mapeado pra backend futuro)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-eventos-nao-coletados-fora-de-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Eventos NÃO coletados (fora de escopo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-premissa-de-execucao-2026-08-08-marcos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Premissa de execução (2026-08-08, Marcos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-onboarding-e-permissoes-fluxo-end-to-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Onboarding e permissões (fluxo end-to-end)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Onboarding e permissões (fluxo end-to-end)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-fluxo-completo-rodada-futura-portal-envolvido-aqui-so-documenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Fluxo completo (rodada futura: portal envolvido — aqui só documenta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-permissoes-declaradas-no-androidmanifestxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Permissões declaradas no AndroidManifest.xml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-deteccao-de-oem-problematico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Detecção de OEM problemático
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-auto-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Auto-update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Auto-update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-fluxo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Fluxo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-diferencas-criticas-windows-vs-android-documentar-expectativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Diferenças críticas Windows vs Android (documentar expectativa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-sistema-de-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Sistema de logs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Sistema de logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-estrategia-paridade-com-windows-atual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Estratégia: paridade com Windows atual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-componente-c12-loggingservice-timber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Componente C12 — LoggingService (Timber)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-componente-c13-auditreporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Componente C13 — AuditReporter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-componente-c14-crashreporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 Componente C14 — CrashReporter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-escape-hatch-action-enviar-diagnostico-na-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 Escape hatch — action "Enviar diagnóstico" na notification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-distribuicao-sideload-infra-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Distribuição sideload — infra mínima
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Distribuição sideload — infra mínima">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-bucket-s3-tigris-ja-usado-pro-instalador-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Bucket S3 (Tigris — já usado pro instalador Windows)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-dominio-e-cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Domínio e CDN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-keystore-de-assinatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Keystore de assinatura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-config-embutida-assetsconfigjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 Config embutida (assets/config.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-testing-strategy-so-unit-tests-inline-no-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Testing strategy (só unit tests inline no MVP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Testing strategy (só unit tests inline no MVP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-unit-tests-kotlin-junit-mockk-obrigatorio-neste-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Unit tests (Kotlin, JUnit + MockK) — obrigatório neste MVP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-fora-de-escopo-do-mvp-rodada-futura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Fora de escopo do MVP (rodada futura)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-scripts-de-build-pedido-do-marcos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Scripts de build (pedido do Marcos)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Scripts de build (pedido do Marcos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-comandos-locais-documentados-no-readme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Comandos locais (documentados no README)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-cicd-github-actions-coordena-com-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 CI/CD (GitHub Actions — coordena com @Vision)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-script-auxiliar-scriptsbuild-personalizadosh-dev-local-sem-pipeline-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Script auxiliar scripts/build-personalizado.sh (dev local, sem pipeline server)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-riscos-vivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Riscos vivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-cronograma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Cronograma
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Cronograma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-escopo-desta-rodada-so-apk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Escopo desta rodada — só APK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-caminho-critico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Caminho crítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-fora-do-escopo-desta-spec-rodadas-futuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3 Fora do escopo desta spec (rodadas futuras)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-deps-minimas-pra-dev-comecar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Deps mínimas pra dev começar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Referências
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Referências">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentacao-interna-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentação interna Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investigacao-do-bucky-2026-08-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Investigação do @Bucky (2026-08-08)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regras-aplicaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras aplicáveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rodadas-futuras-que-dependem-desta-spec-a-marcos-disparar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rodadas futuras que dependem desta spec (a Marcos disparar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-roadmap-ios-sinalizacao-nao-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Roadmap iOS (sinalização, não escopo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<blockquote>
+<p><strong>STATUS:</strong> APROVADA (brainstorm) — aguardando disparo de execução por Marcos
+<strong>DATA:</strong> 2026-08-08
+<strong>DONO:</strong> @Tony (arquitetura) + novo dev Android sênior (execução, a contratar)
+<strong>CONSULTORIA:</strong> @Bucky (Agent Windows como referência técnica)
+<strong>REVISORES:</strong> Marcos (aprovador final), @Steve (produto — rodada futura), @Shuri (backend Node — rodada futura), @Thor (contrato Java atual — referência), @Natasha (QA — rodada futura), @Groot (UX docs — rodada futura), @Mike + Raquel (jurídico LGPD — rodada futura)
+<strong>REGRA APLICADA:</strong> mudança no Agent exige spec formal antes de código (<code>feedback_agent_spec_obrigatoria.md</code>)</p>
+</blockquote>
+<h1 id="agent-mobile-android-byod-mvp-so-apk">Agent Mobile Android BYOD — MVP (só APK)<a class="headerlink" href="#agent-mobile-android-byod-mvp-so-apk" title="Permanent link">&para;</a></h1>
+<h2 id="sumario">Sumário<a class="headerlink" href="#sumario" title="Permanent link">&para;</a></h2>
+<p>Spec do primeiro Agent Mobile do Manager, para <strong>Android BYOD</strong> (celular pessoal do colaborador, sem MDM), rodando 24/7 em background, coletando eventos comportamentais em <strong>paridade com o Agent Windows atual</strong> e enviando pro <code>srv-events</code> via Device JWT.</p>
+<p><strong>Escopo desta spec:</strong> APK Android completo, autocontido, pronto pra ser distribuído. Nada mais.</p>
+<p><strong>Fora do escopo (rodadas futuras que Marcos vai planejar):</strong> portal com botões de download, pipeline server-side de re-empacotamento de APK personalizado, docs pública em <code>docs.imanagerportal.com/mobile/</code>, testes cross-device com @Natasha, piloto interno, piloto cliente, alterações no backend Java (que está em migração pra Node — não pode ser mexido).</p>
+<hr />
+<h2 id="1-contexto-e-problema">1. Contexto e problema<a class="headerlink" href="#1-contexto-e-problema" title="Permanent link">&para;</a></h2>
+<h3 id="11-situacao-hoje">1.1 Situação hoje<a class="headerlink" href="#11-situacao-hoje" title="Permanent link">&para;</a></h3>
+<p>O Manager tem Agent Desktop (C# .NET 8+, Windows/macOS) rodando na máquina do colaborador coletando janela ativa, ociosidade, sessão, input agregado, reuniões e status. Esses eventos alimentam o pipeline de Score IA que gera relatórios semanais.</p>
+<p>Cenário problemático identificado por Marcos: <strong>colaboradores que trabalham 50/50 PC + celular aparecem como "offline" no portal quando estão usando o celular</strong>, mesmo estando ativamente trabalhando. Isso compromete a assertividade do relatório.</p>
+<h3 id="12-icp-do-modulo-mobile">1.2 ICP do módulo mobile<a class="headerlink" href="#12-icp-do-modulo-mobile" title="Permanent link">&para;</a></h3>
+<p>Perfis que trabalham híbrido PC + celular no cotidiano:
+- <strong>Vendedor interno / SDR</strong> — CRM no PC, prospecção via WhatsApp/LinkedIn no celular
+- <strong>Atendimento / Suporte</strong> — ticket system no PC, WhatsApp Business e redes sociais no celular
+- <strong>Executivos / Gestores</strong> — reuniões e aprovações no celular, decisões no PC</p>
+<h3 id="13-objetivo-desta-rodada">1.3 Objetivo desta rodada<a class="headerlink" href="#13-objetivo-desta-rodada" title="Permanent link">&para;</a></h3>
+<p>Entregar o <strong>APK Android do Agent</strong> pronto pra ser distribuído. Portal, pilotos e integração operacional ficam pra rodadas separadas que Marcos planeja depois.</p>
+<hr />
+<h2 id="2-escopo-e-nao-escopo">2. Escopo e não-escopo<a class="headerlink" href="#2-escopo-e-nao-escopo" title="Permanent link">&para;</a></h2>
+<h3 id="21-dentro-do-escopo-desta-spec">2.1 Dentro do escopo desta spec<a class="headerlink" href="#21-dentro-do-escopo-desta-spec" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Design completo do APK Android nativo (Kotlin)</li>
+<li>Todos os componentes internos, contratos de dados, permissões, fluxo de vinculação, auto-update</li>
+<li>Sistema de logs local + audit events + crash reports (equivalente Windows atual)</li>
+<li>Scripts locais de build + CI/CD do repo Android</li>
+<li>Mapeamento das alterações que o backend precisará no futuro (para consumo do @Shuri quando ela migrar rotas do Agent pra Node)</li>
+</ul>
+<h3 id="22-fora-do-escopo-rodadas-futuras">2.2 Fora do escopo (rodadas futuras)<a class="headerlink" href="#22-fora-do-escopo-rodadas-futuras" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Rodada futura owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Portal (srv-portal-node) ganha aba do Agent com botões Android</td>
+<td>@Shuri (rodada portal)</td>
+</tr>
+<tr>
+<td>Pipeline server-side de re-empacotamento (<code>apksigner</code> + inject <code>config.json</code>)</td>
+<td>@Shuri (rodada portal)</td>
+</tr>
+<tr>
+<td>Endpoint <code>POST /api/agente/logs/upload</code></td>
+<td>Rodada backend Node</td>
+</tr>
+<tr>
+<td>Endpoint <code>GET /api/agente/config</code> estendido com <code>enviarLogsAte</code> e <code>logLevel</code> dinâmico</td>
+<td>Rodada backend Node</td>
+</tr>
+<tr>
+<td>Documentação pública em <code>docs.imanagerportal.com/mobile/</code> (6 páginas)</td>
+<td>Rodada docs</td>
+</tr>
+<tr>
+<td>Testes cross-device automatizados (E2E Playwright + emulador)</td>
+<td>Rodada QA (@Natasha)</td>
+</tr>
+<tr>
+<td>Testes manuais em matriz de 6 devices físicos</td>
+<td>Rodada QA (@Natasha)</td>
+</tr>
+<tr>
+<td>Piloto interno com 3-5 colaboradores</td>
+<td>Rodada piloto</td>
+</tr>
+<tr>
+<td>Piloto cliente controlado</td>
+<td>Rodada piloto</td>
+</tr>
+<tr>
+<td>Score IA calibrado pra padrão mobile</td>
+<td>Rodada srv-ia (@Jarvis)</td>
+</tr>
+<tr>
+<td>Presença unificada PC+celular no portal</td>
+<td>Rodada portal (@Shuri + @Peter)</td>
+</tr>
+<tr>
+<td>Ícones 🖥/📱 no fed-portal</td>
+<td>Rodada fed-portal (@Peter/@Miles)</td>
+</tr>
+<tr>
+<td>iOS (mesmo BYOD limitado ou corporativo MDM)</td>
+<td>Rodada futura pós-Android estabilizado</td>
+</tr>
+<tr>
+<td>Migração eventual do Agent Windows pra enviar logs pro Loki</td>
+<td>Débito compartilhado @Bucky (independente)</td>
+</tr>
+<tr>
+<td>Config remota de log level (feature comum a Android + Windows)</td>
+<td>Débito compartilhado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-alteracoes-necessarias-no-backend-so-documentar-nao-fazer">2.3 Alterações necessárias no backend (só documentar, não fazer)<a class="headerlink" href="#23-alteracoes-necessarias-no-backend-so-documentar-nao-fazer" title="Permanent link">&para;</a></h3>
+<p>O backend (<code>srv-admin</code> Java + <code>srv-events</code> Java) está em processo de migração pra Node pela @Shuri. Regra dura de Marcos: <strong>não mexer em Java durante a migração</strong>. O <code>srv-admin-node</code> e <code>srv-events-node</code> vão nascer com o <strong>mesmo contrato</strong> do Java atual — usar Java como referência de shape.</p>
+<p>Alterações que serão necessárias no backend (Node) para o Agent Android funcionar plenamente em produção comercial:</p>
+<table>
+<thead>
+<tr>
+<th>Endpoint / tabela</th>
+<th>Alteração</th>
+<th>Motivo</th>
+<th>Prioridade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>agentes</code> (tabela)</td>
+<td>Adicionar coluna <code>dispositivo_tipo VARCHAR(20)</code> — enum {WINDOWS, MACOS, ANDROID, IOS}. Default <code>WINDOWS</code>.</td>
+<td>Distinguir origem do agente</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><code>eventos_*</code> (todas)</td>
+<td>Adicionar <code>dispositivo_tipo</code> denormalizado (mesmo default)</td>
+<td>Query eficiente por origem sem JOIN</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><code>versoes_agente</code> (tabela)</td>
+<td>Adicionar coluna <code>sistema_operacional VARCHAR(20)</code> — enum {WINDOWS, MACOS, ANDROID, IOS}</td>
+<td>Distinguir versões por SO</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><code>POST /api/agente/dispositivos/vincular</code></td>
+<td>Aceitar <code>dispositivoTipo=ANDROID</code> no body. Campo <code>sistemaOperacional</code> mais rico (versão Android + fabricante + modelo)</td>
+<td>Vinculação de agente Android</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><code>POST /api/agent/events</code></td>
+<td>Aceitar novo tipo de evento <code>PhoneCallEvent</code> (CALL_START/CALL_END, sem número/contato). Aceitar <code>WindowActivityEvent</code> com <code>urlDominio</code> vazio quando browser não expõe.</td>
+<td>Novo tipo mobile-específico</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><code>GET /api/agente/atualizacoes/verificar</code></td>
+<td>Aceitar query <code>sistemaOperacional=ANDROID</code>. Retornar <code>versoes_agente</code> filtrada por SO. Serve URL do APK.</td>
+<td>Auto-update Android</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Endpoints existentes <code>POST /api/agente/auditoria/registrar</code> e <code>POST /api/agent/error-report</code></td>
+<td>Nenhuma alteração de contrato — Android usa exatamente como Windows usa hoje</td>
+<td>Auditoria + crash reports mobile</td>
+<td>Alta (já compatível)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rodada futura backend também:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>O que precisa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST /api/agente/logs/upload</code> (novo)</td>
+<td>Aceitar arquivo compactado (gzip) de logs + range temporal. Guardar em S3 <code>agent-logs/&lt;tenant&gt;/&lt;agente&gt;/</code>, retenção 30 dias.</td>
+</tr>
+<tr>
+<td><code>GET /api/agente/config</code> (existente)</td>
+<td>Estender com campos <code>enviarLogsAte</code> (timestamp — Agent detecta e sobe logs sob demanda) e <code>logLevel</code> (dinâmico — TTL 1h)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-decisoes-arquiteturais-chave-brainstorm-2026-08-08">3. Decisões arquiteturais chave (brainstorm 2026-08-08)<a class="headerlink" href="#3-decisoes-arquiteturais-chave-brainstorm-2026-08-08" title="Permanent link">&para;</a></h2>
+<p>Todas registradas via <code>AskUserQuestion</code> com Marcos:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Decisão</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td>Paridade Windows: mesmos tipos de evento</td>
+<td>Coerência de dados no backend, unificação futura no relatório</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>Android-first, iOS deprioridade</td>
+<td>BYOD iOS Apple não permite tracking que precisamos. Fica pra futuro com MDM corporativo</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>BYOD (celular pessoal do colaborador)</td>
+<td>Cliente-alvo tem colaboradores usando celular pessoal</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>Sideload (fora da Play Store)</td>
+<td>Distribuição via link direto do portal. Sem review Google Play. Destrava Accessibility + Usage Stats sem risco de rejeição</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>Transparente + baixa visibilidade</td>
+<td>Coerente com posicionamento ético ("sem vigilância, com dados"). Aceite LGPD claro, notification mínima, tutorial de permissões</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>APK único por empresa (chave embutida no <code>config.json</code>)</td>
+<td>Simplifica pipeline de personalização — 1 APK por empresa vs 1 por colaborador</td>
+</tr>
+<tr>
+<td>D7</td>
+<td>Identificador do colaborador vem em UI mínima na 1ª execução</td>
+<td>Única tela do APK; sem UI depois</td>
+</tr>
+<tr>
+<td>D8</td>
+<td>Ícone auto-remove da gaveta após 1ª execução</td>
+<td><code>PackageManager.setComponentEnabledSetting</code> na <code>PermissionDispatchActivity</code> após vinculação</td>
+</tr>
+<tr>
+<td>D9</td>
+<td>Aceite LGPD duplo: institucional (gestor no download) + individual (colaborador na 1ª execução)</td>
+<td>Cobre LGPD Art. 7º/8º — consentimento individual do titular</td>
+</tr>
+<tr>
+<td>D10</td>
+<td>Logs iguais Windows atual: locais + audit events + crash reports. SEM Loki</td>
+<td>Simplicidade + evita débito misturado. Loki entra em rodada futura pra Android+Windows juntos</td>
+</tr>
+<tr>
+<td>D11</td>
+<td>Escape hatch de logs: notification action "Enviar diagnóstico"</td>
+<td>Copia últimos logs do storage privado pra <code>Downloads/ManagerAgent/</code> público. Colaborador envia manualmente pro gestor.</td>
+</tr>
+<tr>
+<td>D12</td>
+<td>Auto-update com clique do colaborador (impossível silencioso em BYOD)</td>
+<td>Restrição Android. Notification → PackageInstaller → confirma</td>
+</tr>
+<tr>
+<td>D13</td>
+<td>Package name: <code>com.trivion.manageragent</code> (prod) / <code>.staging</code> (staging)</td>
+<td>Alinhado com razão social Trivion + build variants Gradle</td>
+</tr>
+<tr>
+<td>D14</td>
+<td>Novo dev Android sênior contratado (não @Bucky aprende)</td>
+<td>@Bucky mantém foco no Windows + Marcos e Harvey já decidiram contratação</td>
+</tr>
+<tr>
+<td>D15</td>
+<td>Backend Java NÃO SERÁ TOCADO — só documentar alterações necessárias</td>
+<td>Java em migração pra Node — regra dura. Node nasce com mesmo shape.</td>
+</tr>
+<tr>
+<td>D16</td>
+<td>Ambientes staging + prod desde o dia 1 (igual desktop)</td>
+<td>2 build variants Gradle, 2 packageNames diferentes (instaláveis lado a lado)</td>
+</tr>
+<tr>
+<td>D17</td>
+<td>Tentar coleta de <code>urlDominio</code> no browser (best-effort, vazio se falhar)</td>
+<td>Paridade com Windows. Accessibility lê content-description da URL bar do Chrome.</td>
+</tr>
+<tr>
+<td>D18</td>
+<td><code>PhoneCallEvent</code> novo tipo pra chamada telefônica (CALL_START/CALL_END, sem número)</td>
+<td>Cenário mobile relevante — SDR/atendimento usam celular pra chamar clientes.</td>
+</tr>
+<tr>
+<td>D19</td>
+<td><code>MeetingEvent</code> continua igual (Zoom/Teams/Meet) via detecção de app foreground</td>
+<td>Best-effort — sabemos que app está aberto, não sabemos se está em chamada real. Aceitável.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-arquitetura-macro">4. Arquitetura macro<a class="headerlink" href="#4-arquitetura-macro" title="Permanent link">&para;</a></h2>
+<h3 id="41-como-o-android-se-encaixa-no-ecossistema-manager">4.1 Como o Android se encaixa no ecossistema Manager<a class="headerlink" href="#41-como-o-android-se-encaixa-no-ecossistema-manager" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Colaborador]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ├── Windows/macOS ────►  ManagerAgent.exe (C# .NET 8) ──┐
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    │                                                        │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    └── Android BYOD ─────►  ManagerAgent.apk (Kotlin) ─────┤
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                              via config.json embutido:      │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                              chaveAtivacao empresa +        │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                              endpoints prod/staging          │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                                                             ▼
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                                                    [manager-srv-events]
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                                                    Ingesta batch
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                                                    Device JWT (mesmo secret)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                                                    Contrato compatível com Java atual
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                                                             │
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                                                             ▼
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                                                    PostgreSQL Supabase
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>                                                    eventos_* já existentes
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                                                    (+ dispositivo_tipo — rodada futura)
+</code></pre></div>
+<h3 id="42-principios-inegociaveis-desta-arquitetura">4.2 Princípios inegociáveis desta arquitetura<a class="headerlink" href="#42-principios-inegociaveis-desta-arquitetura" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Mesmo backend, mesmo Device JWT, mesmo endpoint <code>/api/agent/events</code></strong> — não criamos ingestão paralela</li>
+<li><strong>Um colaborador = uma identidade lógica, N dispositivos vinculados</strong> — tabela <code>agentes</code> já suporta via <code>usuario_ref_id</code> + <code>maquina_id</code></li>
+<li><strong>Contrato compatível 100% com Java atual</strong> — APK envia payloads que o Java existente aceita hoje (sem <code>dispositivoTipo</code> ou <code>PhoneCallEvent</code> novos até backend suportar; ver seção 6.4 fallback)</li>
+<li><strong>Score IA fica sem calibração mobile no MVP</strong> — Marcos planeja depois. Eventos mobile chegam no banco mas srv-ia ignora ou usa flag</li>
+</ol>
+<hr />
+<h2 id="5-componentes-internos-do-apk-15">5. Componentes internos do APK (15)<a class="headerlink" href="#5-componentes-internos-do-apk-15" title="Permanent link">&para;</a></h2>
+<h3 id="51-lista-completa">5.1 Lista completa<a class="headerlink" href="#51-lista-completa" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Componente</th>
+<th>Responsabilidade</th>
+<th>Dependência principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td><code>ManagerAgentService</code> (ForegroundService, tipo <code>dataSync</code>)</td>
+<td>Orquestra a coleta e envio. Notification persistente mínima obrigatória</td>
+<td>AndroidX Foreground Service</td>
+</tr>
+<tr>
+<td>C2</td>
+<td><code>ManagerAccessibilityService</code></td>
+<td>Fonte primária de eventos: window changed + interações (toques, scrolls, digitações — SEM CONTEÚDO)</td>
+<td>Android Accessibility API</td>
+</tr>
+<tr>
+<td>C3</td>
+<td><code>UsageStatsCollector</code></td>
+<td>Fonte de reconciliação: consulta <code>UsageStatsManager</code> a cada 5min pra suprir gaps do Accessibility (OEM matando service)</td>
+<td><code>PACKAGE_USAGE_STATS</code> permission</td>
+</tr>
+<tr>
+<td>C4</td>
+<td><code>SessionBroadcastReceiver</code></td>
+<td>Escuta <code>SCREEN_ON</code>/<code>SCREEN_OFF</code>/<code>USER_PRESENT</code>/<code>BOOT_COMPLETED</code> → mapeia pra <code>SessionEvent</code> LOCK/UNLOCK</td>
+<td>BroadcastReceiver Android</td>
+</tr>
+<tr>
+<td>C5</td>
+<td><code>PhoneCallListener</code> (via <code>TelephonyManager.PhoneStateListener</code> ou <code>TelephonyCallback</code> Android 12+)</td>
+<td>Detecta CALL_START/CALL_END → <code>PhoneCallEvent</code>. Sem número/contato.</td>
+<td><code>READ_PHONE_STATE</code> permission</td>
+</tr>
+<tr>
+<td>C6</td>
+<td><code>MeetingDetector</code></td>
+<td>Heurística: app foreground <code>IN (us.zoom.videomeetings, com.microsoft.teams, com.google.android.apps.meetings)</code> por &gt;2min = MeetingEvent</td>
+<td>AccessibilityService (usa dados de C2)</td>
+</tr>
+<tr>
+<td>C7</td>
+<td><code>UrlDomainExtractor</code></td>
+<td>Best-effort: lê content-description da URL bar do Chrome via Accessibility node (Chrome/Firefox/Samsung Browser). Fallback: vazio</td>
+<td>AccessibilityService (usa dados de C2)</td>
+</tr>
+<tr>
+<td>C8</td>
+<td><code>EventQueue</code> (Room SQLite local)</td>
+<td>Buffer resiliente de eventos pendentes de envio. Trim FIFO máx 10k eventos ou 7 dias</td>
+<td>AndroidX Room</td>
+</tr>
+<tr>
+<td>C9</td>
+<td><code>BatchSender</code> (WorkManager job periódico 5min)</td>
+<td>Envia batch acumulado pro <code>POST /api/agent/events</code>. Retry exponencial (5min→10min→20min→cap 1h)</td>
+<td>WorkManager + OkHttp/Retrofit</td>
+</tr>
+<tr>
+<td>C10</td>
+<td><code>AuthManager</code></td>
+<td>Vinculação inicial + refresh token + storage seguro (EncryptedSharedPreferences)</td>
+<td>AndroidX Security</td>
+</tr>
+<tr>
+<td>C11</td>
+<td><code>PermissionDispatchActivity</code></td>
+<td>Única Activity — 1 tela (identificador + aceite LGPD) → encadeia intents de permissão → vincula → inicia Service → auto-remove do LAUNCHER via <code>setComponentEnabledSetting</code></td>
+<td>Android Intents</td>
+</tr>
+<tr>
+<td>C12</td>
+<td><code>LoggingService</code> (Timber)</td>
+<td>Logs locais estruturados, path privado do app, rotação diária, retenção 7 dias, formato texto estilo Serilog (paridade Windows)</td>
+<td>Timber</td>
+</tr>
+<tr>
+<td>C13</td>
+<td><code>AuditReporter</code></td>
+<td>Fire-and-forget POST <code>/api/agente/auditoria/registrar</code> (endpoint existente, mesmo do Windows). Bearer DeviceToken</td>
+<td>OkHttp</td>
+</tr>
+<tr>
+<td>C14</td>
+<td><code>CrashReporter</code></td>
+<td><code>Thread.setDefaultUncaughtExceptionHandler</code> + ANR detector → POST <code>/api/agent/error-report</code> (endpoint existente). Throttle 5min por tipo</td>
+<td>OkHttp</td>
+</tr>
+<tr>
+<td>C15</td>
+<td><code>UpdateService</code></td>
+<td>Verifica versão a cada 6h → baixa APK → valida SHA-256 → notification → PackageInstaller flow → audit resultado</td>
+<td>WorkManager + PackageInstaller</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-anti-padrao-explicito">5.2 Anti-padrão explícito<a class="headerlink" href="#52-anti-padrao-explicito" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>NUNCA</strong> ler <code>AccessibilityEvent.getText()</code>, <code>getContentDescription()</code> completo ou <code>getSource().getText()</code> — LGPD inegociável. Teste unitário <code>LGPDContentFilterTest</code> trava sabotagem futura.</li>
+<li><strong>NUNCA</strong> capturar screenshot da tela — sem paridade com plano Plus do desktop no MVP mobile.</li>
+<li><strong>NUNCA</strong> capturar áudio, microfone, câmera, GPS — fora do escopo do produto.</li>
+<li><strong>NUNCA</strong> ler URL path completo — apenas domínio raiz (mesmo padrão Windows).</li>
+</ul>
+<hr />
+<h2 id="6-mapeamento-de-eventos-windows-android">6. Mapeamento de eventos Windows → Android<a class="headerlink" href="#6-mapeamento-de-eventos-windows-android" title="Permanent link">&para;</a></h2>
+<h3 id="61-tipos-suportados-no-mvp">6.1 Tipos suportados no MVP<a class="headerlink" href="#61-tipos-suportados-no-mvp" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo (Windows)</th>
+<th>Android equivalente</th>
+<th>Como coleta</th>
+<th>Fidelidade</th>
+<th>Contrato JSON</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WindowActivityEvent</code></td>
+<td>App em foreground (<code>packageName</code> + <code>className</code> da activity) + <code>urlDominio</code> best-effort</td>
+<td>AccessibilityService <code>TYPE_WINDOW_STATE_CHANGED</code> + UrlDomainExtractor</td>
+<td>Alta</td>
+<td>Mesmo do Windows: <code>{nomeProcesso, tituloJanela, iniciadoEm, finalizadoEm, statusUsuario, urlDominio}</code></td>
+</tr>
+<tr>
+<td><code>IdleEvent</code></td>
+<td>Sem interação com tela</td>
+<td>AccessibilityService (ausência de eventos) + <code>PowerManager.isInteractive()</code></td>
+<td>Alta</td>
+<td>Mesmo do Windows: <code>{iniciadoEm, finalizadoEm, statusUsuario}</code></td>
+</tr>
+<tr>
+<td><code>HeartbeatEvent</code></td>
+<td>Idem</td>
+<td>WorkManager periódico</td>
+<td>Alta</td>
+<td>Mesmo do Windows: <code>{enviadoEm, eventosPendentes}</code></td>
+</tr>
+<tr>
+<td><code>SessionEvent</code> LOCK/UNLOCK</td>
+<td>Tela bloqueada/desbloqueada</td>
+<td><code>ACTION_SCREEN_OFF</code>/<code>ACTION_USER_PRESENT</code></td>
+<td>Alta</td>
+<td>Mesmo do Windows: <code>{tipoEvento, ocorreuEm}</code></td>
+</tr>
+<tr>
+<td><code>SessionEvent</code> LOGIN/LOGOUT</td>
+<td>Boot / desligar</td>
+<td><code>ACTION_BOOT_COMPLETED</code>/<code>ACTION_SHUTDOWN</code></td>
+<td>Média (Android reboota menos)</td>
+<td>Idem</td>
+</tr>
+<tr>
+<td><code>ActivitySummaryEvent</code></td>
+<td>Toques, digitações (virtual), scrolls</td>
+<td>AccessibilityService conta eventos por janela de 1min</td>
+<td>Média (não distingue teclas físicas de virtuais)</td>
+<td>Mesmo Windows: <code>{teclasPressionadas, cliquesMouseEsq/Dir/Meio, movimentosMouse, scrollsVertical, padrao_digitacao}</code>. Cliques/movimentos mouse ficam 0 no Android.</td>
+</tr>
+<tr>
+<td><code>MeetingEvent</code> (Zoom/Teams/Meet)</td>
+<td>Detecção por app específico + duração mínima</td>
+<td>MeetingDetector (heurística baseada em C2)</td>
+<td>Média</td>
+<td>Mesmo Windows: <code>{iniciadoEm, finalizadoEm, aplicativo}</code>. <code>aplicativo</code> = "Zoom Android"/"Teams Android"/"Google Meet".</td>
+</tr>
+<tr>
+<td><code>StatusTransitionEvent</code></td>
+<td>Idem, calculado localmente</td>
+<td>Mesma lógica de thresholds do desktop</td>
+<td>Alta</td>
+<td>Mesmo Windows: <code>{statusAnterior, statusNovo, transicaoEm}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-novo-tipo-android-especifico-mapeado-pra-backend-futuro">6.2 Novo tipo Android-específico (mapeado pra backend futuro)<a class="headerlink" href="#62-novo-tipo-android-especifico-mapeado-pra-backend-futuro" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Como coleta</th>
+<th>Contrato JSON</th>
+<th>Backlog backend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PhoneCallEvent</code></td>
+<td><code>PhoneStateListener.onCallStateChanged()</code> — CALL_STATE_OFFHOOK (start) e CALL_STATE_IDLE após offhook (end). SEM número.</td>
+<td><code>{tipoEvento: "CALL_START"\|"CALL_END", ocorreuEm}</code></td>
+<td>srv-events-node precisa aceitar novo tipo. Até lá, evento fica na fila local do APK ou é enviado como <code>MeetingEvent</code> com <code>aplicativo="PhoneCall"</code> como fallback compatível.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-eventos-nao-coletados-fora-de-escopo">6.3 Eventos NÃO coletados (fora de escopo)<a class="headerlink" href="#63-eventos-nao-coletados-fora-de-escopo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Áudio/vídeo de reunião</strong> — impossível sem gravar (LGPD proíbe)</li>
+<li><strong>Conteúdo de mensagens WhatsApp/Telegram/etc</strong> — LGPD inegociável</li>
+<li><strong>Localização GPS</strong> — não faz parte do produto</li>
+<li><strong>Screenshots</strong> — sem paridade com plano Plus mobile no MVP</li>
+<li><strong>Wi-Fi conectado / rede</strong> — não faz parte da coleta</li>
+<li><strong>URL path completa</strong> — só domínio (mesmo padrão Windows)</li>
+</ul>
+<h3 id="64-premissa-de-execucao-2026-08-08-marcos">6.4 Premissa de execução (2026-08-08, Marcos)<a class="headerlink" href="#64-premissa-de-execucao-2026-08-08-marcos" title="Permanent link">&para;</a></h3>
+<p><strong>Quando iniciarmos o desenvolvimento do APK, <code>srv-events-node</code> e <code>srv-admin-node</code> estarão 100% em produção com os campos novos.</strong> Ou seja:</p>
+<ul>
+<li><code>agentes.dispositivo_tipo</code>, <code>eventos_*.dispositivo_tipo</code> e <code>versoes_agente.sistema_operacional</code> já existirão como colunas</li>
+<li><code>POST /api/agente/dispositivos/vincular</code> já aceitará <code>dispositivoTipo=ANDROID</code> e SO rico (fabricante + modelo + Android version)</li>
+<li><code>POST /api/agent/events</code> já aceitará <code>PhoneCallEvent</code> como tipo próprio e <code>WindowActivityEvent.urlDominio</code> vazio</li>
+<li><code>GET /api/agente/atualizacoes/verificar?sistemaOperacional=ANDROID</code> já retornará versões filtradas por SO</li>
+</ul>
+<p><strong>Consequência pro APK:</strong>
+- APK envia payloads ricos <strong>desde o dia 1 do desenvolvimento</strong>
+- Zero fallback / disfarce como Windows
+- Zero condicional "se backend não aceita, faz X"
+- Contrato Java atual serve apenas como <strong>referência histórica de shape</strong> — Node herdou e estendeu</p>
+<p><strong>Responsabilidade da @Shuri (não desta spec):</strong> garantir que rotas Node estejam prontas + campos novos deployados em prod antes do dia D do desenvolvimento Android começar. Coordenação de calendário com Marcos.</p>
+<hr />
+<h2 id="7-onboarding-e-permissoes-fluxo-end-to-end">7. Onboarding e permissões (fluxo end-to-end)<a class="headerlink" href="#7-onboarding-e-permissoes-fluxo-end-to-end" title="Permanent link">&para;</a></h2>
+<h3 id="71-fluxo-completo-rodada-futura-portal-envolvido-aqui-so-documenta">7.1 Fluxo completo (rodada futura: portal envolvido — aqui só documenta)<a class="headerlink" href="#71-fluxo-completo-rodada-futura-portal-envolvido-aqui-so-documenta" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GESTOR (portal — rodada futura):
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  1. Vai na aba do Agent do portal (mesma tela do instalador Windows)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  2. Clica "Baixar Android (Prod)" [ou Staging]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  3. Modal com termos institucionais + botão "Aceito e baixar"
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  4. Backend registra aceite institucional (tipo TERMOS_AGENT_MOBILE_INSTITUCIONAL, gestor_id, IP, timestamp)
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  5. Pipeline de re-empacotamento retorna APK personalizado por empresa
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>     (chave empresa embutida no config.json)
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  6. Gestor copia link ou baixa e envia por WhatsApp/email pro colaborador
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>COLABORADOR (celular):
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  7. Clica link → Chrome baixa APK
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  8. Habilita Fontes Desconhecidas (se 1ª vez)
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  9. Instala APK
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a> 10. Android auto-abre PermissionDispatchActivity (única Activity, LAUNCHER temporário):
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>     Tela mínima:
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>       "Bem-vindo ao ManagerAgent"
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>       "Empresa: {Nome vindo do config.json embutido}"
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>       [ Campo: Digite seu CPF ou matrícula ]
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>       [☐] Li e aceito os Termos de Uso e Política de Privacidade (link abre browser)
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>       [ Continuar ]
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a> 11. Colaborador digita identificador + aceita termos + Continuar
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a> 12. APK valida identificador contra backend
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>     • POST /api/agente/v1/colaboradores/validar (chave empresa + identificador)
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>     • Se OK: registra aceite individual (POST /api/agente/auditoria/registrar tipo TERMOS_ACEITOS_ANDROID)
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>     • Se erro (identificador não encontrado): mostra "Identificador não encontrado — fale com seu gestor"
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a> 13. Encadeia intents de permissão (sequencial, com callback):
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>     a. Settings.ACTION_ACCESSIBILITY_SETTINGS → colaborador ativa toggle
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>     b. Settings.ACTION_USAGE_ACCESS_SETTINGS → colaborador ativa toggle
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>     c. Runtime permission POST_NOTIFICATIONS (Android 13+)
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>     d. Runtime permission READ_PHONE_STATE
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>     e. Se OEM problemático (Xiaomi/Huawei/Oppo/Vivo detectado): abre Settings do OEM (Autostart etc)
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a> 14. Faz POST /api/agente/dispositivos/vincular
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>     • Header X-Ativacao-Key: {chave embutida}
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>     • Body: {identificador, instalacaoId, maquinaId, nomeMaquina, versaoAgente, descricaoSo}
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>     • Recebe deviceToken + refreshToken → guarda em EncryptedSharedPreferences
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a> 15. Inicia ManagerAgentService (ForegroundService)
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a> 16. PackageManager.setComponentEnabledSetting(
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>       ComponentName(this, PermissionDispatchActivity::class.java),
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>       COMPONENT_ENABLED_STATE_DISABLED,
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>       DONT_KILL_APP
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>     ) → Activity SE DESABILITA como componente. Ícone SOME da gaveta.
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a> 17. Toast: "ManagerAgent ativo ✓" (único elemento visual pós-config)
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a> 18. Activity.finish()
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>COLABORADOR vê a partir daqui:
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>  • Notification persistente mínima: "ManagerAgent" (silenciosa, baixa prioridade, sem badge, sem lock screen)
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>  • Ícone NÃO existe na gaveta
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>  • App NÃO abre por clique
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>  • Coleta rodando em background invisível
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>  • Se quiser desinstalar: Settings &gt; Apps &gt; ManagerAgent &gt; Desinstalar (fluxo normal Android)
+</code></pre></div>
+<h3 id="72-permissoes-declaradas-no-androidmanifestxml">7.2 Permissões declaradas no AndroidManifest.xml<a class="headerlink" href="#72-permissoes-declaradas-no-androidmanifestxml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.ACCESS_NETWORK_STATE"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.WAKE_LOCK"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.RECEIVE_BOOT_COMPLETED"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.PACKAGE_USAGE_STATS"</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">                 </span><span class="na">tools:ignore=</span><span class="s">"ProtectedPermissions"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.FOREGROUND_SERVICE"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.FOREGROUND_SERVICE_DATA_SYNC"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.POST_NOTIFICATIONS"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.READ_PHONE_STATE"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.REQUEST_INSTALL_PACKAGES"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nt">&lt;uses-permission</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.permission.QUERY_ALL_PACKAGES"</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">                 </span><span class="na">tools:ignore=</span><span class="s">"QueryAllPackagesPermission"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nt">&lt;application</span><span class="w"> </span><span class="err">...</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="cm">&lt;!-- Única Activity, LAUNCHER temporário --&gt;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">  </span><span class="nt">&lt;activity</span><span class="w"> </span><span class="na">android:name=</span><span class="s">".PermissionDispatchActivity"</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">            </span><span class="na">android:exported=</span><span class="s">"true"</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">            </span><span class="na">android:excludeFromRecents=</span><span class="s">"true"</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">            </span><span class="na">android:noHistory=</span><span class="s">"true"</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">            </span><span class="na">android:theme=</span><span class="s">"@android:style/Theme.Material.Light.NoActionBar"</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="nt">&lt;intent-filter&gt;</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.intent.action.MAIN"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">      </span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.intent.category.LAUNCHER"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="nt">&lt;/intent-filter&gt;</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">  </span><span class="nt">&lt;/activity&gt;</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">  </span><span class="nt">&lt;service</span><span class="w"> </span><span class="na">android:name=</span><span class="s">".ManagerAgentService"</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">           </span><span class="na">android:foregroundServiceType=</span><span class="s">"dataSync"</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">           </span><span class="na">android:exported=</span><span class="s">"false"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">  </span><span class="nt">&lt;service</span><span class="w"> </span><span class="na">android:name=</span><span class="s">".ManagerAccessibilityService"</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">           </span><span class="na">android:permission=</span><span class="s">"android.permission.BIND_ACCESSIBILITY_SERVICE"</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">           </span><span class="na">android:exported=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">    </span><span class="nt">&lt;intent-filter&gt;</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.accessibilityservice.AccessibilityService"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">    </span><span class="nt">&lt;/intent-filter&gt;</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">    </span><span class="nt">&lt;meta-data</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.accessibilityservice"</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">               </span><span class="na">android:resource=</span><span class="s">"@xml/accessibility_config"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">  </span><span class="nt">&lt;/service&gt;</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">  </span><span class="nt">&lt;receiver</span><span class="w"> </span><span class="na">android:name=</span><span class="s">".SessionBroadcastReceiver"</span><span class="w"> </span><span class="na">android:exported=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">    </span><span class="nt">&lt;intent-filter&gt;</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.intent.action.BOOT_COMPLETED"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.intent.action.SCREEN_ON"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.intent.action.SCREEN_OFF"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">"android.intent.action.USER_PRESENT"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="w">    </span><span class="nt">&lt;/intent-filter&gt;</span>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="w">  </span><span class="nt">&lt;/receiver&gt;</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="nt">&lt;/application&gt;</span>
+</code></pre></div>
+<h3 id="73-deteccao-de-oem-problematico">7.3 Detecção de OEM problemático<a class="headerlink" href="#73-deteccao-de-oem-problematico" title="Permanent link">&para;</a></h3>
+<p>Cada fabricante Android modifica comportamento de background:</p>
+<table>
+<thead>
+<tr>
+<th>Fabricante</th>
+<th>Comportamento</th>
+<th>Ação do APK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Samsung (One UI)</td>
+<td>Moderadamente comportado</td>
+<td>Solicita "Battery &gt; Não otimizar" via Intent <code>ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td>
+</tr>
+<tr>
+<td>Xiaomi/Redmi (MIUI)</td>
+<td>Agressivo</td>
+<td>Abre Settings específico MIUI (Autostart Management) via Intent com component <code>com.miui.securitycenter/.permission.PermMainActivity</code></td>
+</tr>
+<tr>
+<td>Huawei/Honor (EMUI/HarmonyOS)</td>
+<td>Extremo</td>
+<td>Abre <code>com.huawei.systemmanager/.optimize.process.ProtectActivity</code></td>
+</tr>
+<tr>
+<td>Oppo/Realme (ColorOS)</td>
+<td>Similar Xiaomi</td>
+<td>Abre <code>com.coloros.safecenter/.startupapp.StartupAppListActivity</code></td>
+</tr>
+<tr>
+<td>Vivo (Funtouch/OriginOS)</td>
+<td>Similar Xiaomi</td>
+<td>Abre <code>com.vivo.permissionmanager/.activity.BgStartUpManagerActivity</code></td>
+</tr>
+<tr>
+<td>Motorola / Nokia / Pixel (stock)</td>
+<td>Comportado</td>
+<td>Nenhuma ação extra</td>
+</tr>
+<tr>
+<td>OnePlus (OxygenOS)</td>
+<td>Moderado</td>
+<td>Abre <code>com.oneplus.security/.chainlaunch.view.ChainLaunchAppListActivity</code></td>
+</tr>
+</tbody>
+</table>
+<p>Component <code>OEMDetector</code> (utilitário do APK) usa <code>Build.MANUFACTURER</code> na 1ª execução e mapeia pra intent correto. Detalhes em código (implementação do dev novo).</p>
+<hr />
+<h2 id="8-auto-update">8. Auto-update<a class="headerlink" href="#8-auto-update" title="Permanent link">&para;</a></h2>
+<p>BYOD Android <strong>NÃO permite update silencioso</strong> sem MDM/Device Owner. Sistema Android obrigatoriamente pede confirmação do usuário.</p>
+<h3 id="81-fluxo">8.1 Fluxo<a class="headerlink" href="#81-fluxo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>1. UpdateService (WorkManager job a cada 6h):
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>   • GET /api/agente/atualizacoes/verificar?sistema=ANDROID&amp;versao=&lt;atual&gt;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>     (query "sistema=ANDROID" — rodada futura backend Node; enquanto Java, sem query)
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>   • Backend responde: {
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>       atualizacao_disponivel: true,
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>       versao_nova: "1.2.0",
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>       url_download: "https://apk.imanager.trivion.com.br/updates/prod/1.2.0.apk",
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>       checksum_sha256: "abc123...",
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>       obrigatoria: false
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>     }
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2. Se disponível:
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>   • Baixa APK pra /data/data/com.trivion.manageragent/files/updates/1.2.0.apk
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>   • Valida SHA-256 → se falhar, deleta e aborta (tenta em 24h)
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>   • Cria notification (baixa prioridade): "Atualização disponível — Toque pra instalar"
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>3. Colaborador clica na notification:
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>   • Intent ACTION_INSTALL_PACKAGE via PackageInstaller
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>   • Android mostra popup "Atualizar ManagerAgent?"
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>   • Colaborador confirma
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>   • Sistema atualiza
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>   • ForegroundService reinicia (se OEM permitir)
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>   • APK novo dispara POST /api/agente/auditoria/registrar (UPDATE_SUCESSO_ANDROID + versão)
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>4. Se colaborador ignora:
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>   • Notification persiste até update
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>   • Após 7 dias sem update: prioridade sobe pra alta
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>   • Se obrigatoria=true: prioridade alta desde dia 1 + heartbeat envia flag "versao_desatualizada"
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>5. Se update falha:
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>   • Deleta APK baixado
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>   • POST /api/agent/error-report (UPDATE_CRASH + motivo)
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>   • Retry em 24h
+</code></pre></div>
+<h3 id="82-diferencas-criticas-windows-vs-android-documentar-expectativa">8.2 Diferenças críticas Windows vs Android (documentar expectativa)<a class="headerlink" href="#82-diferencas-criticas-windows-vs-android-documentar-expectativa" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Windows</th>
+<th>Android BYOD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atualização silenciosa</td>
+<td>Sim, invisível</td>
+<td><strong>Não</strong> — colaborador sempre clica</td>
+</tr>
+<tr>
+<td>Reinício após update</td>
+<td>Automático</td>
+<td>Automático se OEM permitir (Samsung sim, Xiaomi às vezes não)</td>
+</tr>
+<tr>
+<td>Auto-start no boot</td>
+<td>Sim</td>
+<td>Precisa liberar Auto-start no menu OEM</td>
+</tr>
+<tr>
+<td>Ícone na gaveta pós-install</td>
+<td>N/A</td>
+<td>Removido após 1ª execução</td>
+</tr>
+<tr>
+<td>Notification persistente</td>
+<td>Não</td>
+<td><strong>Obrigatória</strong> (API do Android)</td>
+</tr>
+<tr>
+<td>Colaborador pode matar processo</td>
+<td>Difícil</td>
+<td>Sim (Force Stop em Settings, Recent apps swipe)</td>
+</tr>
+<tr>
+<td>Colaborador pode desinstalar</td>
+<td>Depende de perms locais</td>
+<td>Sim, sempre</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-sistema-de-logs">9. Sistema de logs<a class="headerlink" href="#9-sistema-de-logs" title="Permanent link">&para;</a></h2>
+<h3 id="91-estrategia-paridade-com-windows-atual">9.1 Estratégia: paridade com Windows atual<a class="headerlink" href="#91-estrategia-paridade-com-windows-atual" title="Permanent link">&para;</a></h3>
+<p>Baseado em investigação do @Bucky (Explore em 2026-08-08): Agent Windows atual <strong>não envia logs pro Loki</strong> — só logs locais (Serilog, <code>C:\ProgramData\ManagerAgent\logs\</code>, retenção 7 dias) + audit events + crash reports. Agent Android faz o mesmo padrão.</p>
+<p><strong>Fora de escopo desta rodada:</strong> integração com Loki (débito compartilhado com Windows). Config remota de log level (débito compartilhado).</p>
+<h3 id="92-componente-c12-loggingservice-timber">9.2 Componente C12 — LoggingService (Timber)<a class="headerlink" href="#92-componente-c12-loggingservice-timber" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Biblioteca: <code>Timber</code> (padrão comunidade Kotlin, equivalente ao Serilog)</li>
+<li>Path: <code>/data/data/com.trivion.manageragent/files/logs/</code> (app-specific, isolado do usuário — equivalente ao <code>ProgramData</code> do Windows)</li>
+<li>Rotação: 1 arquivo por dia (<code>agent-2026-08-08.log</code>), retenção 7 dias, máx 5MB por arquivo (rotaciona pra <code>.log.1</code> se estourar)</li>
+<li>Níveis: TRACE / DEBUG / INFO / WARN / ERROR</li>
+<li>Debug builds: emite tudo pro LogCat + arquivo</li>
+<li>Release builds: só INFO+ no LogCat, TRACE+ em arquivo</li>
+<li>Formato texto estruturado (paridade Windows):
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{timestamp:yyyy-MM-dd HH:mm:ss.SSS zzz} [{level:3}] {tag}: {message}{newline}{exception}
+</code></pre></div></li>
+</ul>
+<h3 id="93-componente-c13-auditreporter">9.3 Componente C13 — AuditReporter<a class="headerlink" href="#93-componente-c13-auditreporter" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Endpoint: <code>POST /api/agente/auditoria/registrar</code> (existente, mesmo do Windows)</li>
+<li>Bearer token DeviceToken</li>
+<li>Fire-and-forget</li>
+<li>Payload:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">"evento"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACCESSIBILITY_DESATIVADA"</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">"instalacaoId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uuid"</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">"agenteId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"long"</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">"timestampUtc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-08T14:23:12Z"</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nt">"dados"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"motivo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user_disabled_in_settings"</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<p><strong>Tipos de audit event Android:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Quando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AGENT_INSTALADO_ANDROID</code></td>
+<td>1ª execução pós-install</td>
+</tr>
+<tr>
+<td><code>TERMOS_ACEITOS_ANDROID</code></td>
+<td>Colaborador aceita termo individual na PermissionDispatchActivity</td>
+</tr>
+<tr>
+<td><code>AGENT_VINCULADO_ANDROID</code></td>
+<td>Vinculação bem-sucedida</td>
+</tr>
+<tr>
+<td><code>AGENT_VINCULACAO_FALHOU_ANDROID</code></td>
+<td>Falha (identificador inválido, chave inválida, rede) — motivo detalhado</td>
+</tr>
+<tr>
+<td><code>ACCESSIBILITY_ATIVADA</code> / <code>ACCESSIBILITY_DESATIVADA</code></td>
+<td>Colaborador toggle em Settings</td>
+</tr>
+<tr>
+<td><code>USAGE_STATS_ATIVADA</code> / <code>USAGE_STATS_DESATIVADA</code></td>
+<td>Idem</td>
+</tr>
+<tr>
+<td><code>OEM_PROBLEMATICO_DETECTADO</code></td>
+<td>Build.MANUFACTURER = Xiaomi/Huawei/etc + status atual (autostart?)</td>
+</tr>
+<tr>
+<td><code>SERVICE_MORTO_E_REINICIADO</code></td>
+<td>Watchdog reviveu Service morto pelo OEM</td>
+</tr>
+<tr>
+<td><code>UPDATE_INICIADO_ANDROID</code> / <code>UPDATE_SUCESSO_ANDROID</code> / <code>UPDATE_FALHOU_ANDROID</code></td>
+<td>Ciclo de auto-update</td>
+</tr>
+<tr>
+<td><code>AGENT_REVOGADO_ANDROID</code></td>
+<td>Última mensagem antes de parar coleta (backend retornou 403)</td>
+</tr>
+<tr>
+<td><code>AGENT_DESINSTALACAO_INICIADA</code></td>
+<td>Colaborador tentou desinstalar (se pegarmos evento)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="94-componente-c14-crashreporter">9.4 Componente C14 — CrashReporter<a class="headerlink" href="#94-componente-c14-crashreporter" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Endpoint: <code>POST /api/agent/error-report</code> (existente, mesmo do Windows)</li>
+<li>Bearer token DeviceToken</li>
+<li>Custom, sem Sentry/Firebase (alinha com posicionamento LGPD)</li>
+<li>Throttle 5min por tipo (mesmo padrão Windows)</li>
+<li>Captura via:</li>
+<li><code>Thread.setDefaultUncaughtExceptionHandler</code> (uncaught exceptions Kotlin/Java)</li>
+<li>ANR detector (Android-specific: main thread não responde por 5s → dispatched como ANR)</li>
+<li>OOM detector (via <code>Runtime.getRuntime().freeMemory()</code> monitorado no ForegroundService)</li>
+<li>Payload (mesmo do Windows):
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">"tipo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FATAL_CRASH"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"ANR"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"UPDATE_CRASH"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"OUT_OF_MEMORY"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"TOKEN_REFRESH_FAILED"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">...</span><span class="p">,</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">"mensagem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">"stackTrace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string (max 2000 chars)"</span><span class="p">,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">"versao"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nt">"sistemaOperacional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Android 13 (API 33)"</span><span class="p">,</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="nt">"maquina"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Xiaomi Redmi Note 12"</span><span class="p">,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="nt">"colaboradorId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"long"</span><span class="p">,</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="nt">"cnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string (extraído do JWT)"</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="95-escape-hatch-action-enviar-diagnostico-na-notification">9.5 Escape hatch — action "Enviar diagnóstico" na notification<a class="headerlink" href="#95-escape-hatch-action-enviar-diagnostico-na-notification" title="Permanent link">&para;</a></h3>
+<p>Sem endpoint de upload de logs (rodada futura), colaborador consegue enviar logs manualmente:</p>
+<ul>
+<li>Notification persistente do ForegroundService tem action "Enviar diagnóstico"</li>
+<li>Ao clicar: APK copia os últimos 3 arquivos de log (<code>logs/agent-*.log</code>) do storage privado pra <code>/storage/emulated/0/Download/ManagerAgent/logs/</code> (público)</li>
+<li>Colaborador vai em Downloads, encontra arquivos, envia pro gestor via WhatsApp/email</li>
+<li>Zero backend novo. Zero UI extra.</li>
+</ul>
+<hr />
+<h2 id="10-distribuicao-sideload-infra-minima">10. Distribuição sideload — infra mínima<a class="headerlink" href="#10-distribuicao-sideload-infra-minima" title="Permanent link">&para;</a></h2>
+<h3 id="101-bucket-s3-tigris-ja-usado-pro-instalador-windows">10.1 Bucket S3 (Tigris — já usado pro instalador Windows)<a class="headerlink" href="#101-bucket-s3-tigris-ja-usado-pro-instalador-windows" title="Permanent link">&para;</a></h3>
+<p>Estrutura:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>imanager-apks/
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>├── base/
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>│   ├── staging/
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>│   │   ├── manageragent-1.0.0-base.apk
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>│   │   ├── manageragent-1.0.0-base.apk.sha256
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>│   │   └── manageragent-latest -&gt; manageragent-1.0.0-base.apk (symlink lógico)
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>│   └── prod/
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>│       ├── manageragent-1.0.0-base.apk
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>│       └── ...
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>├── personalized/  ← rodada futura (portal + pipeline @Shuri)
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>│   └── &lt;TOKEN&gt;/manageragent-&lt;empresa&gt;.apk (TTL 10min, auto-limpeza)
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>└── updates/  ← auto-update
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    ├── staging/1.0.1.apk, 1.0.2.apk, ...
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    └── prod/1.0.1.apk, 1.0.2.apk, ...
+</code></pre></div></p>
+<h3 id="102-dominio-e-cdn">10.2 Domínio e CDN<a class="headerlink" href="#102-dominio-e-cdn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Domínio: <code>apk.imanager.trivion.com.br</code> (novo — aponta pro bucket via Cloudflare)</li>
+<li>CDN: Cloudflare em frente (reduz latência de download global)</li>
+<li>Setup: coordena com @Vision quando disparar rodada futura de portal</li>
+</ul>
+<h3 id="103-keystore-de-assinatura">10.3 Keystore de assinatura<a class="headerlink" href="#103-keystore-de-assinatura" title="Permanent link">&para;</a></h3>
+<ul>
+<li>2 keystores: <code>staging.jks</code> e <code>prod.jks</code></li>
+<li>Alias: <code>manageragent</code></li>
+<li>Guardados em Bitwarden (cofre externo — reforça S-02 do MVP2)</li>
+<li>Backup local encriptado no computador do Marcos</li>
+<li>Rotação: anual (setembro-out)</li>
+</ul>
+<h3 id="104-config-embutida-assetsconfigjson">10.4 Config embutida (<code>assets/config.json</code>)<a class="headerlink" href="#104-config-embutida-assetsconfigjson" title="Permanent link">&para;</a></h3>
+<p>APK base sai do CI com config genérica:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">"ambiente"</span><span class="p">:</span><span class="w"> </span><span class="s2">"staging"</span><span class="p">,</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nt">"endpointAdmin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://admin-staging.imanagerportal.com"</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nt">"endpointEvents"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api-events-staging.imanagerportal.com"</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="nt">"chaveAtivacao"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PLACEHOLDER_PARA_PIPELINE_PERSONALIZAR"</span><span class="p">,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="nt">"nomeEmpresa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PLACEHOLDER"</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+</code></pre></div></p>
+<p>Prod build variant tem endpoints prod. Durante dev, dev usa <code>chaveAtivacao</code> de teste (empresa mock em staging).</p>
+<p>Rodada futura: pipeline server-side substitui <code>chaveAtivacao</code> e <code>nomeEmpresa</code> por empresa real + re-assina.</p>
+<hr />
+<h2 id="11-testing-strategy-so-unit-tests-inline-no-mvp">11. Testing strategy (só unit tests inline no MVP)<a class="headerlink" href="#11-testing-strategy-so-unit-tests-inline-no-mvp" title="Permanent link">&para;</a></h2>
+<h3 id="111-unit-tests-kotlin-junit-mockk-obrigatorio-neste-mvp">11.1 Unit tests (Kotlin, JUnit + MockK) — obrigatório neste MVP<a class="headerlink" href="#111-unit-tests-kotlin-junit-mockk-obrigatorio-neste-mvp" title="Permanent link">&para;</a></h3>
+<p>Coverage line ≥80%, branch ≥95% (regra Marcos).</p>
+<table>
+<thead>
+<tr>
+<th>Camada</th>
+<th>O que testa</th>
+<th>Exemplos de classes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EventCollector</code></td>
+<td>Cada tipo de evento montado corretamente</td>
+<td><code>WindowActivityEventBuilderTest</code>, <code>PhoneCallEventBuilderTest</code></td>
+</tr>
+<tr>
+<td><code>AccessibilityFilter</code></td>
+<td><strong>Trava sabotagem LGPD</strong> — nunca lê conteúdo</td>
+<td><code>LGPDContentFilterTest</code></td>
+</tr>
+<tr>
+<td><code>EventQueue</code> (Room)</td>
+<td>Insert, dedup, trim FIFO, retry ordering</td>
+<td><code>EventQueueDaoTest</code> (Room in-memory)</td>
+</tr>
+<tr>
+<td><code>BatchSender</code> (Retrofit)</td>
+<td>Serialização, retry em falha, refresh em 401, re-vincula em 404</td>
+<td><code>BatchSenderTest</code> (MockWebServer)</td>
+</tr>
+<tr>
+<td><code>AuthManager</code></td>
+<td>Vinculação, refresh, storage seguro</td>
+<td><code>AuthManagerTest</code> (mock EncryptedSharedPreferences)</td>
+</tr>
+<tr>
+<td><code>UpdateService</code></td>
+<td>Check versão, download, SHA-256, PackageInstaller</td>
+<td><code>UpdateServiceTest</code></td>
+</tr>
+<tr>
+<td><code>OEMDetector</code></td>
+<td>Detecção + intent correto por fabricante</td>
+<td><code>OEMDetectorTest</code> (parametrizado)</td>
+</tr>
+<tr>
+<td><code>AuditReporter</code></td>
+<td>Payload correto, fire-and-forget</td>
+<td><code>AuditReporterTest</code></td>
+</tr>
+<tr>
+<td><code>CrashReporter</code></td>
+<td>Throttle, payload</td>
+<td><code>CrashReporterTest</code></td>
+</tr>
+<tr>
+<td><code>LoggingService</code></td>
+<td>Rotação, retenção, escape hatch</td>
+<td><code>LoggingServiceTest</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-fora-de-escopo-do-mvp-rodada-futura">11.2 Fora de escopo do MVP (rodada futura)<a class="headerlink" href="#112-fora-de-escopo-do-mvp-rodada-futura" title="Permanent link">&para;</a></h3>
+<ul>
+<li>E2E cross-device com @Natasha (Playwright + emulador Android)</li>
+<li>Testes manuais em matriz de 6 devices físicos (Samsung/Xiaomi/Moto/Pixel/OnePlus)</li>
+<li>Testes de longevidade 72h (bateria, memória, CPU)</li>
+</ul>
+<p>Dev novo faz smoke test manual em pelo menos 1 emulador (Pixel API 34) + 1 device físico próprio pra sanity check antes de fechar cada bloco.</p>
+<hr />
+<h2 id="12-scripts-de-build-pedido-do-marcos">12. Scripts de build (pedido do Marcos)<a class="headerlink" href="#12-scripts-de-build-pedido-do-marcos" title="Permanent link">&para;</a></h2>
+<h3 id="121-objetivo">12.1 Objetivo<a class="headerlink" href="#121-objetivo" title="Permanent link">&para;</a></h3>
+<p>Marcos pediu "script pra gerar apk também ou alguma forma mais fácil, igual temos do Windows". Gradle nativo já entrega isso — Android é bem servido de tooling. Precisamos só documentar.</p>
+<h3 id="122-comandos-locais-documentados-no-readme">12.2 Comandos locais (documentados no README)<a class="headerlink" href="#122-comandos-locais-documentados-no-readme" title="Permanent link">&para;</a></h3>
+<p>Do repo <code>manager-srv-agent-android/</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Build APK debug (dev local)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>./gradlew<span class="w"> </span>assembleDebug
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c1"># Saída: app/build/outputs/apk/debug/app-debug.apk</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># Build APK staging release (assinado)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>./gradlew<span class="w"> </span>assembleStagingRelease
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1"># Saída: app/build/outputs/apk/stagingRelease/app-stagingRelease.apk</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># Build APK prod release (assinado)</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>./gradlew<span class="w"> </span>assembleProdRelease
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="c1"># Saída: app/build/outputs/apk/prodRelease/app-prodRelease.apk</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="c1"># Rodar todos os unit tests</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>./gradlew<span class="w"> </span><span class="nb">test</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="c1"># Rodar tests com relatório de coverage</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>./gradlew<span class="w"> </span>testDebugUnitTestCoverage
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="c1"># Relatório: app/build/reports/jacoco/testDebugUnitTestCoverage/html/index.html</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="c1"># Instalar debug no device conectado (adb)</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>./gradlew<span class="w"> </span>installDebug
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="c1"># Ver logs em tempo real do device conectado</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>adb<span class="w"> </span>logcat<span class="w"> </span>-s<span class="w"> </span>ManagerAgent:*
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="c1"># Copiar logs do device pro computador (pra debug)</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>adb<span class="w"> </span>shell<span class="w"> </span><span class="s2">"run-as com.trivion.manageragent.staging cat files/logs/agent-2026-08-08.log"</span><span class="w"> </span>&gt;<span class="w"> </span>local-log.txt
+</code></pre></div>
+<h3 id="123-cicd-github-actions-coordena-com-vision">12.3 CI/CD (GitHub Actions — coordena com @Vision)<a class="headerlink" href="#123-cicd-github-actions-coordena-com-vision" title="Permanent link">&para;</a></h3>
+<p>Workflow <code>.github/workflows/build-and-publish.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build &amp; Publish APK</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nt">on</span><span class="p">:</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">staging</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">'v*'</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="nt">jobs</span><span class="p">:</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">  </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-java@v4</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">          </span><span class="nt">java-version</span><span class="p">:</span><span class="w"> </span><span class="s">'17'</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">          </span><span class="nt">distribution</span><span class="p">:</span><span class="w"> </span><span class="s">'temurin'</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cache Gradle</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gradle/gradle-build-action@v3</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run unit tests</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./gradlew test</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check coverage thresholds</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./gradlew jacocoTestCoverageVerification</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Decrypt keystore</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">          </span><span class="nt">KEYSTORE_STAGING</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.KEYSTORE_STAGING_BASE64 }}</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">          </span><span class="nt">KEYSTORE_PROD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.KEYSTORE_PROD_BASE64 }}</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">          </span><span class="no">echo "$KEYSTORE_STAGING" | base64 -d &gt; keystore-staging.jks</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">          </span><span class="no">echo "$KEYSTORE_PROD" | base64 -d &gt; keystore-prod.jks</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build staging APK</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == 'refs/heads/staging' || startsWith(github.ref, 'refs/tags/v')</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="w">          </span><span class="nt">KEYSTORE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.KEYSTORE_STAGING_PASSWORD }}</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./gradlew assembleStagingRelease</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build prod APK</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="w">          </span><span class="nt">KEYSTORE_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.KEYSTORE_PROD_PASSWORD }}</span>
+<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./gradlew assembleProdRelease</span>
+<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Compute SHA-256</span>
+<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sha256sum app/build/outputs/apk/*/app-*Release.apk &gt; checksums.txt</span>
+<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload APK to S3 (Tigris)</span>
+<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a><span class="w">          </span><span class="nt">AWS_ACCESS_KEY_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.TIGRIS_ACCESS_KEY }}</span>
+<a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a><span class="w">          </span><span class="nt">AWS_SECRET_ACCESS_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.TIGRIS_SECRET_KEY }}</span>
+<a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a><span class="w">          </span><span class="nt">AWS_ENDPOINT_URL_S3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://fly.storage.tigris.dev</span>
+<a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a><span class="w">          </span><span class="no">aws s3 cp app/build/outputs/apk/stagingRelease/app-stagingRelease.apk \</span>
+<a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a><span class="w">            </span><span class="no">s3://imanager-apks/base/staging/manageragent-${{ github.ref_name }}-base.apk</span>
+<a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a><span class="w">          </span><span class="no"># ... e assim por diante pra prod</span>
+<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload artifacts</span>
+<a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/upload-artifact@v4</span>
+<a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apks</span>
+<a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app/build/outputs/apk/*/app-*.apk</span>
+</code></pre></div>
+<h3 id="124-script-auxiliar-scriptsbuild-personalizadosh-dev-local-sem-pipeline-server">12.4 Script auxiliar <code>scripts/build-personalizado.sh</code> (dev local, sem pipeline server)<a class="headerlink" href="#124-script-auxiliar-scriptsbuild-personalizadosh-dev-local-sem-pipeline-server" title="Permanent link">&para;</a></h3>
+<p>Enquanto o pipeline server-side não existir (rodada futura @Shuri), dev pode gerar APK personalizado localmente pra teste:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="c1"># scripts/build-personalizado.sh</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1"># Uso: ./scripts/build-personalizado.sh &lt;ambiente&gt; &lt;chaveAtivacao&gt; &lt;nomeEmpresa&gt;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="nv">AMBIENTE</span><span class="o">=</span><span class="nv">$1</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nv">CHAVE_ATIVACAO</span><span class="o">=</span><span class="nv">$2</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="nv">NOME_EMPRESA</span><span class="o">=</span><span class="nv">$3</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c1"># Substitui placeholders no config.json de assets</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">  </span>-e<span class="w"> </span><span class="s2">"s|\"chaveAtivacao\": \".*\"|\"chaveAtivacao\": \"</span><span class="nv">$CHAVE_ATIVACAO</span><span class="s2">\"|"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">  </span>-e<span class="w"> </span><span class="s2">"s|\"nomeEmpresa\": \".*\"|\"nomeEmpresa\": \"</span><span class="nv">$NOME_EMPRESA</span><span class="s2">\"|"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">  </span>app/src/<span class="si">${</span><span class="nv">AMBIENTE</span><span class="si">}</span>Release/assets/config.json
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="c1"># Build assinado</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>./gradlew<span class="w"> </span>assemble<span class="si">${</span><span class="nv">AMBIENTE</span><span class="p">^</span><span class="si">}</span>Release
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="c1"># Restaura config.json original</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>mv<span class="w"> </span>app/src/<span class="si">${</span><span class="nv">AMBIENTE</span><span class="si">}</span>Release/assets/config.json.bak<span class="w"> </span>app/src/<span class="si">${</span><span class="nv">AMBIENTE</span><span class="si">}</span>Release/assets/config.json
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"APK gerado em app/build/outputs/apk/</span><span class="si">${</span><span class="nv">AMBIENTE</span><span class="si">}</span><span class="s2">Release/"</span>
+</code></pre></div>
+<hr />
+<h2 id="13-riscos-vivos">13. Riscos vivos<a class="headerlink" href="#13-riscos-vivos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Risco</th>
+<th>Probabilidade</th>
+<th>Impacto</th>
+<th>Mitigação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td>Fragmentação OEM (Xiaomi/Huawei matam Service)</td>
+<td>Alta</td>
+<td>Alto (dado some)</td>
+<td>OEMDetector detecta cedo. Doc no MVP futura ensina liberação manual. Testes em Xiaomi Redmi cedo (não deixar pro fim do B3).</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>Colaborador não conclui as 4 permissões</td>
+<td>Média</td>
+<td>Colaborador fica "sem monitoramento" mas não sabe</td>
+<td>Notification "Configuração pendente" persiste até completar. Backend detecta ausência de heartbeat pós-vinculação.</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>Colaborador desinstala</td>
+<td>Média</td>
+<td>Perda de coleta silenciosa</td>
+<td>Backend detecta silêncio &gt; 24h → alerta gestor (rodada futura portal)</td>
+</tr>
+<tr>
+<td>R4</td>
+<td>Colaborador desativa Accessibility em Settings</td>
+<td>Média</td>
+<td>Perda de eventos primários</td>
+<td><code>AccessibilityService.onServiceDisconnected()</code> envia audit event <code>ACCESSIBILITY_DESATIVADA</code> como último ato. Backend alerta gestor.</td>
+</tr>
+<tr>
+<td>R5</td>
+<td>Update precisa clique manual</td>
+<td>Certeza</td>
+<td>Fricção UX</td>
+<td>Aceito por Marcos. Notification clara + intervalo respeitoso.</td>
+</tr>
+<tr>
+<td>R6</td>
+<td>Keystore de assinatura vaza</td>
+<td>Baixíssima</td>
+<td>Catastrófico (todos APKs comprometidos)</td>
+<td>Bitwarden (S-02 MVP2 vira crítico) + rotação anual + acesso restrito</td>
+</tr>
+<tr>
+<td>R7</td>
+<td>Config estática limita testes multi-empresa</td>
+<td>Certeza (por design)</td>
+<td>Aceito no MVP</td>
+<td>Pipeline server-side entra em rodada futura da @Shuri</td>
+</tr>
+<tr>
+<td>R8</td>
+<td>Android nova versão quebra Accessibility/Usage Stats API</td>
+<td>Baixa</td>
+<td>Requer patch rápido</td>
+<td>Testes em Android 10/12/13/14 (emulador) desde B3. CI valida em múltiplas API levels.</td>
+</tr>
+<tr>
+<td>R9</td>
+<td>Backend Java atual não aceita <code>dispositivoTipo=ANDROID</code></td>
+<td>Certeza (não aceita hoje)</td>
+<td>APK precisa se disfarçar como Windows temporariamente</td>
+<td>Documentado como estratégia de compatibilidade (seção 6.4). Migra pra <code>ANDROID</code> real quando Node estiver pronto.</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>Consent LGPD colaborador vira bloqueante contratual</td>
+<td>Alta</td>
+<td>Sem colaborador aceitando = sem venda mobile</td>
+<td>Aceite duplo já mapeado (institucional gestor + individual colaborador). @Steve + Raquel validam em rodada futura antes de venda comercial.</td>
+</tr>
+<tr>
+<td>R11</td>
+<td>Bateria drenando no celular</td>
+<td>Média</td>
+<td>Colaborador reclama</td>
+<td>Batch 5min (não real-time), Accessibility eficiente, WakeLock mínimo, benchmarks manuais 72h antes de release</td>
+</tr>
+<tr>
+<td>R12</td>
+<td>Ícone auto-desabilitado quebra em Android futuro</td>
+<td>Baixa</td>
+<td>Ícone volta a aparecer</td>
+<td><code>setComponentEnabledSetting</code> é API estável desde Android 2.2. Testes em versões novas cobrem.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="14-cronograma">14. Cronograma<a class="headerlink" href="#14-cronograma" title="Permanent link">&para;</a></h2>
+<h3 id="141-escopo-desta-rodada-so-apk">14.1 Escopo desta rodada — só APK<a class="headerlink" href="#141-escopo-desta-rodada-so-apk" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Bloco</th>
+<th>Escopo</th>
+<th>Estimativa</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B2</td>
+<td>Setup projeto (repo, Gradle, build variants, keystore, CI/CD, scripts)</td>
+<td>1 sem</td>
+<td>Dev novo + @Vision</td>
+</tr>
+<tr>
+<td>B3</td>
+<td>Coleta core (Service, Accessibility, Broadcasts, Room, eventos: WindowActivity, Idle, Session, Heartbeat)</td>
+<td>4 sem</td>
+<td>Dev novo</td>
+</tr>
+<tr>
+<td>B4</td>
+<td>Coleta complementar (UsageStats, ActivitySummary, MeetingEvent, PhoneCallEvent, StatusTransition, urlDomain)</td>
+<td>3 sem</td>
+<td>Dev novo</td>
+</tr>
+<tr>
+<td>B5</td>
+<td>Auth + integração backend (vincular, refresh, storage seguro, batch sender, interceptors)</td>
+<td>2 sem</td>
+<td>Dev novo</td>
+</tr>
+<tr>
+<td>B6</td>
+<td>PermissionDispatchActivity + LGPD UI mínima + encadeamento intents + OEM detection + auto-desabilita LAUNCHER</td>
+<td>2 sem</td>
+<td>Dev novo</td>
+</tr>
+<tr>
+<td>B7</td>
+<td>Sistema de logs (Timber + AuditReporter + CrashReporter + ANR detector + escape hatch)</td>
+<td>1 sem</td>
+<td>Dev novo</td>
+</tr>
+<tr>
+<td>B8</td>
+<td>Auto-update (UpdateService + WorkManager + PackageInstaller + notification action)</td>
+<td>2 sem</td>
+<td>Dev novo</td>
+</tr>
+<tr>
+<td>B_test</td>
+<td>Unit tests inline (≥80% linha, ≥95% branch) — paralelo aos blocos</td>
+<td>~2 sem esforço distribuído</td>
+<td>Dev novo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total desenvolvimento APK: ~15-16 semanas = ~3,5-4 meses</strong> com 1 dev Android sênior dedicado full-time.</p>
+<h3 id="142-caminho-critico">14.2 Caminho crítico<a class="headerlink" href="#142-caminho-critico" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>B2 (setup, 1 sem)
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  └─► B3 (coleta core, 4 sem)
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        └─► B4 (coleta compl, 3 sem)
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>              └─► B5 (auth, 2 sem)
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>                    └─► B6 (perm+LGPD, 2 sem)
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>                          └─► B7 (logs, 1 sem)
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>                                └─► B8 (update, 2 sem)
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>                                      │
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>                                      ▼
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>                                APK PRONTO
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>                                (rodadas futuras: portal, pipeline, docs, QA, piloto)
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>B_test (~2 sem esforço) roda em paralelo aos blocos
+</code></pre></div>
+<h3 id="143-fora-do-escopo-desta-spec-rodadas-futuras">14.3 Fora do escopo desta spec (rodadas futuras)<a class="headerlink" href="#143-fora-do-escopo-desta-spec-rodadas-futuras" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Contratação do dev Android sênior (Marcos + Harvey — em paralelo)</li>
+<li>Rodada portal (@Shuri: aba do Agent + pipeline re-empacotamento)</li>
+<li>Rodada docs (docs.imanagerportal.com/mobile/)</li>
+<li>Rodada QA (@Natasha: E2E + matriz devices físicos)</li>
+<li>Rodada pilotos (interno + cliente)</li>
+</ul>
+<hr />
+<h2 id="15-deps-minimas-pra-dev-comecar">15. Deps mínimas pra dev começar<a class="headerlink" href="#15-deps-minimas-pra-dev-comecar" title="Permanent link">&para;</a></h2>
+<p>Quando Marcos disparar "vamos começar", isso é o que precisa estar em mãos:</p>
+<ol>
+<li><strong>Repo git criado</strong> — pref. <code>Backend/manager-srv-agent-android/</code> no monorepo OU repo separado (padrão dos outros)</li>
+<li><strong>Keystore de assinatura</strong> — 2 keystores (staging + prod) guardados no Bitwarden. Se não existir, dev cria primeiro dia.</li>
+<li><strong>Empresa de teste em staging</strong> — 1 empresa mock ativa no srv-admin staging com <code>chaveAtivacao</code> conhecida</li>
+<li><strong>Colaborador de teste em staging</strong> — 1 usuário mock naquela empresa (identificador conhecido)</li>
+<li><strong>Endpoint staging acessível</strong> — srv-admin + srv-events staging respondendo (pra dev integrar em B5)</li>
+<li><strong>Dev Android alocado</strong> — contratação/onboard concluídos</li>
+<li><strong>Acesso ao GitHub org</strong> — novo repo + permissão de push</li>
+<li><strong>Bucket S3 (Tigris) criado</strong> — <code>imanager-apks/</code> com policy adequada</li>
+<li><strong>DNS <code>apk.imanager.trivion.com.br</code></strong> — aponta pro bucket via Cloudflare (rodada futura pode postergar)</li>
+</ol>
+<p>Coordenação: quando disparar, @Vision configura #7-9 em paralelo ao onboard do dev.</p>
+<hr />
+<h2 id="16-referencias">16. Referências<a class="headerlink" href="#16-referencias" title="Permanent link">&para;</a></h2>
+<h3 id="documentacao-interna-manager">Documentação interna Manager<a class="headerlink" href="#documentacao-interna-manager" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>_shared/produto.md</code> — visão geral do produto Manager/iManager</li>
+<li><code>_shared/arquitetura.md</code> — stack e serviços</li>
+<li><code>_shared/banco-dados.md</code> — schema (agentes, eventos_*, versoes_agente, aceite_termos, audit_events)</li>
+<li><code>_shared/lgpd-operacional.md</code> — limites de coleta inegociáveis</li>
+<li><code>_shared/padroes.md</code> — convenções de código + regra de teste por branch</li>
+<li><code>tecnologia/services/srv-events/README.md</code> — contrato de ingestão (referência do shape que o APK precisa enviar)</li>
+<li><code>tecnologia/services/srv-admin/README.md</code> — contrato de vinculação + auto-update + auditoria</li>
+<li><code>tecnologia/autenticacao/autenticacao-sistema.md</code> — 3 domínios JWT (Domínio 1 = Agent ↔ Backend)</li>
+<li><code>tecnologia/autenticacao/jwt-contract.md</code> — contrato JWT byte-por-byte</li>
+<li><code>tecnologia/agent-desktop/</code> — Agent Desktop atual (referência técnica pra logs, auditoria, crash reports)</li>
+</ul>
+<h3 id="investigacao-do-bucky-2026-08-08">Investigação do @Bucky (2026-08-08)<a class="headerlink" href="#investigacao-do-bucky-2026-08-08" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Serilog config: <code>Agente/manager-srv-agent/src/ManagerAgent.Tray/Program.cs:38-51</code> e <code>src/ManagerAgent.Service/Program.cs:53-67</code></li>
+<li>Audit endpoint: <code>Agente/manager-srv-agent/src/ManagerAgent.Shared/Audit/HttpAgentAuditReporter.cs:26</code></li>
+<li>Error report endpoint: <code>Agente/manager-srv-agent/src/ManagerAgent.Tray/Services/ErrorReportService.cs:122</code></li>
+</ul>
+<h3 id="regras-aplicaveis">Regras aplicáveis<a class="headerlink" href="#regras-aplicaveis" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>feedback_agent_spec_obrigatoria.md</code> — muda no Agent = spec obrigatória antes de código</li>
+<li><code>feedback_enum_novo_backend_antes.md</code> — nunca introduzir enum no Agent antes do backend suportar (aplicado em seção 6.4)</li>
+<li><code>feedback_teste_branch_coverage.md</code> — cobertura branch ≥95%</li>
+<li><code>feedback_nao_commitar_execucao_subagent.md</code> — subagents não commitam; Marcos commita</li>
+<li>Regra "Java não muda durante migração Node" (Marcos 2026-07-21)</li>
+</ul>
+<h3 id="rodadas-futuras-que-dependem-desta-spec-a-marcos-disparar">Rodadas futuras que dependem desta spec (a Marcos disparar)<a class="headerlink" href="#rodadas-futuras-que-dependem-desta-spec-a-marcos-disparar" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Rodada backend Node (@Shuri): rotas Agent migradas pra Node com contrato compatível + campos novos (<code>dispositivoTipo</code>, <code>PhoneCallEvent</code>)</li>
+<li>Rodada portal (@Shuri + @Peter): aba Agent com botões Android + pipeline server-side de re-empacotamento</li>
+<li>Rodada docs (dev novo + @Groot + @Steve + jurídico): <code>docs.imanagerportal.com/mobile/</code> com 6 páginas</li>
+<li>Rodada QA (@Natasha): E2E cross-device + matriz de devices físicos</li>
+<li>Rodada pilotos (Marcos + @Steve): interno depois cliente controlado</li>
+</ul>
+<hr />
+<h2 id="17-roadmap-ios-sinalizacao-nao-escopo">17. Roadmap iOS (sinalização, não escopo)<a class="headerlink" href="#17-roadmap-ios-sinalizacao-nao-escopo" title="Permanent link">&para;</a></h2>
+<p>iOS BYOD tem restrições fortes da Apple que praticamente inviabilizam paridade Windows sem MDM corporativo (Managed Device via Apple Business Manager):</p>
+<ul>
+<li>Screen Time API (<code>FamilyControls</code>) — restrito a apps de controle parental, review Apple duro</li>
+<li>Background modes — pra tarefas específicas (audio, VoIP, location), não app usage</li>
+<li>App usage tracking BYOD — praticamente inviável</li>
+<li>MDM iOS BYOD — supervised mode requer enrollment via Apple Business Manager</li>
+</ul>
+<p><strong>Quando entrar iOS (rodada muito futura):</strong>
+- Só com MDM corporativo (empresa dá celular) — não BYOD puro
+- Ou modo "executivo" com celular corporativo aprovando MDM voluntário
+- Escopo reduzido: só presença + timing (não conseguirá app-por-app como Android)</p>
+<p>Comunicar isso no material comercial: <strong>"Android only na v1; iOS em roadmap com escopo diferente sob condições especiais."</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1951 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/agent/testes-regressivo/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Teste Regressivo — Agent Desktop (manager-srv-agent) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#teste-regressivo-agent-desktop-manager-srv-agent" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Teste Regressivo — Agent Desktop (manager-srv-agent)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-requisitos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-startup-e-inicializacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Startup e Inicializacao
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-coleta-de-janela-ativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Coleta de Janela Ativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-deteccao-de-ociosidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Deteccao de Ociosidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-eventos-de-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Eventos de Sessao
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-heartbeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Heartbeat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-buffer-e-upload-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Buffer e Upload de Eventos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-transicao-de-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Transicao de Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-corte-diario-dailyboundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Corte Diario (DailyBoundary)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-auto-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Auto-Update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-resiliencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Resiliencia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-pos-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist pos-teste
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="teste-regressivo-agent-desktop-manager-srv-agent">Teste Regressivo — Agent Desktop (manager-srv-agent)<a class="headerlink" href="#teste-regressivo-agent-desktop-manager-srv-agent" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>@Natasha | QA
+Ultima atualizacao: 2026-03-27
+Executar antes de cada release</p>
+</blockquote>
+<hr />
+<h2 id="pre-requisitos">Pre-requisitos<a class="headerlink" href="#pre-requisitos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] Agent compilado sem erros (<code>dotnet build</code> ou build via IDE)</li>
+<li>[ ] Backend srv-events rodando e acessivel</li>
+<li>[ ] Backend srv-admin rodando e acessivel</li>
+<li>[ ] Agent configurado com <code>config.json</code> valido (chave de ativacao + identificador)</li>
+<li>[ ] Banco SQLite limpo (ou deletar <code>events.db</code> para testar do zero)</li>
+</ul>
+<hr />
+<h2 id="1-startup-e-inicializacao">1. Startup e Inicializacao<a class="headerlink" href="#1-startup-e-inicializacao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Agent inicia sem erro</td>
+<td>Abrir o agent, verificar que o icone aparece na bandeja do sistema. Sem crash.</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Log de startup</td>
+<td>Verificar <code>agent-tray.log</code> — deve ter "Worker iniciado" sem exceptions</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Config carregado</td>
+<td>Log deve mostrar identificador mascarado e URLs configuradas</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-coleta-de-janela-ativa">2. Coleta de Janela Ativa<a class="headerlink" href="#2-coleta-de-janela-ativa" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1</td>
+<td>Detecta troca de janela</td>
+<td>Abrir 2 apps (ex: Chrome e Bloco de Notas), alternar entre eles. Log deve mostrar "Evento de janela finalizado" e "Novo evento de janela iniciado"</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Nome do processo correto</td>
+<td>No log, verificar que <code>nomeProcesso</code> corresponde ao app ativo (ex: "chrome", "notepad")</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Titulo da janela correto</td>
+<td>No log, verificar que <code>tituloJanela</code> mostra o titulo real da janela</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>Duracao calculada</td>
+<td>Ficar 30+ segundos em um app, trocar. O evento finalizado deve ter <code>duracaoSegundos &gt;= 30</code></td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-deteccao-de-ociosidade">3. Deteccao de Ociosidade<a class="headerlink" href="#3-deteccao-de-ociosidade" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>Detecta idle</td>
+<td>Nao mexer no mouse/teclado por 60+ segundos. Log deve mostrar transicao para "Ausente"</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Retorno de idle</td>
+<td>Apos ficar idle, mexer o mouse. Log deve mostrar retorno para "Online"</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Evento de ociosidade persistido</td>
+<td>Verificar no <code>events.db</code> (tabela Events) que existe um registro com EventType contendo idle/ociosidade</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-eventos-de-sessao">4. Eventos de Sessao<a class="headerlink" href="#4-eventos-de-sessao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>Detecta LOCK</td>
+<td>Bloquear a tela (Win+L). Log deve mostrar evento LOCK</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Detecta UNLOCK</td>
+<td>Desbloquear a tela. Log deve mostrar evento UNLOCK</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Flush no LOCK</td>
+<td>Ao bloquear, verificar que o UploadWorker acorda e tenta enviar eventos pendentes</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-heartbeat">5. Heartbeat<a class="headerlink" href="#5-heartbeat" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>Heartbeat logado</td>
+<td>Aguardar 60 segundos. Log deve mostrar "Heartbeat AthenaAgent"</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>Heartbeat no buffer</td>
+<td>Verificar no <code>events.db</code> que existe registro com EventType = "HeartbeatEvent"</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>Heartbeat enviado</td>
+<td>Apos um ciclo de upload (5 min), verificar que HeartbeatEvent foi marcado como Uploaded = 1</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-buffer-e-upload-de-eventos">6. Buffer e Upload de Eventos<a class="headerlink" href="#6-buffer-e-upload-de-eventos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.1</td>
+<td>Eventos persistidos no SQLite</td>
+<td>Apos interagir por 1-2 minutos, verificar <code>events.db</code> tabela Events — deve ter registros com Uploaded = 0</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>Upload em batch</td>
+<td>Aguardar 5 minutos (IntervaloUploadSegundos). Verificar log "Upload concluido" ou similar. Eventos devem mudar para Uploaded = 1</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>Retry em falha</td>
+<td>Desligar o backend, aguardar um ciclo de upload. Log deve mostrar tentativa + retry com backoff. Religar o backend, proximo ciclo deve enviar com sucesso</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>6.4</td>
+<td>Cleanup de eventos velhos</td>
+<td>Verificar que nao existem eventos com Uploaded = 0 e OccurredAt &gt; 7 dias (rode o agent por um tempo ou insira dados de teste)</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-transicao-de-status">7. Transicao de Status<a class="headerlink" href="#7-transicao-de-status" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7.1</td>
+<td>Online ao iniciar</td>
+<td>Apos startup, status deve ser "Online" no log</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td>Ausente apos idle</td>
+<td>Nao mexer por 10+ minutos. Status deve transicionar para "Ausente"</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>7.3</td>
+<td>Inativo apos 30 min</td>
+<td>Nao mexer por 30+ minutos. Status deve transicionar para "Inativo"</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>7.4</td>
+<td>Retorno para Online</td>
+<td>Mexer mouse/teclado apos idle. Deve voltar para "Online"</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-corte-diario-dailyboundary">8. Corte Diario (DailyBoundary)<a class="headerlink" href="#8-corte-diario-dailyboundary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8.1</td>
+<td>Evento de corte</td>
+<td>Manter o agent rodando na virada do dia (23:59 → 00:00). Log deve mostrar "Corte diario" com eventos de encerramento e reinicio</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>Eventos bufferizados</td>
+<td>Verificar no <code>events.db</code> que os eventos StatusTransitionEvent do corte foram persistidos</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-auto-update">9. Auto-Update<a class="headerlink" href="#9-auto-update" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9.1</td>
+<td>Check no startup</td>
+<td>Ao iniciar, log deve mostrar verificacao de atualizacao (GET /api/agente/atualizacoes/verificar)</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>Sem update disponivel</td>
+<td>Se nao ha versao nova, log deve mostrar "Nenhuma atualizacao disponivel" e continuar normalmente</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>Auto-apply silencioso</td>
+<td>Publicar versao nova no srv-admin. Reiniciar o agent (ou aguardar polling 6h). Deve baixar, validar checksum, criar backup e aplicar sem pedir confirmacao</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>9.4</td>
+<td>Polling periodico</td>
+<td>Manter o agent aberto por 6+ horas. Verificar no log que houve re-verificacao</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>9.5</td>
+<td>Rollback em falha</td>
+<td>Simular falha: renomear um DLL essencial no ZIP antes de publicar. O agent deve detectar falha e restaurar backup no proximo startup</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>9.6</td>
+<td>Telemetria de resultado</td>
+<td>Apos update (sucesso ou falha), verificar no log que houve POST para /api/agente/atualizacoes/resultado</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>9.7</td>
+<td>Watchdog</td>
+<td>Simular crash pos-update: iniciar agent, matar o processo em menos de 60s. No proximo startup, verificar que o watchdog detectou e fez rollback</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-resiliencia">10. Resiliencia<a class="headerlink" href="#10-resiliencia" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Teste</th>
+<th>Como validar</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.1</td>
+<td>Agent sem rede</td>
+<td>Desconectar a internet. O agent deve continuar coletando eventos localmente no SQLite sem crash</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>Reconexao</td>
+<td>Reconectar a internet. No proximo ciclo de upload, eventos pendentes devem ser enviados</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>10.3</td>
+<td>Matar processo</td>
+<td>Matar o processo via Task Manager. Ao reiniciar, deve funcionar normalmente sem perda de config</td>
+<td>[ ]</td>
+</tr>
+<tr>
+<td>10.4</td>
+<td>Eventos nao duplicados</td>
+<td>Verificar no backend que os eventos enviados nao estao duplicados (mesmo ID/timestamp)</td>
+<td>[ ]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="checklist-pos-teste">Checklist pos-teste<a class="headerlink" href="#checklist-pos-teste" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] Todos os testes acima passaram</li>
+<li>[ ] Nenhuma exception nao tratada nos logs</li>
+<li>[ ] Memoria estavel (agent nao cresce indefinidamente no Task Manager)</li>
+<li>[ ] CPU idle &lt; 1% quando nao ha atividade</li>
+<li>[ ] SQLite <code>events.db</code> nao cresce indefinidamente (cleanup funciona)</li>
+<li>[ ] Backend recebeu todos os tipos de eventos: WindowActivity, Session, StatusTransition, Heartbeat, Idle</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

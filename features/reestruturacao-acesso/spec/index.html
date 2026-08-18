@@ -1,0 +1,2091 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/reestruturacao-acesso/spec/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Spec: Reestruturacao de Acesso v2 - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spec-reestruturacao-de-acesso-v2" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spec: Reestruturacao de Acesso v2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-modelo-de-perfis-2-perfis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Modelo de perfis (2 perfis)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Modelo de perfis (2 perfis)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#antes-3-perfis-admin-gestorviewer-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antes: 3 perfis (ADMIN, GESTOR/VIEWER, COLABORADOR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agora-2-perfis-gestor-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agora: 2 perfis (GESTOR, COLABORADOR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarquia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mudancas-no-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mudancas no backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mudancas-no-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mudancas no frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-controle-de-acesso-ao-portal-flag-acessa_portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Controle de acesso ao portal (flag acessa_portal)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Controle de acesso ao portal (flag acessa_portal)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tela-de-bloqueio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tela de bloqueio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-de-toggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint de toggle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-primeiro-acesso-sem-senha-temporaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Primeiro acesso (sem senha temporaria)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Primeiro acesso (sem senha temporaria)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mudancas-na-criacao-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mudancas na criacao de usuarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mudancas-no-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mudancas no login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagina-primeiro-acesso-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pagina /primeiro-acesso (frontend)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-matriz-de-acesso-por-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Matriz de acesso por perfil
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Matriz de acesso por perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menu-por-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Menu por perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-frontend-visao-do-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Frontend — visao do colaborador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Frontend — visao do colaborador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meu-painel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meu Painel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meus-relatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meus Relatorios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meu-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meu Perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-apis-impactadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. APIs impactadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. APIs impactadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manager-srv-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        manager-srv-portal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manager-fed-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        manager-fed-portal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="spec-reestruturacao-de-acesso-v2">Spec: Reestruturacao de Acesso v2<a class="headerlink" href="#spec-reestruturacao-de-acesso-v2" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>ADR: <code>adr/ADR-002-unificacao-usuarios.md</code>
+Tasks: <code>tasks.md</code>
+Atualizado em: 2026-03-31</p>
+</blockquote>
+<hr />
+<h2 id="contexto">Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
+<p>A unificacao de <code>usuarios_portal</code> + <code>colaboradores</code> na tabela <code>usuarios</code> ja foi concluida.
+O banco foi recriado do zero — nao ha dados legados para migrar.
+Esta spec cobre as mudancas restantes: simplificacao de perfis, primeiro acesso e controle de acesso ao portal.</p>
+<hr />
+<h2 id="1-modelo-de-perfis-2-perfis">1. Modelo de perfis (2 perfis)<a class="headerlink" href="#1-modelo-de-perfis-2-perfis" title="Permanent link">&para;</a></h2>
+<h3 id="antes-3-perfis-admin-gestorviewer-colaborador">Antes: 3 perfis (ADMIN, GESTOR/VIEWER, COLABORADOR)<a class="headerlink" href="#antes-3-perfis-admin-gestorviewer-colaborador" title="Permanent link">&para;</a></h3>
+<h3 id="agora-2-perfis-gestor-colaborador">Agora: 2 perfis (GESTOR, COLABORADOR)<a class="headerlink" href="#agora-2-perfis-gestor-colaborador" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GESTOR — acesso total ao sistema
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>COLABORADOR — acesso ao perfil proprio + seus relatorios (quando autorizado)
+</code></pre></div>
+<h3 id="hierarquia">Hierarquia<a class="headerlink" href="#hierarquia" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Gestor (CEO/Dono)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  └── Gestor (Diretor)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        └── Gestor (Coordenador)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>              └── Time "Desenvolvimento"
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                    ├── Colaborador A
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                    ├── Colaborador B
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                    └── Colaborador C
+</code></pre></div>
+<ul>
+<li>Gestor pode ter outros gestores abaixo</li>
+<li>Antes dos colaboradores, precisa existir um time (padrao atual mantido)</li>
+<li>O escopo de visibilidade e definido pela hierarquia, nao pelo perfil</li>
+</ul>
+<h3 id="mudancas-no-backend">Mudancas no backend<a class="headerlink" href="#mudancas-no-backend" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>PortalRole</code> enum: remover <code>ADMIN</code> e <code>VIEWER</code>, manter <code>GESTOR</code> e <code>COLABORADOR</code></li>
+<li><code>AccessService</code>: simplificar — <code>GESTOR</code> tem acesso total, <code>COLABORADOR</code> acesso limitado</li>
+<li>JWT claim <code>perfil</code>: sempre <code>GESTOR</code> ou <code>COLABORADOR</code></li>
+<li><code>entidades_hierarquicas.tipo_entidade</code>: valores <code>GESTOR</code>, <code>COLABORADOR</code>, <code>TIME</code></li>
+</ul>
+<h3 id="mudancas-no-frontend">Mudancas no frontend<a class="headerlink" href="#mudancas-no-frontend" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>AuthUser.perfil</code>: apenas <code>'GESTOR' | 'COLABORADOR'</code></li>
+<li>Remover <code>AdminGuard</code> — usar apenas <code>GestorGuard</code></li>
+<li>Remover seletor Admin/Gestor da modal de criacao de usuario portal</li>
+<li>Remover coluna "Perfil" do Excel de importacao de usuarios</li>
+<li>Badges na hierarquia: apenas "Gestor" / "Colaborador"</li>
+</ul>
+<hr />
+<h2 id="2-controle-de-acesso-ao-portal-flag-acessa_portal">2. Controle de acesso ao portal (flag <code>acessa_portal</code>)<a class="headerlink" href="#2-controle-de-acesso-ao-portal-flag-acessa_portal" title="Permanent link">&para;</a></h2>
+<h3 id="regras">Regras<a class="headerlink" href="#regras" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Campo <code>acessa_portal</code> na tabela <code>usuarios</code> (boolean, NOT NULL)</li>
+<li><strong>Gestor:</strong> default <code>true</code> ao criar</li>
+<li><strong>Colaborador:</strong> default <code>false</code> ao criar</li>
+<li>Na criacao: campo select "Acessa o portal?" com opcoes Sim/Nao</li>
+<li>Na edicao: editavel tanto na hierarquia quanto no detalhe do colaborador</li>
+<li>Somente gestores podem alterar essa flag</li>
+</ul>
+<h3 id="tela-de-bloqueio">Tela de bloqueio<a class="headerlink" href="#tela-de-bloqueio" title="Permanent link">&para;</a></h3>
+<p>Quando um usuario tenta fazer login e <code>acessa_portal = false</code>:
+- Backend retorna erro diferenciado (ex: HTTP 403 com codigo <code>ACESSO_PORTAL_NEGADO</code>)
+- Frontend exibe pagina <code>/sem-acesso</code> com mensagem:
+  - "Voce nao tem permissao para acessar o portal"
+  - "Entre em contato com seu gestor para solicitar acesso"
+- Nao redireciona para login — e uma pagina propria</p>
+<h3 id="endpoint-de-toggle">Endpoint de toggle<a class="headerlink" href="#endpoint-de-toggle" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>PATCH /api/v2/usuarios/{id}/acesso-portal
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Authorization: Bearer {jwt} (perfil GESTOR)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Content-Type: application/json
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>{ "acessaPortal": true }
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Response 204 No Content
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Response 403 — perfil nao e GESTOR
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Response 404 — usuario nao encontrado
+</code></pre></div>
+<hr />
+<h2 id="3-primeiro-acesso-sem-senha-temporaria">3. Primeiro acesso (sem senha temporaria)<a class="headerlink" href="#3-primeiro-acesso-sem-senha-temporaria" title="Permanent link">&para;</a></h2>
+<h3 id="fluxo">Fluxo<a class="headerlink" href="#fluxo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Gestor cria usuario → SEM senha (senha_hash = null)
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>         ↓
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Usuario abre o portal → tela de login
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>         ↓
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Clica "Primeiro acesso?" → /primeiro-acesso
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>         ↓
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Step 1: Informa identificador + email → backend valida
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>         ↓
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>Step 2: Cria senha (minimo 8 chars) + confirma
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>         ↓
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Senha salva → redireciona para /login com mensagem de sucesso
+</code></pre></div>
+<h3 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h3>
+<p><strong>Validar primeiro acesso:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>POST /auth/primeiro-acesso/validar
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Content-Type: application/json
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>{ "identificador": "I123456", "email": "joao@empresa.com" }
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Response 200 — { "valido": true, "nome": "Joao" }
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Response 400 — usuario nao encontrado, ja tem senha, ou acessa_portal=false
+</code></pre></div></p>
+<p>Condicoes para sucesso:
+- Usuario existe com esse identificador + email
+- <code>acessa_portal = true</code>
+- <code>senha_hash IS NULL</code> (nunca fez primeiro acesso)</p>
+<p><strong>Criar senha:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>POST /auth/primeiro-acesso/criar-senha
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Content-Type: application/json
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>{ "identificador": "I123456", "email": "joao@empresa.com", "senha": "MinhaS3nha!" }
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Response 204 No Content
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Response 400 — validacao falhou (mesmas condicoes acima)
+</code></pre></div></p>
+<h3 id="mudancas-na-criacao-de-usuarios">Mudancas na criacao de usuarios<a class="headerlink" href="#mudancas-na-criacao-de-usuarios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Remover campo <code>senha</code> do <code>CadastrarUsuarioPortalRequest</code></li>
+<li>Remover campos de senha da modal de criacao (frontend)</li>
+<li>Remover coluna "Senha" do Excel de importacao</li>
+<li><code>senha_hash</code> salvo como <code>null</code> na criacao</li>
+</ul>
+<h3 id="mudancas-no-login">Mudancas no login<a class="headerlink" href="#mudancas-no-login" title="Permanent link">&para;</a></h3>
+<p>O login precisa diferenciar 3 cenarios de erro:
+1. <strong>Credenciais invalidas</strong> — identificador nao existe ou senha errada → mensagem generica
+2. <strong>Sem acesso ao portal</strong> — <code>acessa_portal = false</code> → redireciona para <code>/sem-acesso</code>
+3. <strong>Primeiro acesso pendente</strong> — <code>senha_hash IS NULL</code> → mensagem "Use o link Primeiro Acesso"</p>
+<h3 id="pagina-primeiro-acesso-frontend">Pagina /primeiro-acesso (frontend)<a class="headerlink" href="#pagina-primeiro-acesso-frontend" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Rota publica (sem AuthGuard)</li>
+<li>Step 1: formulario com identificador + email + botao "Validar"</li>
+<li>Step 2 (apos validacao): campos nova senha + confirmar senha + botao "Criar senha"</li>
+<li>Ao concluir: toast de sucesso + redirect para /login</li>
+<li>Design: mesma linguagem visual da pagina de login</li>
+</ul>
+<hr />
+<h2 id="4-matriz-de-acesso-por-perfil">4. Matriz de acesso por perfil<a class="headerlink" href="#4-matriz-de-acesso-por-perfil" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>GESTOR</th>
+<th>COLABORADOR (com acesso)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dashboard</td>
+<td>Sim (sua cadeia)</td>
+<td>Apenas o proprio</td>
+</tr>
+<tr>
+<td>Colaboradores (lista)</td>
+<td>Sua cadeia</td>
+<td>Nao</td>
+</tr>
+<tr>
+<td>Detalhe colaborador</td>
+<td>Sua cadeia</td>
+<td>Apenas o proprio</td>
+</tr>
+<tr>
+<td>Relatorios (time)</td>
+<td>Seus times</td>
+<td>Nao</td>
+</tr>
+<tr>
+<td>Relatorio individual</td>
+<td>Sua cadeia</td>
+<td>Apenas o proprio</td>
+</tr>
+<tr>
+<td>Organizacao</td>
+<td>Sim</td>
+<td>Nao</td>
+</tr>
+<tr>
+<td>Criar/editar usuarios</td>
+<td>Sim</td>
+<td>Nao</td>
+</tr>
+<tr>
+<td>Perfil pessoal</td>
+<td>Sim</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>Alterar senha</td>
+<td>Sim</td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table>
+<h3 id="menu-por-perfil">Menu por perfil<a class="headerlink" href="#menu-por-perfil" title="Permanent link">&para;</a></h3>
+<p><strong>Gestor:</strong>
+- Home (dashboard)
+- Colaboradores
+- Relatorios
+- Organizacao
+- Configuracoes / Perfil</p>
+<p><strong>Colaborador (com acesso):</strong>
+- Meu Painel (dashboard pessoal)
+- Meus Relatorios
+- Meu Perfil</p>
+<hr />
+<h2 id="5-frontend-visao-do-colaborador">5. Frontend — visao do colaborador<a class="headerlink" href="#5-frontend-visao-do-colaborador" title="Permanent link">&para;</a></h2>
+<h3 id="meu-painel">Meu Painel<a class="headerlink" href="#meu-painel" title="Permanent link">&para;</a></h3>
+<p>Dashboard simplificado mostrando:
+- IManager Score da semana
+- Status atual (online/offline/ausente)
+- KPIs pessoais resumidos</p>
+<h3 id="meus-relatorios">Meus Relatorios<a class="headerlink" href="#meus-relatorios" title="Permanent link">&para;</a></h3>
+<p>Lista dos relatorios semanais individuais do colaborador.
+Mesmo componente <code>app-relatorio-individual</code> ja existente, apenas filtrado para o usuario logado.</p>
+<h3 id="meu-perfil">Meu Perfil<a class="headerlink" href="#meu-perfil" title="Permanent link">&para;</a></h3>
+<p>Mesmo componente de perfil existente. Colaborador pode editar:
+- Foto
+- Telefone
+- Email pessoal
+- Dados complementares (estado civil, genero, data nascimento)
+- Senha</p>
+<p>Nao pode editar: nome, sobrenome, email corporativo, cargo, departamento.</p>
+<hr />
+<h2 id="6-apis-impactadas">6. APIs impactadas<a class="headerlink" href="#6-apis-impactadas" title="Permanent link">&para;</a></h2>
+<h3 id="manager-srv-portal">manager-srv-portal<a class="headerlink" href="#manager-srv-portal" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Mudanca</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST /auth/login</td>
+<td>Aceitar GESTOR e COLABORADOR. Diferenciar erros (sem acesso, sem senha, credenciais).</td>
+</tr>
+<tr>
+<td>POST /auth/primeiro-acesso/validar</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td>POST /auth/primeiro-acesso/criar-senha</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td>PATCH /api/v2/usuarios/{id}/acesso-portal</td>
+<td><strong>Novo</strong></td>
+</tr>
+<tr>
+<td>POST /api/gerente</td>
+<td>Remover campo senha. Perfil fixo = GESTOR</td>
+</tr>
+<tr>
+<td>POST /api/colaborador</td>
+<td>Adicionar campo acessa_portal (default false)</td>
+</tr>
+<tr>
+<td>POST /api/colaborador/lote</td>
+<td>Idem</td>
+</tr>
+<tr>
+<td>GET /me</td>
+<td>Funciona para ambos os perfis</td>
+</tr>
+<tr>
+<td>AccessService</td>
+<td>Simplificar: GESTOR = acesso total, COLABORADOR = acesso limitado</td>
+</tr>
+<tr>
+<td>JwtTokenProvider</td>
+<td>Claims: perfil = GESTOR ou COLABORADOR</td>
+</tr>
+</tbody>
+</table>
+<h3 id="manager-fed-portal">manager-fed-portal<a class="headerlink" href="#manager-fed-portal" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Mudanca</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login page</td>
+<td>Link "Primeiro acesso?". Tratar 3 tipos de erro.</td>
+</tr>
+<tr>
+<td>/primeiro-acesso</td>
+<td><strong>Nova pagina</strong> (2 steps)</td>
+</tr>
+<tr>
+<td>/sem-acesso</td>
+<td><strong>Nova pagina</strong> (tela de bloqueio)</td>
+</tr>
+<tr>
+<td>Auth service</td>
+<td>Remover isAdmin(). Simplificar para isGestor() / isColaborador().</td>
+</tr>
+<tr>
+<td>Guards</td>
+<td>Remover AdminGuard. Criar ColaboradorGuard.</td>
+</tr>
+<tr>
+<td>Menu/sidebar</td>
+<td>Dinamico por perfil.</td>
+</tr>
+<tr>
+<td>Modal criar usuario portal</td>
+<td>Remover campos de senha e seletor de perfil.</td>
+</tr>
+<tr>
+<td>Modal criar colaborador</td>
+<td>Adicionar select "Acessa o portal?" (default Nao).</td>
+</tr>
+<tr>
+<td>Excel usuario portal</td>
+<td>Remover coluna Perfil e coluna Senha.</td>
+</tr>
+<tr>
+<td>Excel colaborador</td>
+<td>Adicionar coluna "Acessa portal?" (Sim/Nao).</td>
+</tr>
+<tr>
+<td>Detalhe colaborador</td>
+<td>Adicionar toggle/select "Acessa o portal?".</td>
+</tr>
+<tr>
+<td>Hierarquia</td>
+<td>Editar flag acessa_portal no no do colaborador. Badges: Gestor/Colaborador.</td>
+</tr>
+<tr>
+<td>Rotas colaborador</td>
+<td>/meu-painel, /meus-relatorios, /meu-perfil</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

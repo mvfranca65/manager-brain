@@ -1,0 +1,3813 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/agent-desktop/PLANO-TESTES-REGRESSIVOS/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>PLANO TESTES REGRESSIVOS - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plano-de-testes-regressivos-manager-agent-v2" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PLANO TESTES REGRESSIVOS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparacao-do-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparacao do Ambiente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparacao do Ambiente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-requisitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparacao-do-instalador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparacao do Instalador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Instalacao
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Instalacao">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-11-instalacao-limpa-primeira-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 1.1: Instalacao Limpa (Primeira Vez)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-12-instalacao-com-configuracao-customizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 1.2: Instalacao com Configuracao Customizada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-13-deteccao-de-instalacao-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 1.3: Deteccao de Instalacao Existente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-interface-system-tray" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Interface (System Tray)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Interface (System Tray)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-21-icone-na-bandeja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 2.1: Icone na Bandeja
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-22-estrutura-do-menu-clique-direito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 2.2: Estrutura do Menu (Clique Direito)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-23-submenu-ferramentas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 2.3: Submenu Ferramentas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-24-acao-verificacao-de-saude-via-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 2.4: Acao - Verificacao de Saude (via menu)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-25-acao-limpar-dados-e-reiniciar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 2.5: Acao - Limpar Dados e Reiniciar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-26-acao-sobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 2.6: Acao - Sobre
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-captura-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Captura de Dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Captura de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-31-captura-de-janela-ativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 3.1: Captura de Janela Ativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-32-deteccao-de-idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 3.2: Deteccao de Idle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-33-eventos-de-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 3.3: Eventos de Sessao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-34-heartbeats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 3.4: Heartbeats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-35-persistencia-no-buffer-sqlite-wal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 3.5: Persistencia no Buffer SQLite WAL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-scripts-diagnosticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Scripts Diagnosticos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Scripts Diagnosticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-41-health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 4.1: Health Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-42-monitorar-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 4.2: Monitorar Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-43-coletar-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 4.3: Coletar Diagnostico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-44-limparreset-com-confirmacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 4.4: Limpar/Reset com Confirmacao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-45-monitorar-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 4.5: Monitorar Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Performance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-51-consumo-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 5.1: Consumo de Memoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-52-consumo-de-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 5.2: Consumo de CPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-53-tempo-de-inicializacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 5.3: Tempo de Inicializacao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-54-crescimento-do-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 5.4: Crescimento do Buffer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-erro-e-recuperacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Erro e Recuperacao
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Erro e Recuperacao">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-61-servidor-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 6.1: Servidor Offline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-62-configuracao-invalida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 6.2: Configuracao Invalida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-63-buffer-corrompido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 6.3: Buffer Corrompido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-ciclo-de-vida-do-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Ciclo de Vida do Service
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Ciclo de Vida do Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-71-inicializacao-no-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 7.1: Inicializacao no Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-72-parada-graceful-do-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 7.2: Parada Graceful do Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-73-auto-restart-pelo-scm-apos-crash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 7.3: Auto-Restart pelo SCM apos Crash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-74-reinicio-manual-via-scm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 7.4: Reinicio Manual via SCM
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-multi-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes Multi-Sessao
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes Multi-Sessao">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-81-dois-usuarios-simultaneos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 8.1: Dois Usuarios Simultaneos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-82-logoff-de-um-usuario-outro-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 8.2: Logoff de Um Usuario (Outro Continua)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-named-pipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Named Pipe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Named Pipe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-91-comunicacao-normal-service-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 9.1: Comunicacao Normal Service-Worker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-92-named-pipe-reconexao-apos-interrupcao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 9.2: Named Pipe - Reconexao apos Interrupcao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-93-acl-do-named-pipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 9.3: ACL do Named Pipe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-auto-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Auto-Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Auto-Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-101-update-plan-a-script-ps1-via-schtasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 10.1: Update Plan A - Script PS1 via schtasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-102-update-plan-b-fallback-via-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 10.2: Update Plan B - Fallback via BAT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-103-update-plan-c-in-process-rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 10.3: Update Plan C - In-Process Rename
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-104-falha-total-de-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 10.4: Falha Total de Update
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-migracao-v1-para-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Migracao V1 para V2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Migracao V1 para V2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-111-upgrade-de-instalacao-v1-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 11.1: Upgrade de Instalacao V1 Existente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-112-preservacao-de-dados-na-migracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 11.2: Preservacao de Dados na Migracao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-113-rollback-em-caso-de-falha-na-migracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 11.3: Rollback em Caso de Falha na Migracao
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-autonomousbuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de AutonomousBuffer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de AutonomousBuffer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-121-bufferizacao-local-quando-pipe-esta-indisponivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 12.1: Bufferizacao Local quando Pipe esta Indisponivel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-122-flush-do-buffer-autonomo-apos-reconexao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 12.2: Flush do Buffer Autonomo apos Reconexao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-123-limite-do-buffer-autonomo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 12.3: Limite do Buffer Autonomo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-worker-watchdog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Worker Watchdog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Worker Watchdog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-131-deteccao-de-worker-morto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 13.1: Deteccao de Worker Morto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-132-multiplos-crashes-do-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 13.2: Multiplos Crashes do Worker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-133-transicao-de-meia-noite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 13.3: Transicao de Meia-Noite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-de-desinstalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes de Desinstalacao
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes de Desinstalacao">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-141-desinstalacao-completa-via-inno-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 14.1: Desinstalacao Completa via Inno Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-142-reinstalacao-apos-desinstalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste 14.2: Reinstalacao Apos Desinstalacao
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relatorio-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relatorio Final
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relatorio Final">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-de-relatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Template de Relatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metricas-de-sucesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metricas de Sucesso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metricas de Sucesso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-aprovacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de Aprovacao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bugs-criticos-bloqueiam-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bugs Criticos (Bloqueiam Release)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bugs-nao-criticos-nao-bloqueiam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bugs Nao-Criticos (Nao Bloqueiam)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smoke-test-15-minutos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smoke Test (15 minutos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts-powershell-uteis-referencia-rapida-para-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripts PowerShell Uteis (Referencia Rapida para QA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts PowerShell Uteis (Referencia Rapida para QA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Localizacao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripts-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripts disponiveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-troubleshooting-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de troubleshooting recomendado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<blockquote>
+<p><strong>STATUS:</strong> ATIVO
+<strong>DATA:</strong> 2026-06-11
+<strong>DONO:</strong> @Natasha (QA)
+<strong>REVISADO POR:</strong> @Tony</p>
+</blockquote>
+<h1 id="plano-de-testes-regressivos-manager-agent-v2">Plano de Testes Regressivos - Manager Agent V2<a class="headerlink" href="#plano-de-testes-regressivos-manager-agent-v2" title="Permanent link">&para;</a></h1>
+<p><strong>Versao:</strong> 2.0.0
+<strong>Data:</strong> 2026-06-11
+<strong>Objetivo:</strong> Validar todas as funcionalidades do Manager Agent V2 antes de release</p>
+<blockquote>
+<p>⚠️ <strong>Nota sobre AthenaAgent.Tray:</strong> A V1 do Agent rodava com o processo <code>AthenaAgent.Tray</code>. Esse nome aparece neste plano nos casos de migração V1→V2 (R11.x) e nas verificações de limpeza pós-migração — é intencional, representa o legado. Para a V2 (atual), o processo é <code>ManagerAgent.Tray</code>.</p>
+</blockquote>
+<hr />
+<h2 id="indice">Indice<a class="headerlink" href="#indice" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#preparacao-do-ambiente">Preparacao do Ambiente</a></li>
+<li><a href="#testes-de-instalacao">Testes de Instalacao</a></li>
+<li><a href="#testes-de-interface-system-tray">Testes de Interface (System Tray)</a></li>
+<li><a href="#testes-de-captura-de-dados">Testes de Captura de Dados</a></li>
+<li><a href="#testes-de-scripts-diagnosticos">Testes de Scripts Diagnosticos</a></li>
+<li><a href="#testes-de-performance">Testes de Performance</a></li>
+<li><a href="#testes-de-erro-e-recuperacao">Testes de Erro e Recuperacao</a></li>
+<li><a href="#testes-de-ciclo-de-vida-do-service">Testes de Ciclo de Vida do Service</a></li>
+<li><a href="#testes-multi-sessao">Testes Multi-Sessao</a></li>
+<li><a href="#testes-de-named-pipe">Testes de Named Pipe</a></li>
+<li><a href="#testes-de-auto-update">Testes de Auto-Update</a></li>
+<li><a href="#testes-de-migracao-v1-para-v2">Testes de Migracao V1 para V2</a></li>
+<li><a href="#testes-de-autonomousbuffer">Testes de AutonomousBuffer</a></li>
+<li><a href="#testes-de-worker-watchdog">Testes de Worker Watchdog</a></li>
+<li><a href="#testes-de-desinstalacao">Testes de Desinstalacao</a></li>
+<li><a href="#relatorio-final">Relatorio Final</a></li>
+</ol>
+<hr />
+<h2 id="preparacao-do-ambiente">Preparacao do Ambiente<a class="headerlink" href="#preparacao-do-ambiente" title="Permanent link">&para;</a></h2>
+<h3 id="pre-requisitos">Pre-requisitos<a class="headerlink" href="#pre-requisitos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Windows 10 ou 11 (64-bit)</li>
+<li>[ ] .NET 8.0 Runtime instalado</li>
+<li>[ ] PowerShell 5.1 ou superior</li>
+<li>[ ] Execution Policy configurada: <code>RemoteSigned</code> ou <code>Unrestricted</code></li>
+<li>[ ] Conta de administrador local disponivel</li>
+<li>[ ] Conexao com internet (para testes de upload e auto-update)</li>
+<li>[ ] Para testes multi-sessao: ao menos dois usuarios locais configurados</li>
+</ul>
+<h3 id="setup-inicial">Setup Inicial<a class="headerlink" href="#setup-inicial" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># 1. Verificar versao do Windows</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">winver</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c"># 2. Verificar .NET Runtime</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">dotnet</span> <span class="p">-</span><span class="n">-list-runtimes</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c"># Esperado: Microsoft.NETCore.App 8.x.x ou superior</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c"># 3. Verificar PowerShell</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nv">$PSVersionTable</span><span class="p">.</span><span class="n">PSVersion</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c"># Esperado: 5.1 ou superior</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c"># 4. Configurar Execution Policy</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">Get-ExecutionPolicy</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nb">Set-ExecutionPolicy</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Force</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c"># 5. Preparar pasta de trabalho</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">-Path</span> <span class="s2">"C:\Temp\ManagerAgent-Tests"</span> <span class="n">-Force</span>
+</code></pre></div>
+<h3 id="preparacao-do-instalador">Preparacao do Instalador<a class="headerlink" href="#preparacao-do-instalador" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Copiar instalador para pasta de testes</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Copy-Item</span> <span class="s2">"ManagerAgent-Setup.exe"</span> <span class="s2">"C:\Temp\ManagerAgent-Tests\"</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c"># Verificar hash do instalador</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">Get-FileHash</span> <span class="s2">"C:\Temp\ManagerAgent-Tests\ManagerAgent-Setup.exe"</span> <span class="n">-Algorithm</span> <span class="n">SHA256</span>
+</code></pre></div>
+<hr />
+<h2 id="testes-de-instalacao">Testes de Instalacao<a class="headerlink" href="#testes-de-instalacao" title="Permanent link">&para;</a></h2>
+<h3 id="teste-11-instalacao-limpa-primeira-vez">Teste 1.1: Instalacao Limpa (Primeira Vez)<a class="headerlink" href="#teste-11-instalacao-limpa-primeira-vez" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar instalacao em sistema sem Manager Agent</p>
+<p><strong>Pre-condicao:</strong> Sistema sem Manager Agent instalado anteriormente</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c"># 1. Confirmar que nao existe instalacao previa</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">Get-Service</span> <span class="n">ManagerAgent</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c"># Esperado: Vazio</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">Test-Path</span> <span class="s2">"C:\Program Files\ManagerAgent"</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c"># Esperado: False</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c"># 2. Executar instalador como administrador</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">Start-Process</span> <span class="s2">"C:\Temp\ManagerAgent-Tests\ManagerAgent-Setup.exe"</span> <span class="n">-Verb</span> <span class="n">RunAs</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c"># 3. Seguir assistente Inno Setup</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R1.1.1:</strong> Instalador inicia sem erros</li>
+<li>[ ] <strong>R1.1.2:</strong> Pasta <code>C:\Program Files\ManagerAgent</code> criada</li>
+<li>[ ] <strong>R1.1.3:</strong> <code>ManagerAgent.Service.exe</code> presente</li>
+<li>[ ] <strong>R1.1.4:</strong> <code>ManagerAgent.SessionWorker.exe</code> presente</li>
+<li>[ ] <strong>R1.1.5:</strong> <code>ManagerAgent.Configurator.exe</code> presente</li>
+<li>[ ] <strong>R1.1.6:</strong> Pasta <code>scripts\</code> com 5 scripts PowerShell presentes</li>
+<li>[ ] <strong>R1.1.7:</strong> Pasta <code>C:\ProgramData\ManagerAgent</code> criada</li>
+<li>[ ] <strong>R1.1.8:</strong> <code>config.json</code> criado com campos obrigatorios</li>
+<li>[ ] <strong>R1.1.9:</strong> <code>buffer.db</code> criado (SQLite WAL)</li>
+<li>[ ] <strong>R1.1.10:</strong> Pasta <code>logs\</code> criada</li>
+<li>[ ] <strong>R1.1.11:</strong> Windows Service "ManagerAgent" registrado</li>
+<li>[ ] <strong>R1.1.12:</strong> Service configurado para iniciar automaticamente</li>
+<li>[ ] <strong>R1.1.13:</strong> SCM recovery configurado (1s, 5s, 30s)</li>
+<li>[ ] <strong>R1.1.14:</strong> Service inicia automaticamente apos instalacao</li>
+<li>[ ] <strong>R1.1.15:</strong> SessionWorker iniciado pelo Service (icone aparece na bandeja)</li>
+</ul>
+<p><strong>Comandos de Validacao:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c"># Verificar Service</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">Get-Service</span> <span class="n">ManagerAgent</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">Name</span><span class="p">,</span> <span class="n">Status</span><span class="p">,</span> <span class="n">StartType</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c"># Verificar processos</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.Service"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.SessionWorker"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c"># Verificar config.json</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">Get-Content</span> <span class="s2">"C:\ProgramData\ManagerAgent\config.json"</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c"># Verificar instalacaoId gerado (campo no config.json)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nv">$config</span> <span class="p">=</span> <span class="nb">Get-Content</span> <span class="s2">"C:\ProgramData\ManagerAgent\config.json"</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="nv">$config</span><span class="p">.</span><span class="n">instalacaoId</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c"># Esperado: GUID valido (formato xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="c"># Verificar DeviceToken encriptado (nao deve estar em plaintext)</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="nv">$config</span><span class="p">.</span><span class="n">deviceToken</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="c"># Esperado: string base64 longa (DPAPI encrypted), nao um token JWT raw</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="c"># Verificar pasta de scripts</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="nb">Get-ChildItem</span> <span class="s2">"C:\Program Files\ManagerAgent\scripts"</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="c"># Esperado: 5 arquivos .ps1</span>
+</code></pre></div>
+<hr />
+<h3 id="teste-12-instalacao-com-configuracao-customizada">Teste 1.2: Instalacao com Configuracao Customizada<a class="headerlink" href="#teste-12-instalacao-com-configuracao-customizada" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar instalacao com parametros personalizados via Configurador</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Executar instalacao limpa</li>
+<li>Abrir <code>ManagerAgent.Configurator.exe</code></li>
+<li>Preencher <code>baseUrlAdmin</code>, <code>baseUrlEvents</code>, <code>chaveAtivacaoEmpresa</code> e <code>identificadorColaborador</code></li>
+<li>Salvar e reiniciar Service</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R1.2.1:</strong> Configurador salva corretamente em <code>config.json</code></li>
+<li>[ ] <strong>R1.2.2:</strong> <code>config.json</code> contem todos os campos esperados</li>
+<li>[ ] <strong>R1.2.3:</strong> Service reinicia apos salvar configuracao</li>
+<li>[ ] <strong>R1.2.4:</strong> SessionWorker usa a nova configuracao</li>
+</ul>
+<hr />
+<h3 id="teste-13-deteccao-de-instalacao-existente">Teste 1.3: Deteccao de Instalacao Existente<a class="headerlink" href="#teste-13-deteccao-de-instalacao-existente" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar comportamento ao reinstalar sobre versao existente</p>
+<p><strong>Pre-condicao:</strong> Manager Agent V2 ja instalado</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c"># Tentar instalar novamente com mesmo instalador</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">Start-Process</span> <span class="s2">"C:\Temp\ManagerAgent-Tests\ManagerAgent-Setup.exe"</span> <span class="n">-Verb</span> <span class="n">RunAs</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R1.3.1:</strong> Instalador detecta instalacao existente</li>
+<li>[ ] <strong>R1.3.2:</strong> Oferece opcao de sobrescrever ou cancelar</li>
+<li>[ ] <strong>R1.3.3:</strong> Se sobrescrever: config.json existente e preservado</li>
+<li>[ ] <strong>R1.3.4:</strong> Se sobrescrever: instalacaoId nao e regenerado</li>
+<li>[ ] <strong>R1.3.5:</strong> Service reinicia apos upgrade</li>
+</ul>
+<hr />
+<h2 id="testes-de-interface-system-tray">Testes de Interface (System Tray)<a class="headerlink" href="#testes-de-interface-system-tray" title="Permanent link">&para;</a></h2>
+<h3 id="teste-21-icone-na-bandeja">Teste 2.1: Icone na Bandeja<a class="headerlink" href="#teste-21-icone-na-bandeja" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar aparencia e comportamento do icone gerenciado pelo SessionWorker</p>
+<p><strong>Pre-condicao:</strong> Service rodando e SessionWorker iniciado</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.SessionWorker"</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R2.1.1:</strong> Icone aparece na bandeja do sistema (canto inferior direito)</li>
+<li>[ ] <strong>R2.1.2:</strong> Icone customizado do iManager exibido corretamente</li>
+<li>[ ] <strong>R2.1.3:</strong> Tooltip exibe "iManager - vX.Y.Z"</li>
+<li>[ ] <strong>R2.1.4:</strong> Icone nao pisca ou fica instavel</li>
+<li>[ ] <strong>R2.1.5:</strong> Icone nao e removido ao reiniciar o Explorer</li>
+</ul>
+<hr />
+<h3 id="teste-22-estrutura-do-menu-clique-direito">Teste 2.2: Estrutura do Menu (Clique Direito)<a class="headerlink" href="#teste-22-estrutura-do-menu-clique-direito" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar estrutura correta do menu V2</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Clique direito no icone na bandeja</li>
+<li>Observar menu que aparece</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R2.2.1:</strong> Menu abre sem delay perceptivel (&lt; 500ms)</li>
+<li>[ ] <strong>R2.2.2:</strong> Cabecalho exibe "iManager - vX.Y.Z" em negrito (desabilitado como item)</li>
+<li>[ ] <strong>R2.2.3:</strong> Separador apos cabecalho</li>
+<li>[ ] <strong>R2.2.4:</strong> Item "Ferramentas" com seta (submenu)</li>
+<li>[ ] <strong>R2.2.5:</strong> Separador antes de "Sobre"</li>
+<li>[ ] <strong>R2.2.6:</strong> Item "Sobre" visivel e clicavel</li>
+<li>[ ] <strong>R2.2.7:</strong> Nenhum item "AthenaAgent" ou referencia a versao anterior</li>
+</ul>
+<hr />
+<h3 id="teste-23-submenu-ferramentas">Teste 2.3: Submenu Ferramentas<a class="headerlink" href="#teste-23-submenu-ferramentas" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar submenu de ferramentas V2</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Clique direito no icone</li>
+<li>Passar mouse sobre "Ferramentas"</li>
+<li>Observar submenu</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R2.3.1:</strong> Submenu abre ao passar mouse</li>
+<li>[ ] <strong>R2.3.2:</strong> Item "Verificacao de Saude" visivel</li>
+<li>[ ] <strong>R2.3.3:</strong> Item "Logs em Tempo Real" visivel</li>
+<li>[ ] <strong>R2.3.4:</strong> Item "Exportar Diagnostico" visivel</li>
+<li>[ ] <strong>R2.3.5:</strong> Separador antes do item destrutivo</li>
+<li>[ ] <strong>R2.3.6:</strong> Item "Limpar Dados e Reiniciar" visivel</li>
+<li>[ ] <strong>R2.3.7:</strong> Todos os itens clicaveis</li>
+</ul>
+<hr />
+<h3 id="teste-24-acao-verificacao-de-saude-via-menu">Teste 2.4: Acao - Verificacao de Saude (via menu)<a class="headerlink" href="#teste-24-acao-verificacao-de-saude-via-menu" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar execucao do health-check via menu</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Clique direito no icone</li>
+<li>Ferramentas → Verificacao de Saude</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R2.4.1:</strong> Janela PowerShell abre</li>
+<li>[ ] <strong>R2.4.2:</strong> Script <code>health-check.ps1</code> executa</li>
+<li>[ ] <strong>R2.4.3:</strong> Score &gt;= 80% em instalacao normal</li>
+<li>[ ] <strong>R2.4.4:</strong> Verifica Service, SessionWorker e Named Pipe</li>
+<li>[ ] <strong>R2.4.5:</strong> Exibe resumo ao final</li>
+</ul>
+<hr />
+<h3 id="teste-25-acao-limpar-dados-e-reiniciar">Teste 2.5: Acao - Limpar Dados e Reiniciar<a class="headerlink" href="#teste-25-acao-limpar-dados-e-reiniciar" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar dialogo de confirmacao obrigatoria antes de acao destrutiva</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Clique direito no icone</li>
+<li>Ferramentas → Limpar Dados e Reiniciar</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R2.5.1:</strong> Dialogo de confirmacao aparece ANTES de qualquer acao</li>
+<li>[ ] <strong>R2.5.2:</strong> Dialogo descreve claramente o que sera feito</li>
+<li>[ ] <strong>R2.5.3:</strong> Aviso explicito que a acao nao pode ser desfeita</li>
+<li>[ ] <strong>R2.5.4:</strong> Botao "Nao" e o padrao (selecionado por Enter)</li>
+<li>[ ] <strong>R2.5.5:</strong> Clicar "Nao": operacao cancelada, Service continua rodando</li>
+<li>[ ] <strong>R2.5.6:</strong> Clicar "Sim": buffer.db removido, Service reiniciado, SessionWorker relancado</li>
+</ul>
+<hr />
+<h3 id="teste-26-acao-sobre">Teste 2.6: Acao - Sobre<a class="headerlink" href="#teste-26-acao-sobre" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar janela "Sobre" do agente</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Clique direito no icone</li>
+<li>Clicar em "Sobre"</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R2.6.1:</strong> Janela de informacoes abre</li>
+<li>[ ] <strong>R2.6.2:</strong> Exibe versao atual (formato X.Y.Z)</li>
+<li>[ ] <strong>R2.6.3:</strong> Exibe instalacaoId</li>
+<li>[ ] <strong>R2.6.4:</strong> Exibe identificador do colaborador configurado</li>
+<li>[ ] <strong>R2.6.5:</strong> Botao OK fecha a janela</li>
+</ul>
+<hr />
+<h2 id="testes-de-captura-de-dados">Testes de Captura de Dados<a class="headerlink" href="#testes-de-captura-de-dados" title="Permanent link">&para;</a></h2>
+<h3 id="teste-31-captura-de-janela-ativa">Teste 3.1: Captura de Janela Ativa<a class="headerlink" href="#teste-31-captura-de-janela-ativa" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar captura correta via SessionWorker</p>
+<p><strong>Preparacao:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c"># Limpar buffer para teste limpo</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">Stop-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">Remove-Item</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="n">-Force</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nb">Start-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">5</span>
+</code></pre></div>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Abrir Google Chrome e navegar para GitHub.com — aguardar 10 segundos</li>
+<li>Abrir Notepad — aguardar 10 segundos</li>
+<li>Abrir Visual Studio Code e um arquivo .cs — aguardar 10 segundos</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c"># Verificar eventos no buffer</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nv">$eventos</span> <span class="p">=</span> <span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="p">`</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="s2">"SELECT json FROM eventos WHERE tipo='janela_ativa' ORDER BY timestamp DESC LIMIT 10"</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nv">$eventos</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span> <span class="nv">$_</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span> <span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>R3.1.1:</strong> Evento com processo "chrome.exe" capturado</li>
+<li>[ ] <strong>R3.1.2:</strong> Titulo contem "GitHub"</li>
+<li>[ ] <strong>R3.1.3:</strong> Evento com processo "notepad.exe" capturado</li>
+<li>[ ] <strong>R3.1.4:</strong> Evento com processo "Code.exe" capturado</li>
+<li>[ ] <strong>R3.1.5:</strong> Titulo do VS Code contem nome do arquivo</li>
+<li>[ ] <strong>R3.1.6:</strong> Timestamp em formato ISO 8601</li>
+<li>[ ] <strong>R3.1.7:</strong> <code>instalacaoId</code> presente e valido (GUID)</li>
+<li>[ ] <strong>R3.1.8:</strong> Campo <code>usuario</code> contem o nome de usuario Windows</li>
+<li>[ ] <strong>R3.1.9:</strong> Campo <code>idle</code> = false durante uso ativo</li>
+<li>[ ] <strong>R3.1.10:</strong> Nenhum conteudo digitado, screenshot ou senha capturada</li>
+</ul>
+<hr />
+<h3 id="teste-32-deteccao-de-idle">Teste 3.2: Deteccao de Idle<a class="headerlink" href="#teste-32-deteccao-de-idle" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar deteccao de inatividade do usuario pelo SessionWorker</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Garantir que ha atividade normal (mover mouse, digitar)</li>
+<li>Parar completamente de interagir (nao tocar mouse nem teclado)</li>
+<li>Aguardar 2 minutos</li>
+<li>Retomar atividade</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c"># Verificar logs do worker</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">Get-Content</span> <span class="s2">"C:\ProgramData\ManagerAgent\logs\worker-</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="n">yyyyMMdd</span><span class="p">)</span><span class="s2">.log"</span> <span class="p">|</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="nb">Select-String</span> <span class="s2">"idle"</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">-Last</span> <span class="n">10</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>R3.2.1:</strong> Log indica transicao para idle apos tempo configurado</li>
+<li>[ ] <strong>R3.2.2:</strong> Eventos de janela ativa param durante idle</li>
+<li>[ ] <strong>R3.2.3:</strong> Log indica retorno de idle ao resumir atividade</li>
+<li>[ ] <strong>R3.2.4:</strong> Eventos de janela ativa voltam apos retorno</li>
+</ul>
+<hr />
+<h3 id="teste-33-eventos-de-sessao">Teste 3.3: Eventos de Sessao<a class="headerlink" href="#teste-33-eventos-de-sessao" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar captura de SessionLock, SessionUnlock, SessionLogoff e SessionLogon</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Pressionar Win+L para bloquear — aguardar 5 segundos</li>
+<li>Desbloquear com senha</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">$eventos</span> <span class="p">=</span> <span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="p">`</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="s2">"SELECT json FROM eventos WHERE tipo='sessao' ORDER BY timestamp DESC LIMIT 5"</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nv">$eventos</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span> <span class="nv">$_</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span> <span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>R3.3.1:</strong> Evento "SessionLock" capturado pelo SessionWorker</li>
+<li>[ ] <strong>R3.3.2:</strong> Evento "SessionUnlock" capturado</li>
+<li>[ ] <strong>R3.3.3:</strong> Timestamps em ordem cronologica correta</li>
+<li>[ ] <strong>R3.3.4:</strong> Campos <code>usuario</code> e <code>maquina</code> preenchidos</li>
+</ul>
+<hr />
+<h3 id="teste-34-heartbeats">Teste 3.4: Heartbeats<a class="headerlink" href="#teste-34-heartbeats" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar envio periodico de heartbeats com uptime correto</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c"># Aguardar 3 minutos e verificar</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">180</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nv">$heartbeats</span> <span class="p">=</span> <span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="p">`</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="s2">"SELECT json FROM eventos WHERE tipo='heartbeat' ORDER BY timestamp DESC LIMIT 5"</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="nv">$heartbeats</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="nv">$hb</span> <span class="p">=</span> <span class="nv">$_</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="nb">Write-Host</span> <span class="s2">"Timestamp: </span><span class="p">$(</span><span class="nv">$hb</span><span class="p">.</span><span class="n">timestamp</span><span class="p">)</span><span class="s2">, Uptime: </span><span class="p">$(</span><span class="nv">$hb</span><span class="p">.</span><span class="n">uptime</span><span class="p">)</span><span class="s2">s"</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R3.4.1:</strong> Pelo menos 3 heartbeats gerados em 3 minutos</li>
+<li>[ ] <strong>R3.4.2:</strong> Uptime aumenta de forma consistente a cada heartbeat</li>
+<li>[ ] <strong>R3.4.3:</strong> Campo <code>versaoAgente</code> presente e correto</li>
+<li>[ ] <strong>R3.4.4:</strong> Campo <code>eventosPendentes</code> indica quantidade atual no buffer</li>
+</ul>
+<hr />
+<h3 id="teste-35-persistencia-no-buffer-sqlite-wal">Teste 3.5: Persistencia no Buffer SQLite WAL<a class="headerlink" href="#teste-35-persistencia-no-buffer-sqlite-wal" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar armazenamento local com WAL mode</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c"># Verificar modo WAL</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="s2">"PRAGMA journal_mode;"</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c"># Esperado: wal</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="s2">".schema"</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="s2">"SELECT COUNT(*) FROM eventos"</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="p">`</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="s2">"SELECT tipo, enviado, timestamp FROM eventos ORDER BY timestamp DESC LIMIT 10"</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R3.5.1:</strong> Arquivo <code>buffer.db</code> existe</li>
+<li>[ ] <strong>R3.5.2:</strong> Modo WAL ativo (journal_mode = wal)</li>
+<li>[ ] <strong>R3.5.3:</strong> Tabela <code>eventos</code> com colunas corretas</li>
+<li>[ ] <strong>R3.5.4:</strong> Eventos sao inseridos pelo SessionWorker</li>
+<li>[ ] <strong>R3.5.5:</strong> Eventos sao lidos e enviados pelo Service</li>
+<li>[ ] <strong>R3.5.6:</strong> Campo <code>enviado</code> = 1 apos upload com sucesso</li>
+<li>[ ] <strong>R3.5.7:</strong> Banco nao corrompe sob carga normal</li>
+</ul>
+<hr />
+<h2 id="testes-de-scripts-diagnosticos">Testes de Scripts Diagnosticos<a class="headerlink" href="#testes-de-scripts-diagnosticos" title="Permanent link">&para;</a></h2>
+<h3 id="teste-41-health-check">Teste 4.1: Health Check<a class="headerlink" href="#teste-41-health-check" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar script de verificacao completa para V2</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">cd </span><span class="s2">"C:\Program Files\ManagerAgent\scripts"</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">.\</span><span class="n">health-check</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R4.1.1:</strong> Script executa sem erros</li>
+<li>[ ] <strong>R4.1.2:</strong> Verifica Windows Service "ManagerAgent" → [OK]</li>
+<li>[ ] <strong>R4.1.3:</strong> Verifica processo <code>ManagerAgent.Service</code> → [OK]</li>
+<li>[ ] <strong>R4.1.4:</strong> Verifica processo <code>ManagerAgent.SessionWorker</code> → [OK]</li>
+<li>[ ] <strong>R4.1.5:</strong> Verifica arquivos de instalacao → [OK]</li>
+<li>[ ] <strong>R4.1.6:</strong> Verifica <code>config.json</code> com campos obrigatorios → [OK]</li>
+<li>[ ] <strong>R4.1.7:</strong> Verifica buffer SQLite WAL → [OK]</li>
+<li>[ ] <strong>R4.1.8:</strong> Verifica logs de servico e worker → [OK]</li>
+<li>[ ] <strong>R4.1.9:</strong> Testa conectividade HTTPS com APIs → [OK ou WARN]</li>
+<li>[ ] <strong>R4.1.10:</strong> Verifica Named Pipe ativo → [OK]</li>
+<li>[ ] <strong>R4.1.11:</strong> Score &gt;= 80% em instalacao normal</li>
+<li>[ ] <strong>R4.1.12:</strong> Exibe resumo com recomendacoes ao final</li>
+<li>[ ] <strong>R4.1.13:</strong> Nenhuma referencia a AthenaAgent.Tray ou processos V1</li>
+</ul>
+<hr />
+<h3 id="teste-42-monitorar-logs">Teste 4.2: Monitorar Logs<a class="headerlink" href="#teste-42-monitorar-logs" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar monitoramento simultaneo de Service e Worker</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.\</span><span class="n">monitorar-logs</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R4.2.1:</strong> Exibe logs de <code>service-YYYYMMDD.log</code> e <code>worker-YYYYMMDD.log</code></li>
+<li>[ ] <strong>R4.2.2:</strong> Cores aplicadas: vermelho (ERR), amarelo (WRN), verde (INF)</li>
+<li>[ ] <strong>R4.2.3:</strong> Atualiza em tempo real</li>
+<li>[ ] <strong>R4.2.4:</strong> Filtro <code>-Filter Error</code> mostra apenas erros</li>
+<li>[ ] <strong>R4.2.5:</strong> Filtro <code>-Source Service</code> mostra apenas logs do servico</li>
+<li>[ ] <strong>R4.2.6:</strong> Filtro <code>-Source Worker</code> mostra apenas logs do worker</li>
+<li>[ ] <strong>R4.2.7:</strong> Ctrl+C encerra script graciosamente</li>
+</ul>
+<hr />
+<h3 id="teste-43-coletar-diagnostico">Teste 4.3: Coletar Diagnostico<a class="headerlink" href="#teste-43-coletar-diagnostico" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar coleta de ZIP com informacoes V2</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">.\</span><span class="n">coletar-diagnostico</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R4.3.1:</strong> Script executa sem erros</li>
+<li>[ ] <strong>R4.3.2:</strong> Coleta status do Windows Service</li>
+<li>[ ] <strong>R4.3.3:</strong> Coleta informacoes dos dois processos (Service e SessionWorker)</li>
+<li>[ ] <strong>R4.3.4:</strong> config.json incluido com DeviceToken mascarado</li>
+<li>[ ] <strong>R4.3.5:</strong> Logs de servico e worker incluidos (ultimos 3 de cada)</li>
+<li>[ ] <strong>R4.3.6:</strong> Informacoes do buffer SQLite incluidas</li>
+<li>[ ] <strong>R4.3.7:</strong> Resultado do health-check incluido</li>
+<li>[ ] <strong>R4.3.8:</strong> ZIP criado: <code>diagnostico-manager-agent-YYYYMMDD-HHMMSS.zip</code></li>
+<li>[ ] <strong>R4.3.9:</strong> Explorer abre na pasta do ZIP gerado</li>
+<li>[ ] <strong>R4.3.10:</strong> ZIP pode ser extraido sem erros</li>
+</ul>
+<hr />
+<h3 id="teste-44-limparreset-com-confirmacao">Teste 4.4: Limpar/Reset com Confirmacao<a class="headerlink" href="#teste-44-limparreset-com-confirmacao" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar confirmacao obrigatoria e execucao correta</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">.\</span><span class="n">limpar-reset</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p><strong>Validacoes (fluxo "Nao"):</strong></p>
+<ul>
+<li>[ ] <strong>R4.4.1:</strong> Dialogo de confirmacao aparece antes de qualquer acao</li>
+<li>[ ] <strong>R4.4.2:</strong> Descricao clara das acoes que serao executadas</li>
+<li>[ ] <strong>R4.4.3:</strong> Aviso que a acao nao pode ser desfeita</li>
+<li>[ ] <strong>R4.4.4:</strong> Clicar "Nao": operacao cancelada, Service continua rodando</li>
+<li>[ ] <strong>R4.4.5:</strong> buffer.db nao e modificado apos cancelamento</li>
+</ul>
+<p><strong>Validacoes (fluxo "Sim"):</strong></p>
+<ul>
+<li>[ ] <strong>R4.4.6:</strong> Service e parado</li>
+<li>[ ] <strong>R4.4.7:</strong> SessionWorker e encerrado</li>
+<li>[ ] <strong>R4.4.8:</strong> buffer.db e removido</li>
+<li>[ ] <strong>R4.4.9:</strong> Logs preservados (padrao)</li>
+<li>[ ] <strong>R4.4.10:</strong> config.json preservado (padrao)</li>
+<li>[ ] <strong>R4.4.11:</strong> Service e reiniciado</li>
+<li>[ ] <strong>R4.4.12:</strong> SessionWorker e relancado pelo Service</li>
+<li>[ ] <strong>R4.4.13:</strong> Icone volta a aparecer na bandeja</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c"># Verificar buffer vazio apos reset</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="s2">"SELECT COUNT(*) FROM eventos"</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c"># Esperado: 0 ou numero muito baixo</span>
+</code></pre></div>
+<hr />
+<h3 id="teste-45-monitorar-performance">Teste 4.5: Monitorar Performance<a class="headerlink" href="#teste-45-monitorar-performance" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar monitoramento dos dois processos V2</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">.\</span><span class="n">monitorar-performance</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-DurationSeconds</span> <span class="n">120</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R4.5.1:</strong> Monitora <code>ManagerAgent.Service</code> e <code>ManagerAgent.SessionWorker</code></li>
+<li>[ ] <strong>R4.5.2:</strong> Exibe CPU, memoria, threads e handles para cada processo</li>
+<li>[ ] <strong>R4.5.3:</strong> Valores dentro do esperado (Service &lt; 100 MB, Worker &lt; 100 MB)</li>
+<li>[ ] <strong>R4.5.4:</strong> Alertas emitidos se valores anormais</li>
+<li>[ ] <strong>R4.5.5:</strong> Resumo estatistico ao final</li>
+</ul>
+<hr />
+<h2 id="testes-de-performance">Testes de Performance<a class="headerlink" href="#testes-de-performance" title="Permanent link">&para;</a></h2>
+<h3 id="teste-51-consumo-de-memoria">Teste 5.1: Consumo de Memoria<a class="headerlink" href="#teste-51-consumo-de-memoria" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que os dois processos nao consomem memoria excessiva</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nv">$inicio</span> <span class="p">=</span> <span class="nb">Get-Date</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">while</span> <span class="p">((</span><span class="nb">Get-Date</span><span class="p">)</span> <span class="o">-lt</span> <span class="nv">$inicio</span><span class="p">.</span><span class="n">AddMinutes</span><span class="p">(</span><span class="n">10</span><span class="p">))</span> <span class="p">{</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    <span class="nv">$service</span> <span class="p">=</span> <span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.Service"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="nv">$worker</span>  <span class="p">=</span> <span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.SessionWorker"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    <span class="nv">$mSvc</span>  <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$service</span><span class="p">)</span> <span class="p">{</span> <span class="no">[math]</span><span class="p">::</span><span class="n">Round</span><span class="p">(</span><span class="nv">$service</span><span class="p">.</span><span class="n">WorkingSet64</span> <span class="p">/</span> <span class="n">1MB</span><span class="p">,</span> <span class="n">1</span><span class="p">)</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="s2">"N/A"</span> <span class="p">}</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    <span class="nv">$mWrk</span>  <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$worker</span><span class="p">)</span>  <span class="p">{</span> <span class="no">[math]</span><span class="p">::</span><span class="n">Round</span><span class="p">(</span><span class="nv">$worker</span><span class="p">.</span><span class="n">WorkingSet64</span>  <span class="p">/</span> <span class="n">1MB</span><span class="p">,</span> <span class="n">1</span><span class="p">)</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="s2">"N/A"</span> <span class="p">}</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    <span class="nb">Write-Host</span> <span class="s2">"</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="s1">'HH:mm:ss'</span><span class="p">)</span><span class="s2"> - Service: $mSvc MB | Worker: $mWrk MB"</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>    <span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">30</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R5.1.1:</strong> Service: memoria inicial &lt;= 100 MB</li>
+<li>[ ] <strong>R5.1.2:</strong> Worker: memoria inicial &lt;= 100 MB</li>
+<li>[ ] <strong>R5.1.3:</strong> Nenhum dos dois cresce continuamente (sem memory leak)</li>
+<li>[ ] <strong>R5.1.4:</strong> Memoria se estabiliza apos inicializacao completa</li>
+</ul>
+<hr />
+<h3 id="teste-52-consumo-de-cpu">Teste 5.2: Consumo de CPU<a class="headerlink" href="#teste-52-consumo-de-cpu" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que os processos nao consomem CPU excessivamente em idle</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R5.2.1:</strong> Service: CPU% no Task Manager &lt; 2% em idle</li>
+<li>[ ] <strong>R5.2.2:</strong> Worker: CPU% no Task Manager &lt; 3% em idle</li>
+<li>[ ] <strong>R5.2.3:</strong> Durante captura ativa: CPU combinado &lt; 10%</li>
+<li>[ ] <strong>R5.2.4:</strong> Nenhum pico constante de CPU</li>
+</ul>
+<hr />
+<h3 id="teste-53-tempo-de-inicializacao">Teste 5.3: Tempo de Inicializacao<a class="headerlink" href="#teste-53-tempo-de-inicializacao" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que Service e Worker iniciam rapidamente</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nv">$inicio</span> <span class="p">=</span> <span class="nb">Get-Date</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nb">Start-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="c"># Aguardar icone na bandeja aparecer (manual)</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="nb">Read-Host</span> <span class="s2">"Pressione Enter quando o icone aparecer na bandeja"</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="nv">$fim</span> <span class="p">=</span> <span class="nb">Get-Date</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="nb">Write-Host</span> <span class="s2">"Tempo total: </span><span class="p">$((</span><span class="nv">$fim</span> <span class="p">-</span> <span class="nv">$inicio</span><span class="p">).</span><span class="n">TotalSeconds</span><span class="p">)</span><span class="s2"> segundos"</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R5.3.1:</strong> Service inicia em &lt;= 5 segundos</li>
+<li>[ ] <strong>R5.3.2:</strong> SessionWorker inicia em &lt;= 10 segundos apos Service</li>
+<li>[ ] <strong>R5.3.3:</strong> Icone aparece na bandeja em &lt;= 15 segundos apos <code>Start-Service</code></li>
+</ul>
+<hr />
+<h3 id="teste-54-crescimento-do-buffer">Teste 5.4: Crescimento do Buffer<a class="headerlink" href="#teste-54-crescimento-do-buffer" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que buffer.db nao cresce indefinidamente</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R5.4.1:</strong> Buffer nao excede 50 MB em uso normal</li>
+<li>[ ] <strong>R5.4.2:</strong> Eventos antigos (&gt; 7 dias) sao removidos automaticamente</li>
+<li>[ ] <strong>R5.4.3:</strong> Apos upload bem-sucedido, eventos sao marcados como enviados</li>
+<li>[ ] <strong>R5.4.4:</strong> VACUUM executado periodicamente (banco compactado)</li>
+</ul>
+<hr />
+<h2 id="testes-de-erro-e-recuperacao">Testes de Erro e Recuperacao<a class="headerlink" href="#testes-de-erro-e-recuperacao" title="Permanent link">&para;</a></h2>
+<h3 id="teste-61-servidor-offline">Teste 6.1: Servidor Offline<a class="headerlink" href="#teste-61-servidor-offline" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar comportamento quando backend esta inacessivel</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c"># Modificar config.json com URL invalida</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nv">$config</span> <span class="p">=</span> <span class="nb">Get-Content</span> <span class="s2">"C:\ProgramData\ManagerAgent\config.json"</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nv">$config</span><span class="p">.</span><span class="n">baseUrlEvents</span> <span class="p">=</span> <span class="s2">"https://servidor-inexistente-12345.com"</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="nv">$config</span> <span class="p">|</span> <span class="nb">ConvertTo-Json</span> <span class="p">|</span> <span class="nb">Out-File</span> <span class="s2">"C:\ProgramData\ManagerAgent\config.json"</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="nb">Restart-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">120</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R6.1.1:</strong> Service continua rodando (nao trava nem para)</li>
+<li>[ ] <strong>R6.1.2:</strong> SessionWorker continua ativo (icone permanece na bandeja)</li>
+<li>[ ] <strong>R6.1.3:</strong> Captura de janelas continua funcionando</li>
+<li>[ ] <strong>R6.1.4:</strong> Eventos armazenados no buffer local</li>
+<li>[ ] <strong>R6.1.5:</strong> Logs indicam falha de upload (nao erro critico)</li>
+<li>[ ] <strong>R6.1.6:</strong> Retry e tentado periodicamente pelo Service</li>
+<li>[ ] <strong>R6.1.7:</strong> Nenhum crash ou exception nao tratada</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c"># Restaurar config apos teste</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="c"># Editar config.json com URL correta e reiniciar Service</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nb">Restart-Service</span> <span class="n">ManagerAgent</span>
+</code></pre></div>
+<hr />
+<h3 id="teste-62-configuracao-invalida">Teste 6.2: Configuracao Invalida<a class="headerlink" href="#teste-62-configuracao-invalida" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar comportamento com config.json malformado</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c"># Backup config</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nb">Copy-Item</span> <span class="s2">"C:\ProgramData\ManagerAgent\config.json"</span> <span class="p">`</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>          <span class="s2">"C:\ProgramData\ManagerAgent\config.json.bak"</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c"># Criar config invalido</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="s2">"{ json invalido "</span> <span class="p">|</span> <span class="nb">Out-File</span> <span class="s2">"C:\ProgramData\ManagerAgent\config.json"</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="nb">Stop-Service</span> <span class="n">ManagerAgent</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="nb">Start-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">10</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R6.2.1:</strong> Service detecta config invalido</li>
+<li>[ ] <strong>R6.2.2:</strong> Log de servico indica erro de configuracao</li>
+<li>[ ] <strong>R6.2.3:</strong> Service nao trava indefinidamente (encerra ou usa valores padrao)</li>
+<li>[ ] <strong>R6.2.4:</strong> Mensagem de erro clara nos logs</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c"># Restaurar config</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nb">Copy-Item</span> <span class="s2">"C:\ProgramData\ManagerAgent\config.json.bak"</span> <span class="p">`</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>          <span class="s2">"C:\ProgramData\ManagerAgent\config.json"</span> <span class="n">-Force</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="nb">Start-Service</span> <span class="n">ManagerAgent</span>
+</code></pre></div>
+<hr />
+<h3 id="teste-63-buffer-corrompido">Teste 6.3: Buffer Corrompido<a class="headerlink" href="#teste-63-buffer-corrompido" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar recuperacao quando buffer.db esta corrompido</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nb">Stop-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="s2">"dados corrompidos"</span> <span class="p">|</span> <span class="nb">Out-File</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="n">-Encoding</span> <span class="n">ASCII</span> <span class="n">-NoNewline</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="nb">Start-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">10</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R6.3.1:</strong> Service detecta banco corrompido</li>
+<li>[ ] <strong>R6.3.2:</strong> Log indica problema com banco</li>
+<li>[ ] <strong>R6.3.3:</strong> Service recria banco automaticamente</li>
+<li>[ ] <strong>R6.3.4:</strong> Service e SessionWorker funcionam normalmente apos recriar banco</li>
+</ul>
+<hr />
+<h2 id="testes-de-ciclo-de-vida-do-service">Testes de Ciclo de Vida do Service<a class="headerlink" href="#testes-de-ciclo-de-vida-do-service" title="Permanent link">&para;</a></h2>
+<h3 id="teste-71-inicializacao-no-boot">Teste 7.1: Inicializacao no Boot<a class="headerlink" href="#teste-71-inicializacao-no-boot" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que o Service inicia automaticamente com o Windows</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Reiniciar o computador</li>
+<li>Fazer login</li>
+<li>Aguardar 30 segundos</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nb">Get-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="c"># Esperado: Status = Running</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.Service"</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.SessionWorker"</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="c"># Esperado: ambos rodando</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>R7.1.1:</strong> Service inicia automaticamente no boot (sem acao do usuario)</li>
+<li>[ ] <strong>R7.1.2:</strong> SessionWorker lancado automaticamente pelo Service apos login</li>
+<li>[ ] <strong>R7.1.3:</strong> Icone aparece na bandeja em &lt;= 30 segundos apos login</li>
+</ul>
+<hr />
+<h3 id="teste-72-parada-graceful-do-service">Teste 7.2: Parada Graceful do Service<a class="headerlink" href="#teste-72-parada-graceful-do-service" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar encerramento graceful com flush do buffer</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c"># Verificar eventos pendentes antes</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nv">$antes</span> <span class="p">=</span> <span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="p">`</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    <span class="s2">"SELECT COUNT(*) FROM eventos WHERE enviado=0"</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="nb">Write-Host</span> <span class="s2">"Eventos pendentes antes: $antes"</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="nb">Stop-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">5</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="c"># Verificar logs de encerramento</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="nb">Get-Content</span> <span class="s2">"C:\ProgramData\ManagerAgent\logs\service-</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="n">yyyyMMdd</span><span class="p">)</span><span class="s2">.log"</span> <span class="n">-Tail</span> <span class="n">20</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R7.2.1:</strong> Service para sem timeout do SCM (&lt; 30 segundos)</li>
+<li>[ ] <strong>R7.2.2:</strong> SessionWorker e encerrado pelo Service antes de parar</li>
+<li>[ ] <strong>R7.2.3:</strong> Icone desaparece da bandeja apos Service parar</li>
+<li>[ ] <strong>R7.2.4:</strong> Log indica shutdown graceful (sem crash)</li>
+<li>[ ] <strong>R7.2.5:</strong> Buffer nao e corrompido no shutdown</li>
+</ul>
+<hr />
+<h3 id="teste-73-auto-restart-pelo-scm-apos-crash">Teste 7.3: Auto-Restart pelo SCM apos Crash<a class="headerlink" href="#teste-73-auto-restart-pelo-scm-apos-crash" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que o SCM reinicia o Service apos falha inesperada</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c"># Simular crash forcando kill do processo</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nv">$proc</span> <span class="p">=</span> <span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.Service"</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="nb">Stop-Process</span> <span class="n">-Id</span> <span class="nv">$proc</span><span class="p">.</span><span class="n">Id</span> <span class="n">-Force</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="nb">Write-Host</span> <span class="s2">"Processo morto. Aguardando restart pelo SCM..."</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="c"># SCM deve reiniciar em 1 segundo (primeira falha)</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">5</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="nb">Get-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.Service"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R7.3.1:</strong> SCM detecta que o Service parou inesperadamente</li>
+<li>[ ] <strong>R7.3.2:</strong> Service reinicia em &lt;= 5 segundos (primeira falha: 1s, segunda: 5s)</li>
+<li>[ ] <strong>R7.3.3:</strong> Apos reinicio, SessionWorker e relancado automaticamente</li>
+<li>[ ] <strong>R7.3.4:</strong> Log indica reinicio apos falha</li>
+<li>[ ] <strong>R7.3.5:</strong> Buffer nao e perdido (WAL mode protege contra crash)</li>
+</ul>
+<hr />
+<h3 id="teste-74-reinicio-manual-via-scm">Teste 7.4: Reinicio Manual via SCM<a class="headerlink" href="#teste-74-reinicio-manual-via-scm" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar reinicio limpo via Gerenciador de Servicos</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nb">Restart-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">15</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R7.4.1:</strong> Service reinicia sem erros</li>
+<li>[ ] <strong>R7.4.2:</strong> SessionWorker relancado apos reinicio do Service</li>
+<li>[ ] <strong>R7.4.3:</strong> Icone volta a aparecer na bandeja</li>
+<li>[ ] <strong>R7.4.4:</strong> Captura de dados retoma normalmente</li>
+</ul>
+<hr />
+<h2 id="testes-multi-sessao">Testes Multi-Sessao<a class="headerlink" href="#testes-multi-sessao" title="Permanent link">&para;</a></h2>
+<h3 id="teste-81-dois-usuarios-simultaneos">Teste 8.1: Dois Usuarios Simultaneos<a class="headerlink" href="#teste-81-dois-usuarios-simultaneos" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que cada sessao de usuario tem seu proprio SessionWorker</p>
+<p><strong>Pre-requisito:</strong> Dois usuarios locais configurados no Windows</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Fazer login com Usuario A (sessao 1)</li>
+<li>Usar "Switch User" ou RDP para criar sessao do Usuario B (sessao 2)</li>
+<li>Ambos logados simultaneamente</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c"># Verificar multiplos processos SessionWorker</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.SessionWorker"</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">Id</span><span class="p">,</span> <span class="n">SessionId</span><span class="p">,</span> <span class="n">UserName</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="c"># Esperado: um processo por sessao ativa</span>
+</code></pre></div>
+<ul>
+<li>[ ] <strong>R8.1.1:</strong> Dois processos <code>ManagerAgent.SessionWorker</code> rodando (um por sessao)</li>
+<li>[ ] <strong>R8.1.2:</strong> Named Pipes distintos para cada sessao (<code>\\.\pipe\ManagerAgent_{sessionId}</code>)</li>
+<li>[ ] <strong>R8.1.3:</strong> Eventos de janela ativa capturados independentemente por sessao</li>
+<li>[ ] <strong>R8.1.4:</strong> Icone na bandeja visivel para cada usuario em sua sessao</li>
+<li>[ ] <strong>R8.1.5:</strong> Buffer compartilhado (buffer.db) recebe eventos de ambas as sessoes</li>
+</ul>
+<hr />
+<h3 id="teste-82-logoff-de-um-usuario-outro-continua">Teste 8.2: Logoff de Um Usuario (Outro Continua)<a class="headerlink" href="#teste-82-logoff-de-um-usuario-outro-continua" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que encerrar uma sessao nao afeta a outra</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Dois usuarios logados simultaneamente (Teste 8.1)</li>
+<li>Usuario B faz logoff</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R8.2.1:</strong> SessionWorker da sessao B e encerrado corretamente</li>
+<li>[ ] <strong>R8.2.2:</strong> SessionWorker da sessao A permanece ativo</li>
+<li>[ ] <strong>R8.2.3:</strong> Service permanece ativo</li>
+<li>[ ] <strong>R8.2.4:</strong> Captura de dados continua normalmente para sessao A</li>
+</ul>
+<hr />
+<h2 id="testes-de-named-pipe">Testes de Named Pipe<a class="headerlink" href="#testes-de-named-pipe" title="Permanent link">&para;</a></h2>
+<h3 id="teste-91-comunicacao-normal-service-worker">Teste 9.1: Comunicacao Normal Service-Worker<a class="headerlink" href="#teste-91-comunicacao-normal-service-worker" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar fluxo de eventos do Worker para o Service via Named Pipe</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c"># Monitorar logs de Named Pipe</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="p">.\</span><span class="n">monitorar-logs</span><span class="p">.</span><span class="n">ps1</span> <span class="p">|</span> <span class="nb">Select-String</span> <span class="s2">"pipe|Pipe|PIPE"</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="c"># Em outra janela: alternar janelas para gerar eventos</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R9.1.1:</strong> Log indica "Pipe connected" apos SessionWorker iniciar</li>
+<li>[ ] <strong>R9.1.2:</strong> Eventos enviados pelo Worker chegam ao Service via pipe</li>
+<li>[ ] <strong>R9.1.3:</strong> Service grava eventos no buffer.db (recebidos via pipe)</li>
+<li>[ ] <strong>R9.1.4:</strong> Latencia de entrega via pipe e imperceptivel (&lt; 1 segundo)</li>
+</ul>
+<hr />
+<h3 id="teste-92-named-pipe-reconexao-apos-interrupcao">Teste 9.2: Named Pipe - Reconexao apos Interrupcao<a class="headerlink" href="#teste-92-named-pipe-reconexao-apos-interrupcao" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar reconexao automatica quando o pipe e interrompido</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c"># Reiniciar apenas o Service (pipe sera encerrado e recriado)</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nb">Restart-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">15</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R9.2.1:</strong> SessionWorker detecta que o pipe foi encerrado</li>
+<li>[ ] <strong>R9.2.2:</strong> SessionWorker entra em modo AutonomousBuffer (bufferiza localmente)</li>
+<li>[ ] <strong>R9.2.3:</strong> Apos Service reiniciar, SessionWorker reconecta ao novo pipe</li>
+<li>[ ] <strong>R9.2.4:</strong> Eventos bufferizados localmente sao enviados apos reconexao</li>
+<li>[ ] <strong>R9.2.5:</strong> Nenhum evento perdido durante a interrupcao</li>
+</ul>
+<hr />
+<h3 id="teste-93-acl-do-named-pipe">Teste 9.3: ACL do Named Pipe<a class="headerlink" href="#teste-93-acl-do-named-pipe" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que o Named Pipe aceita apenas o usuario da sessao e SYSTEM</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R9.3.1:</strong> Pipe aceita conexoes do usuario da sessao correspondente</li>
+<li>[ ] <strong>R9.3.2:</strong> Pipe aceita conexoes do SYSTEM (Service)</li>
+<li>[ ] <strong>R9.3.3:</strong> Tentativa de conexao de outro usuario e rejeitada</li>
+<li>[ ] <strong>R9.3.4:</strong> Log nao exibe conteudo de eventos (apenas metadados de conexao)</li>
+</ul>
+<hr />
+<h2 id="testes-de-auto-update">Testes de Auto-Update<a class="headerlink" href="#testes-de-auto-update" title="Permanent link">&para;</a></h2>
+<h3 id="teste-101-update-plan-a-script-ps1-via-schtasks">Teste 10.1: Update Plan A - Script PS1 via schtasks<a class="headerlink" href="#teste-101-update-plan-a-script-ps1-via-schtasks" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar fluxo de atualizacao preferencial via schtask PowerShell</p>
+<p><strong>Pre-requisito:</strong> Servidor de atualizacoes configurado com nova versao disponivel</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Verificar que ha uma versao mais nova disponivel no servidor</li>
+<li>Aguardar ou acionar verificacao de update</li>
+<li>Monitorar logs de update</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nb">Get-Content</span> <span class="s2">"C:\ProgramData\ManagerAgent\logs\service-</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="n">yyyyMMdd</span><span class="p">)</span><span class="s2">.log"</span> <span class="p">|</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>    <span class="nb">Select-String</span> <span class="s2">"update|Update|UPDATE|schtask"</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">-Last</span> <span class="n">20</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R10.1.1:</strong> Service detecta nova versao disponivel</li>
+<li>[ ] <strong>R10.1.2:</strong> Download do novo pacote para <code>C:\ProgramData\ManagerAgent\updates\</code></li>
+<li>[ ] <strong>R10.1.3:</strong> schtask criado para executar script PS1 de update</li>
+<li>[ ] <strong>R10.1.4:</strong> Service e SessionWorker encerrados antes da atualizacao</li>
+<li>[ ] <strong>R10.1.5:</strong> Novos binarios copiados corretamente</li>
+<li>[ ] <strong>R10.1.6:</strong> Service reinicia com a nova versao</li>
+<li>[ ] <strong>R10.1.7:</strong> Versao nova confirmada apos restart</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="p">(</span><span class="nb">Get-Item</span> <span class="s2">"C:\Program Files\ManagerAgent\ManagerAgent.Service.exe"</span><span class="p">).</span><span class="n">VersionInfo</span><span class="p">.</span><span class="n">FileVersion</span>
+</code></pre></div>
+<hr />
+<h3 id="teste-102-update-plan-b-fallback-via-bat">Teste 10.2: Update Plan B - Fallback via BAT<a class="headerlink" href="#teste-102-update-plan-b-fallback-via-bat" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar fallback para BAT via schtasks quando PS1 falha</p>
+<p><strong>Procedimento:</strong></p>
+<p>Simular falha do Plan A (bloquear execucao de PS1 via Execution Policy) e verificar se o Plan B (BAT) e acionado automaticamente.</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R10.2.1:</strong> Plan A falha (detectado no log)</li>
+<li>[ ] <strong>R10.2.2:</strong> Service aciona automaticamente o Plan B</li>
+<li>[ ] <strong>R10.2.3:</strong> schtask com script BAT criado</li>
+<li>[ ] <strong>R10.2.4:</strong> Update completa com sucesso via BAT</li>
+<li>[ ] <strong>R10.2.5:</strong> Service reinicia com nova versao</li>
+</ul>
+<hr />
+<h3 id="teste-103-update-plan-c-in-process-rename">Teste 10.3: Update Plan C - In-Process Rename<a class="headerlink" href="#teste-103-update-plan-c-in-process-rename" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar fallback final quando schtasks nao esta disponivel</p>
+<p><strong>Procedimento:</strong></p>
+<p>Simular falha dos Plans A e B e verificar se o Plan C (rename in-process) e acionado.</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R10.3.1:</strong> Plans A e B falham (detectados no log)</li>
+<li>[ ] <strong>R10.3.2:</strong> Service aciona Plan C (in-process rename)</li>
+<li>[ ] <strong>R10.3.3:</strong> Binarios renomeados corretamente</li>
+<li>[ ] <strong>R10.3.4:</strong> Novo Service inicia</li>
+<li>[ ] <strong>R10.3.5:</strong> Log indica qual plan foi utilizado com sucesso</li>
+</ul>
+<hr />
+<h3 id="teste-104-falha-total-de-update">Teste 10.4: Falha Total de Update<a class="headerlink" href="#teste-104-falha-total-de-update" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que o Service continua operacional se todos os plans de update falham</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R10.4.1:</strong> Todos os 3 plans falham (simulado)</li>
+<li>[ ] <strong>R10.4.2:</strong> Service continua rodando com versao atual</li>
+<li>[ ] <strong>R10.4.3:</strong> Log indica falha em todos os plans com detalhes</li>
+<li>[ ] <strong>R10.4.4:</strong> Captura de dados continua funcionando normalmente</li>
+</ul>
+<hr />
+<h2 id="testes-de-migracao-v1-para-v2">Testes de Migracao V1 para V2<a class="headerlink" href="#testes-de-migracao-v1-para-v2" title="Permanent link">&para;</a></h2>
+<h3 id="teste-111-upgrade-de-instalacao-v1-existente">Teste 11.1: Upgrade de Instalacao V1 Existente<a class="headerlink" href="#teste-111-upgrade-de-instalacao-v1-existente" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que instalacoes V1 fazem upgrade corretamente para V2</p>
+<p><strong>Pre-requisito:</strong> Maquina com Manager Agent V1 instalado (com <code>AthenaAgent.Tray.exe</code>)</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c"># Verificar estado V1 antes</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"AthenaAgent.Tray"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="nb">Test-Path</span> <span class="s2">"$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\Manager Agent.lnk"</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="c"># Executar instalador V2</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="nb">Start-Process</span> <span class="s2">"ManagerAgent-Setup.exe"</span> <span class="n">-Verb</span> <span class="n">RunAs</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R11.1.1:</strong> Instalador V2 detecta instalacao V1 existente</li>
+<li>[ ] <strong>R11.1.2:</strong> Processo <code>AthenaAgent.Tray</code> e encerrado antes da migracao</li>
+<li>[ ] <strong>R11.1.3:</strong> Atalho de Startup da V1 e removido</li>
+<li>[ ] <strong>R11.1.4:</strong> config.json da V1 e migrado para o formato V2</li>
+<li>[ ] <strong>R11.1.5:</strong> <code>instalacaoId</code> da V1 e preservado (nao regera novo GUID)</li>
+<li>[ ] <strong>R11.1.6:</strong> Windows Service V2 e registrado</li>
+<li>[ ] <strong>R11.1.7:</strong> Service V2 inicia e lanca SessionWorker</li>
+<li>[ ] <strong>R11.1.8:</strong> Nenhum processo <code>AthenaAgent.Tray</code> restante</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c"># Validacao pos-migracao</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"AthenaAgent.Tray"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="c"># Esperado: Vazio</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="nb">Get-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="c"># Esperado: Running</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.Service"</span><span class="p">,</span> <span class="s2">"ManagerAgent.SessionWorker"</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a><span class="c"># Esperado: ambos rodando</span>
+</code></pre></div>
+<hr />
+<h3 id="teste-112-preservacao-de-dados-na-migracao">Teste 11.2: Preservacao de Dados na Migracao<a class="headerlink" href="#teste-112-preservacao-de-dados-na-migracao" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que dados existentes (buffer, config) sao preservados</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R11.2.1:</strong> buffer.db da V1 e aproveitado ou migrado sem perda de dados</li>
+<li>[ ] <strong>R11.2.2:</strong> Historico de eventos nao e perdido na migracao</li>
+<li>[ ] <strong>R11.2.3:</strong> Parametros de configuracao (chave, identificador) migrados corretamente</li>
+<li>[ ] <strong>R11.2.4:</strong> DeviceToken re-encriptado com DPAPI se necessario</li>
+</ul>
+<hr />
+<h3 id="teste-113-rollback-em-caso-de-falha-na-migracao">Teste 11.3: Rollback em Caso de Falha na Migracao<a class="headerlink" href="#teste-113-rollback-em-caso-de-falha-na-migracao" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que instalacao V1 e preservada se a migracao V2 falhar</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R11.3.1:</strong> Se migracao falhar, instalador restaura estado V1</li>
+<li>[ ] <strong>R11.3.2:</strong> Processo <code>AthenaAgent.Tray</code> volta a rodar</li>
+<li>[ ] <strong>R11.3.3:</strong> config.json V1 nao e corrompido</li>
+<li>[ ] <strong>R11.3.4:</strong> Log indica motivo da falha da migracao</li>
+</ul>
+<hr />
+<h2 id="testes-de-autonomousbuffer">Testes de AutonomousBuffer<a class="headerlink" href="#testes-de-autonomousbuffer" title="Permanent link">&para;</a></h2>
+<h3 id="teste-121-bufferizacao-local-quando-pipe-esta-indisponivel">Teste 12.1: Bufferizacao Local quando Pipe esta Indisponivel<a class="headerlink" href="#teste-121-bufferizacao-local-quando-pipe-esta-indisponivel" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que SessionWorker bufferiza eventos localmente quando o pipe esta down</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="c"># Parar apenas o Service (Worker continua rodando)</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="nb">Stop-Service</span> <span class="n">ManagerAgent</span> <span class="n">-NoWait</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">2</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="c"># Worker esta rodando sem pipe por 30 segundos</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="c"># Gerar eventos: alternar janelas ativas</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">30</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a><span class="c"># Verificar logs do Worker</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="nb">Get-Content</span> <span class="s2">"C:\ProgramData\ManagerAgent\logs\worker-</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="n">yyyyMMdd</span><span class="p">)</span><span class="s2">.log"</span> <span class="n">-Tail</span> <span class="n">20</span> <span class="p">|</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>    <span class="nb">Select-String</span> <span class="s2">"buffer|autonomous|pipe"</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R12.1.1:</strong> Worker detecta que o pipe esta indisponivel</li>
+<li>[ ] <strong>R12.1.2:</strong> Worker entra em modo AutonomousBuffer (log indica transicao)</li>
+<li>[ ] <strong>R12.1.3:</strong> Worker continua capturando eventos durante modo autonomo</li>
+<li>[ ] <strong>R12.1.4:</strong> Eventos bufferizados localmente pelo Worker (nao perdidos)</li>
+</ul>
+<hr />
+<h3 id="teste-122-flush-do-buffer-autonomo-apos-reconexao">Teste 12.2: Flush do Buffer Autonomo apos Reconexao<a class="headerlink" href="#teste-122-flush-do-buffer-autonomo-apos-reconexao" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que eventos bufferizados sao entregues ao Service apos reconexao</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c"># Continuar do Teste 12.1: reiniciar o Service</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="nb">Start-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">15</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="c"># Verificar que eventos chegaram ao buffer.db</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="n">sqlite3</span> <span class="s2">"C:\ProgramData\ManagerAgent\buffer.db"</span> <span class="p">`</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>    <span class="s2">"SELECT COUNT(*) FROM eventos WHERE enviado=0"</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R12.2.1:</strong> Worker detecta que o pipe foi restabelecido</li>
+<li>[ ] <strong>R12.2.2:</strong> Worker envia eventos bufferizados ao Service via pipe</li>
+<li>[ ] <strong>R12.2.3:</strong> Service grava eventos no buffer.db</li>
+<li>[ ] <strong>R12.2.4:</strong> Nenhum evento duplicado no buffer.db</li>
+<li>[ ] <strong>R12.2.5:</strong> Log indica saida do modo AutonomousBuffer</li>
+</ul>
+<hr />
+<h3 id="teste-123-limite-do-buffer-autonomo">Teste 12.3: Limite do Buffer Autonomo<a class="headerlink" href="#teste-123-limite-do-buffer-autonomo" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar comportamento quando buffer autonomo atinge limite de capacidade</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R12.3.1:</strong> Worker nao consome memoria excessiva durante modo autonomo longo</li>
+<li>[ ] <strong>R12.3.2:</strong> Se buffer atingir limite configurado, eventos mais antigos sao descartados</li>
+<li>[ ] <strong>R12.3.3:</strong> Log indica descarte de eventos com contagem</li>
+</ul>
+<hr />
+<h2 id="testes-de-worker-watchdog">Testes de Worker Watchdog<a class="headerlink" href="#testes-de-worker-watchdog" title="Permanent link">&para;</a></h2>
+<h3 id="teste-131-deteccao-de-worker-morto">Teste 13.1: Deteccao de Worker Morto<a class="headerlink" href="#teste-131-deteccao-de-worker-morto" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que o Service detecta quando um SessionWorker para de responder</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="c"># Forcar kill do SessionWorker (simular crash)</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="nv">$worker</span> <span class="p">=</span> <span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.SessionWorker"</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="nb">Stop-Process</span> <span class="n">-Id</span> <span class="nv">$worker</span><span class="p">.</span><span class="n">Id</span> <span class="n">-Force</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="nb">Write-Host</span> <span class="s2">"Worker morto. Aguardando watchdog do Service..."</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">15</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="c"># Verificar se Service relancou o Worker</span>
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.SessionWorker"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R13.1.1:</strong> Service detecta que o Worker nao esta mais respondendo</li>
+<li>[ ] <strong>R13.1.2:</strong> Log do Service indica deteccao de worker morto</li>
+<li>[ ] <strong>R13.1.3:</strong> Service relanca automaticamente o SessionWorker</li>
+<li>[ ] <strong>R13.1.4:</strong> Novo Worker aparece em &lt;= 15 segundos</li>
+<li>[ ] <strong>R13.1.5:</strong> Icone volta a aparecer na bandeja do usuario</li>
+<li>[ ] <strong>R13.1.6:</strong> Captura de dados retoma apos relancamento</li>
+</ul>
+<hr />
+<h3 id="teste-132-multiplos-crashes-do-worker">Teste 13.2: Multiplos Crashes do Worker<a class="headerlink" href="#teste-132-multiplos-crashes-do-worker" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar comportamento com crashes repetidos do Worker</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="c"># Simular 3 crashes consecutivos com intervalo de 10 segundos</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="n">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">-le</span> <span class="n">3</span><span class="p">;</span> <span class="nv">$i</span><span class="p">++)</span> <span class="p">{</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>    <span class="nv">$worker</span> <span class="p">=</span> <span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.SessionWorker"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$worker</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>        <span class="nb">Stop-Process</span> <span class="n">-Id</span> <span class="nv">$worker</span><span class="p">.</span><span class="n">Id</span> <span class="n">-Force</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>        <span class="nb">Write-Host</span> <span class="s2">"Crash $i simulado"</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>    <span class="p">}</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>    <span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">10</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R13.2.1:</strong> Service relanca Worker apos cada crash</li>
+<li>[ ] <strong>R13.2.2:</strong> Log registra cada crash e relancamento</li>
+<li>[ ] <strong>R13.2.3:</strong> Apos multiplos crashes, Service nao para de tentar relancar</li>
+<li>[ ] <strong>R13.2.4:</strong> Service permanece estavel durante crashes repetidos do Worker</li>
+</ul>
+<hr />
+<h3 id="teste-133-transicao-de-meia-noite">Teste 13.3: Transicao de Meia-Noite<a class="headerlink" href="#teste-133-transicao-de-meia-noite" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que a transicao diaria de meia-noite e tratada corretamente</p>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R13.3.1:</strong> Novo arquivo de log criado ao virar o dia (<code>service-YYYYMMDD.log</code>, <code>worker-YYYYMMDD.log</code>)</li>
+<li>[ ] <strong>R13.3.2:</strong> Log do dia anterior e fechado corretamente</li>
+<li>[ ] <strong>R13.3.3:</strong> Sessoes ativas de captura nao sao interrompidas pela transicao</li>
+<li>[ ] <strong>R13.3.4:</strong> Eventos do novo dia tem timestamps corretos</li>
+</ul>
+<hr />
+<h2 id="testes-de-desinstalacao">Testes de Desinstalacao<a class="headerlink" href="#testes-de-desinstalacao" title="Permanent link">&para;</a></h2>
+<h3 id="teste-141-desinstalacao-completa-via-inno-setup">Teste 14.1: Desinstalacao Completa via Inno Setup<a class="headerlink" href="#teste-141-desinstalacao-completa-via-inno-setup" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar remocao completa do agente V2</p>
+<p><strong>Procedimento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c"># Via Painel de Controle ou Configuracoes → Aplicativos</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="c"># Ou via executavel de desinstalacao do Inno Setup</span>
+</code></pre></div>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R14.1.1:</strong> Windows Service "ManagerAgent" parado antes da remocao</li>
+<li>[ ] <strong>R14.1.2:</strong> Processos Service e SessionWorker encerrados</li>
+<li>[ ] <strong>R14.1.3:</strong> Windows Service desregistrado do SCM</li>
+<li>[ ] <strong>R14.1.4:</strong> Pasta <code>C:\Program Files\ManagerAgent</code> removida</li>
+<li>[ ] <strong>R14.1.5:</strong> Opcao de preservar dados do usuario (config.json, buffer.db) oferecida</li>
+<li>[ ] <strong>R14.1.6:</strong> Apos reboot, Service nao inicia automaticamente</li>
+<li>[ ] <strong>R14.1.7:</strong> Nenhum processo ManagerAgent.* restante</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="c"># Verificacao final</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="nb">Get-Service</span> <span class="n">ManagerAgent</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="c"># Esperado: Vazio</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="nb">Test-Path</span> <span class="s2">"C:\Program Files\ManagerAgent"</span>
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="c"># Esperado: False</span>
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>
+<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.*"</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
+<a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a><span class="c"># Esperado: Vazio</span>
+</code></pre></div>
+<hr />
+<h3 id="teste-142-reinstalacao-apos-desinstalacao">Teste 14.2: Reinstalacao Apos Desinstalacao<a class="headerlink" href="#teste-142-reinstalacao-apos-desinstalacao" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Validar que reinstalacao funciona apos desinstalacao completa</p>
+<p><strong>Procedimento:</strong></p>
+<ol>
+<li>Executar desinstalacao completa (Teste 14.1)</li>
+<li>Reinstalar com o mesmo instalador (Teste 1.1)</li>
+</ol>
+<p><strong>Validacoes:</strong></p>
+<ul>
+<li>[ ] <strong>R14.2.1:</strong> Instalacao funciona sem erros ou conflitos</li>
+<li>[ ] <strong>R14.2.2:</strong> Novo <code>instalacaoId</code> gerado (UUID diferente do anterior)</li>
+<li>[ ] <strong>R14.2.3:</strong> Service registrado e iniciado corretamente</li>
+<li>[ ] <strong>R14.2.4:</strong> Agente funciona normalmente apos reinstalacao</li>
+</ul>
+<hr />
+<h2 id="relatorio-final">Relatorio Final<a class="headerlink" href="#relatorio-final" title="Permanent link">&para;</a></h2>
+<h3 id="template-de-relatorio">Template de Relatorio<a class="headerlink" href="#template-de-relatorio" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>RELATORIO DE TESTES REGRESSIVOS - Manager Agent V2
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>Data: [DATA]
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>Testador: [NOME]
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>Versao Testada: 2.x.x
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>Sistema: Windows [VERSAO]
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>RESUMO
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>Total de Testes: X
+<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>Testes Passaram: Y (Z%)
+<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>Testes Falharam: W
+<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>
+<a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a>RESULTADOS POR CATEGORIA
+<a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>
+<a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a>1. Instalacao
+<a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a>   Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-17" name="__codelineno-42-17" href="#__codelineno-42-17"></a>
+<a id="__codelineno-42-18" name="__codelineno-42-18" href="#__codelineno-42-18"></a>2. Interface (System Tray)
+<a id="__codelineno-42-19" name="__codelineno-42-19" href="#__codelineno-42-19"></a>   Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-20" name="__codelineno-42-20" href="#__codelineno-42-20"></a>
+<a id="__codelineno-42-21" name="__codelineno-42-21" href="#__codelineno-42-21"></a>3. Captura de Dados
+<a id="__codelineno-42-22" name="__codelineno-42-22" href="#__codelineno-42-22"></a>   Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-23" name="__codelineno-42-23" href="#__codelineno-42-23"></a>
+<a id="__codelineno-42-24" name="__codelineno-42-24" href="#__codelineno-42-24"></a>4. Scripts Diagnosticos
+<a id="__codelineno-42-25" name="__codelineno-42-25" href="#__codelineno-42-25"></a>   Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-26" name="__codelineno-42-26" href="#__codelineno-42-26"></a>
+<a id="__codelineno-42-27" name="__codelineno-42-27" href="#__codelineno-42-27"></a>5. Performance
+<a id="__codelineno-42-28" name="__codelineno-42-28" href="#__codelineno-42-28"></a>   Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-29" name="__codelineno-42-29" href="#__codelineno-42-29"></a>
+<a id="__codelineno-42-30" name="__codelineno-42-30" href="#__codelineno-42-30"></a>6. Erro e Recuperacao
+<a id="__codelineno-42-31" name="__codelineno-42-31" href="#__codelineno-42-31"></a>   Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-32" name="__codelineno-42-32" href="#__codelineno-42-32"></a>
+<a id="__codelineno-42-33" name="__codelineno-42-33" href="#__codelineno-42-33"></a>7. Ciclo de Vida do Service
+<a id="__codelineno-42-34" name="__codelineno-42-34" href="#__codelineno-42-34"></a>   Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-35" name="__codelineno-42-35" href="#__codelineno-42-35"></a>
+<a id="__codelineno-42-36" name="__codelineno-42-36" href="#__codelineno-42-36"></a>8. Multi-Sessao
+<a id="__codelineno-42-37" name="__codelineno-42-37" href="#__codelineno-42-37"></a>   Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-38" name="__codelineno-42-38" href="#__codelineno-42-38"></a>
+<a id="__codelineno-42-39" name="__codelineno-42-39" href="#__codelineno-42-39"></a>9. Named Pipe
+<a id="__codelineno-42-40" name="__codelineno-42-40" href="#__codelineno-42-40"></a>   Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-41" name="__codelineno-42-41" href="#__codelineno-42-41"></a>
+<a id="__codelineno-42-42" name="__codelineno-42-42" href="#__codelineno-42-42"></a>10. Auto-Update
+<a id="__codelineno-42-43" name="__codelineno-42-43" href="#__codelineno-42-43"></a>    Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-44" name="__codelineno-42-44" href="#__codelineno-42-44"></a>
+<a id="__codelineno-42-45" name="__codelineno-42-45" href="#__codelineno-42-45"></a>11. Migracao V1 para V2
+<a id="__codelineno-42-46" name="__codelineno-42-46" href="#__codelineno-42-46"></a>    Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-47" name="__codelineno-42-47" href="#__codelineno-42-47"></a>
+<a id="__codelineno-42-48" name="__codelineno-42-48" href="#__codelineno-42-48"></a>12. AutonomousBuffer
+<a id="__codelineno-42-49" name="__codelineno-42-49" href="#__codelineno-42-49"></a>    Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-50" name="__codelineno-42-50" href="#__codelineno-42-50"></a>
+<a id="__codelineno-42-51" name="__codelineno-42-51" href="#__codelineno-42-51"></a>13. Worker Watchdog
+<a id="__codelineno-42-52" name="__codelineno-42-52" href="#__codelineno-42-52"></a>    Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-53" name="__codelineno-42-53" href="#__codelineno-42-53"></a>
+<a id="__codelineno-42-54" name="__codelineno-42-54" href="#__codelineno-42-54"></a>14. Desinstalacao
+<a id="__codelineno-42-55" name="__codelineno-42-55" href="#__codelineno-42-55"></a>    Executados: N | Passou: N | Falhou: N
+<a id="__codelineno-42-56" name="__codelineno-42-56" href="#__codelineno-42-56"></a>
+<a id="__codelineno-42-57" name="__codelineno-42-57" href="#__codelineno-42-57"></a>BUGS ENCONTRADOS
+<a id="__codelineno-42-58" name="__codelineno-42-58" href="#__codelineno-42-58"></a>
+<a id="__codelineno-42-59" name="__codelineno-42-59" href="#__codelineno-42-59"></a>Bug #1: [Titulo]
+<a id="__codelineno-42-60" name="__codelineno-42-60" href="#__codelineno-42-60"></a>  Severidade: Critico / Alto / Medio / Baixo
+<a id="__codelineno-42-61" name="__codelineno-42-61" href="#__codelineno-42-61"></a>  Passos para reproduzir:
+<a id="__codelineno-42-62" name="__codelineno-42-62" href="#__codelineno-42-62"></a>    1. ...
+<a id="__codelineno-42-63" name="__codelineno-42-63" href="#__codelineno-42-63"></a>    2. ...
+<a id="__codelineno-42-64" name="__codelineno-42-64" href="#__codelineno-42-64"></a>  Resultado esperado: ...
+<a id="__codelineno-42-65" name="__codelineno-42-65" href="#__codelineno-42-65"></a>  Resultado obtido: ...
+<a id="__codelineno-42-66" name="__codelineno-42-66" href="#__codelineno-42-66"></a>  Log/Screenshot: [Anexar]
+<a id="__codelineno-42-67" name="__codelineno-42-67" href="#__codelineno-42-67"></a>
+<a id="__codelineno-42-68" name="__codelineno-42-68" href="#__codelineno-42-68"></a>APROVACAO
+<a id="__codelineno-42-69" name="__codelineno-42-69" href="#__codelineno-42-69"></a>[ ] APROVADO para release
+<a id="__codelineno-42-70" name="__codelineno-42-70" href="#__codelineno-42-70"></a>[ ] APROVADO COM RESSALVAS (bugs nao-criticos)
+<a id="__codelineno-42-71" name="__codelineno-42-71" href="#__codelineno-42-71"></a>[ ] REPROVADO (bugs criticos impedem release)
+<a id="__codelineno-42-72" name="__codelineno-42-72" href="#__codelineno-42-72"></a>
+<a id="__codelineno-42-73" name="__codelineno-42-73" href="#__codelineno-42-73"></a>Assinatura: ________________
+<a id="__codelineno-42-74" name="__codelineno-42-74" href="#__codelineno-42-74"></a>Data: ________________
+</code></pre></div>
+<hr />
+<h2 id="metricas-de-sucesso">Metricas de Sucesso<a class="headerlink" href="#metricas-de-sucesso" title="Permanent link">&para;</a></h2>
+<h3 id="criterios-de-aprovacao">Criterios de Aprovacao<a class="headerlink" href="#criterios-de-aprovacao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Categoria</th>
+<th>Taxa Minima de Sucesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instalacao</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Interface System Tray</td>
+<td>95%</td>
+</tr>
+<tr>
+<td>Captura de Dados</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>Scripts Diagnosticos</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Erro e Recuperacao</td>
+<td>80%</td>
+</tr>
+<tr>
+<td>Ciclo de Vida do Service</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Multi-Sessao</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>Named Pipe</td>
+<td>95%</td>
+</tr>
+<tr>
+<td>Auto-Update</td>
+<td>80%</td>
+</tr>
+<tr>
+<td>Migracao V1 para V2</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>AutonomousBuffer</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>Worker Watchdog</td>
+<td>95%</td>
+</tr>
+<tr>
+<td>Desinstalacao</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Taxa Global:</strong> &gt;= 90%</p>
+<h3 id="bugs-criticos-bloqueiam-release">Bugs Criticos (Bloqueiam Release)<a class="headerlink" href="#bugs-criticos-bloqueiam-release" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Service nao inicia ou para inesperadamente sem reiniciar</li>
+<li>SessionWorker nao e lancado pelo Service</li>
+<li>Named Pipe nao estabelece comunicacao</li>
+<li>Perda de dados no buffer durante shutdown normal</li>
+<li>Migracao V1 para V2 corrompe config.json ou perde instalacaoId</li>
+<li>Consumo excessivo de recursos (&gt; 300 MB RAM combinado ou &gt; 20% CPU combinado)</li>
+<li>Impossibilidade de desinstalar</li>
+</ul>
+<h3 id="bugs-nao-criticos-nao-bloqueiam">Bugs Nao-Criticos (Nao Bloqueiam)<a class="headerlink" href="#bugs-nao-criticos-nao-bloqueiam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Bugs cosmeticos no menu da bandeja</li>
+<li>Mensagens de log pouco descritivas (mas funcionais)</li>
+<li>Delay &gt; 15 segundos para icone aparecer (porem funcional)</li>
+<li>Scripts diagnosticos com pequenas inconsistencias de exibicao</li>
+</ul>
+<hr />
+<h2 id="smoke-test-15-minutos">Smoke Test (15 minutos)<a class="headerlink" href="#smoke-test-15-minutos" title="Permanent link">&para;</a></h2>
+<p>Use este checklist para validacao rapida antes de testes completos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>SMOKE TEST - MANAGER AGENT V2
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>1. Instalacao
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>   [ ] Instalar via ManagerAgent-Setup.exe
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>   [ ] Service "ManagerAgent" rodando
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>   [ ] Icone aparece na bandeja
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>
+<a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>2. Interface
+<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>   [ ] Clique direito → Menu abre com estrutura correta
+<a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a>   [ ] Cabecalho exibe "iManager - vX.Y.Z"
+<a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a>   [ ] Submenu Ferramentas abre com 4 itens
+<a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a>
+<a id="__codelineno-43-13" name="__codelineno-43-13" href="#__codelineno-43-13"></a>3. Captura
+<a id="__codelineno-43-14" name="__codelineno-43-14" href="#__codelineno-43-14"></a>   [ ] Alternar 3 janelas diferentes
+<a id="__codelineno-43-15" name="__codelineno-43-15" href="#__codelineno-43-15"></a>   [ ] Verificar eventos no buffer.db
+<a id="__codelineno-43-16" name="__codelineno-43-16" href="#__codelineno-43-16"></a>
+<a id="__codelineno-43-17" name="__codelineno-43-17" href="#__codelineno-43-17"></a>4. Health Check
+<a id="__codelineno-43-18" name="__codelineno-43-18" href="#__codelineno-43-18"></a>   [ ] Executar via menu: Ferramentas → Verificacao de Saude
+<a id="__codelineno-43-19" name="__codelineno-43-19" href="#__codelineno-43-19"></a>   [ ] Score &gt;= 80%
+<a id="__codelineno-43-20" name="__codelineno-43-20" href="#__codelineno-43-20"></a>   [ ] Verifica Service, Worker e Named Pipe
+<a id="__codelineno-43-21" name="__codelineno-43-21" href="#__codelineno-43-21"></a>
+<a id="__codelineno-43-22" name="__codelineno-43-22" href="#__codelineno-43-22"></a>5. Performance
+<a id="__codelineno-43-23" name="__codelineno-43-23" href="#__codelineno-43-23"></a>   [ ] Service &lt; 100 MB RAM
+<a id="__codelineno-43-24" name="__codelineno-43-24" href="#__codelineno-43-24"></a>   [ ] Worker &lt; 100 MB RAM
+<a id="__codelineno-43-25" name="__codelineno-43-25" href="#__codelineno-43-25"></a>   [ ] CPU combinado &lt; 10%
+<a id="__codelineno-43-26" name="__codelineno-43-26" href="#__codelineno-43-26"></a>
+<a id="__codelineno-43-27" name="__codelineno-43-27" href="#__codelineno-43-27"></a>6. Watchdog
+<a id="__codelineno-43-28" name="__codelineno-43-28" href="#__codelineno-43-28"></a>   [ ] Forcar kill do SessionWorker
+<a id="__codelineno-43-29" name="__codelineno-43-29" href="#__codelineno-43-29"></a>   [ ] Worker relancado automaticamente em &lt;= 15 segundos
+<a id="__codelineno-43-30" name="__codelineno-43-30" href="#__codelineno-43-30"></a>
+<a id="__codelineno-43-31" name="__codelineno-43-31" href="#__codelineno-43-31"></a>7. Desinstalacao
+<a id="__codelineno-43-32" name="__codelineno-43-32" href="#__codelineno-43-32"></a>   [ ] Desinstalar via Painel de Controle
+<a id="__codelineno-43-33" name="__codelineno-43-33" href="#__codelineno-43-33"></a>   [ ] Service desregistrado
+<a id="__codelineno-43-34" name="__codelineno-43-34" href="#__codelineno-43-34"></a>   [ ] Processos encerrados
+<a id="__codelineno-43-35" name="__codelineno-43-35" href="#__codelineno-43-35"></a>
+<a id="__codelineno-43-36" name="__codelineno-43-36" href="#__codelineno-43-36"></a>Se todos passarem: APROVADO para testes completos
+</code></pre></div>
+<hr />
+<hr />
+<h2 id="scripts-powershell-uteis-referencia-rapida-para-qa">Scripts PowerShell Uteis (Referencia Rapida para QA)<a class="headerlink" href="#scripts-powershell-uteis-referencia-rapida-para-qa" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Esta secao consolida o SCRIPTS-DIAGNOSTICO.md (absorvido em 2026-06-11).</p>
+</blockquote>
+<h3 id="localizacao">Localizacao<a class="headerlink" href="#localizacao" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>C:\Program Files\ManagerAgent\scripts\
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>├── health-check.ps1
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>├── monitorar-logs.ps1
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>├── coletar-diagnostico.ps1
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>├── limpar-reset.ps1
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>└── monitorar-performance.ps1
+</code></pre></div>
+<p>Execucao: <code>cd "C:\Program Files\ManagerAgent\scripts"</code> + <code>.\nome-do-script.ps1</code></p>
+<h3 id="scripts-disponiveis">Scripts disponiveis<a class="headerlink" href="#scripts-disponiveis" title="Permanent link">&para;</a></h3>
+<p><strong><code>health-check.ps1</code></strong> — Status geral do agente (service + worker + config + conectividade + SQLite + named pipe). Retorna score 0-100% com status SAUDAVEL / ATENCAO / CRITICO. Usar como primeiro passo em qualquer investigacao.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="p">.\</span><span class="n">health-check</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p><strong><code>monitorar-logs.ps1</code></strong> — Monitor em tempo real com cores (ERR vermelho, WRN amarelo, INF ciano). Monitora service e worker simultaneamente.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="p">.\</span><span class="n">monitorar-logs</span><span class="p">.</span><span class="n">ps1</span>                        <span class="c"># todos os logs</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="p">.\</span><span class="n">monitorar-logs</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Filter</span> <span class="n">Error</span>          <span class="c"># apenas erros</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="p">.\</span><span class="n">monitorar-logs</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Filter</span> <span class="n">Warning</span>        <span class="c"># apenas avisos</span>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="p">.\</span><span class="n">monitorar-logs</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-TailLines</span> <span class="n">100</span>         <span class="c"># iniciar com 100 linhas de historico</span>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="p">.\</span><span class="n">monitorar-logs</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Source</span> <span class="n">Service</span>        <span class="c"># apenas servico</span>
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a><span class="p">.\</span><span class="n">monitorar-logs</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Source</span> <span class="n">Worker</span>         <span class="c"># apenas worker</span>
+</code></pre></div>
+<p><strong><code>coletar-diagnostico.ps1</code></strong> — Coleta completa para suporte: info do sistema, status do service, processos, config (dados sensiveis mascarados), logs recentes, status SQLite, named pipe, resultado do health-check, testes de conectividade. Output: ZIP em <code>%TEMP%</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="p">.\</span><span class="n">coletar-diagnostico</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p><strong><code>limpar-reset.ps1</code></strong> — Reset do agente sem desinstalar (para comportamento estranho ou buffer corrompido). Para o service, remove <code>buffer.db</code>, opcionalmente remove config/logs, reinicia o service.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="p">.\</span><span class="n">limpar-reset</span><span class="p">.</span><span class="n">ps1</span>                          <span class="c"># limpar tudo (pede confirmacao)</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="p">.\</span><span class="n">limpar-reset</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-KeepConfig</span>              <span class="c"># manter configuracao (apenas limpa buffer)</span>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="p">.\</span><span class="n">limpar-reset</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-KeepLogs</span>                <span class="c"># manter logs</span>
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="p">.\</span><span class="n">limpar-reset</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-KeepConfig</span> <span class="n">-KeepLogs</span>    <span class="c"># manter ambos</span>
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="p">.\</span><span class="n">limpar-reset</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Force</span>                   <span class="c"># sem confirmacao interativa</span>
+</code></pre></div>
+<p>ATENCAO: eventos no buffer SQLite serao perdidos permanentemente.</p>
+<p><strong><code>monitorar-performance.ps1</code></strong> — Monitor de CPU, memoria, threads e handles. Detecta memory leak (crescimento continuo). Alerta fora do esperado.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="p">.\</span><span class="n">monitorar-performance</span><span class="p">.</span><span class="n">ps1</span>                              <span class="c"># 60 segundos (padrao)</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="p">.\</span><span class="n">monitorar-performance</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-DurationSeconds</span> <span class="n">300</span>         <span class="c"># 5 minutos</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="p">.\</span><span class="n">monitorar-performance</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-DurationSeconds</span> <span class="n">600</span> <span class="n">-IntervalSeconds</span> <span class="n">10</span>  <span class="c"># 10 min, medicoes a cada 10s</span>
+</code></pre></div>
+<p>Valores esperados V2:</p>
+<table>
+<thead>
+<tr>
+<th>Processo</th>
+<th>Memoria</th>
+<th>Threads</th>
+<th>CPU (idle)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ManagerAgent.Service</td>
+<td>&lt; 100 MB</td>
+<td>&lt; 30</td>
+<td>&lt; 2%</td>
+</tr>
+<tr>
+<td>ManagerAgent.SessionWorker</td>
+<td>&lt; 100 MB</td>
+<td>&lt; 30</td>
+<td>&lt; 3%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quick-reference">Quick Reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situacao</th>
+<th>Script</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status geral</td>
+<td>health-check</td>
+<td><code>.\health-check.ps1</code></td>
+</tr>
+<tr>
+<td>Ver logs ao vivo</td>
+<td>monitorar-logs</td>
+<td><code>.\monitorar-logs.ps1</code></td>
+</tr>
+<tr>
+<td>Ver so erros</td>
+<td>monitorar-logs</td>
+<td><code>.\monitorar-logs.ps1 -Filter Error</code></td>
+</tr>
+<tr>
+<td>Coletar para suporte</td>
+<td>coletar-diagnostico</td>
+<td><code>.\coletar-diagnostico.ps1</code></td>
+</tr>
+<tr>
+<td>Reset sem perder config</td>
+<td>limpar-reset</td>
+<td><code>.\limpar-reset.ps1 -KeepConfig</code></td>
+</tr>
+<tr>
+<td>Monitor performance 5min</td>
+<td>monitorar-performance</td>
+<td><code>.\monitorar-performance.ps1 -DurationSeconds 300</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluxo-de-troubleshooting-recomendado">Fluxo de troubleshooting recomendado<a class="headerlink" href="#fluxo-de-troubleshooting-recomendado" title="Permanent link">&para;</a></h3>
+<p><strong>"O agente nao esta funcionando":</strong>
+1. <code>health-check.ps1</code> — score &lt; 80%? Analisar problemas listados
+2. <code>monitorar-logs.ps1 -Filter Error</code> — identificar componente com falha
+3. Verificar Named Pipe nos logs (buscar "Pipe connected")
+4. <code>coletar-diagnostico.ps1</code> + enviar ZIP para analise
+5. <code>monitorar-performance.ps1 -DurationSeconds 300</code> — verificar consumo</p>
+<p><strong>Service nao inicia:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="nb">Get-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="nb">Get-Content</span> <span class="s2">"C:\ProgramData\ManagerAgent\logs\service-</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="n">yyyyMMdd</span><span class="p">)</span><span class="s2">.log"</span> <span class="n">-Tail</span> <span class="n">50</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="nb">Start-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="nb">Get-EventLog</span> <span class="n">-LogName</span> <span class="n">System</span> <span class="n">-Source</span> <span class="s2">"Service Control Manager"</span> <span class="n">-Newest</span> <span class="n">10</span>
+</code></pre></div></p>
+<p><strong>SessionWorker nao aparece no tray:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="nb">Get-Service</span> <span class="n">ManagerAgent</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="nb">Get-Process</span> <span class="n">-Name</span> <span class="s2">"ManagerAgent.SessionWorker"</span>
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="nb">Get-Content</span> <span class="s2">"C:\ProgramData\ManagerAgent\logs\service-</span><span class="p">$(</span><span class="nb">Get-Date</span> <span class="n">-Format</span> <span class="n">yyyyMMdd</span><span class="p">)</span><span class="s2">.log"</span> <span class="n">-Tail</span> <span class="n">100</span> <span class="p">|</span>
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a>    <span class="nb">Select-String</span> <span class="s2">"SessionWorker|worker|launch"</span>
+</code></pre></div></p>
+<p><strong>Problemas com Execution Policy:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="nb">Get-ExecutionPolicy</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="nb">Set-ExecutionPolicy</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Force</span>
+</code></pre></div></p>
+<hr />
+<p><strong>Ultima atualizacao:</strong> 2026-06-11</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

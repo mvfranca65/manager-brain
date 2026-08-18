@@ -1,0 +1,4001 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/tour/design-tours-contextuais/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Design — Tours Contextuais - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#design-tours-contextuais" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Design — Tours Contextuais
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visão geral
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-de-flags-do-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela de flags do usuário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-decisao-geral-pseudocodigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de decisão geral (pseudocódigo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#efeito-pulsando-no-menu-organizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Efeito "pulsando" no menu (Organização)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Efeito &#34;pulsando&#34; no menu (Organização)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qual-elemento-recebe-a-animacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qual elemento recebe a animação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css-da-animacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSS da animação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-desaparece" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando desaparece
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#os-8-tours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os 8 tours
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Os 8 tours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tour-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. tour-home
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. tour-home">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tour-org-estrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. tour-org-estrutura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. tour-org-estrutura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tour-org-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. tour-org-times
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. tour-org-times">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tour-org-hierarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. tour-org-hierarquia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. tour-org-hierarquia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tour-colaboradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. tour-colaboradores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. tour-colaboradores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-aparece-quando-nao-ha-times-ou-colaboradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 (aparece quando não há times ou colaboradores)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-alt-aparece-quando-ha-times-substitui-o-step-2-acima" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2-alt (aparece quando há times — substitui o step 2 acima)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-aparece-quando-ha-times-mas-ainda-sem-dados-de-atividade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 (aparece quando há times mas ainda sem dados de atividade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-aparece-quando-ha-dados-reais-novo-selector-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 (aparece quando há dados reais — novo selector necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-aparece-quando-ha-dados-reais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 (aparece quando há dados reais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-tour-colaborador-detalhe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. tour-colaborador-detalhe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. tour-colaborador-detalhe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-novo-selector-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 (novo selector necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-novo-selector-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 (novo selector necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-novo-selector-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 (novo selector necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-novo-selector-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 (novo selector necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-tour-relatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. tour-relatorios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. tour-relatorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-novo-selector-necessario_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 (novo selector necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-novo-selector-necessario_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 (novo selector necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-aparece-apenas-quando-ha-relatorios-disponiveis-novo-selector-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 (aparece apenas quando há relatórios disponíveis — novo selector necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-tour-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. tour-perfil
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. tour-perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-novo-selector-necessario_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 (novo selector necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secao-rever-tours-nas-configuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seção "Rever tours" nas Configurações
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seção &#34;Rever tours&#34; nas Configurações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Localização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-de-tours-com-nome-amigavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista de tours com nome amigável
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comportamento-do-botao-rever" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comportamento do botão "Rever"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mockup-da-secao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mockup da seção
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icone-no-header-de-cada-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ícone ? no header de cada página
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ícone ? no header de cada página">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comportamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comportamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onde-adicionar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Onde adicionar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#novos-selectors-data-tour-necessarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Novos selectors data-tour necessários
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectors-existentes-reutilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selectors existentes reutilizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-de-steps-por-tour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo de steps por tour
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-para-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas para implementação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalizacao-por-perfil-de-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personalização por Perfil de Acesso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personalização por Perfil de Acesso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-matriz-de-visibilidade-por-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Matriz de visibilidade por perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-steps-alternativos-por-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Steps alternativos por perfil
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Steps alternativos por perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tour-home-variante-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tour-home — variante MANAGER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tour-home — variante MANAGER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tour-home-variante-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tour-home — variante VIEWER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tour-home — variante VIEWER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tour-colaboradores-variante-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tour-colaboradores — variante MANAGER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tour-colaboradores — variante MANAGER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-sem-times-na-hierarquia-do-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 (sem times na hierarquia do MANAGER)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-alt-com-times-na-hierarquia-do-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2-alt (com times na hierarquia do MANAGER)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-3-a-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps 3 a 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tour-colaborador-detalhe-variante-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tour-colaborador-detalhe — variante VIEWER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="tour-colaborador-detalhe — variante VIEWER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-estrutura-tecnica-sugerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Estrutura técnica sugerida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-fluxo-de-decisao-atualizado-pseudocodigo-com-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Fluxo de decisão atualizado (pseudocódigo com perfil)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-menu-pulsando-por-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Menu pulsando por perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-secao-rever-tours-nas-configuracoes-filtrada-por-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        F. Seção "Rever tours" nas Configurações — filtrada por perfil
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="design-tours-contextuais">Design — Tours Contextuais<a class="headerlink" href="#design-tours-contextuais" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Domínio: @Steve | PO
+Status: Documento de design — NÃO implementado
+Criado em: 2026-03-31
+Leitura obrigatória para: @Tony (TL), @Peter (dev), @Miles (dev), @Natasha (QA)</p>
+</blockquote>
+<hr />
+<h2 id="visao-geral">Visão geral<a class="headerlink" href="#visao-geral" title="Permanent link">&para;</a></h2>
+<p>O tour linear atual (16 passos percorrendo tudo de uma vez) é substituído por <strong>8 tours independentes por seção</strong>, cada um disparado contextualmente com base no estado real dos dados do usuário.</p>
+<p>O objetivo é conduzir o gestor naturalmente pelas seções do produto à medida que ele as acessa pela primeira vez — sem forçar um caminho único e sem cansá-lo com uma jornada longa de onboarding.</p>
+<p><strong>Princípios do novo sistema:</strong>
+- Máximo de 5–8 steps por tour
+- Cada tour tem seu próprio ciclo de vida e flag de conclusão
+- Progressão baseada em dados reais (times existem? colaboradores cadastrados?)
+- Repetição sempre disponível via ícone <code>?</code> no header da página e em Configurações</p>
+<hr />
+<h2 id="tabela-de-flags-do-usuario">Tabela de flags do usuário<a class="headerlink" href="#tabela-de-flags-do-usuario" title="Permanent link">&para;</a></h2>
+<p>Todas as flags são armazenadas por usuário no banco de dados (tabela <code>user_tour_flags</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Tipo</th>
+<th>Default</th>
+<th>Quando muda para <code>true</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tour_home_concluido</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Ao concluir o último step do tour-home</td>
+</tr>
+<tr>
+<td><code>tour_org_estrutura_concluido</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Ao concluir ou pular o tour-org-estrutura</td>
+</tr>
+<tr>
+<td><code>tour_org_times_concluido</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Ao concluir ou pular o tour-org-times</td>
+</tr>
+<tr>
+<td><code>tour_org_hierarquia_concluido</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Ao concluir ou pular o tour-org-hierarquia</td>
+</tr>
+<tr>
+<td><code>tour_colaboradores_concluido</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Ao concluir ou pular o tour-colaboradores</td>
+</tr>
+<tr>
+<td><code>tour_colaboradores_com_dados_concluido</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Ao concluir o tour-colaboradores quando já há dados reais</td>
+</tr>
+<tr>
+<td><code>tour_colaborador_detalhe_concluido</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Ao concluir ou pular o tour-colaborador-detalhe</td>
+</tr>
+<tr>
+<td><code>tour_relatorios_concluido</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Ao concluir ou pular o tour-relatorios</td>
+</tr>
+<tr>
+<td><code>tour_perfil_concluido</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Ao concluir ou pular o tour-perfil</td>
+</tr>
+<tr>
+<td><code>primeiro_login</code></td>
+<td>boolean</td>
+<td>true</td>
+<td>Vira <code>false</code> após o tour-home concluir</td>
+</tr>
+<tr>
+<td><code>menu_org_pulsando</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Vira <code>true</code> quando tour-home termina; <code>false</code> quando usuário clica em Organização</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fluxo-de-decisao-geral-pseudocodigo">Fluxo de decisão geral (pseudocódigo)<a class="headerlink" href="#fluxo-de-decisao-geral-pseudocodigo" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ao entrar em /home:
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  se primeiro_login == true:
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    disparar tour-home (sem opção de pular)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>ao entrar em /organizacao (qualquer tab):
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  se tour_org_estrutura_concluido == false:
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    navegar para tab Departamentos (se não estiver nela)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    disparar tour-org-estrutura
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>ao entrar em /organizacao com tab Times ativa:
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  se tour_org_times_concluido == false:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    verificar se existe pelo menos 1 time cadastrado
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    disparar tour-org-times (adapta steps conforme existência de times)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>ao entrar em /organizacao com tab Gestão &amp; Hierarquia ativa:
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  se tour_org_hierarquia_concluido == false:
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    disparar tour-org-hierarquia
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>ao entrar em /colaboradores:
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  se tour_colaboradores_concluido == false:
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    disparar tour-colaboradores (step 1 sempre aparece)
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    verificar se existe pelo menos 1 time com colaboradores
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    se não existir: tour para no step 1 e seta flag parcial
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    se existir: tour completo
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>  senão, se tour_colaboradores_com_dados_concluido == false E colaboradores existem:
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    disparar tour-colaboradores a partir do step 2 (agora com dados)
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>ao entrar em /colaboradores/membro/:id:
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>  se tour_colaborador_detalhe_concluido == false:
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    disparar tour-colaborador-detalhe
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>ao entrar em /relatorios:
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>  se tour_relatorios_concluido == false:
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    disparar tour-relatorios
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>ao entrar em /configuracoes/perfil:
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>  se tour_perfil_concluido == false:
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    disparar tour-perfil
+</code></pre></div>
+<hr />
+<h2 id="efeito-pulsando-no-menu-organizacao">Efeito "pulsando" no menu (Organização)<a class="headerlink" href="#efeito-pulsando-no-menu-organizacao" title="Permanent link">&para;</a></h2>
+<h3 id="qual-elemento-recebe-a-animacao">Qual elemento recebe a animação<a class="headerlink" href="#qual-elemento-recebe-a-animacao" title="Permanent link">&para;</a></h3>
+<p>O item de menu <strong>Organização</strong> (<code>[data-tour="menu-organizacao"]</code>) recebe a classe CSS <code>menu-item--pulsando</code> enquanto a flag <code>menu_org_pulsando</code> for <code>true</code>.</p>
+<h3 id="css-da-animacao">CSS da animação<a class="headerlink" href="#css-da-animacao" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">@keyframes</span><span class="w"> </span><span class="nt">pulse-ring</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">0</span><span class="err">%</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">box-shadow</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">rgba</span><span class="o">(</span><span class="nt">99</span><span class="o">,</span><span class="w"> </span><span class="nt">102</span><span class="o">,</span><span class="w"> </span><span class="nt">241</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="nc">.5</span><span class="o">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">azul-índigo</span><span class="w"> </span><span class="nt">com</span><span class="w"> </span><span class="nt">50</span><span class="err">%</span><span class="w"> </span><span class="nt">opacidade</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">70</span><span class="err">%</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">box-shadow</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">8px</span><span class="w"> </span><span class="nt">rgba</span><span class="o">(</span><span class="nt">99</span><span class="o">,</span><span class="w"> </span><span class="nt">102</span><span class="o">,</span><span class="w"> </span><span class="nt">241</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">100</span><span class="err">%</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">box-shadow</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">rgba</span><span class="o">(</span><span class="nt">99</span><span class="o">,</span><span class="w"> </span><span class="nt">102</span><span class="o">,</span><span class="w"> </span><span class="nt">241</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="o">);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nc">.menu-item--pulsando</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="nt">animation</span><span class="nd">:</span><span class="w"> </span><span class="nt">pulse-ring</span><span class="w"> </span><span class="nt">1</span><span class="nc">.6s</span><span class="w"> </span><span class="nt">ease-out</span><span class="w"> </span><span class="nt">infinite</span><span class="o">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">8px</span><span class="o">;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nt">position</span><span class="nd">:</span><span class="w"> </span><span class="nt">relative</span><span class="o">;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="nt">Badge</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">ponto</span><span class="w"> </span><span class="nt">vermelho</span><span class="w"> </span><span class="nt">opcional</span><span class="w"> </span><span class="o">(</span><span class="nt">alternativa</span><span class="w"> </span><span class="nt">ao</span><span class="w"> </span><span class="nt">glow</span><span class="o">)</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="k">&amp;</span><span class="nd">::after</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="nt">content</span><span class="nd">:</span><span class="w"> </span><span class="s1">''</span><span class="o">;</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="nt">position</span><span class="nd">:</span><span class="w"> </span><span class="nt">absolute</span><span class="o">;</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="nt">top</span><span class="nd">:</span><span class="w"> </span><span class="nt">6px</span><span class="o">;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="nt">right</span><span class="nd">:</span><span class="w"> </span><span class="nt">6px</span><span class="o">;</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">7px</span><span class="o">;</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">7px</span><span class="o">;</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ef4444</span><span class="o">;</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">50</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="nc">.5px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nt">white</span><span class="o">;</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="quando-desaparece">Quando desaparece<a class="headerlink" href="#quando-desaparece" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Quando o usuário clica no menu Organização → <code>menu_org_pulsando</code> vira <code>false</code> → classe <code>menu-item--pulsando</code> é removida imediatamente.</li>
+<li>Se o usuário navegar diretamente para <code>/organizacao</code> por qualquer outro meio, a flag também é zerada.</li>
+</ul>
+<hr />
+<h2 id="os-8-tours">Os 8 tours<a class="headerlink" href="#os-8-tours" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="1-tour-home">1. tour-home<a class="headerlink" href="#1-tour-home" title="Permanent link">&para;</a></h3>
+<p><strong>Descrição:</strong> Boas-vindas ao Manager. Apresenta a estrutura da tela inicial e direciona o gestor para o próximo passo: configurar a organização.</p>
+<p><strong>Condição de disparo:</strong>
+- Automático ao carregar <code>/home</code> quando <code>primeiro_login == true</code>
+- Sem botão "Pular" em nenhum step — o tour é obrigatório uma única vez
+- Flag controlada: <code>tour_home_concluido</code>, <code>primeiro_login</code>, <code>menu_org_pulsando</code></p>
+<p><strong>Steps:</strong></p>
+<h4 id="step-1">Step 1<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>element:     [data-tour="home-greeting"]
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>route:       /home
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>title:       👋 Bem-vindo ao Manager
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>description: Este é seu painel de comando. Aqui você tem uma visão rápida do que está
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>             acontecendo com seu time agora mesmo — &lt;strong&gt;quem está online, quem está
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>             ausente e quantos colaboradores estão monitorados&lt;/strong&gt;.
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>side:        bottom
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-2">Step 2<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>element:     [data-tour="home-stats"]
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>route:       /home
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>title:       📊 Seus números em tempo real
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>description: Esses cartões mostram o &lt;strong&gt;pulso do seu time agora&lt;/strong&gt;. Total de
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>             colaboradores monitorados, quem está online e quem está ausente. Quando o
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>             agente estiver instalado nas máquinas, os dados aparecem aqui automaticamente.
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>side:        bottom
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-3">Step 3<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>element:     [data-tour="home-quick-actions"]
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>route:       /home
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>title:       ⚡ Atalhos para as seções principais
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>description: Daqui você chega rápido em qualquer parte do Manager. &lt;strong&gt;Colaboradores&lt;/strong&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>             para ver seu time, &lt;strong&gt;Relatórios&lt;/strong&gt; para os diagnósticos semanais por IA
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>             e &lt;strong&gt;Organização&lt;/strong&gt; para estruturar sua empresa.
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>side:        top
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-4">Step 4<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>element:     [data-tour="menu-organizacao"]
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>route:       /home
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>title:       🏢 O primeiro passo é aqui
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>description: Antes de tudo, você precisa &lt;strong&gt;configurar sua organização&lt;/strong&gt; — criar
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>             departamentos, cargos e times. Clique em &lt;strong&gt;Organização&lt;/strong&gt; no menu
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>             para começar. Vamos guiar você por cada seção.
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>side:        right
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>action:      nenhuma (apenas aponta; o usuário clica quando quiser)
+</code></pre></div>
+<p><strong>Condição de saída:</strong>
+- Ao fechar o step 4 (botão "Entendi" ou "Concluir"), setar <code>tour_home_concluido = true</code>, <code>primeiro_login = false</code>, <code>menu_org_pulsando = true</code>.
+- O menu Organização começa a pulsar.</p>
+<hr />
+<h3 id="2-tour-org-estrutura">2. tour-org-estrutura<a class="headerlink" href="#2-tour-org-estrutura" title="Permanent link">&para;</a></h3>
+<p><strong>Descrição:</strong> Apresenta as abas de Departamentos e Cargos — a base estrutural da organização.</p>
+<p><strong>Condição de disparo:</strong>
+- Automático ao entrar em <code>/organizacao</code> quando <code>tour_org_estrutura_concluido == false</code>
+- O sistema garante que a aba <strong>Departamentos</strong> está ativa antes de iniciar
+- Botão "Pular" disponível em cada step
+- Flags controladas: <code>tour_org_estrutura_concluido</code></p>
+<p><strong>Steps:</strong></p>
+<h4 id="step-1_1">Step 1<a class="headerlink" href="#step-1_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>element:     [data-tour="tab-departamentos"]
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>route:       /organizacao
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>queryParams: tab=departamentos (forçar aba ativa)
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>title:       🏗️ Departamentos — a base da estrutura
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>description: Aqui você cria os &lt;strong&gt;departamentos da sua empresa&lt;/strong&gt; — como TI,
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>             Comercial, Financeiro ou qualquer área que fizer sentido para você. Os
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>             colaboradores serão associados a um departamento depois.
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>side:        bottom
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-2_1">Step 2<a class="headerlink" href="#step-2_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>element:     [data-tour="tab-cargos"]
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>route:       /organizacao
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>title:       💼 Cargos — os papéis do seu time
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>description: Defina os &lt;strong&gt;cargos existentes na empresa&lt;/strong&gt;, como Analista, Gerente
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>             ou Desenvolvedor. Isso permite filtrar relatórios e entender o desempenho por
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>             função — não apenas por pessoa.
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>side:        bottom
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-3_1">Step 3<a class="headerlink" href="#step-3_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>element:     [data-tour="tab-departamentos"]
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>route:       /organizacao
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>queryParams: tab=departamentos
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>title:       ✅ Crie seu primeiro departamento
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>description: Comece criando pelo menos &lt;strong&gt;um departamento&lt;/strong&gt;. Você pode usar
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>             "Geral" para começar e refinar depois. Clique no botão &lt;strong&gt;"Novo
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>             departamento"&lt;/strong&gt; dentro da aba para adicionar.
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>side:        bottom
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>action:      Crie um departamento (orientação, não bloqueante)
+</code></pre></div>
+<p><strong>Condição de saída:</strong>
+- Ao fechar o step 3 (botão "Entendi" ou "Pular"), setar <code>tour_org_estrutura_concluido = true</code>.
+- O sistema não aguarda a criação do departamento para avançar — é uma orientação.</p>
+<hr />
+<h3 id="3-tour-org-times">3. tour-org-times<a class="headerlink" href="#3-tour-org-times" title="Permanent link">&para;</a></h3>
+<p><strong>Descrição:</strong> Apresenta a aba Times e pede para o gestor criar seu primeiro time antes de continuar.</p>
+<p><strong>Condição de disparo:</strong>
+- Automático ao entrar em <code>/organizacao</code> com aba Times ativa, quando <code>tour_org_times_concluido == false</code>
+- Ou disparado automaticamente após <code>tour_org_estrutura_concluido</code> virar <code>true</code> se o usuário ainda estiver na página
+- Botão "Pular" disponível
+- Flags controladas: <code>tour_org_times_concluido</code></p>
+<p><strong>Variações por estado de dados:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cenário</th>
+<th>Comportamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nenhum time cadastrado</td>
+<td>Tour completo — pede para criar o primeiro time</td>
+</tr>
+<tr>
+<td>Já existe pelo menos 1 time</td>
+<td>Tour encurtado — apresenta o card de time existente e explica as ações disponíveis</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps (cenário: sem times):</strong></p>
+<h4 id="step-1_2">Step 1<a class="headerlink" href="#step-1_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>element:     [data-tour="tab-times"]
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>route:       /organizacao
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>queryParams: tab=times
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>title:       👥 Times — o coração do monitoramento
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>description: &lt;strong&gt;Times são grupos de colaboradores&lt;/strong&gt; que você vai monitorar
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>             juntos. Um time pode ser uma equipe, um projeto, um turno — o que fizer
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>             sentido para você. Tudo no Manager gira em torno dos times.
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>side:        bottom
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-2_2">Step 2<a class="headerlink" href="#step-2_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>element:     [data-tour="tab-times"]
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>route:       /organizacao
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>queryParams: tab=times
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>title:       🚀 Crie seu primeiro time agora
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>description: Você ainda não tem nenhum time cadastrado. Clique em &lt;strong&gt;"Novo
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>             time"&lt;/strong&gt; para criar o primeiro. Sem times, não é possível monitorar
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>             colaboradores nem gerar relatórios.
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>side:        bottom
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>action:      Criar o primeiro time (orientação — o tour espera a ação ou aceita "Pular")
+</code></pre></div>
+<p><strong>Steps (cenário: já há times):</strong></p>
+<h4 id="step-1_3">Step 1<a class="headerlink" href="#step-1_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>element:     [data-tour="tab-times"]
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>route:       /organizacao
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>queryParams: tab=times
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>title:       👥 Seus times estão aqui
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>description: Você já tem times criados. Aqui você pode &lt;strong&gt;editar, criar novos ou
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>             reorganizar&lt;/strong&gt; os grupos de colaboradores da empresa. Cada time tem
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>             seu próprio painel de monitoramento e relatórios.
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>side:        bottom
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>action:      nenhuma
+</code></pre></div>
+<p><strong>Condição de saída:</strong>
+- Ao concluir ou pular qualquer variação, setar <code>tour_org_times_concluido = true</code>.</p>
+<hr />
+<h3 id="4-tour-org-hierarquia">4. tour-org-hierarquia<a class="headerlink" href="#4-tour-org-hierarquia" title="Permanent link">&para;</a></h3>
+<p><strong>Descrição:</strong> Apresenta o organograma, a ação de gestão de pessoas e o instalador do agente — o passo mais técnico do onboarding.</p>
+<p><strong>Condição de disparo:</strong>
+- Automático ao entrar em <code>/organizacao</code> com aba Gestão &amp; Hierarquia ativa, quando <code>tour_org_hierarquia_concluido == false</code>
+- Visível apenas para usuários com perfil Admin (<code>ehAdmin == true</code>) — steps de botões admin só aparecem se o usuário tiver acesso
+- Botão "Pular" disponível
+- Flags controladas: <code>tour_org_hierarquia_concluido</code></p>
+<p><strong>Steps:</strong></p>
+<h4 id="step-1_4">Step 1<a class="headerlink" href="#step-1_4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>element:     [data-tour="tab-hierarquia"]
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>route:       /organizacao
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>queryParams: tab=hierarquia
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>title:       🌳 O organograma da sua empresa
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>description: Esta aba mostra &lt;strong&gt;como sua empresa está estruturada visualmente&lt;/strong&gt;
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>             — quem responde a quem, por departamento. É aqui que você enxerga a cadeia
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>             de liderança de um jeito claro e organizado.
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>side:        bottom
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-2_3">Step 2<a class="headerlink" href="#step-2_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>element:     [data-tour="btn-gestao-pessoas"]
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>route:       /organizacao
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>queryParams: tab=hierarquia
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>title:       👤 Adicione pessoas à hierarquia
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>description: Com o botão &lt;strong&gt;"Novo usuário"&lt;/strong&gt; você cadastra colaboradores e
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>             define o acesso deles ao portal. Cada pessoa precisa ser cadastrada aqui
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>             antes de aparecer nos relatórios e no monitoramento.
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>side:        left
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>action:      nenhuma (apenas apresenta o botão)
+</code></pre></div>
+<h4 id="step-3_2">Step 3<a class="headerlink" href="#step-3_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>element:     [data-tour="btn-download-instalador"]
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>route:       /organizacao
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>queryParams: tab=hierarquia
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>title:       💻 Instale o agente nas máquinas
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>description: O Manager precisa de um &lt;strong&gt;agente instalado no computador de cada
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>             colaborador&lt;/strong&gt; para coletar dados de atividade. Baixe o instalador
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>             aqui e distribua para seu time — é rápido e não precisa de TI especializado.
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>side:        left
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>action:      Baixar e instalar o agente (orientação crítica — o gestor precisa fazer isso)
+</code></pre></div>
+<h4 id="step-4_1">Step 4<a class="headerlink" href="#step-4_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>element:     [data-tour="tab-hierarquia"]
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>route:       /organizacao
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>queryParams: tab=hierarquia
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>title:       ✅ Estrutura pronta, agora o time
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>description: Com departamentos, cargos, times e pessoas configurados, você está pronto
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>             para &lt;strong&gt;monitorar seu time de verdade&lt;/strong&gt;. Vá em
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>             &lt;strong&gt;Colaboradores&lt;/strong&gt; no menu para ver o painel do seu time.
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>side:        bottom
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>action:      nenhuma
+</code></pre></div>
+<p><strong>Condição de saída:</strong>
+- Ao concluir ou pular, setar <code>tour_org_hierarquia_concluido = true</code>.</p>
+<hr />
+<h3 id="5-tour-colaboradores">5. tour-colaboradores<a class="headerlink" href="#5-tour-colaboradores" title="Permanent link">&para;</a></h3>
+<p><strong>Descrição:</strong> Apresenta a tela unificada de colaboradores. Adapta-se conforme a existência de dados reais.</p>
+<p><strong>Condição de disparo:</strong>
+- Automático ao entrar em <code>/colaboradores</code> quando <code>tour_colaboradores_concluido == false</code>
+- <strong>OU</strong> quando <code>tour_colaboradores_concluido == true</code> mas <code>tour_colaboradores_com_dados_concluido == false</code> E existem colaboradores com dados
+- Botão "Pular" disponível
+- Flags controladas: <code>tour_colaboradores_concluido</code>, <code>tour_colaboradores_com_dados_concluido</code></p>
+<p><strong>Variações por estado de dados:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cenário</th>
+<th>Steps exibidos</th>
+<th>Flag setada ao final</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sem times ou colaboradores cadastrados</td>
+<td>Apenas steps 1 e 2</td>
+<td><code>tour_colaboradores_concluido = true</code></td>
+</tr>
+<tr>
+<td>Com times mas sem dados de atividade</td>
+<td>Steps 1 a 3</td>
+<td><code>tour_colaboradores_concluido = true</code></td>
+</tr>
+<tr>
+<td>Com times e dados de atividade</td>
+<td>Steps 1 a 5 (completo)</td>
+<td><code>tour_colaboradores_com_dados_concluido = true</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps:</strong></p>
+<h4 id="step-1_5">Step 1<a class="headerlink" href="#step-1_5" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>element:     [data-tour="times-header"]
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>route:       /colaboradores
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>title:       👥 Painel de Colaboradores
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>description: Aqui você acompanha &lt;strong&gt;todos os seus colaboradores em tempo real&lt;/strong&gt;.
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>             Selecione um time no campo abaixo para ver quem está online, ausente ou
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>             offline — tudo em um único lugar.
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>side:        bottom
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-2-aparece-quando-nao-ha-times-ou-colaboradores">Step 2 (aparece quando não há times ou colaboradores)<a class="headerlink" href="#step-2-aparece-quando-nao-ha-times-ou-colaboradores" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>element:     [data-tour="times-select-card"]
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>route:       /colaboradores
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>title:       ⚠️ Nenhum time encontrado ainda
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>description: Para ver seus colaboradores aqui, você precisa primeiro &lt;strong&gt;criar um
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>             time em Organização&lt;/strong&gt; e adicionar colaboradores a ele. Quando isso
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>             estiver feito, volte aqui e o painel estará populado.
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>side:        bottom
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>action:      nenhuma (tour para aqui neste cenário)
+</code></pre></div>
+<h4 id="step-2-alt-aparece-quando-ha-times-substitui-o-step-2-acima">Step 2-alt (aparece quando há times — substitui o step 2 acima)<a class="headerlink" href="#step-2-alt-aparece-quando-ha-times-substitui-o-step-2-acima" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>element:     [data-tour="times-select-card"]
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>route:       /colaboradores
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>title:       🔍 Selecione um time para começar
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>description: Use esse campo para &lt;strong&gt;escolher qual time você quer visualizar&lt;/strong&gt;.
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>             Cada time tem seu próprio painel com status, scores e indicadores dos membros.
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>             Você pode alternar entre times a qualquer momento.
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>side:        bottom
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>action:      Selecionar um time no dropdown
+</code></pre></div>
+<h4 id="step-3-aparece-quando-ha-times-mas-ainda-sem-dados-de-atividade">Step 3 (aparece quando há times mas ainda sem dados de atividade)<a class="headerlink" href="#step-3-aparece-quando-ha-times-mas-ainda-sem-dados-de-atividade" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>element:     [data-tour="times-select-card"]
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>route:       /colaboradores
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>title:       ⏳ Aguardando dados do agente
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>description: O time está configurado, mas o &lt;strong&gt;agente ainda não enviou dados de
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>             atividade&lt;/strong&gt;. Assim que os colaboradores estiverem com o agente
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>             instalado e ativo, os dados aparecem aqui automaticamente.
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>side:        bottom
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>action:      nenhuma (tour para aqui neste cenário)
+</code></pre></div>
+<h4 id="step-4-aparece-quando-ha-dados-reais-novo-selector-necessario">Step 4 (aparece quando há dados reais — novo selector necessário)<a class="headerlink" href="#step-4-aparece-quando-ha-dados-reais-novo-selector-necessario" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>element:     [data-tour="colaboradores-lista"]
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>route:       /colaboradores
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>title:       📋 Seu time em detalhes
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>description: Cada card de colaborador mostra o &lt;strong&gt;status atual, o IManager Score
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>             da semana e os indicadores de saúde&lt;/strong&gt; como burnout e desengajamento.
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>             Clique em qualquer colaborador para ver o perfil completo dele.
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>side:        top
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>action:      nenhuma
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>NOVO SELECTOR NECESSÁRIO: adicionar data-tour="colaboradores-lista" no container
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>da lista de cards de colaboradores dentro de times-dashboard.page.html
+</code></pre></div>
+<h4 id="step-5-aparece-quando-ha-dados-reais">Step 5 (aparece quando há dados reais)<a class="headerlink" href="#step-5-aparece-quando-ha-dados-reais" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>element:     [data-tour="colaboradores-lista"]
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>route:       /colaboradores
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>title:       🎯 Clique num colaborador para mergulhar fundo
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>description: O painel individual mostra a &lt;strong&gt;linha do tempo de atividade, KPIs
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>             de produtividade e os indicadores psicológicos&lt;/strong&gt; daquele colaborador.
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>             É onde você vai quando precisa entender o que está acontecendo com alguém
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>             do time.
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>side:        top
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>action:      Clique em um colaborador (orientação para avançar no fluxo natural)
+</code></pre></div>
+<p><strong>Condição de saída:</strong>
+- Cenário sem dados: <code>tour_colaboradores_concluido = true</code>
+- Cenário com dados (completo): <code>tour_colaboradores_concluido = true</code> + <code>tour_colaboradores_com_dados_concluido = true</code></p>
+<hr />
+<h3 id="6-tour-colaborador-detalhe">6. tour-colaborador-detalhe<a class="headerlink" href="#6-tour-colaborador-detalhe" title="Permanent link">&para;</a></h3>
+<p><strong>Descrição:</strong> Apresenta os KPIs, linha do tempo e indicadores psicológicos do perfil individual do colaborador.</p>
+<p><strong>Condição de disparo:</strong>
+- Automático ao entrar em <code>/colaboradores/membro/:id</code> quando <code>tour_colaborador_detalhe_concluido == false</code>
+- Pré-condição: deve existir pelo menos 1 semana de dados para o colaborador (senão o tour não dispara — não há o que mostrar)
+- Botão "Pular" disponível
+- Flags controladas: <code>tour_colaborador_detalhe_concluido</code></p>
+<p><strong>Steps:</strong></p>
+<h4 id="step-1-novo-selector-necessario">Step 1 (novo selector necessário)<a class="headerlink" href="#step-1-novo-selector-necessario" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>element:     [data-tour="detalhe-score-card"]
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>route:       /colaboradores/membro/:id
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>title:       🏆 O IManager Score
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>description: Esse número resume a &lt;strong&gt;semana de trabalho do colaborador em 0 a
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>             100&lt;/strong&gt;, calculado com base em 6 pilares como atividade, foco e
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>             consistência. A IA interpreta o score — você não precisa fazer contas.
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>side:        bottom
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>action:      nenhuma
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>NOVO SELECTOR NECESSÁRIO: adicionar data-tour="detalhe-score-card" no card de
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>score/KPIs principal dentro de colaborador-detalhe
+</code></pre></div>
+<h4 id="step-2-novo-selector-necessario">Step 2 (novo selector necessário)<a class="headerlink" href="#step-2-novo-selector-necessario" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>element:     [data-tour="detalhe-timeline"]
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>route:       /colaboradores/membro/:id
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>title:       📅 A linha do tempo de atividade
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>description: Aqui você vê &lt;strong&gt;como o colaborador distribuiu sua atividade ao longo
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>             da semana&lt;/strong&gt; — hora a hora, dia a dia. Padrões de pico, ociosidade e
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>             consistência ficam visíveis de um jeito que nenhum relatório tradicional
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>             mostra.
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>side:        top
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>action:      nenhuma
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>NOVO SELECTOR NECESSÁRIO: adicionar data-tour="detalhe-timeline" no componente de
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>timeline/gráfico de atividade dentro de colaborador-detalhe
+</code></pre></div>
+<h4 id="step-3-novo-selector-necessario">Step 3 (novo selector necessário)<a class="headerlink" href="#step-3-novo-selector-necessario" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>element:     [data-tour="detalhe-indicadores"]
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>route:       /colaboradores/membro/:id
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>title:       🧠 Indicadores de saúde e risco
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>description: Esta seção detecta sinais como &lt;strong&gt;risco de burnout, desengajamento
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>             silencioso e sobrecarga&lt;/strong&gt; antes que virem problemas sérios. Não é
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>             vigilância — é cuidado baseado em dados objetivos, sem keylogger ou câmera.
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>side:        top
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>action:      nenhuma
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>NOVO SELECTOR NECESSÁRIO: adicionar data-tour="detalhe-indicadores" no card de
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>indicadores psicológicos dentro de colaborador-detalhe
+</code></pre></div>
+<h4 id="step-4-novo-selector-necessario">Step 4 (novo selector necessário)<a class="headerlink" href="#step-4-novo-selector-necessario" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>element:     [data-tour="detalhe-relatorio-link"]
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>route:       /colaboradores/membro/:id
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>title:       📄 Ver o relatório semanal completo
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>description: Quer ir além dos números? O &lt;strong&gt;relatório semanal por IA&lt;/strong&gt; traz
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>             um diagnóstico em linguagem natural — o que aconteceu na semana, o que
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>             preocupa e o que o gestor pode fazer. Acesse em Relatórios no menu lateral.
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>side:        top
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>action:      nenhuma
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>NOVO SELECTOR NECESSÁRIO: adicionar data-tour="detalhe-relatorio-link" no botão ou
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>link que aponta para os relatórios dentro do detalhe do colaborador (se existir);
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>caso não exista ainda, o step aponta para o botão de voltar à lista ou elemento
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>contextual equivalente
+</code></pre></div>
+<p><strong>Condição de saída:</strong>
+- Ao concluir ou pular, setar <code>tour_colaborador_detalhe_concluido = true</code>.</p>
+<hr />
+<h3 id="7-tour-relatorios">7. tour-relatorios<a class="headerlink" href="#7-tour-relatorios" title="Permanent link">&para;</a></h3>
+<p><strong>Descrição:</strong> Apresenta a tela de relatórios semanais por IA — o diferencial central do produto.</p>
+<p><strong>Condição de disparo:</strong>
+- Automático ao entrar em <code>/relatorios</code> quando <code>tour_relatorios_concluido == false</code>
+- Botão "Pular" disponível
+- Flags controladas: <code>tour_relatorios_concluido</code></p>
+<p><strong>Variações por estado de dados:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cenário</th>
+<th>Comportamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sem relatórios disponíveis (sem dados ou sem semana completa)</td>
+<td>Tour apresenta o header e explica o que o gestor vai encontrar aqui em breve</td>
+</tr>
+<tr>
+<td>Com relatórios disponíveis</td>
+<td>Tour completo mostrando filtros, navegação de semana e cards de relatório</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps:</strong></p>
+<h4 id="step-1_6">Step 1<a class="headerlink" href="#step-1_6" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>element:     [data-tour="relatorios-header"]
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>route:       /relatorios
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>title:       📊 Relatórios Semanais por IA
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>description: Esta é a seção mais poderosa do Manager. Toda semana, a &lt;strong&gt;IA gera
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>             um diagnóstico completo por colaborador e por time&lt;/strong&gt; — o que aconteceu,
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>             quem precisa de atenção e o que você pode fazer como gestor.
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>side:        bottom
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-2-novo-selector-necessario_1">Step 2 (novo selector necessário)<a class="headerlink" href="#step-2-novo-selector-necessario_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>element:     [data-tour="relatorios-filtro-time"]
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>route:       /relatorios
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>title:       🔍 Filtre por time ou colaborador
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>description: Escolha &lt;strong&gt;qual time você quer analisar&lt;/strong&gt;. Depois clique em
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>             qualquer colaborador do time para ver o relatório individual dele. O Manager
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>             organiza automaticamente os dados por hierarquia.
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>side:        bottom
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>action:      Selecionar um time (orientação)
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>NOVO SELECTOR NECESSÁRIO: adicionar data-tour="relatorios-filtro-time" no componente
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>app-filtro-relatorio dentro de relatorios-page.component.html
+</code></pre></div>
+<h4 id="step-3-novo-selector-necessario_1">Step 3 (novo selector necessário)<a class="headerlink" href="#step-3-novo-selector-necessario_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>element:     [data-tour="relatorios-semana-nav"]
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>route:       /relatorios
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>title:       📅 Navegue pelas semanas anteriores
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>description: Use as setas para &lt;strong&gt;acessar relatórios de semanas passadas&lt;/strong&gt;.
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>             O Manager guarda o histórico completo para você comparar evolução e
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>             acompanhar tendências ao longo do tempo.
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>side:        bottom
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>action:      nenhuma
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>NOVO SELECTOR NECESSÁRIO: adicionar data-tour="relatorios-semana-nav" no componente
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>app-semana-navigator dentro de relatorios-page.component.html
+</code></pre></div>
+<h4 id="step-4-aparece-apenas-quando-ha-relatorios-disponiveis-novo-selector-necessario">Step 4 (aparece apenas quando há relatórios disponíveis — novo selector necessário)<a class="headerlink" href="#step-4-aparece-apenas-quando-ha-relatorios-disponiveis-novo-selector-necessario" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>element:     [data-tour="relatorios-cards-area"]
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>route:       /relatorios
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>title:       🤖 O diagnóstico completo da semana
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>description: Cada card traz o &lt;strong&gt;IManager Score, os 6 pilares de desempenho,
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>             os indicadores psicológicos e as recomendações da IA&lt;/strong&gt; para aquele
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>             colaborador. É a visão que o gestor precisa para tomar decisões com
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>             confiança — não intuição.
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>side:        top
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>action:      nenhuma
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>NOVO SELECTOR NECESSÁRIO: adicionar data-tour="relatorios-cards-area" no container
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>principal dos cards de relatório dentro de relatorios-page.component.html
+</code></pre></div>
+<p><strong>Condição de saída:</strong>
+- Ao concluir ou pular, setar <code>tour_relatorios_concluido = true</code>.</p>
+<hr />
+<h3 id="8-tour-perfil">8. tour-perfil<a class="headerlink" href="#8-tour-perfil" title="Permanent link">&para;</a></h3>
+<p><strong>Descrição:</strong> Apresenta a seção de perfil — dados pessoais e segurança da conta do gestor.</p>
+<p><strong>Condição de disparo:</strong>
+- Automático ao entrar em <code>/configuracoes/perfil</code> quando <code>tour_perfil_concluido == false</code>
+- Botão "Pular" disponível
+- Flags controladas: <code>tour_perfil_concluido</code></p>
+<p><strong>Steps:</strong></p>
+<h4 id="step-1_7">Step 1<a class="headerlink" href="#step-1_7" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>element:     [data-tour="perfil-card"]
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>route:       /configuracoes/perfil
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>title:       👤 Suas informações pessoais
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>description: Aqui ficam os seus dados de perfil — &lt;strong&gt;nome, e-mail e informações
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>             da sua conta&lt;/strong&gt;. Mantenha tudo atualizado para garantir que as
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>             notificações e relatórios cheguem corretamente.
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>side:        bottom
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-2_4">Step 2<a class="headerlink" href="#step-2_4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>element:     [data-tour="perfil-senha"]
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>route:       /configuracoes/perfil
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>title:       🔐 Mantenha sua conta segura
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>description: Troque sua senha regularmente e use uma &lt;strong&gt;combinação forte com
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>             letras, números e símbolos&lt;/strong&gt;. Sua conta dá acesso a dados sensíveis
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>             do seu time — segurança é inegociável.
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>side:        top
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>action:      nenhuma
+</code></pre></div>
+<h4 id="step-3-novo-selector-necessario_2">Step 3 (novo selector necessário)<a class="headerlink" href="#step-3-novo-selector-necessario_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>element:     [data-tour="configuracoes-tours"]
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>route:       /configuracoes/perfil
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>title:       🔁 Você pode rever qualquer tour
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>description: Em &lt;strong&gt;Configurações&lt;/strong&gt;, na seção "Tours e Onboarding", você
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>             encontra a lista de todos os tours disponíveis e pode rever qualquer um
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>             deles a qualquer momento. O ícone &lt;strong&gt;?&lt;/strong&gt; no topo de cada
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>             página também funciona para isso.
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>side:        top
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>action:      nenhuma
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>NOVO SELECTOR NECESSÁRIO: adicionar data-tour="configuracoes-tours" na seção de
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>tours dentro da tela de configurações (seção a ser criada — ver abaixo)
+</code></pre></div>
+<p><strong>Condição de saída:</strong>
+- Ao concluir ou pular, setar <code>tour_perfil_concluido = true</code>.</p>
+<hr />
+<h2 id="secao-rever-tours-nas-configuracoes">Seção "Rever tours" nas Configurações<a class="headerlink" href="#secao-rever-tours-nas-configuracoes" title="Permanent link">&para;</a></h2>
+<h3 id="localizacao">Localização<a class="headerlink" href="#localizacao" title="Permanent link">&para;</a></h3>
+<p>Adicionar uma nova seção na tela <code>/configuracoes/perfil</code> (ou numa aba futura de Configurações gerais), abaixo do card de segurança.</p>
+<h3 id="lista-de-tours-com-nome-amigavel">Lista de tours com nome amigável<a class="headerlink" href="#lista-de-tours-com-nome-amigavel" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Nome amigável</th>
+<th>Identificador interno</th>
+<th>Rota para disparar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visão geral do Manager</td>
+<td><code>tour-home</code></td>
+<td><code>/home</code></td>
+</tr>
+<tr>
+<td>Departamentos e Cargos</td>
+<td><code>tour-org-estrutura</code></td>
+<td><code>/organizacao?tab=departamentos</code></td>
+</tr>
+<tr>
+<td>Criação de Times</td>
+<td><code>tour-org-times</code></td>
+<td><code>/organizacao?tab=times</code></td>
+</tr>
+<tr>
+<td>Organograma e Instalador</td>
+<td><code>tour-org-hierarquia</code></td>
+<td><code>/organizacao?tab=hierarquia</code></td>
+</tr>
+<tr>
+<td>Painel de Colaboradores</td>
+<td><code>tour-colaboradores</code></td>
+<td><code>/colaboradores</code></td>
+</tr>
+<tr>
+<td>Perfil do Colaborador</td>
+<td><code>tour-colaborador-detalhe</code></td>
+<td><code>/colaboradores</code> (acessa um membro)</td>
+</tr>
+<tr>
+<td>Relatórios Semanais por IA</td>
+<td><code>tour-relatorios</code></td>
+<td><code>/relatorios</code></td>
+</tr>
+<tr>
+<td>Meu Perfil e Segurança</td>
+<td><code>tour-perfil</code></td>
+<td><code>/configuracoes/perfil</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="comportamento-do-botao-rever">Comportamento do botão "Rever"<a class="headerlink" href="#comportamento-do-botao-rever" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ao clicar em "Rever", o sistema:</li>
+<li>Zera a flag correspondente do tour (ex: <code>tour_relatorios_concluido = false</code>)</li>
+<li>Navega para a rota correta do tour</li>
+<li>O tour dispara automaticamente na rota de destino</li>
+<li>O botão "Rever" não reinicia flags de outros tours — cada tour é independente.</li>
+<li>Quando o tour está sendo revisto, o botão "Pular" está disponível (mesmo que o tour original fosse obrigatório, como o tour-home).</li>
+</ol>
+<h3 id="mockup-da-secao">Mockup da seção<a class="headerlink" href="#mockup-da-secao" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>┌────────────────────────────────────────────────────────┐
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>│ 🧭 Tours e Onboarding                                  │
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>│ Reveja qualquer seção do guia a qualquer momento.      │
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>├────────────────────────────────────────────────────────┤
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>│ Visão geral do Manager              [Rever tour →]     │
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>│ Departamentos e Cargos              [Rever tour →]     │
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>│ Criação de Times                    [Rever tour →]     │
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>│ Organograma e Instalador            [Rever tour →]     │
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>│ Painel de Colaboradores             [Rever tour →]     │
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>│ Perfil do Colaborador               [Rever tour →]     │
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>│ Relatórios Semanais por IA          [Rever tour →]     │
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>│ Meu Perfil e Segurança              [Rever tour →]     │
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>└────────────────────────────────────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="icone-no-header-de-cada-pagina">Ícone <code>?</code> no header de cada página<a class="headerlink" href="#icone-no-header-de-cada-pagina" title="Permanent link">&para;</a></h2>
+<h3 id="comportamento">Comportamento<a class="headerlink" href="#comportamento" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cada página que tem um tour associado exibe um ícone <code>?</code> (ou <code>pi-question-circle</code>) no canto superior direito do header da página.</li>
+<li>Ao clicar: zera a flag do tour correspondente e dispara o tour da página atual imediatamente (sem navegação).</li>
+<li>Tooltip ao hover: "Rever o tour desta seção"</li>
+</ul>
+<h3 id="onde-adicionar">Onde adicionar<a class="headerlink" href="#onde-adicionar" title="Permanent link">&para;</a></h3>
+<p>Adicionar ao componente <code>app-header</code> um <code>@Input() tourId: string</code> opcional. Quando preenchido, o ícone <code>?</code> aparece. O componente emite um evento que o <code>TourService</code> intercepta para disparar o tour correto.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="cm">&lt;!-- Exemplo de uso no template --&gt;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="p">&lt;</span><span class="nt">app-header</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>  <span class="na">titulo</span><span class="o">=</span><span class="s">"Relatórios"</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>  <span class="na">subtitulo</span><span class="o">=</span><span class="s">"Diagnósticos semanais por IA"</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>  <span class="na">tourId</span><span class="o">=</span><span class="s">"tour-relatorios"</span><span class="p">&gt;</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="p">&lt;/</span><span class="nt">app-header</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h2 id="novos-selectors-data-tour-necessarios">Novos selectors <code>data-tour</code> necessários<a class="headerlink" href="#novos-selectors-data-tour-necessarios" title="Permanent link">&para;</a></h2>
+<p>Lista consolidada de todos os selectors que precisam ser <strong>adicionados ao HTML</strong> (não existem ainda):</p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Arquivo</th>
+<th>Contexto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data-tour="colaboradores-lista"</code></td>
+<td><code>times-dashboard.page.html</code></td>
+<td>Container da lista de cards de colaboradores</td>
+</tr>
+<tr>
+<td><code>data-tour="detalhe-score-card"</code></td>
+<td><code>colaborador-detalhe</code> (componente principal)</td>
+<td>Card com IManager Score e KPIs</td>
+</tr>
+<tr>
+<td><code>data-tour="detalhe-timeline"</code></td>
+<td><code>colaborador-detalhe</code> (componente principal)</td>
+<td>Componente de gráfico/timeline de atividade</td>
+</tr>
+<tr>
+<td><code>data-tour="detalhe-indicadores"</code></td>
+<td><code>colaborador-detalhe</code> (componente principal)</td>
+<td>Card de indicadores psicológicos</td>
+</tr>
+<tr>
+<td><code>data-tour="detalhe-relatorio-link"</code></td>
+<td><code>colaborador-detalhe</code> (componente principal)</td>
+<td>Link/botão para relatórios individuais</td>
+</tr>
+<tr>
+<td><code>data-tour="relatorios-filtro-time"</code></td>
+<td><code>relatorios-page.component.html</code></td>
+<td>Componente <code>app-filtro-relatorio</code></td>
+</tr>
+<tr>
+<td><code>data-tour="relatorios-semana-nav"</code></td>
+<td><code>relatorios-page.component.html</code></td>
+<td>Componente <code>app-semana-navigator</code></td>
+</tr>
+<tr>
+<td><code>data-tour="relatorios-cards-area"</code></td>
+<td><code>relatorios-page.component.html</code></td>
+<td>Container dos cards de relatório</td>
+</tr>
+<tr>
+<td><code>data-tour="configuracoes-tours"</code></td>
+<td>Seção nova em <code>configuracoes/perfil</code></td>
+<td>Seção "Tours e Onboarding"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="selectors-existentes-reutilizados">Selectors existentes reutilizados<a class="headerlink" href="#selectors-existentes-reutilizados" title="Permanent link">&para;</a></h2>
+<p>Lista dos selectors do tour atual que continuam sendo usados no novo sistema:</p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Arquivo</th>
+<th>Tour que usa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data-tour="home-greeting"</code></td>
+<td><code>dashboard.component.html</code></td>
+<td>tour-home (step 1)</td>
+</tr>
+<tr>
+<td><code>data-tour="home-stats"</code></td>
+<td><code>dashboard.component.html</code></td>
+<td>tour-home (step 2)</td>
+</tr>
+<tr>
+<td><code>data-tour="home-quick-actions"</code></td>
+<td><code>dashboard.component.html</code></td>
+<td>tour-home (step 3)</td>
+</tr>
+<tr>
+<td><code>data-tour="menu-organizacao"</code></td>
+<td><code>menu.component.html</code></td>
+<td>tour-home (step 4)</td>
+</tr>
+<tr>
+<td><code>data-tour="tab-departamentos"</code></td>
+<td><code>hierarquia-gestao-page.component.html</code></td>
+<td>tour-org-estrutura (steps 1, 3)</td>
+</tr>
+<tr>
+<td><code>data-tour="tab-cargos"</code></td>
+<td><code>hierarquia-gestao-page.component.html</code></td>
+<td>tour-org-estrutura (step 2)</td>
+</tr>
+<tr>
+<td><code>data-tour="tab-times"</code></td>
+<td><code>hierarquia-gestao-page.component.html</code></td>
+<td>tour-org-times (steps 1, 2)</td>
+</tr>
+<tr>
+<td><code>data-tour="tab-hierarquia"</code></td>
+<td><code>hierarquia-gestao-page.component.html</code></td>
+<td>tour-org-hierarquia (steps 1, 4)</td>
+</tr>
+<tr>
+<td><code>data-tour="btn-gestao-pessoas"</code></td>
+<td><code>aba-hierarquia.component.html</code></td>
+<td>tour-org-hierarquia (step 2)</td>
+</tr>
+<tr>
+<td><code>data-tour="btn-download-instalador"</code></td>
+<td><code>aba-hierarquia.component.html</code></td>
+<td>tour-org-hierarquia (step 3)</td>
+</tr>
+<tr>
+<td><code>data-tour="times-header"</code></td>
+<td><code>times-dashboard.page.html</code></td>
+<td>tour-colaboradores (step 1)</td>
+</tr>
+<tr>
+<td><code>data-tour="times-select-card"</code></td>
+<td><code>times-dashboard.page.html</code></td>
+<td>tour-colaboradores (steps 2, 3)</td>
+</tr>
+<tr>
+<td><code>data-tour="relatorios-header"</code></td>
+<td><code>relatorios-page.component.html</code></td>
+<td>tour-relatorios (step 1)</td>
+</tr>
+<tr>
+<td><code>data-tour="perfil-card"</code></td>
+<td><code>perfil.component.html</code></td>
+<td>tour-perfil (step 1)</td>
+</tr>
+<tr>
+<td><code>data-tour="perfil-senha"</code></td>
+<td><code>perfil.component.html</code></td>
+<td>tour-perfil (step 2)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Selectors do tour atual que <strong>não são reutilizados</strong> no novo sistema:
+- <code>data-tour="menu-times"</code> — rota <code>/times</code> foi redirecionada para <code>/colaboradores</code>
+- <code>data-tour="menu-relatorios"</code> — não há step apontando para o menu de relatórios
+- <code>data-tour="menu-perfil"</code> — não há step apontando para o menu de perfil</p>
+</blockquote>
+<hr />
+<h2 id="resumo-de-steps-por-tour">Resumo de steps por tour<a class="headerlink" href="#resumo-de-steps-por-tour" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tour</th>
+<th style="text-align: center;">Steps mínimos</th>
+<th style="text-align: center;">Steps máximos</th>
+<th style="text-align: center;">Obrigatório</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tour-home</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Sim (sem pular)</td>
+</tr>
+<tr>
+<td>tour-org-estrutura</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>tour-org-times</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>tour-org-hierarquia</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>tour-colaboradores</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>tour-colaborador-detalhe</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>tour-relatorios</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>tour-perfil</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Não</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="notas-para-implementacao">Notas para implementação<a class="headerlink" href="#notas-para-implementacao" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Ordem de tours sugerida para o desenvolvedor:</strong>
+   <code>TourService</code> → <code>TourFlagService</code> (HTTP) → guards/resolvers nas rotas → componente de popover → animação do menu</p>
+</li>
+<li>
+<p><strong>A biblioteca de tour existente</strong> (sea qual for a atual) pode manter sua API de steps — o que muda é a lógica de disparo e o controle de flags por backend.</p>
+</li>
+<li>
+<p><strong>Flags no backend:</strong> criar endpoint <code>PATCH /api/v1/tour-flags</code> que recebe <code>{ flagName: string, value: boolean }</code> e valida <code>tenant_id</code> + <code>user_id</code> — nunca misturar flags entre usuários do mesmo tenant.</p>
+</li>
+<li>
+<p><strong>Verificação de dados reais:</strong> o <code>TourService</code> deve consultar o backend antes de disparar tours adaptativos (ex: "tem times?", "tem colaboradores?"). Usar observables com <code>combineLatest</code> para não bloquear a UI.</p>
+</li>
+<li>
+<p><strong>Acessibilidade:</strong> todos os popovers do tour devem ter <code>role="dialog"</code>, <code>aria-label</code> descritivo e foco gerenciado para teclado.</p>
+</li>
+</ol>
+<hr />
+<h2 id="personalizacao-por-perfil-de-acesso">Personalização por Perfil de Acesso<a class="headerlink" href="#personalizacao-por-perfil-de-acesso" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Status: <strong>Estrutura preparada — MVP1 usa o fluxo ADMIN para todos.</strong>
+Personalização real por perfil está planejada para uma iteração futura (pós-MVP1).</p>
+</blockquote>
+<p>Os 3 perfis do sistema:
+- <strong>ADMIN</strong> — configura empresa, vê tudo, acessa Organização
+- <strong>MANAGER</strong> — acompanha times da sua hierarquia, sem acesso a Organização
+- <strong>VIEWER</strong> — vê apenas seus próprios dados (perfil futuro, sem tela dedicada ainda)</p>
+<hr />
+<h3 id="a-matriz-de-visibilidade-por-perfil">A. Matriz de visibilidade por perfil<a class="headerlink" href="#a-matriz-de-visibilidade-por-perfil" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tour</th>
+<th style="text-align: center;">ADMIN</th>
+<th style="text-align: center;">MANAGER</th>
+<th style="text-align: center;">VIEWER</th>
+<th>Diferenças</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tour-home</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td>Step 4 muda completamente: ADMIN → Organização; MANAGER → Colaboradores; VIEWER → Perfil</td>
+</tr>
+<tr>
+<td>tour-org-estrutura</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">Não</td>
+<td>MANAGER/VIEWER não têm acesso à rota <code>/organizacao</code></td>
+</tr>
+<tr>
+<td>tour-org-times</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">Não</td>
+<td>Idem — rota restrita</td>
+</tr>
+<tr>
+<td>tour-org-hierarquia</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">Não</td>
+<td>Idem — rota restrita</td>
+</tr>
+<tr>
+<td>tour-colaboradores</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+<td>MANAGER vê "seus times" em vez de "todos os times"; VIEWER não tem acesso à lista</td>
+</tr>
+<tr>
+<td>tour-colaborador-detalhe</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim (só o próprio)</td>
+<td>VIEWER vê "sua produtividade" em vez de "do colaborador"; MANAGER vê time da hierarquia</td>
+</tr>
+<tr>
+<td>tour-relatorios</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+<td>MANAGER vê relatórios dos seus times; VIEWER não tem acesso</td>
+</tr>
+<tr>
+<td>tour-perfil</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td>Mesmos steps para os 3 perfis</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resumo por perfil:</strong>
+- <strong>ADMIN:</strong> todos os 8 tours
+- <strong>MANAGER:</strong> tour-home + tour-colaboradores + tour-colaborador-detalhe + tour-relatorios + tour-perfil (5 tours)
+- <strong>VIEWER:</strong> tour-home + tour-colaborador-detalhe (o próprio) + tour-perfil (3 tours)</p>
+<hr />
+<h3 id="b-steps-alternativos-por-perfil">B. Steps alternativos por perfil<a class="headerlink" href="#b-steps-alternativos-por-perfil" title="Permanent link">&para;</a></h3>
+<p>Os tours abaixo têm variações de conteúdo por perfil. Os demais tours mantêm os mesmos steps independentemente de quem está logado.</p>
+<hr />
+<h4 id="tour-home-variante-manager">tour-home — variante MANAGER<a class="headerlink" href="#tour-home-variante-manager" title="Permanent link">&para;</a></h4>
+<p><strong>Descrição:</strong> Boas-vindas ao Manager para o gestor de time. Apresenta o painel e direciona para Colaboradores (não para Organização).</p>
+<p><strong>Flags controladas:</strong> <code>tour_home_concluido</code>, <code>primeiro_login</code>, <code>menu_colaboradores_pulsando</code></p>
+<h5 id="step-1_8">Step 1<a class="headerlink" href="#step-1_8" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>element:     [data-tour="home-greeting"]
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>route:       /home
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>title:       👋 Bem-vindo ao Manager
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>description: Este é seu painel de acompanhamento. Aqui você tem uma visão rápida do
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>             que está acontecendo com &lt;strong&gt;seus times agora mesmo&lt;/strong&gt; — quem
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>             está online, quem está ausente e o resumo de produtividade.
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>side:        bottom
+</code></pre></div>
+<h5 id="step-2_5">Step 2<a class="headerlink" href="#step-2_5" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>element:     [data-tour="home-stats"]
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>route:       /home
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>title:       📊 O pulso dos seus times
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>description: Esses cartões mostram os &lt;strong&gt;indicadores em tempo real dos seus
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>             colaboradores&lt;/strong&gt;. Total monitorado, online e ausente. Os dados
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>             aparecem automaticamente quando o agente estiver ativo nas máquinas.
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>side:        bottom
+</code></pre></div>
+<h5 id="step-3_3">Step 3<a class="headerlink" href="#step-3_3" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>element:     [data-tour="home-quick-actions"]
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>route:       /home
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>title:       ⚡ Suas seções principais
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>description: Daqui você chega rápido em &lt;strong&gt;Colaboradores&lt;/strong&gt; para ver
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>             seus times, e em &lt;strong&gt;Relatórios&lt;/strong&gt; para os diagnósticos
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>             semanais por IA. Esses são os seus dois painéis centrais.
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>side:        top
+</code></pre></div>
+<h5 id="step-4_2">Step 4<a class="headerlink" href="#step-4_2" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>element:     [data-tour="menu-colaboradores"]
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>route:       /home
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>title:       👥 Comece pelos seus colaboradores
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>description: O seu primeiro passo é ir em &lt;strong&gt;Colaboradores&lt;/strong&gt; no menu.
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>             Lá você vê o status em tempo real dos seus times, acessa o perfil
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>             individual de cada um e acompanha os indicadores de saúde e produtividade.
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>side:        right
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>action:      nenhuma (apenas aponta; o usuário clica quando quiser)
+</code></pre></div>
+<p><strong>Condição de saída (MANAGER):</strong> Ao fechar o step 4, setar <code>tour_home_concluido = true</code>, <code>primeiro_login = false</code>, <code>menu_colaboradores_pulsando = true</code>.</p>
+<hr />
+<h4 id="tour-home-variante-viewer">tour-home — variante VIEWER<a class="headerlink" href="#tour-home-variante-viewer" title="Permanent link">&para;</a></h4>
+<p><strong>Descrição:</strong> Boas-vindas ao Manager para o próprio colaborador. Apresenta o painel e direciona para o próprio perfil de produtividade.</p>
+<p><strong>Flags controladas:</strong> <code>tour_home_concluido</code>, <code>primeiro_login</code></p>
+<h5 id="step-1_9">Step 1<a class="headerlink" href="#step-1_9" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>element:     [data-tour="home-greeting"]
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>route:       /home
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>title:       👋 Bem-vindo ao Manager
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>description: Este é o seu painel pessoal. Aqui você acompanha
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>             &lt;strong&gt;sua própria produtividade&lt;/strong&gt; — o que o sistema registra
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>             sobre seu trabalho, seus indicadores da semana e seu histórico.
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>side:        bottom
+</code></pre></div>
+<h5 id="step-2_6">Step 2<a class="headerlink" href="#step-2_6" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>element:     [data-tour="home-stats"]
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>route:       /home
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>title:       📊 Seus números da semana
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>description: Esses cartões mostram um resumo do &lt;strong&gt;que o Manager registrou
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>             sobre você&lt;/strong&gt;. Os dados são coletados pelo agente instalado no
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>             seu computador — sem keylogger, sem câmera, só atividade de trabalho.
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>side:        bottom
+</code></pre></div>
+<h5 id="step-3_4">Step 3<a class="headerlink" href="#step-3_4" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>element:     [data-tour="home-quick-actions"]
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>route:       /home
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>title:       ⚡ O que você pode acessar
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>description: A partir daqui você acessa &lt;strong&gt;seu perfil de produtividade&lt;/strong&gt;
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>             com sua linha do tempo, seu IManager Score e seus indicadores. Transparência
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>             total sobre o que o sistema sabe sobre você.
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>side:        top
+</code></pre></div>
+<h5 id="step-4_3">Step 4<a class="headerlink" href="#step-4_3" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>element:     [data-tour="menu-perfil"]
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>route:       /home
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>title:       👤 Veja sua produtividade
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>description: Clique em &lt;strong&gt;Perfil&lt;/strong&gt; no menu para acessar seu painel
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>             individual — sua linha do tempo de atividade, seu score da semana e
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>             os indicadores que o sistema calcula para você.
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>side:        right
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>action:      nenhuma (apenas aponta; o usuário clica quando quiser)
+</code></pre></div>
+<p><strong>Condição de saída (VIEWER):</strong> Ao fechar o step 4, setar <code>tour_home_concluido = true</code>, <code>primeiro_login = false</code>.</p>
+<hr />
+<h4 id="tour-colaboradores-variante-manager">tour-colaboradores — variante MANAGER<a class="headerlink" href="#tour-colaboradores-variante-manager" title="Permanent link">&para;</a></h4>
+<p><strong>Descrição:</strong> Apresenta o painel de colaboradores com foco em "seus times" — não todos os times da empresa, só os da hierarquia do gestor.</p>
+<h5 id="step-1_10">Step 1<a class="headerlink" href="#step-1_10" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>element:     [data-tour="times-header"]
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>route:       /colaboradores
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>title:       👥 Seus Times
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>description: Aqui você acompanha &lt;strong&gt;os colaboradores dos seus times em tempo
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>             real&lt;/strong&gt;. Selecione um time no campo abaixo para ver quem está
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>             online, ausente ou offline.
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>side:        bottom
+</code></pre></div>
+<h5 id="step-2-sem-times-na-hierarquia-do-manager">Step 2 (sem times na hierarquia do MANAGER)<a class="headerlink" href="#step-2-sem-times-na-hierarquia-do-manager" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>element:     [data-tour="times-select-card"]
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>route:       /colaboradores
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>title:       ⚠️ Nenhum time atribuído ainda
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>description: Você ainda não tem times vinculados à sua hierarquia. Fale com o
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>             &lt;strong&gt;administrador da empresa&lt;/strong&gt; para que seus times sejam
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>             configurados — assim que isso acontecer, o painel estará pronto.
+<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>side:        bottom
+</code></pre></div>
+<h5 id="step-2-alt-com-times-na-hierarquia-do-manager">Step 2-alt (com times na hierarquia do MANAGER)<a class="headerlink" href="#step-2-alt-com-times-na-hierarquia-do-manager" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>element:     [data-tour="times-select-card"]
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>route:       /colaboradores
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>title:       🔍 Escolha qual time visualizar
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>description: Use esse campo para &lt;strong&gt;selecionar um dos seus times&lt;/strong&gt;.
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>             Cada time tem seu próprio painel com status, scores e indicadores.
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>             Você alterna entre times a qualquer momento.
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>side:        bottom
+</code></pre></div>
+<h5 id="steps-3-a-5">Steps 3 a 5<a class="headerlink" href="#steps-3-a-5" title="Permanent link">&para;</a></h5>
+<p>Os mesmos do tour base (aguardando dados do agente, lista de cards, clique no colaborador) — sem alteração de conteúdo.</p>
+<hr />
+<h4 id="tour-colaborador-detalhe-variante-viewer">tour-colaborador-detalhe — variante VIEWER<a class="headerlink" href="#tour-colaborador-detalhe-variante-viewer" title="Permanent link">&para;</a></h4>
+<p><strong>Descrição:</strong> O VIEWER vê seu próprio perfil. A linguagem muda para "você" em vez de "o colaborador". Os selectors são os mesmos — a rota é <code>/colaboradores/membro/:id</code> onde <code>:id</code> é o próprio usuário.</p>
+<h5 id="step-1_11">Step 1<a class="headerlink" href="#step-1_11" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>element:     [data-tour="detalhe-score-card"]
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>route:       /colaboradores/membro/:id
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>title:       🏆 Seu IManager Score
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>description: Esse número resume &lt;strong&gt;sua semana de trabalho em 0 a 100&lt;/strong&gt;,
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>             calculado com base em 6 pilares como atividade, foco e consistência.
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>             A IA interpreta o score — você não precisa fazer contas.
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>side:        bottom
+</code></pre></div>
+<h5 id="step-2_7">Step 2<a class="headerlink" href="#step-2_7" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>element:     [data-tour="detalhe-timeline"]
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>route:       /colaboradores/membro/:id
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>title:       📅 Sua linha do tempo de atividade
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>description: Aqui você vê &lt;strong&gt;como você distribuiu sua atividade ao longo da
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>             semana&lt;/strong&gt; — hora a hora, dia a dia. Você pode identificar seus
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>             próprios padrões de foco, pico de trabalho e momentos de baixa.
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>side:        top
+</code></pre></div>
+<h5 id="step-3_5">Step 3<a class="headerlink" href="#step-3_5" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>element:     [data-tour="detalhe-indicadores"]
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>route:       /colaboradores/membro/:id
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>title:       🧠 Seus indicadores de saúde
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>description: Esta seção mostra sinais como &lt;strong&gt;risco de burnout, desengajamento
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>             e sobrecarga&lt;/strong&gt; com base nos seus padrões de atividade. É uma
+<a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a>             ferramenta de autocuidado — dados objetivos sobre como você está.
+<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a>side:        top
+</code></pre></div>
+<h5 id="step-4_4">Step 4<a class="headerlink" href="#step-4_4" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>element:     [data-tour="detalhe-relatorio-link"]
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>route:       /colaboradores/membro/:id
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>title:       📄 Seu relatório semanal completo
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>description: Quer entender mais? O &lt;strong&gt;relatório semanal por IA&lt;/strong&gt; traz
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>             um diagnóstico em linguagem natural sobre a sua semana — o que foi bem,
+<a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>             o que merece atenção e como você pode se organizar melhor.
+<a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a>side:        top
+</code></pre></div>
+<hr />
+<h3 id="c-estrutura-tecnica-sugerida">C. Estrutura técnica sugerida<a class="headerlink" href="#c-estrutura-tecnica-sugerida" title="Permanent link">&para;</a></h3>
+<p>A abordagem recomendada é <strong>definição centralizada com overrides por perfil</strong>, evitando duplicação de steps inteiros quando só o texto muda.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="kr">type</span><span class="w"> </span><span class="nx">PortalRole</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ADMIN'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'MANAGER'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'VIEWER'</span><span class="p">;</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="kd">interface</span><span class="w"> </span><span class="nx">TourStep</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="w">  </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a><span class="w">  </span><span class="nx">route</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a><span class="w">  </span><span class="nx">queryParams?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
+<a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a><span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a><span class="w">  </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-50-9" name="__codelineno-50-9" href="#__codelineno-50-9"></a><span class="w">  </span><span class="nx">side</span><span class="o">:</span><span class="w"> </span><span class="s1">'top'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'bottom'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'left'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'right'</span><span class="p">;</span>
+<a id="__codelineno-50-10" name="__codelineno-50-10" href="#__codelineno-50-10"></a><span class="w">  </span><span class="nx">action?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-50-11" name="__codelineno-50-11" href="#__codelineno-50-11"></a><span class="p">}</span>
+<a id="__codelineno-50-12" name="__codelineno-50-12" href="#__codelineno-50-12"></a>
+<a id="__codelineno-50-13" name="__codelineno-50-13" href="#__codelineno-50-13"></a><span class="kd">interface</span><span class="w"> </span><span class="nx">TourDefinition</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-50-14" name="__codelineno-50-14" href="#__codelineno-50-14"></a><span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-50-15" name="__codelineno-50-15" href="#__codelineno-50-15"></a><span class="w">  </span><span class="nx">visibleTo</span><span class="o">:</span><span class="w"> </span><span class="kt">PortalRole</span><span class="p">[];</span><span class="w">           </span><span class="c1">// quais perfis disparam este tour</span>
+<a id="__codelineno-50-16" name="__codelineno-50-16" href="#__codelineno-50-16"></a><span class="w">  </span><span class="nx">steps</span><span class="o">:</span><span class="w"> </span><span class="kt">TourStep</span><span class="p">[];</span><span class="w">                  </span><span class="c1">// steps base (ADMIN ou default)</span>
+<a id="__codelineno-50-17" name="__codelineno-50-17" href="#__codelineno-50-17"></a><span class="w">  </span><span class="nx">overrides</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-50-18" name="__codelineno-50-18" href="#__codelineno-50-18"></a><span class="w">    </span><span class="nx">MANAGER?</span><span class="o">:</span><span class="w"> </span><span class="kt">Partial</span><span class="o">&lt;</span><span class="nx">TourStep</span><span class="o">&gt;</span><span class="p">[];</span><span class="w">    </span><span class="c1">// sobrescreve campos dos steps por índice</span>
+<a id="__codelineno-50-19" name="__codelineno-50-19" href="#__codelineno-50-19"></a><span class="w">    </span><span class="nx">VIEWER?</span><span class="o">:</span><span class="w"> </span><span class="kt">Partial</span><span class="o">&lt;</span><span class="nx">TourStep</span><span class="o">&gt;</span><span class="p">[];</span><span class="w">     </span><span class="c1">// null num índice = usar step base; objeto = merge</span>
+<a id="__codelineno-50-20" name="__codelineno-50-20" href="#__codelineno-50-20"></a><span class="w">  </span><span class="p">};</span>
+<a id="__codelineno-50-21" name="__codelineno-50-21" href="#__codelineno-50-21"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Regra de merge:</strong> <code>overrides.MANAGER[i]</code> faz um merge raso (<code>Object.assign</code>) sobre <code>steps[i]</code>. Se o índice não existir no override (ou for <code>null</code>), usa o step base. Se o override tiver <code>null</code> como valor explícito para um índice, o step é <strong>omitido</strong> para esse perfil.</p>
+<p><strong>Exemplo de uso para tour-home:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tourHome</span><span class="o">:</span><span class="w"> </span><span class="kt">TourDefinition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'tour-home'</span><span class="p">,</span>
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="w">  </span><span class="nx">visibleTo</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'ADMIN'</span><span class="p">,</span><span class="w"> </span><span class="s1">'MANAGER'</span><span class="p">,</span><span class="w"> </span><span class="s1">'VIEWER'</span><span class="p">],</span>
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a><span class="w">  </span><span class="nx">steps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a><span class="w">    </span><span class="c1">// steps base = versão ADMIN (steps 1 a 4 conforme documento base)</span>
+<a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="s1">'[data-tour="home-greeting"]'</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'👋 Bem-vindo ao Manager'</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="s1">'[data-tour="home-stats"]'</span><span class="p">,</span><span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'📊 Seus números em tempo real'</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-8" name="__codelineno-51-8" href="#__codelineno-51-8"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="s1">'[data-tour="home-quick-actions"]'</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'⚡ Atalhos para as seções principais'</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-9" name="__codelineno-51-9" href="#__codelineno-51-9"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="s1">'[data-tour="menu-organizacao"]'</span><span class="p">,</span><span class="w">   </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'🏢 O primeiro passo é aqui'</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-10" name="__codelineno-51-10" href="#__codelineno-51-10"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-51-11" name="__codelineno-51-11" href="#__codelineno-51-11"></a><span class="w">  </span><span class="nx">overrides</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-51-12" name="__codelineno-51-12" href="#__codelineno-51-12"></a><span class="w">    </span><span class="nx">MANAGER</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-51-13" name="__codelineno-51-13" href="#__codelineno-51-13"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">'Este é seu painel de acompanhamento. Aqui você tem uma visão rápida do que está acontecendo com seus times agora mesmo...'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-14" name="__codelineno-51-14" href="#__codelineno-51-14"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'📊 O pulso dos seus times'</span><span class="p">,</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">'Esses cartões mostram os indicadores em tempo real dos seus colaboradores...'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-15" name="__codelineno-51-15" href="#__codelineno-51-15"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">'Daqui você chega rápido em Colaboradores para ver seus times, e em Relatórios para os diagnósticos semanais por IA...'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-16" name="__codelineno-51-16" href="#__codelineno-51-16"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="s1">'[data-tour="menu-colaboradores"]'</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'👥 Comece pelos seus colaboradores'</span><span class="p">,</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">'O seu primeiro passo é ir em Colaboradores no menu...'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-17" name="__codelineno-51-17" href="#__codelineno-51-17"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-51-18" name="__codelineno-51-18" href="#__codelineno-51-18"></a><span class="w">    </span><span class="nx">VIEWER</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-51-19" name="__codelineno-51-19" href="#__codelineno-51-19"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">'Este é o seu painel pessoal. Aqui você acompanha sua própria produtividade...'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-20" name="__codelineno-51-20" href="#__codelineno-51-20"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'📊 Seus números da semana'</span><span class="p">,</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">'Esses cartões mostram um resumo do que o Manager registrou sobre você...'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-21" name="__codelineno-51-21" href="#__codelineno-51-21"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">'A partir daqui você acessa seu perfil de produtividade com sua linha do tempo...'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-22" name="__codelineno-51-22" href="#__codelineno-51-22"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="s1">'[data-tour="menu-perfil"]'</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">'👤 Veja sua produtividade'</span><span class="p">,</span><span class="w"> </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">'Clique em Perfil no menu para acessar seu painel individual...'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-51-23" name="__codelineno-51-23" href="#__codelineno-51-23"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-51-24" name="__codelineno-51-24" href="#__codelineno-51-24"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-51-25" name="__codelineno-51-25" href="#__codelineno-51-25"></a><span class="p">};</span>
+</code></pre></div>
+<p><strong>Por que não criar 3 arquivos separados de steps:</strong> a maioria dos steps muda apenas o texto de <code>description</code> ou <code>title</code>. Manter tudo em um único objeto com overrides facilita manutenção — se o selector mudar, muda em um lugar só.</p>
+<p><strong>Quando criar um tour completamente separado:</strong> se mais de 60% dos steps de um perfil forem diferentes (estrutura diferente, não só texto), crie um <code>TourDefinition</code> próprio com <code>id: 'tour-home-viewer'</code> e registre-o no <code>TourRegistry</code> como alternativo para aquele perfil.</p>
+<hr />
+<h3 id="d-fluxo-de-decisao-atualizado-pseudocodigo-com-perfil">D. Fluxo de decisão atualizado (pseudocódigo com perfil)<a class="headerlink" href="#d-fluxo-de-decisao-atualizado-pseudocodigo-com-perfil" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>ao entrar em /home:
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>  perfil = usuario.perfil                          // 'ADMIN' | 'MANAGER' | 'VIEWER'
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>  se primeiro_login == true:
+<a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a>    steps = resolver_steps('tour-home', perfil)    // aplica overrides conforme perfil
+<a id="__codelineno-52-5" name="__codelineno-52-5" href="#__codelineno-52-5"></a>    disparar tour-home com steps resolvidos (sem opção de pular)
+<a id="__codelineno-52-6" name="__codelineno-52-6" href="#__codelineno-52-6"></a>    ao concluir:
+<a id="__codelineno-52-7" name="__codelineno-52-7" href="#__codelineno-52-7"></a>      setar tour_home_concluido = true
+<a id="__codelineno-52-8" name="__codelineno-52-8" href="#__codelineno-52-8"></a>      setar primeiro_login = false
+<a id="__codelineno-52-9" name="__codelineno-52-9" href="#__codelineno-52-9"></a>      se perfil == 'ADMIN':    setar menu_org_pulsando = true
+<a id="__codelineno-52-10" name="__codelineno-52-10" href="#__codelineno-52-10"></a>      se perfil == 'MANAGER':  setar menu_colaboradores_pulsando = true
+<a id="__codelineno-52-11" name="__codelineno-52-11" href="#__codelineno-52-11"></a>      // VIEWER: nenhum item pulsa
+<a id="__codelineno-52-12" name="__codelineno-52-12" href="#__codelineno-52-12"></a>
+<a id="__codelineno-52-13" name="__codelineno-52-13" href="#__codelineno-52-13"></a>ao entrar em /organizacao (qualquer tab):
+<a id="__codelineno-52-14" name="__codelineno-52-14" href="#__codelineno-52-14"></a>  se perfil != 'ADMIN':
+<a id="__codelineno-52-15" name="__codelineno-52-15" href="#__codelineno-52-15"></a>    redirecionar para /home (acesso negado — não exibir tour)
+<a id="__codelineno-52-16" name="__codelineno-52-16" href="#__codelineno-52-16"></a>  senão:
+<a id="__codelineno-52-17" name="__codelineno-52-17" href="#__codelineno-52-17"></a>    fluxo normal dos tours org (conforme documento base)
+<a id="__codelineno-52-18" name="__codelineno-52-18" href="#__codelineno-52-18"></a>
+<a id="__codelineno-52-19" name="__codelineno-52-19" href="#__codelineno-52-19"></a>ao entrar em /colaboradores:
+<a id="__codelineno-52-20" name="__codelineno-52-20" href="#__codelineno-52-20"></a>  se perfil == 'VIEWER':
+<a id="__codelineno-52-21" name="__codelineno-52-21" href="#__codelineno-52-21"></a>    redirecionar para /colaboradores/membro/:id-proprio (ou /home)
+<a id="__codelineno-52-22" name="__codelineno-52-22" href="#__codelineno-52-22"></a>  senão:
+<a id="__codelineno-52-23" name="__codelineno-52-23" href="#__codelineno-52-23"></a>    steps = resolver_steps('tour-colaboradores', perfil)  // ADMIN = base, MANAGER = override
+<a id="__codelineno-52-24" name="__codelineno-52-24" href="#__codelineno-52-24"></a>    fluxo normal de disparo conforme flags
+<a id="__codelineno-52-25" name="__codelineno-52-25" href="#__codelineno-52-25"></a>
+<a id="__codelineno-52-26" name="__codelineno-52-26" href="#__codelineno-52-26"></a>ao entrar em /colaboradores/membro/:id:
+<a id="__codelineno-52-27" name="__codelineno-52-27" href="#__codelineno-52-27"></a>  se perfil == 'VIEWER' E id != usuario.id:
+<a id="__codelineno-52-28" name="__codelineno-52-28" href="#__codelineno-52-28"></a>    redirecionar para /colaboradores/membro/:id-proprio  (VIEWER só vê o próprio)
+<a id="__codelineno-52-29" name="__codelineno-52-29" href="#__codelineno-52-29"></a>  steps = resolver_steps('tour-colaborador-detalhe', perfil)
+<a id="__codelineno-52-30" name="__codelineno-52-30" href="#__codelineno-52-30"></a>  fluxo normal conforme flags
+<a id="__codelineno-52-31" name="__codelineno-52-31" href="#__codelineno-52-31"></a>
+<a id="__codelineno-52-32" name="__codelineno-52-32" href="#__codelineno-52-32"></a>ao entrar em /relatorios:
+<a id="__codelineno-52-33" name="__codelineno-52-33" href="#__codelineno-52-33"></a>  se perfil == 'VIEWER':
+<a id="__codelineno-52-34" name="__codelineno-52-34" href="#__codelineno-52-34"></a>    redirecionar para /home (acesso negado)
+<a id="__codelineno-52-35" name="__codelineno-52-35" href="#__codelineno-52-35"></a>  senão:
+<a id="__codelineno-52-36" name="__codelineno-52-36" href="#__codelineno-52-36"></a>    fluxo normal do tour-relatorios (sem variação de steps por perfil)
+<a id="__codelineno-52-37" name="__codelineno-52-37" href="#__codelineno-52-37"></a>
+<a id="__codelineno-52-38" name="__codelineno-52-38" href="#__codelineno-52-38"></a>ao entrar em /configuracoes/perfil:
+<a id="__codelineno-52-39" name="__codelineno-52-39" href="#__codelineno-52-39"></a>  fluxo normal do tour-perfil (sem variação por perfil)
+<a id="__codelineno-52-40" name="__codelineno-52-40" href="#__codelineno-52-40"></a>
+<a id="__codelineno-52-41" name="__codelineno-52-41" href="#__codelineno-52-41"></a>// Função auxiliar
+<a id="__codelineno-52-42" name="__codelineno-52-42" href="#__codelineno-52-42"></a>resolver_steps(tourId, perfil):
+<a id="__codelineno-52-43" name="__codelineno-52-43" href="#__codelineno-52-43"></a>  tour = TourRegistry.get(tourId)
+<a id="__codelineno-52-44" name="__codelineno-52-44" href="#__codelineno-52-44"></a>  se perfil == 'ADMIN' OU tour.overrides[perfil] == undefined:
+<a id="__codelineno-52-45" name="__codelineno-52-45" href="#__codelineno-52-45"></a>    retornar tour.steps
+<a id="__codelineno-52-46" name="__codelineno-52-46" href="#__codelineno-52-46"></a>  retornar tour.steps.map((step, i) =&gt;
+<a id="__codelineno-52-47" name="__codelineno-52-47" href="#__codelineno-52-47"></a>    tour.overrides[perfil][i] == null
+<a id="__codelineno-52-48" name="__codelineno-52-48" href="#__codelineno-52-48"></a>      ? OMITIR_STEP
+<a id="__codelineno-52-49" name="__codelineno-52-49" href="#__codelineno-52-49"></a>      : Object.assign({}, step, tour.overrides[perfil][i] ?? {})
+<a id="__codelineno-52-50" name="__codelineno-52-50" href="#__codelineno-52-50"></a>  )
+</code></pre></div>
+<hr />
+<h3 id="e-menu-pulsando-por-perfil">E. Menu pulsando por perfil<a class="headerlink" href="#e-menu-pulsando-por-perfil" title="Permanent link">&para;</a></h3>
+<p>A animação de "menu pulsando" é o CTA visual pós-tour-home — direciona para onde o perfil deve ir primeiro.</p>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Item que pulsa</th>
+<th>Flag controlada</th>
+<th>Para de pulsar quando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADMIN</td>
+<td>Organização (<code>[data-tour="menu-organizacao"]</code>)</td>
+<td><code>menu_org_pulsando</code></td>
+<td>Usuário clica em Organização</td>
+</tr>
+<tr>
+<td>MANAGER</td>
+<td>Colaboradores (<code>[data-tour="menu-colaboradores"]</code>)</td>
+<td><code>menu_colaboradores_pulsando</code></td>
+<td>Usuário clica em Colaboradores</td>
+</tr>
+<tr>
+<td>VIEWER</td>
+<td>Nenhum item pulsa</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>VIEWER sem pulsação:</strong> o VIEWER já é direcionado pelo step 4 do tour-home para Perfil. Como não há ação urgente de configuração, não pulsar é a escolha certa — evita ansiedade sem propósito.</p>
+</blockquote>
+<p><strong>Nova flag necessária no banco:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Tipo</th>
+<th>Default</th>
+<th>Quando muda para <code>true</code></th>
+<th>Quando volta para <code>false</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>menu_colaboradores_pulsando</code></td>
+<td>boolean</td>
+<td>false</td>
+<td>Após tour-home concluído por MANAGER</td>
+<td>Quando MANAGER clica em Colaboradores</td>
+</tr>
+</tbody>
+</table>
+<p>Adicionar à tabela de flags da seção "Tabela de flags do usuário".</p>
+<p><strong>Seletor necessário (novo):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Arquivo</th>
+<th>Contexto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data-tour="menu-colaboradores"</code></td>
+<td><code>menu.component.html</code></td>
+<td>Item "Colaboradores" no menu lateral — usado no tour-home variante MANAGER</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="f-secao-rever-tours-nas-configuracoes-filtrada-por-perfil">F. Seção "Rever tours" nas Configurações — filtrada por perfil<a class="headerlink" href="#f-secao-rever-tours-nas-configuracoes-filtrada-por-perfil" title="Permanent link">&para;</a></h3>
+<p>A lista de tours exibida na seção "Tours e Onboarding" em <code>/configuracoes/perfil</code> deve ser filtrada pelo perfil do usuário logado — o MANAGER não precisa ver botões de tours de Organização que ele nunca acessará.</p>
+<table>
+<thead>
+<tr>
+<th>Tour (nome amigável)</th>
+<th style="text-align: center;">ADMIN</th>
+<th style="text-align: center;">MANAGER</th>
+<th style="text-align: center;">VIEWER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visão geral do Manager</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td>Departamentos e Cargos</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Criação de Times</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Organograma e Instalador</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Painel de Colaboradores</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Perfil do Colaborador</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td>Relatórios Semanais por IA</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Meu Perfil e Segurança</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>MVP1 — O que entra agora:</strong> todos os usuários recebem o fluxo ADMIN (steps base, menu Organização pulsando). A estrutura de <code>TourDefinition</code> com <code>visibleTo</code> e <code>overrides</code> já pode ser implementada no <code>TourService</code>, mas os overrides de MANAGER e VIEWER ficam vazios até a iteração de personalização.</p>
+<p><strong>Pós-MVP1 — O que vem depois:</strong> popular os overrides de MANAGER e VIEWER, implementar a lógica de <code>resolver_steps</code> por perfil, criar a flag <code>menu_colaboradores_pulsando</code> e filtrar a seção "Rever tours" por perfil.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

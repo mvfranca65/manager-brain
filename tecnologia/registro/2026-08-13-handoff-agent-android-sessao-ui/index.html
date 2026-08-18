@@ -1,0 +1,1725 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/registro/2026-08-13-handoff-agent-android-sessao-ui/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Handoff — Agent Android: sessão, UI e APK de validação - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#handoff-agent-android-sessao-ui-e-apk-de-validacao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Handoff — Agent Android: sessão, UI e APK de validação
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#decisao-arquitetural-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisão arquitetural final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-foi-implementado-localmente-no-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que foi implementado localmente no Android
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="O que foi implementado localmente no Android">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comportamento-de-sessao-pretendido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comportamento de sessão pretendido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-da-revisao-do-envio-por-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado da revisão do envio por sessão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-da-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado da UI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estado da UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correcoes-de-ui-iniciadas-mas-nao-commitadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correções de UI iniciadas, mas não commitadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-apk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build / APK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-e-limitacoes-conhecidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes e limitações conhecidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxima-sequencia-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Próxima sequência recomendada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositoriosworktrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repositórios/worktrees
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="handoff-agent-android-sessao-ui-e-apk-de-validacao">Handoff — Agent Android: sessão, UI e APK de validação<a class="headerlink" href="#handoff-agent-android-sessao-ui-e-apk-de-validacao" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Data:</strong> 2026-08-13
+<strong>Status:</strong> pausado por Marcos antes de push/deploy
+<strong>Branch de trabalho:</strong> <code>feature/agent-android-health</code>
+<strong>Worktree Android:</strong> <code>/private/tmp/manager-agent-health.NCVfrS/android</code>
+<strong>Base:</strong> <code>origin/staging</code> no commit <code>18f98ff</code></p>
+</blockquote>
+<h2 id="decisao-arquitetural-final">Decisão arquitetural final<a class="headerlink" href="#decisao-arquitetural-final" title="Permanent link">&para;</a></h2>
+<p>Não criar endpoint/tabela/ping de health. A ideia de <code>POST /api/agent/health</code> foi implementada apenas em worktree isolado, revisada e <strong>descartada sem push</strong>. O <code>srv-events-node</code> retornou ao commit base <code>3effe4b</code>.</p>
+<p>Observabilidade será feita depois usando os sinais já existentes:</p>
+<ul>
+<li><code>POST /api/agent/events</code>;</li>
+<li><code>HeartbeatEvent</code> existente;</li>
+<li><code>SessionEvent</code> (<code>LOCK</code>/<code>UNLOCK</code>);</li>
+<li>auditorias existentes de transições/falhas;</li>
+<li>métricas HTTP/Loki e tabelas existentes no Grafana.</li>
+</ul>
+<p>Grafana e Portal foram explicitamente pausados. A prioridade definida por Marcos é fechar <strong>envio por sessão</strong>, <strong>UI Android</strong> e <strong>APK de validação</strong>.</p>
+<h2 id="o-que-foi-implementado-localmente-no-android">O que foi implementado localmente no Android<a class="headerlink" href="#o-que-foi-implementado-localmente-no-android" title="Permanent link">&para;</a></h2>
+<p>Todos os commits abaixo existem somente no worktree/branch local. Nenhum push ou deploy foi feito.</p>
+<table>
+<thead>
+<tr>
+<th>Commit</th>
+<th>Entrega</th>
+<th>Motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ac692b0</code></td>
+<td>Fila Room com lease atômica, ACK/NACK por lease, coordinator único</td>
+<td>Evitar duplicidade entre ticker, lock/unlock, WorkManager e retry.</td>
+</tr>
+<tr>
+<td><code>deadeef</code></td>
+<td>Continuação após limite de cinco batches</td>
+<td>Backlog &gt;500 eventos não espera o próximo gatilho.</td>
+</tr>
+<tr>
+<td><code>fc1fc6c</code></td>
+<td>Sincronização por sessão</td>
+<td>Heartbeat existente a cada 60 s desbloqueado; <code>LOCK</code>/<code>UNLOCK</code> solicitam upload imediato.</td>
+</tr>
+<tr>
+<td><code>61c4cd2</code>, <code>8ab819e</code>, <code>4cf4b2c</code>, <code>a841e74</code></td>
+<td>Correções de concorrência e limites de sessão</td>
+<td>FIFO de transições, gate dos collectors, ticker sem sobreposição, boundaries de lock, telefone e Usage Stats.</td>
+</tr>
+<tr>
+<td><code>fbc5ae5</code>, <code>19508c7</code></td>
+<td>Cobertura de concorrência e producers reais</td>
+<td>Testes para telefone, Usage Stats, URL pós-admissão e callback do receiver.</td>
+</tr>
+<tr>
+<td><code>e4c5200</code></td>
+<td>UI de diagnóstico segura</td>
+<td>Modal de vínculo persistente, <code>AgentStatusActivity</code>, notificação abrindo status, ícones e remoção de body/stack bruto.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="comportamento-de-sessao-pretendido">Comportamento de sessão pretendido<a class="headerlink" href="#comportamento-de-sessao-pretendido" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Desbloqueado: foreground service gera <code>HeartbeatEvent</code> existente e solicita envio a cada 60 s.</li>
+<li><code>LOCK</code>: persiste <code>SessionEvent(LOCK)</code>, solicita upload e pausa collectors/tickers.</li>
+<li><code>UNLOCK</code>: persiste <code>SessionEvent(UNLOCK)</code>, solicita upload e retoma collectors/tickers.</li>
+<li>Sem rede: eventos continuam na Room; retry/WorkManager de 15 min são recuperação durável.</li>
+<li>A fila reserva IDs com lease; não usa <code>ExistingWorkPolicy.REPLACE</code>.</li>
+</ul>
+<h2 id="estado-da-revisao-do-envio-por-sessao">Estado da revisão do envio por sessão<a class="headerlink" href="#estado-da-revisao-do-envio-por-sessao" title="Permanent link">&para;</a></h2>
+<p><strong>Ainda não aprovado.</strong> A última revisão encontrou um único ponto importante após as demais correções:</p>
+<ul>
+<li><code>SessionBroadcastReceiver.onReceive()</code> deve chamar <code>goAsync()</code> <strong>sincronamente antes de retornar</strong> e passar <code>pending::finish</code> para a fila. Na versão atual, a lambda adia <code>goAsync()</code> até o processamento, o que pode deixar o broadcast ser finalizado cedo.</li>
+<li>O teste também deve passar pelo caminho equivalente a <code>onReceive → goAsync → barreira → enqueue rejeitado</code>, verificando <code>finish()</code> exatamente uma vez.</li>
+</ul>
+<p>Parecer: <a href="/private/tmp/manager-agent-health.NCVfrS/android/.superpowers/sdd/2026-08-13-agent-android-entrega-confiavel-health/task-2-session-resumed-final.md">task-2-session-resumed-final.md</a>.</p>
+<p>Depois desse ajuste, refazer a revisão final (o agente de revisão foi interrompido para priorizar UI).</p>
+<h2 id="estado-da-ui">Estado da UI<a class="headerlink" href="#estado-da-ui" title="Permanent link">&para;</a></h2>
+<p>O commit <code>e4c5200</code> implementou:</p>
+<ul>
+<li>modal Material de vínculo com processando/falha/retry;</li>
+<li>sucesso inicia o serviço e abre <code>AgentStatusActivity</code>;</li>
+<li>launcher deixa de ser desabilitado para que o app tenha ponto de entrada;</li>
+<li>tela mostra versão, ambiente, estado local, permissões, fila e diagnóstico categorizado;</li>
+<li>notificação abre a tela de status;</li>
+<li>corpo HTTP e stack trace bruto de staging foram removidos do fluxo visual;</li>
+<li>ícone do launcher e ícone monocromático de notificação foram atualizados;</li>
+<li>versão no Gradle: <code>1.0.12</code>, <code>versionCode 13</code> (efetivo: <code>1.0.12-staging (13)</code>).</li>
+</ul>
+<h3 id="correcoes-de-ui-iniciadas-mas-nao-commitadas">Correções de UI iniciadas, mas não commitadas<a class="headerlink" href="#correcoes-de-ui-iniciadas-mas-nao-commitadas" title="Permanent link">&para;</a></h3>
+<p>O desenvolvedor estava corrigindo quatro achados da revisão quando foi interrompido. Há alterações <strong>não commitadas</strong> no worktree Android:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>M  app/src/test/kotlin/com/trivion/manageragent/ui/AgentStatusPresenterTest.kt
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>?? app/src/test/kotlin/com/trivion/manageragent/ui/LauncherComponentRestorerTest.kt
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>?? app/src/test/kotlin/com/trivion/manageragent/ui/VincularDialogStateTest.kt
+</code></pre></div>
+<p>Elas correspondem a:</p>
+<ol>
+<li>Persistir estado de falha/retry do <code>VincularDialogFragment</code> em recriação de Activity.</li>
+<li>Reabilitar explicitamente o launcher ao iniciar, para upgrades de versões antigas que o haviam desabilitado.</li>
+<li>Mostrar <code>BuildConfig.VERSION_CODE</code> na tela persistente de status.</li>
+<li>Reduzir a marca do ícone de launcher de 50 dp para 40–42 dp no viewport de 108 dp.</li>
+</ol>
+<p>Antes de gerar APK, concluir, testar, commitar e revisar esses quatro pontos.</p>
+<p>Parecer de UI: <a href="/private/tmp/manager-agent-health.NCVfrS/android/.superpowers/sdd/2026-08-13-agent-android-entrega-confiavel-health/task-3-ui-review.md">task-3-ui-review.md</a>.</p>
+<h2 id="build-apk">Build / APK<a class="headerlink" href="#build-apk" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Compilação Kotlin staging e testes focados passaram nas tarefas entregues.</li>
+<li><code>assembleStagingRelease</code> no worktree parou corretamente em <code>validateSigning</code>: o worktree isolado não contém <code>app/keystores/staging.jks</code>.</li>
+<li>A keystore real existe no Mac em <code>$HOME/.manager/secrets/manageragent-staging.jks</code>; a senha não está presente nesta sessão.</li>
+<li>Não criar uma keystore nova. Ao retomar, após finalizar/revisar a UI e sessão, usar:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>/private/tmp/manager-agent-health.NCVfrS/android
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="k">$(</span>/usr/libexec/java_home<span class="w"> </span>-v<span class="w"> </span><span class="m">17</span><span class="k">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ANDROID_HOME</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/Library/Android/sdk"</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">KEYSTORE_STAGING_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.manager/secrets/manageragent-staging.jks"</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">read</span><span class="w"> </span>-s<span class="w"> </span><span class="s1">'KEYSTORE_STAGING_PASSWORD?Senha da keystore: '</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">echo</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">export</span><span class="w"> </span>KEYSTORE_STAGING_PASSWORD
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>./scripts/build-base-apk.sh<span class="w"> </span>staging
+</code></pre></div>
+<p>Esperado: <code>app/build/distributions/ManagerAgent-Android-v1.0.12.apk</code> (ou versão incrementada se as correções restantes alterarem o APK).</p>
+<h2 id="testes-e-limitacoes-conhecidas">Testes e limitações conhecidas<a class="headerlink" href="#testes-e-limitacoes-conhecidas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Testes focados das mudanças e <code>:app:compileStagingReleaseKotlin</code>: aprovados nos commits relatados.</li>
+<li>A suíte completa ainda tinha falhas pré-existentes fora desta entrega: <code>UsageStatsCollectorTest</code> (3), <code>RefreshInterceptorTest</code> (2), <code>OEMIntentFactoryTest</code> (4). Nas últimas execuções, <code>IdleDetector</code> e <code>StatusTransitionCalculator</code> foram corrigidos/atualizados e deixaram de falhar.</li>
+<li>APK físico ainda não foi validado no Samsung.</li>
+<li>Não houve push, PR, deploy staging ou publicação de release desta rodada.</li>
+</ul>
+<h2 id="proxima-sequencia-recomendada">Próxima sequência recomendada<a class="headerlink" href="#proxima-sequencia-recomendada" title="Permanent link">&para;</a></h2>
+<ol>
+<li>O Sam conclui e commita os quatro ajustes de UI não commitados.</li>
+<li>Revisar UI corrigida.</li>
+<li>Corrigir <code>goAsync()</code> síncrono no <code>SessionBroadcastReceiver</code> e testar o callback real.</li>
+<li>Revisar e aprovar definitivamente a tarefa de sessão.</li>
+<li>Gerar o APK assinado com a keystore existente e validar versão <code>1.0.12-staging (13)</code> (ou o próximo bump).</li>
+<li>Testar no Samsung: vínculo, modal, status, permissões, LOCK/UNLOCK, 60 s desbloqueado, offline/reconexão.</li>
+<li>Só após validação: revisar commits, push/PR para <code>staging</code> e deploy.</li>
+<li>Em rodada posterior: Grafana sobre eventos/heartbeats/auditorias existentes, sem API nova.</li>
+</ol>
+<h2 id="repositoriosworktrees">Repositórios/worktrees<a class="headerlink" href="#repositoriosworktrees" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Repositório</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>manager-srv-agent-android</code></td>
+<td>trabalho local em <code>/private/tmp/manager-agent-health.NCVfrS/android</code>, branch <code>feature/agent-android-health</code>.</td>
+</tr>
+<tr>
+<td><code>manager-srv-events-node</code></td>
+<td>worktree voltou ao base; nenhuma mudança para levar adiante.</td>
+</tr>
+<tr>
+<td><code>manager-srv-portal-node</code>, <code>manager-fed-portal</code>, <code>manager-srv-monitoring</code></td>
+<td>worktrees criados, sem mudanças; não tocar nesta rodada.</td>
+</tr>
+<tr>
+<td>checkout original Android</td>
+<td>preservar <code>?? app/schemas/</code> preexistente.</td>
+</tr>
+<tr>
+<td>checkout original Monitoring</td>
+<td>preservar alteração preexistente em <code>prometheus/prometheus.yml</code>.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

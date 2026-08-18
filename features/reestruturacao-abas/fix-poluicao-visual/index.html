@@ -1,0 +1,1983 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/reestruturacao-abas/fix-poluicao-visual/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Fix: Poluição Visual — KPIs e Seções - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fix-poluicao-visual-kpis-e-secoes" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fix: Poluição Visual — KPIs e Seções
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mudanca-1-remover-textos-descritivos-visiveis-dos-kpi-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MUDANÇA 1 — Remover textos descritivos visíveis dos KPI cards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MUDANÇA 1 — Remover textos descritivos visíveis dos KPI cards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-afetados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquivos afetados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-que-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que fazer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-que-nao-mexer-no-kpi-cardcomponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que NÃO mexer no kpi-card.component
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mudanca-2-remover-textos-descritivos-das-secoes-cabecalhos-de-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MUDANÇA 2 — Remover textos descritivos das seções (cabeçalhos de card)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MUDANÇA 2 — Remover textos descritivos das seções (cabeçalhos de card)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-afetados_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquivos afetados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textos-a-remover-em-tab-dia-diacomponenthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textos a remover em tab-dia-dia.component.html
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textos-a-remover-em-tab-resumocomponenthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textos a remover em tab-resumo.component.html
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mudanca-3-novo-estilo-para-o-de-secao-secao-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MUDANÇA 3 — Novo estilo para o "?" de seção (.secao-help)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MUDANÇA 3 — Novo estilo para o &#34;?&#34; de seção (.secao-help)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-afetado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquivo afetado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mudanca-4-pergunta-guia-novo-texto-e-icone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MUDANÇA 4 — Pergunta-guia: novo texto e ícone
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MUDANÇA 4 — Pergunta-guia: novo texto e ícone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-afetado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquivo afetado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-dia-diacomponenthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tab-dia-dia.component.html
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-resumocomponenthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tab-resumo.component.html
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css-ajuste-tab-resumocomponentscss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSS ajuste — tab-resumo.component.scss
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-das-mudancas-por-arquivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo das mudanças por arquivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-nao-mudar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que NÃO mudar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-de-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas de QA
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fix-poluicao-visual-kpis-e-secoes">Fix: Poluição Visual — KPIs e Seções<a class="headerlink" href="#fix-poluicao-visual-kpis-e-secoes" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Autor: @Groot (UX/UI)
+Para: @Miles (implementação)
+Data: 2026-04-06
+Prioridade: Alta — feedback direto do fundador</p>
+</blockquote>
+<hr />
+<h2 id="contexto">Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
+<p>Dois problemas visuais identificados na aba <strong>Dia a Dia</strong> (componente <code>tab-dia-dia</code>) e na aba <strong>Resumo</strong> (componente <code>tab-resumo</code>) do detalhe do colaborador:</p>
+<ol>
+<li>Textos descritivos nos KPIs e cabeçalhos de seção sempre visíveis, truncando com "..." — poluição visual desnecessária.</li>
+<li>Pergunta-guia "O que aconteceu hoje?" e "Qual o padrão desse colaborador?" estão genéricas, sem personalidade.</li>
+</ol>
+<hr />
+<h2 id="mudanca-1-remover-textos-descritivos-visiveis-dos-kpi-cards">MUDANÇA 1 — Remover textos descritivos visíveis dos KPI cards<a class="headerlink" href="#mudanca-1-remover-textos-descritivos-visiveis-dos-kpi-cards" title="Permanent link">&para;</a></h2>
+<h3 id="arquivos-afetados">Arquivos afetados<a class="headerlink" href="#arquivos-afetados" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>tab-dia-dia.component.html</code></li>
+<li><code>tab-resumo.component.html</code></li>
+</ul>
+<h3 id="o-que-fazer">O que fazer<a class="headerlink" href="#o-que-fazer" title="Permanent link">&para;</a></h3>
+<p><strong>Em <code>tab-dia-dia.component.html</code></strong> — remover o atributo <code>descricao</code> de todos os 4 <code>app-kpi-card</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">&lt;!-- REMOVER esta linha de cada kpi-card: --&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>descricao="Quanto tempo durou o dia de trabalho. Acima do esperado pode indicar sobrecarga."
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>descricao="Tempo usando o computador. Compare com a jornada para ver o aproveitamento."
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>descricao="Pequenas pausas durante o dia. Pausas saudáveis são normais e esperadas."
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>descricao="Períodos longos sem atividade. Verifique se está dentro do esperado."
+</code></pre></div>
+<p>Os <code>tooltipTexto</code> de cada card DEVEM ser mantidos — eles aparecem só no hover do "?" e continuam acessíveis.</p>
+<p><strong>Em <code>tab-resumo.component.html</code></strong> — idem, remover <code>descricao</code> dos 4 <code>app-kpi-card</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">&lt;!-- REMOVER estas linhas: --&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>descricao="Média diária de horas trabalhadas no período. Se estiver consistentemente alta, pode indicar necessidade de redistribuir demandas."
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>descricao="Média de tempo produtivo por dia. Compare com a jornada para avaliar o aproveitamento."
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>descricao="Média de pausas por dia. Pouca pausa pode indicar pressão excessiva; muita pausa pode indicar desengajamento."
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>descricao="Maior bloco de trabalho contínuo. Sessões longas de foco indicam capacidade de concentração e ambiente sem interrupções."
+</code></pre></div>
+<blockquote>
+<p>O <code>tooltipTexto</code> no card de "Foco médio" (<code>tab-resumo</code>) DEVE ser mantido.</p>
+</blockquote>
+<h3 id="o-que-nao-mexer-no-kpi-cardcomponent">O que NÃO mexer no kpi-card.component<a class="headerlink" href="#o-que-nao-mexer-no-kpi-cardcomponent" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Manter a prop <code>@Input() descricao</code> no componente — pode ser usada futuramente.</li>
+<li>Manter o bloco <code>&lt;span *ngIf="descricao" class="kpi-card__descricao"&gt;</code> no template — simplesmente não vai renderizar quando <code>descricao</code> for vazio.</li>
+<li>Manter toda a classe <code>.kpi-card__descricao</code> no SCSS — não remover.</li>
+</ul>
+<hr />
+<h2 id="mudanca-2-remover-textos-descritivos-das-secoes-cabecalhos-de-card">MUDANÇA 2 — Remover textos descritivos das seções (cabeçalhos de card)<a class="headerlink" href="#mudanca-2-remover-textos-descritivos-das-secoes-cabecalhos-de-card" title="Permanent link">&para;</a></h2>
+<h3 id="arquivos-afetados_1">Arquivos afetados<a class="headerlink" href="#arquivos-afetados_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>tab-dia-dia.component.html</code></li>
+<li><code>tab-resumo.component.html</code></li>
+</ul>
+<h3 id="textos-a-remover-em-tab-dia-diacomponenthtml">Textos a remover em <code>tab-dia-dia.component.html</code><a class="headerlink" href="#textos-a-remover-em-tab-dia-diacomponenthtml" title="Permanent link">&para;</a></h3>
+<p><strong>Seção Visualização Temporal</strong> (linha ~123):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">&lt;!-- REMOVER esta linha inteira: --&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"secao-descricao"</span><span class="p">&gt;</span>Veja como o dia foi distribuído. Blocos verdes são trabalho, amarelos são pausas e cinzas são ausências. Gaps frequentes podem indicar interrupções.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>Adicionar um "?" discreto ao lado do título, com tooltip explicativo:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cm">&lt;!-- SUBSTITUIR: --&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"timeline-header"</span><span class="p">&gt;</span>Visualização Temporal<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="cm">&lt;!-- POR: --&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"timeline-header"</span><span class="p">&gt;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  Visualização Temporal
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  <span class="p">&lt;</span><span class="nt">span</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="na">class</span><span class="o">=</span><span class="s">"secao-help"</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="na">pTooltip</span><span class="o">=</span><span class="s">"Blocos verdes = atividade, amarelos = pausa, cinza = ausência. Gaps frequentes podem indicar interrupções."</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="na">tooltipStyleClass</span><span class="o">=</span><span class="s">"menu-tooltip"</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="na">tooltipPosition</span><span class="o">=</span><span class="s">"top"</span><span class="p">&gt;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    ?
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p><strong>Seção Top 5 Apps</strong> (linha ~202):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cm">&lt;!-- REMOVER esta linha inteira: --&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"secao-descricao"</span><span class="p">&gt;</span>Em quais ferramentas o colaborador passou mais tempo. Útil para entender o tipo de trabalho realizado no dia.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>Adicionar "?" ao lado do título:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cm">&lt;!-- SUBSTITUIR: --&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"section-title"</span><span class="p">&gt;</span>Top 5 Apps do dia<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cm">&lt;!-- POR: --&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"section-title"</span><span class="p">&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>  Top 5 Apps do dia
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  <span class="p">&lt;</span><span class="nt">span</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="na">class</span><span class="o">=</span><span class="s">"secao-help"</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="na">pTooltip</span><span class="o">=</span><span class="s">"Ferramentas com maior tempo de uso. Útil para entender o tipo de trabalho realizado no dia."</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="na">tooltipStyleClass</span><span class="o">=</span><span class="s">"menu-tooltip"</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="na">tooltipPosition</span><span class="o">=</span><span class="s">"top"</span><span class="p">&gt;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    ?
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p><strong>Seção Eventos Detalhados</strong> (linha ~266):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cm">&lt;!-- REMOVER esta linha inteira: --&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"secao-descricao"</span><span class="p">&gt;</span>Tudo que aconteceu no dia, em ordem. Use para entender o contexto de uma pausa ou ausência específica.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>Adicionar "?" ao lado do título:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cm">&lt;!-- SUBSTITUIR: --&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"eventos-title"</span><span class="p">&gt;</span>Eventos Detalhados<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="cm">&lt;!-- POR: --&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"eventos-title"</span><span class="p">&gt;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  Eventos Detalhados
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  <span class="p">&lt;</span><span class="nt">span</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="na">class</span><span class="o">=</span><span class="s">"secao-help"</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="na">pTooltip</span><span class="o">=</span><span class="s">"Linha do tempo completa do dia, em ordem cronológica. Use para entender o contexto de pausas ou ausências específicas."</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="na">tooltipStyleClass</span><span class="o">=</span><span class="s">"menu-tooltip"</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="na">tooltipPosition</span><span class="o">=</span><span class="s">"top"</span><span class="p">&gt;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    ?
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<h3 id="textos-a-remover-em-tab-resumocomponenthtml">Textos a remover em <code>tab-resumo.component.html</code><a class="headerlink" href="#textos-a-remover-em-tab-resumocomponenthtml" title="Permanent link">&para;</a></h3>
+<p>Remover todos os blocos <code>&lt;div class="section-card__desc"&gt;...&lt;/div&gt;</code> das seções abaixo (manter apenas o título e o "?" já existente onde aplicável):</p>
+<p><strong>Tendência — Jornada por dia</strong> (linha ~87):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cm">&lt;!-- REMOVER: --&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"section-card__desc"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  Evolução da jornada ao longo dos dias. Dias vermelhos excederam o esperado. Veja se é pontual ou um padrão.
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+Mover a informação para o tooltip do "?". Adicionar span <code>secao-help</code> ao lado de <code>section-card__title</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="cm">&lt;!-- SUBSTITUIR o div do título por: --&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"section-card__title"</span><span class="p">&gt;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  Tendência — Jornada por dia
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  <span class="p">&lt;</span><span class="nt">span</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="na">class</span><span class="o">=</span><span class="s">"secao-help"</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="na">pTooltip</span><span class="o">=</span><span class="s">"Evolução da jornada ao longo dos dias. Dias vermelhos excederam o esperado. Veja se é pontual ou um padrão recorrente."</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="na">tooltipStyleClass</span><span class="o">=</span><span class="s">"menu-tooltip"</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="na">tooltipPosition</span><span class="o">=</span><span class="s">"top"</span><span class="p">&gt;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    ?
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p><strong>Top 5 apps (período)</strong> (linha ~116):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="cm">&lt;!-- REMOVER: --&gt;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"section-card__desc"</span><span class="p">&gt;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  Ferramentas mais usadas no período. Mudanças bruscas podem indicar mudança de projeto ou responsabilidade.
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+Adicionar "?" ao lado do título com o mesmo texto no tooltip.</p>
+<p><strong>Distribuição de Tempo</strong> (linha ~162):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cm">&lt;!-- REMOVER: --&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"section-card__desc"</span><span class="p">&gt;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  Proporção entre trabalho, pausas e ausências no período. Uma distribuição saudável tem pausas regulares.
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+Adicionar "?" ao lado do título com o mesmo texto no tooltip.</p>
+<p><strong>Tendência — Sessões de Foco por dia</strong> (linha ~289):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="cm">&lt;!-- REMOVER: --&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"section-card__desc"</span><span class="p">&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  Cada barra mostra as sessões individuais de foco do dia. Cores indicam a profundidade: quanto mais escuro, mais longa a sessão.
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+O "?" já existe nessa seção (<code>section-card__tooltip-trigger</code>) — apenas adicionar essa descrição ao tooltip existente, concatenando:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pTooltip="Uma sessão de foco é um período de trabalho contínuo sem interrupções maiores que 2 minutos. Só sessões acima de 5 minutos são contadas. Cores mais escuras = sessões mais longas."
+</code></pre></div></p>
+<hr />
+<h2 id="mudanca-3-novo-estilo-para-o-de-secao-secao-help">MUDANÇA 3 — Novo estilo para o "?" de seção (<code>.secao-help</code>)<a class="headerlink" href="#mudanca-3-novo-estilo-para-o-de-secao-secao-help" title="Permanent link">&para;</a></h2>
+<h3 id="arquivo-afetado">Arquivo afetado<a class="headerlink" href="#arquivo-afetado" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>tab-dia-dia.component.scss</code></li>
+<li><code>tab-resumo.component.scss</code></li>
+</ul>
+<p>Adicionar a classe <code>.secao-help</code> nos dois arquivos SCSS (pode ser idêntica em ambos):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cm">/* ── Help icon de seção ──────────────────────────────────────────────────── */</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nc">.secao-help</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">inline-flex</span><span class="o">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="nt">justify-content</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">15px</span><span class="o">;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">  </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">15px</span><span class="o">;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">50</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#f1f5f9</span><span class="o">;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#94a3b8</span><span class="o">;</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">9px</span><span class="o">;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">  </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">700</span><span class="o">;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">  </span><span class="nt">cursor</span><span class="nd">:</span><span class="w"> </span><span class="nt">help</span><span class="o">;</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">  </span><span class="nt">line-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="o">;</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">  </span><span class="nt">vertical-align</span><span class="nd">:</span><span class="w"> </span><span class="nt">middle</span><span class="o">;</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">  </span><span class="nt">margin-left</span><span class="nd">:</span><span class="w"> </span><span class="nt">5px</span><span class="o">;</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">  </span><span class="nt">transition</span><span class="nd">:</span><span class="w"> </span><span class="nt">background</span><span class="w"> </span><span class="nt">0</span><span class="nc">.12s</span><span class="o">,</span><span class="w"> </span><span class="nt">color</span><span class="w"> </span><span class="nt">0</span><span class="nc">.12s</span><span class="o">;</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">  </span><span class="nt">flex-shrink</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">  </span><span class="k">&amp;</span><span class="nd">:hover</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#e2e8f0</span><span class="o">;</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#475569</span><span class="o">;</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="p">}</span>
+</code></pre></div>
+<p>Notar que esse estilo é intencionalmente menor (15px, font-size 9px) do que o <code>.kpi-card__help</code> (16px, font-size 10px) para ficar ainda mais discreto nos títulos de seção.</p>
+<hr />
+<h2 id="mudanca-4-pergunta-guia-novo-texto-e-icone">MUDANÇA 4 — Pergunta-guia: novo texto e ícone<a class="headerlink" href="#mudanca-4-pergunta-guia-novo-texto-e-icone" title="Permanent link">&para;</a></h2>
+<h3 id="arquivo-afetado_1">Arquivo afetado<a class="headerlink" href="#arquivo-afetado_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>tab-dia-dia.component.html</code> — pergunta da aba Dia a Dia</li>
+<li><code>tab-resumo.component.html</code> — pergunta da aba Resumo</li>
+</ul>
+<h3 id="tab-dia-diacomponenthtml">tab-dia-dia.component.html<a class="headerlink" href="#tab-dia-diacomponenthtml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="cm">&lt;!-- SUBSTITUIR: --&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"pergunta-guia"</span><span class="p">&gt;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">"pi pi-sun pergunta-guia__icon"</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"pergunta-guia__texto"</span><span class="p">&gt;</span>O que aconteceu hoje?<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="cm">&lt;!-- POR: --&gt;</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"pergunta-guia"</span><span class="p">&gt;</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">"pi pi-search pergunta-guia__icon"</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"pergunta-guia__texto"</span><span class="p">&gt;</span>Analise com atenção: o que aconteceu hoje?<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="tab-resumocomponenthtml">tab-resumo.component.html<a class="headerlink" href="#tab-resumocomponenthtml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="cm">&lt;!-- SUBSTITUIR: --&gt;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"pergunta-guia"</span><span class="p">&gt;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"pergunta-guia__texto"</span><span class="p">&gt;</span>Qual o padrão desse colaborador?<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="cm">&lt;!-- POR: --&gt;</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"pergunta-guia"</span><span class="p">&gt;</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">"pi pi-lightbulb pergunta-guia__icon"</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"pergunta-guia__texto"</span><span class="p">&gt;</span>Analise com atenção: qual o padrão desse colaborador?<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="css-ajuste-tab-resumocomponentscss">CSS ajuste — <code>tab-resumo.component.scss</code><a class="headerlink" href="#css-ajuste-tab-resumocomponentscss" title="Permanent link">&para;</a></h3>
+<p>A pergunta-guia no <code>tab-resumo</code> provavelmente não tem o estilo <code>.pergunta-guia__icon</code> definido (o componente original não tinha o ícone). Verificar se o SCSS do <code>tab-resumo</code> já contém <code>.pergunta-guia__icon</code> — se não tiver, adicionar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="cm">/* ── Pergunta-guia ───────────────────────────────────────────────────────── */</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="cm">/* (verificar se já existe antes de adicionar) */</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="nc">.pergunta-guia</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">  </span><span class="nt">justify-content</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">  </span><span class="nt">gap</span><span class="nd">:</span><span class="w"> </span><span class="nt">10px</span><span class="o">;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#f8fafc</span><span class="o">;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">10px</span><span class="o">;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">14px</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#e5e7eb</span><span class="o">;</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="p">}</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="nc">.pergunta-guia__icon</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">16px</span><span class="o">;</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#6366f1</span><span class="o">;</span><span class="w">  </span><span class="o">/*</span><span class="w"> </span><span class="nt">índigo</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">diferente</span><span class="w"> </span><span class="nt">do</span><span class="w"> </span><span class="nt">amarelo</span><span class="w"> </span><span class="nt">do</span><span class="w"> </span><span class="nt">dia-a-dia</span><span class="w"> </span><span class="nt">para</span><span class="w"> </span><span class="nt">distinguir</span><span class="w"> </span><span class="nt">as</span><span class="w"> </span><span class="nt">abas</span><span class="w"> </span><span class="o">*/</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="w">  </span><span class="nt">flex-shrink</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="p">}</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="nc">.pergunta-guia__texto</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">15px</span><span class="o">;</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="w">  </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">600</span><span class="o">;</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#1e293b</span><span class="o">;</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a><span class="p">}</span>
+</code></pre></div>
+<p>No <code>tab-dia-dia.component.scss</code>, apenas atualizar a cor do ícone de <code>.pergunta-guia__icon</code> de <code>#f59e0b</code> (amarelo/sol) para <code>#6366f1</code> (índigo), já que o ícone muda de <code>pi-sun</code> para <code>pi-search</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="cm">/* ALTERAR em tab-dia-dia.component.scss: */</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nc">.pergunta-guia__icon</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">16px</span><span class="o">;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#6366f1</span><span class="o">;</span><span class="w">  </span><span class="o">/*</span><span class="w"> </span><span class="nt">era</span><span class="w"> </span><span class="nn">#f59e0b</span><span class="w"> </span><span class="o">*/</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">  </span><span class="nt">flex-shrink</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="resumo-das-mudancas-por-arquivo">Resumo das mudanças por arquivo<a class="headerlink" href="#resumo-das-mudancas-por-arquivo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Ação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tab-dia-dia.component.html</code></td>
+<td>Remover <code>descricao=""</code> dos 4 kpi-cards; remover 3 <code>secao-descricao</code>; adicionar <code>secao-help</code> com tooltip nos 3 títulos de seção; atualizar pergunta-guia (ícone + texto)</td>
+</tr>
+<tr>
+<td><code>tab-dia-dia.component.scss</code></td>
+<td>Adicionar <code>.secao-help</code>; alterar cor de <code>.pergunta-guia__icon</code> para <code>#6366f1</code></td>
+</tr>
+<tr>
+<td><code>tab-resumo.component.html</code></td>
+<td>Remover <code>descricao=""</code> dos 4 kpi-cards; remover 4 <code>section-card__desc</code>; adicionar <code>secao-help</code> em 3 títulos (Foco já tem "?"); atualizar tooltip do "?" de Foco; atualizar pergunta-guia (ícone + texto)</td>
+</tr>
+<tr>
+<td><code>tab-resumo.component.scss</code></td>
+<td>Adicionar <code>.secao-help</code>; adicionar/verificar <code>.pergunta-guia__icon</code> com cor <code>#6366f1</code></td>
+</tr>
+<tr>
+<td><code>kpi-card.component.html</code></td>
+<td>Nenhuma alteração</td>
+</tr>
+<tr>
+<td><code>kpi-card.component.ts</code></td>
+<td>Nenhuma alteração</td>
+</tr>
+<tr>
+<td><code>kpi-card.component.scss</code></td>
+<td>Nenhuma alteração</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="o-que-nao-mudar">O que NÃO mudar<a class="headerlink" href="#o-que-nao-mudar" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Os <code>tooltipTexto</code> dos kpi-cards em <code>tab-dia-dia</code> — MANTER TODOS. O "?" com tooltip é a nova forma de expor a explicação.</li>
+<li>O <code>tooltipTexto</code> do card "Foco médio" em <code>tab-resumo</code> — MANTER.</li>
+<li>O <code>section-card__tooltip-trigger</code> já existente na seção "Tendência — Sessões de Foco" — MANTER, só atualizar o texto do <code>pTooltip</code>.</li>
+<li>Os tooltips das <code>legend-item</code> na timeline e no donut — MANTER.</li>
+<li>Nenhum comportamento lógico / TypeScript é afetado.</li>
+</ul>
+<hr />
+<h2 id="notas-de-qa">Notas de QA<a class="headerlink" href="#notas-de-qa" title="Permanent link">&para;</a></h2>
+<p>Após implementar, verificar:
+1. Nenhum texto truncado "..." aparece nos KPI cards.
+2. O ícone "?" aparece em todos os títulos de seção que tiveram texto removido.
+3. Hover no "?" abre tooltip com o texto correto.
+4. A pergunta-guia renderiza o ícone correto e o novo texto nas duas abas.
+5. O layout dos KPI cards não quebra por terem menos conteúdo (gap menor esperado).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

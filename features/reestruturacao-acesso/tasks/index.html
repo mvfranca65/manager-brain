@@ -1,0 +1,2098 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/reestruturacao-acesso/tasks/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tasks: Reestruturacao de Acesso v2 - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tasks-reestruturacao-de-acesso-v2" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tasks: Reestruturacao de Acesso v2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-1-backend-perfis-primeiro-acesso-controle-de-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 1: Backend — Perfis + Primeiro Acesso + Controle de Acesso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint 1: Backend — Perfis + Primeiro Acesso + Controle de Acesso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloco-a-simplificacao-de-perfis-pre-requisito-para-tudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloco A: Simplificacao de perfis (pre-requisito para tudo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloco-b-primeiro-acesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloco B: Primeiro acesso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloco-c-controle-de-acesso-ao-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloco C: Controle de acesso ao portal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-2-frontend-perfis-login-primeiro-acesso-controle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 2: Frontend — Perfis + Login + Primeiro Acesso + Controle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint 2: Frontend — Perfis + Login + Primeiro Acesso + Controle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloco-d-simplificacao-de-perfis-no-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloco D: Simplificacao de perfis no frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloco-e-login-primeiro-acesso-tela-de-bloqueio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloco E: Login + Primeiro acesso + Tela de bloqueio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloco-f-flag-acessa_portal-no-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloco F: Flag acessa_portal no frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-3-visao-do-colaborador-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 3: Visao do Colaborador + Testes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint 3: Visao do Colaborador + Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloco-g-paginas-do-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloco G: Paginas do colaborador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloco-h-testes-de-regressao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloco H: Testes de regressao
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atribuicao-por-dev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atribuicao por dev
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esforcos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esforcos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tasks-reestruturacao-de-acesso-v2">Tasks: Reestruturacao de Acesso v2<a class="headerlink" href="#tasks-reestruturacao-de-acesso-v2" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Contexto: DB ja recriado do zero. Tabela <code>usuarios</code> unificada ja existe. Sem migracao de dados.
+Ordem: Sprint 1 (Backend core) → Sprint 2 (Frontend core) → Sprint 3 (Visao colaborador + polish)
+Atualizado em: 2026-03-31</p>
+</blockquote>
+<hr />
+<h2 id="sprint-1-backend-perfis-primeiro-acesso-controle-de-acesso">Sprint 1: Backend — Perfis + Primeiro Acesso + Controle de Acesso<a class="headerlink" href="#sprint-1-backend-perfis-primeiro-acesso-controle-de-acesso" title="Permanent link">&para;</a></h2>
+<h3 id="bloco-a-simplificacao-de-perfis-pre-requisito-para-tudo">Bloco A: Simplificacao de perfis (pre-requisito para tudo)<a class="headerlink" href="#bloco-a-simplificacao-de-perfis-pre-requisito-para-tudo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Responsavel</th>
+<th>Esforco</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA-01</td>
+<td>Atualizar <code>PortalRole</code> enum</td>
+<td>@Thor</td>
+<td>P</td>
+<td>Remover <code>ADMIN</code> e <code>VIEWER</code>. Manter <code>GESTOR</code> e <code>COLABORADOR</code>.</td>
+</tr>
+<tr>
+<td>RA-02</td>
+<td>Atualizar <code>JwtTokenProvider</code></td>
+<td>@Thor</td>
+<td>P</td>
+<td>Claims: perfil sempre <code>GESTOR</code> ou <code>COLABORADOR</code>. Remover mapeamentos legados.</td>
+</tr>
+<tr>
+<td>RA-03</td>
+<td>Atualizar <code>JwtAuthenticationFilter</code></td>
+<td>@Thor</td>
+<td>P</td>
+<td>Remover alias <code>ADMIN</code>/<code>VIEWER</code>/<code>MANAGER</code>. Aceitar apenas <code>GESTOR</code>/<code>COLABORADOR</code>.</td>
+</tr>
+<tr>
+<td>RA-04</td>
+<td>Atualizar <code>PortalUserPrincipal</code></td>
+<td>@Thor</td>
+<td>P</td>
+<td>Record com perfil simplificado.</td>
+</tr>
+<tr>
+<td>RA-05</td>
+<td>Simplificar <code>AccessService</code></td>
+<td>@Thor</td>
+<td>M</td>
+<td><code>GESTOR</code> = acesso total (substitui antigo ADMIN+GESTOR). <code>COLABORADOR</code> = acesso limitado. Remover metodo <code>exigirAdmin()</code>.</td>
+</tr>
+<tr>
+<td>RA-06</td>
+<td>Atualizar <code>entidades_hierarquicas.tipo_entidade</code></td>
+<td>@Thor</td>
+<td>P</td>
+<td>Valores: <code>GESTOR</code>, <code>COLABORADOR</code>, <code>TIME</code>. Remover <code>USUARIO_PORTAL</code> e <code>ADMIN</code>.</td>
+</tr>
+<tr>
+<td>RA-07</td>
+<td>Atualizar DTOs de resposta</td>
+<td>@Vision</td>
+<td>M</td>
+<td><code>UsuarioPortalResponse</code>, <code>HierarquiaEntidadeResposta</code>: perfil = GESTOR ou COLABORADOR.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bloco-b-primeiro-acesso">Bloco B: Primeiro acesso<a class="headerlink" href="#bloco-b-primeiro-acesso" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Responsavel</th>
+<th>Esforco</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA-08</td>
+<td>Endpoint <code>POST /auth/primeiro-acesso/validar</code></td>
+<td>@Vision</td>
+<td>M</td>
+<td>Valida identificador + email. Condicoes: usuario existe, acessa_portal=true, senha_hash IS NULL. Retorna { valido, nome }.</td>
+</tr>
+<tr>
+<td>RA-09</td>
+<td>Endpoint <code>POST /auth/primeiro-acesso/criar-senha</code></td>
+<td>@Vision</td>
+<td>M</td>
+<td>Recebe identificador + email + novaSenha. Mesmas validacoes + BCrypt hash. Response 204.</td>
+</tr>
+<tr>
+<td>RA-10</td>
+<td>Remover campo <code>senha</code> da criacao de usuario</td>
+<td>@Vision</td>
+<td>P</td>
+<td><code>CadastrarUsuarioPortalRequest</code>: remover campo senha. Service cria com <code>senha_hash = null</code>.</td>
+</tr>
+<tr>
+<td>RA-11</td>
+<td>Atualizar login: diferenciar erros</td>
+<td>@Thor</td>
+<td>M</td>
+<td>3 cenarios: credenciais invalidas (401), sem acesso portal (403 + codigo <code>ACESSO_PORTAL_NEGADO</code>), sem senha/primeiro acesso (401 + codigo <code>PRIMEIRO_ACESSO_PENDENTE</code>).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bloco-c-controle-de-acesso-ao-portal">Bloco C: Controle de acesso ao portal<a class="headerlink" href="#bloco-c-controle-de-acesso-ao-portal" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Responsavel</th>
+<th>Esforco</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA-12</td>
+<td>Endpoint <code>PATCH /api/v2/usuarios/{id}/acesso-portal</code></td>
+<td>@Vision</td>
+<td>P</td>
+<td>Toggle acessa_portal. Apenas GESTOR pode chamar. Response 204.</td>
+</tr>
+<tr>
+<td>RA-13</td>
+<td>Adicionar <code>acessa_portal</code> na criacao de colaborador</td>
+<td>@Vision</td>
+<td>P</td>
+<td><code>ColaboradorCadastroRequest</code>: novo campo opcional (default false). <code>CadastrarColaboradorLoteRequest</code>: idem.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sprint-2-frontend-perfis-login-primeiro-acesso-controle">Sprint 2: Frontend — Perfis + Login + Primeiro Acesso + Controle<a class="headerlink" href="#sprint-2-frontend-perfis-login-primeiro-acesso-controle" title="Permanent link">&para;</a></h2>
+<h3 id="bloco-d-simplificacao-de-perfis-no-frontend">Bloco D: Simplificacao de perfis no frontend<a class="headerlink" href="#bloco-d-simplificacao-de-perfis-no-frontend" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Responsavel</th>
+<th>Esforco</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA-14</td>
+<td>Atualizar <code>AuthUser</code> e <code>auth.model.ts</code></td>
+<td>@Peter</td>
+<td>P</td>
+<td><code>perfil: 'GESTOR' \| 'COLABORADOR'</code>. Remover referencias a ADMIN/VIEWER.</td>
+</tr>
+<tr>
+<td>RA-15</td>
+<td>Atualizar <code>AuthService</code></td>
+<td>@Peter</td>
+<td>P</td>
+<td>Remover <code>isAdmin()</code>. <code>isGestor()</code> cobre tudo. Adicionar <code>isColaborador()</code>.</td>
+</tr>
+<tr>
+<td>RA-16</td>
+<td>Remover <code>AdminGuard</code>, simplificar guards</td>
+<td>@Peter</td>
+<td>M</td>
+<td><code>GestorGuard</code> para rotas de gestao. <code>PortalAccessGuard</code> para tela de bloqueio. Novo <code>ColaboradorGuard</code> para rotas do colaborador.</td>
+</tr>
+<tr>
+<td>RA-17</td>
+<td>Menu/sidebar dinamico por perfil</td>
+<td>@Peter</td>
+<td>M</td>
+<td>Gestor: menu completo. Colaborador: Meu Painel, Meus Relatorios, Meu Perfil.</td>
+</tr>
+<tr>
+<td>RA-18</td>
+<td>Modal criar usuario portal: remover senha e seletor perfil</td>
+<td>@Miles</td>
+<td>P</td>
+<td>Remover campos senha + confirmar senha. Remover seletor Admin/Gestor. Tipo fixo = GESTOR.</td>
+</tr>
+<tr>
+<td>RA-19</td>
+<td>Excel usuario portal: remover colunas Perfil e Senha</td>
+<td>@Miles</td>
+<td>P</td>
+<td>Atualizar <code>ExcelUsuarioPortalService</code>: remover colunas G (Perfil) e J (Senha).</td>
+</tr>
+<tr>
+<td>RA-20</td>
+<td>Badges na hierarquia: Gestor/Colaborador</td>
+<td>@Miles</td>
+<td>P</td>
+<td>Substituir badges ADM/VIS por Gestor/Colaborador nos templates da hierarquia.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bloco-e-login-primeiro-acesso-tela-de-bloqueio">Bloco E: Login + Primeiro acesso + Tela de bloqueio<a class="headerlink" href="#bloco-e-login-primeiro-acesso-tela-de-bloqueio" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Responsavel</th>
+<th>Esforco</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA-21</td>
+<td>Pagina <code>/primeiro-acesso</code></td>
+<td>@Peter</td>
+<td>G</td>
+<td>Nova pagina standalone. Step 1: identificador + email → validar. Step 2: criar senha + confirmar. Redirect para /login. Design alinhado com login page.</td>
+</tr>
+<tr>
+<td>RA-22</td>
+<td>Link "Primeiro acesso?" na pagina de login</td>
+<td>@Miles</td>
+<td>P</td>
+<td>Adicionar link abaixo do botao de login. Rota para /primeiro-acesso.</td>
+</tr>
+<tr>
+<td>RA-23</td>
+<td>Pagina <code>/sem-acesso</code> (tela de bloqueio)</td>
+<td>@Miles</td>
+<td>M</td>
+<td>Nova pagina standalone. Mensagem: "Voce nao tem permissao para acessar o portal. Entre em contato com seu gestor." Botao voltar para login.</td>
+</tr>
+<tr>
+<td>RA-24</td>
+<td>Tratar 3 tipos de erro no login</td>
+<td>@Peter</td>
+<td>M</td>
+<td>Interceptar resposta do backend: credenciais invalidas → mensagem generica. Sem acesso → redirect <code>/sem-acesso</code>. Primeiro acesso pendente → mensagem com link para <code>/primeiro-acesso</code>.</td>
+</tr>
+<tr>
+<td>RA-25</td>
+<td>Rota publica para /primeiro-acesso e /sem-acesso</td>
+<td>@Peter</td>
+<td>P</td>
+<td>Adicionar em <code>app-routing.module.ts</code> sem AuthGuard.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bloco-f-flag-acessa_portal-no-frontend">Bloco F: Flag acessa_portal no frontend<a class="headerlink" href="#bloco-f-flag-acessa_portal-no-frontend" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Responsavel</th>
+<th>Esforco</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA-26</td>
+<td>Select "Acessa o portal?" na modal de criacao de colaborador</td>
+<td>@Miles</td>
+<td>P</td>
+<td>Campo select Sim/Nao no formulario. Default: Nao. Envia <code>acessaPortal</code> no payload.</td>
+</tr>
+<tr>
+<td>RA-27</td>
+<td>Toggle acessa_portal no detalhe do colaborador</td>
+<td>@Miles</td>
+<td>M</td>
+<td>Na secao "Informacoes na Empresa", select Sim/Nao editavel. Chama PATCH ao alterar.</td>
+</tr>
+<tr>
+<td>RA-28</td>
+<td>Toggle acessa_portal na hierarquia (no do colaborador)</td>
+<td>@Miles</td>
+<td>M</td>
+<td>No panel/popover de edicao do colaborador na arvore. Select Sim/Nao. Chama PATCH ao alterar.</td>
+</tr>
+<tr>
+<td>RA-29</td>
+<td>Excel colaborador: adicionar coluna "Acessa portal?"</td>
+<td>@Miles</td>
+<td>P</td>
+<td>Nova coluna com dropdown Sim/Nao. Default vazio = Nao. Mapear no upload.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sprint-3-visao-do-colaborador-testes">Sprint 3: Visao do Colaborador + Testes<a class="headerlink" href="#sprint-3-visao-do-colaborador-testes" title="Permanent link">&para;</a></h2>
+<h3 id="bloco-g-paginas-do-colaborador">Bloco G: Paginas do colaborador<a class="headerlink" href="#bloco-g-paginas-do-colaborador" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Responsavel</th>
+<th>Esforco</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA-30</td>
+<td>Pagina <code>/meu-painel</code> (dashboard pessoal)</td>
+<td>@Peter</td>
+<td>G</td>
+<td>Dashboard simplificado: IManager Score, status atual, KPIs pessoais da semana. Reutilizar componentes existentes filtrados para o usuario logado.</td>
+</tr>
+<tr>
+<td>RA-31</td>
+<td>Pagina <code>/meus-relatorios</code></td>
+<td>@Peter</td>
+<td>M</td>
+<td>Lista de relatorios semanais individuais. Reutilizar <code>app-relatorio-individual</code>. Filtrar para o usuario logado.</td>
+</tr>
+<tr>
+<td>RA-32</td>
+<td>Adaptar <code>/meu-perfil</code> para colaborador</td>
+<td>@Miles</td>
+<td>M</td>
+<td>Mesma pagina de perfil. Colaborador edita: foto, telefone, email pessoal, dados complementares, senha. Nao edita: nome, sobrenome, email corp, cargo, departamento.</td>
+</tr>
+<tr>
+<td>RA-33</td>
+<td>Rotas do colaborador em <code>app-routing.module.ts</code></td>
+<td>@Peter</td>
+<td>P</td>
+<td>/meu-painel, /meus-relatorios. Guard: ColaboradorGuard. Redirect default para /meu-painel.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bloco-h-testes-de-regressao">Bloco H: Testes de regressao<a class="headerlink" href="#bloco-h-testes-de-regressao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Responsavel</th>
+<th>Esforco</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA-34</td>
+<td>Testes: login + primeiro acesso + bloqueio</td>
+<td>@Natasha</td>
+<td>G</td>
+<td>Cenarios: login gestor OK, login colaborador OK, login sem acesso (tela bloqueio), primeiro acesso completo, primeiro acesso com email errado, tentativa com senha ja criada.</td>
+</tr>
+<tr>
+<td>RA-35</td>
+<td>Testes: CRUD com 2 perfis</td>
+<td>@Natasha</td>
+<td>G</td>
+<td>Criar gestor, criar colaborador com/sem acesso, editar flag acessa_portal, hierarquia com gestores aninhados.</td>
+</tr>
+<tr>
+<td>RA-36</td>
+<td>Testes: visao do colaborador</td>
+<td>@Natasha</td>
+<td>M</td>
+<td>Dashboard pessoal, relatorios pessoais, perfil editavel, campos bloqueados, menu correto.</td>
+</tr>
+<tr>
+<td>RA-37</td>
+<td>Testes: Excel sem senha e sem perfil</td>
+<td>@Natasha</td>
+<td>M</td>
+<td>Upload de usuarios sem coluna senha/perfil. Upload de colaboradores com coluna acessa_portal.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Sprint</th>
+<th>Bloco</th>
+<th>Tasks</th>
+<th>Responsaveis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprint 1 (Backend)</td>
+<td>A: Perfis</td>
+<td>RA-01 a RA-07 (7)</td>
+<td>@Thor + @Vision</td>
+</tr>
+<tr>
+<td>Sprint 1 (Backend)</td>
+<td>B: Primeiro acesso</td>
+<td>RA-08 a RA-11 (4)</td>
+<td>@Thor + @Vision</td>
+</tr>
+<tr>
+<td>Sprint 1 (Backend)</td>
+<td>C: Controle acesso</td>
+<td>RA-12 a RA-13 (2)</td>
+<td>@Vision</td>
+</tr>
+<tr>
+<td>Sprint 2 (Frontend)</td>
+<td>D: Perfis</td>
+<td>RA-14 a RA-20 (7)</td>
+<td>@Peter + @Miles</td>
+</tr>
+<tr>
+<td>Sprint 2 (Frontend)</td>
+<td>E: Login/Primeiro acesso</td>
+<td>RA-21 a RA-25 (5)</td>
+<td>@Peter + @Miles</td>
+</tr>
+<tr>
+<td>Sprint 2 (Frontend)</td>
+<td>F: Flag acessa_portal</td>
+<td>RA-26 a RA-29 (4)</td>
+<td>@Miles</td>
+</tr>
+<tr>
+<td>Sprint 3 (Colaborador)</td>
+<td>G: Paginas</td>
+<td>RA-30 a RA-33 (4)</td>
+<td>@Peter + @Miles</td>
+</tr>
+<tr>
+<td>Sprint 3 (Colaborador)</td>
+<td>H: Testes</td>
+<td>RA-34 a RA-37 (4)</td>
+<td>@Natasha</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>37 tasks</strong></td>
+<td><strong>3 sprints</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="atribuicao-por-dev">Atribuicao por dev<a class="headerlink" href="#atribuicao-por-dev" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dev</th>
+<th>Tasks</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@Thor</td>
+<td>RA-01 a RA-06, RA-11</td>
+<td>7</td>
+</tr>
+<tr>
+<td>@Vision</td>
+<td>RA-07 a RA-10, RA-12, RA-13</td>
+<td>6</td>
+</tr>
+<tr>
+<td>@Peter</td>
+<td>RA-14 a RA-17, RA-21, RA-24, RA-25, RA-30, RA-31, RA-33</td>
+<td>10</td>
+</tr>
+<tr>
+<td>@Miles</td>
+<td>RA-18 a RA-20, RA-22, RA-23, RA-26 a RA-29, RA-32</td>
+<td>10</td>
+</tr>
+<tr>
+<td>@Natasha</td>
+<td>RA-34 a RA-37</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="esforcos">Esforcos<a class="headerlink" href="#esforcos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>P = Pequeno (1-2h)</li>
+<li>M = Medio (3-5h)</li>
+<li>G = Grande (6-10h)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

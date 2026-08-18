@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager HQ</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --bg: #0a0c10;
+    --surface: #111318;
+    --surface2: #181c24;
+    --border: #1e2330;
+    --border2: #252c3d;
+    --text: #e8eaf0;
+    --muted: #5a6380;
+    --accent: #4f6ef7;
+    --accent2: #7c3aed;
+    --green: #22c55e;
+    --yellow: #f59e0b;
+    --red: #ef4444;
+    --cyan: #06b6d4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* GRID NOISE BACKGROUND */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(79,110,247,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79,110,247,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* HEADER */
+  header {
+    padding: 40px 0 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+    animation: fadeDown 0.6s ease both;
+  }
+
+  .logo-area { display: flex; flex-direction: column; gap: 4px; }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .logo-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .header-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 100px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .pill-green  { background: rgba(34,197,94,0.1);   color: var(--green);  border: 1px solid rgba(34,197,94,0.2); }
+  .pill-yellow { background: rgba(245,158,11,0.1);  color: var(--yellow); border: 1px solid rgba(245,158,11,0.2); }
+  .pill-blue   { background: rgba(79,110,247,0.1);  color: var(--accent); border: 1px solid rgba(79,110,247,0.2); }
+  .pill-purple { background: rgba(124,58,237,0.1);  color: #a78bfa;       border: 1px solid rgba(124,58,237,0.2); }
+  .pill-red    { background: rgba(239,68,68,0.1);   color: var(--red);    border: 1px solid rgba(239,68,68,0.2); }
+  .pill-cyan   { background: rgba(6,182,212,0.1);   color: var(--cyan);   border: 1px solid rgba(6,182,212,0.2); }
+  .pill-orange { background: rgba(251,146,60,0.1);  color: #fb923c;       border: 1px solid rgba(251,146,60,0.2); }
+
+  /* TABS */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 32px;
+    background: var(--surface);
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    width: fit-content;
+    animation: fadeDown 0.6s 0.1s ease both;
+  }
+
+  .tab {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: var(--muted);
+    transition: all 0.2s;
+    border: none;
+    background: none;
+  }
+
+  .tab:hover { color: var(--text); }
+  .tab.active { background: var(--accent); color: #fff; }
+
+  /* SECTIONS */
+  .section { display: none; animation: fadeUp 0.4s ease both; }
+  .section.active { display: block; }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+  .section-title:first-child { margin-top: 0; }
+
+  /* CARDS */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--border2); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+  /* STAT CARD */
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .stat-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-desc {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* AGENT CARD */
+  .agent-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .agent-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .agent-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+  .agent-card:hover::before { opacity: 1; }
+
+  .agent-card.sm::before { background: var(--accent); }
+  .agent-card.po::before { background: var(--green); }
+  .agent-card.tl::before { background: #f59e0b; }
+  .agent-card.fe::before { background: var(--cyan); }
+  .agent-card.be::before { background: #a78bfa; }
+  .agent-card.qa::before { background: var(--red); }
+  .agent-card.ux::before { background: #34d399; }
+  .agent-card.ai::before { background: #fb923c; }
+  .agent-card.infra::before { background: #8b5cf6; }
+  .agent-card.mkt::before { background: #ec4899; }
+  .agent-card.gestao::before { background: #f97316; }
+  .agent-card.cs::before { background: #14b8a6; }
+  .agent-card.legal::before { background: #64748b; }
+  .agent-card.rh::before { background: #e879f9; }
+  .agent-card.ceo::before { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+  .agent-card.cfo::before { background: #3b82f6; }
+
+  /* TEAM TABS */
+  .team-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+  .team-tab {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .team-tab:hover { border-color: var(--border2); color: var(--text); }
+  .team-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .team-tab.active-mkt { background: #ec4899; border-color: #ec4899; color: #fff; }
+  .team-tab.active-gestao { background: #f97316; border-color: #f97316; color: #fff; }
+  .team-panel { display: none; }
+  .team-panel.active { display: block; }
+  .team-serie { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+
+  /* AGENT PROMPT MODAL */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+    z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(4px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    width: 90%; max-width: 700px; max-height: 85vh; overflow: hidden;
+    animation: fadeDown 0.2s ease both;
+  }
+  .modal-header {
+    padding: 20px 24px; border-bottom: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .modal-header-left { display: flex; align-items: center; gap: 12px; }
+  .modal-header-emoji { font-size: 28px; }
+  .modal-header-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; }
+  .modal-header-role { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+  .modal-close {
+    background: none; border: 1px solid var(--border); border-radius: 8px;
+    color: var(--muted); font-size: 18px; width: 32px; height: 32px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+  }
+  .modal-close:hover { border-color: var(--accent); color: var(--text); }
+  .modal-body { padding: 20px 24px; overflow-y: auto; max-height: calc(85vh - 140px); }
+  .modal-prompt {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px; font-family: 'DM Mono', monospace; font-size: 11px; line-height: 1.7;
+    color: var(--text); white-space: pre-wrap; word-break: break-word;
+  }
+  .modal-actions { padding: 16px 24px; border-top: 1px solid var(--border); display: flex; gap: 8px; justify-content: flex-end; }
+  .modal-btn {
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.5px;
+    padding: 8px 20px; border-radius: 6px; cursor: pointer; transition: all 0.2s; border: none;
+  }
+  .modal-btn-copy { background: var(--accent); color: #fff; }
+  .modal-btn-copy:hover { background: #3b3ad9; }
+  .modal-btn-copy.copied { background: var(--green); }
+  .modal-btn-close { background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
+  .modal-btn-close:hover { color: var(--text); }
+
+  .agent-emoji { font-size: 28px; margin-bottom: 10px; }
+
+  .agent-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+
+  .agent-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .agent-domain {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .agent-call {
+    margin-top: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(79,110,247,0.08);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  /* FEATURE CARD */
+  .feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.2s;
+  }
+
+  .feature-card:hover { border-color: var(--border2); }
+
+  .feature-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .feature-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .feature-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .feature-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .progress-bar {
+    height: 3px;
+    background: var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    transition: width 1s ease;
+  }
+
+  .feature-stories {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .story-item {
+    font-size: 12px;
+    color: var(--muted);
+    padding: 6px 10px;
+    background: var(--surface2);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .story-item .dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--border2);
+    flex-shrink: 0;
+  }
+
+  .story-item.done .dot { background: var(--green); }
+  .story-item.wip  .dot { background: var(--yellow); }
+
+  /* BRAIN FILE TREE */
+  .tree {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  .tree-folder {
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 0;
+    user-select: none;
+  }
+
+  .tree-folder:hover { color: #fff; }
+
+  .tree-file {
+    color: var(--muted);
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 1px 0 1px 20px;
+    transition: color 0.15s;
+  }
+
+  .tree-file:hover { color: var(--text); }
+
+  .tree-file .owner {
+    font-size: 10px;
+    color: var(--border2);
+    margin-left: auto;
+  }
+
+  .tree-children { padding-left: 16px; overflow: hidden; }
+
+  .chevron { transition: transform 0.2s; display: inline-block; }
+  .collapsed .chevron { transform: rotate(-90deg); }
+  .collapsed + .tree-children { display: none; }
+
+  /* DECISIONS LOG */
+  .decision-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+  }
+
+  .decision-item:last-child { border-bottom: none; }
+
+  .decision-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 2px;
+    min-width: 80px;
+  }
+
+  .decision-content {}
+
+  .decision-title {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .decision-body {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* CMD block */
+  .cmd {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: var(--accent);
+    display: inline-block;
+  }
+
+  /* ==============================
+     SPRINT / KANBAN
+     ============================== */
+
+  .sprint-header {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+
+  .sprint-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .sprint-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .sprint-period {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .sprint-stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+
+  .sprint-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 52px;
+  }
+
+  .sprint-stat-val {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .sprint-stat-lbl {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .sprint-progress-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sprint-progress-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  .sprint-progress-fill {
+    height: 100%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, var(--accent), var(--green));
+    transition: width 1.2s ease;
+  }
+
+  .sprint-pct {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--green);
+    min-width: 36px;
+    text-align: right;
+  }
+
+  /* Kanban board */
+  .kanban-board {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border2) transparent;
+  }
+
+  .kanban-board::-webkit-scrollbar { height: 5px; }
+  .kanban-board::-webkit-scrollbar-track { background: transparent; }
+  .kanban-board::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+
+  /* Kanban column */
+  .kol {
+    flex: 0 0 222px;
+    min-width: 222px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .kol-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+  }
+
+  .kol-header-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .kol-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    background: rgba(255,255,255,0.06);
+    padding: 2px 7px;
+    border-radius: 100px;
+  }
+
+  /* Column accent colours */
+  .kol-todo    .kol-header { background: rgba(90,99,128,0.12);  border: 1px solid rgba(90,99,128,0.2); }
+  .kol-todo    .kol-header-title { color: var(--muted); }
+
+  .kol-wip     .kol-header { background: rgba(79,110,247,0.1);  border: 1px solid rgba(79,110,247,0.25); }
+  .kol-wip     .kol-header-title { color: var(--accent); }
+
+  .kol-donedev .kol-header { background: rgba(34,197,94,0.08);  border: 1px solid rgba(34,197,94,0.2); }
+  .kol-donedev .kol-header-title { color: #4ade80; }
+
+  .kol-qa      .kol-header { background: rgba(251,146,60,0.1);  border: 1px solid rgba(251,146,60,0.25); }
+  .kol-qa      .kol-header-title { color: #fb923c; }
+
+  .kol-done    .kol-header { background: rgba(34,197,94,0.12);  border: 1px solid rgba(34,197,94,0.3); }
+  .kol-done    .kol-header-title { color: var(--green); }
+
+  /* Empty column placeholder */
+  .kol-empty {
+    text-align: center;
+    padding: 24px 12px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--surface2);
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+  }
+
+  /* Group divider inside todo column */
+  .kol-group-divider {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--border2);
+    padding: 8px 4px 2px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
+
+  /* Task card */
+  .task-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    transition: border-color 0.18s, transform 0.18s;
+    cursor: default;
+  }
+
+  .task-card:hover {
+    border-color: var(--border2);
+    transform: translateY(-1px);
+  }
+
+  .task-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    gap: 6px;
+  }
+
+  .task-id {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  .task-title {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .task-footer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .agent-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    padding: 2px 7px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+
+  .layer-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    padding: 2px 7px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+  }
+
+  .dep-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(251,146,60,0.1);
+    color: #fb923c;
+    border: 1px solid rgba(251,146,60,0.2);
+    letter-spacing: 0.3px;
+  }
+
+  /* FEATURE FILTER CHIPS */
+  .chip-filter {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 100px;
+    cursor: pointer;
+    border: 1px solid var(--border2);
+    background: var(--surface);
+    color: var(--muted);
+    transition: all 0.18s;
+  }
+
+  .chip-filter:hover {
+    border-color: var(--accent);
+    color: var(--text);
+  }
+
+  .chip-filter.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .kol { flex: 0 0 180px; min-width: 180px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-area">
+      <div class="logo">Manager HQ</div>
+      <div class="logo-sub">Marvel · HIMYM · Suits — 23 Agentes · Project Brain</div>
+    </div>
+    <div class="header-meta">
+      <span class="pill pill-green">MVP1 · Ativo</span>
+      <span class="pill pill-green">Sprint · Ativo</span>
+      <span class="pill pill-blue">Brain · Configurado</span>
+    </div>
+  </header>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('overview')">Overview</button>
+    <button class="tab" onclick="switchTab('time')">Time</button>
+    <button class="tab" onclick="switchTab('features')">Features</button>
+    <button class="tab" onclick="switchTab('brain')">Brain</button>
+    <button class="tab" onclick="switchTab('sprint')">Sprint</button>
+  </div>
+
+  <!-- ==================== OVERVIEW ==================== -->
+  <div class="section active" id="overview">
+    <div class="grid-4" style="margin-bottom:32px">
+      <div class="stat-card">
+        <div class="stat-label">Agentes</div>
+        <div class="stat-value" style="color:var(--accent)">23</div>
+        <div class="stat-desc">3 times (tech + mkt + gestão)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Features</div>
+        <div class="stat-value" style="color:var(--cyan)">4</div>
+        <div class="stat-desc">no produto</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Arquivos</div>
+        <div class="stat-value" style="color:#a78bfa">54</div>
+        <div class="stat-desc">no .brain/</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Sprint</div>
+        <div class="stat-value" style="color:var(--green)" id="overview-sprint-pct">—</div>
+        <div class="stat-desc" style="color:var(--green)">ativa</div>
+      </div>
+    </div>
+
+    <div class="section-title">Produto</div>
+    <div class="card" style="margin-bottom:32px">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap">
+        <div style="flex:1;min-width:280px">
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:18px;margin-bottom:8px">Manager</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px">
+            Plataforma SaaS B2B de gestão de produtividade e monitoramento de atividade de colaboradores em estações de trabalho. Times remotos e híbridos com visibilidade real — sem invasão de privacidade.
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span class="pill pill-blue">Angular 16</span>
+            <span class="pill pill-purple">Spring Boot</span>
+            <span class="pill pill-green">PostgreSQL</span>
+            <span class="pill pill-blue">Fly.io</span>
+          </div>
+        </div>
+        <div style="flex:1;min-width:220px">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px">IManager Score — 6 Pilares</div>
+          <div style="display:flex;flex-direction:column;gap:8px" id="pilares-bars"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">Decisões recentes</div>
+    <div class="card">
+      <div class="decision-item">
+        <div class="decision-date">2026-03-25</div>
+        <div class="decision-content">
+          <div class="decision-title">Sprint Planning — Relatórios Semanais IA</div>
+          <div class="decision-body">Sprint de 1 semana focado em concluir 100% da feature. 21 tasks atribuídas, 10 agentes.</div>
+        </div>
+      </div>
+      <div class="decision-item">
+        <div class="decision-date">2026-03-25</div>
+        <div class="decision-content">
+          <div class="decision-title">OpenPDF como biblioteca PDF</div>
+          <div class="decision-body">LGPL livre para uso comercial. iText 7 tem AGPL inviável para SaaS.</div>
+        </div>
+      </div>
+      <div class="decision-item">
+        <div class="decision-date">2026-03-25</div>
+        <div class="decision-content">
+          <div class="decision-title">VIEWER acessa relatórios</div>
+          <div class="decision-body">Perfil VIEWER tem acesso a relatórios dos times visíveis na sua hierarquia.</div>
+        </div>
+      </div>
+      <div class="decision-item">
+        <div class="decision-date">2026-03-24</div>
+        <div class="decision-content">
+          <div class="decision-title">Vault Obsidian dentro do repositório</div>
+          <div class="decision-body">Pasta <code style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);background:rgba(79,110,247,0.08);padding:1px 5px;border-radius:3px">.brain/</code> na raiz do projeto — source of truth único, versionado com o código.</div>
+        </div>
+      </div>
+      <div class="decision-item">
+        <div class="decision-date">2026-03-24</div>
+        <div class="decision-content">
+          <div class="decision-title">Context scoping no Claude Code CLI</div>
+          <div class="decision-body">Dev carrega <code style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);background:rgba(79,110,247,0.08);padding:1px 5px;border-radius:3px">_shared/</code> + contexto específico da feature. Reduz ruído e tokens.</div>
+        </div>
+      </div>
+      <div class="decision-item">
+        <div class="decision-date">2026-03-24</div>
+        <div class="decision-content">
+          <div class="decision-title">Responsabilidade por agente nos arquivos do brain</div>
+          <div class="decision-body">@Steve escreve negócio/histórias, @Tony refina técnico, @Natasha define testes, @Estranho mantém processo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TIME ==================== -->
+  <div class="section" id="time">
+    <div class="team-tabs">
+      <div class="team-tab active" onclick="switchTeam('tech',this)">Tecnologia</div>
+      <div class="team-tab" onclick="switchTeam('mkt',this)">Marketing</div>
+      <div class="team-tab" onclick="switchTeam('gestao',this)">Gestão</div>
+    </div>
+
+    <!-- TAB: TECNOLOGIA (Marvel) -->
+    <div class="team-panel active" id="team-tech">
+      <div class="team-serie">Marvel Universe — 11 agentes</div>
+
+      <div class="section-title">Scrum Master &amp; Product</div>
+      <div class="grid-2" style="margin-bottom:16px">
+        <div class="agent-card sm" onclick="openAgentModal('Estranho')">
+          <div class="agent-emoji">🌀</div>
+          <div class="agent-name">Doutor Estranho</div>
+          <div class="agent-role">Scrum Master</div>
+          <div class="agent-domain">Use quando precisar organizar o trabalho: planejar sprints, conduzir dailies, retros, resolver impedimentos, estimar tasks ou documentar decisões de processo. Ele responde por padrão quando ninguém é mencionado.</div>
+          <div class="agent-call">@Estranho</div>
+        </div>
+        <div class="agent-card po" onclick="openAgentModal('Steve')">
+          <div class="agent-emoji">🛡️</div>
+          <div class="agent-name">Steve Rogers</div>
+          <div class="agent-role">Product Owner</div>
+          <div class="agent-domain">Use quando precisar decidir O QUÊ construir: definir features, escrever histórias de usuário, priorizar backlog, analisar concorrência, definir pricing, KPIs do produto ou validar se uma entrega atende o usuário.</div>
+          <div class="agent-call">@Steve</div>
+        </div>
+      </div>
+
+      <div class="section-title">Tech Lead &amp; Backend</div>
+      <div class="grid-3" style="margin-bottom:16px">
+        <div class="agent-card tl" onclick="openAgentModal('Tony')">
+          <div class="agent-emoji">⚙️</div>
+          <div class="agent-name">Tony Stark</div>
+          <div class="agent-role">Tech Lead</div>
+          <div class="agent-domain">Use quando precisar decidir COMO construir: definir arquitetura, escolher tecnologias, revisar PRs, criar ADRs, modelar domínio, desenhar diagramas C4, resolver trade-offs técnicos ou otimizar performance do sistema.</div>
+          <div class="agent-call">@Tony</div>
+        </div>
+        <div class="agent-card be" onclick="openAgentModal('Thor')">
+          <div class="agent-emoji">🔨</div>
+          <div class="agent-name">Thor Odinson</div>
+          <div class="agent-role">Backend Sênior</div>
+          <div class="agent-domain">Use para APIs críticas, banco de dados e segurança: criar endpoints Spring Boot, modelar schemas PostgreSQL, otimizar queries, configurar JWT/autenticação, auditar segurança ou resolver bugs complexos de backend.</div>
+          <div class="agent-call">@Thor</div>
+        </div>
+        <div class="agent-card be" onclick="openAgentModal('Rocket')">
+          <div class="agent-emoji">🦝</div>
+          <div class="agent-name">Rocket Raccoon</div>
+          <div class="agent-role">Backend Pleno</div>
+          <div class="agent-domain">Use para lógica de negócio e integrações: implementar regras de negócio em services, criar/documentar contratos de API, escrever migrations de banco, integrar serviços entre si ou gerar specs OpenAPI.</div>
+          <div class="agent-call">@Rocket</div>
+        </div>
+      </div>
+
+      <div class="section-title">Frontend &amp; Design</div>
+      <div class="grid-3" style="margin-bottom:16px">
+        <div class="agent-card fe" onclick="openAgentModal('Peter')">
+          <div class="agent-emoji">🕷️</div>
+          <div class="agent-name">Peter Parker</div>
+          <div class="agent-role">Frontend Sênior</div>
+          <div class="agent-domain">Use para componentes complexos e performance: criar componentes Angular avançados, gerenciar estado com RxJS, otimizar carregamento do portal, integrar APIs, configurar guards/interceptors ou resolver bugs de performance FE.</div>
+          <div class="agent-call">@Peter</div>
+        </div>
+        <div class="agent-card fe" onclick="openAgentModal('Miles')">
+          <div class="agent-emoji">🕸️</div>
+          <div class="agent-name">Miles Morales</div>
+          <div class="agent-role">Frontend Pleno</div>
+          <div class="agent-domain">Use para implementar telas e UI: construir componentes Angular seguindo designs do Groot, criar animações, montar páginas responsivas, implementar formulários ou ajustar estilos SCSS/PrimeNG.</div>
+          <div class="agent-call">@Miles</div>
+        </div>
+        <div class="agent-card ux" onclick="openAgentModal('Groot')">
+          <div class="agent-emoji">🌿</div>
+          <div class="agent-name">Groot</div>
+          <div class="agent-role">UX/UI Designer</div>
+          <div class="agent-domain">Use para design e experiência do usuário: criar wireframes, definir fluxos de navegação, manter o design system, revisar acessibilidade, propor melhorias visuais, criar protótipos ou definir micro-interações.</div>
+          <div class="agent-call">@Groot</div>
+        </div>
+      </div>
+
+      <div class="section-title">Infra, QA &amp; IA</div>
+      <div class="grid-3">
+        <div class="agent-card infra" onclick="openAgentModal('Vision')">
+          <div class="agent-emoji">👁️</div>
+          <div class="agent-name">Vision</div>
+          <div class="agent-role">Infra / DevOps</div>
+          <div class="agent-domain">Use para infraestrutura e deploy: configurar Docker/Kubernetes, criar pipelines CI/CD, provisionar servidores (Hetzner/Coolify), configurar monitoramento (Grafana/Prometheus), gerenciar secrets ou resolver problemas de infra.</div>
+          <div class="agent-call">@Vision</div>
+        </div>
+        <div class="agent-card qa" onclick="openAgentModal('Natasha')">
+          <div class="agent-emoji">🕵️</div>
+          <div class="agent-name">Natasha Romanoff</div>
+          <div class="agent-role">QA Engineer</div>
+          <div class="agent-domain">Use para qualidade e testes: criar plano de testes, escrever testes unitários/E2E, fazer code review focado em bugs, auditar segurança, rodar testes de carga ou bloquear deploy quando algo não passou na validação.</div>
+          <div class="agent-call">@Natasha</div>
+        </div>
+        <div class="agent-card ai" onclick="openAgentModal('Jarvis')">
+          <div class="agent-emoji">🧠</div>
+          <div class="agent-name">J.A.R.V.I.S</div>
+          <div class="agent-role">Especialista em IA</div>
+          <div class="agent-domain">Use para tudo de IA: criar/refinar prompts do LLM, configurar pipelines de geração de relatórios, validar JSON estruturado, avaliar qualidade dos outputs, otimizar uso de tokens ou integrar a API da Anthropic.</div>
+          <div class="agent-call">@Jarvis</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: MARKETING (HIMYM) -->
+    <div class="team-panel" id="team-mkt">
+      <div class="team-serie">How I Met Your Mother — 6 agentes</div>
+
+      <div class="section-title">Estratégia &amp; Conteúdo</div>
+      <div class="grid-3" style="margin-bottom:16px">
+        <div class="agent-card mkt" onclick="openAgentModal('Ted')">
+          <div class="agent-emoji">🏗️</div>
+          <div class="agent-name">Ted Mosby</div>
+          <div class="agent-role">Pesquisa / Estratégia / Leads</div>
+          <div class="agent-domain">Use para entender o mercado e encontrar clientes: pesquisar concorrentes, definir ICP, analisar tendências, montar listas de empresas-alvo, encontrar decisores no LinkedIn, enriquecer dados de leads ou planejar campanhas de outbound.</div>
+          <div class="agent-call">@Ted</div>
+        </div>
+        <div class="agent-card mkt" onclick="openAgentModal('Barney')">
+          <div class="agent-emoji">🎩</div>
+          <div class="agent-name">Barney Stinson</div>
+          <div class="agent-role">Copywriter / Conteúdo</div>
+          <div class="agent-domain">Use para escrever qualquer texto de marketing: landing pages, headlines, CTAs, emails de venda, artigos de blog, posts de LinkedIn, case studies, ebooks ou qualquer copy que precisa convencer alguém a agir.</div>
+          <div class="agent-call">@Barney</div>
+        </div>
+        <div class="agent-card mkt" onclick="openAgentModal('Lily')">
+          <div class="agent-emoji">🎨</div>
+          <div class="agent-name">Lily Aldrin</div>
+          <div class="agent-role">Designer Marketing</div>
+          <div class="agent-domain">Use para criar peças visuais: banners para social media, criativos de ads, imagens para blog, apresentações, brand guide, vídeos curtos ou qualquer asset visual que o marketing precise publicar.</div>
+          <div class="agent-call">@Lily</div>
+        </div>
+      </div>
+
+      <div class="section-title">Canais &amp; Growth</div>
+      <div class="grid-3">
+        <div class="agent-card mkt" onclick="openAgentModal('Marshall')">
+          <div class="agent-emoji">🍺</div>
+          <div class="agent-name">Marshall Eriksen</div>
+          <div class="agent-role">Redes Sociais</div>
+          <div class="agent-domain">Use para presença nas redes: criar calendário editorial, publicar no LinkedIn/Twitter/Instagram, engajar com comunidades, monitorar menções à marca, descobrir influenciadores do setor ou analisar performance de posts.</div>
+          <div class="agent-call">@Marshall</div>
+        </div>
+        <div class="agent-card mkt" onclick="openAgentModal('Robin')">
+          <div class="agent-emoji">🎯</div>
+          <div class="agent-name">Robin Scherbatsky</div>
+          <div class="agent-role">Tráfego Pago + SEO</div>
+          <div class="agent-domain">Use para trazer visitantes ao site: criar campanhas Google/Meta/LinkedIn Ads, configurar tracking (GA4, GTM), fazer auditoria SEO, pesquisar keywords, otimizar meta tags, criar testes A/B ou analisar funil de conversão.</div>
+          <div class="agent-call">@Robin</div>
+        </div>
+        <div class="agent-card mkt" onclick="openAgentModal('Tracy')">
+          <div class="agent-emoji">💛</div>
+          <div class="agent-name">Tracy McConnell</div>
+          <div class="agent-role">Email / Growth / Automação</div>
+          <div class="agent-domain">Use para o funil pós-captura: criar sequências de email (onboarding, nurturing, retenção), configurar CRM (HubSpot), montar automações (n8n/Make), criar programa de indicação, definir estratégia de lançamento ou configurar chatbot no site.</div>
+          <div class="agent-call">@Tracy</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: GESTÃO (Suits) -->
+    <div class="team-panel" id="team-gestao">
+      <div class="team-serie">Suits — 6 agentes</div>
+
+      <div class="section-title">Liderança</div>
+      <div class="grid-2" style="margin-bottom:16px">
+        <div class="agent-card ceo" onclick="openAgentModal('Harvey')">
+          <div class="agent-emoji">👔</div>
+          <div class="agent-name">Harvey Specter</div>
+          <div class="agent-role">CEO / Estratégia</div>
+          <div class="agent-domain">Use para decisões de negócio: definir visão e direção da empresa, preparar pitch deck para investidores, modelar pricing, avaliar oportunidades de mercado, decidir prioridades do trimestre ou analisar viabilidade de parcerias.</div>
+          <div class="agent-call">@Harvey</div>
+        </div>
+        <div class="agent-card cfo" onclick="openAgentModal('Louis')">
+          <div class="agent-emoji">📊</div>
+          <div class="agent-name">Louis Litt</div>
+          <div class="agent-role">CFO / Financeiro / Operações</div>
+          <div class="agent-domain">Use para dinheiro e processos: projetar fluxo de caixa, calcular unit economics, otimizar custos de infra/ferramentas, configurar Stripe/billing, montar dashboards financeiros, automatizar processos internos (n8n) ou escolher ferramentas do time.</div>
+          <div class="agent-call">@Louis</div>
+        </div>
+      </div>
+
+      <div class="section-title">Pessoas, Legal &amp; Clientes</div>
+      <div class="grid-3">
+        <div class="agent-card rh" onclick="openAgentModal('Jessica')">
+          <div class="agent-emoji">👠</div>
+          <div class="agent-name">Jessica Pearson</div>
+          <div class="agent-role">RH / People</div>
+          <div class="agent-domain">Use quando for contratar ou cuidar de pessoas: criar descrição de vaga, preparar entrevista, gerar contrato CLT/PJ, planejar onboarding de funcionário, definir políticas internas ou estruturar plano de desenvolvimento.</div>
+          <div class="agent-call">@Jessica</div>
+        </div>
+        <div class="agent-card legal" onclick="openAgentModal('Mike')">
+          <div class="agent-emoji">⚖️</div>
+          <div class="agent-name">Mike Ross</div>
+          <div class="agent-role">Jurídico</div>
+          <div class="agent-domain">Use para proteger a empresa legalmente: revisar termos de uso e privacidade, garantir conformidade LGPD (crítico para monitoramento), redigir contratos com clientes/fornecedores, avaliar riscos de compliance ou proteger propriedade intelectual.</div>
+          <div class="agent-call">@Mike</div>
+        </div>
+        <div class="agent-card cs" onclick="openAgentModal('Rachel')">
+          <div class="agent-emoji">🤝</div>
+          <div class="agent-name">Rachel Zane</div>
+          <div class="agent-role">Customer Success</div>
+          <div class="agent-domain">Use para cuidar dos clientes: criar playbook de onboarding, montar sequência de check-in, configurar suporte (Intercom/Zendesk), medir NPS e health score, identificar risco de churn ou criar materiais de treinamento para o cliente.</div>
+          <div class="agent-call">@Rachel</div>
+        </div>
+      </div>
+
+      <div class="section-title">Assistente Executiva</div>
+      <div class="grid-1" style="max-width:400px">
+        <div class="agent-card gestao" onclick="openAgentModal('Donna')" style="border-left:3px solid #f59e0b">
+          <div class="agent-emoji">💄</div>
+          <div class="agent-name">Donna Paulsen</div>
+          <div class="agent-role">Assistente Executiva / Braço Direito</div>
+          <div class="agent-domain">Use para TUDO que você precisa organizar: gerenciar sua lista de pendências, acompanhar o que está acontecendo em todas as áreas, lembrar de decisões anteriores, delegar tarefas para o agente certo, preparar resumos ou simplesmente pensar em voz alta. Ela sabe quem é quem nos 3 times.</div>
+          <div class="agent-call">@Donna</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FEATURES ==================== -->
+  <div class="section" id="features">
+    <div class="grid-2">
+
+      <!-- Relatórios — Em desenvolvimento + 50% -->
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-name">📊 Relatórios por IA</div>
+          <span class="pill pill-blue">Em desenvolvimento</span>
+        </div>
+        <div class="feature-desc">Diagnóstico semanal por colaborador e time gerado toda segunda às 00h00. Feature de maior valor do produto.</div>
+        <div class="feature-meta">
+          <span class="pill pill-blue">@Steve</span>
+          <span class="pill pill-blue">@Tony</span>
+          <span class="pill pill-blue">@Jarvis</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px">50% · Fase 1 quase completa, Fase 2 e 3 pendentes</div>
+        <div class="feature-stories">
+          <div class="story-item done"><div class="dot"></div>REL-001 · Geração automática do relatório</div>
+          <div class="story-item done"><div class="dot"></div>REL-002 · Score e pilares no relatório</div>
+          <div class="story-item done"><div class="dot"></div>REL-003 · Indicadores psicológicos</div>
+          <div class="story-item done"><div class="dot"></div>REL-004 · Plano de ação por IA</div>
+          <div class="story-item done"><div class="dot"></div>REL-005 · Retrospectiva automática</div>
+          <div class="story-item done"><div class="dot"></div>REL-006 · Relatório consolidado do time</div>
+          <div class="story-item wip"><div class="dot"></div>REL-007 · Entrega por email</div>
+          <div class="story-item"><div class="dot"></div>REL-008 · Histórico no portal</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-name">👤 Colaboradores</div>
+          <span class="pill pill-green">Funcional</span>
+        </div>
+        <div class="feature-desc">Gestão completa dos colaboradores monitorados. CRUD, avatares, timeline de atividades e indicadores individuais.</div>
+        <div class="feature-meta">
+          <span class="pill pill-blue">@Steve</span>
+          <span class="pill pill-blue">@Peter</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width:70%"></div></div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px">70% · Telas construídas, histórias a refinar</div>
+        <div class="feature-stories">
+          <div class="story-item done"><div class="dot"></div>CRUD de colaboradores</div>
+          <div class="story-item done"><div class="dot"></div>Gestão de avatares</div>
+          <div class="story-item done"><div class="dot"></div>Tela de detalhe do colaborador</div>
+          <div class="story-item wip"><div class="dot"></div>Timeline de atividades</div>
+          <div class="story-item"><div class="dot"></div>Histórias a refinar com @Steve</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-name">🏢 Hierarquia</div>
+          <span class="pill pill-green">Funcional</span>
+        </div>
+        <div class="feature-desc">Estrutura organizacional da empresa: gestores, colaboradores, departamentos, cargos e org chart navegável.</div>
+        <div class="feature-meta">
+          <span class="pill pill-blue">@Steve</span>
+          <span class="pill pill-blue">@Thor</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width:65%"></div></div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px">65% · Org chart ativo, histórias a refinar</div>
+        <div class="feature-stories">
+          <div class="story-item done"><div class="dot"></div>Org chart navegável</div>
+          <div class="story-item done"><div class="dot"></div>Departamentos e cargos</div>
+          <div class="story-item wip"><div class="dot"></div>Hierarquia de gestores</div>
+          <div class="story-item"><div class="dot"></div>Histórias a refinar com @Steve</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-name">📈 Gestão &amp; Dashboard</div>
+          <span class="pill pill-green">Funcional</span>
+        </div>
+        <div class="feature-desc">Dashboard principal com status em tempo real dos colaboradores, scores e visão geral do time.</div>
+        <div class="feature-meta">
+          <span class="pill pill-blue">@Steve</span>
+          <span class="pill pill-blue">@Peter</span>
+          <span class="pill pill-blue">@Miles</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px">60% · Dashboard ativo, a evoluir</div>
+        <div class="feature-stories">
+          <div class="story-item done"><div class="dot"></div>Status em tempo real (online/offline)</div>
+          <div class="story-item done"><div class="dot"></div>Visão do time com scores</div>
+          <div class="story-item wip"><div class="dot"></div>Configurações do portal</div>
+          <div class="story-item"><div class="dot"></div>Histórias a refinar com @Steve</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== BRAIN ==================== -->
+  <div class="section" id="brain">
+    <div class="grid-2">
+      <div class="card">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;margin-bottom:16px;display:flex;align-items:center;gap:8px">
+          <span>🧠</span> Estrutura do .brain/
+        </div>
+        <div class="tree" id="fileTree"></div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;margin-bottom:12px">Como usar no Claude Code</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:12px">Inicie sempre da raiz do projeto. O <code style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent)">CLAUDE.md</code> é lido automaticamente.</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div>
+              <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:4px">CONTEXTO BASE (sempre)</div>
+              <div class="cmd">/add-dir .brain/_shared</div>
+            </div>
+            <div>
+              <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:4px">FEATURE ESPECÍFICA</div>
+              <div class="cmd">/add-dir .brain/features/relatorios</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;margin-bottom:12px">Responsabilidades</div>
+          <div style="display:flex;flex-direction:column;gap:0" id="brain-resp-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SPRINT ==================== -->
+  <div class="section" id="sprint">
+
+    <!-- Sprint summary header -->
+    <div class="sprint-header">
+      <div class="sprint-title-row">
+        <div>
+          <div class="sprint-name">Sprint Ativa — Relatórios IA + Colaboradores</div>
+          <div class="sprint-period" style="margin-top:4px">2026-03-25 → 2026-03-31</div>
+        </div>
+        <span class="pill pill-green">Sprint 1 · Ativo</span>
+      </div>
+
+      <div class="sprint-progress-row">
+        <div class="sprint-progress-bar">
+          <div class="sprint-progress-fill" id="sprintProgressFill" style="width:0%"></div>
+        </div>
+        <div class="sprint-pct" id="sprintPctLabel">—</div>
+      </div>
+
+      <div class="sprint-stats" id="sprintStats"></div>
+    </div>
+
+    <!-- Feature filter -->
+    <div style="display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap" id="featureFilters">
+      <button class="chip-filter active" onclick="filterFeature('all')">Todas</button>
+      <button class="chip-filter" onclick="filterFeature('relatorios')">Relatórios IA</button>
+      <button class="chip-filter" onclick="filterFeature('colaboradores')">Colaboradores</button>
+      <button class="chip-filter" onclick="filterFeature('agent')">Agent Desktop</button>
+      <button class="chip-filter" onclick="filterFeature('reestruturacao')">Reestruturação</button>
+    </div>
+
+    <!-- Kanban board — horizontally scrollable -->
+    <div class="kanban-board" id="kanbanBoard"></div>
+
+  </div>
+
+</div><!-- /wrap -->
+
+<script>
+  /* ==========================================
+     TAB SWITCHING
+     ========================================== */
+  function switchTab(id) {
+    document.querySelectorAll('.tab').forEach((t, i) => {
+      t.classList.toggle('active', ['overview','time','features','brain','sprint'][i] === id);
+    });
+    document.querySelectorAll('.section').forEach(s => {
+      s.classList.toggle('active', s.id === id);
+    });
+  }
+
+  /* ==========================================
+     PILARES (overview)
+     ========================================== */
+  const pilares = [
+    ['Atividade',    '35%', 35],
+    ['Foco',         '25%', 25],
+    ['Consistência', '15%', 15],
+    ['Saúde',        '15%', 15],
+    ['Fragmentação', '5%',   5],
+    ['Anomalias',    '5%',   5],
+  ];
+  const pilaresContainer = document.getElementById('pilares-bars');
+  pilares.forEach(([n, p, v]) => {
+    pilaresContainer.innerHTML += `
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:3px">
+          <span style="font-size:12px">${n}</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted)">${p}</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width:${v * 2}%"></div></div>
+      </div>`;
+  });
+
+  /* ==========================================
+     BRAIN RESPONSIBILITIES
+     ========================================== */
+  const respItems = [
+    ['_shared/produto.md',           '@Steve'],
+    ['_shared/arquitetura.md',       '@Tony'],
+    ['_shared/padroes.md',           '@Tony'],
+    ['_shared/time-tecnologia.md',   '@Estranho'],
+    ['_shared/time-marketing.md',    '@Ted'],
+    ['_shared/time-gestao.md',       '@Harvey'],
+    ['features/*/README.md',         '@Steve + @Tony'],
+    ['features/*/historias.md',      '@Steve'],
+    ['features/*/tecnico.md',        '@Tony'],
+    ['features/*/testes.md',         '@Natasha'],
+    ['sprint/atual.md',              '@Steve + @Estranho'],
+  ];
+  const respList = document.getElementById('brain-resp-list');
+  respItems.forEach(([f, owner]) => {
+    respList.innerHTML += `
+      <div style="display:flex;align-items:center;gap:8px;font-size:11px;padding:6px 0;border-bottom:1px solid var(--border)">
+        <code style="font-family:'DM Mono',monospace;color:var(--accent);font-size:10px;flex:1">${f}</code>
+        <span style="color:var(--muted)">${owner}</span>
+      </div>`;
+  });
+
+  /* ==========================================
+     FILE TREE
+     ========================================== */
+  const treeData = [
+    { name: 'CLAUDE.md', type: 'file', owner: '@Estranho' },
+    { name: '.brain/', type: 'folder', children: [
+      { name: '_shared/', type: 'folder', children: [
+        { name: 'produto.md',           type: 'file', owner: '@Steve' },
+        { name: 'arquitetura.md',       type: 'file', owner: '@Tony' },
+        { name: 'padroes.md',           type: 'file', owner: '@Tony' },
+        { name: 'time-tecnologia.md',   type: 'file', owner: '@Estranho' },
+        { name: 'time-marketing.md',    type: 'file', owner: '@Ted' },
+        { name: 'time-gestao.md',       type: 'file', owner: '@Harvey' },
+      ]},
+      { name: 'features/', type: 'folder', children: [
+        { name: 'home/',           type: 'folder', children: [
+          { name: 'README.md', type: 'file', owner: '@Steve+@Tony' },
+        ]},
+        { name: 'colaboradores/', type: 'folder', children: [
+          { name: 'README.md',    type: 'file', owner: '@Steve+@Tony' },
+          { name: 'historias.md', type: 'file', owner: '@Steve' },
+          { name: 'tecnico.md',   type: 'file', owner: '@Tony' },
+          { name: 'testes.md',    type: 'file', owner: '@Natasha' },
+        ]},
+        { name: 'relatorios/', type: 'folder', children: [
+          { name: 'README.md',    type: 'file', owner: '@Steve+@Tony' },
+          { name: 'historias.md', type: 'file', owner: '@Steve' },
+          { name: 'tecnico.md',   type: 'file', owner: '@Tony' },
+          { name: 'testes.md',    type: 'file', owner: '@Natasha' },
+          { name: 'pipeline.md',  type: 'file', owner: '@Tony' },
+          { name: 'contrato-relatorio-json.md', type: 'file', owner: '@Jarvis' },
+          { name: 'adr/', type: 'folder', children: [] },
+        ]},
+        { name: 'hierarquia/',      type: 'folder', children: [
+          { name: 'README.md', type: 'file', owner: '@Steve+@Tony' },
+        ]},
+        { name: 'meu-painel/',      type: 'folder', children: [
+          { name: 'README.md', type: 'file', owner: '@Steve' },
+        ]},
+        { name: 'meus-relatorios/', type: 'folder', children: [
+          { name: 'README.md', type: 'file', owner: '@Steve' },
+        ]},
+        { name: 'meu-perfil/',      type: 'folder', children: [
+          { name: 'README.md', type: 'file', owner: '@Steve' },
+        ]},
+        { name: 'agent/',           type: 'folder', children: [
+          { name: 'README.md',  type: 'file', owner: '@Tony' },
+          { name: 'tecnico.md', type: 'file', owner: '@Tony' },
+        ]},
+        { name: 'tour/',            type: 'folder', children: [
+          { name: 'README.md', type: 'file', owner: '@Steve+@Tony' },
+        ]},
+      ]},
+      { name: 'sprint/', type: 'folder', children: [
+        { name: 'atual.md',    type: 'file', owner: '@Steve' },
+        { name: 'kanban.html', type: 'file', owner: '@Estranho' },
+        { name: 'historico/',  type: 'folder', children: [] },
+      ]},
+      { name: 'registro/', type: 'folder', children: [
+        { name: 'impedimentos.md', type: 'file', owner: '@Estranho' },
+        { name: 'sessoes/', type: 'folder', children: [
+          { name: '2026-03-24-criacao-brain.md',    type: 'file', owner: '@Estranho' },
+          { name: '2026-03-25-sprint-planning.md',  type: 'file', owner: '@Estranho' },
+        ]},
+      ]},
+    ]},
+  ];
+
+  function renderTree(nodes, container) {
+    nodes.forEach(node => {
+      if (node.type === 'folder') {
+        const wrapper  = document.createElement('div');
+        const folder   = document.createElement('div');
+        folder.className = 'tree-folder';
+        folder.innerHTML = `<span class="chevron">&#9662;</span><span>&#128193; ${node.name}</span>`;
+        const children = document.createElement('div');
+        children.className = 'tree-children';
+        if (node.children && node.children.length) renderTree(node.children, children);
+        folder.onclick = () => { folder.classList.toggle('collapsed'); };
+        wrapper.appendChild(folder);
+        wrapper.appendChild(children);
+        container.appendChild(wrapper);
+      } else {
+        const file = document.createElement('div');
+        file.className = 'tree-file';
+        file.innerHTML = `<span>&#128196; ${node.name}</span><span class="owner">${node.owner || ''}</span>`;
+        container.appendChild(file);
+      }
+    });
+  }
+
+  renderTree(treeData, document.getElementById('fileTree'));
+
+  /* ==========================================
+     KANBAN DATA
+     ========================================== */
+  const tasks = [
+    // ═══════════════════════════════════════════════
+    // FEATURE: RELATÓRIOS SEMANAIS POR IA
+    // ═══════════════════════════════════════════════
+    // PRE-REQUISITES
+    { id:"P1",   title:"ADR: OpenPDF como biblioteca PDF",                               agent:"tony",    layer:"prereq",     status:"done", dep:"",     feature:"relatorios" },
+    { id:"P2",   title:"Contrato JSON completo do relatorio_json",                       agent:"jarvis",  layer:"prereq",     status:"done", dep:"",     feature:"relatorios" },
+    { id:"P3",   title:"VIEWER acessa relatórios dos times da sua hierarquia",            agent:"steve",   layer:"prereq",     status:"done", dep:"",     feature:"relatorios" },
+    { id:"P4",   title:"Endpoint no srv-portal retorna emails dos gestores do time",      agent:"thor",    layer:"prereq",     status:"done", dep:"",     feature:"relatorios" },
+    // SRV-IA
+    { id:"11",   title:"EmailNotificacaoService + Template Thymeleaf",                   agent:"vision",  layer:"srv-ia",     status:"done", dep:"",     feature:"relatorios" },
+    { id:"11.5", title:"Implementar processarSemana() no Orquestrador",                  agent:"thor",    layer:"srv-ia",     status:"done", dep:"",     feature:"relatorios" },
+    // IA
+    { id:"IA-1", title:"Corrigir validarJsonSaida(): score_ia vs score_ia_time",         agent:"vision",  layer:"srv-ia",     status:"done", dep:"",     feature:"relatorios" },
+    { id:"IA-2", title:"Adicionar nomeColaborador + jornadaEsperada ao InputLlmDTO",     agent:"vision",  layer:"srv-ia",     status:"done", dep:"",     feature:"relatorios" },
+    { id:"IA-3", title:"Sanitizar app_name/processo (documentado — não necessário)",     agent:"vision",  layer:"srv-ia",     status:"done", dep:"",     feature:"relatorios" },
+    { id:"IA-4", title:"Atualizar prompts: schema JSON + exemplos + edge cases",         agent:"jarvis",  layer:"srv-ia",     status:"done", dep:"",     feature:"relatorios" },
+    // SRV-PORTAL
+    { id:"12",   title:"GET /api/v1/times com filtro de hierarquia",                     agent:"thor",    layer:"srv-portal", status:"done", dep:"",     feature:"relatorios" },
+    { id:"13",   title:"APIs de relatório: /semanas, /time, /colaborador",               agent:"vision",  layer:"srv-portal", status:"done", dep:"",     feature:"relatorios" },
+    { id:"14",   title:"Export PDF — OpenPDF (TIME / INDIVIDUAL / CONSOLIDADO)",         agent:"thor",    layer:"srv-portal", status:"done", dep:"",     feature:"relatorios" },
+    // FED-PORTAL
+    { id:"15",   title:"Interfaces TypeScript + RelatoriosApiService",                   agent:"peter",   layer:"fed-portal", status:"done", dep:"",     feature:"relatorios" },
+    { id:"16",   title:"Módulo lazy /relatorios + guard de perfil",                      agent:"miles",   layer:"fed-portal", status:"done", dep:"",     feature:"relatorios" },
+    { id:"17",   title:"FiltroRelatorioComponent + SemanaNavigatorComponent",            agent:"miles",   layer:"fed-portal", status:"done", dep:"",     feature:"relatorios" },
+    { id:"18a",  title:"RelatorioTimeComponent (score, ranking, pilares)",               agent:"peter",   layer:"fed-portal", status:"done", dep:"",     feature:"relatorios" },
+    { id:"18b",  title:"RelatorioIndividualComponent (pilares, psicológicos, retro)",    agent:"peter",   layer:"fed-portal", status:"done", dep:"",     feature:"relatorios" },
+    { id:"19",   title:"RelatoriosPageComponent + deeplinks + query params",             agent:"peter",   layer:"fed-portal", status:"done", dep:"",     feature:"relatorios" },
+    // E2E
+    { id:"20",   title:"Validação E2E — fluxo completo + multitenancy + PDF",            agent:"natasha", layer:"e2e",        status:"done", dep:"",     feature:"relatorios" },
+    // HOTFIX
+    { id:"HF-1", title:"TenantLookupService: usar tabelas reais do srv-portal/admin",    agent:"thor",    layer:"srv-ia",     status:"done", dep:"",     feature:"relatorios" },
+    { id:"HF-2", title:"Refazer/atualizar testes após refatoração UUID→Long",          agent:"natasha", layer:"srv-ia",     status:"done", dep:"", feature:"relatorios" },
+
+    // ═══════════════════════════════════════════════
+    // FEATURE: TELA UNIFICADA DE COLABORADORES
+    // ═══════════════════════════════════════════════
+    // BACKEND
+    { id:"C0a",  title:"GET /api/v1/times/:timeId/colaboradores — auth hierárquica + paginação DB",  agent:"tony",    layer:"srv-portal", status:"done", dep:"",     feature:"colaboradores" },
+    { id:"C0b",  title:"Testes: auth hierárquica, paginação DB, filtros de status",                  agent:"natasha", layer:"e2e",        status:"done", dep:"",     feature:"colaboradores" },
+    { id:"C0c",  title:"Atualizar frontend service para endpoint v1",                                agent:"peter",   layer:"fed-portal", status:"done", dep:"",     feature:"colaboradores" },
+    // FRONTEND
+    { id:"C1",   title:"Rotas: /times → /colaboradores + redirects + module cleanup",    agent:"miles",   layer:"fed-portal", status:"done", dep:"",     feature:"colaboradores" },
+    { id:"C2",   title:"Reescrever TS do TimesDashboardPage (tela unificada)",           agent:"peter",   layer:"fed-portal", status:"done", dep:"",     feature:"colaboradores" },
+    { id:"C3",   title:"Novo template HTML (dropdown + faixa + filtros + cards)",        agent:"peter",   layer:"fed-portal", status:"done", dep:"",     feature:"colaboradores" },
+    { id:"C4",   title:"Novo SCSS responsivo (desktop/tablet/mobile)",                   agent:"peter",   layer:"fed-portal", status:"done", dep:"",     feature:"colaboradores" },
+    { id:"C5",   title:"Deletar arquivos do TimeEquipePage",                             agent:"peter",   layer:"fed-portal", status:"done", dep:"",     feature:"colaboradores" },
+    { id:"C6",   title:"Atualizar navegação interna (sidebar, detalhe, tour)",           agent:"miles",   layer:"fed-portal", status:"done", dep:"",     feature:"colaboradores" },
+    { id:"C7",   title:"Teste manual + validação visual (@Natasha + @Groot)",            agent:"natasha", layer:"e2e",        status:"done", dep:"",     feature:"colaboradores" },
+
+    // ═══════════════════════════════════════════════
+    // FEATURE: COLABORADORES — PERFORMANCE APIs
+    // ═══════════════════════════════════════════════
+    { id:"CP1",  title:"Refatorar /resumo-periodo — queries de período inteiro (N+1→5)",     agent:"thor",    layer:"srv-portal", status:"done", dep:"",      feature:"colaboradores" },
+    { id:"CP2",  title:"Eliminar resolverContexto duplicado no service",                     agent:"thor",    layer:"srv-portal", status:"done", dep:"",      feature:"colaboradores" },
+    { id:"CP3",  title:"Criar DTO TimelineCompletaResposta",                                 agent:"vision",  layer:"srv-portal", status:"done", dep:"",      feature:"colaboradores" },
+    { id:"CP4",  title:"Queries paginadas nos repositórios de eventos",                      agent:"thor",    layer:"srv-portal", status:"done", dep:"",      feature:"colaboradores" },
+    { id:"CP5",  title:"Método timelineCompleto no service (unificar 2 endpoints)",          agent:"thor",    layer:"srv-portal", status:"done", dep:"CP2,CP3,CP4", feature:"colaboradores" },
+    { id:"CP6",  title:"Endpoint POST /timeline/completo no controller",                     agent:"vision",  layer:"srv-portal", status:"done", dep:"CP3,CP5",    feature:"colaboradores" },
+    { id:"CP7",  title:"Integrar /timeline/completo no frontend",                            agent:"peter",   layer:"fed-portal", status:"done", dep:"CP6",        feature:"colaboradores" },
+    { id:"CP8",  title:"Deprecar endpoints antigos /timeline e /timeline/resumo",            agent:"vision",  layer:"srv-portal", status:"done", dep:"CP7",        feature:"colaboradores" },
+
+    // ═══════════════════════════════════════════════
+    // FEATURE: COLABORADORES — MODELO 3 ESTADOS
+    // ═══════════════════════════════════════════════
+    { id:"E1",   title:"Renomear OFFLINE → AUSENTE no mapearTipoBloco",                     agent:"thor",    layer:"srv-portal", status:"done", dep:"",           feature:"colaboradores" },
+    { id:"E2",   title:"Gap-filling entre blocos (<10min ignorar, 10-30=PAUSA, >30=AUSENTE)",agent:"thor",    layer:"srv-portal", status:"done", dep:"E1",         feature:"colaboradores" },
+    { id:"E3",   title:"Flag jornadaExcedida nos DTOs e service",                            agent:"vision",  layer:"srv-portal", status:"done", dep:"",           feature:"colaboradores" },
+    { id:"E4",   title:"Frontend: Adaptar Visão Geral para 3 estados",                      agent:"peter",   layer:"fed-portal", status:"done", dep:"E1,E2,E3",   feature:"colaboradores" },
+    { id:"E5",   title:"Frontend: Adaptar Indicadores para 3 estados",                      agent:"peter",   layer:"fed-portal", status:"done", dep:"E1,E2,E3",   feature:"colaboradores" },
+    { id:"E6",   title:"Frontend: Indicador visual de jornada excedida",                     agent:"peter",   layer:"fed-portal", status:"done", dep:"E3,E4,E5",   feature:"colaboradores" },
+
+    // ═══════════════════════════════════════════════
+    // FEATURE: HIERARQUIA — BUG FIX + PERFORMANCE
+    // ═══════════════════════════════════════════════
+    { id:"H1",   title:"Fix: buildUsuarioPortalPayload sem timesIdsGestor",                     agent:"vision",  layer:"fed-portal", status:"done", dep:"",     feature:"colaboradores" },
+    { id:"H2",   title:"Eliminar N+1 em processarNosTimes (query batch)",                       agent:"thor",    layer:"srv-portal", status:"done", dep:"",     feature:"colaboradores" },
+    { id:"H3",   title:"@Transactional(readOnly=true) no HierarquiaService.listar()",           agent:"thor",    layer:"srv-portal", status:"done", dep:"",     feature:"colaboradores" },
+
+    // ═══════════════════════════════════════════════
+    // FEATURE: AGENT — AUDITORIA COLETA DE EVENTOS
+    // ═══════════════════════════════════════════════
+    // SPRINT ATUAL — Críticos + Altos
+    { id:"AG-C1", title:"[CRIT] Heartbeat: enviar EventoSinalVida ao buffer",                       agent:"thor",    layer:"srv-agent", status:"done", dep:"",        feature:"agent" },
+    { id:"AG-C2", title:"[CRIT] Dispose InputActivityTracker + SessionMonitor no Worker finally",    agent:"thor",    layer:"srv-agent", status:"done", dep:"",        feature:"agent" },
+    { id:"AG-C3", title:"[CRIT] Thread-safety: Interlocked nos contadores de input",                agent:"vision",  layer:"srv-agent", status:"done", dep:"",        feature:"agent" },
+    { id:"AG-C4", title:"[CRIT] DPAPI fallback: logar warning + considerar AES fallback",           agent:"thor",    layer:"srv-agent", status:"done", dep:"",        feature:"agent" },
+    { id:"AG-A1", title:"[HIGH] SessionMonitor: garantir Dispose no finally do Worker",              agent:"thor",    layer:"srv-agent", status:"done", dep:"AG-C2",   feature:"agent" },
+    { id:"AG-A2", title:"[HIGH] Cleanup eventos velhos (>7 dias Uploaded=0) + limite SQLite",        agent:"vision",  layer:"srv-agent", status:"done", dep:"",        feature:"agent" },
+    { id:"AG-A3", title:"[HIGH] Padronizar Authorization header (Bearer vs raw)",                    agent:"vision",  layer:"srv-agent", status:"done", dep:"",        feature:"agent" },
+    { id:"AG-A4", title:"[HIGH] Limite tamanho fila SQLite + warning disco",                         agent:"vision",  layer:"srv-agent", status:"done", dep:"AG-A2",   feature:"agent" },
+    // PROXIMO SPRINT — Medios
+    { id:"AG-M1", title:"[MED] DailyBoundary: enviar via ImmediateEventUploader",                    agent:"vision",  layer:"srv-agent", status:"done", dep:"AG-A3",   feature:"agent" },
+    { id:"AG-M2", title:"[MED] Batch UPDATE no MarkAsSentAsync (WHERE id IN)",                       agent:"vision",  layer:"srv-agent", status:"done", dep:"",        feature:"agent" },
+
+    // ═══════════════════════════════════════════════
+    // FEATURE: AGENT — AUTO-UPDATE MELHORIAS
+    // ═══════════════════════════════════════════════
+    { id:"AG-U1", title:"[HIGH] Auto-apply sem confirmação — atualizar silenciosamente",              agent:"thor",    layer:"srv-agent", status:"done", dep:"",          feature:"agent" },
+    { id:"AG-U2", title:"[HIGH] Polling periódico — re-verificar a cada 6h",                         agent:"thor",    layer:"srv-agent", status:"done", dep:"",          feature:"agent" },
+    { id:"AG-U3", title:"[HIGH] Telemetria de update — POST resultado ao backend",                   agent:"vision",  layer:"srv-agent", status:"done", dep:"",          feature:"agent" },
+    { id:"AG-U4", title:"[HIGH] Watchdog — crash <60s pós-update = rollback automático",             agent:"thor",    layer:"srv-agent", status:"done", dep:"AG-U1",     feature:"agent" },
+    { id:"AG-U5", title:"[MED] Re-solicitar URL no retry em vez de reusar expirada",                 agent:"vision",  layer:"srv-agent", status:"done", dep:"",          feature:"agent" },
+
+    // ═══════════════════════════════════════════════
+    // FEATURE: AGENT — EVOLUCOES DE INTELIGENCIA
+    // ═══════════════════════════════════════════════
+    { id:"INT-2a", title:"Backend: Parser de domínio dos títulos de aba (navegadores)",              agent:"vision",  layer:"srv-portal", status:"done", dep:"",            feature:"agent" },
+    { id:"INT-2b", title:"Frontend: Exibir domínio no top apps quando processo é navegador",         agent:"peter",   layer:"fed-portal", status:"done", dep:"INT-2a",      feature:"agent" },
+    { id:"INT-3a", title:"Backend: Cálculo de tempo de foco contínuo (sessões ≥ 5min)",              agent:"thor",    layer:"srv-portal", status:"done", dep:"",            feature:"agent" },
+    { id:"INT-3b", title:"Frontend: KPI de deep work na Visão Geral",                                agent:"peter",   layer:"fed-portal", status:"done", dep:"INT-3a",      feature:"agent" },
+    { id:"INT-4a", title:"Backend: Horário início/fim da jornada nos DTOs",                          agent:"vision",  layer:"srv-portal", status:"done", dep:"",            feature:"agent" },
+    { id:"INT-4b", title:"Frontend: Exibir horário início/fim no card de Jornada",                   agent:"peter",   layer:"fed-portal", status:"done", dep:"INT-4a",      feature:"agent" },
+    { id:"INT-5",  title:"Agent: Número de monitores no heartbeat (GetSystemMetrics)",               agent:"thor",    layer:"srv-agent",  status:"done", dep:"",            feature:"agent" },
+    { id:"INT-6",  title:"Agent: Status de rede no heartbeat (NetworkInterface)",                    agent:"thor",    layer:"srv-agent",  status:"done", dep:"",            feature:"agent" },
+
+    // ═══════════════════════════════════════════════
+    // FEATURE: AGENT — INSTALACAO E DEPLOY
+    // ═══════════════════════════════════════════════
+    // SPRINT ATUAL — Itens 3 e 4
+    { id:"INST-3a", title:"Criar script Inno Setup (.iss) com custom pages",                          agent:"thor",    layer:"srv-agent",  status:"done", dep:"",            feature:"agent" },
+    { id:"INST-3b", title:"Custom page: campo identificador com validação",                           agent:"thor",    layer:"srv-agent",  status:"done", dep:"INST-3a",     feature:"agent" },
+    { id:"INST-3c", title:"Integrar lógica do instalar.ps1 nas ações do Inno Setup",                 agent:"thor",    layer:"srv-agent",  status:"done", dep:"INST-3a",     feature:"agent" },
+    { id:"INST-3d", title:"Logo + ícone Manager no instalador + compilar via ISCC",                   agent:"thor",    layer:"srv-agent",  status:"done", dep:"INST-3b,INST-3c", feature:"agent" },
+    { id:"INST-4a", title:"Backend: GET /api/agente/instalador/download no srv-admin",                agent:"vision",  layer:"srv-portal", status:"done", dep:"",            feature:"agent" },
+    { id:"INST-4b", title:"Frontend: Botão 'Baixar instalador' na Organização + tour step",           agent:"peter",   layer:"fed-portal", status:"done", dep:"INST-4a",     feature:"agent" },
+    // PROXIMO — Itens 1 e 2
+    { id:"INST-1",  title:"Flag --silent + /identificador no Inno Setup",                             agent:"thor",    layer:"srv-agent",  status:"done", dep:"INST-3d",     feature:"agent" },
+    { id:"INST-2a", title:"Script PS1 de deploy em massa (CSV + WinRM)",                              agent:"thor",    layer:"srv-agent",  status:"done", dep:"INST-1",      feature:"agent" },
+    { id:"INST-2b", title:"Documentação completa de instalação (individual + massa)",                 agent:"vision",  layer:"srv-agent",  status:"done", dep:"INST-2a",     feature:"agent" },
+
+    // ═══════════════════════════════════════════════
+    // FEATURE: REESTRUTURACAO DE ACESSO
+    // ═══════════════════════════════════════════════
+    // Sprint 1 — Banco + Entities
+    { id:"RA-01", title:"Flyway: criar tabela usuarios",                              agent:"thor",    layer:"srv-portal", status:"done", dep:"",          feature:"reestruturacao" },
+    { id:"RA-02", title:"Flyway: migração de dados (usuarios_portal + colaboradores)", agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-01",     feature:"reestruturacao" },
+    { id:"RA-03", title:"Entity Usuario.java no srv-portal",                           agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-01",     feature:"reestruturacao" },
+    { id:"RA-04", title:"Entity Usuario.java no srv-admin",                            agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-01",     feature:"reestruturacao" },
+    { id:"RA-05", title:"Entity Usuario.java no srv-events",                           agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-01",     feature:"reestruturacao" },
+    { id:"RA-06", title:"EntidadeHierarquica: unificar FKs (usuario_id)",              agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-03",     feature:"reestruturacao" },
+    { id:"RA-07", title:"Unificar tabelas de vínculo (depto + time)",                  agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-03",     feature:"reestruturacao" },
+    { id:"RA-08", title:"FKs eventos: colaborador_id → usuario_id",                    agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-02",     feature:"reestruturacao" },
+    { id:"RA-09", title:"FK agentes: colaborador_id → usuario_id",                     agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-02",     feature:"reestruturacao" },
+    // Sprint 2 — Repos + Services
+    { id:"RA-10", title:"UsuarioRepository unificado (portal, 648 linhas)",            agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-03",     feature:"reestruturacao" },
+    { id:"RA-11", title:"UsuarioRepository (admin)",                                   agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-04",     feature:"reestruturacao" },
+    { id:"RA-12", title:"UsuarioRepository (events)",                                  agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-05",     feature:"reestruturacao" },
+    { id:"RA-13", title:"UsuarioService unificado (CRUD)",                             agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-10",     feature:"reestruturacao" },
+    { id:"RA-14", title:"HierarquiaService simplificado",                              agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-06,RA-10", feature:"reestruturacao" },
+    { id:"RA-15", title:"TimeEquipeService atualizado",                                agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-07",     feature:"reestruturacao" },
+    { id:"RA-16", title:"TimelineColaboradorService → usuario_id",                     agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-08",     feature:"reestruturacao" },
+    { id:"RA-17", title:"ColaboradoresV1Service atualizado",                           agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-08",     feature:"reestruturacao" },
+    { id:"RA-18", title:"Services do srv-ia atualizados (6 services)",                 agent:"vision",  layer:"srv-ia",     status:"done", dep:"RA-02",     feature:"reestruturacao" },
+    { id:"RA-19", title:"AgenteVinculacaoService (admin)",                             agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-11",     feature:"reestruturacao" },
+    { id:"RA-20", title:"AgentEventIngestionService (events)",                         agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-12",     feature:"reestruturacao" },
+    // Sprint 3 — Auth + Permissões + Frontend
+    { id:"RA-21", title:"JWT: claims com perfil + flags",                              agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-13",     feature:"reestruturacao" },
+    { id:"RA-22", title:"Login: aceitar qualquer perfil com acessa_portal",            agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-21",     feature:"reestruturacao" },
+    { id:"RA-23", title:"Middleware de permissões por perfil (AccessService)",          agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-22",     feature:"reestruturacao" },
+    { id:"RA-24", title:"DTOs unificados (20+ arquivos)",                              agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-13",     feature:"reestruturacao" },
+    { id:"RA-25", title:"Controllers portal atualizados (8 controllers)",              agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-23,RA-24", feature:"reestruturacao" },
+    { id:"RA-26", title:"Controllers admin atualizados",                               agent:"vision",  layer:"srv-portal", status:"done", dep:"RA-19",     feature:"reestruturacao" },
+    { id:"RA-27", title:"Frontend: services e models atualizados",                     agent:"peter",   layer:"fed-portal", status:"done", dep:"RA-25",     feature:"reestruturacao" },
+    { id:"RA-28", title:"Frontend: guards de rota por perfil",                         agent:"peter",   layer:"fed-portal", status:"done", dep:"RA-27",     feature:"reestruturacao" },
+    { id:"RA-29", title:"Frontend: visão pessoal do colaborador (novo módulo)",        agent:"peter",   layer:"fed-portal", status:"done", dep:"RA-28",     feature:"reestruturacao" },
+    { id:"RA-30", title:"Frontend: menu dinâmico por perfil",                          agent:"peter",   layer:"fed-portal", status:"done", dep:"RA-28",     feature:"reestruturacao" },
+    { id:"RA-31", title:"Frontend: CRUD unificado de usuarios",                        agent:"peter",   layer:"fed-portal", status:"done", dep:"RA-27",     feature:"reestruturacao" },
+    // Sprint 4 — Migração + Testes
+    { id:"RA-32", title:"Testes de regressão completos",                               agent:"natasha", layer:"e2e",        status:"done", dep:"RA-29,RA-31", feature:"reestruturacao" },
+    { id:"RA-33", title:"Script de cutover (Fase 3)",                                  agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-25",     feature:"reestruturacao" },
+    { id:"RA-34", title:"Rollback script",                                             agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-33",     feature:"reestruturacao" },
+    { id:"RA-35", title:"Deploy coordenado dos 4 backends",                            agent:"thor",    layer:"srv-portal", status:"done", dep:"RA-33,RA-34", feature:"reestruturacao" },
+    { id:"RA-36", title:"Validação pós-migração",                                      agent:"natasha", layer:"e2e",        status:"done", dep:"RA-35",     feature:"reestruturacao" },
+    // FEATURE: TOURS CONTEXTUAIS
+    { id:"T1",   title:"Tabela user_tour_flags + Entity + Migration",                   agent:"vision",  layer:"srv-portal", status:"done", dep:"",          feature:"tour" },
+    { id:"T2",   title:"Endpoint PATCH/GET flags de tour + inclusão no login",          agent:"vision",  layer:"srv-portal", status:"done", dep:"",          feature:"tour" },
+    { id:"T3",   title:"Refatorar TourService — quebrar STEPS monolítico em TourDefinitions", agent:"peter", layer:"fed-portal", status:"done", dep:"",     feature:"tour" },
+    { id:"T4",   title:"Lógica de disparo por rota (auto-start baseado em flags + dados)", agent:"peter", layer:"fed-portal", status:"done", dep:"",        feature:"tour" },
+    { id:"T5",   title:"Steps tour-home + animação pulse no menu Organização",          agent:"peter",   layer:"fed-portal", status:"done", dep:"",          feature:"tour" },
+    { id:"T6",   title:"Steps tour-org-estrutura + tour-org-times + tour-org-hierarquia", agent:"peter", layer:"fed-portal", status:"done", dep:"",          feature:"tour" },
+    { id:"T7",   title:"Steps tour-colaboradores (variações por estado de dados)",      agent:"peter",   layer:"fed-portal", status:"done", dep:"",          feature:"tour" },
+    { id:"T8",   title:"Steps tour-colaborador-detalhe",                                agent:"peter",   layer:"fed-portal", status:"done", dep:"",          feature:"tour" },
+    { id:"T9",   title:"Steps tour-relatorios",                                         agent:"miles",   layer:"fed-portal", status:"wip",  dep:"",          feature:"tour" },
+    { id:"T10",  title:"Steps tour-perfil + seção Rever tours em Configurações",        agent:"miles",   layer:"fed-portal", status:"wip",  dep:"",          feature:"tour" },
+    { id:"T11",  title:"Ícone ? no header das páginas para repetir tour",               agent:"miles",   layer:"fed-portal", status:"done", dep:"",          feature:"tour" },
+    { id:"T12",  title:"Adicionar data-tour selectors novos nos componentes",           agent:"miles",   layer:"fed-portal", status:"done", dep:"",          feature:"tour" },
+  ];
+
+  /* Agent colour map */
+  const agentColors = {
+    tony:    { bg:'rgba(245,158,11,0.12)',  color:'#f59e0b', border:'rgba(245,158,11,0.25)'  },
+    thor:    { bg:'rgba(167,139,250,0.12)', color:'#a78bfa', border:'rgba(167,139,250,0.25)' },
+    vision:  { bg:'rgba(167,139,250,0.12)', color:'#a78bfa', border:'rgba(167,139,250,0.25)' },
+    peter:   { bg:'rgba(6,182,212,0.12)',   color:'#06b6d4', border:'rgba(6,182,212,0.25)'   },
+    miles:   { bg:'rgba(6,182,212,0.12)',   color:'#06b6d4', border:'rgba(6,182,212,0.25)'   },
+    natasha: { bg:'rgba(239,68,68,0.12)',   color:'#ef4444', border:'rgba(239,68,68,0.25)'   },
+    jarvis:  { bg:'rgba(251,146,60,0.12)',  color:'#fb923c', border:'rgba(251,146,60,0.25)'  },
+    steve:   { bg:'rgba(34,197,94,0.12)',   color:'#22c55e', border:'rgba(34,197,94,0.25)'   },
+  };
+
+  /* Layer style map */
+  const layerStyles = {
+    'prereq':     { cls:'pill-yellow', label:'prereq'      },
+    'srv-ia':     { cls:'pill-purple', label:'srv-ia'      },
+    'srv-portal': { cls:'pill-blue',   label:'srv-portal'  },
+    'srv-agent':  { cls:'pill-orange', label:'srv-agent'   },
+    'fed-portal': { cls:'pill-cyan',   label:'fed-portal'  },
+    'e2e':        { cls:'pill-red',    label:'e2e'         },
+  };
+
+  /* Feature style map */
+  const featureStyles = {
+    'relatorios':    { cls:'pill-orange', label:'relatorios'    },
+    'colaboradores': { cls:'pill-green',  label:'colaboradores' },
+    'agent':         { cls:'pill-red',    label:'agent'         },
+    'reestruturacao':{ cls:'pill-purple', label:'reestruturacao'},
+  };
+
+  /* Active feature filter */
+  let activeFeature = 'all';
+
+  /* ==========================================
+     PROGRESS CALCULATION
+     ========================================== */
+  function calcProgress(taskList) {
+    const cols = { todo:[], wip:[], 'done-dev':[], qa:[], done:[] };
+    taskList.forEach(t => { if (cols[t.status]) cols[t.status].push(t); });
+    const total   = taskList.length;
+    const done    = cols.done.length;
+    const partial = cols['done-dev'].length * 0.6
+                  + cols.qa.length          * 0.8
+                  + cols.wip.length         * 0.2;
+    const pct = Math.round(((done + partial) / total) * 100);
+    return { cols, total, pct };
+  }
+
+  /* ==========================================
+     RENDER TASK CARD
+     ========================================== */
+  function renderTaskCard(task) {
+    const ac = agentColors[task.agent] || { bg:'rgba(90,99,128,0.1)', color:'#5a6380', border:'rgba(90,99,128,0.2)' };
+    const ls = layerStyles[task.layer] || { cls:'pill-blue', label: task.layer };
+    const fs = featureStyles[task.feature] || { cls:'pill-blue', label: task.feature };
+
+    const agentPill   = `<span class="agent-tag" style="background:${ac.bg};color:${ac.color};border:1px solid ${ac.border}">@${task.agent}</span>`;
+    const layerPill   = `<span class="layer-tag pill ${ls.cls}">${ls.label}</span>`;
+    const featurePill = `<span class="layer-tag pill ${fs.cls}" style="font-size:8px">${fs.label}</span>`;
+    const depBadge    = task.dep ? `<span class="dep-badge">dep: ${task.dep}</span>` : '';
+
+    return `
+      <div class="task-card">
+        <div class="task-card-top">
+          <span class="task-id">${task.id}</span>
+          <div style="display:flex;gap:4px">${featurePill}${layerPill}</div>
+        </div>
+        <div class="task-title">${task.title}</div>
+        <div class="task-footer">
+          ${agentPill}
+          ${depBadge}
+        </div>
+      </div>`;
+  }
+
+  /* ==========================================
+     BUILD KANBAN
+     ========================================== */
+  function filterFeature(feature) {
+    activeFeature = feature;
+    document.querySelectorAll('.chip-filter').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.toLowerCase().includes(
+        feature === 'all' ? 'todas' : feature
+      ));
+    });
+    rebuildKanban();
+  }
+
+  function rebuildKanban() {
+    const board = document.getElementById('kanbanBoard');
+    board.innerHTML = '';
+    const statsEl = document.getElementById('sprintStats');
+    statsEl.innerHTML = '';
+    buildKanban();
+  }
+
+  function buildKanban() {
+    const filteredTasks = activeFeature === 'all'
+      ? tasks
+      : tasks.filter(t => t.feature === activeFeature);
+    const { cols, total, pct } = calcProgress(filteredTasks);
+
+    /* Sprint progress header */
+    document.getElementById('sprintPctLabel').textContent = pct + '%';
+    setTimeout(() => {
+      document.getElementById('sprintProgressFill').style.width = pct + '%';
+    }, 120);
+
+    /* Stats row */
+    const statsData = [
+      { val: total,                   label:'Total',        color:'var(--text)'    },
+      { val: cols.todo.length,        label:'A Fazer',      color:'var(--muted)'   },
+      { val: cols.wip.length,         label:'Em Dev',       color:'var(--accent)'  },
+      { val: cols['done-dev'].length, label:'Desenvolvido', color:'#4ade80'        },
+      { val: cols.qa.length,          label:'Em QA',        color:'#fb923c'        },
+      { val: cols.done.length,        label:'Finalizado',   color:'var(--green)'   },
+    ];
+    const statsEl = document.getElementById('sprintStats');
+    statsData.forEach(s => {
+      statsEl.innerHTML += `
+        <div class="sprint-stat">
+          <div class="sprint-stat-val" style="color:${s.color}">${s.val}</div>
+          <div class="sprint-stat-lbl">${s.label}</div>
+        </div>`;
+    });
+
+    /* Update overview sprint card */
+    document.getElementById('overview-sprint-pct').textContent = pct + '%';
+
+    /* Column definitions */
+    const columns = [
+      { key:'todo',     cls:'kol-todo',    label:'A Fazer',          tasks: cols.todo,          grouped: true  },
+      { key:'wip',      cls:'kol-wip',     label:'Em Desenvolvimento',tasks: cols.wip,           grouped: false },
+      { key:'done-dev', cls:'kol-donedev', label:'Desenvolvido',      tasks: cols['done-dev'],   grouped: false },
+      { key:'qa',       cls:'kol-qa',      label:'Em Testes QA',      tasks: cols.qa,            grouped: false },
+      { key:'done',     cls:'kol-done',    label:'Finalizado',        tasks: cols.done,          grouped: false },
+    ];
+
+    const board = document.getElementById('kanbanBoard');
+
+    columns.forEach(col => {
+      const colEl = document.createElement('div');
+      colEl.className = `kol ${col.cls}`;
+
+      /* Column header */
+      colEl.innerHTML = `
+        <div class="kol-header">
+          <span class="kol-header-title">${col.label}</span>
+          <span class="kol-count">${col.tasks.length}</span>
+        </div>`;
+
+      if (col.tasks.length === 0) {
+        colEl.innerHTML += `<div class="kol-empty">Vazio</div>`;
+      } else if (col.grouped) {
+        /* Group todo column by layer */
+        const groups = [
+          { key:'prereq',     label:'Pré-requisitos' },
+          { key:'srv-ia',     label:'srv-ia'          },
+          { key:'srv-portal', label:'srv-portal'      },
+          { key:'srv-agent',  label:'srv-agent'       },
+          { key:'fed-portal', label:'fed-portal'      },
+          { key:'e2e',        label:'e2e'             },
+        ];
+        let first = true;
+        groups.forEach(g => {
+          const groupTasks = col.tasks.filter(t => t.layer === g.key);
+          if (groupTasks.length === 0) return;
+          if (!first) {
+            colEl.innerHTML += `<div class="kol-group-divider">${g.label}</div>`;
+          }
+          first = false;
+          groupTasks.forEach(t => { colEl.innerHTML += renderTaskCard(t); });
+        });
+      } else {
+        col.tasks.forEach(t => { colEl.innerHTML += renderTaskCard(t); });
+      }
+
+      board.appendChild(colEl);
+    });
+  }
+
+  buildKanban();
+
+  /* ==========================================
+     ANIMATE PROGRESS BARS
+     ========================================== */
+  setTimeout(() => {
+    document.querySelectorAll('.progress-fill').forEach(bar => {
+      const w = bar.style.width;
+      bar.style.width = '0%';
+      requestAnimationFrame(() => { bar.style.width = w; });
+    });
+  }, 100);
+
+  /* ==========================================
+     AGENT PROMPTS DATABASE
+     ========================================== */
+  const agentPrompts = {
+    'Estranho': {emoji:'🌀',name:'Doutor Estranho',role:'Scrum Master',prompt:`Você é o @Estranho, Scrum Master do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA (nesta ordem):
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/time-tecnologia.md — seu time, seus acordos, seu fluxo, suas regras
+3. .brain/_shared/time-marketing.md — time de marketing (para saber quando interagir)
+4. .brain/_shared/time-gestao.md — time de gestão (para saber quando interagir)
+5. .brain/sprint/atual.md — sprint atual
+
+Suas responsabilidades:
+- Conduzir daily, planning, retro, review
+- Criar e manter histórias no backlog junto com @Steve
+- Identificar e remover impedimentos do time
+- Acompanhar o progresso de TODAS as tarefas diariamente
+- Saber o status de cada dev a qualquer momento
+- Alertar quando algo está atrasado ou travado
+
+Regras: Você NÃO decide arquitetura, NÃO escreve código, NÃO decide o que construir. Se pedirem algo fora do seu papel, encaminhe para o responsável.
+
+Se apresente brevemente e me diga o status atual do sprint.`},
+
+    'Steve': {emoji:'🛡️',name:'Steve Rogers',role:'Product Owner',prompt:`Você é o @Steve, Product Owner do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager, ICP, diferenciais, Score IA, pilares
+2. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+3. .brain/_shared/time-marketing.md — time de marketing (você avisa @Ted quando feature nova sai)
+4. .brain/_shared/time-gestao.md — time de gestão (você alinha com @Harvey prioridades)
+5. CLAUDE.md — índice das features
+
+Suas responsabilidades:
+- Decidir O QUÊ construir e POR QUÊ
+- Escrever histórias de usuário com contexto de negócio
+- Priorizar o backlog
+- Validar se entregas atendem o usuário
+
+Regras: Você NÃO decide COMO implementar (isso é do @Tony), NÃO escreve código. Quando feature nova estiver pronta, avise @Ted (marketing).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Tony': {emoji:'⚙️',name:'Tony Stark',role:'Tech Lead',prompt:`Você é o @Tony, Tech Lead do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/arquitetura.md — stack, serviços, decisões estruturais
+3. .brain/_shared/padroes.md — convenções de código, design system
+4. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+5. .brain/_shared/time-marketing.md — time de marketing
+6. .brain/_shared/time-gestao.md — time de gestão
+
+Suas responsabilidades:
+- Decidir COMO construir (arquitetura, padrões, tecnologia)
+- Refinar tecnicamente as histórias do @Steve
+- Quebrar histórias em tarefas técnicas e atribuir aos devs
+- Revisar PRs e registrar ADRs
+
+Regras: Você NÃO decide O QUÊ construir (isso é do @Steve), NÃO implementa features inteiras sozinho — delega.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Peter': {emoji:'🕷️',name:'Peter Parker',role:'Frontend Sênior',prompt:`Você é o @Peter, Frontend Sênior do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/padroes.md — convenções, design system
+3. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+
+Stack: Angular 16 + PrimeNG + SCSS + RxJS
+
+Suas responsabilidades: Componentes complexos, performance, integração API, mentoria do @Miles, testes unitários.
+
+Regras: Precisa de design? Chama @Groot ANTES. Não mexe em backend. Todo código precisa de teste unitário.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Miles': {emoji:'🕸️',name:'Miles Morales',role:'Frontend Pleno',prompt:`Você é o @Miles, Frontend Pleno do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/padroes.md — convenções, design system
+3. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+
+Stack: Angular 16 + PrimeNG + SCSS + RxJS
+
+Suas responsabilidades: Implementar telas conforme designs do @Groot, animações, páginas responsivas, formulários, testes unitários.
+
+Regras: Dúvida visual? Chama @Groot. Dúvida de padrão? Chama @Peter. Não mexe em backend.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Thor': {emoji:'🔨',name:'Thor Odinson',role:'Backend Sênior',prompt:`Você é o @Thor, Backend Sênior do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/arquitetura.md — stack, serviços
+3. .brain/_shared/padroes.md — convenções
+4. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+
+Stack: Spring Boot (Java 17) + PostgreSQL + JWT
+
+Suas responsabilidades: APIs críticas, modelar/otimizar PostgreSQL, JWT/autenticação, segurança, migrations, testes unitários.
+
+Regras: Não mexe em frontend. Decisões de schema passam por @Tony. Todo código precisa de teste unitário.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Rocket': {emoji:'🦝',name:'Rocket Raccoon',role:'Backend Pleno',prompt:`Você é o @Rocket, Backend Pleno do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/arquitetura.md — stack, serviços
+3. .brain/_shared/padroes.md — convenções
+4. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+
+Stack: Spring Boot (Java 17) + PostgreSQL
+
+Suas responsabilidades: Regras de negócio em services, integrações entre serviços, contratos de API, migrations, testes unitários.
+
+Regras: Não decide arquitetura (alinha com @Tony). Não mexe em frontend. Todo código precisa de teste unitário.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Vision': {emoji:'👁️',name:'Vision',role:'Infra / DevOps',prompt:`Você é o @Vision, responsável por Infra e DevOps do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/arquitetura.md — stack, serviços, deploy
+3. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+4. docs/infraestrutura.md — infra atual (Hetzner + Coolify + Supabase)
+
+Stack: Docker + Hetzner VPS + Coolify + Supabase (PostgreSQL)
+
+Suas responsabilidades: Docker, CI/CD (GitHub Actions), servidores, monitoramento (Grafana/Prometheus), secrets.
+
+Regras: Não escreve código de produto. Custos de infra passam por @Louis (gestão).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Natasha': {emoji:'🕵️',name:'Natasha Romanoff',role:'QA Engineer',prompt:`Você é a @Natasha, QA Engineer do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/padroes.md — convenções e Definition of Done
+3. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+
+Suas responsabilidades: Estratégia de testes, testes E2E e integração, validar entregas, testes de carga, auditoria de segurança.
+
+REGRA MAIS IMPORTANTE: Você tem PODER DE VETO. Nada vai para produção sem sua aprovação. Se encontrar problema, REJEITA e devolve com bug descrito. Você NÃO escreve código de produção.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Groot': {emoji:'🌿',name:'Groot',role:'UX/UI Designer',prompt:`Você é o @Groot, UX/UI Designer do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/padroes.md — design system (cores, tipografia, componentes)
+3. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+
+Design System: Cards brancos, border #e5e7eb, radius 14px, azul-índigo #4f46e5, header #1e293b
+
+Suas responsabilidades: Wireframes, protótipos, design system, revisar implementações visuais, acessibilidade, responsividade.
+
+Regras: Você NÃO escreve código — entrega specs para @Peter/@Miles. Frontend precisa de design? Eles chamam VOCÊ primeiro.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Jarvis': {emoji:'🧠',name:'J.A.R.V.I.S',role:'Especialista em IA',prompt:`Você é o @Jarvis, Especialista em IA do time de tecnologia do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager (Score IA, pilares, indicadores)
+2. .brain/_shared/arquitetura.md — pipeline de IA
+3. .brain/_shared/time-tecnologia.md — seu time, acordos, fluxo, regras
+4. .brain/features/relatorios/README.md — feature de relatórios IA
+5. .brain/features/relatorios/contrato-relatorio-json.md — schema JSON do LLM
+
+Stack IA: Anthropic API (Claude) + prompt caching + JSON estruturado
+
+Suas responsabilidades: Prompts do LLM, pipeline de relatórios, validar JSON, avaliar outputs, otimizar tokens, integrar Anthropic API.
+
+Regras: Não mexe em frontend nem banco diretamente. Mudanças de schema passam por @Tony.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Ted': {emoji:'🏗️',name:'Ted Mosby',role:'Pesquisa / Estratégia / Leads',prompt:`Você é o @Ted, Pesquisador, Estrategista e responsável por Prospecção do time de marketing do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager, ICP, diferenciais
+2. .brain/_shared/time-marketing.md — seu time, acordos, fluxo, regras, interações
+3. .brain/_shared/time-tecnologia.md — time de tech
+4. .brain/_shared/time-gestao.md — time de gestão
+
+Suas responsabilidades: Pesquisar mercado/concorrentes, definir ICP, montar listas de empresas-alvo, encontrar decisores, enriquecer dados, planejar outbound.
+
+Regras: Não escreve copy (chama @Barney), não cria visual (chama @Lily), não publica em redes (chama @Marshall).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Barney': {emoji:'🎩',name:'Barney Stinson',role:'Copywriter / Conteúdo',prompt:`Você é o @Barney, Copywriter e responsável por Conteúdo do time de marketing do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager, ICP, diferenciais, tom de voz
+2. .brain/_shared/time-marketing.md — seu time, acordos, fluxo, regras
+
+Suas responsabilidades: TODA copy final — landing pages, headlines, CTAs, emails, blog, artigos, case studies. Garantir que nada soa como IA.
+
+Regras: Não faz design (chama @Lily), não publica em redes (chama @Marshall), não configura ads (chama @Robin).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Lily': {emoji:'🎨',name:'Lily Aldrin',role:'Designer Marketing',prompt:`Você é a @Lily, Designer de Marketing do time de marketing do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/padroes.md — design system
+3. .brain/_shared/time-marketing.md — seu time, acordos, fluxo, regras
+
+Paleta: Indigo #4f46e5, Slate #1e293b, branco
+
+Suas responsabilidades: Todos os assets visuais — banners, social, ads, blog images, brand guide, apresentações, vídeos curtos.
+
+Regras: Não escreve texto (chama @Barney), não publica (chama @Marshall), não configura campanhas (chama @Robin).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Marshall': {emoji:'🍺',name:'Marshall Eriksen',role:'Redes Sociais',prompt:`Você é o @Marshall, responsável por Redes Sociais do time de marketing do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/time-marketing.md — seu time, acordos, fluxo, regras
+
+Canais: LinkedIn (principal B2B), Twitter/X, Instagram, YouTube, Reddit
+
+Suas responsabilidades: Gerenciar canais, calendário editorial mensal, publicar conteúdo, engajar comunidades, monitorar menções, identificar influenciadores.
+
+Regras: Não escreve copy (chama @Barney), não cria visual (chama @Lily), não configura ads pagos (chama @Robin).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Robin': {emoji:'🎯',name:'Robin Scherbatsky',role:'Tráfego Pago + SEO',prompt:`Você é a @Robin, responsável por Tráfego Pago e SEO do time de marketing do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager, ICP
+2. .brain/_shared/time-marketing.md — seu time, acordos, fluxo, regras
+
+Suas responsabilidades: Google Ads, Meta Ads, LinkedIn Ads, orçamento de mídia, ROI, SEO técnico e on-page, tracking (GA4, GTM), testes A/B, análise de funil.
+
+Regras: Não escreve copy dos ads (chama @Barney), não cria visual (chama @Lily), não publica orgânico (chama @Marshall). Orçamento passa por @Louis (gestão).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Tracy': {emoji:'💛',name:'Tracy McConnell',role:'Email / Growth / Automação',prompt:`Você é a @Tracy, responsável por Email, Growth e Automação do time de marketing do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/time-marketing.md — seu time, acordos, fluxo, regras
+3. .brain/_shared/time-gestao.md — interação com gestão (lead vira cliente → @Rachel assume)
+
+Suas responsabilidades: Sequências de email, CRM (HubSpot/Pipedrive), automações (n8n/Make), growth loops, programa de indicação, métricas de email.
+
+Regras: Não escreve copy dos emails (chama @Barney), não prospecta leads (chama @Ted), não faz ads (chama @Robin). Lead virou cliente? Passa para @Rachel (gestão).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Harvey': {emoji:'👔',name:'Harvey Specter',role:'CEO / Estratégia',prompt:`Você é o @Harvey, CEO e Estrategista do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager, modelo de negócio, estágio atual
+2. .brain/_shared/time-gestao.md — seu time, acordos, fluxo, regras, interações
+3. .brain/_shared/time-tecnologia.md — time de tech (você prioriza com @Steve)
+4. .brain/_shared/time-marketing.md — time de marketing (você define metas com @Ted)
+
+Suas responsabilidades: Visão, direção, decisões de negócio, pitch para investidores, pricing, posicionamento, parcerias, roadmap.
+
+Regras: Não controla dinheiro no detalhe (chama @Louis), não redige contratos (chama @Mike), não cuida de clientes diretamente (chama @Rachel). Feature nova? Avisa @Steve (tech) e @Ted (marketing).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Louis': {emoji:'📊',name:'Louis Litt',role:'CFO / Financeiro / Operações',prompt:`Você é o @Louis, CFO e responsável por Operações do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager, modelo de negócio
+2. .brain/_shared/time-gestao.md — seu time, acordos, fluxo, regras
+3. docs/infraestrutura.md — custos de infra atual
+
+Suas responsabilidades: Fluxo de caixa, runway, unit economics, otimizar custos, billing (Stripe), ferramentas do time, automações internas, processos operacionais.
+
+Regras: Não decide estratégia de produto (chama @Harvey), não contrata (chama @Jessica), não cuida de compliance (chama @Mike).
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Jessica': {emoji:'👠',name:'Jessica Pearson',role:'RH / People',prompt:`Você é a @Jessica, responsável por RH e People do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/time-gestao.md — seu time, acordos, fluxo, regras
+
+Suas responsabilidades: Descrições de vaga, processo seletivo, contratos de trabalho (com revisão do @Mike), onboarding de funcionários, políticas internas, cultura.
+
+Regras: Não decide estratégia (chama @Harvey), não cuida de clientes (chama @Rachel), contratos legais passam por @Mike, budget de contratação passa por @Louis.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Mike': {emoji:'⚖️',name:'Mike Ross',role:'Jurídico',prompt:`Você é o @Mike, responsável pelo Jurídico do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager (IMPORTANTE: é software de monitoramento, LGPD é crítico)
+2. .brain/_shared/time-gestao.md — seu time, acordos, fluxo, regras
+
+Suas responsabilidades: Termos de uso, política de privacidade, conformidade LGPD (crítico para monitoramento), contratos, compliance, propriedade intelectual.
+
+Regras: Não decide negócio (chama @Harvey), não cuida de RH (chama @Jessica), não negocia com clientes (chama @Rachel). Se tech precisa validar compliance, @Tony chama você.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Rachel': {emoji:'🤝',name:'Rachel Zane',role:'Customer Success',prompt:`Você é a @Rachel, responsável por Customer Success do Manager.
+
+Leia e memorize estes arquivos AGORA:
+1. .brain/_shared/produto.md — o que é o Manager, como funciona, para quem é
+2. .brain/_shared/time-gestao.md — seu time, acordos, fluxo, regras
+3. .brain/_shared/time-tecnologia.md — time de tech (para escalar bugs)
+4. .brain/_shared/time-marketing.md — time de marketing (lead vira cliente, você assume)
+
+Suas responsabilidades: Playbook de onboarding, primeiras semanas do cliente, health score, check-ins, feedback/NPS, escalar bugs para @Tony/@Thor, comunicar atualizações.
+
+Regras: Não decide estratégia (chama @Harvey), não faz contratos (chama @Mike). Bug crítico? Escala para @Tony. Lead virou cliente? @Tracy passa para você.
+
+Se apresente brevemente e me pergunte no que posso ajudar.`},
+
+    'Donna': {emoji:'💄',name:'Donna Paulsen',role:'Assistente Executiva',prompt:`Você é a @Donna, Assistente Executiva e braço direito do fundador do Manager.
+
+Leia e memorize estes arquivos AGORA (TODOS — você precisa saber de tudo):
+1. .brain/_shared/produto.md — o que é o Manager
+2. .brain/_shared/time-tecnologia.md — time de tech inteiro
+3. .brain/_shared/time-marketing.md — time de marketing inteiro
+4. .brain/_shared/time-gestao.md — time de gestão inteiro
+5. .brain/donna/pendencias.md — lista de pendências do Marcos
+6. .brain/donna/diario.md — diário de atividades
+7. .brain/donna/notas.md — notas e contexto do Marcos
+8. .brain/sprint/atual.md — sprint atual
+9. CLAUDE.md — índice geral
+
+Suas responsabilidades:
+- Saber TUDO que está acontecendo em todas as áreas
+- Gerenciar a lista de pendências do Marcos (pendencias.md)
+- Registrar decisões e notas de cada conversa (diario.md e notas.md)
+- Lembrar o Marcos de coisas que ele mencionou antes
+- Priorizar e organizar o que precisa de atenção
+- Delegar tarefas para os agentes corretos (você sabe quem faz o quê)
+- Preparar resumos executivos quando solicitado
+
+Regras:
+- Você NÃO toma decisões de negócio — registra e encaminha para @Harvey
+- Você NÃO executa tarefas dos outros — delega para o responsável certo
+- Você SEMPRE atualiza pendencias.md quando algo novo surgir
+- Você SEMPRE atualiza diario.md ao final de cada conversa importante
+
+Ao iniciar, leia os arquivos, me dê um resumo rápido das pendências ativas e me pergunte no que posso ajudar hoje.`},
+  };
+
+  function openAgentModal(agentKey) {
+    const agent = agentPrompts[agentKey];
+    if (!agent) return;
+    document.getElementById('modalEmoji').textContent = agent.emoji;
+    document.getElementById('modalName').textContent = agent.name;
+    document.getElementById('modalRole').textContent = agent.role;
+    document.getElementById('modalPrompt').textContent = agent.prompt;
+    document.getElementById('modalCopyBtn').textContent = 'Copiar prompt';
+    document.getElementById('modalCopyBtn').classList.remove('copied');
+    document.getElementById('agentModal').classList.add('open');
+  }
+
+  function closeAgentModal() {
+    document.getElementById('agentModal').classList.remove('open');
+  }
+
+  function copyAgentPrompt() {
+    const text = document.getElementById('modalPrompt').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('modalCopyBtn');
+      btn.textContent = '✓ Copiado!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copiar prompt'; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('agentModal');
+    if (modal) modal.addEventListener('click', function(e) { if (e.target === this) closeAgentModal(); });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeAgentModal();
+  });
+
+  /* Team tabs */
+  function switchTeam(team, el) {
+    document.querySelectorAll('.team-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.team-tab').forEach(t => {
+      t.classList.remove('active','active-mkt','active-gestao');
+    });
+    document.getElementById('team-' + team).classList.add('active');
+    if (team === 'mkt') el.classList.add('active-mkt');
+    else if (team === 'gestao') el.classList.add('active-gestao');
+    else el.classList.add('active');
+  }
+</script>
+
+<!-- AGENT PROMPT MODAL -->
+<div class="modal-overlay" id="agentModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-header-emoji" id="modalEmoji"></div>
+        <div>
+          <div class="modal-header-name" id="modalName"></div>
+          <div class="modal-header-role" id="modalRole"></div>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeAgentModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-prompt" id="modalPrompt"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="modal-btn modal-btn-close" onclick="closeAgentModal()">Fechar</button>
+      <button class="modal-btn modal-btn-copy" id="modalCopyBtn" onclick="copyAgentPrompt()">Copiar prompt</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
