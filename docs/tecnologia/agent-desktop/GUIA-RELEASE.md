@@ -49,14 +49,31 @@
 
 ## 1. Bump de Versao
 
-Editar a propriedade `<Version>` nos quatro projetos:
+Editar a propriedade `<Version>` nos **sete** projetos:
 
 ```
+src\ManagerAgent.Configurator\ManagerAgent.Configurator.csproj
+src\ManagerAgent.Installer\ManagerAgent.Installer.csproj
 src\ManagerAgent.Service\ManagerAgent.Service.csproj
 src\ManagerAgent.SessionWorker\ManagerAgent.SessionWorker.csproj
 src\ManagerAgent.Shared\ManagerAgent.Shared.csproj
-src\ManagerAgent.Installer\ManagerAgent.Installer.csproj
+src\ManagerAgent.Tray\ManagerAgent.Tray.csproj
+src\ManagerAgent.Watchdog\ManagerAgent.Watchdog.csproj
 ```
+
+> **Corrigido em 2026-08-24 (@Tony).** Este trecho dizia "quatro projetos" e listava
+> Service, SessionWorker, Shared e Installer. Sao **sete** — faltavam Configurator, Tray e
+> Watchdog. Quem seguisse a lista antiga geraria um pacote com tres binarios na versao velha,
+> **inclusive o Watchdog**, que e quem decide rollback e sticky comparando versao. Confira sempre
+> com o comando abaixo em vez de confiar na lista:
+>
+> ```powershell
+> Select-String -Path src\*\*.csproj -Pattern '<Version>'
+> ```
+
+Nao ha versao para editar no `instalador\ManagerAgent-v2.iss`: ele le a `ProductVersion` do
+`ManagerAgent.Service.exe` ja compilado e corta o `+hash` sozinho. O nome do pacote
+(`ManagerAgent-Setup-vX.Y.Z.exe`) sai dai.
 
 Alterar para a nova versao seguindo [SemVer](https://semver.org/):
 
