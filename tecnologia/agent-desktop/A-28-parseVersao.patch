@@ -1,0 +1,224 @@
+diff --git a/src/modules/agent-update/agent-update.service.ts b/src/modules/agent-update/agent-update.service.ts
+index 006fe1f..93838d8 100644
+--- a/src/modules/agent-update/agent-update.service.ts
++++ b/src/modules/agent-update/agent-update.service.ts
+@@ -181,7 +181,7 @@ export class AgentUpdateService {
+       // agente ja esta atualizado (ou a frente). Como candidatas sao DESC por
+       // publicado_em, nao ha versao mais recente — para de iterar.
+       // Java linha 124-129.
+-      if (!isVersaoMaior(candidata.versao, input.versaoAtual)) {
++      if (!isVersaoMaior(candidata.versao, input.versaoAtual, this.logger)) {
+         this.logger.log(
+           `Agent ja esta na versao ${input.versaoAtual} ` + `(>= ${candidata.versao} candidata)`,
+         );
+@@ -279,49 +279,84 @@ export class AgentUpdateService {
+   }
+ }
+ 
++/** Subconjunto de Logger usado por `isVersaoMaior` — evita acoplar a funcao ao Nest. */
++interface VersaoLogger {
++  warn(message: string): void;
++}
++
+ /**
+  * Compara duas versoes SemVer major.minor.patch. Retorna `true` se
+- * `versaoNova > versaoAtual`. Byte-a-byte com Java `isVersaoMaior` linhas
+- * 331-351:
+- *   - Parse "1.2.3" -> [1, 2, 3].
+- *   - Compara major -> minor -> patch.
+- *   - Se parse falhar (formato invalido), retorna false (log + skip).
++ * `versaoNova > versaoAtual`.
++ *
++ * ─── A-28 (regressivo Agent Windows 2026-08-18) ──────────────────────────────
++ *
++ * Ate esta correcao, uma versao que nao parseava virava `false` **em silencio**,
++ * o que o endpoint traduz como `atualizacaoDisponivel: false` — ou seja,
++ * "voce esta atualizado". Esse e o pior default possivel: o Agent nunca
++ * atualiza e nada aparece no log.
++ *
++ * Foi exatamente o que aconteceu com o Agent Windows. Ele envia a versao do
++ * assembly .NET, que tem QUATRO componentes ("1.5.3.0"), e o `parseVersao`
++ * exigia exatamente tres. Comprovado no endpoint de staging em 2026-08-18:
+  *
+- * DIFERENCA vs Java: Java tem `try/catch (Exception e)` global; TS narrows
+- * `parseVersao` retorno como `[number, number, number]` OU throw. Wrap em
+- * try-catch aqui pra semantica identica.
++ *   ?versaoAtual=1.5.3.0 -> {"atualizacaoDisponivel":false}
++ *   ?versaoAtual=1.5.3   -> {"atualizacaoDisponivel":true,"versaoNova":"1.5.4"}
++ *
++ * O auto-update do Windows nunca entregou uma versao. Ficou mascarado porque
++ * todas as releases foram instaladas manualmente.
++ *
++ * Duas mudancas, ambas necessarias:
++ *   1. `parseVersao` tolera o quarto componente (ver la embaixo).
++ *   2. A falha de parse deixa de ser silenciosa — loga WARN com o valor
++ *      recebido. Com esse log, o defeito teria aparecido no primeiro deploy.
++ *
++ * NOTA DE PARITY: o Java `isVersaoMaior` (linhas 331-351) tem o mesmo defeito.
++ * A paridade byte-a-byte replicou o bug fielmente. Ao sincronizar, corrigir
++ * os dois — nao restaurar o comportamento antigo em nome da paridade.
+  */
+-function isVersaoMaior(versaoNova: string, versaoAtual: string): boolean {
++function isVersaoMaior(versaoNova: string, versaoAtual: string, logger?: VersaoLogger): boolean {
+   try {
+     const [nMajor, nMinor, nPatch] = parseVersao(versaoNova);
+     const [aMajor, aMinor, aPatch] = parseVersao(versaoAtual);
+     if (nMajor !== aMajor) return nMajor > aMajor;
+     if (nMinor !== aMinor) return nMinor > aMinor;
+     return nPatch > aPatch;
+-  } catch {
+-    // Formato invalido — Java retorna false (linha 349-350). Idem Node.
++  } catch (erro) {
++    // Continua retornando false (nao ha como comparar), mas AGORA e visivel.
++    logger?.warn(
++      `Comparacao de versao falhou — tratando como "sem atualizacao". ` +
++        `versaoNova=${versaoNova} versaoAtual=${versaoAtual} ` +
++        `motivo=${erro instanceof Error ? erro.message : String(erro)}`,
++    );
+     return false;
+   }
+ }
+ 
+ /**
+- * Parse "major.minor.patch" -> [major, minor, patch]. Lanca se qualquer parte
+- * nao for inteiro. Byte-a-byte com Java `parseVersao` linhas 356-363.
++ * Parse "major.minor.patch" -> [major, minor, patch].
++ *
++ * A-28: aceita TRES OU MAIS componentes. O quarto em diante e ignorado, porque
++ * a comparacao SemVer so olha major/minor/patch. Isso cobre o formato de versao
++ * do .NET ("1.5.3.0"), que o Agent Windows envia. Menos de tres continua sendo
++ * erro — "1.5" e ambiguo demais para adivinhar.
+  *
+- * NOTA: nao suporta prerelease (`1.2.3-beta`) — Java tambem nao. Se rodada
+- * futura exigir, adicionar tratamento aqui + Java coordenado.
++ * NOTA: nao suporta prerelease (`1.2.3-beta`) de forma estruturada — o
++ * `Number.parseInt` lenient le "3-beta" como 3, tratando o prerelease como o
++ * release. Comportamento herdado, preservado de proposito: apertar isso aqui
++ * transformaria versoes hoje aceitas em "sem atualizacao", que e justamente a
++ * falha silenciosa que esta correcao existe para eliminar.
+  */
+ function parseVersao(versao: string): [number, number, number] {
+   const parts = versao.split('.');
+-  if (parts.length !== 3) {
+-    throw new Error(`Formato versao invalido: ${versao}`);
++  if (parts.length < 3) {
++    throw new Error(`Formato versao invalido (esperado major.minor.patch): ${versao}`);
+   }
+   const [majorStr, minorStr, patchStr] = parts as [string, string, string];
+   const major = Number.parseInt(majorStr, 10);
+   const minor = Number.parseInt(minorStr, 10);
+   const patch = Number.parseInt(patchStr, 10);
+   if (Number.isNaN(major) || Number.isNaN(minor) || Number.isNaN(patch)) {
+-    throw new Error(`Formato versao invalido: ${versao}`);
++    throw new Error(`Formato versao invalido (componente nao numerico): ${versao}`);
+   }
+   return [major, minor, patch];
+ }
+diff --git a/test/unit/modules/agent-update/agent-update.service.test.ts b/test/unit/modules/agent-update/agent-update.service.test.ts
+index b75a47c..6125172 100644
+--- a/test/unit/modules/agent-update/agent-update.service.test.ts
++++ b/test/unit/modules/agent-update/agent-update.service.test.ts
+@@ -30,7 +30,10 @@ import type {
+   AgentUpdateRepository,
+   VersaoAgenteRow,
+ } from '../../../../src/modules/agent-update/agent-update.repository.js';
+-import { AgentUpdateService } from '../../../../src/modules/agent-update/agent-update.service.js';
++import {
++  AgentUpdateService,
++  _internals,
++} from '../../../../src/modules/agent-update/agent-update.service.js';
+ 
+ function baseCandidata(overrides: Partial<VersaoAgenteRow> = {}): VersaoAgenteRow {
+   return {
+@@ -271,6 +274,91 @@ describe('AgentUpdateService.verificarAtualizacao', () => {
+     expect(result).toEqual({ atualizacaoDisponivel: false });
+   });
+ 
++  // ─── A-28 (regressivo Agent Windows 2026-08-18) ────────────────────────────
++  //
++  // O Agent Windows envia a versao do assembly .NET, que tem QUATRO componentes
++  // ("1.5.3.0"). O parseVersao exigia exatamente tres, lancava, e o isVersaoMaior
++  // engolia a excecao respondendo atualizacaoDisponivel=false. Resultado: o
++  // backend dizia "voce esta atualizado" para toda versao que o Windows
++  // perguntava, e o auto-update nunca entregou uma release.
++  //
++  // Comprovado no endpoint de staging:
++  //   ?versaoAtual=1.5.3.0 -> {"atualizacaoDisponivel":false}
++  //   ?versaoAtual=1.5.3   -> {"atualizacaoDisponivel":true,"versaoNova":"1.5.4"}
++
++  it('A-28: versaoAtual com 4 componentes (.NET) enxerga atualizacao', async () => {
++    const { svc } = buildService({
++      candidatas: [baseCandidata({ versao: '1.5.4' })],
++      empresaCanary: false,
++    });
++
++    const result = await svc.verificarAtualizacao({
++      versaoAtual: '1.5.3.0', // formato Assembly.GetName().Version.ToString()
++      instalacaoId: 'inst-a',
++      empresaId: 1n,
++      sistemaOperacional: TipoDispositivo.WINDOWS,
++    });
++
++    expect(result.atualizacaoDisponivel).toBe(true);
++    expect(result.versaoNova).toBe('1.5.4');
++  });
++
++  it('A-28: 4 componentes na mesma versao NAO oferece atualizacao', async () => {
++    const { svc } = buildService({
++      candidatas: [baseCandidata({ versao: '1.5.4' })],
++      empresaCanary: false,
++    });
++
++    // O quarto componente e ignorado: 1.5.4.0 == 1.5.4, entao nada a atualizar.
++    const result = await svc.verificarAtualizacao({
++      versaoAtual: '1.5.4.0',
++      instalacaoId: 'inst-a',
++      empresaId: 1n,
++      sistemaOperacional: TipoDispositivo.WINDOWS,
++    });
++
++    expect(result).toEqual({ atualizacaoDisponivel: false });
++  });
++
++  it('A-28: candidata com 4 componentes tambem e comparada', async () => {
++    const { svc } = buildService({
++      candidatas: [baseCandidata({ versao: '1.5.4.2' })],
++      empresaCanary: false,
++    });
++
++    const result = await svc.verificarAtualizacao({
++      versaoAtual: '1.5.3',
++      instalacaoId: 'inst-a',
++      empresaId: 1n,
++      sistemaOperacional: TipoDispositivo.WINDOWS,
++    });
++
++    expect(result.atualizacaoDisponivel).toBe(true);
++    expect(result.versaoNova).toBe('1.5.4.2');
++  });
++
++  it('A-28: menos de 3 componentes continua sendo invalido', () => {
++    expect(() => _internals.parseVersao('1.5')).toThrow();
++    expect(_internals.isVersaoMaior('1.5', '1.4.0')).toBe(false);
++  });
++
++  it('A-28: parseVersao ignora componentes alem do terceiro', () => {
++    expect(_internals.parseVersao('1.5.3.0')).toEqual([1, 5, 3]);
++    expect(_internals.parseVersao('1.5.3.0.7')).toEqual([1, 5, 3]);
++    expect(_internals.parseVersao('1.5.3')).toEqual([1, 5, 3]);
++  });
++
++  it('A-28: falha de parse deixa rastro no log em vez de sumir', () => {
++    const logger = { warn: vi.fn() };
++
++    const resultado = _internals.isVersaoMaior('nao-eh-semver', '1.5.3', logger);
++
++    // Continua false — nao ha como comparar. Mas agora e visivel.
++    expect(resultado).toBe(false);
++    expect(logger.warn).toHaveBeenCalledTimes(1);
++    expect(logger.warn.mock.calls[0]?.[0]).toContain('nao-eh-semver');
++  });
++
+   it('itera multiplas candidatas — pula canary, aceita segunda que passa filtros', async () => {
+     const { svc, presigner } = buildService({
+       candidatas: [

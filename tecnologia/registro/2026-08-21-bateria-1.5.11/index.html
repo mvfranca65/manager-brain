@@ -1,0 +1,2263 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/registro/2026-08-21-bateria-1.5.11/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Bateria 1.5.11 na maquina — primeira rodada (2026-08-21) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bateria-1511-na-maquina-primeira-rodada-2026-08-21" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bateria 1.5.11 na maquina — primeira rodada (2026-08-21)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linha-do-tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linha do tempo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-passou" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que passou
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-63-evento-recolhido-do-buffer-antigo-e-rejeitado-para-sempre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A-63 — evento recolhido do buffer antigo e rejeitado para sempre
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A-63 — evento recolhido do buffer antigo e rejeitado para sempre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-acontece" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que acontece
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-o-dono-se-perdeu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que o dono se perdeu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impacto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impacto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caminhos-decidir-com-o-bucky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caminhos (decidir com o @Bucky)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aceite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aceite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ainda-por-fazer-nesta-bateria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ainda por fazer nesta bateria
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bateria-1511-na-maquina-primeira-rodada-2026-08-21">Bateria 1.5.11 na maquina — primeira rodada (2026-08-21)<a class="headerlink" href="#bateria-1511-na-maquina-primeira-rodada-2026-08-21" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Executor:</strong> Marcos (acoes) + @Tony (verificacao) | <strong>Maquina:</strong> DESKTOP-VMSM6LE
+Update automatico 1.5.10 -&gt; 1.5.11 as 11:45. Pacote publicado pelo Marcos.</p>
+</blockquote>
+<hr />
+<h2 id="linha-do-tempo">Linha do tempo<a class="headerlink" href="#linha-do-tempo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Hora</th>
+<th>O que</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11:42:37</td>
+<td>boot</td>
+</tr>
+<tr>
+<td>11:44:56</td>
+<td>Service sobe (delayed autostart, 2min19s — configuracao, nao defeito)</td>
+</tr>
+<tr>
+<td>11:44:58</td>
+<td>worker 1.5.10 sobe, <strong>acusa SESSAO_INTERROMPIDA</strong> (<code>NoCleanShutdownFlag</code>)</td>
+</tr>
+<tr>
+<td>11:45:00</td>
+<td>update 1.5.11 encontrado e baixado</td>
+</tr>
+<tr>
+<td>11:45:39</td>
+<td>SHUTDOWN para update; worker emite <strong>um</strong> LOGOUT e grava a flag de shutdown limpo</td>
+</tr>
+<tr>
+<td>11:45:56</td>
+<td>worker 1.5.11 sobe</td>
+</tr>
+<tr>
+<td>11:45:57</td>
+<td><strong>SESSAO_INTERROMPIDA suprimida</strong> (flag presente) e <strong>LOGIN suprimido</strong> (mesmo LogonId)</td>
+</tr>
+<tr>
+<td>11:46:02</td>
+<td>1.5.11 instalada</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="o-que-passou">O que passou<a class="headerlink" href="#o-que-passou" title="Permanent link">&para;</a></h2>
+<p><strong>Update automatico (itens e1–e7).</strong> Detectou, baixou, aplicou e voltou sozinho em ~23s. Sem
+intervencao.</p>
+<p><strong>A-61 / A-62 na pratica.</strong> O ciclo do update e um logoff-e-login em miniatura, e o desenho novo
+se comportou como prometido: o worker se despediu, gravou a flag, e o worker seguinte <strong>calou os
+dois alarmes falsos</strong> — interrupcao e login repetido. Um LOGOUT no log, nunca dois.</p>
+<p>O alarme das 11:44:58 e <strong>legitimo</strong>: o reboot saiu da 1.5.10, que ainda nao gravava a flag.
+Nao conta como falha desta rodada.</p>
+<p><strong>A-58 vivo.</strong> <code>Status inicial do colaborador: ATIVO (silencio de 116s). Nenhuma transicao
+emitida.</code> — adota sem emitir, como decidido em D4.</p>
+<p><strong>A-60 renomeou o buffer.</strong> <code>autonomous-buffer.db</code> virou <code>autonomous-buffer-S1.db</code>. A varredura
+achou o arquivo da versao anterior e recolheu o evento que estava dentro.</p>
+<p><strong>Minha correcao de D6 esta valendo.</strong> <code>clean-shutdown-1.json</code> existe e foi lido pelo worker
+seguinte. Sem a atribuicao no construtor, esse arquivo nunca teria sido escrito.</p>
+<hr />
+<h2 id="a-63-evento-recolhido-do-buffer-antigo-e-rejeitado-para-sempre">A-63 — evento recolhido do buffer antigo e rejeitado para sempre<a class="headerlink" href="#a-63-evento-recolhido-do-buffer-antigo-e-rejeitado-para-sempre" title="Permanent link">&para;</a></h2>
+<p><strong>Severidade: MEDIA-ALTA.</strong> Atinge os itens <strong>11</strong> e <strong>14</strong>, os dois que o @Bucky mandou olhar
+primeiro.</p>
+<h3 id="o-que-acontece">O que acontece<a class="headerlink" href="#o-que-acontece" title="Permanent link">&para;</a></h3>
+<p>A varredura recolheu o evento, mas <strong>sem dono</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>11:45:56 [WRN] Buffer orfao recolhido. Sessao=0, Usuario=(desconhecido), Eventos=1.
+</code></pre></div>
+<p>E o backend recusa:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>11:46:59 [WRN] Batch upload failed. Status=400, User=null, Attempt=1
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  {"codigo":"PAYLOAD_INVALIDO",
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   "issues":[{"path":"windowsUsername","code":"invalid_type",
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>              "message":"Invalid input: expected string, received null"}]}
+</code></pre></div>
+<p><strong>E fica em laco.</strong> Uma tentativa por minuto, indefinidamente — 11:46:59, 11:48:03, 11:49:08.
+Sempre <code>Attempt=1</code>: o contador nao avanca, cada ciclo trata como lote novo. Nao ha teto, nao ha
+descarte, nao ha fila morta.</p>
+<h3 id="por-que-o-dono-se-perdeu">Por que o dono se perdeu<a class="headerlink" href="#por-que-o-dono-se-perdeu" title="Permanent link">&para;</a></h3>
+<p>O desenho previa "entregar sob o nome do dono original". Funciona para
+<code>autonomous-buffer-S&lt;N&gt;.db</code>, porque o numero da sessao esta no nome. <strong>O arquivo da versao
+anterior se chama <code>autonomous-buffer.db</code> — sem sessao e sem usuario.</strong> A varredura cai no
+fallback <code>Sessao=0, Usuario=null</code> e monta um lote que o backend nunca vai aceitar.</p>
+<p>Ou seja: o caso que a varredura foi escrita para cobrir e justamente o unico em que ela nao tem
+a informacao de que precisa.</p>
+<h3 id="impacto">Impacto<a class="headerlink" href="#impacto" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Item 14 passa pela metade:</strong> o buffer antigo foi recolhido, mas o evento <strong>nao chega ao
+  banco</strong>. E o unico item da lista que perde dado.</li>
+<li><strong>Item 11 reprova:</strong> ha lote rejeitado, e permanente.</li>
+<li>Um evento envenenado por maquina, a cada atualizacao, na frota inteira.</li>
+<li>Aviso a cada minuto no log de todas as maquinas.</li>
+<li>O buffer nunca encolhe. Casa com a divida #1 de hoje — as funcoes de limpeza do buffer no
+  Windows sao conchas vazias.</li>
+</ul>
+<p><strong>Nao bloqueia os demais lotes.</strong> Os lotes com dono seguiram normalmente no mesmo ciclo.</p>
+<h3 id="caminhos-decidir-com-o-bucky">Caminhos (decidir com o @Bucky)<a class="headerlink" href="#caminhos-decidir-com-o-bucky" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Atribuir ao dono provavel.</strong> No update, a sessao ativa e conhecida — o recolhimento
+   acontece com o Service ja de pe e com sessao listada. Carimbar o <code>windowsUsername</code> dessa
+   sessao quando houver exatamente uma.</li>
+<li><strong>Ler o dono de dentro do banco</strong>, se o evento gravado ja carregar o usuario.</li>
+<li><strong>Teto de tentativas + fila morta.</strong> Necessario de qualquer jeito: hoje qualquer evento que o
+   backend recuse fica em laco eterno. Isto e maior que o A-63.</li>
+</ol>
+<p>O caminho 3 vale sozinho, independente do 1 e do 2.</p>
+<h3 id="aceite">Aceite<a class="headerlink" href="#aceite" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Atualizar da versao anterior nao deixa nenhum lote em laco.</li>
+<li>O evento recolhido chega ao banco com <code>windows_username</code> preenchido.</li>
+<li>Evento que o backend recuse por conteudo sai da fila depois de N tentativas, com registro.</li>
+</ul>
+<hr />
+<h2 id="ainda-por-fazer-nesta-bateria">Ainda por fazer nesta bateria<a class="headerlink" href="#ainda-por-fazer-nesta-bateria" title="Permanent link">&para;</a></h2>
+<p>Item 1 (reboot) precisa ser refeito <strong>saindo da 1.5.11</strong> — o desta rodada saiu da 1.5.10 e por
+isso o alarme apareceu. Os itens 2 a 13 e 15 nao foram executados.</p>
+<hr />
+<h1 id="rodada-automatizada-1237-as-1252">Rodada automatizada — 12:37 as 12:52<a class="headerlink" href="#rodada-automatizada-1237-as-1252" title="Permanent link">&para;</a></h1>
+<h2 id="item-2-matar-o-worker-a-forca-passa">Item 2 — matar o worker a forca: <strong>PASSA</strong><a class="headerlink" href="#item-2-matar-o-worker-a-forca-passa" title="Permanent link">&para;</a></h2>
+<p>Worker 9368 morto as 12:37:29.</p>
+<table>
+<thead>
+<tr>
+<th>Hora</th>
+<th>O que</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:37:29</td>
+<td>pipe cai (EOF); <strong>evento de janela aberto e fechado</strong> com motivo <code>WorkerDied</code></td>
+</tr>
+<tr>
+<td>12:37:34</td>
+<td>watchdog confirma a morte (5s — a janela de confirmacao do A-61)</td>
+</tr>
+<tr>
+<td>12:37:36</td>
+<td>worker novo de pe, PID 3304</td>
+</tr>
+<tr>
+<td>12:37:37</td>
+<td><strong>SESSAO_INTERROMPIDA e LOGIN suprimidos</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Sete segundos ponta a ponta. Nao ficou evento aberto e nao houve alarme falso.</p>
+<h2 id="item-8-pausa-ausente-ativo-passa">Item 8 — PAUSA / AUSENTE / ATIVO: <strong>PASSA</strong><a class="headerlink" href="#item-8-pausa-ausente-ativo-passa" title="Permanent link">&para;</a></h2>
+<p>Medido no proprio uso da maquina, sem roteiro:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>12:01:50  PAUSA   -&gt; AUSENTE   (silencio de 919s = 15min19s)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>12:34:08  AUSENTE -&gt; ATIVO     (silencio de 0s — mexeu, voltou na hora)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>12:50:03  ATIVO   -&gt; PAUSA     (silencio de 322s = 5min22s)
+</code></pre></div>
+<p>Bate com a regra do Android nos tres sentidos: 5 minutos para pausa, 15 para ausente, e
+qualquer interacao devolve para ativo imediatamente. <strong>O A-58 esta fechado na pratica.</strong></p>
+<h2 id="cenarios-automatizados-7-de-7">Cenarios automatizados: <strong>7 de 7</strong><a class="headerlink" href="#cenarios-automatizados-7-de-7" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N4 config de captura efetiva</td>
+<td>PASSOU</td>
+<td>1s</td>
+</tr>
+<tr>
+<td>N6 InstalacaoId estavel (A-49)</td>
+<td>PASSOU</td>
+<td>20,2s</td>
+</tr>
+<tr>
+<td>N1 recusa a versao ja instalada (A-46)</td>
+<td>PASSOU</td>
+<td>16,1s</td>
+</tr>
+<tr>
+<td>N2 cooldown por relogio de parede (A-41)</td>
+<td>PASSOU</td>
+<td>27,2s</td>
+</tr>
+<tr>
+<td>N7 device JWT expirado renova</td>
+<td>PASSOU</td>
+<td>27,2s</td>
+</tr>
+<tr>
+<td>N8 403 + <code>X-Agent-Revoked</code> (ADR-001)</td>
+<td>PASSOU</td>
+<td>71,6s</td>
+</tr>
+<tr>
+<td>N9 vinculo completo / sem vinculo nao captura</td>
+<td>PASSOU</td>
+<td>1s</td>
+</tr>
+</tbody>
+</table>
+<p>N9 confirmou na maquina real: token DPAPI descriptografa, vinculo de 20/08, sem marca de
+revogacao, colaborador 3336. <strong>Esta maquina continua capturando com a regra nova.</strong></p>
+<h2 id="testes-de-codigo-935-verdes">Testes de codigo: <strong>935 verdes</strong><a class="headerlink" href="#testes-de-codigo-935-verdes" title="Permanent link">&para;</a></h2>
+<p>Quatro suites, zero falhas, com o bump 1.5.11 e a correcao de D6 dentro.</p>
+<h2 id="falso-alarme-que-eu-quase-reportei">Falso alarme que eu quase reportei<a class="headerlink" href="#falso-alarme-que-eu-quase-reportei" title="Permanent link">&para;</a></h2>
+<p>A flag de shutdown limpo de 11:45:39 esta <strong>sem dono</strong> (<code>logonId</code> nulo), e a primeira leitura foi
+de que isso desligaria a deteccao de queda para sempre.</p>
+<p><strong>Nao e defeito.</strong> Aquela flag foi escrita pelo worker <strong>1.5.10</strong>, que nao tinha o conceito. O
+<code>SessaoInterrompidaDecider</code> trata flag sem dono como legado de proposito, para nao inventar
+alarme de queda em maquina que desligou direito durante a atualizacao da frota.</p>
+<p>Conferido com sonda direta: <code>QueryLogonId</code> responde normal para o usuario interativo nesta
+maquina (<code>1:134317970010188694:NoisyTech</code>). A API funciona.</p>
+<p><strong>Fica um ponto a verificar</strong>, que so um desligamento limpo sob a 1.5.11 prova: se a flag nova
+sai com o dono preenchido. Depende do item 5 ou 6, que precisam do Marcos.</p>
+<hr />
+<h2 id="regressivo-local-20-passou-0-falhou-1-atencao">Regressivo local: <strong>20 passou, 0 falhou, 1 atencao</strong><a class="headerlink" href="#regressivo-local-20-passou-0-falhou-1-atencao" title="Permanent link">&para;</a></h2>
+<p>O unico ponto de atencao e o <strong>A-55</strong>, ja conhecido e ja aceito pelo Marcos: 2 eventos com o
+caminho da URL dentro do <strong>titulo da janela</strong>. O campo de dominio esta certo; a superficie do
+titulo nao. Decisao de produto, igual ao A-47.</p>
+<p><strong>Divida de documentacao encontrada de passagem:</strong> o proprio regressivo ainda descreve o M7 como
+"desde a v1.5.0 quem deriva o status e o backend". Isso deixou de valer hoje — o A-58 devolveu o
+calculo ao Agent. E o mesmo comentario falso que sustentou o engano por tres meses
+(item 4 da divida de D4). Corrigir o texto do script.</p>
+<hr />
+<h1 id="a-64-nada-no-agent-desiste-nunca">A-64 — nada no Agent desiste nunca<a class="headerlink" href="#a-64-nada-no-agent-desiste-nunca" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: MEDIA.</strong> Mesmo defeito de fundo do A-63, em outro lugar. Vale tratar junto.</p>
+<h2 id="como-apareceu">Como apareceu<a class="headerlink" href="#como-apareceu" title="Permanent link">&para;</a></h2>
+<p>Item 15 da lista (usuario removido, buffer sai do disco sozinho). Plantei um buffer
+<code>autonomous-buffer-S77.db</code> de uma sessao que nao existe, carimbado ha 40 min, e o arquivo estava
+corrompido — sem as tabelas dentro.</p>
+<p>A varredura <strong>achou</strong> corretamente. E entao:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>13:05:10 [WRN] Buffer orfao autonomous-buffer-S77.db nao pode ser lido. Ficara para a proxima varredura.
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>13:05:25 [WRN] (identico)
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>13:05:40 [WRN] (identico)
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>13:05:55 [WRN] (identico)
+</code></pre></div>
+<p><strong>A cada 15 segundos, para sempre.</strong> 4 avisos por minuto, 5.760 por dia, ate alguem apagar o
+arquivo a mao. Parou no segundo em que removi o arquivo — confirmado.</p>
+<h2 id="o-padrao">O padrao<a class="headerlink" href="#o-padrao" title="Permanent link">&para;</a></h2>
+<p><code>OrphanBufferSweeper.RecolherAsync</code>: falha na leitura loga aviso e "fica para a proxima
+varredura". Nao ha contador, nao ha quarentena, nao ha teto.</p>
+<p>A intencao esta certa e esta escrita no proprio codigo — <em>"so apaga depois de a entrega ter dado
+certo; perder o arquivo com evento dentro seria trocar vazamento de disco por perda de dado"</em>.
+O que falta e o caso em que a entrega <strong>nunca</strong> vai dar certo.</p>
+<p><strong>E o mesmo buraco do A-63</strong>, que retenta um lote recusado a cada 60s indefinidamente — 67
+tentativas ate agora, todas com <code>Attempt=1</code>.</p>
+<p>Duas ocorrencias, uma causa: <strong>o Agent nao tem o conceito de desistir.</strong> Qualquer coisa que
+falhe de forma permanente vira laco eterno e silencioso.</p>
+<h2 id="aceite_1">Aceite<a class="headerlink" href="#aceite_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Arquivo ilegivel vai para quarentena (renomear com sufixo) depois de N tentativas, com <strong>um</strong>
+  registro, e para de ser varrido.</li>
+<li>Lote recusado por conteudo sai da fila depois de N tentativas, com registro.</li>
+<li>Nenhum aviso identico se repete indefinidamente no log.</li>
+</ul>
+<h2 id="ressalva-honesta">Ressalva honesta<a class="headerlink" href="#ressalva-honesta" title="Permanent link">&para;</a></h2>
+<p>O arquivo corrompido foi criado por mim, nao apareceu sozinho. O <strong>comportamento</strong> de retentar
+sem fim e real e independe de como o arquivo ficou ilegivel — disco cheio, queda de energia no
+meio da escrita, truncamento no update.</p>
+<p><strong>Sobra na maquina:</strong> <code>autonomous-buffer-S77.db-shm</code> e <code>-wal</code>, presos pelo Service. Somem no
+proximo restart do servico. Nao atrapalham.</p>
+<hr />
+<h1 id="placar-da-rodada-automatizada">Placar da rodada automatizada<a class="headerlink" href="#placar-da-rodada-automatizada" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Bloco</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Testes de codigo</td>
+<td><strong>935 passou, 0 falhou</strong></td>
+</tr>
+<tr>
+<td>Cenarios N1–N9 (7 executaveis)</td>
+<td><strong>7 passou, 0 falhou</strong></td>
+</tr>
+<tr>
+<td>Regressivo local</td>
+<td><strong>20 passou, 0 falhou, 1 atencao (A-55, ja aceito)</strong></td>
+</tr>
+<tr>
+<td>Item 2 — matar o worker</td>
+<td><strong>passa</strong></td>
+</tr>
+<tr>
+<td>Item 8 — PAUSA/AUSENTE/ATIVO</td>
+<td><strong>passa</strong></td>
+</tr>
+<tr>
+<td>Item 11 — nenhum lote rejeitado</td>
+<td><strong>reprova (A-63)</strong></td>
+</tr>
+<tr>
+<td>Item 14 — buffer recolhido no update</td>
+<td><strong>passa pela metade (A-63)</strong></td>
+</tr>
+<tr>
+<td>Item 15 — buffer de usuario removido</td>
+<td><strong>reprova (A-64)</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="nao-rodado-e-por-que">Nao rodado, e por que<a class="headerlink" href="#nao-rodado-e-por-que" title="Permanent link">&para;</a></h2>
+<p><strong>N3 e N5</strong> aplicam um <strong>update real</strong> e deixam a maquina em outra versao — o proprio runner
+avisa que e preciso reinstalar depois. Tirariam a maquina da 1.5.11 no meio da bateria e
+inviabilizariam os itens 5, 6, 7, 12 e 13. <strong>Precisa do aval do Marcos.</strong></p>
+<p>O N5 (<code>buffer sobrevive ao update</code>) e justamente o que cobre o A-63 — vale rodar depois que a
+correcao existir, nao agora.</p>
+<p><strong>Itens 1, 3, 4, 5, 6, 7, 9, 10, 12, 13</strong> dependem de acao fisica do Marcos: reboot, dormir,
+logoff, desligar, segunda conta, bloquear a tela, uma noite parada.</p>
+<p><strong>Camada de banco</strong> (<code>verificar-eventos-base.js</code>): a janela do regressivo ficou salva em
+<code>ultimo-regressivo.json</code> (15:56:41Z a 16:02:24Z). Falta a credencial do banco nesta sessao — e a
+senha antiga precisa ser trocada de qualquer forma.</p>
+<hr />
+<h1 id="testes-guiados-com-o-marcos-tarde-de-2108">Testes guiados com o Marcos — tarde de 21/08<a class="headerlink" href="#testes-guiados-com-o-marcos-tarde-de-2108" title="Permanent link">&para;</a></h1>
+<h2 id="item-9-bloquear-e-desbloquear-passa">Item 9 — bloquear e desbloquear: <strong>PASSA</strong><a class="headerlink" href="#item-9-bloquear-e-desbloquear-passa" title="Permanent link">&para;</a></h2>
+<p>Bloqueio 13:55:12, desbloqueio 13:56:00. Janela e ociosidade fechadas no bloqueio, monitores
+suspensos e retomados. <strong>Nenhuma transicao de status</strong> — que e o criterio. Os dois eventos
+subiram em segundos.</p>
+<h2 id="item-3-dormir-3-minutos-passa">Item 3 — dormir 3 minutos: <strong>PASSA</strong><a class="headerlink" href="#item-3-dormir-3-minutos-passa" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>13:58:21  LOCK (o Windows bloqueia antes de dormir)
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>13:58:22  PowerMode Suspend — "sessao ja bloqueada, nada a fazer" (sem evento duplicado)
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>14:01:52  PowerMode Resume
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>14:01:57  Gap de wall-clock de 216s -&gt; IdleEvent sintetico
+</code></pre></div>
+<p>O sono virou <strong>ociosidade de 216s</strong>, nao tempo trabalhado. O worker sobreviveu, nao foi
+relancado, nada se perdeu.</p>
+<h3 id="dois-pontos-menores">Dois pontos menores<a class="headerlink" href="#dois-pontos-menores" title="Permanent link">&para;</a></h3>
+<p><strong>1. Mensagem mentirosa.</strong> O aviso diz <em>"Gap de wall-clock detectado </em><em>sem PowerMode event</em><em>"</em> —
+mas o Suspend e o Resume foram detectados e logados 4 segundos antes. O resultado esta certo, o
+texto esta errado. Mesma familia do comentario falso do <code>DailyBoundaryWorker</code> (divida 4 de D4):
+log errado e o que faz alguem acreditar na coisa errada por meses.</p>
+<p><strong>2. Cinco minutos e meio sem enviar depois de acordar.</strong> O lote preparado as 13:58:22, no
+instante do sono, ficou pendurado ate 14:03:30 — a conexao aberta antes de dormir nao morre
+sozinha. Falhou, foi refeito, e os 13 eventos subiram inteiros as 14:03:35. <strong>Nada se perdeu</strong>,
+mas numa maquina que dorme muito isso atrasa os dados a cada ciclo. O timeout do cliente HTTP
+nao esta cobrindo o caso.</p>
+<h2 id="itens-7-e-12-dois-usuarios-passam">Itens 7 e 12 — dois usuarios: <strong>PASSAM</strong><a class="headerlink" href="#itens-7-e-12-dois-usuarios-passam" title="Permanent link">&para;</a></h2>
+<p>Troca rapida NoisyTech -&gt; Marcos -&gt; NoisyTech, com uso real na segunda conta.</p>
+<ul>
+<li><strong>Dois workers vivos</strong>, um por sessao (PID 6452 sessao 1, PID 16276 sessao 2).</li>
+<li><strong>Dois buffers separados</strong>, <code>autonomous-buffer-S1.db</code> e <code>-S2.db</code>, ambos gravando.</li>
+<li><strong>Atribuicao correta na origem:</strong> lotes saem carimbados <code>User=NoisyTech</code> e <code>User=Marcos</code>,
+  intercalados no mesmo minuto, sem mistura.</li>
+<li><strong>Zero falha de escrita</strong> na sessao 2 sob a 1.5.11.</li>
+<li><strong>LGPD respeitada:</strong> o Chrome no YouTube gravou <code>UrlDominio: youtube.com</code>, sem caminho.</li>
+</ul>
+<p>O <code>SESSAO_INTERROMPIDA</code> da sessao 2 as 14:06 e <strong>legitimo</strong> — a sessao do Marcos foi derrubada
+pelo reboot das 11:42 sem despedida, porque a 1.5.10 nao gravava a flag. Sob a 1.5.11 nao deve
+mais acontecer; o item 6 prova.</p>
+<h3 id="correcao-a-um-ponto-de-d4">Correcao a um ponto de D4<a class="headerlink" href="#correcao-a-um-ponto-de-d4" title="Permanent link">&para;</a></h3>
+<p>O @Bucky registrou, ao justificar o desenho do A-60, que <em>"por isso <code>session-state-N</code> sempre
+funcionou"</em>.</p>
+<p><strong>Nao funcionava.</strong> O log da sessao 2 tem <strong>52 falhas</strong> de <code>Falha ao persistir session-state.
+Access to the path 'session-state-2.json' is denied</code>, so no dia de hoje, das 00:00:40 as
+11:42:10 — todas sob a 1.5.10.</p>
+<p><strong>A ultima e as 11:42:10. Depois do update, nenhuma.</strong> A 1.5.11 corrigiu junto, sem que esse
+caso estivesse no escopo.</p>
+<p>Nao muda o desenho aprovado, que segue certo. Muda a premissa: o <code>session-state-N</code> sofria do
+mesmo problema de dono de arquivo que o buffer, e ninguem tinha visto porque o erro so aparece
+no log da segunda sessao, que ninguem abre.</p>
+<h2 id="item-13-service-derrubado-com-dois-usuarios-logados-passa">Item 13 — Service derrubado com dois usuarios logados: <strong>PASSA</strong><a class="headerlink" href="#item-13-service-derrubado-com-dois-usuarios-logados-passa" title="Permanent link">&para;</a></h2>
+<p>Service parado as 14:11:55, de volta as 14:12:16.</p>
+<p><strong>Cada sessao cuidou da sua:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>14:11:49  S1  SHUTDOWN -&gt; LOGOUT proprio (SERVICE_STOP) -&gt; flag gravada
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>14:11:49  S2  SHUTDOWN -&gt; LOGOUT proprio (SERVICE_STOP) -&gt; flag gravada
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>14:12:17  S1  SESSAO_INTERROMPIDA e LOGIN suprimidos
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>14:12:17  S2  SESSAO_INTERROMPIDA e LOGIN suprimidos
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>14:12:19  3 eventos do NoisyTech subiram
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>14:12:20  2 eventos do Marcos subiram
+</code></pre></div>
+<p>Um LOGOUT por sessao, nunca dois. Nenhum alarme falso. Nenhuma falha de escrita.</p>
+<h3 id="a-duvida-em-aberto-esta-respondida">A duvida em aberto esta respondida<a class="headerlink" href="#a-duvida-em-aberto-esta-respondida" title="Permanent link">&para;</a></h3>
+<p>Este foi o primeiro desligamento limpo sob a 1.5.11, e as flags sairam <strong>com dono</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">clea</span><span class="kc">n</span><span class="mi">-</span><span class="err">shu</span><span class="kc">t</span><span class="err">dow</span><span class="kc">n</span><span class="mf">-1.</span><span class="err">jso</span><span class="kc">n</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"sessionId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"logonId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1:134317970010188694:NoisyTech"</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="err">clea</span><span class="kc">n</span><span class="mi">-</span><span class="err">shu</span><span class="kc">t</span><span class="err">dow</span><span class="kc">n</span><span class="mf">-2.</span><span class="err">jso</span><span class="kc">n</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"sessionId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"logonId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2:134318056055988866:Marcos"</span><span class="p">,</span><span class="w">    </span><span class="err">...</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Confirma que o desenho de D5 esta inteiro: a flag vale so para o logon que a gerou, ninguem
+precisa apaga-la, e flag de outro logon e ignorada. A flag sem dono de 11:45 era mesmo heranca
+da 1.5.10, como eu tinha concluido — <strong>nao havia defeito ali</strong>.</p>
+<hr />
+<h1 id="correcao-ao-a-63-como-o-laco-terminou-de-verdade">Correcao ao A-63 — como o laco terminou de verdade<a class="headerlink" href="#correcao-ao-a-63-como-o-laco-terminou-de-verdade" title="Permanent link">&para;</a></h1>
+<p>Eu registrei que o lote envenenado retentava "indefinidamente". <strong>Termina</strong> — e o jeito como
+termina e pior do que o laco.</p>
+<h2 id="o-que-realmente-aconteceu">O que realmente aconteceu<a class="headerlink" href="#o-que-realmente-aconteceu" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>11:46:59  primeira recusa do backend real (staging-api-events)
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>   ...    67 recusas, uma por minuto, durante 57 minutos
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>12:43:17  ultima recusa do backend real
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>12:43:22  ACEITO por  http://localhost:18081/api/agent/events
+</code></pre></div>
+<p>O <code>localhost:18081</code> e o <strong>stub dos cenarios N7/N8/N9</strong>, que estava de pe naquele momento porque
+eu estava rodando a bateria automatizada. O stub aceita qualquer coisa.</p>
+<h2 id="o-que-isso-significa">O que isso significa<a class="headerlink" href="#o-que-isso-significa" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>O A-63 continua real e mais grave.</strong> Numa maquina de cliente nao existe stub. As 67
+   tentativas em 57 minutos teriam continuado sem fim.</li>
+<li><strong>O evento se perdeu.</strong> Nao foi corrigido nem descartado: foi entregue a um servidor falso e
+   apagado da fila. Nunca chegou ao banco.</li>
+<li>O contador <code>Attempt=1</code> em todas as 67 confirma que nao ha retentativa com controle — cada
+   ciclo trata como lote novo.</li>
+</ol>
+<h2 id="efeito-colateral-do-proprio-harness-a-registrar">Efeito colateral do proprio harness, a registrar<a class="headerlink" href="#efeito-colateral-do-proprio-harness-a-registrar" title="Permanent link">&para;</a></h2>
+<p>Rodar N7/N8/N9 numa maquina com <strong>dados reais pendentes</strong> faz o stub engolir eventos de verdade
+que ainda nao subiram. Nao e defeito do produto, e da forma de testar.</p>
+<p><strong>Sugestao:</strong> o stub deve recusar (ou separar num arquivo a parte) lote cujo <code>agenteId</code> nao seja
+o sintetico do cenario, e o runner deve avisar quantos lotes reais interceptou.</p>
+<h2 id="ajuste-no-aceite-do-a-63">Ajuste no aceite do A-63<a class="headerlink" href="#ajuste-no-aceite-do-a-63" title="Permanent link">&para;</a></h2>
+<p>Alem do que ja estava escrito:</p>
+<ul>
+<li>Lote recusado por conteudo <strong>nunca</strong> pode sair da fila por ter sido aceito em outro endereco.
+  O destino tem de fazer parte da identidade do lote.</li>
+</ul>
+<h2 id="item-4-dormir-31-minutos-passa">Item 4 — dormir 31 minutos: <strong>PASSA</strong><a class="headerlink" href="#item-4-dormir-31-minutos-passa" title="Permanent link">&para;</a></h2>
+<p>Dormiu 14:18:01, acordou 14:49:10. <strong>31 minutos.</strong></p>
+<table>
+<thead>
+<tr>
+<th>O que</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Worker sobreviveu</td>
+<td>sim — nao morreu, nao foi relancado</td>
+</tr>
+<tr>
+<td>Service acusou worker morto</td>
+<td><strong>nao, nenhuma vez</strong></td>
+</tr>
+<tr>
+<td>Tempo dormindo</td>
+<td>IdleEvent sintetico de <strong>1876s</strong></td>
+</tr>
+<tr>
+<td>Status</td>
+<td>ATIVO -&gt; AUSENTE (silencio de 1869s)</td>
+</tr>
+<tr>
+<td>Sessao 2 (Marcos)</td>
+<td>intacta, eventos preservados e enviados</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Este e o teste que mata o A-56 na raiz.</strong> O limite de batimento do worker e de 90 segundos.
+A maquina passou <strong>31 minutos</strong> sem dar sinal e o Service nao acusou nada — porque o relogio
+unbiased nao conta o tempo dormido. Antes, isto daria worker morto, relancamento e alarme falso.</p>
+<p>O log do Service pula direto de 14:18:01 para 14:49:16, sem uma linha de alarme no meio.</p>
+<h3 id="correcao-ao-que-registrei-no-item-3">Correcao ao que registrei no item 3<a class="headerlink" href="#correcao-ao-que-registrei-no-item-3" title="Permanent link">&para;</a></h3>
+<p>Eu escrevi <em>"cinco minutos e meio sem enviar depois de acordar"</em>. <strong>O numero esta errado</strong> — eu
+contei a partir do preparo do lote, que aconteceu <strong>antes</strong> de dormir.</p>
+<p>Medido nos dois testes, a partir do <strong>despertar</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>item 3:  acordou 14:01:52  -&gt;  lote falhou 14:03:30   =  98s
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>item 4:  acordou 14:49:10  -&gt;  lote falhou 14:50:47   =  97s
+</code></pre></div>
+<p>Sempre ~97 segundos. Nao e travamento: e o <strong>timeout do cliente HTTP</strong> derrubando a conexao que
+ficou pendurada desde antes do sono. Comportamento correto, so lento.</p>
+<p>Depois disso tudo se recompoe: 13 eventos do NoisyTech e 3 do Marcos subiram inteiros.
+<strong>Nada se perde.</strong> O que fica e ~1,5 min de atraso no primeiro envio depois de cada despertar.</p>
+<p>Se virar incomodo, o caminho e derrubar a conexao no <code>PowerMode Resume</code> em vez de esperar o
+timeout. Baixa prioridade.</p>
+<h3 id="o-aviso-mentiroso-se-repetiu">O aviso mentiroso se repetiu<a class="headerlink" href="#o-aviso-mentiroso-se-repetiu" title="Permanent link">&para;</a></h3>
+<p><code>Gap de wall-clock detectado sem PowerMode event</code> — de novo, com Suspend e Resume registrados
+logo antes. Duas ocorrencias em dois testes. Confirma que nao foi acaso.</p>
+<h2 id="item-5-logoff-e-login-passa-nos-cinco-criterios">Item 5 — logoff e login: <strong>PASSA nos cinco criterios</strong><a class="headerlink" href="#item-5-logoff-e-login-passa-nos-cinco-criterios" title="Permanent link">&para;</a></h2>
+<p>Logoff as 14:59:48, com a sessao do Marcos (2) logada ao lado.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Criterio</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>uma</strong> saida, nunca duas</td>
+<td>uma, emitida pelo <strong>Service</strong> — o worker morreu antes e nao logou nada</td>
+</tr>
+<tr>
+<td>2</td>
+<td>horario do logoff, nao do processamento</td>
+<td><code>OcorreuEm=17:59:48.094</code> = instante do EOF</td>
+</tr>
+<tr>
+<td>3</td>
+<td>login seguinte nao acusa interrupcao</td>
+<td>suprimido (<code>previousLogonId ausente</code>, sessao nova)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>chega ao banco em segundos</td>
+<td><strong>2,4s</strong> — lote <code>af497803</code> subiu as 14:59:50.678</td>
+</tr>
+<tr>
+<td>5</td>
+<td>nenhum worker nasce entre a queda e o logoff</td>
+<td><code>sessao 1 confirmou logoff dentro da janela de 5s apos o EOF. Nao relanca.</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>O criterio 5 e a janela de confirmacao do A-61 funcionando no caso que a motivou.</strong></p>
+<p>O recolhimento do buffer da sessao 1 saiu <strong>com dono</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Buffer orfao recolhido. Sessao=1, Usuario=NoisyTech, Eventos=2.
+</code></pre></div>
+<p>Compare com o A-63, onde saiu <code>Sessao=0, Usuario=(desconhecido)</code>. Confirma que a causa do A-63 e
+<strong>so</strong> o nome do arquivo legado, sem numero de sessao. Com o nome novo, funciona.</p>
+<h3 id="falso-positivo-que-eu-quase-reportei-dois-minutos-sem-captura">Falso positivo que eu quase reportei — dois minutos "sem captura"<a class="headerlink" href="#falso-positivo-que-eu-quase-reportei-dois-minutos-sem-captura" title="Permanent link">&para;</a></h3>
+<p>O log parece mostrar um buraco feio depois do login:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>14:59:49  ConsoleConnect Sessao=3 -&gt; "Refusing to launch worker: session 3 does not exist"
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>                                  -&gt; Worker registered for session 3, PID=0
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>15:01:26  watchdog: "Never pinged since launch 97s ago"
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>15:01:33  [ERR] Failed to launch worker for session 3
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>15:01:39  [ERR] Failed to launch worker for session 3
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>15:01:54  Worker launched. Session=3, PID=9052
+</code></pre></div>
+<p>Dois minutos e cinco segundos. Parece captura morta apos todo login.</p>
+<p><strong>Nao e.</strong> O evento <code>SessionLogon</code> da sessao 3 so chegou as <strong>15:01:39</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>14:59:49  ConsoleConnect  (a TELA de login aparece)
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>15:01:39  SessionLogon    (o usuario terminou de digitar a senha)  &lt;- 110s depois
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>15:01:54  worker de pe
+</code></pre></div>
+<p>Os dois minutos sao o <strong>Marcos digitando a senha</strong>. Da entrada real ate o worker de pe:
+<strong>15 segundos.</strong></p>
+<p>A comparacao fecha: na troca rapida para o Marcos, <code>ConsoleConnect</code> e <code>SessionLogon</code> vieram com
+4s de diferenca, e o worker subiu em 8s, na <code>Attempt=3</code> do proprio laco de retentativa.</p>
+<h3 id="o-que-sobra-disso-e-e-pequeno">O que sobra disso, e e pequeno<a class="headerlink" href="#o-que-sobra-disso-e-e-pequeno" title="Permanent link">&para;</a></h3>
+<p>Um login normal deixa <strong>dois <code>[ERR] Failed to launch worker</code></strong> no log. Nao ha erro nenhum: a
+sessao ainda nao existia porque a pessoa estava digitando a senha.</p>
+<p>Vale rebaixar para informativo e mudar o texto. <strong>Nao e cosmetico</strong> nesta base: esta e a terceira
+mensagem enganosa encontrada hoje, e a divida 4 de D4 registra um comentario falso que sustentou
+um engano por tres meses. Log que grita erro onde nao ha erro treina todo mundo a ignorar o log.</p>
+<h3 id="empate-de-horario-a-conferir-no-banco">Empate de horario, a conferir no banco<a class="headerlink" href="#empate-de-horario-a-conferir-no-banco" title="Permanent link">&para;</a></h3>
+<p>O LOGOUT e o fechamento da ultima janela sairam com o <strong>mesmo carimbo</strong>,
+<code>17:59:48.0943483+00:00</code>. D5 pedia a saida <strong>antes</strong> do fechamento da ultima janela. Empate nao e
+"antes" — se o backend ordenar por horario, o desempate fica por conta dele.</p>
+<p>Nao deu problema aqui, mas e o tipo de coisa que aparece em relatorio como janela que fechou
+depois da pessoa sair.</p>
+<h2 id="item-1-reiniciar-saindo-da-1511-passa-sessao-do-console">Item 1 — reiniciar saindo da 1.5.11: <strong>PASSA</strong> (sessao do console)<a class="headerlink" href="#item-1-reiniciar-saindo-da-1511-passa-sessao-do-console" title="Permanent link">&para;</a></h2>
+<p>Reboot as 15:09:42, de volta as 15:12:11.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>15:09:18  worker da sessao 3 morre (EOF); janela fechada
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>15:09:19  SessionLogoff sessao 3 -&gt; UM LOGOUT pelo Service, com o horario do EOF
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>15:09:19  clean-shutdown persistido pelo Service. Session=3, LogonId=3:...:NoisyTech
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>15:09:22  os 3 eventos pendentes SOBEM ANTES de desligar (3,5s)
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>15:09:23  "SCM sinalizou desligamento. Nenhum worker sera lancado a partir daqui."
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>--- reboot ---
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>15:12:11  SESSAO_INTERROMPIDA suprimida (flag presente)
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>15:12:11  LOGIN emitido, LogonId novo != anterior
+</code></pre></div>
+<p><strong>Zero erro apos o boot.</strong> Compare com o reboot das 11:42, saindo da 1.5.10, que acusou
+<code>SESSAO_INTERROMPIDA</code> falso. <strong>A correcao de D6 e o que faz a diferenca</strong> — sem a atribuicao no
+construtor, a linha <code>clean-shutdown persistido pelo Service</code> nao existe.</p>
+<p>A guarda de desligamento do A-61 tambem apareceu: depois do sinal do SCM, nenhum worker nasce.</p>
+<hr />
+<h1 id="a-65-sessao-do-segundo-usuario-fica-encerrada-enquanto-ainda-trabalha">A-65 — sessao do segundo usuario fica "encerrada" enquanto ainda trabalha<a class="headerlink" href="#a-65-sessao-do-segundo-usuario-fica-encerrada-enquanto-ainda-trabalha" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: ALTA</strong> pelo efeito em relatorio. Observado, nao deduzido.</p>
+<h2 id="o-que-o-banco-viu-da-sessao-do-marcos-hoje">O que o banco viu da sessao do Marcos hoje<a class="headerlink" href="#o-que-o-banco-viu-da-sessao-do-marcos-hoje" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>14:06:53  LOGIN
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>14:11:49  LOGOUT  (motivo SERVICE_STOP — teste 13)
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>   ...    nada
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>15:09:xx  reboot
+</code></pre></div>
+<p>E o que aconteceu de verdade: ele <strong>continuou logado e trabalhando</strong> das 14:12 as 15:09 —
+<strong>57 minutos</strong> — com eventos de janela chegando o tempo todo, ja conferidos e enviados
+(<code>User=Marcos</code>).</p>
+<h2 id="duas-causas-somadas">Duas causas somadas<a class="headerlink" href="#duas-causas-somadas" title="Permanent link">&para;</a></h2>
+<p><strong>1. O LOGOUT de <code>SERVICE_STOP</code> nao e um logout de pessoa.</strong> Quando o Service para, o worker se
+despede e emite LOGOUT. Mas o <strong>logon do Windows continua vivo</strong> — a pessoa nao saiu de lugar
+nenhum.</p>
+<p><strong>2. Na volta, o LOGIN e suprimido — corretamente.</strong> <code>LOGIN suprimido — LogonId ja registrado</code>.
+E o mesmo logon, entao nao ha login novo a registrar.</p>
+<p>Cada metade esta certa sozinha. Juntas, <strong>abrem um par sem fechamento</strong>: sai um LOGOUT que nunca
+recebe o LOGIN correspondente de volta.</p>
+<p><strong>3. E o reboot nao fechou nada.</strong> A sessao 2 estava logada porem desconectada. So chegou
+<code>PipeServer: worker disconnected (EOF). Session=2</code> — <strong>nenhum <code>SessionLogoff</code>, nenhum LOGOUT,
+nenhuma flag nova</strong>. <code>clean-shutdown-2.json</code> continua com o carimbo das 17:11:49Z, do teste 13.</p>
+<p>O Windows nao mandou <code>SessionLogoff</code> da sessao desconectada antes de o Service parar. O
+tratamento do A-62 depende desse evento, e para a sessao do console ele veio.</p>
+<h2 id="impacto_1">Impacto<a class="headerlink" href="#impacto_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Relatorio mostra o Marcos saindo as 14:11 e produzindo evento ate as 15:09.</li>
+<li>Qualquer soma de tempo logado erra por 57 minutos, para menos.</li>
+<li>Alimenta o mesmo passivo de eventos abertos (33 ociosidades, 27 janelas) que esta em decisao
+  com o @Steve.</li>
+<li><strong>Escala com a frota:</strong> todo update do Agent para o Service em cada maquina. Quem estiver com
+  duas contas abertas ganha um par quebrado por update.</li>
+</ul>
+<h2 id="caminhos-decidir-com-o-bucky_1">Caminhos (decidir com o @Bucky)<a class="headerlink" href="#caminhos-decidir-com-o-bucky_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong><code>SERVICE_STOP</code> nao deve emitir LOGOUT.</strong> Nao houve saida de pessoa. Se algo precisa marcar
+   a interrupcao da captura, que seja um tipo proprio — nao reaproveitar LOGOUT, que tem
+   significado de negocio.</li>
+<li><strong>Se for manter</strong>, o retorno tem de reabrir a sessao: LOGIN suprimido so quando <strong>nao</strong> houve
+   LOGOUT daquele logon. Espelha a regra que D2 definiu para o caminho inverso.</li>
+<li><strong>No desligamento da maquina, fechar todas as sessoes</strong>, nao so a do console. O Service ja
+   sabe quais existem (<code>Found N active user sessions</code>); ao receber o sinal do SCM, emitir o
+   fechamento de cada uma.</li>
+</ol>
+<p>O caminho 1 e o mais limpo e o que menos mexe.</p>
+<h2 id="aceite_2">Aceite<a class="headerlink" href="#aceite_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Parar e subir o Service com duas contas logadas nao gera LOGOUT sem LOGIN correspondente.</li>
+<li>Reiniciar a maquina com uma conta desconectada fecha a sessao dela tambem.</li>
+<li>Nenhuma sessao aparece encerrada com evento posterior ao encerramento.</li>
+</ul>
+<h2 id="pergunta-em-aberto-sobre-a-flag-honestamente-marcada-como-raciocinio">Pergunta em aberto sobre a flag, honestamente marcada como raciocinio<a class="headerlink" href="#pergunta-em-aberto-sobre-a-flag-honestamente-marcada-como-raciocinio" title="Permanent link">&para;</a></h2>
+<p>A flag de shutdown limpo e escrita quando o <strong>worker</strong> para, nao quando o <strong>logon</strong> acaba. Um
+logon sobrevive a varias paradas de worker — a do Marcos sobreviveu a uma as 14:11.</p>
+<p>Se isso vale, entao <strong>depois da primeira parada limpa de worker, aquele logon fica marcado como
+"terminou direito" ate acabar</strong> — e uma queda de verdade mais tarde, dentro do mesmo logon,
+seria suprimida.</p>
+<p><strong>Nao observei isso acontecer.</strong> So um desligamento sujo (tirar da tomada) com uma sessao ja
+marcada prova ou desmente. Nao esta na lista de 15 e nao vou provocar sem o Marcos mandar.</p>
+<hr />
+<h1 id="a-63-revisado-a-causa-raiz-e-outra-e-maior">A-63 revisado — a causa raiz e outra, e maior<a class="headerlink" href="#a-63-revisado-a-causa-raiz-e-outra-e-maior" title="Permanent link">&para;</a></h1>
+<p>O que eu escrevi de manha (nome do arquivo legado sem numero de sessao) <strong>explicava so a primeira
+ocorrencia</strong>. As 15:21 o defeito se repetiu por um caminho completamente diferente, e agora da
+para nomear a causa de verdade.</p>
+<h2 id="a-reproducao">A reproducao<a class="headerlink" href="#a-reproducao" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>15:20:25.429  worker da sessao 1 morre (EOF)
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>15:20:26.481  WTS session change: SessionLogoff, SessionId=1     &lt;- o evento CHEGA
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>   ...        37 segundos
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>15:21:03.600  Session event: SessionLogoff, SessionId=1          &lt;- o evento e TRATADO
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>15:21:03.614  LOGOUT emitido pelo Service. Session=1, Usuario=(desconhecido)
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>15:21:03.625  Batch preparado. Events=1 User=null
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>15:21:04      400 PAYLOAD_INVALIDO: windowsUsername expected string, received null
+</code></pre></div>
+<p>Em laco desde entao.</p>
+<h2 id="compare-com-o-logoff-das-1459-que-deu-certo">Compare com o logoff das 14:59, que deu certo<a class="headerlink" href="#compare-com-o-logoff-das-1459-que-deu-certo" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>14:59:49.226  WTS SessionLogoff, SessionId=1
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>14:59:49.261  LOGOUT emitido pelo Service. Session=1, Usuario=NoisyTech   &lt;- 35ms depois
+</code></pre></div>
+<p><strong>Mesma linha de codigo, mesmo caminho. A diferenca e so o atraso.</strong></p>
+<h2 id="a-causa">A causa<a class="headerlink" href="#a-causa" title="Permanent link">&para;</a></h2>
+<p>O Service resolve o nome do usuario <strong>na hora de tratar</strong> o logoff, consultando o Windows. Em
+35ms a sessao ainda esta la e ele responde. Em 37 segundos a sessao ja sumiu e a consulta volta
+vazia — entao sai <code>Usuario=(desconhecido)</code>, o lote sai com <code>windowsUsername: null</code>, e o backend
+recusa para sempre.</p>
+<h2 id="por-que-os-37-segundos">Por que os 37 segundos<a class="headerlink" href="#por-que-os-37-segundos" title="Permanent link">&para;</a></h2>
+<p>A fila de eventos de sessao ficou parada tentando lancar o worker da <strong>sessao 2</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>15:21:01.394  Plans A/B failed for session 2. Falling back to Task Scheduler.
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>15:21:03.599  Task Scheduler launch succeeded but worker process not found for session 2
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>15:21:03.600  Session event: SessionLogoff, SessionId=1     &lt;- so agora destrava
+</code></pre></div>
+<p><strong>O lancamento lento de uma sessao segura o tratamento do logoff de outra.</strong> E o logoff tem prazo
+de validade: passou do ponto, a informacao de quem era nao existe mais.</p>
+<p>Numa troca de usuario — que e exatamente quando as duas coisas acontecem juntas — isso e o caso
+normal, nao a excecao.</p>
+<h2 id="correcao-ao-que-registrei-de-manha">Correcao ao que registrei de manha<a class="headerlink" href="#correcao-ao-que-registrei-de-manha" title="Permanent link">&para;</a></h2>
+<p>O nome do arquivo legado <strong>nao e a causa raiz</strong>, e sim uma das entradas. A causa e:</p>
+<blockquote>
+<p><strong>O Agent monta lote com <code>windowsUsername</code> nulo em vez de recusar montar, e o backend recusa
+para sempre um lote que nunca vai mudar.</strong></p>
+</blockquote>
+<p>Tres entradas conhecidas para o mesmo buraco:
+1. buffer legado sem numero de sessao no nome (11:45)
+2. LOGOUT do Service tratado tarde demais para resolver o usuario (15:21)
+3. qualquer outra que produza usuario nulo — nao ha guarda nenhuma</p>
+<h2 id="aceite-revisado">Aceite revisado<a class="headerlink" href="#aceite-revisado" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Resolver o usuario cedo e guardar.</strong> O nome tem de ser capturado quando o worker conecta
+  (<code>CONNECT received. Session=1, Pid=..., User=NoisyTech</code>) e ficar no registro da sessao, nao ser
+  consultado no momento do logoff.</li>
+<li><strong>Nunca montar lote com <code>windowsUsername</code> nulo.</strong> Se nao ha dono, o evento nao sobe — e isso
+  precisa de <strong>um</strong> registro, nao de um por minuto.</li>
+<li><strong>Tratar logoff fora da fila que lanca worker.</strong> Lancamento lento nao pode atrasar logoff.</li>
+<li>Mantem-se o teto de tentativas do A-64: lote recusado por conteudo sai da fila.</li>
+</ul>
+<h2 id="observacao-de-metodo">Observacao de metodo<a class="headerlink" href="#observacao-de-metodo" title="Permanent link">&para;</a></h2>
+<p>Eu tinha fechado o A-63 com a explicacao do nome do arquivo. Estava incompleta e teria mandado o
+@Bucky corrigir o lugar errado — renomear arquivo legado nao impediria nada do que aconteceu as
+15:21.</p>
+<hr />
+<h2 id="item-6-desligar-e-ligar-nao-executado">Item 6 — desligar e ligar: <strong>NAO EXECUTADO</strong><a class="headerlink" href="#item-6-desligar-e-ligar-nao-executado" title="Permanent link">&para;</a></h2>
+<p>O Marcos avisou que tinha feito, mas a maquina <strong>nao desligou</strong>:</p>
+<ul>
+<li><code>LastBootUpTime</code> continua <strong>15:09:42</strong>, do reboot anterior</li>
+<li>o log do Service e continuo de 15:19 a 15:22, sem parada</li>
+<li>so ha <strong>uma</strong> linha <code>ManagerAgent Service starting</code> depois das 15:09</li>
+</ul>
+<p>O que aconteceu as 15:20:25 foi <strong>logoff da sessao 1 e entrada na sessao 2</strong>, com eventos
+<code>RemoteConnect</code>/<code>RemoteDisconnect</code> no meio.</p>
+<p>Rendeu a reproducao do A-63 acima, entao nao foi perdido. Mas o item 6 continua pendente.</p>
+<h2 id="item-6-desligar-e-ligar-passa">Item 6 — desligar e ligar: <strong>PASSA</strong><a class="headerlink" href="#item-6-desligar-e-ligar-passa" title="Permanent link">&para;</a></h2>
+<p>Desligado as 15:33:21 (via <code>shutdown /s /t 5 /f</code>), ligado as 15:34:20, Service de pe as 15:36:45.</p>
+<p><strong>Nota de execucao:</strong> as duas primeiras tentativas do Marcos pelo menu Iniciar <strong>nao desligaram</strong>
+— o Windows registrou evento 42/107 (entrou e saiu de suspensao em 1 segundo) e o Service ficou
+rodando sem parar. So o comando direto desligou. O <code>LastBootUpTime</code> e o unico jeito confiavel de
+confirmar: se nao mudou, nao desligou.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>15:33:09  3 eventos do NoisyTech sobem
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>15:33:19  worker da sessao 3 morre (EOF); janela fechada
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>15:33:19  SessionLogoff sessao 3 -&gt; UM LOGOUT pelo Service, Usuario=NoisyTech, horario do EOF
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>15:33:19  clean-shutdown gravado para a sessao 3, com logonId
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>15:33:21  mais 5 eventos do NoisyTech sobem
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>15:33:21  "SCM sinalizou desligamento. Nenhum worker sera lancado a partir daqui."
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>15:33:21  desligamento gracioso: HeartbeatWriter, UpdateChecker, Watchdog, UploadWorker param em ordem
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>--- maquina desliga ---
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>15:36:50  SESSAO_INTERROMPIDA suprimida (flag presente)
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>15:36:50  LOGIN emitido, logonId novo != anterior
+</code></pre></div>
+<p>Oito eventos entregues antes de apagar. Nenhum alarme falso na volta. Nenhum erro.</p>
+<p>Desta vez o <code>Usuario</code> saiu preenchido (<code>NoisyTech</code>) porque o logoff foi tratado <strong>23ms</strong> depois de
+chegar — confirma de novo o diagnostico do A-63 revisado.</p>
+<h3 id="escalada-do-a-63-o-lote-envenenado-queima-o-ultimo-flush">Escalada do A-63: o lote envenenado queima o ultimo flush<a class="headerlink" href="#escalada-do-a-63-o-lote-envenenado-queima-o-ultimo-flush" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>15:33:21.698  "Tentativa final de upload antes de parar (teto 5s)."
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>15:33:21.710  Batch preparado. Events=1 User=null DedupHash=93926918...
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>15:33:26.711  "Tentativa final estourou o teto de 5s. Eventos seguem no buffer."
+</code></pre></div>
+<p>O agent reserva <strong>5 segundos</strong> para uma ultima tentativa antes de morrer. Esses 5 segundos foram
+<strong>inteiros</strong> para o lote que nunca vai ser aceito. A fila real nem chegou a ser tentada.</p>
+<p>Aqui nao houve perda — os eventos reais ja tinham subido 100ms antes, e o resto voltou no boot
+seguinte, como o proprio log promete. <strong>Mas a janela de emergencia de todo desligamento passa a
+ser consumida por um lote impossivel.</strong></p>
+<p>E agora sao <strong>dois</strong>: <code>93926918</code> (sessao 1) e <code>d949eb8d</code> (sessao 2). <strong>93 recusas acumuladas
+hoje.</strong> Os dois sobreviveram ao desligamento e voltaram tentando 3 segundos depois do boot.</p>
+<p>Reforca a prioridade: <strong>o teto de tentativas do A-64 nao e melhoria de log, e protecao do
+caminho critico.</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

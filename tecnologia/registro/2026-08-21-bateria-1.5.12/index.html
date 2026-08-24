@@ -1,0 +1,1732 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/registro/2026-08-21-bateria-1.5.12/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Bateria 1.5.12 na maquina (2026-08-21) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bateria-1512-na-maquina-2026-08-21" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bateria 1.5.12 na maquina (2026-08-21)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linha-do-tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linha do tempo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passou-a-64-item-1-teto-de-tentativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PASSOU — A-64 item 1 (teto de tentativas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passou-a-64-item-2-quarentena-do-buffer-ilegivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PASSOU — A-64 item 2 (quarentena do buffer ilegivel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passou-a-63-logout-com-dono-item-5-do-roteiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PASSOU — A-63 (LOGOUT com dono), item 5 do roteiro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passou-de-brinde-a-60-varredura-de-buffer-orfao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PASSOU de brinde — A-60 (varredura de buffer orfao)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nao-exercitado-dito-com-todas-as-letras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NAO exercitado — dito com todas as letras
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#achado-novo-proponho-a-66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Achado novo — proponho A-66
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-o-tony-decidir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para o @Tony decidir
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bateria-1512-na-maquina-2026-08-21">Bateria 1.5.12 na maquina (2026-08-21)<a class="headerlink" href="#bateria-1512-na-maquina-2026-08-21" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Executor:</strong> Marcos (acoes) + @Bucky (verificacao) | <strong>Maquina:</strong> DESKTOP-VMSM6LE
+<strong>Entrega testada:</strong> <code>HANDOFF-2026-08-21-A63-A64-A65.md</code> + R1 do @Tony
+<strong>Review previa:</strong> <code>registro/2026-08-21-review-tony-a63-a64-a65.md</code> (APROVADO)
+Update automatico 1.5.11 -&gt; 1.5.12 as 16:52. Pacote publicado pelo Marcos.</p>
+<p><strong>Para o @Tony revisar.</strong> Codigo continua <strong>nao commitado</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="linha-do-tempo">Linha do tempo<a class="headerlink" href="#linha-do-tempo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Hora</th>
+<th>O que</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16:44:55</td>
+<td>check de update: "no update available" — pacote ainda nao estava publicado</td>
+</tr>
+<tr>
+<td>16:46</td>
+<td>Marcos gera o pacote 1.5.12 (depois da ultima alteracao de codigo, 16:39)</td>
+</tr>
+<tr>
+<td>16:52:05</td>
+<td>update 1.5.12 encontrado; download de 310MB em <strong>13s</strong></td>
+</tr>
+<tr>
+<td>16:52:20</td>
+<td><code>UpdateApplier</code> inicia; Plano A (WMI)</td>
+</tr>
+<tr>
+<td>16:52:34</td>
+<td>GOODBYE da sessao 1 com <code>Reason=Update to 1.5.12 — service restarting</code> — <strong>texto livre antigo, esperado</strong> (ver R2)</td>
+</tr>
+<tr>
+<td>16:53:07</td>
+<td>1.5.12 no ar. Primeiro ciclo de upload ja conta <code>Tentativa=1/5</code></td>
+</tr>
+<tr>
+<td>16:53:36</td>
+<td><code>autonomous-buffer-S77.db</code> vai para quarentena</td>
+</tr>
+<tr>
+<td>16:57:24 / 16:57:27</td>
+<td>os <strong>dois</strong> lotes envenenados sao DESCARTADOS</td>
+</tr>
+<tr>
+<td>16:59:31</td>
+<td>primeiro ciclo com <code>FailedBatches=0</code> — <strong>fila destravada</strong></td>
+</tr>
+<tr>
+<td>17:02:58</td>
+<td>logoff do Marcos (item 5, variacao "logoff")</td>
+</tr>
+<tr>
+<td>17:03:36</td>
+<td>login de volta, sessao 2, worker 1.5.12</td>
+</tr>
+</tbody>
+</table>
+<p>Testes na arvore: <strong>1010 verdes</strong> (14 + 31 + 370 + 595).</p>
+<hr />
+<h2 id="passou-a-64-item-1-teto-de-tentativas">PASSOU — A-64 item 1 (teto de tentativas)<a class="headerlink" href="#passou-a-64-item-1-teto-de-tentativas" title="Permanent link">&para;</a></h2>
+<p>O contador andou entre ciclos, que e exatamente o que nunca existiu:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>16:53:07  lote recusado por conteudo. Session=1, Events=1, Tentativa=1/5
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>16:54:11  ...                                              Tentativa=2/5
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>16:55:15  ...                                              Tentativa=3/5
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>16:56:20  ...                                              Tentativa=4/5
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>16:57:24  [ERR] lote DESCARTADO apos 5 recusas por conteudo. Session=1, Eventos=1
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>16:59:31  cycle complete. Uploaded=2, FailedBatches=0, Descartados=0
+</code></pre></div>
+<p>Idem para a sessao 2, as 16:57:27. <strong>Um <code>[ERR]</code> por lote</strong>, nao um por ciclo.</p>
+<p>Antes, na 1.5.11: 93 recusas em uma tarde, todas <code>Attempt=1</code>, sem nunca sair da fila. A diferenca
+e o contador estar <strong>na linha do SQLite</strong> — a migration rodou no <code>events.db</code> que ja existia na
+maquina, como o @Tony conferiu no review.</p>
+<p>O log tambem passou a dizer a classificacao: <code>Status=400, ..., Permanente=true</code>.</p>
+<h2 id="passou-a-64-item-2-quarentena-do-buffer-ilegivel">PASSOU — A-64 item 2 (quarentena do buffer ilegivel)<a class="headerlink" href="#passou-a-64-item-2-quarentena-do-buffer-ilegivel" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>16:53:36  [ERR] Buffer orfao autonomous-buffer-S77.db ilegivel apos 3 tentativas.
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>          Renomeado para autonomous-buffer-S77.db.corrompido e retirado da varredura.
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>          NAO foi apagado: o conteudo e do colaborador e pode ser recuperavel fora do agent.
+</code></pre></div>
+<p>Nenhum aviso novo depois disso. Antes: um a cada 15s, 5.760 por dia. Os tres arquivos
+(<code>.corrompido</code>, <code>-shm</code>, <code>-wal</code>) estao na pasta de dados — a sobra que o @Tony registrou no review
+saiu junto com o rename.</p>
+<h2 id="passou-a-63-logout-com-dono-item-5-do-roteiro">PASSOU — A-63 (LOGOUT com dono), item 5 do roteiro<a class="headerlink" href="#passou-a-63-logout-com-dono-item-5-do-roteiro" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>17:02:58.833  worker disconnected (EOF). Session=1
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>17:02:58.852  Evento de janela fechado por morte do worker. FinalizadoEm=20:02:58.8375020Z
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>17:02:59.573  Session event: SessionLogoff, SessionId=1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>17:02:59.585  LOGOUT emitido pelo Service. Usuario=NoisyTech, OcorreuEm=20:02:58.8375020Z
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>17:02:59.598  clean-shutdown persistido. LogonId=1:134318154040674398:NoisyTech
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>17:02:59.599  Worker removed from registry. Session=1
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>17:03:03.859  WorkerWatchdog: sessao 1 confirmou logoff dentro da janela de 5s. Nao relanca.
+</code></pre></div>
+<p>As quatro verificacoes do refinamento:</p>
+<table>
+<thead>
+<tr>
+<th>Verificacao</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sai <strong>exatamente uma</strong> saida</td>
+<td>sim</td>
+</tr>
+<tr>
+<td>Com o horario do logoff, nao o do processamento</td>
+<td>sim — <code>OcorreuEm</code> e o EOF, 748ms antes</td>
+</tr>
+<tr>
+<td><strong>Antes</strong> do fechamento da ultima janela</td>
+<td>as duas usam o <strong>mesmo</strong> instante do EOF; linha do tempo consistente</td>
+</tr>
+<tr>
+<td>Login seguinte nao acusa interrupcao</td>
+<td>sim — saiu LOGIN, nenhum <code>SESSAO_INTERROMPIDA</code></td>
+</tr>
+<tr>
+<td>Nenhum worker nasce entre a queda e o logoff</td>
+<td>sim — a janela do A-61 segurou</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nenhum HTTP 400 em toda a janela.</strong> Todos os ciclos com <code>FailedBatches=0</code>.</p>
+<h2 id="passou-de-brinde-a-60-varredura-de-buffer-orfao">PASSOU de brinde — A-60 (varredura de buffer orfao)<a class="headerlink" href="#passou-de-brinde-a-60-varredura-de-buffer-orfao" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>17:03:06  Buffer orfao recolhido. Sessao=1, Usuario=NoisyTech, Eventos=2.
+</code></pre></div>
+<p>Dois eventos que tinham ficado presos no buffer da sessao 1 durante a <strong>propria janela do
+update</strong> (16:53), recolhidos ao completar os 10 minutos de idade minima, com o nome do dono
+certo. E o cenario que motivou a varredura, acontecendo sozinho.</p>
+<hr />
+<h2 id="nao-exercitado-dito-com-todas-as-letras">NAO exercitado — dito com todas as letras<a class="headerlink" href="#nao-exercitado-dito-com-todas-as-letras" title="Permanent link">&para;</a></h2>
+<p><strong>1. A corrida do A-63 nao se reproduziu.</strong> O registro foi limpo as 17:02:59.599, <strong>depois</strong> do
+LOGOUT as .585 — a ordem boa, a mesma das 14:59 de ontem. O nome veio do <code>WorkerRegistry</code>, que e
+a primeira fonte e ja funcionava antes; a fonte nova (o dono guardado no CONNECT) nao precisou
+entrar. <strong>O teste prova que nada regrediu, nao que a correcao agiu.</strong></p>
+<p>O caso das 15:21 precisa de troca rapida de usuario com a outra sessao demorando a subir — foi o
+lancamento travado por 37s que inverteu a ordem. Continua valendo o item 7 do roteiro.</p>
+<p><strong>2. O <code>[ERR] Failed to launch worker</code> tambem nao.</strong> Ele nasce do relancamento do
+<code>WorkerWatchdog</code>, que so age apos 90s sem ping. O worker da sessao 2 subiu em 36s
+(<code>ConsoleConnect</code> 17:02:59 -&gt; <code>SessionLogon</code> 17:03:35 -&gt; worker 17:03:35). O caminho nao rodou.
+Nao apareceu, e isso nao e prova.</p>
+<p><strong>3. Apareceu OUTRA mensagem enganosa, do mesmo tipo</strong>, e nao esta na lista das tres:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>17:03:05.940  [ERR] Task Scheduler launch succeeded but worker process not found for session 2
+</code></pre></div>
+<p>Nao houve erro: a sessao 2 ainda nao existia porque a pessoa estava digitando a senha, e o worker
+subiu normalmente 30s depois. E <code>WorkerLauncher.cs:361</code>, irmao do que ja foi rebaixado.</p>
+<p><strong>4. Segue sem teste em maquina:</strong> A-65 caminho 1 (parar o Service logado), caminho 3 (desligar
+com conta desconectada), e os itens 1, 6, 7, 12 e 13 do roteiro.</p>
+<p><strong>5. Falta a conferencia no banco:</strong> uma unica linha de LOGOUT em <code>eventos_sessao</code>, com nome
+preenchido. Nao foi feita — sem acesso, e a senha do staging e a que esta pendente para trocar.</p>
+<hr />
+<h2 id="achado-novo-proponho-a-66">Achado novo — proponho A-66<a class="headerlink" href="#achado-novo-proponho-a-66" title="Permanent link">&para;</a></h2>
+<p><strong>O worker nao consegue gravar o <code>session-state-N.json</code> de uma sessao que trocou de dono.</strong></p>
+<p><strong>Severidade: MEDIA.</strong> Nao e regressao — nao tem relacao com esta rodada.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[ERR] Falha ao persistir session-state. Path=C:\ProgramData\ManagerAgent\data\session-state-2.json
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>System.UnauthorizedAccessException: Access to the path '...' is denied.
+</code></pre></div>
+<p><strong>Causa raiz confirmada na maquina — e a mesma do A-60:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>dono de session-state-2.json : DESKTOP-VMSM6LE\Marcos
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>dono de session-state-1.json : DESKTOP-VMSM6LE\NoisyTech
+</code></pre></div>
+<p>A pasta <code>data\</code> usa a permissao padrao do Windows: quem cria o arquivo vira dono com
+FullControl, os demais ficam com leitura. O arquivo da sessao 2 foi criado pelo Marcos; agora e a
+conta NoisyTech que ocupa a sessao 2, e ela <strong>le mas nao grava</strong>.</p>
+<p>O A-60 resolveu isso para o buffer, trocando o arquivo unico pelo arquivo por sessao. <strong>Nao
+resolve este caso</strong>: aqui o arquivo ja e por sessao, e o problema e o SessionId ser reciclado
+<strong>entre pessoas diferentes</strong> — que e exatamente a hipotese que o <code>SessionLifecycleTracker</code> trata
+em toda parte.</p>
+<p><strong>Escopo medido:</strong> 58 ocorrencias no log da sessao 2 de hoje, 6 no de ontem, <strong>zero</strong> nas sessoes
+1 e 3 — bate com a hipotese, porque so a sessao 2 trocou de dono.</p>
+<p><strong>Consequencia:</strong> o estado da sessao nunca e atualizado. O log do login de hoje mostra:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>17:03:36  LOGIN emitido. SessionId=2
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>          LogonIdNovo=2:134318162155274653:NoisyTech
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>          LogonIdAnterior=2:134318056055988866:Marcos
+</code></pre></div>
+<p>O <code>LogonIdAnterior</code> continua sendo o do Marcos e vai continuar sendo, porque a gravacao falha
+sempre. Toda decisao de <code>SESSAO_INTERROMPIDA</code> daquela sessao passa a se apoiar num
+<code>previousLogonId</code> congelado. Hoje o efeito foi benigno; nao ha garantia de que seja sempre.</p>
+<p><strong>Nao corrigi.</strong> E area que o refinamento mandou nao encostar (<code>SessaoInterrompidaDecider</code> e o
+formato da flag), e o conserto e de ACL ou de nomenclatura de arquivo — decisao do @Tony, nao
+minha. O <code>[ERR]</code> esta la desde as 00:00 de hoje e ninguem viu, o que reforca o ponto da divida 3.</p>
+<hr />
+<h2 id="estado">Estado<a class="headerlink" href="#estado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Codigo: <strong>nao commitado, nao empurrado</strong>. 1010 testes verdes.</li>
+<li>1.5.12 instalada e rodando na <code>DESKTOP-VMSM6LE</code>, fila de upload limpa.</li>
+<li>Retomada e comandos de conferencia: <code>manager-srv-agent/RETOMADA-2026-08-21-LOGOFF.md</code>.</li>
+</ul>
+<h2 id="para-o-tony-decidir">Para o @Tony decidir<a class="headerlink" href="#para-o-tony-decidir" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>A-66</strong> acima — dono, severidade e se entra nesta wave ou na proxima.</li>
+<li><strong>Item 7 do roteiro</strong> (troca rapida de usuario) — e o unico que exercita a corrida do A-63 de
+   verdade. Vale pedir ao Marcos antes de fechar o achado?</li>
+<li><strong><code>WorkerLauncher.cs:361</code></strong> — a quarta mensagem enganosa. Junto com as tres, ou fica?</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3467 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/time/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Time de Tecnologia — Manager - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#time-de-tecnologia-manager" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Time de Tecnologia — Manager
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#composicao-do-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composicao do Time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acordos-do-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acordos do Time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quando-precisar-de-algo-fora-do-seu-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando precisar de algo fora do seu dominio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-desenvolvimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de Desenvolvimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsabilidades-detalhadas-por-papel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responsabilidades detalhadas por papel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsabilidades detalhadas por papel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estranho-scrum-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Estranho — Scrum Master
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steve-product-owner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Steve — Product Owner
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tony-tech-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Tony — Tech Lead
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peter-frontend-senior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Peter — Frontend Senior
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#miles-frontend-pleno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Miles — Frontend Pleno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thor-backend-senior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Thor — Backend Senior
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocket-backend-pleno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Rocket — Backend Pleno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shuri-backend-senior-nodets-srv-portal-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Shuri — Backend Senior Node/TS (srv-portal-node)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucky-backend-dev-c-agent-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Bucky — Backend Dev (C# / Agent Desktop)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sam-mobile-dev-kotlin-agent-android-byod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Sam — Mobile Dev (Kotlin / Agent Android BYOD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vision-infra-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Vision — Infra / DevOps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natasha-qa-engineer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Natasha — QA Engineer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groot-uxui-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Groot — UX/UI Designer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jarvis-especialista-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        @Jarvis — Especialista IA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interacao-com-outros-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interacao com outros times
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interacao com outros times">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tech-marketing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tech &lt;-&gt; Marketing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tech-gestao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tech &lt;-&gt; Gestao
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skills-disponiveis-para-todos-os-agentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills — disponiveis para todos os agentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Skills — disponiveis para todos os agentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processo-planejamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processo &amp; Planejamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produto-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produto &amp; Negocio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitetura-design-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitetura &amp; Design de Sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend (Angular)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-spring-boot-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend (Spring Boot + Java)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-c-net-agent-desktop-bucky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend C# / .NET / Agent Desktop (@Bucky)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infra-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infra / DevOps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qa-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QA &amp; Testes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uxui-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UX/UI Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ia-llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IA &amp; LLM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentos-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentos &amp; Arquivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cerimonias-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cerimonias Scrum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsabilidade-por-arquivo-do-brain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responsabilidade por arquivo do .brain
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="time-de-tecnologia-manager">Time de Tecnologia — Manager<a class="headerlink" href="#time-de-tecnologia-manager" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Serie:</strong> Marvel Universe
+<strong>Produto:</strong> Manager (interno) / iManager (comercial) — SaaS B2B de gestao de produtividade com IA
+<strong>Data:</strong> 2026-04-30
+<strong>Regra fundamental:</strong> Cada agente tem acesso a TODAS as skills. Nenhuma skill e exclusiva.
+Revisado em 2026-06-11 — @Donna (sem mudancas significativas)</p>
+</blockquote>
+<hr />
+<h2 id="composicao-do-time">Composicao do Time<a class="headerlink" href="#composicao-do-time" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Agente</th>
+<th>Papel</th>
+<th>Dominio principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@Estranho</td>
+<td>Scrum Master</td>
+<td>Processo, cerimonias, impedimentos</td>
+</tr>
+<tr>
+<td>@Steve</td>
+<td>Product Owner</td>
+<td>Negocio, features, historias, backlog</td>
+</tr>
+<tr>
+<td>@Tony</td>
+<td>Tech Lead</td>
+<td>Arquitetura, refinamento, decisao COMO</td>
+</tr>
+<tr>
+<td>@Peter</td>
+<td>Frontend Senior</td>
+<td>Componentes complexos, performance</td>
+</tr>
+<tr>
+<td>@Miles</td>
+<td>Frontend Pleno</td>
+<td>Telas, componentes, animacoes</td>
+</tr>
+<tr>
+<td>@Thor</td>
+<td>Backend Senior</td>
+<td>APIs criticas, banco, seguranca (Java)</td>
+</tr>
+<tr>
+<td>@Rocket</td>
+<td>Backend Pleno</td>
+<td>Logica de negocio, integracoes (Java)</td>
+</tr>
+<tr>
+<td>@Shuri</td>
+<td>Backend Senior Node</td>
+<td>srv-portal-node (NestJS/TS + Drizzle)</td>
+</tr>
+<tr>
+<td>@Bucky</td>
+<td>Backend Dev (C#)</td>
+<td>Agent Desktop Windows/macOS (.NET 8+)</td>
+</tr>
+<tr>
+<td>@Sam</td>
+<td>Mobile Dev (Kotlin)</td>
+<td>Agent Mobile Android BYOD (Kotlin/AndroidX)</td>
+</tr>
+<tr>
+<td>@Vision</td>
+<td>Infra / DevOps</td>
+<td>Deploy, CI/CD, monitoring</td>
+</tr>
+<tr>
+<td>@Natasha</td>
+<td>QA Engineer</td>
+<td>Testes, DoD, bloqueio deploys</td>
+</tr>
+<tr>
+<td>@Groot</td>
+<td>UX/UI Designer</td>
+<td>Wireframes, design system</td>
+</tr>
+<tr>
+<td>@Jarvis</td>
+<td>Especialista IA</td>
+<td>LLM, prompts, pipelines</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="acordos-do-time">Acordos do Time<a class="headerlink" href="#acordos-do-time" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Regra de ouro:</strong> cada um atua SOMENTE no que e seu. Se precisa de algo fora do seu dominio, pede ao responsavel.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Papel</th>
+<th>FAZ</th>
+<th>NAO FAZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@Estranho</td>
+<td>Facilita cerimonias, remove impedimentos, cobra DoD</td>
+<td>Nao decide escopo, nao escreve codigo</td>
+</tr>
+<tr>
+<td>@Steve</td>
+<td>Prioriza backlog, escreve historias, define criterios</td>
+<td>Nao decide arquitetura, nao faz deploy</td>
+</tr>
+<tr>
+<td>@Tony</td>
+<td>Define arquitetura, revisa PRs, decide padroes tecnicos</td>
+<td>Nao prioriza backlog, nao faz design de tela</td>
+</tr>
+<tr>
+<td>@Peter</td>
+<td>Componentes complexos, otimizacao front, code review front</td>
+<td>Nao mexe em APIs backend, nao faz deploy</td>
+</tr>
+<tr>
+<td>@Miles</td>
+<td>Telas, componentes visuais, animacoes</td>
+<td>Nao decide arquitetura, nao altera banco</td>
+</tr>
+<tr>
+<td>@Thor</td>
+<td>APIs criticas Java, modelagem banco, seguranca backend</td>
+<td>Nao faz frontend, nao prioriza backlog</td>
+</tr>
+<tr>
+<td>@Rocket</td>
+<td>Endpoints de negocio Java, integracoes, servicos</td>
+<td>Nao altera infra, nao decide arquitetura sozinho</td>
+</tr>
+<tr>
+<td>@Shuri</td>
+<td>srv-portal-node (NestJS/TS + Drizzle), migracao Java-&gt;Node por strangler fig, paridade cross-service</td>
+<td>Nao mexe em srv-events/admin/ia Java, nao faz frontend, nao altera schema fora do dominio portal</td>
+</tr>
+<tr>
+<td>@Bucky</td>
+<td>Agent Desktop C#/.NET, captura eventos SO, instalador, upload via Device JWT</td>
+<td>Nao faz backend Java, nao faz frontend, nao altera schema PostgreSQL</td>
+</tr>
+<tr>
+<td>@Sam</td>
+<td>Agent Mobile Android BYOD (Kotlin/AndroidX), captura eventos Android sem UI pos-config, sideload, auto-update, coordena com @Bucky duplas de contrato</td>
+<td>Nao faz Agent C# desktop, nao faz backend, nao faz frontend, nao decide arquitetura fora do plano, nao pula bloco sem review Tony</td>
+</tr>
+<tr>
+<td>@Vision</td>
+<td>Pipeline CI/CD, infra, monitoring, deploys</td>
+<td>Nao escreve regra de negocio, nao faz frontend</td>
+</tr>
+<tr>
+<td>@Natasha</td>
+<td>Testes E2E, plano de teste, bloqueia deploy sem QA</td>
+<td>Nao escreve feature code, nao prioriza backlog</td>
+</tr>
+<tr>
+<td>@Groot</td>
+<td>Wireframes, design system, prototipos</td>
+<td>Nao implementa codigo, nao faz deploy</td>
+</tr>
+<tr>
+<td>@Jarvis</td>
+<td>Prompts, pipelines IA, calibracao de scores</td>
+<td>Nao faz frontend, nao decide prioridade de produto</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quando-precisar-de-algo-fora-do-seu-dominio">Quando precisar de algo fora do seu dominio<a class="headerlink" href="#quando-precisar-de-algo-fora-do-seu-dominio" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Identifique o responsavel</strong> na tabela acima.</li>
+<li><strong>Mencione o agente</strong> com <code>@Nome</code> e descreva o que precisa.</li>
+<li><strong>Nunca execute</strong> trabalho fora do seu dominio sem autorizacao explicita do responsavel.</li>
+<li><strong>Excecoes:</strong> em emergencia (producao fora do ar), qualquer agente pode atuar onde necessario, mas deve notificar o responsavel imediatamente apos a acao.</li>
+</ol>
+<p>Fluxo de escalacao:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Agente detecta necessidade fora do dominio
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  -&gt; Menciona @Responsavel
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    -&gt; Responsavel aceita e executa OU delega
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      -&gt; Se impedimento: @Estranho remove
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        -&gt; Se decisao de produto: @Steve decide
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>          -&gt; Se decisao tecnica: @Tony decide
+</code></pre></div></p>
+<hr />
+<h2 id="fluxo-de-desenvolvimento">Fluxo de Desenvolvimento<a class="headerlink" href="#fluxo-de-desenvolvimento" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  DESCOBERTA        REFINAMENTO       DESENVOLVIMENTO         QA              DONE
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  +---------+      +-----------+      +---------------+    +--------+      +------+
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  | @Steve  | ---&gt; | @Tony     | ---&gt; | @Peter/@Miles | -&gt; |@Natasha| ---&gt; | DONE |
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  | @Groot  |      | @Steve    |      | @Thor/@Rocket |    |        |      |      |
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  |         |      | @Estranho |      | @Jarvis       |    |        |      |      |
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  +---------+      +-----------+      +---------------+    +--------+      +------+
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>       |                |                    |                  |              |
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>       v                v                    v                  v              v
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>   Historias +      Tasks tecnicas +    Codigo + PR +       Testes E2E +   Deploy por
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>   Wireframes       Estimativas        Code Review         Regressao      @Vision
+</code></pre></div>
+<p><strong>Regras do fluxo:</strong>
+- Nenhuma task entra em DESENVOLVIMENTO sem passar por REFINAMENTO.
+- Nenhum PR e mergeado sem review de @Tony (arquitetura) ou peer review.
+- Nenhum deploy acontece sem QA de @Natasha (ela tem poder de bloqueio).
+- Deploy e executado exclusivamente por @Vision.</p>
+<hr />
+<h2 id="responsabilidades-detalhadas-por-papel">Responsabilidades detalhadas por papel<a class="headerlink" href="#responsabilidades-detalhadas-por-papel" title="Permanent link">&para;</a></h2>
+<h3 id="estranho-scrum-master">@Estranho — Scrum Master<a class="headerlink" href="#estranho-scrum-master" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Facilita daily, planning, review e retrospectiva.</li>
+<li>Remove impedimentos escalando quando necessario.</li>
+<li>Garante que o time segue os acordos e cerimonias.</li>
+<li>Monitora velocidade e saude do sprint.</li>
+<li>Protege o time de interrupcoes externas.</li>
+</ul>
+<h3 id="steve-product-owner">@Steve — Product Owner<a class="headerlink" href="#steve-product-owner" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mantém o backlog priorizado e refinado.</li>
+<li>Escreve historias de usuario com criterios de aceitacao.</li>
+<li>Decide O QUE sera construido (escopo e prioridade).</li>
+<li>Valida entregas contra criterios de aceitacao.</li>
+<li>Representa a voz do cliente e do negocio.</li>
+</ul>
+<h3 id="tony-tech-lead">@Tony — Tech Lead<a class="headerlink" href="#tony-tech-lead" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Define COMO sera construido (arquitetura e padroes).</li>
+<li>Participa de todo refinamento tecnico.</li>
+<li>Revisa PRs criticos e decide padroes de codigo.</li>
+<li>Resolve conflitos tecnicos entre frontend e backend.</li>
+<li>Mantém ADRs (Architecture Decision Records) atualizados.</li>
+</ul>
+<h3 id="peter-frontend-senior">@Peter — Frontend Senior<a class="headerlink" href="#peter-frontend-senior" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Desenvolve componentes Angular complexos e reutilizaveis.</li>
+<li>Otimiza performance do portal (bundle size, lazy loading, rendering).</li>
+<li>Faz code review de PRs frontend.</li>
+<li>Mentora @Miles em boas praticas Angular.</li>
+<li>Garante aderencia ao design system definido por @Groot.</li>
+</ul>
+<h3 id="miles-frontend-pleno">@Miles — Frontend Pleno<a class="headerlink" href="#miles-frontend-pleno" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Implementa telas e componentes visuais no Angular.</li>
+<li>Desenvolve animacoes e transicoes de UI.</li>
+<li>Integra componentes com APIs do backend.</li>
+<li>Segue padroes definidos por @Tony e @Peter.</li>
+</ul>
+<h3 id="thor-backend-senior">@Thor — Backend Senior<a class="headerlink" href="#thor-backend-senior" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Desenvolve APIs criticas (autenticacao, scores, pipelines de dados).</li>
+<li>Modela e otimiza banco de dados PostgreSQL.</li>
+<li>Implementa seguranca (JWT, RBAC, rate limiting, LGPD).</li>
+<li>Faz code review de PRs backend.</li>
+<li>Mentora @Rocket em Spring Boot e boas praticas.</li>
+</ul>
+<h3 id="rocket-backend-pleno">@Rocket — Backend Pleno<a class="headerlink" href="#rocket-backend-pleno" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Implementa endpoints de logica de negocio no stack Java (srv-portal / srv-events / srv-ia).</li>
+<li>Desenvolve integracoes com servicos externos.</li>
+<li>Escreve testes unitarios e de integracao.</li>
+<li>Segue padroes definidos por @Tony e @Thor.</li>
+</ul>
+<h3 id="shuri-backend-senior-nodets-srv-portal-node">@Shuri — Backend Senior Node/TS (srv-portal-node)<a class="headerlink" href="#shuri-backend-senior-nodets-srv-portal-node" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dona tecnica do repo <code>manager-srv-portal-node</code> (NestJS + TypeScript strict + Drizzle).</li>
+<li>Executa a migracao progressiva <code>srv-portal</code> (Java) -&gt; <code>srv-portal-node</code> via strangler fig, endpoint por endpoint, conforme spec <code>2026-07-21-migracao-srv-portal-node-design.md</code>.</li>
+<li>Auditoria de valor por endpoint antes de migrar (Fase 0 da spec): decide [MIGRAR-REFACT], [MIGRAR-AS-IS] ou [DEIXAR-JAVA] com evidencia.</li>
+<li>Escreve e mantem <code>manager-parity-runner</code> (diff testing Java &lt;-&gt; Node em CI).</li>
+<li>Governa migracoes Drizzle no dominio portal (baseline + up/down obrigatorio).</li>
+<li>Garante paridade de JWT/claims/audit com o srv-portal Java durante coexistencia.</li>
+<li>Coordena com @Peter/@Miles a atualizacao do <code>fed-portal</code> endpoint por endpoint.</li>
+<li>Coordena com @Thor: seguranca backend, decisoes de schema compartilhado, review cruzado.</li>
+<li>Coordena com @Vision: pipeline CI/CD do repo Node, roteamento nginx/Coolify.</li>
+<li>Coordena com @Natasha: E2E de paridade, DoD por endpoint migrado.</li>
+<li>Nao mexe em srv-events / srv-admin / srv-ia (permanecem Java) sem autorizacao explicita do @Tony.</li>
+<li>Nao altera schema de tabelas fora do dominio portal (respeita ownership da secao 5 da spec).</li>
+<li>MVP2 vence conflito de capacidade — se Bloco 0/1 travar por conta da migracao, migracao pausa.</li>
+</ul>
+<h3 id="bucky-backend-dev-c-agent-desktop">@Bucky — Backend Dev (C# / Agent Desktop)<a class="headerlink" href="#bucky-backend-dev-c-agent-desktop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Desenvolve e mantem o Agent Desktop (Windows + macOS) em C# / .NET 8+.</li>
+<li>Captura eventos do SO: janela ativa, ociosidade, lock/unlock, status, heartbeats, reunioes, input agregado.</li>
+<li>Pipeline de upload em batch para <code>srv-events</code> via Device JWT.</li>
+<li>Auto-update do instalador (download + checksum + rollback).</li>
+<li>Empacota instalador (Inno Setup Windows, .pkg macOS).</li>
+<li>Mantem nomenclatura unificada ATIVO/PAUSA/AUSENTE no contrato com o backend.</li>
+<li>Respeita limites LGPD inegociaveis: nada de keylog, screenshot (exceto plano Plus), audio, camera, conteudo de arquivos, URL completa.</li>
+<li>Coordena com @Thor mudancas no contrato de payload.</li>
+<li>Coordena com @Vision bump de versao + publicacao do instalador no Tigris S3 + registro em <code>versoes_agente</code>.</li>
+</ul>
+<h3 id="sam-mobile-dev-kotlin-agent-android-byod">@Sam — Mobile Dev (Kotlin / Agent Android BYOD)<a class="headerlink" href="#sam-mobile-dev-kotlin-agent-android-byod" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dono tecnico do repo <code>manager-srv-agent-android</code> (Kotlin nativo + AndroidX + Gradle KTS).</li>
+<li>Executa o plano <code>.brain/tecnologia/plans/2026-08-08-agent-android-byod-mvp.md</code> (44 tasks bite-sized TDD em 7 blocos B2-B8).</li>
+<li>Coleta paridade Windows: janela ativa (AccessibilityService), ociosidade, sessao (lock/unlock), input agregado (sem conteudo — LGPD hardcoded), reunioes (Zoom/Teams/Meet), chamadas telefonicas (CALL_START/CALL_END sem numero), transicoes de status ATIVO/PAUSA/AUSENTE, URL dominio (best-effort browser).</li>
+<li>ForegroundService tipo <code>dataSync</code> com notification persistente minima (unica evidencia visivel em BYOD sem MDM).</li>
+<li>PermissionDispatchActivity com UI minima (1 tela: identificador + aceite LGPD individual) que se auto-desabilita como LAUNCHER apos vinculacao (icone some da gaveta).</li>
+<li>Encadeamento de intents nativos Android pra 4 permissoes (Accessibility, Usage Stats, Notifications, Phone) + intent OEM-especifica (Xiaomi/Huawei/Oppo/Vivo/Samsung) via OEMDetector.</li>
+<li>Room como buffer local resiliente (trim FIFO 10k eventos ou 7 dias), WorkManager 15min pra envio de batch com retry exponencial.</li>
+<li>Auto-update: WorkManager 6h + APK download + validacao SHA-256 + PackageInstaller flow (colaborador confirma clique — impossivel silencioso BYOD sem MDM).</li>
+<li>Logs iguais Windows (Timber file rotation 7d + AuditReporter + CrashReporter + ANR detector — SEM Loki).</li>
+<li>Escape hatch "Enviar diagnostico" na notification (copia logs pra Downloads publico).</li>
+<li>Segue TDD estrito, cobertura linha &gt;=80% + branch &gt;=95% (regra Marcos) via Jacoco no CI.</li>
+<li>Ao terminar cada bloco (B2/B3/B4/B5/B6/B7/B8), avisa Marcos + @Tony pra review estrutural ANTES de comecar o proximo bloco.</li>
+<li>Coordena com @Shuri o consumo dos endpoints srv-admin-node + srv-events-node (que estarao 100% em prod antes do dev comecar — spec <code>2026-08-08-srv-admin-node-suporte-agent-android.md</code> e par <code>srv-events-node</code>).</li>
+<li>Coordena com @Vision setup do bucket S3 <code>imanager-apks/</code> + DNS <code>apk.imanager.trivion.com.br</code> + secrets CI (KEYSTORE_<em><em>BASE64, TIGRIS</em></em>).</li>
+<li>Coordena com @Bucky duplas de contrato Agent Desktop ↔ Agent Mobile (mesmos endpoints backend, mesmos tipos de evento — paridade).</li>
+<li><strong>NAO faz push sem autorizacao Marcos</strong> — regra dura (feedback_shuri_commit_repo_node.md estendida). Pode commitar no repo dele.</li>
+<li>NAO mexe em backend Node (@Shuri), NAO mexe em Agent Desktop C# (@Bucky), NAO decide arquitetura fora do plano.</li>
+</ul>
+<h3 id="vision-infra-devops">@Vision — Infra / DevOps<a class="headerlink" href="#vision-infra-devops" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mantém pipelines de CI/CD (build, test, deploy).</li>
+<li>Gerencia infraestrutura (servidores, containers, DNS).</li>
+<li>Configura monitoring e alertas (Grafana, Prometheus).</li>
+<li>Executa deploys em producao.</li>
+<li>Garante seguranca de infraestrutura e secrets.</li>
+</ul>
+<h3 id="natasha-qa-engineer">@Natasha — QA Engineer<a class="headerlink" href="#natasha-qa-engineer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Escreve e mantém testes E2E (Playwright).</li>
+<li>Define e valida Definition of Done (DoD).</li>
+<li>Tem poder de BLOQUEIO: nenhum deploy sem aprovacao QA.</li>
+<li>Reporta bugs com evidencia e passos de reproducao.</li>
+<li>Valida regressao antes de cada release.</li>
+</ul>
+<h3 id="groot-uxui-designer">@Groot — UX/UI Designer<a class="headerlink" href="#groot-uxui-designer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cria wireframes e prototipos de alta fidelidade.</li>
+<li>Mantém o design system (cores, tipografia, componentes).</li>
+<li>Valida acessibilidade (WCAG) nos prototipos.</li>
+<li>Colabora com @Steve na descoberta de produto.</li>
+<li>Entrega specs visuais para @Peter e @Miles.</li>
+</ul>
+<h3 id="jarvis-especialista-ia">@Jarvis — Especialista IA<a class="headerlink" href="#jarvis-especialista-ia" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Desenvolve e calibra pipelines de IA (score de produtividade).</li>
+<li>Escreve e otimiza prompts para LLM.</li>
+<li>Implementa RAG, embeddings e avaliacao de modelos.</li>
+<li>Monitora custos de LLM e otimiza token usage.</li>
+<li>Colabora com @Thor na integracao backend-IA.</li>
+</ul>
+<hr />
+<h2 id="interacao-com-outros-times">Interacao com outros times<a class="headerlink" href="#interacao-com-outros-times" title="Permanent link">&para;</a></h2>
+<h3 id="tech-marketing">Tech &lt;-&gt; Marketing<a class="headerlink" href="#tech-marketing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situacao</th>
+<th>Quem inicia</th>
+<th>Quem responde</th>
+<th>Entregavel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precisa de dados para campanha</td>
+<td>Marketing</td>
+<td>@Tony</td>
+<td>API ou export de dados</td>
+</tr>
+<tr>
+<td>Precisa de feature para LP</td>
+<td>Marketing</td>
+<td>@Steve</td>
+<td>Historia priorizada</td>
+</tr>
+<tr>
+<td>Bug reportado por lead/cliente</td>
+<td>Marketing</td>
+<td>@Natasha</td>
+<td>Ticket de bug triado</td>
+</tr>
+<tr>
+<td>Precisa de screenshots do produto</td>
+<td>Marketing</td>
+<td>@Groot</td>
+<td>Screenshots atualizados</td>
+</tr>
+<tr>
+<td>Metricas de uso para case study</td>
+<td>Marketing</td>
+<td>@Jarvis</td>
+<td>Relatorio de dados anonimizados</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tech-gestao">Tech &lt;-&gt; Gestao<a class="headerlink" href="#tech-gestao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situacao</th>
+<th>Quem inicia</th>
+<th>Quem responde</th>
+<th>Entregavel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status do sprint / progresso</td>
+<td>Gestao</td>
+<td>@Estranho</td>
+<td>Burndown + resumo</td>
+</tr>
+<tr>
+<td>Pedido de feature urgente</td>
+<td>Gestao</td>
+<td>@Steve</td>
+<td>Analise de impacto + priorizacao</td>
+</tr>
+<tr>
+<td>Custo de infraestrutura</td>
+<td>Gestao</td>
+<td>@Vision</td>
+<td>Relatorio de custos</td>
+</tr>
+<tr>
+<td>Incidente em producao</td>
+<td>Qualquer</td>
+<td>@Vision + @Thor</td>
+<td>Post-mortem + acoes</td>
+</tr>
+<tr>
+<td>Roadmap tecnico</td>
+<td>Gestao</td>
+<td>@Tony</td>
+<td>ADR + timeline estimada</td>
+</tr>
+<tr>
+<td>Compliance / LGPD</td>
+<td>Gestao</td>
+<td>@Thor</td>
+<td>Checklist de conformidade</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="skills-disponiveis-para-todos-os-agentes">Skills — disponiveis para todos os agentes<a class="headerlink" href="#skills-disponiveis-para-todos-os-agentes" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Regra:</strong> TODOS os agentes tem acesso a TODAS as skills abaixo. Nenhuma skill e restrita a um papel especifico. Cada agente pode usar qualquer skill quando necessario para cumprir sua responsabilidade.</p>
+</blockquote>
+<h3 id="processo-planejamento">Processo &amp; Planejamento<a class="headerlink" href="#processo-planejamento" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>brainstorming</td>
+<td>Sessoes de ideacao estruturada</td>
+</tr>
+<tr>
+<td>writing-plans</td>
+<td>Escrita de planos de acao</td>
+</tr>
+<tr>
+<td>avoid-ai-writing</td>
+<td>Revisao para remover linguagem artificial</td>
+</tr>
+<tr>
+<td>concise-planning</td>
+<td>Planejamento enxuto e objetivo</td>
+</tr>
+<tr>
+<td>planning-with-files</td>
+<td>Planejamento com contexto de arquivos</td>
+</tr>
+<tr>
+<td>progressive-estimation</td>
+<td>Estimativas progressivas por complexidade</td>
+</tr>
+<tr>
+<td>team-collaboration-standup-notes</td>
+<td>Notas estruturadas de daily/standup</td>
+</tr>
+<tr>
+<td>kaizen</td>
+<td>Melhoria continua incremental</td>
+</tr>
+<tr>
+<td>closed-loop-delivery</td>
+<td>Entrega com verificacao de completude</td>
+</tr>
+<tr>
+<td>doc-coauthoring</td>
+<td>Co-autoria de documentos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="produto-negocio">Produto &amp; Negocio<a class="headerlink" href="#produto-negocio" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product-manager</td>
+<td>Gestao de produto end-to-end</td>
+</tr>
+<tr>
+<td>product-inventor</td>
+<td>Concepcao de novos produtos/features</td>
+</tr>
+<tr>
+<td>business-analyst</td>
+<td>Analise de negocio e requisitos</td>
+</tr>
+<tr>
+<td>kpi-dashboard-design</td>
+<td>Design de dashboards de KPI</td>
+</tr>
+<tr>
+<td>startup-analyst</td>
+<td>Analise de startup e mercado</td>
+</tr>
+<tr>
+<td>data-storytelling</td>
+<td>Narrativa com dados</td>
+</tr>
+<tr>
+<td>analytics-product</td>
+<td>Analytics de produto</td>
+</tr>
+<tr>
+<td>competitor-alternatives</td>
+<td>Analise de concorrentes</td>
+</tr>
+<tr>
+<td>customer-support</td>
+<td>Suporte ao cliente</td>
+</tr>
+<tr>
+<td>acceptance-orchestrator</td>
+<td>Orquestracao de criterios de aceitacao</td>
+</tr>
+<tr>
+<td>copywriting</td>
+<td>Escrita persuasiva</td>
+</tr>
+<tr>
+<td>pricing-strategy</td>
+<td>Estrategia de precificacao</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arquitetura-design-de-sistema">Arquitetura &amp; Design de Sistema<a class="headerlink" href="#arquitetura-design-de-sistema" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>architecture</td>
+<td>Arquitetura de software geral</td>
+</tr>
+<tr>
+<td>api-design-principles</td>
+<td>Principios de design de API</td>
+</tr>
+<tr>
+<td>senior-architect</td>
+<td>Decisoes arquiteturais senior</td>
+</tr>
+<tr>
+<td>software-architecture</td>
+<td>Padroes de arquitetura de software</td>
+</tr>
+<tr>
+<td>backend-architect</td>
+<td>Arquitetura backend</td>
+</tr>
+<tr>
+<td>api-patterns</td>
+<td>Padroes de API (REST, GraphQL)</td>
+</tr>
+<tr>
+<td>api-documentation</td>
+<td>Documentacao de APIs</td>
+</tr>
+<tr>
+<td>c4-context</td>
+<td>Diagrama C4 — nivel contexto</td>
+</tr>
+<tr>
+<td>c4-container</td>
+<td>Diagrama C4 — nivel container</td>
+</tr>
+<tr>
+<td>c4-component</td>
+<td>Diagrama C4 — nivel componente</td>
+</tr>
+<tr>
+<td>domain-driven-design</td>
+<td>Domain-Driven Design (DDD)</td>
+</tr>
+<tr>
+<td>microservices-patterns</td>
+<td>Padroes de microsservicos</td>
+</tr>
+<tr>
+<td>clean-code</td>
+<td>Principios de codigo limpo</td>
+</tr>
+<tr>
+<td>code-simplifier</td>
+<td>Simplificacao de codigo</td>
+</tr>
+<tr>
+<td>code-review-excellence</td>
+<td>Code review de excelencia</td>
+</tr>
+<tr>
+<td>architecture-decision-records</td>
+<td>ADRs — registros de decisao</td>
+</tr>
+<tr>
+<td>performance-optimizer</td>
+<td>Otimizacao de performance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="frontend-angular">Frontend (Angular)<a class="headerlink" href="#frontend-angular" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>frontend-design</td>
+<td>Design de interfaces frontend</td>
+</tr>
+<tr>
+<td>angular-best-practices</td>
+<td>Boas praticas Angular</td>
+</tr>
+<tr>
+<td>angular-state-management</td>
+<td>Gerenciamento de estado Angular</td>
+</tr>
+<tr>
+<td>angular-ui-patterns</td>
+<td>Padroes de UI Angular</td>
+</tr>
+<tr>
+<td>angular</td>
+<td>Desenvolvimento Angular geral</td>
+</tr>
+<tr>
+<td>typescript-expert</td>
+<td>TypeScript avancado</td>
+</tr>
+<tr>
+<td>typescript-advanced-types</td>
+<td>Tipos avancados TypeScript</td>
+</tr>
+<tr>
+<td>typescript-pro</td>
+<td>TypeScript profissional</td>
+</tr>
+<tr>
+<td>javascript-pro</td>
+<td>JavaScript profissional</td>
+</tr>
+<tr>
+<td>web-performance-optimization</td>
+<td>Otimizacao de performance web</td>
+</tr>
+<tr>
+<td>senior-frontend</td>
+<td>Desenvolvimento frontend senior</td>
+</tr>
+<tr>
+<td>frontend-security-coder</td>
+<td>Seguranca frontend</td>
+</tr>
+<tr>
+<td>progressive-web-app</td>
+<td>Progressive Web Apps (PWA)</td>
+</tr>
+<tr>
+<td>i18n-localization</td>
+<td>Internacionalizacao e localizacao</td>
+</tr>
+<tr>
+<td>accessibility-compliance-accessibility-audit</td>
+<td>Auditoria de acessibilidade</td>
+</tr>
+<tr>
+<td>fixing-accessibility</td>
+<td>Correcao de problemas de acessibilidade</td>
+</tr>
+<tr>
+<td>performance-profiling</td>
+<td>Profiling de performance</td>
+</tr>
+<tr>
+<td>animejs-animation</td>
+<td>Animacoes com AnimeJS</td>
+</tr>
+<tr>
+<td>scroll-experience</td>
+<td>Experiencia de scroll</td>
+</tr>
+<tr>
+<td>magic-ui-generator</td>
+<td>Geracao de UI</td>
+</tr>
+<tr>
+<td>favicon</td>
+<td>Geracao de favicons</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backend-spring-boot-java">Backend (Spring Boot + Java)<a class="headerlink" href="#backend-spring-boot-java" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>java-pro</td>
+<td>Java profissional</td>
+</tr>
+<tr>
+<td>api-security-best-practices</td>
+<td>Boas praticas de seguranca de API</td>
+</tr>
+<tr>
+<td>api-security-testing</td>
+<td>Testes de seguranca de API</td>
+</tr>
+<tr>
+<td>sql-injection-testing</td>
+<td>Testes de SQL injection</td>
+</tr>
+<tr>
+<td>postgresql</td>
+<td>PostgreSQL geral</td>
+</tr>
+<tr>
+<td>postgres-best-practices</td>
+<td>Boas praticas PostgreSQL</td>
+</tr>
+<tr>
+<td>postgresql-optimization</td>
+<td>Otimizacao PostgreSQL</td>
+</tr>
+<tr>
+<td>backend-security-coder</td>
+<td>Seguranca backend</td>
+</tr>
+<tr>
+<td>broken-authentication</td>
+<td>Deteccao de autenticacao quebrada</td>
+</tr>
+<tr>
+<td>database-migrations-sql-migrations</td>
+<td>Migracoes de banco SQL</td>
+</tr>
+<tr>
+<td>database-architect</td>
+<td>Arquitetura de banco de dados</td>
+</tr>
+<tr>
+<td>database-design</td>
+<td>Design de banco de dados</td>
+</tr>
+<tr>
+<td>database-optimizer</td>
+<td>Otimizacao de banco de dados</td>
+</tr>
+<tr>
+<td>database-admin</td>
+<td>Administracao de banco de dados</td>
+</tr>
+<tr>
+<td>sql-pro</td>
+<td>SQL profissional</td>
+</tr>
+<tr>
+<td>sql-optimization-patterns</td>
+<td>Padroes de otimizacao SQL</td>
+</tr>
+<tr>
+<td>performance-engineer</td>
+<td>Engenharia de performance</td>
+</tr>
+<tr>
+<td>docker-expert</td>
+<td>Docker avancado</td>
+</tr>
+<tr>
+<td>error-handling-patterns</td>
+<td>Padroes de tratamento de erros</td>
+</tr>
+<tr>
+<td>api-endpoint-builder</td>
+<td>Construcao de endpoints</td>
+</tr>
+<tr>
+<td>openapi-spec-generation</td>
+<td>Geracao de specs OpenAPI</td>
+</tr>
+<tr>
+<td>backend-dev-guidelines</td>
+<td>Guidelines de desenvolvimento backend</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backend-c-net-agent-desktop-bucky">Backend C# / .NET / Agent Desktop (@Bucky)<a class="headerlink" href="#backend-c-net-agent-desktop-bucky" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>csharp-pro</td>
+<td>C# avancado e idiomatico</td>
+</tr>
+<tr>
+<td>dotnet-backend</td>
+<td>Backend .NET</td>
+</tr>
+<tr>
+<td>dotnet-backend-patterns</td>
+<td>Padroes de backend .NET</td>
+</tr>
+<tr>
+<td>dotnet-architect</td>
+<td>Arquitetura .NET</td>
+</tr>
+<tr>
+<td>powershell-windows</td>
+<td>Automacao Windows</td>
+</tr>
+<tr>
+<td>bash-pro</td>
+<td>Bash para automacao cross-platform</td>
+</tr>
+<tr>
+<td>performance-engineer</td>
+<td>Engenharia de performance</td>
+</tr>
+<tr>
+<td>performance-profiling</td>
+<td>Profiling de performance</td>
+</tr>
+<tr>
+<td>systematic-debugging</td>
+<td>Debugging sistematico</td>
+</tr>
+<tr>
+<td>error-detective</td>
+<td>Deteccao de erros</td>
+</tr>
+<tr>
+<td>github-actions-templates</td>
+<td>CI/CD cross-platform Windows/macOS</td>
+</tr>
+<tr>
+<td>backend-security-coder</td>
+<td>Seguranca backend</td>
+</tr>
+<tr>
+<td>secrets-management</td>
+<td>Gerenciamento de secrets</td>
+</tr>
+<tr>
+<td>gdpr-data-handling</td>
+<td>LGPD/GDPR — limites de coleta do Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="infra-devops">Infra / DevOps<a class="headerlink" href="#infra-devops" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker-expert</td>
+<td>Docker avancado</td>
+</tr>
+<tr>
+<td>kubernetes-architect</td>
+<td>Arquitetura Kubernetes</td>
+</tr>
+<tr>
+<td>kubernetes-deployment</td>
+<td>Deploy em Kubernetes</td>
+</tr>
+<tr>
+<td>k8s-manifest-generator</td>
+<td>Geracao de manifests K8s</td>
+</tr>
+<tr>
+<td>k8s-security-policies</td>
+<td>Politicas de seguranca K8s</td>
+</tr>
+<tr>
+<td>helm-chart-scaffolding</td>
+<td>Scaffolding de Helm charts</td>
+</tr>
+<tr>
+<td>devcontainer-setup</td>
+<td>Setup de devcontainers</td>
+</tr>
+<tr>
+<td>github-actions-templates</td>
+<td>Templates GitHub Actions</td>
+</tr>
+<tr>
+<td>gitlab-ci-patterns</td>
+<td>Padroes GitLab CI</td>
+</tr>
+<tr>
+<td>circleci-automation</td>
+<td>Automacao CircleCI</td>
+</tr>
+<tr>
+<td>gitops-workflow</td>
+<td>Workflow GitOps</td>
+</tr>
+<tr>
+<td>deployment-pipeline-design</td>
+<td>Design de pipeline de deploy</td>
+</tr>
+<tr>
+<td>deployment-procedures</td>
+<td>Procedimentos de deploy</td>
+</tr>
+<tr>
+<td>deployment-validation-config-validate</td>
+<td>Validacao de configuracao de deploy</td>
+</tr>
+<tr>
+<td>cicd-automation-workflow-automate</td>
+<td>Automacao de workflow CI/CD</td>
+</tr>
+<tr>
+<td>terraform-specialist</td>
+<td>Terraform especialista</td>
+</tr>
+<tr>
+<td>terraform-skill</td>
+<td>Terraform geral</td>
+</tr>
+<tr>
+<td>terraform-infrastructure</td>
+<td>Infraestrutura Terraform</td>
+</tr>
+<tr>
+<td>terraform-aws-modules</td>
+<td>Modulos Terraform AWS</td>
+</tr>
+<tr>
+<td>terraform-module-library</td>
+<td>Biblioteca de modulos Terraform</td>
+</tr>
+<tr>
+<td>cloudformation-best-practices</td>
+<td>Boas praticas CloudFormation</td>
+</tr>
+<tr>
+<td>cdk-patterns</td>
+<td>Padroes AWS CDK</td>
+</tr>
+<tr>
+<td>aws-serverless</td>
+<td>AWS Serverless</td>
+</tr>
+<tr>
+<td>aws-skills</td>
+<td>Habilidades AWS gerais</td>
+</tr>
+<tr>
+<td>aws-cost-optimizer</td>
+<td>Otimizacao de custos AWS</td>
+</tr>
+<tr>
+<td>aws-cost-cleanup</td>
+<td>Limpeza de custos AWS</td>
+</tr>
+<tr>
+<td>gcp-cloud-run</td>
+<td>GCP Cloud Run</td>
+</tr>
+<tr>
+<td>cloud-architect</td>
+<td>Arquitetura cloud</td>
+</tr>
+<tr>
+<td>cloud-devops</td>
+<td>Cloud DevOps</td>
+</tr>
+<tr>
+<td>hybrid-cloud-architect</td>
+<td>Arquitetura hybrid cloud</td>
+</tr>
+<tr>
+<td>hybrid-cloud-networking</td>
+<td>Networking hybrid cloud</td>
+</tr>
+<tr>
+<td>multi-cloud-architecture</td>
+<td>Arquitetura multi-cloud</td>
+</tr>
+<tr>
+<td>azd-deployment</td>
+<td>Deploy com Azure Developer CLI</td>
+</tr>
+<tr>
+<td>observability-engineer</td>
+<td>Engenharia de observabilidade</td>
+</tr>
+<tr>
+<td>observability-monitoring-monitor-setup</td>
+<td>Setup de monitoramento</td>
+</tr>
+<tr>
+<td>observability-monitoring-slo-implement</td>
+<td>Implementacao de SLOs</td>
+</tr>
+<tr>
+<td>grafana-dashboards</td>
+<td>Dashboards Grafana</td>
+</tr>
+<tr>
+<td>prometheus-configuration</td>
+<td>Configuracao Prometheus</td>
+</tr>
+<tr>
+<td>datadog-automation</td>
+<td>Automacao Datadog</td>
+</tr>
+<tr>
+<td>distributed-tracing</td>
+<td>Tracing distribuido</td>
+</tr>
+<tr>
+<td>slo-implementation</td>
+<td>Implementacao de SLOs</td>
+</tr>
+<tr>
+<td>service-mesh-expert</td>
+<td>Service mesh avancado</td>
+</tr>
+<tr>
+<td>service-mesh-observability</td>
+<td>Observabilidade de service mesh</td>
+</tr>
+<tr>
+<td>istio-traffic-management</td>
+<td>Gerenciamento de trafego Istio</td>
+</tr>
+<tr>
+<td>linkerd-patterns</td>
+<td>Padroes Linkerd</td>
+</tr>
+<tr>
+<td>network-engineer</td>
+<td>Engenharia de rede</td>
+</tr>
+<tr>
+<td>network-101</td>
+<td>Fundamentos de rede</td>
+</tr>
+<tr>
+<td>mtls-configuration</td>
+<td>Configuracao mTLS</td>
+</tr>
+<tr>
+<td>secrets-management</td>
+<td>Gerenciamento de secrets</td>
+</tr>
+<tr>
+<td>pci-compliance</td>
+<td>Compliance PCI</td>
+</tr>
+<tr>
+<td>gdpr-data-handling</td>
+<td>Tratamento de dados GDPR/LGPD</td>
+</tr>
+<tr>
+<td>incident-responder</td>
+<td>Resposta a incidentes</td>
+</tr>
+<tr>
+<td>incident-response-incident-response</td>
+<td>Processo de resposta a incidentes</td>
+</tr>
+<tr>
+<td>incident-runbook-templates</td>
+<td>Templates de runbook</td>
+</tr>
+<tr>
+<td>on-call-handoff-patterns</td>
+<td>Padroes de handoff on-call</td>
+</tr>
+<tr>
+<td>postmortem-writing</td>
+<td>Escrita de post-mortems</td>
+</tr>
+<tr>
+<td>bash-scripting</td>
+<td>Scripting Bash</td>
+</tr>
+<tr>
+<td>bash-pro</td>
+<td>Bash profissional</td>
+</tr>
+<tr>
+<td>bash-defensive-patterns</td>
+<td>Padroes defensivos Bash</td>
+</tr>
+<tr>
+<td>linux-shell-scripting</td>
+<td>Scripting Linux shell</td>
+</tr>
+<tr>
+<td>linux-troubleshooting</td>
+<td>Troubleshooting Linux</td>
+</tr>
+<tr>
+<td>server-management</td>
+<td>Gerenciamento de servidores</td>
+</tr>
+<tr>
+<td>vercel-deployment</td>
+<td>Deploy na Vercel</td>
+</tr>
+<tr>
+<td>vercel-automation</td>
+<td>Automacao Vercel</td>
+</tr>
+<tr>
+<td>render-automation</td>
+<td>Automacao Render</td>
+</tr>
+<tr>
+<td>cost-optimization</td>
+<td>Otimizacao de custos</td>
+</tr>
+<tr>
+<td>devops-troubleshooter</td>
+<td>Troubleshooting DevOps</td>
+</tr>
+<tr>
+<td>devops-deploy</td>
+<td>Deploy DevOps</td>
+</tr>
+<tr>
+<td>environment-setup-guide</td>
+<td>Guia de setup de ambiente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="qa-testes">QA &amp; Testes<a class="headerlink" href="#qa-testes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>test-driven-development</td>
+<td>Desenvolvimento orientado a testes (TDD)</td>
+</tr>
+<tr>
+<td>testing-patterns</td>
+<td>Padroes de teste</td>
+</tr>
+<tr>
+<td>lint-and-validate</td>
+<td>Lint e validacao de codigo</td>
+</tr>
+<tr>
+<td>security-auditor</td>
+<td>Auditoria de seguranca</td>
+</tr>
+<tr>
+<td>debugging-strategies</td>
+<td>Estrategias de debugging</td>
+</tr>
+<tr>
+<td>e2e-testing</td>
+<td>Testes end-to-end</td>
+</tr>
+<tr>
+<td>e2e-testing-patterns</td>
+<td>Padroes de testes E2E</td>
+</tr>
+<tr>
+<td>playwright-skill</td>
+<td>Playwright geral</td>
+</tr>
+<tr>
+<td>playwright-java</td>
+<td>Playwright com Java</td>
+</tr>
+<tr>
+<td>unit-testing-test-generate</td>
+<td>Geracao de testes unitarios</td>
+</tr>
+<tr>
+<td>webapp-testing</td>
+<td>Testes de aplicacao web</td>
+</tr>
+<tr>
+<td>javascript-testing-patterns</td>
+<td>Padroes de teste JavaScript</td>
+</tr>
+<tr>
+<td>find-bugs</td>
+<td>Deteccao de bugs</td>
+</tr>
+<tr>
+<td>k6-load-testing</td>
+<td>Testes de carga com k6</td>
+</tr>
+<tr>
+<td>performance-testing-review-ai-review</td>
+<td>Review de testes de performance com IA</td>
+</tr>
+<tr>
+<td>security-scanning-security-sast</td>
+<td>SAST — analise estatica de seguranca</td>
+</tr>
+<tr>
+<td>security-scanning-security-dependencies</td>
+<td>Scan de dependencias</td>
+</tr>
+<tr>
+<td>security-scanning-security-hardening</td>
+<td>Hardening de seguranca</td>
+</tr>
+<tr>
+<td>vulnerability-scanner</td>
+<td>Scanner de vulnerabilidades</td>
+</tr>
+<tr>
+<td>error-detective</td>
+<td>Deteccao de erros</td>
+</tr>
+<tr>
+<td>systematic-debugging</td>
+<td>Debugging sistematico</td>
+</tr>
+<tr>
+<td>code-review-ai-ai-review</td>
+<td>Code review assistido por IA</td>
+</tr>
+<tr>
+<td>python-testing-patterns</td>
+<td>Padroes de teste Python</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uxui-design">UX/UI Design<a class="headerlink" href="#uxui-design" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>frontend-design</td>
+<td>Design de interfaces</td>
+</tr>
+<tr>
+<td>ui-ux-designer</td>
+<td>Design UX/UI</td>
+</tr>
+<tr>
+<td>ui-ux-pro-max</td>
+<td>Design UX/UI avancado</td>
+</tr>
+<tr>
+<td>antigravity-design-expert</td>
+<td>Design system avancado</td>
+</tr>
+<tr>
+<td>stitch-ui-design</td>
+<td>Design de UI com Stitch</td>
+</tr>
+<tr>
+<td>web-design-guidelines</td>
+<td>Guidelines de web design</td>
+</tr>
+<tr>
+<td>wcag-audit-patterns</td>
+<td>Padroes de auditoria WCAG</td>
+</tr>
+<tr>
+<td>design-spells</td>
+<td>Tecnicas avancadas de design</td>
+</tr>
+<tr>
+<td>screen-reader-testing</td>
+<td>Testes com screen reader</td>
+</tr>
+<tr>
+<td>mobile-design</td>
+<td>Design mobile</td>
+</tr>
+<tr>
+<td>canvas-design</td>
+<td>Design com canvas</td>
+</tr>
+<tr>
+<td>brand-guidelines</td>
+<td>Diretrizes de marca</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ia-llm">IA &amp; LLM<a class="headerlink" href="#ia-llm" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prompt-engineer</td>
+<td>Engenharia de prompts</td>
+</tr>
+<tr>
+<td>rag-engineer</td>
+<td>Engenharia RAG</td>
+</tr>
+<tr>
+<td>ai-engineer</td>
+<td>Engenharia de IA</td>
+</tr>
+<tr>
+<td>llm-app-patterns</td>
+<td>Padroes de aplicacoes LLM</td>
+</tr>
+<tr>
+<td>llm-structured-output</td>
+<td>Output estruturado de LLM</td>
+</tr>
+<tr>
+<td>llm-application-dev-prompt-optimize</td>
+<td>Otimizacao de prompts</td>
+</tr>
+<tr>
+<td>prompt-engineering-patterns</td>
+<td>Padroes de engenharia de prompts</td>
+</tr>
+<tr>
+<td>rag-implementation</td>
+<td>Implementacao de RAG</td>
+</tr>
+<tr>
+<td>embedding-strategies</td>
+<td>Estrategias de embeddings</td>
+</tr>
+<tr>
+<td>evaluation</td>
+<td>Avaliacao de modelos</td>
+</tr>
+<tr>
+<td>agent-evaluation</td>
+<td>Avaliacao de agentes</td>
+</tr>
+<tr>
+<td>claude-api</td>
+<td>API do Claude</td>
+</tr>
+<tr>
+<td>prompt-caching</td>
+<td>Cache de prompts</td>
+</tr>
+<tr>
+<td>llm-evaluation</td>
+<td>Avaliacao de LLMs</td>
+</tr>
+<tr>
+<td>llm-ops</td>
+<td>Operacoes de LLM (LLMOps)</td>
+</tr>
+<tr>
+<td>llm-prompt-optimizer</td>
+<td>Otimizacao de prompts LLM</td>
+</tr>
+<tr>
+<td>langchain-architecture</td>
+<td>Arquitetura LangChain</td>
+</tr>
+<tr>
+<td>langgraph</td>
+<td>LangGraph</td>
+</tr>
+<tr>
+<td>multi-agent-patterns</td>
+<td>Padroes multi-agente</td>
+</tr>
+<tr>
+<td>agent-tool-builder</td>
+<td>Construcao de ferramentas para agentes</td>
+</tr>
+<tr>
+<td>pydantic-ai</td>
+<td>Pydantic AI</td>
+</tr>
+</tbody>
+</table>
+<h3 id="documentos-arquivos">Documentos &amp; Arquivos<a class="headerlink" href="#documentos-arquivos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docx</td>
+<td>Geracao de documentos Word</td>
+</tr>
+<tr>
+<td>xlsx</td>
+<td>Geracao de planilhas Excel</td>
+</tr>
+<tr>
+<td>pptx</td>
+<td>Geracao de apresentacoes PowerPoint</td>
+</tr>
+<tr>
+<td>pdf-official</td>
+<td>Geracao de PDFs</td>
+</tr>
+<tr>
+<td>create-pr</td>
+<td>Criacao de Pull Requests</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cerimonias-scrum">Cerimonias Scrum<a class="headerlink" href="#cerimonias-scrum" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Cerimonia</th>
+<th>Frequencia</th>
+<th>Facilitador</th>
+<th>Participantes</th>
+<th>Duracao</th>
+<th>Entregavel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily Standup</td>
+<td>Diaria</td>
+<td>@Estranho</td>
+<td>Todos</td>
+<td>15 min</td>
+<td>Impedimentos identificados</td>
+</tr>
+<tr>
+<td>Sprint Planning</td>
+<td>Inicio do sprint</td>
+<td>@Estranho</td>
+<td>Todos</td>
+<td>2h</td>
+<td>Sprint backlog comprometido</td>
+</tr>
+<tr>
+<td>Refinamento</td>
+<td>2x por sprint</td>
+<td>@Tony</td>
+<td>@Steve, @Tony, devs relevantes</td>
+<td>1h</td>
+<td>Historias refinadas e estimadas</td>
+</tr>
+<tr>
+<td>Sprint Review</td>
+<td>Fim do sprint</td>
+<td>@Steve</td>
+<td>Todos + stakeholders</td>
+<td>1h</td>
+<td>Demo + feedback coletado</td>
+</tr>
+<tr>
+<td>Retrospectiva</td>
+<td>Fim do sprint</td>
+<td>@Estranho</td>
+<td>Todos</td>
+<td>1h</td>
+<td>Acoes de melhoria (kaizen)</td>
+</tr>
+<tr>
+<td>Design Review</td>
+<td>Sob demanda</td>
+<td>@Groot</td>
+<td>@Steve, @Peter, @Miles</td>
+<td>30 min</td>
+<td>Prototipos validados</td>
+</tr>
+<tr>
+<td>Tech Review</td>
+<td>Sob demanda</td>
+<td>@Tony</td>
+<td>Devs relevantes</td>
+<td>1h</td>
+<td>ADR ou decisao tecnica registrada</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="responsabilidade-por-arquivo-do-brain">Responsabilidade por arquivo do .brain<a class="headerlink" href="#responsabilidade-por-arquivo-do-brain" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Diretorio / Arquivo</th>
+<th>Responsavel principal</th>
+<th>Colaboradores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.brain/tecnologia/time.md</code></td>
+<td>@Estranho</td>
+<td>@Tony</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/specs/</code></td>
+<td>@Tony</td>
+<td>@Steve, @Thor</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/plans/</code></td>
+<td>@Tony</td>
+<td>@Steve, @Estranho</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/sprint/</code></td>
+<td>@Estranho</td>
+<td>@Steve</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/testes/</code></td>
+<td>@Natasha</td>
+<td>@Peter, @Thor</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/infraestrutura/</code></td>
+<td>@Vision</td>
+<td>@Tony</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/features/</code></td>
+<td>@Steve</td>
+<td>@Tony, @Groot</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/registro/</code></td>
+<td>@Estranho</td>
+<td>Todos</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/manual/</code></td>
+<td>@Steve</td>
+<td>@Groot, @Peter</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/autenticacao/</code></td>
+<td>@Thor</td>
+<td>@Tony</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/agent-desktop/</code></td>
+<td>@Bucky</td>
+<td>@Thor, @Vision</td>
+</tr>
+<tr>
+<td><code>.brain/tecnologia/specs/migracao-srv-portal-node/</code></td>
+<td>@Shuri</td>
+<td>@Tony, @Thor</td>
+</tr>
+<tr>
+<td><code>Backend/manager-srv-portal-node/</code></td>
+<td>@Shuri</td>
+<td>@Tony (review)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

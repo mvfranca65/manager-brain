@@ -1,0 +1,2036 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/reestruturacao-abas/spec/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Reestruturação das Abas — Detalhe do Colaborador - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reestruturacao-das-abas-detalhe-do-colaborador" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reestruturação das Abas — Detalhe do Colaborador
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aba-dia-a-dia-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aba "Dia a Dia" (default)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aba &#34;Dia a Dia&#34; (default)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-ordem-de-cima-pra-baixo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes (ordem de cima pra baixo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aba-resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aba "Resumo"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aba &#34;Resumo&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seletor-de-periodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seletor de período
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-ordem-de-cima-pra-baixo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes (ordem de cima pra baixo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-contextual-b-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guia contextual (B + A)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guia contextual (B + A)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#texto-descritivo-por-secao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Texto descritivo por seção
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textos-definidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textos definidos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Textos definidos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aba-dia-a-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aba "Dia a Dia"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aba-resumo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aba "Resumo"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grafico-de-tendencia-de-foco-detalhes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gráfico de Tendência de Foco — Detalhes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icone-com-tooltip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ícone "?" com tooltip
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-muda-vs-estado-atual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que muda vs estado atual
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APIs necessárias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs necessárias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#existentes-ja-funcionam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Existentes (já funcionam)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#novas-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Novas necessárias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restricoes-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restrições técnicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fora-de-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fora de escopo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reestruturacao-das-abas-detalhe-do-colaborador">Reestruturação das Abas — Detalhe do Colaborador<a class="headerlink" href="#reestruturacao-das-abas-detalhe-do-colaborador" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Spec aprovada em brainstorm 2026-04-06
+Participantes: @Estranho (SM), @Steve (PO), Fundador</p>
+</blockquote>
+<hr />
+<h2 id="problema">Problema<a class="headerlink" href="#problema" title="Permanent link">&para;</a></h2>
+<p>As abas "Visão Geral" e "Indicadores" têm KPIs duplicados e papéis sobrepostos. O gestor precisa navegar entre abas pra ter a visão completa. A sobreposição confunde e quebra o fluxo de análise.</p>
+<h2 id="decisao">Decisão<a class="headerlink" href="#decisao" title="Permanent link">&para;</a></h2>
+<p>Reorganizar em <strong>2 abas com papéis distintos</strong>, eliminando redundância:</p>
+<table>
+<thead>
+<tr>
+<th>Aba</th>
+<th>Nome</th>
+<th>Pergunta central</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (default)</td>
+<td><strong>Dia a Dia</strong></td>
+<td>"O que aconteceu hoje?"</td>
+<td>Visão detalhada de um dia específico</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Resumo</strong></td>
+<td>"Qual o padrão desse colaborador?"</td>
+<td>Visão agregada por período</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Timeline 360°</td>
+<td>—</td>
+<td>Em breve (não alterada)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Detalhes</td>
+<td>—</td>
+<td>Dados cadastrais (não alterada)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="aba-dia-a-dia-default">Aba "Dia a Dia" (default)<a class="headerlink" href="#aba-dia-a-dia-default" title="Permanent link">&para;</a></h2>
+<h3 id="navegacao">Navegação<a class="headerlink" href="#navegacao" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Botões "Dia anterior" / "Próximo dia"</li>
+<li>Seletor de data com calendário</li>
+<li>Default: hoje</li>
+</ul>
+<h3 id="componentes-ordem-de-cima-pra-baixo">Componentes (ordem de cima pra baixo)<a class="headerlink" href="#componentes-ordem-de-cima-pra-baixo" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Pergunta-guia</strong> — texto visível: "O que aconteceu hoje?"</li>
+<li><strong>KPIs do dia</strong> — 4 cards em linha:</li>
+<li>Jornada total (com alerta se excedida)</li>
+<li>Tempo ativo (verde)</li>
+<li>Tempo em pausa (amarelo)</li>
+<li>Tempo ausente (cinza) — subtítulo "inclui almoço"</li>
+<li><strong>Frase acionável do dia</strong> — card com borda colorida, gerado automaticamente a partir dos KPIs. Exemplos:</li>
+<li>"Jornada 10h 21min — 2h 21min acima do esperado. Verifique se há sobrecarga."</li>
+<li>"Dia dentro do esperado. 87% de aproveitamento ativo."</li>
+<li>"Tempo ausente acima do habitual — 1h 20min vs média de 45min."</li>
+<li><strong>Visualização Temporal</strong> — barra horizontal 24h com blocos coloridos (verde/amarelo/cinza)</li>
+<li><strong>Seção inferior — layout híbrido (lado a lado):</strong></li>
+<li>Esquerda (1/3): <strong>Top 5 Apps do dia</strong> — lista com barras proporcionais</li>
+<li>Direita (2/3): <strong>Eventos Detalhados</strong> — lista paginada (10/30/50/100)</li>
+</ol>
+<h3 id="layout">Layout<a class="headerlink" href="#layout" title="Permanent link">&para;</a></h3>
+<ul>
+<li>KPIs + Timeline: largura total</li>
+<li>Top Apps + Eventos: lado a lado (flex, 1:2)</li>
+<li>Responsivo: empilha em telas &lt; 768px</li>
+</ul>
+<hr />
+<h2 id="aba-resumo">Aba "Resumo"<a class="headerlink" href="#aba-resumo" title="Permanent link">&para;</a></h2>
+<h3 id="seletor-de-periodo">Seletor de período<a class="headerlink" href="#seletor-de-periodo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Pills visíveis: Hoje / 7 dias / 15 dias / 30 dias</li>
+<li>Pill "Personalizado ▾": abre calendar picker para período custom (escondido por padrão)</li>
+<li>Default: 7 dias</li>
+</ul>
+<h3 id="componentes-ordem-de-cima-pra-baixo_1">Componentes (ordem de cima pra baixo)<a class="headerlink" href="#componentes-ordem-de-cima-pra-baixo_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Pergunta-guia</strong> — texto visível: "Qual o padrão desse colaborador?"</li>
+<li><strong>KPIs médios</strong> — 4 cards em linha:</li>
+<li>Jornada média (com alerta se excedida)</li>
+<li>Tempo ativo médio (verde)</li>
+<li>Tempo em pausa médio (amarelo)</li>
+<li>Foco médio (verde) — subtítulo "maior sessão"</li>
+<li><strong>Cada KPI inclui comparação com o time:</strong> linha discreta abaixo do valor mostrando "Média do time: Xh Xmin". Indicador visual: acima/dentro/abaixo do padrão.</li>
+<li><strong>Tendência — Jornada por dia</strong> — gráfico de barras verticais, uma por dia do período. Barra vermelha quando excede jornada esperada (8h default).</li>
+<li><strong>Seção inferior — layout lado a lado:</strong></li>
+<li>Esquerda: <strong>Top 5 Apps (período)</strong> — lista com barras proporcionais</li>
+<li>Direita: <strong>Distribuição de Tempo (donut)</strong> — Ativo/Pausa/Ausente com percentuais</li>
+<li><strong>Tendência — Sessões de Foco por dia</strong> — gráfico de barras verticais, uma por dia. Subtítulo: "X sessões no período · maior: Xh Xmin"</li>
+</ol>
+<hr />
+<h2 id="guia-contextual-b-a">Guia contextual (B + A)<a class="headerlink" href="#guia-contextual-b-a" title="Permanent link">&para;</a></h2>
+<h3 id="texto-descritivo-por-secao">Texto descritivo por seção<a class="headerlink" href="#texto-descritivo-por-secao" title="Permanent link">&para;</a></h3>
+<p>Cada seção tem uma linha de texto descritivo abaixo do título:
+- Fonte: 12px, cor <code>#94a3b8</code>, sem bold
+- Sempre visível, sem interação necessária
+- Uma linha apenas — objetivo é orientar, não explicar em detalhe</p>
+<h3 id="textos-definidos">Textos definidos<a class="headerlink" href="#textos-definidos" title="Permanent link">&para;</a></h3>
+<p>Cada texto segue o padrão: <strong>o que é → como ler → quando agir</strong>.
+Linguagem simples, sem termos técnicos. O gestor deve entender sem precisar de treinamento.</p>
+<h4 id="aba-dia-a-dia">Aba "Dia a Dia"<a class="headerlink" href="#aba-dia-a-dia" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Seção</th>
+<th>Texto visível</th>
+<th>Tooltip "?" (quando houver)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jornada</td>
+<td>Quanto tempo durou o dia de trabalho, do início ao fim. Se estiver acima do esperado, pode indicar sobrecarga.</td>
+<td>Calculado do primeiro ao último evento detectado. A jornada esperada é configurada no perfil do colaborador (padrão: 8h).</td>
+</tr>
+<tr>
+<td>Tempo ativo</td>
+<td>Quanto tempo o colaborador esteve usando o computador. Compare com a jornada para ver o aproveitamento do dia.</td>
+<td>Inclui digitação, cliques e uso de aplicativos. Pausas menores que 5 minutos não interrompem o tempo ativo.</td>
+</tr>
+<tr>
+<td>Tempo em pausa</td>
+<td>Pequenas pausas durante o dia. Pausas saudáveis são normais e esperadas.</td>
+<td>Detectado automaticamente quando não há atividade por mais de 5 minutos. Pausas acima de 30 minutos viram "ausente".</td>
+</tr>
+<tr>
+<td>Tempo ausente</td>
+<td>Períodos longos sem atividade, como almoço ou saída antecipada. Verifique se está dentro do esperado.</td>
+<td>Inclui almoço, reuniões fora do computador e qualquer intervalo acima de 30 minutos.</td>
+</tr>
+<tr>
+<td>Visualização Temporal</td>
+<td>Veja como o dia foi distribuído. Blocos verdes são trabalho, amarelos são pausas e cinzas são ausências. Gaps frequentes podem indicar interrupções.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Top 5 Apps</td>
+<td>Em quais ferramentas o colaborador passou mais tempo. Útil para entender o tipo de trabalho realizado no dia.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Eventos Detalhados</td>
+<td>Tudo que aconteceu no dia, em ordem. Use para entender o contexto de uma pausa ou ausência específica.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h4 id="aba-resumo_1">Aba "Resumo"<a class="headerlink" href="#aba-resumo_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Seção</th>
+<th>Texto visível</th>
+<th>Tooltip "?" (quando houver)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jornada média</td>
+<td>Média diária de horas trabalhadas no período. Se estiver consistentemente alta, pode indicar necessidade de redistribuir demandas.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Tempo ativo médio</td>
+<td>Média de tempo produtivo por dia. Compare com a jornada para avaliar o aproveitamento.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Tempo em pausa médio</td>
+<td>Média de pausas por dia. Pouca pausa pode indicar pressão excessiva; muita pausa pode indicar desengajamento.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Foco médio</td>
+<td>Maior bloco de trabalho contínuo. Sessões longas de foco indicam capacidade de concentração e ambiente sem interrupções.</td>
+<td>Uma sessão de foco é um período de trabalho contínuo sem interrupções maiores que 2 minutos. Só sessões acima de 5 minutos são contadas.</td>
+</tr>
+<tr>
+<td>Tendência Jornada</td>
+<td>Evolução da jornada ao longo dos dias. Dias vermelhos excederam o esperado. Veja se é pontual ou um padrão.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Distribuição de Tempo</td>
+<td>Proporção entre trabalho, pausas e ausências no período. Uma distribuição saudável tem pausas regulares.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Top 5 Apps (período)</td>
+<td>Ferramentas mais usadas no período. Mudanças bruscas podem indicar mudança de projeto ou responsabilidade.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Tendência Foco</td>
+<td>Cada barra mostra as sessões individuais de foco do dia. Cores indicam a profundidade: quanto mais escuro, mais longa a sessão.</td>
+<td>Uma sessão de foco é um período de trabalho contínuo sem interrupções maiores que 2 minutos. Só sessões acima de 5 minutos são contadas.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grafico-de-tendencia-de-foco-detalhes">Gráfico de Tendência de Foco — Detalhes<a class="headerlink" href="#grafico-de-tendencia-de-foco-detalhes" title="Permanent link">&para;</a></h3>
+<p><strong>Formato:</strong> Barras empilhadas por dia. Cada segmento = uma sessão individual de foco.</p>
+<p><strong>Cores por duração da sessão:</strong>
+- 🟡 Amarelo claro: 5-20min (raso)
+- 🔵 Azul claro: 20-40min (produtivo)
+- 🔵 Azul médio: 40-60min (bom foco)
+- 🔵 Azul escuro: 60min+ (deep work)</p>
+<p><strong>Frase acionável:</strong> Gerada automaticamente abaixo do gráfico com base no padrão do período.</p>
+<p>Exemplos de frases:
+- "3 de 5 dias com sessões fragmentadas — verifique a agenda de reuniões deste colaborador."
+- "2 de 3 dias com foco equilibrado ou profundo — bom padrão de concentração."
+- "Melhor semana de foco do mês — padrão estável."
+- "Queda de foco nos últimos 3 dias — possível sobrecarga ou excesso de interrupções."</p>
+<p><strong>Regras de classificação por dia (internas, usadas para gerar a frase):</strong>
+- <strong>Fragmentado:</strong> mais de 5 sessões E maior sessão &lt; 30min
+- <strong>Equilibrado:</strong> 2-5 sessões OU maior sessão entre 30-60min
+- <strong>Deep work:</strong> alguma sessão &gt; 60min E menos de 4 sessões no dia</p>
+<h3 id="icone-com-tooltip">Ícone "?" com tooltip<a class="headerlink" href="#icone-com-tooltip" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Aparece apenas nas seções que têm conteúdo na coluna "Tooltip" acima</li>
+<li>Tooltip usa classe <code>menu-tooltip</code> (design system existente)</li>
+<li>Posição: ao lado do título da seção, alinhado à direita</li>
+</ul>
+<hr />
+<h2 id="o-que-muda-vs-estado-atual">O que muda vs estado atual<a class="headerlink" href="#o-que-muda-vs-estado-atual" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Antes</th>
+<th>Depois</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abas</td>
+<td>"Visão Geral" + "Indicadores"</td>
+<td>"Dia a Dia" + "Resumo"</td>
+</tr>
+<tr>
+<td>KPIs</td>
+<td>Duplicados entre abas</td>
+<td>Cada aba tem seus KPIs sem overlap</td>
+</tr>
+<tr>
+<td>Top Apps</td>
+<td>Só na Visão Geral (período)</td>
+<td>Dia a Dia (dia) + Resumo (período)</td>
+</tr>
+<tr>
+<td>Donut</td>
+<td>Na Visão Geral</td>
+<td>Só no Resumo</td>
+</tr>
+<tr>
+<td>Timeline temporal</td>
+<td>Só nos Indicadores</td>
+<td>Só no Dia a Dia</td>
+</tr>
+<tr>
+<td>Eventos detalhados</td>
+<td>Só nos Indicadores</td>
+<td>Só no Dia a Dia</td>
+</tr>
+<tr>
+<td>Tendência jornada</td>
+<td>Não existia</td>
+<td>Novo no Resumo</td>
+</tr>
+<tr>
+<td>Tendência foco</td>
+<td>Não existia</td>
+<td>Novo no Resumo</td>
+</tr>
+<tr>
+<td>Pergunta-guia</td>
+<td>Não existia</td>
+<td>Topo de cada aba</td>
+</tr>
+<tr>
+<td>Textos descritivos</td>
+<td>Não existia</td>
+<td>Em cada seção</td>
+</tr>
+<tr>
+<td>Subtítulo "inclui almoço"</td>
+<td>Não existia</td>
+<td>Card Tempo ausente</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apis-necessarias">APIs necessárias<a class="headerlink" href="#apis-necessarias" title="Permanent link">&para;</a></h2>
+<h3 id="existentes-ja-funcionam">Existentes (já funcionam)<a class="headerlink" href="#existentes-ja-funcionam" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>POST /api/eventos/{id}/timeline/completo</code> — dados do dia (KPIs + blocos + eventos)</li>
+<li><code>POST /api/eventos/{id}/resumo-periodo</code> — dados do período (KPIs médios + top apps)</li>
+</ul>
+<h3 id="novas-necessarias">Novas necessárias<a class="headerlink" href="#novas-necessarias" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tendência de jornada por dia</strong> — array com jornada/ativo/pausa/ausente de cada dia do período</li>
+<li><strong>Tendência de foco por dia</strong> — array com sessões de foco de cada dia (quantidade, duração individual, tempo total)</li>
+<li><strong>Média do time</strong> — KPIs médios do time do colaborador no mesmo período (jornada, ativo, pausa, foco) para comparação</li>
+<li><strong>Frase acionável</strong> — lógica backend que analisa os dados e gera texto de insight (pode ser calculada no frontend inicialmente)</li>
+</ul>
+<blockquote>
+<p>Decisão do @Tony: esses dados podem vir como extensão do <code>resumo-periodo</code> (campo <code>tendenciaPorDia</code>) ou endpoint separado.</p>
+</blockquote>
+<hr />
+<h2 id="restricoes-tecnicas">Restrições técnicas<a class="headerlink" href="#restricoes-tecnicas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Angular 16 + PrimeNG</li>
+<li>Design system: cards brancos, border <code>#e5e7eb</code>, radius <code>14px</code></li>
+<li>Gráficos de tendência: pode usar PrimeNG Charts (Chart.js) ou barras CSS puras</li>
+<li>Responsivo: layout híbrido empilha em mobile (&lt; 768px)</li>
+</ul>
+<hr />
+<h2 id="fora-de-escopo">Fora de escopo<a class="headerlink" href="#fora-de-escopo" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Timeline 360° (permanece "em breve")</li>
+<li>Aba Detalhes (sem alterações)</li>
+<li>Relatórios IA (escopo separado)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

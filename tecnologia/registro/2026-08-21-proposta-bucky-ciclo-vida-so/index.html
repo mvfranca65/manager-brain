@@ -1,0 +1,2601 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/registro/2026-08-21-proposta-bucky-ciclo-vida-so/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Proposta — ciclo de vida do SO no Agent Windows (A-56, A-61, A-62) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proposta-ciclo-de-vida-do-so-no-agent-windows-a-56-a-61-a-62" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Proposta — ciclo de vida do SO no Agent Windows (A-56, A-61, A-62)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estado-da-implementacao-atualizado-em-2026-08-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado da implementacao (atualizado em 2026-08-21)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resposta-curta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resposta curta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-confirmei-no-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. O que confirmei no codigo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-onde-discordo-do-refinamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Onde discordo do refinamento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Onde discordo do refinamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-systemeventspowermodechanged-nao-e-o-caminho-certo-para-o-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 SystemEvents.PowerModeChanged nao e o caminho certo para o Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-o-watchdog-ja-tem-guarda-de-logoff-e-ela-falhou" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 O watchdog JA tem guarda de logoff — e ela falhou
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-o-worker-ja-tem-um-segundo-caminho-de-logout-e-ele-tambem-nao-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 O worker ja tem um segundo caminho de LOGOUT, e ele tambem nao funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-a-rejeicao-por-pid-mismatch-nao-e-passiva-ela-e-ativamente-danosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 A rejeicao por PID mismatch nao e passiva: ela e ativamente danosa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-os-testes-que-cobririam-exatamente-estes-caminhos-estao-desligados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Os testes que cobririam exatamente estes caminhos estao desligados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-a-flag-de-shutdown-limpo-e-chaveada-por-sessionid-e-o-windows-recicla-sessionid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 A flag de shutdown limpo e chaveada por SessionId, e o Windows recicla SessionId
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-a-correcao-de-fundo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. A correcao de fundo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. A correcao de fundo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#30-o-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.0 O componente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-parte-1-a-autoria-do-fim-de-sessao-vai-para-o-service-a-62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Parte 1 — a autoria do fim de sessao vai para o Service (A-62)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-parte-2-o-relogio-que-nao-conta-tempo-dormido-a-56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Parte 2 — o relogio que nao conta tempo dormido (A-56)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-parte-3-confirmar-antes-de-relancar-a-61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Parte 3 — confirmar antes de relancar (A-61)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sobre-o-caminho-recomendado-pelo-tony-no-a-62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sobre o caminho recomendado pelo @Tony no A-62
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Sobre o caminho recomendado pelo @Tony no A-62">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-o-horario-do-logout-tem-de-ser-o-do-eof-nao-o-de-agora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 O horario do LOGOUT tem de ser o do EOF, nao o de "agora"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-o-shutdownmessage-tem-de-continuar-existindo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 O ShutdownMessage tem de continuar existindo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-se-o-service-escrever-a-flag-o-worker-pode-nao-conseguir-mais-apaga-la" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Se o Service escrever a flag, o worker pode nao conseguir mais apaga-la
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-o-caso-feio-a-goodbye-chegando-depois-de-o-service-ja-ter-emitido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 O caso feio: a GOODBYE chegando depois de o Service ja ter emitido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-eliminar-e-sempre-ter-apenas-um-agent-rodando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. "Eliminar e sempre ter apenas um agent rodando"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. &#34;Eliminar e sempre ter apenas um agent rodando&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-o-enunciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 O enunciado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-os-quatro-caminhos-que-quebram-a-invariante-hoje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Os quatro caminhos que quebram a invariante hoje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-a-rejeicao-vira-encerramento-com-uma-regra-de-decisao-explicita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 A rejeicao vira encerramento — com uma regra de decisao explicita
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-como-encerrar-o-excedente-sem-estragar-o-dado-dele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Como encerrar o excedente, sem estragar o dado dele
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-matar-antes-de-relancar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Matar antes de relancar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-riscos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Riscos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Testes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-as-quatro-suites-e-quem-e-afetada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 As quatro suites, e quem e afetada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-pre-requisito-reativar-os-tres-arquivos-excluidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Pre-requisito: reativar os tres arquivos excluidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-testes-novos-por-achado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Testes novos, por achado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-bis-o-que-falta-provar-na-maquina-2026-08-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4-bis O que falta provar na maquina (2026-08-21)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-na-maquina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Na maquina
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ordem-sugerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Ordem sugerida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-o-que-nao-entra-nesta-correcao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. O que NAO entra nesta correcao
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="proposta-ciclo-de-vida-do-so-no-agent-windows-a-56-a-61-a-62">Proposta — ciclo de vida do SO no Agent Windows (A-56, A-61, A-62)<a class="headerlink" href="#proposta-ciclo-de-vida-do-so-no-agent-windows-a-56-a-61-a-62" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>De:</strong> @Bucky | <strong>Para:</strong> @Tony | <strong>Aprovador:</strong> Marcos
+<strong>Data:</strong> 2026-08-21
+<strong>Escopo:</strong> proposta tecnica. Nenhuma linha de codigo de producao foi escrita nesta rodada.
+<strong>Base:</strong> leitura do repo <code>manager-srv-agent</code>, branch <code>staging</code>, arvore de trabalho da 1.5.10
+(150 arquivos alterados e nao commitados).</p>
+</blockquote>
+<hr />
+<h2 id="estado-da-implementacao-atualizado-em-2026-08-21">Estado da implementacao (atualizado em 2026-08-21)<a class="headerlink" href="#estado-da-implementacao-atualizado-em-2026-08-21" title="Permanent link">&para;</a></h2>
+<p>Proposta aprovada pelo Marcos. <strong>Passos 0 a 4 implementados</strong>, mais A-58 e A-60. Nada commitado.</p>
+<table>
+<thead>
+<tr>
+<th>Passo</th>
+<th>Estado</th>
+<th>Testes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 — <code>PipeServer</code> + reativar os 3 arquivos de teste</td>
+<td><strong>feito</strong></td>
+<td>753 -&gt; 794</td>
+</tr>
+<tr>
+<td>1 — <code>SessionLifecycleTracker</code> + janela de confirmacao</td>
+<td><strong>feito</strong></td>
+<td>794 -&gt; 810</td>
+</tr>
+<tr>
+<td>2 — relogio que nao conta tempo dormido</td>
+<td><strong>feito</strong></td>
+<td>810 -&gt; 819</td>
+</tr>
+<tr>
+<td>4 — rejeicao ativa / invariante do Marcos</td>
+<td><strong>feito</strong></td>
+<td>819 -&gt; 853</td>
+</tr>
+<tr>
+<td>3 — Service emite LOGOUT + flag por LogonId</td>
+<td><strong>feito</strong></td>
+<td>887 -&gt; 935</td>
+</tr>
+</tbody>
+</table>
+<p>Fora desta secao, na mesma leva: A-58 (ATIVO/PAUSA/AUSENTE restaurado, 853 -&gt; 887) e A-60
+(buffer por sessao + varredura de orfaos, 887 -&gt; 908).</p>
+<p>O passo 4 introduziu o motivo de shutdown <code>DUPLICATE_WORKER</code>
+(<code>src/ManagerAgent.Shared/Pipe/ShutdownReasons.cs</code>), que exige o SessionWorker em <strong>1.5.11 ou
+superior</strong>. Worker anterior a isso e encerrado direto, sem o pedido educado — perde o buffer
+daquele orfao, uma vez, na transicao de versao. <strong>A versao dos csproj ainda esta em 1.5.10 e
+precisa subir para 1.5.11 antes do build de validacao</strong>, senao o proprio agent novo se declara
+antigo e nunca recebe o pedido.</p>
+<p>A armadilha da secao 5.4 (worker excedente gravando LOGOUT falso) esta coberta por teste
+dedicado em <code>WorkerShutdownTests</code>. Verificada por sabotagem: invertendo a regra de
+<code>ExigeDespedidaDeSessao</code>, exatamente os dois testes da armadilha ficam vermelhos e os dois de
+drenagem/encerramento seguem verdes.</p>
+<p>Decisoes do @Tony incorporadas: <code>QueryUnbiasedInterruptTime</code> como correcao principal e
+<code>OnPowerEvent</code> fora desta rodada (secao 2.1); janela de confirmacao em vez de "ensinar o
+watchdog" (secoes 2.2/3.3); flag comparada por <code>logonId</code> e nao apagada (secao 4.3); processo
+vivo nao se relanca (secao 5.5).</p>
+<p><strong>Sobre o passo 3.</strong> A @Shuri confirmou que <code>eventos_sessao</code> <strong>nao tem UNIQUE nenhuma</strong>. As tres
+camadas da secao 4.4 entraram: emissao no fim do <code>HandleLogoffAsync</code>, marca de GOODBYE por
+<code>(sessao, pid)</code>, e consulta ao proprio buffer do Service imediatamente antes de inserir. A
+<strong>brecha que sobra</strong> — LOGOUT preso no buffer autonomo do worker com o pipe caido, que so a
+UNIQUE fecha — esta registrada em teste executavel,
+<code>LogoutDuplicadoTests.BRECHA_CONHECIDA_LOGOUT_preso_no_buffer_do_worker_nao_e_visto</code>, para que
+seja decisao registrada e nao esquecimento.</p>
+<p>A regra da flag foi verificada por sabotagem: trocando a comparacao de <code>logonId</code> por "flag
+existe, nao emite", exatamente os dois testes que protegem o alarme legitimo ficam vermelhos.</p>
+<hr />
+<h2 id="resposta-curta">Resposta curta<a class="headerlink" href="#resposta-curta" title="Permanent link">&para;</a></h2>
+<p>Nao existe <strong>uma</strong> correcao que resolva os tres. Existem <strong>duas</strong>, e a terceira sai de graca:</p>
+<ol>
+<li><strong>A autoria do fim de sessao passa do worker para o Service.</strong> Resolve o A-62 inteiro e o
+   falso SESSAO_INTERROMPIDA do A-61.</li>
+<li><strong>O relogio do watchdog para de contar o tempo em que a maquina dormiu.</strong> Resolve o A-56.</li>
+<li><strong>O relancamento espera confirmar que a sessao continua viva.</strong> Resolve o ruido do A-61.</li>
+</ol>
+<p>O que une os tres nao e a causa — sao causas diferentes. O que une e a <strong>lacuna</strong>: o Service
+nao tem nenhum modelo do que o sistema operacional esta fazendo. Ele sabe que o pipe caiu; nao
+sabe se caiu porque o usuario deslogou, porque a maquina dormiu, porque esta desligando ou
+porque o worker realmente morreu. Todas as tres correcoes moram no mesmo componente novo, e por
+isso vale trata-las como uma entrega so.</p>
+<p>O item do Marcos ("sempre um agent so") e <strong>independente dos tres</strong> e e o de maior risco. Ele
+tem secao propria, porque encontrei um defeito no pipe que muda o tamanho do problema.</p>
+<hr />
+<h2 id="1-o-que-confirmei-no-codigo">1. O que confirmei no codigo<a class="headerlink" href="#1-o-que-confirmei-no-codigo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Afirmacao do refinamento</th>
+<th>Confere?</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HandleLogoff</code> manda <code>ShutdownMessage</code> com <code>SESSION_LOGOFF</code>/3000ms</td>
+<td>sim</td>
+<td><code>ManagerAgentService.cs:179-204</code> (metodo se chama <code>HandleLogoffAsync</code>, nao <code>HandleLogoff</code>)</td>
+</tr>
+<tr>
+<td><code>Worker.HandleShutdownAsync</code> emite LOGOUT, drena e marca a flag</td>
+<td>sim</td>
+<td><code>Worker.cs:506-586</code> — LOGOUT em 519, drain em 534, flag em 546, drain forcado em 562</td>
+</tr>
+<tr>
+<td>Watchdog nao sabe nada de suspensao</td>
+<td>sim</td>
+<td><code>grep PowerMode\|Suspend\|Resume</code> em <code>src/ManagerAgent.Service/</code> retorna zero linhas</td>
+</tr>
+<tr>
+<td><code>HeartbeatTimeout</code> = 90s fixos</td>
+<td>sim</td>
+<td><code>WorkerWatchdog.cs:35</code></td>
+</tr>
+<tr>
+<td>O watchdog remove do registro mas nao mata o processo</td>
+<td>sim</td>
+<td><code>WorkerWatchdog.cs:410-482</code> — <code>HandleDeadWorkerAsync</code> faz pipe cleanup (417), <code>Remove</code> (426) e relanca (462). Nenhum <code>Kill</code></td>
+</tr>
+<tr>
+<td>A rejeicao por PID mismatch nao encerra nada</td>
+<td>sim</td>
+<td><code>PipeMessageHandler.cs:95-101</code> — loga e da <code>return</code></td>
+</tr>
+<tr>
+<td>A flag de shutdown limpo so tem um autor, o worker</td>
+<td>sim</td>
+<td><code>grep CleanShutdown</code> no Service so acha o registro no DI (<code>Program.cs:183-187</code>) — <strong>registrado e nunca consumido</strong></td>
+</tr>
+<tr>
+<td>SESSAO_INTERROMPIDA sai quando ha LogonId anterior e a flag falta</td>
+<td>sim</td>
+<td><code>SessaoInterrompidaDecider.cs:32-47</code> + <code>SessionMonitor.cs:148-199</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ou seja: o diagnostico do refinamento esta correto no essencial. O que segue e onde ele fica
+curto.</p>
+<hr />
+<h2 id="2-onde-discordo-do-refinamento">2. Onde discordo do refinamento<a class="headerlink" href="#2-onde-discordo-do-refinamento" title="Permanent link">&para;</a></h2>
+<h3 id="21-systemeventspowermodechanged-nao-e-o-caminho-certo-para-o-service">2.1 <code>SystemEvents.PowerModeChanged</code> nao e o caminho certo para o Service<a class="headerlink" href="#21-systemeventspowermodechanged-nao-e-o-caminho-certo-para-o-service" title="Permanent link">&para;</a></h3>
+<p>O refinamento sugere que "o Service pode ouvir <code>SystemEvents.PowerModeChanged</code>". Isso e o que o
+<code>PowerModeMonitor</code> faz <strong>dentro do worker</strong> (<code>PowerModeMonitor.cs:73</code>), e la funciona porque o
+worker roda em sessao interativa com bomba de mensagens (<code>Application.Run</code>, comentado em
+<code>PowerModeMonitor.cs:26-28</code>). O Service roda na sessao 0, sem desktop e sem janela de topo. O
+caminho suportado para servico e outro:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ServiceBase.CanHandlePowerEvent = true;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>protected override bool OnPowerEvent(PowerBroadcastStatus status)
+</code></pre></div>
+<p>E ja existe o lugar exato para por isso: <code>SessionAwareServiceLifetime</code> deriva de
+<code>WindowsServiceLifetime</code> e ja liga <code>CanHandleSessionChangeEvent = true</code> no construtor
+(<code>SessionAwareServiceLifetime.cs:35</code>) e ja sobrescreve <code>OnSessionChange</code> (linha 45). A simetria
+e perfeita.</p>
+<p><strong>Mas mesmo isso nao basta</strong>, e por isso nao proponho o evento como correcao principal: em
+maquina com Modern Standby (praticamente todo notebook novo) o <code>PBT_APMSUSPEND</code> frequentemente
+nao dispara. A correcao que nao depende de evento nenhum esta na secao 3.2.</p>
+<h3 id="22-o-watchdog-ja-tem-guarda-de-logoff-e-ela-falhou">2.2 O watchdog JA tem guarda de logoff — e ela falhou<a class="headerlink" href="#22-o-watchdog-ja-tem-guarda-de-logoff-e-ela-falhou" title="Permanent link">&para;</a></h3>
+<p>O refinamento trata o relancamento durante o logoff como se o watchdog nao soubesse nada. Ele
+sabe: <code>WorkerWatchdog.cs:248-255</code> recusa relancar quando a sessao nao esta mais ativa, com o
+comentario certo ("Logoff tambem produz EOF, e ali o worker DEVE morrer"). A guarda existe e
+nao pegou o caso medido no dia 20.</p>
+<p>Por dois motivos, os dois no codigo:</p>
+<ul>
+<li><code>IsSessionStillActive</code> aceita <code>Disconnected</code> como ativa (<code>WorkerWatchdog.cs:280</code>), de
+  proposito (tela bloqueada / RDP solto). Uma sessao em logoff passa por <code>Disconnected</code>.</li>
+<li>No instante do EOF o Windows ainda nao mudou o estado da sessao. O log prova: EOF as
+  23:44:11.983, notificacao WTS de logoff as 23:44:12.964. A guarda foi consultada <strong>981ms
+  antes de existir a informacao que ela precisa</strong>.</li>
+</ul>
+<p>Isso muda a correcao: nao e ensinar o watchdog, e <strong>dar tempo a ele</strong>. Detalhe na secao 3.3.</p>
+<h3 id="23-o-worker-ja-tem-um-segundo-caminho-de-logout-e-ele-tambem-nao-funciona">2.3 O worker ja tem um segundo caminho de LOGOUT, e ele tambem nao funciona<a class="headerlink" href="#23-o-worker-ja-tem-um-segundo-caminho-de-logout-e-ele-tambem-nao-funciona" title="Permanent link">&para;</a></h3>
+<p><code>SessionMonitor.OnSessionSwitch</code> mapeia <code>SessionSwitchReason.SessionLogoff</code> para <code>"LOGOUT"</code>
+(<code>SessionMonitor.cs:229</code>). Ou seja, a alternativa que o @Tony avaliou e descartou ("o worker
+assinar <code>SystemEvents.SessionEnding</code>") ja existe numa variante, desde antes.</p>
+<p>E nao funciona pelo motivo mais simples possivel: <code>AddEvent</code> so poe o evento numa <code>List</code> em
+memoria (<code>SessionMonitor.cs:291-302</code>). Quem tira dali e o <code>SessionEventService.HandleAsync</code>,
+que roda no laco de captura a cada <code>_loopDelay</code> e so entao grava no buffer
+(<code>SessionEventService.cs:51-111</code>). Entre a notificacao e a gravacao ha pelo menos uma volta do
+laco. O processo nao vive tanto.</p>
+<p><strong>Concordo com descartar a opcao 2, e com um motivo mais forte que o do refinamento:</strong> ela ja
+foi tentada e o log de 20/08 e a prova de que perde a corrida. Nao ha ajuste que a salve, porque
+o problema nao e receber a notificacao — e ter tempo de persistir depois de receber.</p>
+<h3 id="24-a-rejeicao-por-pid-mismatch-nao-e-passiva-ela-e-ativamente-danosa">2.4 A rejeicao por PID mismatch nao e passiva: ela e ativamente danosa<a class="headerlink" href="#24-a-rejeicao-por-pid-mismatch-nao-e-passiva-ela-e-ativamente-danosa" title="Permanent link">&para;</a></h3>
+<p>Esta e a discordancia que mais muda o tamanho do problema. O refinamento descreve o worker
+orfao como peso morto: 136MB, um icone a mais, CPU acumulada. Pela leitura do codigo, ele faz
+bem pior que isso.</p>
+<p><code>PipeServer.AcceptLoopAsync</code> aceita a conexao <strong>antes</strong> de qualquer validacao e, ao aceitar,
+descarta a conexao anterior da mesma sessao:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// PipeServer.cs:84-90</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_connections</span><span class="p">.</span><span class="n">TryRemove</span><span class="p">(</span><span class="n">sessionId</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">var</span><span class="w"> </span><span class="n">stale</span><span class="p">))</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="n">stale</span><span class="p">.</span><span class="n">DisposeAsync</span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kt">var</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PipeConnection</span><span class="p">(</span><span class="n">sessionId</span><span class="p">,</span><span class="w"> </span><span class="n">pipe</span><span class="p">);</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">_connections</span><span class="p">[</span><span class="n">sessionId</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">;</span>
+</code></pre></div>
+<p>Sequencia: o orfao 20420 reconecta -&gt; o Service <strong>derruba a conexao do worker legitimo 23836</strong>
+-&gt; le o CONNECT do orfao -&gt; rejeita por PID mismatch e da <code>return</code>, sem WELCOME e sem fechar
+nada -&gt; a conexao do orfao <strong>fica registrada como a conexao daquela sessao</strong> -&gt; o worker
+legitimo detecta EOF (<code>PipeClient.cs:169-176</code>) e reconecta -&gt; derruba o orfao -&gt; o orfao
+reconecta em backoff -&gt; repete.</p>
+<p>Dois efeitos, os dois ruins:</p>
+<ol>
+<li><strong>Ping-pong no pipe.</strong> Cada reconexao do orfao deixa o worker legitimo sem canal. Enquanto
+   isso ele nao entrega evento, nao recebe LOCK/UNLOCK/SHUTDOWN e nao manda PING — o que
+   alimenta o timeout de heartbeat do proprio watchdog.</li>
+<li><strong>Corrida que apaga a conexao boa do registro.</strong> O <code>finally</code> do read loop antigo faz
+   <code>_connections.TryRemove(conn.SessionId, out _)</code> (<code>PipeServer.cs:196</code>), removendo <strong>por
+   chave</strong>. Se ele rodar depois de <code>_connections[sessionId] = conn</code> da linha 90, remove a
+   conexao <strong>nova</strong>. A partir dai o <code>SendAsync</code> daquela sessao devolve false para sempre
+   (<code>PipeServer.cs:225-229</code>) — o pipe esta fisicamente de pe e o Service nao consegue mais
+   falar com o worker.</li>
+</ol>
+<p>O <code>TryRemove(conn.SessionId, out _)</code> da linha 196 tem de virar a sobrecarga que compara o valor
+(<code>TryRemove(new KeyValuePair&lt;...&gt;(sessionId, conn))</code>). E uma linha, e vale independentemente do
+resto desta proposta.</p>
+<p><strong>Consequencia para o achado:</strong> o orfao de 6h nao estava so gastando RAM. Ele estava brigando
+pelo canal com o worker de verdade. Confirma-se no log procurando pares repetidos de
+<code>PipeServer: worker connected. Session=1</code> seguidos de <code>CONNECT rejected: PID mismatch</code> depois
+das 22:47:13 do dia 20 — se estiverem la, e este ciclo.</p>
+<h3 id="25-os-testes-que-cobririam-exatamente-estes-caminhos-estao-desligados">2.5 Os testes que cobririam exatamente estes caminhos estao desligados<a class="headerlink" href="#25-os-testes-que-cobririam-exatamente-estes-caminhos-estao-desligados" title="Permanent link">&para;</a></h3>
+<p><code>tests/ManagerAgent.Service.Tests/ManagerAgent.Service.Tests.csproj</code> termina com:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;ItemGroup&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&lt;Compile</span><span class="w"> </span><span class="na">Remove=</span><span class="s">"PipeMessageHandlerTests.cs"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&lt;Compile</span><span class="w"> </span><span class="na">Remove=</span><span class="s">"WorkerWatchdogTests.cs"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&lt;Compile</span><span class="w"> </span><span class="na">Remove=</span><span class="s">"UploadWorkerTests.cs"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nt">&lt;/ItemGroup&gt;</span>
+</code></pre></div>
+<p>Os arquivos existem no disco e nao compilam (o <code>WorkerWatchdogTests.cs</code> ainda constroi o
+watchdog com 4 argumentos; o construtor real tem 8, <code>WorkerWatchdog.cs:83-91</code>).</p>
+<p>Traduzindo: <strong>os 753 verdes nao dizem nada sobre rejeicao de CONNECT nem sobre deteccao de
+morte de worker.</strong> Estes sao justamente os dois arquivos que esta proposta mexe. Nao e um
+detalhe de higiene — e a mesma armadilha registrada na ADR-001, em que "693 suites verdes nao
+significaram nada porque os testes concordavam com o codigo errado". Aqui e pior: eles nem
+concordam, estao removidos da compilacao.</p>
+<p>Reativar os tres arquivos (adaptando ao construtor atual) e pre-requisito, nao consequencia.</p>
+<h3 id="26-a-flag-de-shutdown-limpo-e-chaveada-por-sessionid-e-o-windows-recicla-sessionid">2.6 A flag de shutdown limpo e chaveada por SessionId, e o Windows recicla SessionId<a class="headerlink" href="#26-a-flag-de-shutdown-limpo-e-chaveada-por-sessionid-e-o-windows-recicla-sessionid" title="Permanent link">&para;</a></h3>
+<p><code>clean-shutdown-{sessionId}.json</code> (<code>CleanShutdownFlagStore.cs:170-171</code>) e
+<code>session-state-{sessionId}.json</code> (<code>SessionStateStore.cs:133-134</code>).</p>
+<p>O proprio registro de testes de 20/08 documenta o caso: <em>"o Windows trocou o SessionId do
+NoisyTech de 1 para 2 (a sessao 2 era do Marcos)"</em>. Nesse momento o arquivo da sessao 2
+carregava estado do Marcos e passou a ser lido como estado do NoisyTech. O LOGIN saiu certo por
+acaso — porque o LogonId mudou. A decisao de SESSAO_INTERROMPIDA nao tem essa sorte: ela le a
+presenca de um arquivo, nao o conteudo.</p>
+<p>Isso e uma <strong>quarta fonte de SESSAO_INTERROMPIDA falso</strong>, independente dos tres achados, e ela
+piora se o Service passar a escrever a flag (secao 4.3). Precisa entrar junto.</p>
+<hr />
+<h2 id="3-a-correcao-de-fundo">3. A correcao de fundo<a class="headerlink" href="#3-a-correcao-de-fundo" title="Permanent link">&para;</a></h2>
+<h3 id="30-o-componente">3.0 O componente<a class="headerlink" href="#30-o-componente" title="Permanent link">&para;</a></h3>
+<p>Um objeto novo no Service, <code>SessionLifecycleTracker</code>, singleton, dono de duas coisas:</p>
+<ul>
+<li><strong>Estado da maquina:</strong> <code>Running</code> | <code>Suspending</code> | <code>ShuttingDown</code></li>
+<li><strong>Estado por sessao:</strong> <code>Running</code> | <code>Ending</code> (logoff em curso ou confirmado) + o instante do
+  ultimo EOF de worker daquela sessao + o <code>LogonId</code> vigente</li>
+</ul>
+<p>Ele nao decide nada sozinho. Ele e consultado por quem decide:</p>
+<table>
+<thead>
+<tr>
+<th>Quem pergunta</th>
+<th>O que pergunta</th>
+<th>Hoje</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WorkerWatchdog.OnWorkerDisconnectedAsync</code></td>
+<td>posso relancar?</td>
+<td>so consulta o estado WTS, e cedo demais</td>
+</tr>
+<tr>
+<td><code>WorkerWatchdog.IsWorkerDead</code></td>
+<td>quanto tempo mesmo passou?</td>
+<td><code>DateTimeOffset.Now</code>, que conta sono</td>
+</tr>
+<tr>
+<td><code>ManagerAgentService.HandleLogoffAsync</code></td>
+<td>quando a sessao acabou de verdade?</td>
+<td>assume "agora"</td>
+</tr>
+<tr>
+<td>Emissor da flag e do LOGOUT</td>
+<td>esta sessao terminou de forma esperada?</td>
+<td>ninguem pergunta</td>
+</tr>
+</tbody>
+</table>
+<p>E o mesmo padrao do <code>UpdateGate</code> (<code>WorkerWatchdog.cs:296</code>, <code>WorkerLauncher.cs:77</code>) e do
+<code>ILinkStatus</code> (<code>WorkerWatchdog.cs:300</code>, <code>WorkerLauncher.cs:90</code>): um portao pequeno consultado
+por todos os caminhos que nascem ou matam worker. O padrao ja existe no codigo e funciona; esta
+proposta o repete para um terceiro tipo de estado.</p>
+<h3 id="31-parte-1-a-autoria-do-fim-de-sessao-vai-para-o-service-a-62">3.1 Parte 1 — a autoria do fim de sessao vai para o Service (A-62)<a class="headerlink" href="#31-parte-1-a-autoria-do-fim-de-sessao-vai-para-o-service-a-62" title="Permanent link">&para;</a></h3>
+<p>Quem sobrevive ao logoff e o Service. Entao e nele que o fim de sessao nasce.</p>
+<p>Em <code>HandleLogoffAsync</code> (<code>ManagerAgentService.cs:179</code>), antes do que ja existe:</p>
+<ol>
+<li><strong>Emitir o LOGOUT direto no buffer</strong>, com <code>ocorreuEm</code> = o instante do EOF daquela sessao
+   (guardado pelo tracker), nao "agora". O EOF e a hora real da morte, e o watchdog ja o captura
+   hoje para outro fim: <code>var eofAtUtc = DateTimeOffset.UtcNow;</code> em <code>WorkerWatchdog.cs:202</code>.
+   Se nao houver EOF registrado, cai para "agora".</li>
+<li><strong>Marcar a flag de shutdown limpo</strong> daquela sessao, com motivo <code>OsLogoff</code>.</li>
+<li>So entao seguir com o <code>ShutdownMessage</code> que ja existe — ele continua util no caso em que o
+   worker AINDA esta vivo (logoff lento, <code>shutdown /l</code> sem pressa, RDP). Nesse caso o LOGOUT do
+   worker e o do Service coincidem, e o backend reconcilia: mesmo <code>tipoEvento</code> e mesmo
+   <code>ocorreuEm</code> produzem o mesmo <code>client_dedup_key</code>
+   (<code>SqliteEventBuffer.cs</code> / <code>EventDedupKey.ComputeEventKey</code>). Vale conferir com o @Shuri se a
+   dedup de <code>eventos_sessao</code> e por <code>(agente_id, tipo_evento, ocorreu_em)</code>; se for, nao ha
+   duplicata. <strong>Se nao for, esta e a unica dependencia externa da proposta</strong> e precisa de
+   resposta antes de implementar.</li>
+</ol>
+<p><strong>O mecanismo ja existe e esta provado em campo.</strong> O <code>OrphanWindowEventCloser</code> fabrica um evento
+completo no buffer do Service sem worker nenhum vivo
+(<code>OrphanWindowEventCloser.cs:82-90</code>), e o log de 20/08 registra ele funcionando as 23:44:12.005
+— 970ms <strong>antes</strong> do Service saber do logoff. Emitir um <code>SessionEvent</code> e mais simples que o que
+ele ja faz: o payload e um objeto de tres campos (<code>EventoSessao.cs</code>), e o <code>windowsUser</code> vem do
+<code>WorkerEntry.WindowsUser</code> (<code>WorkerRegistry.cs:157-164</code>) ou do
+<code>WtsSessionMonitor.GetSessionUsername</code> (<code>WtsSessionMonitor.cs:115</code>).</p>
+<p>E o <code>ICleanShutdownFlagStore</code> <strong>ja esta registrado no DI do Service e nao tem consumidor</strong>
+(<code>Program.cs:183-187</code>). O encanamento da recomendacao do @Tony ja foi feito; falta ligar.</p>
+<p>Efeito colateral bom: o LOGOUT entra no buffer do Service, <code>ContainsSessionBoundary</code> reconhece
+LOGOUT (<code>PipeMessageHandler.cs:187-208</code> + <code>SessionEventTypes.cs</code>), e o upload imediato do A-36
+volta a ter efeito — desde que o mesmo gatilho seja disparado no caminho novo (hoje ele so roda
+dentro de <code>HandleEventsAsync</code>; o caminho do Service precisa chamar
+<code>RequestImmediateUpload</code> explicitamente).</p>
+<h3 id="32-parte-2-o-relogio-que-nao-conta-tempo-dormido-a-56">3.2 Parte 2 — o relogio que nao conta tempo dormido (A-56)<a class="headerlink" href="#32-parte-2-o-relogio-que-nao-conta-tempo-dormido-a-56" title="Permanent link">&para;</a></h3>
+<p><code>IsWorkerDead</code> compara <code>DateTimeOffset.Now - entry.LastPingAt</code> (<code>WorkerWatchdog.cs:382</code>).
+Enquanto a maquina dorme, esse relogio anda e o ping nao chega. Nao ha bug de logica; ha
+escolha de relogio errada.</p>
+<p>O Windows tem a primitiva exata para isto: <strong><code>QueryUnbiasedInterruptTime</code></strong> (kernel32,
+Windows 7+). Ela conta apenas o tempo em que a maquina esteve <strong>acordada</strong> — sono e hibernacao
+nao entram. <code>Environment.TickCount64</code> <strong>nao</strong> serve: mapeia <code>GetTickCount64</code>, que inclui o sono.</p>
+<p>A mudanca e pequena e cirurgica: <code>WorkerEntry.LastPingAt</code> ganha um par
+<code>LastPingUnbiased</code> (ticks), e a comparacao de heartbeat passa a usa-lo. <code>LaunchedAt</code> idem, para
+o ramo "never pinged" (<code>WorkerWatchdog.cs:392-397</code>).</p>
+<p>Por que prefiro isso ao <code>OnPowerEvent</code>:</p>
+<ul>
+<li><strong>Nao depende de evento chegar.</strong> Modern Standby, hibernacao, pausa de VM, congelamento de
+  container — todos passam a ser tratados certo, sem codigo especifico para cada um.</li>
+<li><strong>Nao tem janela de corrida.</strong> Nao existe "o evento chegou depois que o watchdog ja decidiu".</li>
+<li><strong>E testavel sem Windows.</strong> Basta injetar o provedor de relogio; hoje <code>DateTimeOffset.Now</code>
+  esta hardcoded e por isso <code>WorkerWatchdogTests</code> so consegue testar com entradas fabricadas.</li>
+</ul>
+<p>O <code>OnPowerEvent</code> da secao 2.1 continua valendo, mas como <strong>complemento opcional</strong>, nao como a
+correcao. Ele daria um log explicito ("maquina suspendeu as X, acordou as Y"), que ajuda no
+diagnostico e vale pouco alem disso. Sugiro deixar para depois.</p>
+<p><strong>O mesmo defeito de relogio existe no Watchdog externo</strong> — <code>HeartbeatMonitor.cs:67-70</code> compara
+<code>DateTime.UtcNow</code> com o mtime do arquivo, limite de 6min. Um notebook fechado por mais de 6
+minutos cai nisso. Hoje esta contido pela regra de duas camadas (o <code>ScmMonitor</code> ve o Service
+<code>Running</code> e as duas precisam concordar — foi o que o M11 mediu). <strong>Nao proponho mexer agora</strong>,
+mas fica registrado: a correcao e a mesma e o dia em que a regra de duas camadas for relaxada,
+isso vira recovery espurio.</p>
+<h3 id="33-parte-3-confirmar-antes-de-relancar-a-61">3.3 Parte 3 — confirmar antes de relancar (A-61)<a class="headerlink" href="#33-parte-3-confirmar-antes-de-relancar-a-61" title="Permanent link">&para;</a></h3>
+<p>O EOF chega ~1s antes da notificacao WTS de logoff. A guarda existente
+(<code>WorkerWatchdog.cs:248</code>) pergunta cedo demais. A correcao e esperar.</p>
+<p>Hoje ha uma espera, <code>ExitConfirmationGrace = 3s</code> (<code>WorkerWatchdog.cs:81</code>), mas ela e <strong>pulada
+justamente no caso do logoff</strong>: o <code>if (!process.HasExited)</code> da linha 215 e falso, porque no
+logoff o Windows ja matou o processo. O caminho rapido existe para o caso raro (EOF com processo
+vivo) e o caminho lento nunca roda no caso comum.</p>
+<p>Proposta: antes de relancar, esperar uma <strong>janela de confirmacao de fim de sessao</strong> de ~5s e
+reconsultar o tracker. Se nesse intervalo chegar <code>SessionLogoff</code> daquela sessao, nao relanca.
+Os dois casos medidos cabem na janela: 981ms no A-62; 5,0s e 2,0s no A-61.</p>
+<p>Custo: em crash real de worker, o relancamento demora 5s a mais. O plano da 1.5.4 (A-20) tinha
+como criterio 15s; 5s cabem com folga.</p>
+<p>Falta o caso do desligamento da maquina, em que pode nem haver <code>SessionLogoff</code> a tempo. Duas
+redes:</p>
+<ul>
+<li>Sobrescrever <code>OnShutdown()</code> em <code>SessionAwareServiceLifetime</code> e marcar
+  <code>MachineState = ShuttingDown</code> antes de chamar <code>base.OnShutdown()</code>. <code>WindowsServiceLifetime</code> ja
+  liga <code>CanShutdown</code> — o Service ja recebe o aviso, so nao faz nada com ele.</li>
+<li>A reconciliacao (<code>WorkerWatchdog.cs:294-344</code>) tambem tem de consultar o tracker. Ela roda a
+  cada 15s e relanca qualquer sessao "ativa" sem worker; num desligamento demorado ela sozinha
+  faz nascer worker.</li>
+</ul>
+<p><strong>Honestidade sobre o A-61:</strong> quem o resolve e a janela de confirmacao, nao a deteccao de
+shutdown. O <code>OnShutdown</code> chega tarde (depois dos logoffs) e serve so como segunda rede.</p>
+<hr />
+<h2 id="4-sobre-o-caminho-recomendado-pelo-tony-no-a-62">4. Sobre o caminho recomendado pelo @Tony no A-62<a class="headerlink" href="#4-sobre-o-caminho-recomendado-pelo-tony-no-a-62" title="Permanent link">&para;</a></h2>
+<p><strong>Concordo com o caminho 1 (o Service emite o LOGOUT).</strong> E a decisao certa, pelo motivo certo:
+quem sobrevive ao logoff e o Service. Adiciono tres ressalvas que o refinamento nao cobre e que
+mudam o desenho.</p>
+<h3 id="41-o-horario-do-logout-tem-de-ser-o-do-eof-nao-o-de-agora">4.1 O horario do LOGOUT tem de ser o do EOF, nao o de "agora"<a class="headerlink" href="#41-o-horario-do-logout-tem-de-ser-o-do-eof-nao-o-de-agora" title="Permanent link">&para;</a></h3>
+<p>Se o Service emitir com <code>DateTimeOffset.Now</code>, o LOGOUT sai ~1s depois do fim real da sessao — e
+depois do fechamento do evento de janela que o A-35 ja gravou com o instante do EOF. A linha do
+tempo ficaria fora de ordem. O instante certo ja e capturado em <code>WorkerWatchdog.cs:202</code>; falta
+guarda-lo onde <code>HandleLogoffAsync</code> alcance. O registro nao serve: <code>HandleDeadWorkerAsync</code> ja
+removeu a entrada (<code>WorkerWatchdog.cs:426</code>) antes de o logoff ser processado. Por isso o
+instante do EOF fica no tracker, nao no <code>WorkerEntry</code>.</p>
+<h3 id="42-o-shutdownmessage-tem-de-continuar-existindo">4.2 O <code>ShutdownMessage</code> tem de continuar existindo<a class="headerlink" href="#42-o-shutdownmessage-tem-de-continuar-existindo" title="Permanent link">&para;</a></h3>
+<p>Nao trocar um pelo outro. Ha caminhos em que o worker esta vivo e precisa fechar os eventos em
+andamento e drenar o buffer — <code>StopAsync</code> do Service (<code>ManagerAgentService.cs:253-257</code>), logoff
+lento, RDP. Retirar o <code>ShutdownMessage</code> trocaria o A-62 por perda de dado. A regra e: o Service
+<strong>garante</strong> o LOGOUT; o worker <strong>colabora</strong> quando da.</p>
+<h3 id="43-se-o-service-escrever-a-flag-o-worker-pode-nao-conseguir-mais-apaga-la">4.3 Se o Service escrever a flag, o worker pode nao conseguir mais apaga-la<a class="headerlink" href="#43-se-o-service-escrever-a-flag-o-worker-pode-nao-conseguir-mais-apaga-la" title="Permanent link">&para;</a></h3>
+<p>Este e o risco real da recomendacao, e o refinamento nao o menciona.</p>
+<p><code>SessionMonitor.TryClearCleanShutdownFlag</code> (<code>SessionMonitor.cs:201-216</code>) apaga a flag no startup
+do worker, e o worker roda como usuario interativo. Se a flag passar a ser criada pelo Service
+(SYSTEM), o <code>File.Delete</code> do worker pode falhar por permissao — e falha <strong>em silencio</strong>, porque
+o metodo captura e so loga warning. Flag que nao e apagada e flag que <strong>suprime um
+SESSAO_INTERROMPIDA legitimo</strong> no proximo crash. Trocariamos falso positivo por falso negativo,
+que e pior: o evento existe justamente para detectar instabilidade real.</p>
+<p>E exatamente a familia do A-60 (arquivo criado por um dono, ilegivel/imutavel para os outros).</p>
+<p><strong>Correcao proposta, que resolve isto e o problema de reciclagem de SessionId da secao 2.6 de
+uma vez: parar de apagar a flag e passar a compara-la.</strong></p>
+<p>O <code>CleanShutdownFile</code> ganha um campo <code>logonId</code> (o mesmo formato ja usado no dedup de LOGIN:
+<code>"{sessionId}:{logonTimeTicks}:{userName}"</code>, <code>WtsHelpers.cs:102-111</code>). A regra de
+<code>SessaoInterrompidaDecider</code> passa de <em>"a flag existe?"</em> para <em>"a flag pertence ao LogonId
+anterior?"</em>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cleanShutdown != null &amp;&amp; cleanShutdown.LogonId == previousLogonId  -&gt;  nao emite
+</code></pre></div>
+<p>Com isso:</p>
+<ul>
+<li><strong>Ninguem precisa apagar nada.</strong> Some o problema de ACL, e o <code>TryClearCleanShutdownFlag</code> pode
+  sair. Escrita so pelo Service, leitura por ambos — que e o padrao de permissao mais simples
+  que existe.</li>
+<li><strong>Flag velha vira inofensiva.</strong> Ela nao bate com o LogonId novo e e ignorada. Nao ha janela de
+  "flag antiga suprime evento novo".</li>
+<li><strong>A reciclagem de SessionId deixa de importar.</strong> O LogonId carrega o nome do usuario e o
+  horario de logon.</li>
+<li>O <code>SessaoInterrompidaDecider</code> continua sendo funcao pura e continua testavel sem Windows
+  (<code>SessaoInterrompidaDecider.cs</code>, <code>SessaoInterrompidaDeciderTests</code>).</li>
+</ul>
+<p>O Service consegue calcular o LogonId: <code>WtsHelpers</code> esta em <code>Shared</code> e o Service ja o usa
+(<code>WorkerWatchdog.cs:275</code>). Para nao depender de a sessao ainda existir no instante do logoff, o
+tracker guarda o LogonId no lancamento do worker, que acontece no <code>SessionLogon</code>
+(<code>ManagerAgentService.cs:126-128</code>).</p>
+<h3 id="44-o-caso-feio-a-goodbye-chegando-depois-de-o-service-ja-ter-emitido">4.4 O caso feio: a GOODBYE chegando depois de o Service ja ter emitido<a class="headerlink" href="#44-o-caso-feio-a-goodbye-chegando-depois-de-o-service-ja-ter-emitido" title="Permanent link">&para;</a></h3>
+<p>Pergunta do @Tony, com a confirmacao da @Shuri de que <code>eventos_sessao</code> nao tem UNIQUE nenhuma.
+Resposta em tres camadas, da mais barata para a mais forte.</p>
+<p><strong>Camada 1 — ordem: emitir no FIM do <code>HandleLogoffAsync</code>, nao no comeco.</strong></p>
+<p>O metodo ja faz, hoje, exatamente a espera de que precisamos
+(<code>ManagerAgentService.cs:191-199</code>): manda o <code>ShutdownMessage</code> e aguarda ate 3s o processo sair.
+Decidir depois dessa espera e de graca — nao acrescenta latencia nenhuma, porque a espera ja
+existe — e resolve os dois casos do enunciado:</p>
+<ul>
+<li>worker vivo e cooperativo: ele emite o LOGOUT, manda a GOODBYE e morre dentro dos 3s. O
+  Service ve a GOODBYE e nao emite.</li>
+<li>worker ja morto (o caso medido em 20/08): nunca ha GOODBYE. O Service emite.</li>
+</ul>
+<p><strong>Camada 2 — a marca de GOODBYE tem de ser por PID, nao por sessao.</strong></p>
+<p><code>HandleGoodbye</code> hoje so muda o estado no registro (<code>PipeMessageHandler.cs:232-239</code>), e o
+<code>Remove</code> apaga esse estado. Precisa de campo proprio no tracker, chaveado por
+<code>(sessionId, pid)</code>. Sem o PID, a GOODBYE de um worker anterior — o que foi substituido depois
+de um update, por exemplo — suprimiria o LOGOUT do worker atual, e voltariamos ao A-62 por
+outro caminho.</p>
+<p><strong>Camada 3 — o que fecha a corrida de verdade: os dois LOGOUT passam pelo mesmo buffer.</strong></p>
+<p>Este e o ponto que muda a resposta. O LOGOUT do worker nao vai direto para o backend: ele chega
+ao Service pelo pipe e e gravado no <code>ServiceSqliteEventBuffer</code>
+(<code>PipeMessageHandler.HandleEventsAsync</code> -&gt; <code>InsertEventsAsync</code>). O LOGOUT que o Service emitir
+vai para <strong>o mesmo arquivo SQLite, no mesmo processo</strong>.</p>
+<p>Ou seja: nao precisamos coordenar dois emissores por ordem de chegada. Basta o Service, no
+instante em que for inserir o seu, perguntar ao proprio buffer se ja existe um LOGOUT daquela
+sessao nos ultimos segundos. <code>FindLastEventAsync(sessionId, tipoEvento)</code> ja existe e ja e usado
+pelo <code>OrphanWindowEventCloser</code> (<code>OrphanWindowEventCloser.cs:55</code>) — falta uma variante que olhe
+o <code>tipoEvento</code> de dentro do <code>dados</code>, que e onde o LOGOUT mora.</p>
+<p>Isso e uma verificacao local, sincrona, sem rede e sem depender de quem chegou primeiro.
+Fecha a corrida independentemente da ordem.</p>
+<p><strong>O que continua em aberto, e nao e meu.</strong> Se o pipe estiver caido no momento do logoff, o
+LOGOUT do worker fica no buffer autonomo dele e pode subir muito depois — eventualmente so no
+proximo boot. Nesse caso a camada 3 nao ve nada, o Service emite, e mais tarde chega a copia do
+worker. Duas linhas.</p>
+<p>Nenhuma verificacao do lado do agent fecha essa janela: os dois eventos nascem em processos
+diferentes, em momentos diferentes, e um deles pode atravessar um reboot. <strong>So a UNIQUE em
+<code>eventos_sessao</code> fecha</strong> — que e justamente o que o @Tony ja esta tratando com a @Shuri. As tres
+camadas acima tornam o caso raro; a UNIQUE torna impossivel.</p>
+<p>Recomendo implementar as tres camadas no passo 3 e <strong>nao</strong> esperar pela UNIQUE para liberar o
+passo — mas registrar que, sem ela, sobra essa janela estreita.</p>
+<hr />
+<h2 id="5-eliminar-e-sempre-ter-apenas-um-agent-rodando">5. "Eliminar e sempre ter apenas um agent rodando"<a class="headerlink" href="#5-eliminar-e-sempre-ter-apenas-um-agent-rodando" title="Permanent link">&para;</a></h2>
+<p>Este e o ponto mais delicado. Ele nao e um dos tres achados: e uma <strong>invariante</strong> que o sistema
+hoje nao tem, e nenhuma das correcoes acima a estabelece sozinha.</p>
+<h3 id="51-o-enunciado">5.1 O enunciado<a class="headerlink" href="#51-o-enunciado" title="Permanent link">&para;</a></h3>
+<p><em>No maximo um processo <code>ManagerAgent.SessionWorker</code> vivo por sessao Windows, e o Service sabe
+qual e.</em></p>
+<p>Nao basta o Service recusar o excedente. Recusar sem encerrar produz exatamente o que o Marcos
+viu: dois icones. Pior, pela secao 2.4, produz disputa pelo pipe.</p>
+<h3 id="52-os-quatro-caminhos-que-quebram-a-invariante-hoje">5.2 Os quatro caminhos que quebram a invariante hoje<a class="headerlink" href="#52-os-quatro-caminhos-que-quebram-a-invariante-hoje" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Caminho</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Suspensao: worker declarado morto acorda e o novo ja nasceu</td>
+<td>comprovado (A-56)</td>
+</tr>
+<tr>
+<td>Revogacao seguida de re-vinculacao</td>
+<td>previsto por mim no review da ADR-001, nao reproduzido</td>
+</tr>
+<tr>
+<td>Reconciliacao (<code>WorkerWatchdog.cs:294</code>) lancando em sessao que ja tem worker fora do registro</td>
+<td>contido no teste com <code>RequiresIsolation</code> (A-32), nao no produto</td>
+</tr>
+<tr>
+<td>Plano C (Task Scheduler) lancando na sessao errada</td>
+<td>ja tratado — <code>WorkerLauncher.cs:346-347</code> mata o intruso</td>
+</tr>
+</tbody>
+</table>
+<p>Note que o Plano C <strong>ja faz</strong> o que estamos pedindo aos outros caminhos: compara antes/depois e
+mata o que sobrou (<code>KillStrayWorker</code>, <code>WorkerLauncher.cs:374-387</code>). E o <code>WorkerRegistry</code> ja mata
+um <code>Launching</code> travado antes de substituir (<code>WorkerRegistry.cs:97</code>). O padrao existe em dois
+lugares; falta nos outros dois.</p>
+<h3 id="53-a-rejeicao-vira-encerramento-com-uma-regra-de-decisao-explicita">5.3 A rejeicao vira encerramento — com uma regra de decisao explicita<a class="headerlink" href="#53-a-rejeicao-vira-encerramento-com-uma-regra-de-decisao-explicita" title="Permanent link">&para;</a></h3>
+<p>Matar quem chega e perigoso: pode ser o worker certo com o registro errado (Service reiniciado,
+orfao adotado em <code>AdoptOrphanWorkersAsync</code>, <code>ManagerAgentService.cs:210-244</code>). A regra tem de
+olhar os dois lados antes de decidir quem sobra.</p>
+<p>Em <code>HandleConnectAsync</code>, no lugar do <code>return</code> da linha 100:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CONNECT chega com PID X, registro espera PID Y, X != Y:
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  Y esta vivo (Process.HasExited == false)?
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>     SIM -&gt; X e o excedente. Encerrar X.
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>     NAO -&gt; Y e fantasma. Adotar X: atualizar o registro, mandar WELCOME.
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  Nao ha Y (registro vazio para a sessao)?
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>     -&gt; Adotar X. E o caso do Service que reiniciou.
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  Nao consigo ler o estado de Y?
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>     -&gt; Adotar X e registrar warning. Duvida nao mata processo.
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        (mesmo criterio conservador de IsWorkerDead, WorkerWatchdog.cs:372-377,
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        e de IsSessionStillActive, WorkerWatchdog.cs:269-287)
+</code></pre></div>
+<p>O ramo "adotar" fecha um buraco que ninguem tinha visto: hoje, se o registro estiver com um PID
+morto, <strong>nenhum</strong> worker consegue conectar naquela sessao, porque o mismatch rejeita todos.</p>
+<h3 id="54-como-encerrar-o-excedente-sem-estragar-o-dado-dele">5.4 Como encerrar o excedente, sem estragar o dado dele<a class="headerlink" href="#54-como-encerrar-o-excedente-sem-estragar-o-dado-dele" title="Permanent link">&para;</a></h3>
+<p>Matar direto perde os eventos que ele capturou enquanto estava orfao (no A-56, seis horas
+deles). O excedente esta <strong>conectado no pipe naquele exato momento</strong> — da para pedir educado.</p>
+<p>Sequencia proposta:</p>
+<ol>
+<li>Responder no lugar do WELCOME uma <code>ShutdownMessage</code> com <code>Reason = "DUPLICATE_WORKER"</code>.</li>
+<li>Aguardar o grace (3s).</li>
+<li>Se ainda vivo, <code>Process.Kill()</code>.</li>
+</ol>
+<p><strong>E aqui esta a armadilha que precisa de codigo novo do lado do worker:</strong> hoje
+<code>HandleShutdownAsync</code> <strong>sempre</strong> emite LOGOUT e <strong>sempre</strong> marca a flag de shutdown limpo
+(<code>Worker.cs:519</code> e <code>Worker.cs:546</code>). Se o excedente receber a mensagem como esta, ele vai:</p>
+<ul>
+<li>gravar um <strong>LOGOUT falso</strong> — a pessoa continua trabalhando, e o relatorio vai registrar fim de
+  expediente;</li>
+<li>gravar a <strong>flag de shutdown limpo</strong> de uma sessao que nao terminou — e o proximo
+  SESSAO_INTERROMPIDA legitimo daquela sessao sera suprimido.</li>
+</ul>
+<p>Ou seja: a correcao ingenua do A-56 introduz um novo defeito na area do A-62. Por isso o
+<code>Reason</code> precisa ser tratado explicitamente em <code>HandleShutdownAsync</code>: com
+<code>DUPLICATE_WORKER</code>, pular os passos 1 e 3 (nada de LOGOUT, nada de flag), manter o passo 4
+(drenar o buffer) e sair. Vai bem como um <code>switch</code> no motivo, no topo do metodo.</p>
+<p>Compatibilidade de versao: durante um update os dois lados podem estar em versoes diferentes.
+Um worker antigo recebendo <code>DUPLICATE_WORKER</code> cairia no comportamento atual — LOGOUT falso.
+Defesa: o Service so manda a mensagem se <code>connect.WorkerVersion</code> (ja vem no CONNECT,
+<code>PipeMessageHandler.cs:90-91</code>) for &gt;= a versao que entende o motivo; abaixo disso, <code>Kill()</code> seco.
+Perde o buffer daquele orfao, uma vez, na transicao. Aceito.</p>
+<h3 id="55-matar-antes-de-relancar">5.5 Matar antes de relancar<a class="headerlink" href="#55-matar-antes-de-relancar" title="Permanent link">&para;</a></h3>
+<p>Sugestao 1 do refinamento, com um ajuste. Antes de <code>HandleDeadWorkerAsync</code> relancar
+(<code>WorkerWatchdog.cs:458-481</code>), o processo tem de acabar. Mas nao com <code>Kill()</code> cego:</p>
+<ul>
+<li>Se <code>Process.HasExited</code> -&gt; nada a fazer.</li>
+<li>Se vivo (falso positivo de heartbeat, que e o caso do A-56) -&gt; <strong>nao relancar</strong>. Se o processo
+  esta vivo, nao ha o que recuperar. Zerar o relogio de heartbeat dele e esperar o proximo
+  ciclo. Se em dois ciclos ele nao voltar a pingar, ai sim encerrar e relancar.</li>
+</ul>
+<p>Isso e mais conservador que a proposta do refinamento e resolve o A-56 pela raiz mesmo se a
+correcao de relogio (3.2) falhar por algum motivo: o worker 20420 estava vivo, entao nada seria
+lancado, entao o 23836 nunca teria nascido.</p>
+<hr />
+<h2 id="6-riscos">6. Riscos<a class="headerlink" href="#6-riscos" title="Permanent link">&para;</a></h2>
+<p>Em ordem de gravidade.</p>
+<p><strong>R1 — LOGOUT duplicado no banco.</strong> O Service passa a emitir LOGOUT e o worker continua
+emitindo quando da tempo. Se a dedup de <code>eventos_sessao</code> no <code>srv-events-node</code> nao for por
+<code>(agente, tipo, ocorreu_em)</code>, toda parada graciosa gera duas linhas — e o A-57 mostra que
+<code>eventos_reuniao</code> ficou de fora de uma correcao dessas antes. <strong>Bloqueia a implementacao ate o
+@Shuri confirmar.</strong> Contencao se a resposta for negativa: o Service so emite quando nao houve
+<code>GoodbyeMessage</code> daquela sessao (o handler ja existe, <code>PipeMessageHandler.cs:232-239</code>).</p>
+<p><strong>R2 — LOGOUT falso pelo caminho do worker duplicado.</strong> Descrito em 5.4. Se o
+<code>DUPLICATE_WORKER</code> for implementado sem o tratamento no <code>HandleShutdownAsync</code>, trocamos "sem
+LOGOUT nenhum" (A-62) por "LOGOUT no meio do expediente", que e pior para o relatorio. Precisa
+de teste dedicado, nao de revisao visual.</p>
+<p><strong>R3 — Flag de shutdown limpo que nao morre.</strong> Se a ideia de comparar por LogonId (4.3) for
+descartada e a flag continuar sendo apagada pelo worker, o Service escrevendo como SYSTEM cria
+falha silenciosa de permissao e o SESSAO_INTERROMPIDA para de funcionar de vez. <strong>Ou entra a
+comparacao por LogonId, ou entra ACL explicita no arquivo</strong> (ha precedente, o <code>HeartbeatWriter</code>
+aplica ACL propria). Nao ha terceira opcao segura.</p>
+<p><strong>R4 — Encerramento do worker errado.</strong> Se a regra de decisao de 5.3 for simplificada para
+"rejeitou, mata", uma falha transitoria de leitura de processo mata o worker bom e a sessao
+fica sem captura ate a reconciliacao. Por isso o ramo "duvida -&gt; adota, nao mata".</p>
+<p><strong>R5 — 5 segundos a mais para recuperar de crash real.</strong> Custo direto e assumido da janela de
+confirmacao (3.3). Mensuravel, pequeno, e menor que o criterio de 15s do plano da 1.5.4.</p>
+<p><strong>R6 — <code>QueryUnbiasedInterruptTime</code> em ambiente virtualizado.</strong> Alguns hipervisores nao propagam
+o unbiased time corretamente. Consequencia de falha: volta ao comportamento de hoje (conta o
+sono). Nao regride nada. Contencao: se o valor vier zerado ou nao monotonico, cair para
+<code>DateTimeOffset.Now</code> com um warning.</p>
+<p><strong>R7 — A corrida do <code>_connections</code> (2.4) fica sem correcao.</strong> Se ela ficar, o resto da secao 5
+nao se sustenta: o Service pode mandar o <code>DUPLICATE_WORKER</code> e a mensagem ir para a conexao
+errada, ou nao ir para nenhuma. <strong>A linha 196 do <code>PipeServer</code> tem de ser corrigida primeiro.</strong></p>
+<hr />
+<h2 id="7-testes">7. Testes<a class="headerlink" href="#7-testes" title="Permanent link">&para;</a></h2>
+<h3 id="71-as-quatro-suites-e-quem-e-afetada">7.1 As quatro suites, e quem e afetada<a class="headerlink" href="#71-as-quatro-suites-e-quem-e-afetada" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Suite</th>
+<th>Testes</th>
+<th>Impacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ManagerAgent.Service.Tests</code></td>
+<td>396</td>
+<td><strong>Alto.</strong> Watchdog, registry, pipe handler, ciclo de vida — quase toda a mudanca</td>
+</tr>
+<tr>
+<td><code>ManagerAgent.SessionWorker.Tests</code></td>
+<td>224</td>
+<td><strong>Medio.</strong> <code>HandleShutdownAsync</code> (motivo novo), <code>SessionMonitor</code> (decisao por LogonId)</td>
+</tr>
+<tr>
+<td><code>ManagerAgent.Watchdog.Tests</code></td>
+<td>31</td>
+<td><strong>Nenhum</strong> nesta rodada — nao proponho mexer no <code>HeartbeatMonitor</code></td>
+</tr>
+<tr>
+<td><code>ManagerAgent.Tray.Tests</code></td>
+<td>14</td>
+<td><strong>Nenhum</strong></td>
+</tr>
+</tbody>
+</table>
+<p>(A soma da 665 <code>[Fact]</code>/<code>[Theory]</code> declarados; os 753 executados incluem os casos de <code>[Theory]</code>
+com varios <code>InlineData</code>.)</p>
+<h3 id="72-pre-requisito-reativar-os-tres-arquivos-excluidos">7.2 Pre-requisito: reativar os tres arquivos excluidos<a class="headerlink" href="#72-pre-requisito-reativar-os-tres-arquivos-excluidos" title="Permanent link">&para;</a></h3>
+<p><code>PipeMessageHandlerTests.cs</code>, <code>WorkerWatchdogTests.cs</code> e <code>UploadWorkerTests.cs</code> saem do
+<code>&lt;Compile Remove&gt;</code> e sao adaptados aos construtores atuais. Sem isso, mexer em
+<code>HandleConnectAsync</code> e em <code>IsWorkerDead</code> e mexer no escuro. Isso vai <strong>subir</strong> a contagem de
+testes e pode revelar quebras pre-existentes — o que e o objetivo.</p>
+<h3 id="73-testes-novos-por-achado">7.3 Testes novos, por achado<a class="headerlink" href="#73-testes-novos-por-achado" title="Permanent link">&para;</a></h3>
+<p><strong>A-62</strong>
+- Service recebe <code>SessionLogoff</code> com o worker ja morto -&gt; emite exatamente um LOGOUT.
+- O <code>ocorreuEm</code> do LOGOUT e o instante do EOF, nao o do processamento do logoff.
+- Depois do logoff, a flag da sessao existe e carrega o LogonId correto.
+- No proximo startup com esse LogonId como anterior, <code>SessaoInterrompidaDecider</code> nao emite.
+- Flag de outro LogonId presente -&gt; <strong>emite</strong> (o caso que a correcao nao pode quebrar).</p>
+<p><strong>A-56</strong>
+- <code>IsWorkerDead</code> com relogio injetado: 200s de wall-clock e 10s de tempo acordado -&gt; <strong>vivo</strong>.
+- Worker declarado morto que volta a conectar antes do relancamento -&gt; nenhum processo novo.
+- Reconexao com PID mismatch e PID esperado vivo -&gt; <code>ShutdownMessage(DUPLICATE_WORKER)</code> enviada.
+- Reconexao com PID mismatch e PID esperado morto -&gt; <strong>adota</strong>, manda WELCOME, nao encerra.
+- Reconexao com PID mismatch e estado do processo ilegivel -&gt; adota, nao encerra.
+- <code>HandleShutdownAsync</code> com <code>Reason = "DUPLICATE_WORKER"</code> -&gt; <strong>nao</strong> emite LOGOUT, <strong>nao</strong>
+  marca flag, <strong>drena</strong> o buffer.</p>
+<p><strong>A-61</strong>
+- EOF seguido de <code>SessionLogoff</code> dentro da janela -&gt; nenhum relancamento.
+- EOF sem <code>SessionLogoff</code> dentro da janela -&gt; relanca (nao pode virar regressao do A-20).
+- <code>MachineState = ShuttingDown</code> -&gt; nem o EOF nem a reconciliacao lancam.</p>
+<p><strong>Pipe (secao 2.4)</strong>
+- Read loop antigo terminando depois de uma conexao nova ser registrada -&gt; a conexao nova
+  <strong>permanece</strong> em <code>_connections</code> e o <code>SendAsync</code> continua funcionando.</p>
+<h3 id="74-bis-o-que-falta-provar-na-maquina-2026-08-21">7.4-bis O que falta provar na maquina (2026-08-21)<a class="headerlink" href="#74-bis-o-que-falta-provar-na-maquina-2026-08-21" title="Permanent link">&para;</a></h3>
+<p>Os passos 0, 1, 2 e 4 estao verdes em 853 testes, e <strong>nenhum deles prova comportamento de
+suspensao real</strong>. A lista abaixo esta na ordem em que deve ser executada — cada item depende do
+anterior estar limpo. Antes de tudo: subir a versao dos csproj para 1.5.11 e gerar o pacote.</p>
+<ol>
+<li><strong>Reboot limpo.</strong> Continua saindo <strong>um</strong> SESSAO_INTERROMPIDA legitimo. E a regressao mais
+   provavel de toda esta leva: as correcoes existem para calar o evento em situacao normal, e
+   ele nao pode calar quando a situacao e anormal de verdade.</li>
+<li><strong><code>taskkill /F</code> no SessionWorker.</strong> SESSAO_INTERROMPIDA continua saindo, e o worker volta em
+   ate ~20s (a janela de confirmacao de 5s entrou no caminho).</li>
+<li><strong>Suspender 3 minutos e acordar.</strong> Um unico processo <code>ManagerAgent.SessionWorker</code>, nenhum
+   SESSAO_INTERROMPIDA, nenhum segundo icone na bandeja. E o A-56 na origem.</li>
+<li><strong>Suspender 30 minutos e acordar.</strong> Passa do limite de 6min do Watchdog externo. Mesma
+   verificacao, mais conferir no log que o Watchdog nao acionou recovery do Service.</li>
+<li><strong>Logoff e novo login.</strong> Com o passo 3 pronto, este item passou a ter o que verificar de
+   verdade, e sao quatro coisas:</li>
+<li>sai <strong>exatamente um</strong> LOGOUT, e o horario dele e o do logoff (o instante do EOF), nao o do
+     processamento — tem de vir <strong>antes</strong> do fechamento do evento de janela, nao depois;</li>
+<li>o login seguinte <strong>nao</strong> emite SESSAO_INTERROMPIDA;</li>
+<li>o LOGOUT chega ao banco em segundos, sem esperar o proximo boot (o A-36 volta a valer);</li>
+<li>nenhum "attempting re-launch" no log entre o EOF e o logoff (o A-61).</li>
+</ol>
+<p>Duas variacoes valem a pena, porque exercitam os dois emissores: <strong>logoff normal</strong> (o Windows
+   mata o worker antes — quem emite e o Service) e <strong>parar o servico com o usuario logado</strong> (o
+   worker esta vivo e se despede — quem emite e ele). Nos dois casos, <strong>uma</strong> linha, nunca duas.
+6. <strong>Desligar e ligar a maquina.</strong> Nenhum worker nascendo durante o desligamento.
+7. <strong>Dois usuarios (troca rapida).</strong> O logoff de um nao pode deixar o outro sem worker — e o
+   caso da marca por SessionId reciclado.</p>
+<p>Os itens 3, 4 e 7 sao os unicos que podem reprovar a correcao de forma silenciosa: o sintoma e
+"faltou captura", nao "apareceu erro". Vale conferir no banco, nao so no log.</p>
+<h3 id="74-na-maquina">7.4 Na maquina<a class="headerlink" href="#74-na-maquina" title="Permanent link">&para;</a></h3>
+<p>Os testes unitarios nao provam nada sobre suspensao real. Precisa de:</p>
+<ul>
+<li>Suspender 3 minutos, acordar: um unico processo worker, nenhum SESSAO_INTERROMPIDA.</li>
+<li>Suspender <strong>30 minutos</strong> (passa do limite de 6min do Watchdog externo): mesma verificacao,
+  mais conferir que o Watchdog nao acionou recovery.</li>
+<li>Logoff e novo login: um LOGOUT com o horario do logoff, nenhum SESSAO_INTERROMPIDA.</li>
+<li>Reboot: continua havendo <strong>um</strong> SESSAO_INTERROMPIDA legitimo (esta e a regressao mais
+  provavel de tudo isto — a correcao nao pode calar o evento no caso em que ele esta certo).</li>
+<li>Matar o worker com <code>taskkill /F</code>: SESSAO_INTERROMPIDA continua saindo.</li>
+</ul>
+<hr />
+<h2 id="8-ordem-sugerida">8. Ordem sugerida<a class="headerlink" href="#8-ordem-sugerida" title="Permanent link">&para;</a></h2>
+<p>Cada passo termina verde e e reportado antes do seguinte.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>O que</th>
+<th>Por que primeiro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Corrigir <code>PipeServer.cs:196</code> (remocao condicional) + reativar os 3 arquivos de teste</td>
+<td>Sem isso o resto e cego</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>SessionLifecycleTracker</code> + janela de confirmacao antes de relancar</td>
+<td>Fecha o A-61, e a base dos outros</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Relogio unbiased no heartbeat</td>
+<td>Fecha o falso positivo do A-56 na origem</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Service emite LOGOUT + marca flag; flag comparada por LogonId</td>
+<td>Fecha o A-62 e o SESSAO_INTERROMPIDA falso</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rejeicao ativa + <code>DUPLICATE_WORKER</code> + nao relancar processo vivo</td>
+<td>Fecha a invariante do Marcos</td>
+</tr>
+</tbody>
+</table>
+<p>O passo 3 foi implementado com a confirmacao da @Shuri de que <code>eventos_sessao</code> nao tem UNIQUE:
+as tres camadas da secao 4.4 entraram, e a brecha que sobra esta registrada em teste executavel
+(<code>LogoutDuplicadoTests.BRECHA_CONHECIDA_...</code>). Os passos 0, 1,
+2 e 4 nao dependem de ninguem.</p>
+<hr />
+<h2 id="9-o-que-nao-entra-nesta-correcao">9. O que NAO entra nesta correcao<a class="headerlink" href="#9-o-que-nao-entra-nesta-correcao" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>A-58 e A-60</strong> — independentes, seguem na fila do refinamento.</li>
+<li><strong><code>HeartbeatMonitor</code> do Watchdog externo</strong> — mesmo defeito de relogio, hoje contido pela regra
+  de duas camadas. Registrado na secao 3.2 para quando essa regra for revista.</li>
+<li><strong><code>OnPowerEvent</code> no Service</strong> — util para diagnostico, nao necessario para a correcao.</li>
+<li><strong>Sequestro do <code>windows_username</code></strong> (A-59) — decidido, fica como esta.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

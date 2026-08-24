@@ -1,0 +1,1635 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/registro/2026-08-24-refinamento-bucky-rollback/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Refinamento para @Bucky — rollback do auto-update (2026-08-24) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#refinamento-para-bucky-rollback-do-auto-update-2026-08-24" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Refinamento para @Bucky — rollback do auto-update (2026-08-24)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-comecar-o-que-nao-mexer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antes de comecar: o que NAO mexer
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="refinamento-para-bucky-rollback-do-auto-update-2026-08-24">Refinamento para @Bucky — rollback do auto-update (2026-08-24)<a class="headerlink" href="#refinamento-para-bucky-rollback-do-auto-update-2026-08-24" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>De:</strong> @Tony | <strong>Para:</strong> @Bucky | <strong>Aprovador:</strong> Marcos
+<strong>Origem:</strong> itens 3a e 3b de <code>registro/2026-08-21-linha-de-corte-producao.md</code>
+<strong>Diagnostico completo:</strong> <code>registro/2026-08-24-rollback-nao-esta-ligado.md</code>
+<strong>Repo:</strong> <code>manager-srv-agent</code></p>
+<p><strong>Regras:</strong> nao commite, nao faca push. Ao terminar, <strong>@Tony revisa</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="antes-de-comecar-o-que-nao-mexer">Antes de comecar: o que NAO mexer<a class="headerlink" href="#antes-de-comecar-o-que-nao-mexer" title="Permanent link">&para;</a></h2>
+<p>O auto-update funciona e foi exercitado ao vivo em 21/08 (1.5.11 -&gt; 1.5.12, ~45s do download ao
+Service de pe). <strong>O defeito e so no caminho de VOLTA.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Por que</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UpdateApplier</code> e o PS1 gerado</td>
+<td>aplicam update e criam o backup corretamente. <strong>O backup ja existe e esta certo</strong></td>
+</tr>
+<tr>
+<td><code>HeartbeatMonitor</code>, <code>ScmMonitor</code></td>
+<td>detectam a falha corretamente — o contador chega a 3</td>
+</tr>
+<tr>
+<td>Criterio de 3 falhas + sticky 24h (<code>WatchdogService</code>)</td>
+<td>a decisao de quando reverter esta certa</td>
+</tr>
+<tr>
+<td><code>RecoveryOrchestrator</code>, modo SOS</td>
+<td>comportamento correto para o caso em que nao ha volta possivel</td>
+</tr>
+<tr>
+<td>Estrutura do <code>RollbackResult</code> e o audit <code>UPDATE_ROLLBACK_TRIGGERED</code></td>
+<td>contrato bom, mantenha</td>
+</tr>
+<tr>
+<td>Testes unitarios existentes do <code>RollbackOrchestrator</code></td>
+<td>passam com o construtor de caminho customizado e continuam validos. <strong>Nao reescreva</strong> — o que falta e um teste do caminho de producao, nao a troca dos que existem</td>
+</tr>
+</tbody>
+</table>
+<p><strong>O defeito e de endereco, nao de decisao.</strong> Quem decide reverter acerta; quem executa procura no
+lugar errado, restauraria no lugar errado, e nao conseguiria executar o movimento.</p>
+<hr />
+<h1 id="3a-ligar-o-rollback-ao-backup-que-existe">3a — ligar o rollback ao backup que existe<a class="headerlink" href="#3a-ligar-o-rollback-ao-backup-que-existe" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: ALTA.</strong> Segura producao (criterio B da linha de corte: pode derrubar a frota sem
+caminho de volta).</p>
+<h2 id="os-tres-defeitos-em-ordem-de-descoberta">Os tres defeitos, em ordem de descoberta<a class="headerlink" href="#os-tres-defeitos-em-ordem-de-descoberta" title="Permanent link">&para;</a></h2>
+<h3 id="defeito-1-le-um-nivel-acima-do-que-deveria">Defeito 1 — le um nivel acima do que deveria<a class="headerlink" href="#defeito-1-le-um-nivel-acima-do-que-deveria" title="Permanent link">&para;</a></h3>
+<p>O script de update grava (log da maquina, duas vezes):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-21 16:53:00 [UPDATE-A] BAA backup created at C:\Program Files\bin.previous
+</code></pre></div>
+<p>O orquestrador procura:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">private</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">DefaultInstallBinDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@"C:\Program Files\ManagerAgent\bin"</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">parentDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">GetDirectoryName</span><span class="p">(</span><span class="n">_installBinDir</span><span class="p">);</span><span class="w">      </span><span class="c1">// C:\Program Files\ManagerAgent</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">var</span><span class="w"> </span><span class="n">backupBinDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">parentDir</span><span class="p">,</span><span class="w"> </span><span class="s">"bin.previous"</span><span class="p">);</span><span class="w"> </span><span class="c1">// ...\ManagerAgent\bin.previous</span>
+</code></pre></div>
+<p>Os dois calculam "o pai do diretorio de instalacao" e discordam sobre qual e o diretorio de
+instalacao. <strong><code>C:\Program Files\ManagerAgent\bin</code> nao existe</strong> — a unica subpasta da instalacao e
+<code>scripts\</code>, e os executaveis ficam na raiz. Confirmado na maquina.</p>
+<h3 id="defeito-2-restauraria-no-lugar-errado-mesmo-achando">Defeito 2 — restauraria no lugar errado, mesmo achando<a class="headerlink" href="#defeito-2-restauraria-no-lugar-errado-mesmo-achando" title="Permanent link">&para;</a></h3>
+<p>Passo 5: <code>Directory.Move(backupBinDir, _installBinDir)</code> colocaria os binarios em
+<code>...\ManagerAgent\bin\</code>, pasta de onde nada roda. O SCM aponta para a raiz:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ManagerAgent          -&gt; C:\Program Files\ManagerAgent\ManagerAgent.Service.exe
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ManagerAgentWatchdog  -&gt; C:\Program Files\ManagerAgent\ManagerAgent.Watchdog.exe
+</code></pre></div>
+<p>O Service subiria com os binarios quebrados intactos, e o rollback reportaria sucesso.</p>
+<h3 id="defeito-3-o-movimento-nao-pode-ser-feito-por-quem-esta-rodando">Defeito 3 — o movimento nao pode ser feito por quem esta rodando<a class="headerlink" href="#defeito-3-o-movimento-nao-pode-ser-feito-por-quem-esta-rodando" title="Permanent link">&para;</a></h3>
+<p>Passo 4: <code>Directory.Move(_installBinDir, failedDir)</code>. Corrigidos 1 e 2, <code>_installBinDir</code> passa a
+ser a raiz da instalacao — <strong>que contem o <code>ManagerAgent.Watchdog.exe</code> em execucao, o proprio
+processo que executa o rollback</strong>. Windows nao move diretorio com executavel travado.</p>
+<p>Nao e teoria. O PS1 de update documenta o mesmo obstaculo e a solucao:</p>
+<blockquote>
+<p><em>"Stop Watchdog FIRST (Item 3 fix): ManagerAgent.Watchdog.exe fica com file lock (...) Sem parar
+aqui, o Copy-Item falha com 'file being used by another process'."</em></p>
+</blockquote>
+<p>E o comentario do A-40, no mesmo script, registra que <strong>isto ja derrubou rollback</strong>:</p>
+<blockquote>
+<p><em>"(...) e o rollback falha pelo mesmo motivo, que foi o que aconteceu nas 11 tentativas de
+2026-08-18."</em></p>
+</blockquote>
+<h2 id="o-que-fazer">O que fazer<a class="headerlink" href="#o-que-fazer" title="Permanent link">&para;</a></h2>
+<p><strong>Reuse o padrao que ja funciona: delegar a troca de arquivos a um processo externo.</strong></p>
+<p>E o que o <code>UpdateApplier</code> faz — escreve um PS1, dispara via WMI e sai. O rollback tem exatamente o
+mesmo problema (nao pode substituir o proprio binario em execucao) e deve ter a mesma forma. <strong>Nao
+invente um segundo mecanismo.</strong></p>
+<p>Desenho pedido:</p>
+<ol>
+<li><strong>Caminhos vem de <code>ConfigPaths</code>, nao de constante.</strong> Foi a constante que criou a divergencia.
+   O diretorio de instalacao e o mesmo <code>ConfigPaths.PastaInstalacao</code> que o <code>UpdateApplier</code> usa. O
+   <code>bin.previous</code> e o pai desse diretorio + <code>bin.previous</code> — <strong>calculado do mesmo jeito nos dois
+   lados</strong>. Melhor ainda: exponha o caminho num unico ponto do <code>Shared</code> e faca os dois lados
+   consumirem dele, para nao poder divergir de novo.</li>
+<li><strong>O orquestrador para de mover diretorio.</strong> Ele passa a: verificar o backup, escrever o script
+   de restauracao, dispara-lo e sair. O script faz o que o PS1 de update ja faz — para o Watchdog,
+   para o Service, mata os SessionWorkers, move a instalacao quebrada para
+   <code>bin.failed-{versao}-{timestamp}</code>, copia o backup por cima, sobe o Service.</li>
+<li><strong>Preserve o que ja esta certo:</strong> audit <code>UPDATE_ROLLBACK_TRIGGERED</code> <strong>antes</strong> de agir;
+   <code>bin.failed-*</code> guardado para investigacao; sticky 24h; <code>StartupFailuresSinceLastUpdate = 0</code> no
+   sucesso; escalada para SOS quando nao ha volta.</li>
+<li><strong><code>BackupNotFound</code> continua existindo e virando SOS.</strong> E o caso legitimo do <strong>primeiro update
+   do cliente</strong>, em que nao ha versao anterior. Nao invente fallback para ele.</li>
+</ol>
+<h3 id="o-ponto-que-exige-desenho-seu-e-eu-quero-ver-antes-do-codigo">O ponto que exige desenho seu, e eu quero ver antes do codigo<a class="headerlink" href="#o-ponto-que-exige-desenho-seu-e-eu-quero-ver-antes-do-codigo" title="Permanent link">&para;</a></h3>
+<p><strong>Quem confirma que o rollback deu certo, se quem sabia disso saiu do ar?</strong></p>
+<p>Hoje o <code>TryRollbackAsync</code> faz <code>TryStartService</code> e le o resultado na hora — sincrono, no proprio
+processo. Delegando a um script externo, o Watchdog <strong>para junto</strong> e nao ve o desfecho. Sem
+resolver isso, some: o <code>RollbackResult.Success</code>, o sticky de 24h, o
+<code>RolledBackButStillFailing</code> e a escalada para SOS. Ou seja, <strong>os quatro desfechos que hoje
+existem</strong>.</p>
+<p>Duas saidas plausiveis, e eu nao escolho por voce:</p>
+<ul>
+<li><strong>o script grava o desfecho no <code>watchdog-state.json</code></strong> e o Watchdog, ao subir, le e conclui
+  (sticky ou SOS). Estado ja e o canal usado entre reinicios;</li>
+<li><strong>o Watchdog nao para</strong> e so o Service e trocado, aceitando que o <code>ManagerAgent.Watchdog.exe</code>
+  fique na versao quebrada ate o proximo update. Mais simples, e deixa binarios de versoes
+  diferentes convivendo — precisa de argumento de que isso e seguro.</li>
+</ul>
+<p><strong>Traga o desenho antes de escrever.</strong> E a unica parte disto que e arquitetura.</p>
+<h3 id="ponto-a-medir-nao-a-supor">Ponto a medir, nao a supor<a class="headerlink" href="#ponto-a-medir-nao-a-supor" title="Permanent link">&para;</a></h3>
+<p><code>PruneOldBackups(MaxBackups - 1)</code> roda <strong>antes</strong> de criar o backup novo. Confirme se existe janela
+em que a maquina fica sem backup nenhum — se existir, um crash naquele intervalo tira o rollback
+junto. <strong>Meça no codigo e diga o que achou</strong>; se nao houver janela, escreva isso e siga.</p>
+<h3 id="decisao-adiada-de-proposito">Decisao adiada, de proposito<a class="headerlink" href="#decisao-adiada-de-proposito" title="Permanent link">&para;</a></h3>
+<p><code>bin.previous</code> mora em <code>C:\Program Files\</code> — fora da pasta do produto, nome generico no raiz de
+Program Files. Deveria estar dentro da instalacao ou em <code>ProgramData</code>. <strong>Nao mexa agora:</strong> mover o
+backup e mudar o caminho de update, que esta funcionando e acabou de ser exercitado. Fica anotado.</p>
+<h2 id="aceite-do-3a">Aceite do 3a<a class="headerlink" href="#aceite-do-3a" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Instalacao <strong>real</strong> (sem <code>bin\</code>, binarios na raiz), versao nova que sai com codigo 1 no startup:
+  apos 3 ciclos, o Service volta sozinho na versao anterior e fica <code>Running</code>.</li>
+<li>A versao quebrada e preservada em <code>bin.failed-{versao}-{timestamp}</code>.</li>
+<li><code>UPDATE_ROLLBACK_TRIGGERED</code> emitido antes de agir.</li>
+<li><code>watchdog-state.json</code> com <code>stickyVersion</code> preenchido, <code>stickyUntil</code> = agora + 24h e
+  <code>startupFailuresSinceLastUpdate = 0</code>.</li>
+<li>Sem backup nenhum (primeiro update): vai para SOS, sem travar e sem exception.</li>
+<li>Versao anterior tambem nao sobe: SOS, com <code>ultimaVersaoQuebrada</code> registrada.</li>
+<li>Rollback recente (sticky ativa): <strong>nao</strong> dispara de novo.</li>
+</ul>
+<hr />
+<h1 id="3b-o-teste-e2e-rodando-no-ci">3b — o teste E2E rodando no CI<a class="headerlink" href="#3b-o-teste-e2e-rodando-no-ci" title="Permanent link">&para;</a></h1>
+<p><strong>Depende do 3a.</strong> Sozinho, ele passaria no ambiente sintetico e continuaria mentindo — foi
+exatamente isso que aconteceu.</p>
+<h2 id="o-que-ha-hoje">O que ha hoje<a class="headerlink" href="#o-que-ha-hoje" title="Permanent link">&para;</a></h2>
+<p><code>tests/e2e/scenarios/e1-alt-rollback-crash.ps1</code>, 141 linhas, escrito na BAA Fase 4. <strong>Nunca rodou
+no CI.</strong> Os helpers de setup montam a estrutura <code>bin\</code> que o orquestrador espera — por isso o teste
+e o codigo concordam entre si e os dois discordam do instalador.</p>
+<h2 id="o-que-fazer_1">O que fazer<a class="headerlink" href="#o-que-fazer_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>O cenario passa a rodar contra a instalacao gerada pelo instalador de verdade</strong>, nao contra
+   uma arvore montada pelo proprio teste. Se <code>install-agent-version.ps1</code> monta <code>bin\</code> na mao, e ele
+   que muda.</li>
+<li>Manter as assercoes que ja existem (versao, <code>bin.failed-*</code>, audit, <code>watchdog-state.json</code>) —
+   elas estao certas.</li>
+<li>Entrar no CI. Como exige servico Windows, elevacao e reboot de servico, <strong>decida com o @Vision</strong>
+   se roda no <code>windows-latest</code> do GitHub Actions ou numa VM propria. Se nao couber no runner
+   hospedado, <strong>diga isso em vez de adaptar o teste ate caber</strong> — um teste que passa sem exercitar
+   o SCM real nos traria de volta ao ponto de partida.</li>
+</ol>
+<h2 id="aceite-do-3b">Aceite do 3b<a class="headerlink" href="#aceite-do-3b" title="Permanent link">&para;</a></h2>
+<ul>
+<li>O cenario roda ponta a ponta contra instalacao real e passa.</li>
+<li>Ele <strong>falha</strong> se o 3a for desfeito. Confira isso do mesmo jeito que voce fez no A-63: desfaz a
+  correcao, roda, ve falhar, restaura.</li>
+<li>Esta no CI como status check obrigatorio, ou ha registro escrito do porque nao da e qual e a
+  alternativa.</li>
+</ul>
+<hr />
+<h1 id="ordem-e-limites">Ordem e limites<a class="headerlink" href="#ordem-e-limites" title="Permanent link">&para;</a></h1>
+<ol>
+<li><strong>Desenho do desfecho assincrono</strong> — traga antes de escrever codigo</li>
+<li><strong>3a</strong> — caminhos por <code>ConfigPaths</code>, restauracao delegada, quatro desfechos preservados</li>
+<li><strong>3b</strong> — cenario contra instalacao real, depois CI com o @Vision</li>
+</ol>
+<p><strong>Pare e me chame:</strong> no desenho do item 1; se a medicao do <code>PruneOldBackups</code> achar janela sem
+backup; se o CI nao suportar o cenario.</p>
+<p><strong>Nao commite. Nao faca push.</strong> Ao terminar, avise que o <strong>@Tony revisa</strong>.</p>
+<p><strong>O que o review vai cobrar:</strong></p>
+<ul>
+<li>o teste falhando com a correcao desfeita — nao aceito "passou" sem essa conferencia</li>
+<li>nenhum teste existente reescrito para acomodar comportamento novo sem justificativa no proprio teste</li>
+<li>os quatro desfechos do <code>RollbackResult</code> ainda existindo e alcancaveis</li>
+<li>nenhum <code>catch</code> novo que engula falha em silencio</li>
+<li>caminho de instalacao vindo de um unico ponto, nao repetido em constante — foi a duplicacao que
+  causou tudo isto</li>
+<li>o <code>UpdateApplier</code> e o PS1 de update <strong>intactos</strong></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

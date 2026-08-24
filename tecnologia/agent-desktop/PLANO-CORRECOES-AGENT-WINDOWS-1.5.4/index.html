@@ -1,0 +1,2330 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/agent-desktop/PLANO-CORRECOES-AGENT-WINDOWS-1.5.4/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>PLANO CORRECOES AGENT WINDOWS 1.5.4 - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plano-de-correcoes-agent-windows-154" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PLANO CORRECOES AGENT WINDOWS 1.5.4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backlog-da-155-encontrado-validando-a-propria-154" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backlog da 1.5.5 — encontrado validando a propria 1.5.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlog-da-156-encontrado-validando-a-155-2026-08-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backlog da 1.5.6 — encontrado validando a 1.5.5 (2026-08-18)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backlog da 1.5.6 — encontrado validando a 1.5.5 (2026-08-18)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ressalva-do-a-30-por-que-ficou-parcial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ressalva do A-30 — por que ficou parcial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-de-execucao-2026-08-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status de execucao (2026-08-18)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordem-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordem de execucao
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<blockquote>
+<p><strong>DATA:</strong> 2026-08-18 | <strong>ORIGEM:</strong> <code>ACHADOS-REGRESSIVO-2026-08-18.md</code> (25 achados + D-01)
+<strong>DESTINO:</strong> Agent Windows <strong>1.5.4</strong> | <strong>Dono:</strong> @Bucky | <strong>Review:</strong> @Tony | <strong>Aprovacao:</strong> Marcos
+<strong>REGRA:</strong> nada vai para main sem o Marcos validar. Commits em Conventional Commits.</p>
+</blockquote>
+<h1 id="plano-de-correcoes-agent-windows-154">Plano de Correcoes — Agent Windows 1.5.4<a class="headerlink" href="#plano-de-correcoes-agent-windows-154" title="Permanent link">&para;</a></h1>
+<p>Refinamento dos achados da rodada regressiva de 2026-08-18 em lotes executaveis.
+A propria entrega da 1.5.4 serve como <strong>teste de auto-update</strong> (decisao do Marcos): publicar a 1.5.4
+com a 1.5.3 instalada e observar o update automatico + rollback BAA.</p>
+<hr />
+<h2 id="backlog-da-155-encontrado-validando-a-propria-154">Backlog da 1.5.5 — encontrado validando a propria 1.5.4<a class="headerlink" href="#backlog-da-155-encontrado-validando-a-propria-154" title="Permanent link">&para;</a></h2>
+<p>Nao entra na 1.5.4 (ja esta instalada e rodando em staging). Fechar em lote depois.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Achado</th>
+<th>Estado do codigo</th>
+<th>O que falta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>A-29</strong> — icones fantasma na bandeja</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td>A causa era outra: o <code>UpdateApplier</code> <strong>ja</strong> mandava SHUTDOWN pelo pipe e esperava 10s. O que faltava era do lado de quem recebe — nada ligava o fim do host ao fim do loop de mensagens do WinForms. <code>StopApplication()</code> parava os hosted services e o processo seguia vivo ate o <code>Kill</code>, pulando o <code>Dispose</code> que remove o icone. Agora o <code>TrayApplicationContext</code> encerra o loop no <code>ApplicationStopping</code>, com <code>Dispose</code> explicito apos o <code>Application.Run</code>. Mais <code>TrayNotificationArea.RemoveGhostIcons()</code> no startup, para os fantasmas de morte forcada (crash, taskkill do suporte, instalador). 7 testes na parte pura da varredura; o resto e validacao na maquina</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>A-30</strong> — bloco fantasma de 1ms ao subir durante ociosidade</td>
+<td><strong>REABERTO (2026-08-18)</strong> — vai para a <strong>1.5.6</strong></td>
+<td>Validado na maquina e <strong>reprovado</strong>: o evento 49253 nasceu com 1ms as 14:48:26 quando o worker subiu dentro da ociosidade 4664. A ordem do loop cobre a ociosidade que comeca com o worker rodando, nao o worker que sobe dentro dela. Causa raiz agora conhecida: o <code>IdleMonitorService</code> fecha a janela com <code>endedAt</code> = inicio da ociosidade, anterior ao inicio da janela, e o clock-jump guard do <code>WindowActivityService</code> fabrica o 1ms. Ver achado A-30 REABERTO</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>A-31</strong> — shell sem titulo virando 50s de trabalho</td>
+<td><strong>REABERTO (2026-08-18)</strong> — vai para a <strong>1.5.6</strong></td>
+<td>Validado na maquina e <strong>reprovado</strong>: evento 49268, <code>Sistema operacional Microsoft(R) Windows(R)</code> / <strong><code>Program Manager</code></strong>. O filtro exige processo de shell <strong>e</strong> titulo placeholder; o processo bate, o titulo nao — a area de trabalho se identifica como <code>Program Manager</code>, nao "sem título". Correcao de uma linha em <code>TitulosPlaceholder</code> + teste. Ver achado A-31 REABERTO</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>A-27</strong> — <code>publicado_em</code> 3h no futuro</td>
+<td>Nao e do Agent</td>
+<td>@Shuri: gravar UTC no endpoint de publicacao e corrigir as linhas existentes</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>A-32</strong> — <code>dotnet test</code> sobe workers reais na instalacao</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td>Corrigido na raiz: <code>WorkerLauncher</code> valida a sessao via <code>IWtsSessionQuery</code> antes de qualquer plano; varredura de worker desgarrado no Plano C sob semaforo global; testes reescritos com dublê; <code>.runsettings</code> com <code>Category!=RequiresIsolation</code> aplicado via <code>RunSettingsFilePath</code>. <strong>Aceite comprovado:</strong> 253 testes verdes, contagem de <code>ManagerAgent.SessionWorker</code> inalterada (1, o legitimo), nenhum log sintetico novo</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>A-33</strong> — duas fontes de estado de lockscreen</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td><code>LockScreenDetector</code> e o dono unico: <code>SessionSwitch</code>, <code>PowerModeMonitor</code> (3a fonte, encontrada no caminho) e o polling so alimentam. Transicao unica faz flush + emissao + <code>Pause()</code> na ordem certa; dedup por estado, sem janela de tempo. Polling passou a usar <code>SessionFlags</code> (A-34) no lugar do <code>OpenInputDesktop</code>. Resume de sleep usa <code>RefreshState</code> em vez de afirmar UNLOCK. 15 testes novos. <strong>Aceite (1 LOCK e 1 UNLOCK por ciclo, sem janela de lockscreen) so na maquina com a 1.5.5</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>A-37</strong> — suite grava no estado da instalacao de producao</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td>Achado novo, encontrado corrigindo o A-34. <code>ConfigPaths.BaseFolderOverride</code> (internal, so testes) + sandbox por teste em <code>SessionMonitorRegistrationTests</code>. <strong>Pendencia na maquina:</strong> apagar <code>C:\ProgramData\ManagerAgent\data\session-state-1.json</code> antes de validar a 1.5.5</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>A-34</strong> — dedup de LOGIN nunca funcionou (<code>WTSLogonTime</code> nao suportado)</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td><code>WtsHelpers.QuerySessionInfoEx</code> le a classe 25 (<code>WTSINFOEX</code>, layout ANSI de 160 bytes) e alimenta <code>QueryLogonTimeTicks</code> + o novo <code>IsSessionLocked</code> (insumo do A-33). <strong>Aceite 1 e 4 comprovados nesta maquina:</strong> <code>QueryLogonId(1) = 1:134314716844003445:NoisyTech</code> (era null), <code>IsSessionLocked(1) = False</code>, 9 testes novos incluindo trava de layout. <strong>Aceites 2 e 3 (matar worker nao gera LOGIN / logon real continua gerando) so na maquina com a 1.5.5 instalada</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>A-35</strong> — kill do worker deixa janela aberta para sempre</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td><code>OrphanWindowEventCloser</code> novo no Service: le o ultimo <code>WindowActivityEvent</code> da sessao no buffer (<code>IServiceEventBuffer.FindLastEventAsync</code>) e, se estiver aberto, reemite com <code>finalizadoEm</code> = instante do EOF. Chamado no <code>OnWorkerDisconnectedAsync</code> <strong>antes</strong> do retorno por logoff — o logoff e justamente um caso em que ninguem mais fecharia. <code>motivo=WorkerDied</code> foi para o log, nao para o payload: <code>EventoJanela</code> nao tem esse campo e cria-lo exigiria mudanca de contrato e schema (@Thor/@Shuri). 18 testes novos</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>A-36</strong> — LOGIN/LOGOFF sem upload imediato</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td>Eram <strong>dois</strong> pontos, nao um: <code>PipeMessageHandler.ContainsSessionBoundary</code> (Service, fura o ciclo de 60s) e <code>SessionEventService</code> (SessionWorker, fura o dreno de 10s). So o primeiro estava no achado; sem o segundo o aceite de 5s nao fecharia. Regra virou fonte unica em <code>Shared/Session/SessionEventTypes.cs</code>. <strong>O tipo e <code>LOGOUT</code>, nao <code>LOGOFF</code></strong> — o Agent nunca emitiu essa string, e ha teste travando a divergencia. 12 + 3 testes novos</td>
+</tr>
+</tbody>
+</table>
+<h2 id="backlog-da-156-encontrado-validando-a-155-2026-08-18">Backlog da 1.5.6 — encontrado validando a 1.5.5 (2026-08-18)<a class="headerlink" href="#backlog-da-156-encontrado-validando-a-155-2026-08-18" title="Permanent link">&para;</a></h2>
+<p>Versao dos <code>.csproj</code> elevada para <strong>1.5.6</strong>. Suite: <strong>616 testes, 0 falhas</strong>. Nada commitado.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Achado</th>
+<th>Estado</th>
+<th>O que foi feito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>A-30 REABERTO</strong> — bloco de 1ms</td>
+<td><strong>PARCIAL (2026-08-18)</strong> — review @Tony OK</td>
+<td>O bloco deixou de ser fabricado: fim anterior ao inicio agora fecha com <strong>duracao zero</strong> e loga WARN, em vez de inventar 1ms em silencio. <strong>A causa estrutural continua aberta</strong> — ver ressalva abaixo</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>A-31 REABERTO</strong> — area de trabalho e <code>Program Manager</code></td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td><code>Program Manager</code> somado a <code>TitulosPlaceholder</code>, com teste do par exato capturado em campo e guarda contra bloquear um app comum de mesmo titulo. Confirmado que nao ha override no <code>appsettings</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>A-38</strong> — LOGOUT da parada so sobe no proximo boot</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td><code>ManagerAgentService.StopAsync</code> faz uma tentativa final de upload antes do checkpoint, com teto de 5s e CTS proprio. <code>RunBoundedAsync</code> extraido e coberto por 5 testes — travar ali faria o SCM matar o Service</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ressalva-do-a-30-por-que-ficou-parcial">Ressalva do A-30 — por que ficou parcial<a class="headerlink" href="#ressalva-do-a-30-por-que-ficou-parcial" title="Permanent link">&para;</a></h3>
+<p>A correcao proposta ("nao abrir janela enquanto a sessao ja esta ociosa") <strong>e impossivel como
+escrita</strong>. A cronologia medida na maquina prova:</p>
+<table>
+<thead>
+<tr>
+<th>Instante</th>
+<th>Fato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14:48:20.912</td>
+<td>Ultima interacao do usuario</td>
+</tr>
+<tr>
+<td>14:48:26.202</td>
+<td>Janela abre — ociosidade de <strong>5s</strong>, limiar e 60s. A sessao <strong>nao</strong> esta ociosa</td>
+</tr>
+<tr>
+<td>14:49:23.161</td>
+<td><code>User became idle (idle &gt;= 62s)</code> — o limiar cruza</td>
+</tr>
+<tr>
+<td>—</td>
+<td><code>_idleStartUtc</code> retroage para 14:48:20.912, <strong>antes</strong> do inicio da janela</td>
+</tr>
+</tbody>
+</table>
+<p>No momento da abertura a ociosidade ainda nao existe: ela e datada retroativamente na ultima
+interacao e so descoberta 60s depois. <strong>E nao e especifico de restart de worker</strong> — qualquer
+janela que ganhe foco no intervalo silencioso entre a ultima interacao e o limiar sofre o mesmo,
+inclusive um aplicativo roubando foco sozinho.</p>
+<p>Fechar o evento tambem nao e opcional: ele ja foi emitido como <strong>aberto</strong> quando nasceu, e engolir
+o fechamento o deixaria orfao para sempre (achado A-35).</p>
+<p><strong>O que resta decidir</strong> (precisa de rodada propria, nao de remendo):</p>
+<ol>
+<li><strong>No Agent</strong> — so emitir o evento de janela quando houver interacao do usuario no periodo,
+   em vez de emitir na abertura. Mexe no modelo de emissao e toca A-12, A-16 e A-18.</li>
+<li><strong>No backend</strong> (@Shuri/@Jarvis) — descartar blocos de duracao zero no pipeline de relatorio.
+   Com o fim deste lote, esses blocos passaram a ser identificaveis por <code>finalizado_em = iniciado_em</code>,
+   o que antes nao era possivel (1ms parecia dado real).</li>
+</ol>
+<p>A opcao 2 e barata e resolve o efeito hoje; a 1 resolve a causa e merece refinamento.</p>
+<hr />
+<p><strong>A-28 (backend)</strong> ja foi para producao de staging pelo Marcos e esta <strong>validado em campo</strong>: o
+auto-update rodou de ponta a ponta pela primeira vez (1.5.3 -&gt; 1.5.4, 2026-08-18 11:24-11:26).
+A parte do Agent (<code>ObterVersaoSemVer</code>) esta na 1.5.4.</p>
+<hr />
+<h2 id="status-de-execucao-2026-08-18">Status de execucao (2026-08-18)<a class="headerlink" href="#status-de-execucao-2026-08-18" title="Permanent link">&para;</a></h2>
+<p>Versao dos <code>.csproj</code> ja elevada de 1.5.3 para <strong>1.5.4</strong>. Suite: <strong>529 testes, 0 falhas</strong>
+(era 506/6 antes da rodada). Nada commitado — Marcos valida primeiro.</p>
+<table>
+<thead>
+<tr>
+<th>Lote</th>
+<th>Status</th>
+<th>Revisao @Tony</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1 — Ciclo de vida dos eventos</td>
+<td><strong>FEITO</strong></td>
+<td>OK, com 1 correcao (snapshot lia a janela 2x no mesmo tick)</td>
+</tr>
+<tr>
+<td>L2 — Disponibilidade dos workers</td>
+<td><strong>FEITO</strong></td>
+<td>OK, com 1 correcao (guard de sessao ativa para nao relancar em logoff)</td>
+</tr>
+<tr>
+<td>L3 — Envio imediato e telemetria</td>
+<td><strong>FEITO</strong></td>
+<td>OK, com 1 correcao (<code>PendingCount</code> acessava SQLite sem o lock de escrita)</td>
+</tr>
+<tr>
+<td>L4 — Desvinculacao no uninstall</td>
+<td><strong>FEITO</strong></td>
+<td>OK</td>
+</tr>
+<tr>
+<td>L5 — Diagnostico confiavel</td>
+<td><strong>FEITO</strong></td>
+<td>OK, com 1 correcao (em-dash violava a regra de PS1 somente-ASCII — o mesmo A-05)</td>
+</tr>
+<tr>
+<td>L6 — Identidade e metadados</td>
+<td><strong>FEITO</strong></td>
+<td>OK — causa raiz do A-03 encontrada no caminho</td>
+</tr>
+<tr>
+<td>L7 — Higiene</td>
+<td><strong>PARCIAL</strong></td>
+<td>A-05, A-06 e A-24 feitos; A-25 descartado como falso achado</td>
+</tr>
+<tr>
+<td>L8 — Documentacao</td>
+<td><strong>PENDENTE</strong></td>
+<td>@Natasha (A-09) e @Steve (A-15)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Falta validar em maquina:</strong> todo o L1–L6 esta coberto por teste unitario, mas o comportamento
+de ponta a ponta so se confirma com a 1.5.4 instalada e os dados chegando na base.</p>
+<hr />
+<h2 id="ordem-de-execucao">Ordem de execucao<a class="headerlink" href="#ordem-de-execucao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Lote</th>
+<th>Tema</th>
+<th>Achados</th>
+<th>Risco</th>
+<th>Bloqueia release?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1</strong></td>
+<td>Ciclo de vida dos eventos (paridade Android)</td>
+<td>A-12, A-16, A-17, A-18, A-14</td>
+<td>ALTO</td>
+<td><strong>SIM</strong></td>
+</tr>
+<tr>
+<td><strong>L2</strong></td>
+<td>Disponibilidade dos workers</td>
+<td>A-20, A-21</td>
+<td>ALTO</td>
+<td><strong>SIM</strong></td>
+</tr>
+<tr>
+<td><strong>L3</strong></td>
+<td>Envio imediato e telemetria de fila</td>
+<td>A-19, A-22, A-23</td>
+<td>MEDIO</td>
+<td><strong>SIM</strong></td>
+</tr>
+<tr>
+<td><strong>L4</strong></td>
+<td>Desvinculacao no uninstall</td>
+<td>A-01</td>
+<td>ALTO</td>
+<td><strong>SIM</strong></td>
+</tr>
+<tr>
+<td><strong>L5</strong></td>
+<td>Diagnostico confiavel (scripts)</td>
+<td>A-10, A-11</td>
+<td>MEDIO</td>
+<td>Nao</td>
+</tr>
+<tr>
+<td><strong>L6</strong></td>
+<td>Identidade e metadados</td>
+<td>A-02, A-03, A-04</td>
+<td>MEDIO</td>
+<td>Nao</td>
+</tr>
+<tr>
+<td><strong>L7</strong></td>
+<td>Higiene: hooks, log, ASCII, testes</td>
+<td>A-24, A-25, A-05, A-06</td>
+<td>BAIXO</td>
+<td>Nao</td>
+</tr>
+<tr>
+<td><strong>L8</strong></td>
+<td>Documentacao</td>
+<td>A-09, A-15, D-01</td>
+<td>BAIXO</td>
+<td>Nao</td>
+</tr>
+</tbody>
+</table>
+<p>L1 e L2 sao independentes entre si e podem ir em paralelo. L3 depende de L1 (o drain imediato
+precisa dos eventos abertos ja existindo).</p>
+<hr />
+<h1 id="l1-ciclo-de-vida-dos-eventos-paridade-com-o-agent-android">L1 — Ciclo de vida dos eventos (paridade com o Agent Android)<a class="headerlink" href="#l1-ciclo-de-vida-dos-eventos-paridade-com-o-agent-android" title="Permanent link">&para;</a></h1>
+<p><strong>Achados:</strong> A-12, A-16, A-17, A-18, A-14 | <strong>Referencia canonica:</strong> <code>manager-srv-agent-android</code></p>
+<h2 id="principio">Principio<a class="headerlink" href="#principio" title="Permanent link">&para;</a></h2>
+<p>O Agent emite <strong>fatos crus</strong>. Todo evento nasce <strong>aberto</strong> (<code>finalizadoEm</code> ausente) e e fechado por um
+evento posterior com o <strong>mesmo <code>iniciadoEm</code></strong>. O backend reconcilia por upsert — as chaves UNIQUE
+<code>(agente_id, nome_processo, iniciado_em)</code> e <code>(agente_id, iniciado_em)</code> ja existem e a regra de merge
+"primeiro <code>finalizadoEm</code> nao-nulo vence" ja esta implementada. <strong>Nenhuma mudanca de backend e necessaria
+para L1.</strong></p>
+<h2 id="l11-janela-abre-imediatamente-e-faz-snapshot-a-cada-60s">L1.1 — Janela abre imediatamente e faz snapshot a cada 60s<a class="headerlink" href="#l11-janela-abre-imediatamente-e-faz-snapshot-a-cada-60s" title="Permanent link">&para;</a></h2>
+<p><code>src/ManagerAgent.SessionWorker/Capture/WindowActivityService.cs</code></p>
+<p>Hoje <code>HandleAsync</code> cria <code>_currentEvent</code> em memoria e <strong>so chama <code>_eventBuffer.AddAsync</code> na troca</strong>.
+Resultado: quem fica 3h no mesmo app nao gera evento nenhum (A-12).</p>
+<table>
+<thead>
+<tr>
+<th>Momento</th>
+<th>Comportamento exigido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Janela ganha foco</td>
+<td><code>AddAsync</code> do evento com <code>FinalizadoEm = null</code></td>
+</tr>
+<tr>
+<td>Janela segue em foco</td>
+<td>reemitir o <strong>mesmo</strong> evento aberto a cada <code>SnapshotJanelaSegundos</code> (default <strong>60</strong>)</td>
+</tr>
+<tr>
+<td>Troca de janela</td>
+<td><code>AddAsync</code> da anterior com <code>FinalizadoEm</code> = inicio da nova, depois abre a nova</td>
+</tr>
+<tr>
+<td>Encerramento (<code>FlushCurrentEventAsync</code>)</td>
+<td>ja correto — manter</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>O <code>iniciadoEm</code> <strong>nunca muda</strong> entre o open, os snapshots e o close — e a chave de reconciliacao.</li>
+<li>Novo campo em <code>appsettings.json</code>: <code>SnapshotJanelaSegundos: 60</code>.</li>
+<li><code>JsonDefaults.IgnoreNull</code> ja omite o campo nulo — <strong>nao trocar</strong> por <code>null</code> explicito.</li>
+</ul>
+<h2 id="l12-debounce-antes-de-promover-a-janela">L1.2 — Debounce antes de promover a janela<a class="headerlink" href="#l12-debounce-antes-de-promover-a-janela" title="Permanent link">&para;</a></h2>
+<p>Portar <code>WindowActivityCollector.promotePending</code> (Android, <code>debounceMillis = 1_500L</code>).
+Uma janela so vira evento apos permanecer em foco por <code>DebounceJanelaMs</code> (default <strong>1500</strong>).
+Resolve o fantasma <code>unknown</code> de 1ms do A-18 e reduz o ruido do A-14.</p>
+<h2 id="l13-blocklist-de-janelas-do-proprio-agent-e-do-shell-a-14">L1.3 — Blocklist de janelas do proprio agent e do shell (A-14)<a class="headerlink" href="#l13-blocklist-de-janelas-do-proprio-agent-e-do-shell-a-14" title="Permanent link">&para;</a></h2>
+<p>Ignorar, antes de qualquer emissao:
+- processos do proprio agent (<code>ManagerAgent*</code>)
+- shell do Windows: bandeja ("Janela de estouro da bandeja do sistema"), alt-tab, menu iniciar,
+  <code>Windows.UI.Core.CoreWindow</code>, <code>ApplicationFrameHost</code> sem titulo
+- <code>nome_processo</code> vazio ou <code>"unknown"</code></p>
+<p>Blocklist em <code>appsettings.json</code> (<code>ProcessosIgnorados</code>), com defaults no codigo — configuravel sem rebuild.</p>
+<h2 id="l14-ociosidade-abre-e-fecha-como-o-android">L1.4 — Ociosidade abre e fecha como o Android<a class="headerlink" href="#l14-ociosidade-abre-e-fecha-como-o-android" title="Permanent link">&para;</a></h2>
+<p><code>src/ManagerAgent.SessionWorker/Capture/IdleMonitorService.cs</code>
+<code>src/ManagerAgent.SessionWorker/Capture/Storage/IdleEventRecord.cs</code></p>
+<p>Hoje o idle so e persistido <strong>fechado</strong> (<code>PersistIdleEventAsync</code>), no retorno do usuario.</p>
+<ol>
+<li><code>IdleEventRecord.EndUtc</code> passa a <code>DateTimeOffset?</code> e <code>DurationSeconds</code> a <code>long?</code>; ambos <strong>omitidos</strong>
+   no JSON quando nulos.</li>
+<li>Ao detectar <code>idleTime &gt;= _idleThreshold</code> (60s): persistir <strong>imediatamente</strong> o registro aberto, com
+   <code>StartUtc = nowUtc - idleTime</code> (instante real da ultima interacao) e <code>EndUtc = null</code>.</li>
+<li>Ao voltar o input: persistir de novo com o <strong>mesmo <code>StartUtc</code></strong> e <code>EndUtc</code> real. O upsert do backend fecha.</li>
+<li><code>MinIdleDurationSeconds = 60</code> deixa de ser filtro de descarte no fechamento — o registro ja foi enviado
+   aberto. Manter o filtro <strong>apenas</strong> no caminho sintetico (<code>WallClockGap</code>), que nasce fechado.</li>
+<li><strong>Nao</strong> reemitir snapshot durante ociosidade longa (decisao consciente do Android: "ainda ausente" e
+   derivavel da linha aberta).</li>
+</ol>
+<p><strong>Armadilha do Android, nao repetir:</strong> o inicio da ausencia <strong>nunca</strong> pode sair com
+<code>finalizadoEm = clock()</code> — isso fabrica fechamento falso e gera duas linhas nao reconciliadas.</p>
+<h2 id="l15-ociosidade-fecha-a-janela-em-andamento-a-16">L1.5 — Ociosidade fecha a janela em andamento (A-16)<a class="headerlink" href="#l15-ociosidade-fecha-a-janela-em-andamento-a-16" title="Permanent link">&para;</a></h2>
+<p>No instante em que a ociosidade e detectada:
+1. <code>WindowActivityService.FlushCurrentEventAsync(inicioDaOciosidade)</code> — fecha a janela com
+   <code>finalizadoEm</code> = inicio da ociosidade (nao o instante da deteccao);
+2. abre a ociosidade (L1.4);
+3. <code>WindowActivityService.Pause()</code> enquanto ocioso;
+4. no retorno: fecha a ociosidade, <code>Resume()</code>, e a proxima <code>HandleAsync</code> abre a nova janela.</p>
+<p>Evidencia do problema: bloco <code>Windows Terminal</code> 12:43:57 -&gt; 12:48:59 sobreposto integralmente a
+ociosidade 12:43:56 -&gt; 12:48:58 — 5 min de ausencia contados como janela ativa.</p>
+<h2 id="l16-boundaries-de-lock-unlock-a-18">L1.6 — Boundaries de LOCK / UNLOCK (A-18)<a class="headerlink" href="#l16-boundaries-de-lock-unlock-a-18" title="Permanent link">&para;</a></h2>
+<p>Portar <code>IdleDetector.resetSessionBoundary</code> do Android.</p>
+<p><strong>LOCK:</strong> fechar a janela em andamento com <code>finalizadoEm</code> = instante do lock; se havia ociosidade em
+andamento, fechar tambem; <strong>nao criar registro novo</strong> (hoje cria o fantasma <code>unknown</code> de 1ms, id 48376).</p>
+<p><strong>UNLOCK:</strong> fechar o que restou aberto e abrir o evento da janela que ganhou foco, com <code>finalizadoEm = null</code>
+(decisao do Marcos: "a pessoa vai focar em algo"). O debounce de L1.2 e <strong>obrigatorio</strong> aqui — no instante
+do unlock o Windows reporta a lock screen como janela ativa por fracao de segundo.</p>
+<h2 id="criterios-de-aceite-de-l1">Criterios de aceite de L1<a class="headerlink" href="#criterios-de-aceite-de-l1" title="Permanent link">&para;</a></h2>
+<p>Com o agent rodando em staging:</p>
+<ul>
+<li>[ ] <code>select count(*) from eventos_janela where agente_id=&lt;id&gt; and finalizado_em is null</code> = <strong>1</strong> enquanto
+      houver janela em foco (nunca 0, nunca &gt;1)</li>
+<li>[ ] Ficar 5 min no mesmo app gera <strong>1 linha</strong> (aberta, com snapshots reconciliados), nao 0 e nao 5</li>
+<li>[ ] Nenhum bloco de <code>eventos_janela</code> sobrepoe um bloco de <code>eventos_ociosidade</code></li>
+<li>[ ] Entrar em ociosidade: a linha da janela fecha e a linha de ociosidade nasce com <code>finalizado_em is null</code></li>
+<li>[ ] LOCK nao gera linha <code>nome_processo = 'unknown'</code></li>
+<li>[ ] Zero linhas com <code>nome_processo like 'ManagerAgent%'</code> ou titulo de bandeja do sistema</li>
+<li>[ ] Zero duplicatas: <code>group by nome_processo, iniciado_em having count(*) &gt; 1</code> retorna vazio</li>
+<li>[ ] Nenhum payload contem <code>"finalizadoEm": null</code> (campo omitido, nunca nulo explicito)</li>
+</ul>
+<hr />
+<h1 id="l2-disponibilidade-dos-workers">L2 — Disponibilidade dos workers<a class="headerlink" href="#l2-disponibilidade-dos-workers" title="Permanent link">&para;</a></h1>
+<h2 id="l21-relancar-no-eof-do-pipe-nao-no-timeout-de-heartbeat-a-20">L2.1 — Relancar no EOF do pipe, nao no timeout de heartbeat (A-20)<a class="headerlink" href="#l21-relancar-no-eof-do-pipe-nao-no-timeout-de-heartbeat-a-20" title="Permanent link">&para;</a></h2>
+<p><code>src/ManagerAgent.Service/Pipe/PipeServer.cs:147</code></p>
+<p>O EOF ja e detectado <strong>na hora</strong> (09:32:07) mas so loga; o relancamento so sai pelo <code>WorkerWatchdog</code>
+por timeout de heartbeat (09:33:44). <strong>97s sem captura nenhuma</strong>, com o Service enviando batimentos
+normalmente — no portal o agente aparece saudavel enquanto nao coleta nada.</p>
+<p>No <code>break</code> do EOF em <code>ReadLoopAsync</code>, invocar <code>HandleWorkerDeathAsync(conn.SessionId)</code>
+(ja existe em <code>PipeServer.cs:247</code>).</p>
+<ul>
+<li>Manter o <code>WorkerWatchdog</code> por heartbeat como <strong>fallback</strong> — e o unico sinal quando o worker trava vivo
+  sem fechar o pipe.</li>
+<li>Cuidado: EOF tambem ocorre em shutdown legitimo e em logoff. Nao relancar se o Service esta parando
+  (<code>ct.IsCancellationRequested</code>) nem se a sessao nao esta mais ativa.</li>
+<li>O rate-limit existente (<code>MaxRelaunches = 3/5min</code>) continua valendo como protecao contra crash-loop.</li>
+</ul>
+<p><strong>Aceite:</strong> matar o SessionWorker pelo Gerenciador de Tarefas -&gt; worker de volta em <strong>&lt;= 15s</strong> (criterio
+R13.1.4). Medido hoje: 97s.</p>
+<h2 id="l22-launch-idempotente-por-sessao-a-21">L2.2 — Launch idempotente por sessao (A-21)<a class="headerlink" href="#l22-launch-idempotente-por-sessao-a-21" title="Permanent link">&para;</a></h2>
+<p><code>src/ManagerAgent.Service/SessionManagement/WorkerRegistry.cs</code></p>
+<p><code>RegisterOrphan</code> grava <code>State = WorkerState.Launching</code>, mas o guard de <code>TryLaunchAsync</code> (linha 58) so
+aborta quando <code>State is Connected or Paused</code>. Resultado: ao reiniciar o Service, ele <strong>adota</strong> o orfao e
+<strong>32ms depois lanca outro</strong> para a mesma sessao (PIDs 8888 e 19424 confirmados no SO).</p>
+<p>Correcao: o guard passa a abortar sempre que houver processo vivo registrado para a sessao —
+<code>existing.Process is { HasExited: false }</code> — independente do <code>State</code>, com um teto de idade para
+<code>Launching</code> travado (ex.: <code>LaunchedAt</code> ha mais de 60s sem conectar = considerar morto e substituir,
+matando o PID antigo antes).</p>
+<p>Adicionalmente: ao adotar um orfao que ja conectou o pipe, promover para <code>Connected</code>.</p>
+<p><strong>Aceite:</strong> <code>taskkill</code> no <code>ManagerAgent.Service</code> -&gt; apos o restart do SCM existe <strong>exatamente 1</strong>
+<code>ManagerAgent.SessionWorker.exe</code> por sessao. Cobrir com teste <code>ServiceRestart_ComWorkerVivo_NaoLancaSegundo</code>.</p>
+<p><strong>Nao mexer (funcionou):</strong> restart pelo SCM, <code>AGENT_STARTUP</code> com <code>Reason=SERVICE_START</code>, adocao de orfao
+em si, retomada do upload sem perda, <code>UpdateCheckerWorker</code> apontando para staging.</p>
+<hr />
+<h1 id="l3-envio-imediato-e-telemetria-de-fila">L3 — Envio imediato e telemetria de fila<a class="headerlink" href="#l3-envio-imediato-e-telemetria-de-fila" title="Permanent link">&para;</a></h1>
+<h2 id="l31-drain-imediato-em-lockunlock-a-19">L3.1 — Drain imediato em LOCK/UNLOCK (A-19)<a class="headerlink" href="#l31-drain-imediato-em-lockunlock-a-19" title="Permanent link">&para;</a></h2>
+<p>Medido: LOCK 26s de atraso, UNLOCK <strong>64s</strong>. No Android o caminho quente ja e direto —
+<code>sender/UploadCoordinator.kt</code>: <em>"o ticker de 60s e o LOCK/UNLOCK nao chamam mais esta classe — eles chamam
+<code>EventUploader.drain</code> direto, no escopo do service, para nao depender do JobScheduler"</em>.</p>
+<p>O evento de sessao dispara drain direto no <code>UploadWorker</code>, fora do timer de 60s.</p>
+<p><strong>Requisito de robustez (@Tony):</strong> o envio imediato <strong>nao pode travar o lock nem propagar excecao</strong>.
+Timeout curto, fire-and-forget; sem rede degrada em silencio para o buffer e sobe no proximo ciclo.</p>
+<p><strong>Aceite:</strong> <code>criado_em - ocorreu_em</code> &lt;= <strong>5s</strong> para LOCK e UNLOCK.</p>
+<h2 id="l32-falha-de-transporte-e-aviso-nao-erro-a-22">L3.2 — Falha de transporte e aviso, nao erro (A-22)<a class="headerlink" href="#l32-falha-de-transporte-e-aviso-nao-erro-a-22" title="Permanent link">&para;</a></h2>
+<p><code>src/ManagerAgent.Service/Upload/UploadWorker.cs</code> e <code>HttpEventUploader.cs</code></p>
+<p>Hoje cada ciclo offline emite <code>[ERR]</code> + stack completo de <code>SocketException</code>, duas vezes (lote e ciclo).</p>
+<ul>
+<li>Falha de transporte (DNS / socket / timeout) -&gt; <code>[WRN] Upload adiado — sem rede, N eventos no buffer</code>,
+  <strong>sem stack</strong>.</li>
+<li><code>[ERR]</code> + stack fica reservado para 5xx, contrato invalido e erro inesperado.</li>
+<li>Consultar <code>RedeDisponivel</code> e sair cedo do ciclo quando offline.</li>
+<li>Eliminar a linha duplicada (logar no ciclo <strong>ou</strong> no lote, nao nos dois).</li>
+</ul>
+<h2 id="l33-eventospendentes-real-no-heartbeat-a-23">L3.3 — <code>EventosPendentes</code> real no heartbeat (A-23)<a class="headerlink" href="#l33-eventospendentes-real-no-heartbeat-a-23" title="Permanent link">&para;</a></h2>
+<p><code>src/ManagerAgent.SessionWorker/Capture/HeartbeatService.cs:42</code> — hardcoded <code>EventosPendentes = 0</code>
+(mesmo bug em <code>ManagerAgent.Tray/Services/HeartbeatService.cs:42</code>).</p>
+<p>Popular a partir do <code>COUNT(*)</code> real do buffer SQLite. Buffer com 26 eventos reportou 0 — o campo e o
+unico indicador remoto de acumulo, e zerado nao distingue "nada a enviar" de "offline ha horas".</p>
+<p><strong>Complemento a alinhar com @Shuri:</strong> incluir <code>bufferMaisAntigoEm</code> no payload, para o backend calcular
+o atraso real na primeira reconexao. Requer campo novo no contrato do srv-events — <strong>nao bloqueia</strong> L3.3.</p>
+<hr />
+<h1 id="l4-desvinculacao-no-uninstall-a-01">L4 — Desvinculacao no uninstall (A-01)<a class="headerlink" href="#l4-desvinculacao-no-uninstall-a-01" title="Permanent link">&para;</a></h1>
+<p><strong>Dois defeitos.</strong></p>
+<ol>
+<li><strong><code>instalador/Pacote/desvincular.ps1</code> nunca existiu</strong> — nenhum commit no historico tocou nele, mas o
+   <code>ManagerAgent-v2.iss</code> o chama como primeira acao do <code>[UninstallRun]</code>, com <code>runhidden</code>. Falha em silencio
+   e o dispositivo fica vinculado para sempre.</li>
+<li><strong><code>scripts/build/build-pacote-v2.ps1</code> nao valida</strong> — procura o arquivo em dois caminhos, nao acha e
+   segue sem erro (nao ha <code>else</code>).</li>
+</ol>
+<p><strong>Escrever o script:</strong> le <code>config.json</code>, decripta o Device JWT (DPAPI), chama
+<code>POST /api/agente/dispositivos/desvincular</code> (<code>@RequireDevice</code>, ja existe no srv-admin-node).
+Best-effort com <strong>timeout curto</strong> — nao pode travar o uninstall. Loga o resultado em arquivo proprio
+(com <code>runhidden</code> nao ha console). Sem rede: falha silenciosa e segue a desinstalacao.</p>
+<p><strong>Guard no build:</strong> arquivo obrigatorio do pacote ausente = build <strong>falha</strong>. Vale para os 6 scripts.</p>
+<p><strong>Aceite:</strong> desinstalar pelo Painel de Controle -&gt; <code>agentes.desvinculado_em</code> preenchido em staging.</p>
+<p><strong>Divida tecnica separada (@Thor/@Vision):</strong> limpar os agentes orfaos ja desinstalados — ex.: <strong>id 48</strong>
+(1.5.1, mesma maquina) esta com <code>desvinculado_em = NULL</code>.</p>
+<hr />
+<h1 id="l5-diagnostico-confiavel">L5 — Diagnostico confiavel<a class="headerlink" href="#l5-diagnostico-confiavel" title="Permanent link">&para;</a></h1>
+<h2 id="l51-auto-elevacao-dos-scripts-a-10">L5.1 — Auto-elevacao dos scripts (A-10)<a class="headerlink" href="#l51-auto-elevacao-dos-scripts-a-10" title="Permanent link">&para;</a></h2>
+<p><strong>Decisao do Marcos:</strong> o script deve <strong>solicitar elevacao antes de rodar</strong> — relaunch automatico via
+<code>Start-Process -Verb RunAs</code>, nao apenas avisar.</p>
+<p>Sem elevacao o <code>health-check.ps1</code> nao le <code>config.json</code> (ACL restrita, protecao correta), o
+<code>UnauthorizedAccessException</code> <strong>nao e tratado</strong>, e o script conclui:</p>
+<table>
+<thead>
+<tr>
+<th>Passo</th>
+<th>Reportou</th>
+<th>Realidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[4/10] Configuracao</td>
+<td>"incompleta: baseUrlAdmin, baseUrlEvents, chaveAtivacaoEmpresa, identificadorColaborador"</td>
+<td>config completa, agent vinculado e enviando</td>
+</tr>
+<tr>
+<td>[7/10] API Admin</td>
+<td>"inacessivel — verificar internet/firewall"</td>
+<td>acessivel, heartbeat as 11:31</td>
+</tr>
+<tr>
+<td>[8/10] API Events</td>
+<td>"inacessivel"</td>
+<td>acessivel, eventos na base</td>
+</tr>
+</tbody>
+</table>
+<p>Score exibido <strong>60% (ATENCAO)</strong>; score real <strong>100%</strong>. Manda o suporte cacar firewall que nao existe.</p>
+<p>Aplicar o mesmo padrao a <code>coletar-diagnostico.ps1</code> e <code>test-vinculacao.ps1</code>.
+<strong>E tratar <code>UnauthorizedAccessException</code> explicitamente</strong> — "sem permissao para ler" nunca pode virar
+"campo ausente" ou "API fora do ar", mesmo com a auto-elevacao no lugar.</p>
+<h2 id="l52-nomes-de-log-corretos-a-11">L5.2 — Nomes de log corretos (A-11)<a class="headerlink" href="#l52-nomes-de-log-corretos-a-11" title="Permanent link">&para;</a></h2>
+<p><code>health-check.ps1:225</code> procura a tag <code>[SessionWorker]</code> dentro de <code>service-*.log</code>. O worker tem arquivo
+proprio. Arquivos reais em <code>C:\ProgramData\ManagerAgent\logs\</code>:</p>
+<p><code>service-YYYYMMDD.log</code> · <code>session-worker-S{sessionId}-YYYYMMDD.log</code> · <code>watchdog-YYYYMMDD.log</code> · <code>startup-trace.log</code></p>
+<p>Verificar o mesmo padrao em <code>monitorar-logs.ps1</code> e <code>coletar-diagnostico.ps1</code>.
+<strong>Bonus:</strong> o health-check nao verifica o servico <code>ManagerAgentWatchdog</code> nem o <code>watchdog-*.log</code> — incluir.</p>
+<hr />
+<h1 id="l6-identidade-e-metadados">L6 — Identidade e metadados<a class="headerlink" href="#l6-identidade-e-metadados" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Achado</th>
+<th>Correcao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>usuario_sessao</code> grava a conta do UAC (<code>Raquel</code>) em vez do usuario real (<code>NoisyTech</code>)</td>
+<td>A-02</td>
+<td>O valor deve vir do <strong>SessionWorker</strong> (sessao interativa real), nao do <code>Configurator</code> elevado (<code>Program.cs:162</code> usa <code>Environment.UserName</code> sob elevacao)</td>
+</tr>
+<tr>
+<td><code>hardware_fingerprint</code> e <code>hardware_fingerprint_atualizado_em</code> nulos</td>
+<td>A-03</td>
+<td>Investigar: nao e enviado no vincular, e enviado por outro endpoint, ou o backend nao persiste. Feature entrou na v1.4.1 (<code>e05ad5f</code>, Eixo 5)</td>
+</tr>
+<tr>
+<td>Janela "Sobre" sem <code>instalacaoId</code></td>
+<td>A-04</td>
+<td>Exigido por R2.6.3. Sem ele o suporte nao casa a maquina com o registro do backend pelo print. Expor tambem o identificador do colaborador (<code>i888777</code>), nao a conta Windows</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="l7-higiene">L7 — Higiene<a class="headerlink" href="#l7-higiene" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Achado</th>
+<th>Correcao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hooks reinstalados durante ociosidade legitima (<code>Hooks appear inactive (3 zero summaries)</code>)</td>
+<td>A-24</td>
+<td>Suprimir a heuristica enquanto houver ociosidade em andamento. Zero input <strong>e</strong> a definicao de ociosidade — validar saude do hook por sinal proprio (handle registrado / ping), nunca por ausencia de input. Risco atual: perder o primeiro input da volta</td>
+</tr>
+<tr>
+<td>~~Mojibake no log do worker~~ — <strong>achado descartado</strong> na revisao do @Tony: o hexdump mostra <code>C3 A1</code>, UTF-8 correto; o mojibake era do terminal que leu o arquivo</td>
+<td>A-25</td>
+<td>Fica so a parte legitima: mensagens de log em portugues violam a regra do projeto (codigo e log em ingles). Converter as mensagens tocadas na 1.5.4</td>
+</tr>
+<tr>
+<td>Em-dash em PS1 gerado (<code>UpdateApplier.cs:792</code>)</td>
+<td>A-05</td>
+<td>Trocar por hifen simples. Esta em comentario, nao quebra execucao, mas viola a regra de PS1 somente-ASCII e derruba 2 testes de guarda</td>
+</tr>
+<tr>
+<td>4 falhas unitarias</td>
+<td>A-06</td>
+<td>Reavaliar contra o codigo pos-<code>592bd33</code>/<code>f119d0c</code>: 3 de <code>AgentLinkServiceTests</code> (<code>Salvar()</code> 2x, <code>Retry</code> vs <code>ConfigIncomplete</code>) e 1 de <code>UpdateCheckerWorkerTests</code> (<code>run-update.ps1</code> recente deletado, spec 1.3.10 item 5). Se o comportamento novo esta certo, <strong>atualizar o teste</strong>; senao e regressao</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="l8-documentacao">L8 — Documentacao<a class="headerlink" href="#l8-documentacao" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>A-09</strong> — <code>PLANO-TESTES-REGRESSIVOS.md</code> v2.0.0 e de 2026-06-11 e nao cobre 8 meses. 13 correcoes
+  (C1–C13) listadas no fim de <code>ROTEIRO-REGRESSIVO-2026-08-18.md</code>. Faltam: servico <code>ManagerAgentWatchdog</code>,
+  vinculacao/Device JWT, eventos v1.4.x, <code>dispositivoTipo</code>, <code>menuVisivel</code>, thresholds, rollback BAA,
+  bloco LGPD dedicado, <code>desvincular.ps1</code>. Corrigir tambem: sao <strong>6</strong> scripts e nao 5; recovery e
+  <strong>5s/10s/30s</strong> e nao 1s/5s/30s; <code>monitorar-performance.ps1</code> nao existe mais no pacote;
+  <code>nome_processo</code> grava o nome amigavel ("Google Chrome"), nao o executavel. <strong>Dono: @Natasha.</strong></li>
+<li><strong>A-15</strong> — <code>produto.md</code> e o README dizem "5+ minutos" de ociosidade; o codigo usa 60s. Com D-01 os 60s
+  viram limiar <strong>tecnico de deteccao</strong> (correto) e o "5 min" vira regra de negocio do backend.
+  <strong>Corrigir a doc, nao o limiar.</strong> Dono: @Steve.</li>
+<li><strong>D-01</strong> — virar ADR: a maquina de estados sai do Agent e vai para o backend.</li>
+</ul>
+<hr />
+<h1 id="d-01-pendencias-de-arquitetura-fora-de-l1l8">D-01 — pendencias de arquitetura (fora de L1–L8)<a class="headerlink" href="#d-01-pendencias-de-arquitetura-fora-de-l1l8" title="Permanent link">&para;</a></h1>
+<p>A decisao esta registrada, mas <strong>duas pecas nao sao do @Bucky</strong> e precisam de @Tony + @Thor/@Shuri antes:</p>
+<ol>
+<li><strong>Regra de negocio no srv-events:</strong> <code>&lt; 5 min</code> = micro-pausa (tempo reatribuido ao bloco de janela
+   anterior), <code>&gt;= 5 min</code> = PAUSA, <code>&gt;= 15 min</code> = AUSENTE. Os numeros 5 e 15 passam a existir <strong>em um lugar so</strong>.</li>
+<li><strong>Merge de micro-pausas:</strong> com deteccao a 60s os blocos fragmentam mais. Se o backend nao mesclar, o
+   pilar Fragmentacao infla. E contrapartida obrigatoria de L1, nao opcional.</li>
+</ol>
+<p><strong>Desdobramentos no Agent (podem entrar em L1 ou ficar para 1.5.5):</strong> depreciar <code>UserStatusManager</code> e o
+campo <code>status_usuario</code> nos payloads; coordenar a remocao da tabela <code>eventos_transicao_status</code> com @Thor.
+O PR4 de thresholds (<code>pr4-threshold-inatividade-bucky.md</code>) fica <strong>obsoleto na parte de Agent</strong> — os
+thresholds 5/15 nao devem viver no C#.</p>
+<p>Os achados <strong>A-08</strong> e <strong>A-13</strong> ficam substituidos por D-01: <code>status_usuario</code> nulo deixa de ser bug e
+passa a ser o comportamento correto.</p>
+<p><strong>Fora de escopo:</strong> <code>isMediaActive()</code> do Android (video sem toque nao conta como ausencia) e especifico de
+mobile. O equivalente Windows seria audio/video em foreground — avaliar depois com @Tony.</p>
+<hr />
+<h1 id="regressivo-da-154">Regressivo da 1.5.4<a class="headerlink" href="#regressivo-da-154" title="Permanent link">&para;</a></h1>
+<p>Alem de reexecutar os blocos que falharam, a 1.5.4 cobre o que ficou pendente (P-1 a P-11 em
+<code>ACHADOS-REGRESSIVO-2026-08-18.md</code>): auto-update e rollback BAA (a propria entrega), performance
+estabilizada com o agent rodando ha 4h+, scripts de diagnostico, multi-sessao, Named Pipe e
+AutonomousBuffer, logoff/suspensao/reinicio, deteccao de reuniao, <strong>bloco LGPD dedicado</strong> (obrigatorio
+antes de release), backend fora do ar com 5xx, e desinstalacao/reinstalacao <strong>depois</strong> de A-01.</p>
+<h2 id="backlog-da-157-incidente-do-auto-update-2026-08-18">Backlog da 1.5.7 — incidente do auto-update (2026-08-18)<a class="headerlink" href="#backlog-da-157-incidente-do-auto-update-2026-08-18" title="Permanent link">&para;</a></h2>
+<p>Versao dos <code>.csproj</code> elevada para <strong>1.5.7</strong> (a 1.5.6 ja esta publicada no bucket e aponta
+para outro binario). Suite: <strong>624 testes, 0 falhas</strong>. Nada commitado.</p>
+<p>Evidencia completa de cada item em <code>ACHADOS-REGRESSIVO-2026-08-18.md</code>, secao
+"Incidente do auto-update".</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Achado</th>
+<th>Sev</th>
+<th>Estado</th>
+<th>O que foi feito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>A-39</strong> — WorkerWatchdog relanca worker no meio do update</td>
+<td>CRITICO</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td><code>UpdateGate</code> singleton no DI, fechado pelo <code>UpdateApplier</code> antes do broadcast de shutdown e consultado pelo <code>WorkerLauncher</code> — ponto unico por onde todo worker nasce. Fecha por TTL de 5min, nao por chamada de abertura: o caminho feliz termina em <code>Environment.Exit(0)</code> e ninguem sobrevive para reabrir. <code>WorkerWatchdog</code> tambem checa, para nao queimar o rate-limit de 3/5min. 7 testes novos</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>A-40</strong> — PS1/batch nunca mataram o SessionWorker</td>
+<td>CRITICO</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td>Kill do <code>ManagerAgent.SessionWorker</code> antes do backup, no PS1 (Planos A e B) e no batch (Plano C), com espera de 15s e WARN se sobrar alguem. Corrige junto a falha de rollback, que travava no mesmo lock. Plano D dispensa: renomeia para <code>.old</code> em vez de sobrescrever</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>A-41</strong> — cooldown de 6h era codigo morto</td>
+<td>ALTA</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td><code>Program.Main</code> nao apaga mais a <code>update-failed.flag</code>; quem apaga e o checker, depois de cumprir o cooldown. Sem isso, cada restart cobraria mais 6h e o agent nunca mais updataria</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>A-42</strong> — <code>MaximoBackups</code> so vale para a Tray</td>
+<td>ALTA</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td><code>PruneOldBackups()</code> no <code>UpdateApplier</code> do Service, antes de criar o backup novo. 11 tentativas deixaram 3,4GB em disco</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>A-43</strong> — <code>WatchdogStateStore</code> instanciado na mao</td>
+<td>MEDIA</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td>Store injetado por DI. Teste novo cobrindo o branch de SOS, que antes so era exercitado por acidente lendo o estado real da maquina</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>A-44</strong> — suite escrevia na pasta do agent instalado</td>
+<td>MEDIA</td>
+<td><strong>FEITO (2026-08-18)</strong> — review @Tony OK</td>
+<td>Sandbox via <code>ConfigPaths.BaseFolderOverride</code> em <code>UpdateCheckerWorkerTests</code> + colecao serial <code>ConfigPaths</code> para as 3 classes que tocam o override estatico</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>A-45</strong> — o fix nao consegue se auto-instalar</td>
+<td>ALTA</td>
+<td><strong>ABERTO — decisao de @Vision/@Steve</strong></td>
+<td>Quem aplica o update e o applier da versao instalada. Agents em 1.5.5/1.5.6 no campo so aplicam a 1.5.7 numa janela <strong>sem usuario logado</strong>. Ou publica e espera a janela, ou reinstala via instalador</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pendencias-na-maquina-de-teste">Pendencias na maquina de teste<a class="headerlink" href="#pendencias-na-maquina-de-teste" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Modo SOS esta <strong>ligado a mao</strong> em <code>watchdog-state.json</code>. O <code>sosRecoveryHeaderCount</code> nunca e
+  incrementado em codigo de producao, entao o SOS <strong>nao sai sozinho</strong> — desligar quando a 1.5.7
+  estiver instalada, senao o agent nunca mais checa update.</li>
+<li><code>C:\ProgramData\ManagerAgent\backups</code> com 3,4GB de tentativas falhas. O <code>PruneOldBackups</code> novo
+  cuida das proximas, mas nao apaga retroativo: limpar a mao (manter as 3 mais recentes).</li>
+<li><code>updates\1.5.6\update.zip</code> (285MB) pode ir junto.</li>
+</ul>
+<h3 id="ainda-nao-verificado-na-maquina">Ainda nao verificado na maquina<a class="headerlink" href="#ainda-nao-verificado-na-maquina" title="Permanent link">&para;</a></h3>
+<p>O aceite do A-39 e do A-40 <strong>so fecha com a 1.5.7 instalada</strong> aplicando um update de verdade.
+Ate la, o que existe e suite verde e leitura de codigo. O teste que importa: publicar a 1.5.8
+de mentira e ver a 1.5.7 aplicar com usuario logado, sem erro de lock.</p>
+<h3 id="pendencia-de-fora-do-agent">Pendencia de fora do Agent<a class="headerlink" href="#pendencia-de-fora-do-agent" title="Permanent link">&para;</a></h3>
+<p><code>StickyVersion</code> / <code>StickyUntil</code> sao gravados pelo <code>RollbackOrchestrator</code> e <strong>nao sao lidos por
+ninguem</strong>. Os "24h sem tentar upgradar" que o comentario promete nao existem. Somar ao backlog.</p>
+<h3 id="aceite-na-maquina-roteiro-pronto-2026-08-18">Aceite na maquina — roteiro pronto (2026-08-18)<a class="headerlink" href="#aceite-na-maquina-roteiro-pronto-2026-08-18" title="Permanent link">&para;</a></h3>
+<p>O aceite do A-39/A-40 tem roteiro proprio: <code>ROTEIRO-VALIDACAO-1.5.7.md</code>. Resumo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.\</span><span class="n">scripts</span><span class="p">\</span><span class="n">build</span><span class="p">\</span><span class="n">build-pacote-e2e</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Version</span> <span class="n">1</span><span class="p">.</span><span class="n">5</span><span class="p">.</span><span class="n">7</span>      <span class="c"># build</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">.\</span><span class="n">scripts</span><span class="p">\</span><span class="n">build</span><span class="p">\</span><span class="nb">install-build</span><span class="n">-local</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Version</span> <span class="n">1</span><span class="p">.</span><span class="n">5</span><span class="p">.</span><span class="n">7</span>   <span class="c"># instala na mao (A-45)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">.\</span><span class="n">scripts</span><span class="p">\</span><span class="n">build</span><span class="p">\</span><span class="n">build-pacote-e2e</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Version</span> <span class="n">1</span><span class="p">.</span><span class="n">5</span><span class="p">.</span><span class="n">99</span> <span class="n">-SkipTests</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">.\</span><span class="n">tests</span><span class="p">\</span><span class="n">e2e</span><span class="p">\</span><span class="n">scenarios</span><span class="p">\</span><span class="n">e8-update-com-usuario-logado</span><span class="p">.</span><span class="n">ps1</span>   <span class="c"># o teste</span>
+</code></pre></div>
+<p>O E8 e in-place: <strong>nao</strong> chama <code>teardown.ps1</code> (que desinstala o agent e apaga
+<code>C:\ProgramData\ManagerAgent</code>, destruindo a vinculacao da maquina de regressivo).</p>
+<h3 id="correcoes-na-harness-de-e2e-ela-nunca-tinha-rodado">Correcoes na harness de E2E — ela nunca tinha rodado<a class="headerlink" href="#correcoes-na-harness-de-e2e-ela-nunca-tinha-rodado" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Efeito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stub nao tinha rota de download</td>
+<td>o ZIP caia no 404 do <code>else</code>; nenhum cenario baixaria update</td>
+</tr>
+<tr>
+<td><code>Stop-Job -Force</code></td>
+<td>parametro inexistente no PS 5.1; o <code>finally</code> de todos os cenarios lancava excecao</td>
+</tr>
+<tr>
+<td>Nao-ASCII em <code>.ps1</code></td>
+<td><strong>3 dos 7 cenarios nao parseavam</strong> (A-05 pela 3a vez)</td>
+</tr>
+<tr>
+<td><code>dist/</code> vazio</td>
+<td>nenhum build do repo escrevia la; <code>build-v-teste.ps1</code> chama script inexistente</td>
+</tr>
+<tr>
+<td><code>MANAGER_UPDATE_CHECK_SECONDS</code></td>
+<td>usado por 3 cenarios, lido por ninguem</td>
+</tr>
+</tbody>
+</table>
+<p>Novos arquivos: <code>scripts/build/build-pacote-e2e.ps1</code>, <code>scripts/build/install-build-local.ps1</code>,
+<code>tests/e2e/scenarios/e8-update-com-usuario-logado.ps1</code>,
+<code>tests/e2e/assertions/assert-no-file-lock-error.ps1</code>,
+<code>tests/e2e/assertions/assert-no-worker-launch-during-update.ps1</code>,
+<code>tests/ManagerAgent.Service.Tests/PowerShellScriptsAreAsciiTests.cs</code>,
+<code>tests/ManagerAgent.Service.Tests/UpdateScriptKillsWorkerTests.cs</code>.</p>
+<p>Suite: <strong>633 testes, 0 falhas</strong>. Os 34 <code>.ps1</code> do repo parseiam.</p>
+<h3 id="revisao-de-2026-08-18-segunda-passada-antes-de-instalar-nada">Revisao de 2026-08-18 (segunda passada, antes de instalar nada)<a class="headerlink" href="#revisao-de-2026-08-18-segunda-passada-antes-de-instalar-nada" title="Permanent link">&para;</a></h3>
+<p>Marcos pediu certeza antes de gastar uma janela de teste. A revisao achou dois defeitos que
+teriam custado exatamente a tentativa-e-erro que ele queria evitar:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Achado</th>
+<th>Sev</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td><strong>A-41 REVISADO</strong> — cooldown por <code>Task.Delay</code> recomeca a cada restart e a flag nunca e apagada: o agent <strong>nunca mais atualizaria</strong></td>
+<td>CRITICO</td>
+<td><strong>FEITO</strong> — idade lida do <code>LastWriteTimeUtc</code>, decisao imediata, flag apagada quando a janela vence</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>A-46</strong> — o agent aplica qualquer versao que o backend mandar, inclusive a que ja roda</td>
+<td>ALTA</td>
+<td><strong>FEITO</strong> — guard de igualdade + 2 testes (um garante que update legitimo continua passando)</td>
+</tr>
+</tbody>
+</table>
+<p>O A-46 nao veio da maquina: veio de escrever o cenario de E2E. O primeiro rascunho do stub
+respondia "ha update" para sempre e teria posto o agent em loop de reinstalacao — o mesmo
+formato do incidente, agora disparavel pelo servidor contra a frota inteira.</p>
+<p>Suite apos as duas correcoes: <strong>638 testes, 0 falhas</strong>. Os 34 <code>.ps1</code> do repo parseiam.</p>
+<h2 id="backlog-da-158-achados-do-regressivo-automatizado-2026-08-19">Backlog da 1.5.8 — achados do regressivo automatizado (2026-08-19)<a class="headerlink" href="#backlog-da-158-achados-do-regressivo-automatizado-2026-08-19" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Achado</th>
+<th>Sev</th>
+<th>Estado</th>
+<th>O que foi feito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>A-48</strong> — reinicio do worker durante ociosidade duplica o evento e deixa linha aberta</td>
+<td>ALTA</td>
+<td><strong>FEITO (2026-08-19)</strong> — review @Tony OK</td>
+<td>O inicio da ociosidade passou a ser persistido em <code>session-state-{sessao}.json</code> e reaproveitado quando o recalculo cai dentro de 5s do valor gravado. Antes, <code>agora - GetLastInputInfo()</code> era recalculado a cada processo e jitterizava ~15ms, o que furava a UNIQUE <code>(agente_id, iniciado_em)</code>. <code>ResetIdleState()</code> limpa o estado — ponto unico, cobre todos os caminhos de fechamento. 10 testes novos</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>A-44 (2a ocorrencia)</strong> — <code>BaseFolderOverride</code> estatico tambem em <code>SessionWorker.Tests</code></td>
+<td>MEDIA</td>
+<td><strong>FEITO (2026-08-19)</strong></td>
+<td>Colecao serial <code>ConfigPaths</code> criada tambem nesta suite. O sintoma e cruel: passa isolado, falha junto</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>A-47</strong> — titulo da janela carrega conteudo digitado</td>
+<td>ALTA</td>
+<td><strong>ABERTO — decisao de @Steve</strong></td>
+<td>LGPD. Confirmado em staging. Nao implementar sem decisao de produto: sanitizar titulo de editor tem custo</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>A-49</strong> — uma linha em <code>agentes</code> por versao instalada</td>
+<td>ALTA</td>
+<td><strong>ABERTO — @Thor/@Shuri</strong></td>
+<td>12 registros para a maquina de regressivo. Fragmenta historico do colaborador</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>A-50</strong> — <code>IntervaloSinalVidaSegundos</code> do appsettings nao chega na opcao</td>
+<td>MEDIA</td>
+<td><strong>ABERTO</strong></td>
+<td>Config diz 120s, efetivo e 60s</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Memoria acima do criterio do roteiro</td>
+<td>—</td>
+<td><strong>A INVESTIGAR</strong></td>
+<td>138MB contra o limite de 100MB. Medir <code>PrivateMemorySize64</code> por horas antes de concluir</td>
+</tr>
+</tbody>
+</table>
+<p>Suite: <strong>648 testes, 0 falhas</strong>.</p>
+<h3 id="limpeza-de-dados-pendente-nao-feita-banco-e-somente-leitura">Limpeza de dados pendente (nao feita — banco e somente leitura)<a class="headerlink" href="#limpeza-de-dados-pendente-nao-feita-banco-e-somente-leitura" title="Permanent link">&para;</a></h3>
+<p>A varredura de 7 dias encontrou <strong>33 ociosidades</strong> e <strong>27 janelas</strong> abertas ha mais de 30min,
+resquicio do A-48 e do A-35. O fix impede novas, mas nao fecha as existentes. Decidir com
+@Thor se vale um script de fechamento retroativo — enquanto elas existirem, os pilares
+Atividade e Saude leem tempo que nao aconteceu.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

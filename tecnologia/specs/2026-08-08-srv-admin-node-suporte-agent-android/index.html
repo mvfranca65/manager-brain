@@ -1,0 +1,2160 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/specs/2026-08-08-srv-admin-node-suporte-agent-android/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>2026 08 08 srv admin node suporte agent android - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#srv-admin-node-suporte-agent-android-byod" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2026 08 08 srv admin node suporte agent android
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Contexto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Escopo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Escopo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-dentro-do-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Dentro do escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-fora-do-escopo-rodadas-futuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Fora do escopo (rodadas futuras)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-alteracoes-de-schema-drizzle-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Alterações de schema (Drizzle migrations)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Alterações de schema (Drizzle migrations)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-migration-1-agentesdispositivo_tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Migration 1 — agentes.dispositivo_tipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-migration-2-versoes_agentesistema_operacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Migration 2 — versoes_agente.sistema_operacional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-enum-ts-canonico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Enum TS canônico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-alteracoes-por-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Alterações por endpoint
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Alterações por endpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-post-apiagentedispositivosvincular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 POST /api/agente/dispositivos/vincular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-get-apiagenteatualizacoesverificar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 GET /api/agente/atualizacoes/verificar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-post-apiagenteatualizacoesresultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 POST /api/agente/atualizacoes/resultado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-post-apiagenteauditoriaregistrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 POST /api/agente/auditoria/registrar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-post-apiagenterror-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 POST /api/agent/error-report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-post-apiagentev1colaboradoresvalidar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 POST /api/agente/v1/colaboradores/validar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-post-apiagenteauthrefresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 POST /api/agente/auth/refresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-header-x-agent-revoked-novo-em-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Header X-Agent-Revoked (novo — em responses)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fluxo-end-to-end-do-agent-android-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Fluxo end-to-end do Agent Android (referência)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-testes-de-contrato-parity-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Testes de contrato (parity + fixtures)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ordem-de-implementacao-sugerida-para-shuri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ordem de implementação sugerida (para @Shuri)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Definition of Done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-dependencias-e-riscos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Dependências e riscos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-referencias-cruzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Referências cruzadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-fora-do-escopo-mapeamento-para-rodadas-futuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Fora do escopo — mapeamento para rodadas futuras
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<blockquote>
+<p><strong>STATUS:</strong> ATIVA — aguardando execução por @Shuri
+<strong>DATA:</strong> 2026-08-08
+<strong>DONO ARQUITETURAL:</strong> @Tony
+<strong>EXECUTOR:</strong> @Shuri (dona técnica do srv-admin-node)
+<strong>DEPENDÊNCIA:</strong> habilitador da spec <code>.brain/tecnologia/specs/2026-08-08-agent-android-byod-mvp-design.md</code>
+<strong>PREMISSA:</strong> deve estar 100% em produção <strong>antes</strong> do desenvolvimento do Agent Android começar (regra Marcos 2026-08-08)</p>
+</blockquote>
+<h1 id="srv-admin-node-suporte-agent-android-byod">srv-admin-node — Suporte Agent Android BYOD<a class="headerlink" href="#srv-admin-node-suporte-agent-android-byod" title="Permanent link">&para;</a></h1>
+<h2 id="1-contexto">1. Contexto<a class="headerlink" href="#1-contexto" title="Permanent link">&para;</a></h2>
+<p>O Agent Desktop Manager está sendo estendido pra Android BYOD (celular pessoal do colaborador). Todo o código do Android está desenhado pra usar <strong>os endpoints do srv-admin que já existem no Java</strong> — o srv-admin-node (em migração pela @Shuri) precisa nascer com esses endpoints já estendidos pra aceitar:</p>
+<ul>
+<li>Novos campos que identificam origem Android (<code>dispositivoTipo=ANDROID</code>, SO rico com fabricante+modelo)</li>
+<li>Novos tipos de audit event (<code>AGENT_INSTALADO_ANDROID</code>, <code>ACCESSIBILITY_ATIVADA</code>, <code>OEM_PROBLEMATICO_DETECTADO</code>, etc.)</li>
+<li>Novo tipo de crash (<code>ANR</code> — Android specific)</li>
+<li>Filtro de versão por sistema operacional (Android tem seu próprio APK, Windows seu próprio EXE)</li>
+<li>Header <code>X-Agent-Revoked: true</code> em respostas 403 quando gestor revogou o Agent Mobile</li>
+</ul>
+<p>Não há <strong>novos endpoints</strong> — só <strong>estender contratos existentes</strong>. Alterações de código isoladas e cirúrgicas.</p>
+<h2 id="2-escopo">2. Escopo<a class="headerlink" href="#2-escopo" title="Permanent link">&para;</a></h2>
+<h3 id="21-dentro-do-escopo">2.1 Dentro do escopo<a class="headerlink" href="#21-dentro-do-escopo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Extensão de 7 endpoints REST (todos já existem no Java atual)</li>
+<li>2 migrations Drizzle (colunas em <code>agentes</code> e <code>versoes_agente</code>)</li>
+<li>1 novo enum TS: <code>TipoDispositivo</code></li>
+<li>11 novos audit events + 1 novo tipo de crash suportados</li>
+<li>Header <code>X-Agent-Revoked</code> na resposta 403</li>
+<li>Testes de contrato (parity com Java quando aplicável) + testes unitários novos</li>
+</ul>
+<h3 id="22-fora-do-escopo-rodadas-futuras">2.2 Fora do escopo (rodadas futuras)<a class="headerlink" href="#22-fora-do-escopo-rodadas-futuras" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Portal com botão "Baixar APK Android" (rodada futura Marcos)</li>
+<li>Pipeline server-side de re-empacotamento de APK personalizado (rodada futura)</li>
+<li>Endpoint <code>POST /api/agente/logs/upload</code> (rodada futura)</li>
+<li><code>GET /api/agente/config</code> estendido com <code>enviarLogsAte</code>/<code>logLevel</code> dinâmico (rodada futura)</li>
+<li>Alterações no fluxo de emissão de Device JWT (mantém idêntico ao Java atual)</li>
+</ul>
+<h2 id="3-alteracoes-de-schema-drizzle-migrations">3. Alterações de schema (Drizzle migrations)<a class="headerlink" href="#3-alteracoes-de-schema-drizzle-migrations" title="Permanent link">&para;</a></h2>
+<h3 id="31-migration-1-agentesdispositivo_tipo">3.1 Migration 1 — <code>agentes.dispositivo_tipo</code><a class="headerlink" href="#31-migration-1-agentesdispositivo_tipo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">agentes</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">dispositivo_tipo</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">'WINDOWS'</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">agentes</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">chk_agentes_dispositivo_tipo</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">dispositivo_tipo</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'WINDOWS'</span><span class="p">,</span><span class="w"> </span><span class="s1">'MACOS'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ANDROID'</span><span class="p">,</span><span class="w"> </span><span class="s1">'IOS'</span><span class="p">));</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_agentes_dispositivo_tipo</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="k">ON</span><span class="w"> </span><span class="n">agentes</span><span class="p">(</span><span class="n">empresa_id</span><span class="p">,</span><span class="w"> </span><span class="n">dispositivo_tipo</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">desvinculado_em</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
+<p>Rationale: <code>DEFAULT 'WINDOWS'</code> preserva compat com Agents Windows existentes (que continuarão a existir e não conhecem esse campo). Novos vínculos vindos do Android setam <code>ANDROID</code>. Index parcial cobre queries "quantos agentes Android ativos por empresa" comuns na Home API.</p>
+<h3 id="32-migration-2-versoes_agentesistema_operacional">3.2 Migration 2 — <code>versoes_agente.sistema_operacional</code><a class="headerlink" href="#32-migration-2-versoes_agentesistema_operacional" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">versoes_agente</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">sistema_operacional</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">'WINDOWS'</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">versoes_agente</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">chk_versoes_agente_sistema_operacional</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">sistema_operacional</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'WINDOWS'</span><span class="p">,</span><span class="w"> </span><span class="s1">'MACOS'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ANDROID'</span><span class="p">,</span><span class="w"> </span><span class="s1">'IOS'</span><span class="p">));</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">-- Drop UNIQUE antigo (se existir) e recria com sistema_operacional</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">-- Confirmar constraint atual antes de dropar</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">versoes_agente</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">versoes_agente_versao_key</span><span class="p">;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">versoes_agente</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">uq_versoes_agente_versao_so</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">versao</span><span class="p">,</span><span class="w"> </span><span class="n">sistema_operacional</span><span class="p">);</span>
+</code></pre></div>
+<p>Rationale: Windows e Android compartilham <code>versoes_agente</code> mas cada um tem sua sequência independente de versões (1.4.5 Windows ≠ 1.4.5 Android). UNIQUE composto <code>(versao, sistema_operacional)</code> permite ambos.</p>
+<h3 id="33-enum-ts-canonico">3.3 Enum TS canônico<a class="headerlink" href="#33-enum-ts-canonico" title="Permanent link">&para;</a></h3>
+<p>Criar <code>src/enums/tipo-dispositivo.enum.ts</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">TipoDispositivo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nx">WINDOWS</span><span class="o">:</span><span class="w"> </span><span class="s1">'WINDOWS'</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nx">MACOS</span><span class="o">:</span><span class="w"> </span><span class="s1">'MACOS'</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nx">ANDROID</span><span class="o">:</span><span class="w"> </span><span class="s1">'ANDROID'</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nx">IOS</span><span class="o">:</span><span class="w"> </span><span class="s1">'IOS'</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="kd">const</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">export</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">TipoDispositivo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">TipoDispositivo</span><span class="p">[</span><span class="nx">keyof</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">TipoDispositivo</span><span class="p">];</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">TiposDispositivoAceitos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">TipoDispositivo</span><span class="p">));</span>
+</code></pre></div>
+<p>Nota alinhada com regra <code>feedback_enum_novo_backend_antes.md</code>: o valor <code>ANDROID</code> PRECISA estar no enum backend antes do Agent Android ser lançado, senão <code>TypingPattern.valueOf</code> (Java equivalente) cai em catch silencioso e corrompe dado.</p>
+<h2 id="4-alteracoes-por-endpoint">4. Alterações por endpoint<a class="headerlink" href="#4-alteracoes-por-endpoint" title="Permanent link">&para;</a></h2>
+<h3 id="41-post-apiagentedispositivosvincular">4.1 <code>POST /api/agente/dispositivos/vincular</code><a class="headerlink" href="#41-post-apiagentedispositivosvincular" title="Permanent link">&para;</a></h3>
+<p><strong>Estado atual (Java):</strong> aceita <code>identificador</code>, <code>instalacaoId</code>, <code>maquinaId</code>, <code>nomeMaquina</code>, <code>versaoAgente</code>, <code>descricaoSo</code> via body + <code>X-Ativacao-Key</code> no header. Retorna <code>agenteId</code>, <code>usuarioId</code>, <code>deviceToken</code>, <code>refreshToken</code>.</p>
+<p><strong>Alteração no Node:</strong></p>
+<ul>
+<li><strong>Body ganha campo obrigatório <code>dispositivoTipo</code></strong> — validar contra <code>TiposDispositivoAceitos</code>. Se ausente/inválido: HTTP 400 <code>{ codigo: "DISPOSITIVO_TIPO_INVALIDO", mensagem: "Campo dispositivoTipo obrigatório: WINDOWS, MACOS, ANDROID, IOS" }</code></li>
+<li><strong>Persistir <code>dispositivo_tipo</code> em <code>agentes</code></strong> durante o INSERT/UPSERT</li>
+<li><strong>Nenhuma outra mudança de contrato</strong> — mesma resposta, mesmo status codes, mesmo JWT emitido</li>
+</ul>
+<p><strong>DTO Zod novo:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">VincularAgenteBodyDto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="nx">object</span><span class="p">({</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">identificador</span><span class="o">:</span><span class="w"> </span><span class="kt">z.string</span><span class="p">().</span><span class="nx">min</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">max</span><span class="p">(</span><span class="mf">64</span><span class="p">),</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nx">instalacaoId</span><span class="o">:</span><span class="w"> </span><span class="kt">z.string</span><span class="p">().</span><span class="nx">uuid</span><span class="p">(),</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nx">maquinaId</span><span class="o">:</span><span class="w"> </span><span class="kt">z.string</span><span class="p">().</span><span class="nx">min</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">max</span><span class="p">(</span><span class="mf">255</span><span class="p">),</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nx">nomeMaquina</span><span class="o">:</span><span class="w"> </span><span class="kt">z.string</span><span class="p">().</span><span class="nx">min</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">max</span><span class="p">(</span><span class="mf">255</span><span class="p">),</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nx">versaoAgente</span><span class="o">:</span><span class="w"> </span><span class="kt">z.string</span><span class="p">().</span><span class="nx">min</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">max</span><span class="p">(</span><span class="mf">50</span><span class="p">),</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nx">descricaoSo</span><span class="o">:</span><span class="w"> </span><span class="kt">z.string</span><span class="p">().</span><span class="nx">min</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">max</span><span class="p">(</span><span class="mf">255</span><span class="p">),</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nx">dispositivoTipo</span><span class="o">:</span><span class="w"> </span><span class="kt">z.enum</span><span class="p">([</span><span class="s1">'WINDOWS'</span><span class="p">,</span><span class="w"> </span><span class="s1">'MACOS'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ANDROID'</span><span class="p">,</span><span class="w"> </span><span class="s1">'IOS'</span><span class="p">]),</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">});</span>
+</code></pre></div>
+<p><strong>Testes de aceitação:</strong></p>
+<ol>
+<li>Vincular com <code>dispositivoTipo=ANDROID</code> cria row em <code>agentes</code> com <code>dispositivo_tipo=ANDROID</code></li>
+<li>Vincular sem <code>dispositivoTipo</code> → HTTP 400</li>
+<li>Vincular com <code>dispositivoTipo="foo"</code> → HTTP 400 + código <code>DISPOSITIVO_TIPO_INVALIDO</code></li>
+<li>Vincular com <code>dispositivoTipo=WINDOWS</code> continua funcionando (Agent Windows existente)</li>
+<li>Re-vincular mesmo <code>maquinaId + empresa_id</code> (após desvincular) atualiza <code>dispositivo_tipo</code> (não cria duplicado — respeita índice parcial <code>idx_agentes_empresa_maquina_ativo</code>)</li>
+</ol>
+<p><strong>Contract test cross-service:</strong> payload do Agent Android (fixture em <code>test/fixtures/vincular-android.json</code>) deve ser aceito 100%.</p>
+<hr />
+<h3 id="42-get-apiagenteatualizacoesverificar">4.2 <code>GET /api/agente/atualizacoes/verificar</code><a class="headerlink" href="#42-get-apiagenteatualizacoesverificar" title="Permanent link">&para;</a></h3>
+<p><strong>Estado atual (Java):</strong> query opcional <code>versaoAtual</code>, retorna se há atualização disponível. Não filtra por SO — retorna a última versão ativa (assumindo Windows implicitamente).</p>
+<p><strong>Alteração no Node:</strong></p>
+<ul>
+<li><strong>Query obrigatória <code>sistemaOperacional</code></strong> — validar contra <code>TiposDispositivoAceitos</code>. Se ausente: HTTP 400 <code>{ codigo: "SISTEMA_OPERACIONAL_OBRIGATORIO" }</code></li>
+<li><strong>Query obrigatória <code>versaoAtual</code></strong> — string livre (compara semver-ish)</li>
+<li><strong>Backend filtra <code>versoes_agente</code> por <code>sistema_operacional</code></strong> — retorna a última versão ativa do SO indicado</li>
+<li><strong>Auth:</strong> endpoint aceita tanto <code>X-Ativacao-Key</code> quanto Device JWT (compat Windows atual)</li>
+</ul>
+<p><strong>Response:</strong> mesmo shape atual:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">"atualizacaoDisponivel"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">"versaoNova"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.1"</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">"urlDownload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://apk.imanager.trivion.com.br/updates/prod/1.0.1.apk"</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nt">"checksumSha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123..."</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nt">"obrigatoria"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>DTO Zod:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">VerificarAtualizacaoQueryDto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">z</span><span class="p">.</span><span class="nx">object</span><span class="p">({</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nx">sistemaOperacional</span><span class="o">:</span><span class="w"> </span><span class="kt">z.enum</span><span class="p">([</span><span class="s1">'WINDOWS'</span><span class="p">,</span><span class="w"> </span><span class="s1">'MACOS'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ANDROID'</span><span class="p">,</span><span class="w"> </span><span class="s1">'IOS'</span><span class="p">]),</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nx">versaoAtual</span><span class="o">:</span><span class="w"> </span><span class="kt">z.string</span><span class="p">().</span><span class="nx">min</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">max</span><span class="p">(</span><span class="mf">50</span><span class="p">),</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">});</span>
+</code></pre></div>
+<p><strong>Testes de aceitação:</strong></p>
+<ol>
+<li><code>?sistemaOperacional=ANDROID&amp;versaoAtual=1.0.0</code> retorna a última versão Android ativa</li>
+<li><code>?sistemaOperacional=WINDOWS&amp;versaoAtual=1.4.4</code> retorna a última versão Windows ativa</li>
+<li>Sem <code>sistemaOperacional</code> → HTTP 400</li>
+<li><code>sistemaOperacional=ANDROID</code> mas nenhuma versão Android publicada → <code>{ atualizacaoDisponivel: false }</code></li>
+<li><code>versaoAtual == versaoNova</code> → <code>{ atualizacaoDisponivel: false }</code></li>
+</ol>
+<hr />
+<h3 id="43-post-apiagenteatualizacoesresultado">4.3 <code>POST /api/agente/atualizacoes/resultado</code><a class="headerlink" href="#43-post-apiagenteatualizacoesresultado" title="Permanent link">&para;</a></h3>
+<p><strong>Estado atual (Java):</strong> aceita <code>{ versaoTentada, sucesso, motivoErro? }</code>. Auth Device JWT.</p>
+<p><strong>Alteração no Node:</strong></p>
+<ul>
+<li><strong>Nenhuma mudança de contrato</strong> — Android usa idêntico ao Windows.</li>
+<li><strong>Persistência:</strong> logar em <code>audit_events</code> com <code>evento = 'UPDATE_RESULT'</code>, <code>detalhes = { versaoTentada, sucesso, motivoErro, sistemaOperacional }</code> — o <code>sistemaOperacional</code> sai do agente (JOIN em <code>agentes.dispositivo_tipo</code>).</li>
+</ul>
+<p><strong>Testes de aceitação:</strong></p>
+<ol>
+<li>POST com <code>{sucesso: true, versaoTentada: "1.0.1"}</code> de agente Android → audit event registrado com <code>sistemaOperacional=ANDROID</code></li>
+<li>POST com <code>{sucesso: false, motivoErro: "CHECKSUM_MISMATCH"}</code> → audit event registrado</li>
+</ol>
+<hr />
+<h3 id="44-post-apiagenteauditoriaregistrar">4.4 <code>POST /api/agente/auditoria/registrar</code><a class="headerlink" href="#44-post-apiagenteauditoriaregistrar" title="Permanent link">&para;</a></h3>
+<p><strong>Estado atual (Java):</strong> aceita <code>{ evento, instalacaoId, agenteId, timestampUtc, dados }</code>. Fire-and-forget, Bearer Device JWT. Persiste em <code>audit_events</code>.</p>
+<p><strong>Alteração no Node:</strong></p>
+<ul>
+<li><strong>Contrato inalterado.</strong></li>
+<li><strong>Aceitar 11 novos valores de <code>evento</code> sem rejeitar:</strong> o backend não deve validar enum de <code>evento</code> — aceita string livre e persiste. Isso já é o comportamento atual e deve ser preservado.</li>
+<li><strong>Documentar (Swagger) os novos eventos Android-específicos</strong> com <code>@ApiProperty</code> no exemplo:</li>
+</ul>
+<p>Lista dos novos audit events Android (só documentação — backend não valida):</p>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Contexto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AGENT_INSTALADO_ANDROID</code></td>
+<td>Primeira execução pós-install</td>
+</tr>
+<tr>
+<td><code>TERMOS_ACEITOS_ANDROID</code></td>
+<td>Colaborador aceitou termo individual na 1ª tela</td>
+</tr>
+<tr>
+<td><code>AGENT_VINCULADO_ANDROID</code></td>
+<td>Vinculação bem-sucedida</td>
+</tr>
+<tr>
+<td><code>AGENT_VINCULACAO_FALHOU_ANDROID</code></td>
+<td>Vinculação falhou (com <code>dados.motivo</code>)</td>
+</tr>
+<tr>
+<td><code>ACCESSIBILITY_ATIVADA</code></td>
+<td>Colaborador ativou AccessibilityService em Settings</td>
+</tr>
+<tr>
+<td><code>ACCESSIBILITY_DESATIVADA</code></td>
+<td>Colaborador desativou (perda de coleta iminente)</td>
+</tr>
+<tr>
+<td><code>USAGE_STATS_ATIVADA</code></td>
+<td>Colaborador ativou UsageStats permission</td>
+</tr>
+<tr>
+<td><code>USAGE_STATS_DESATIVADA</code></td>
+<td>Colaborador desativou</td>
+</tr>
+<tr>
+<td><code>OEM_PROBLEMATICO_DETECTADO</code></td>
+<td>Xiaomi/Huawei/Oppo detectado + status (<code>dados.fabricante</code>)</td>
+</tr>
+<tr>
+<td><code>SERVICE_MORTO_E_REINICIADO</code></td>
+<td>Watchdog reviveu ForegroundService</td>
+</tr>
+<tr>
+<td><code>AGENT_REVOGADO_ANDROID</code></td>
+<td>Última mensagem antes de parar coleta (backend retornou 403)</td>
+</tr>
+<tr>
+<td><code>UPDATE_INICIADO_ANDROID</code></td>
+<td>Download de atualização começou</td>
+</tr>
+<tr>
+<td><code>UPDATE_SUCESSO_ANDROID</code></td>
+<td>Atualização instalada com sucesso</td>
+</tr>
+<tr>
+<td><code>UPDATE_FALHOU_ANDROID</code></td>
+<td>Atualização falhou (com <code>dados.motivo</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Testes de aceitação:</strong></p>
+<ol>
+<li>POST audit <code>evento=OEM_PROBLEMATICO_DETECTADO</code>, <code>dados={fabricante: "XIAOMI"}</code> → persiste em <code>audit_events</code></li>
+<li>POST audit <code>evento=ACCESSIBILITY_DESATIVADA</code> sem <code>dados</code> → persiste com <code>dados = {}</code></li>
+<li>POST audit sem <code>agenteId</code> no body → HTTP 400 (comportamento existente Java, manter)</li>
+<li>POST audit com string <code>evento</code> não listada acima (<code>evento=EVENTO_INVENTADO</code>) → aceita e persiste (backend não valida enum)</li>
+</ol>
+<hr />
+<h3 id="45-post-apiagenterror-report">4.5 <code>POST /api/agent/error-report</code><a class="headerlink" href="#45-post-apiagenterror-report" title="Permanent link">&para;</a></h3>
+<p><strong>Estado atual (Java):</strong> aceita <code>{ tipo, mensagem, stackTrace, versao, sistemaOperacional, maquina, colaboradorId, cnpj }</code>. 18 tipos existentes (FATAL_CRASH, UPDATE_CRASH, TOKEN_REFRESH_FAILED, etc.). Throttle 5min por tipo (side backend? confirmar). Sem Sentry.</p>
+<p><strong>Alteração no Node:</strong></p>
+<ul>
+<li><strong>Contrato inalterado</strong> — mesmo shape.</li>
+<li><strong>Adicionar <code>ANR</code> como tipo aceito</strong> (Android-specific). Documentar no Swagger.</li>
+<li><strong><code>sistemaOperacional</code> no body agora aceita string livre</strong> (<code>"Android 13 (API 33)"</code> ou <code>"Windows 11 Pro"</code>). Não validar contra enum — dado histórico Windows tem strings variadas.</li>
+<li><strong><code>cnpj</code> no body:</strong> já extraído do JWT no Java atual? Confirmar. Se sim, ignorar body e usar JWT. Se não, deixar como está.</li>
+</ul>
+<p><strong>Testes de aceitação:</strong></p>
+<ol>
+<li>POST <code>tipo=ANR</code>, <code>mensagem="Main thread blocked 6000ms"</code> de agente Android → persiste em <code>audit_events</code> ou tabela dedicada (mesma tabela que Windows usa hoje)</li>
+<li>POST <code>tipo=FATAL_CRASH</code> de agente Android com <code>sistemaOperacional="Android 14"</code> → persiste</li>
+<li>Throttle 5min: 3 POSTs consecutivos do mesmo <code>tipo</code> do mesmo agente dentro de 5min → apenas 1 registrado (comportamento existente Java, manter)</li>
+</ol>
+<hr />
+<h3 id="46-post-apiagentev1colaboradoresvalidar">4.6 <code>POST /api/agente/v1/colaboradores/validar</code><a class="headerlink" href="#46-post-apiagentev1colaboradoresvalidar" title="Permanent link">&para;</a></h3>
+<p><strong>Estado atual (Java):</strong> aceita <code>{ identificador, tipoIdentificador? }</code> via body + <code>X-Ativacao-Key</code> header. Retorna <code>{ existe, usuarioId?, nomeCompleto?, mensagem? }</code>.</p>
+<p><strong>Alteração no Node:</strong></p>
+<ul>
+<li><strong>Nenhuma mudança</strong> — Android usa idêntico ao Windows.</li>
+<li><strong>Confirmar</strong> que a busca por identificador é case-insensitive (<code>ux_usuarios_empresa_identificador_ci</code> no schema).</li>
+<li><strong>Confirmar</strong> que retorna <code>false</code> para colaborador sem <code>acessa_agent_mobile=true</code> (se essa flag existir — checar com @Steve na rodada futura). Por enquanto: retorna <code>true</code> se colaborador existe e está ativo.</li>
+</ul>
+<p><strong>Testes de aceitação:</strong></p>
+<ol>
+<li>Validar identificador existente → <code>{existe: true, usuarioId: N, nomeCompleto: "..."}</code></li>
+<li>Validar identificador inexistente → <code>{existe: false, mensagem: "..."}</code></li>
+<li>Chave de ativação inválida → HTTP 401</li>
+</ol>
+<hr />
+<h3 id="47-post-apiagenteauthrefresh">4.7 <code>POST /api/agente/auth/refresh</code><a class="headerlink" href="#47-post-apiagenteauthrefresh" title="Permanent link">&para;</a></h3>
+<p><strong>Estado atual (Java):</strong> aceita <code>{ refreshToken }</code>, retorna <code>{ deviceToken, refreshToken }</code> (rotation). Detecção de theft: reutilização de token revogado invalida todos os tokens da instalação.</p>
+<p><strong>Alteração no Node:</strong></p>
+<ul>
+<li><strong>Nenhuma mudança</strong> — Android usa idêntico ao Windows.</li>
+<li><strong>Herdar UPDATE atômico</strong> (regra da @Shuri no <code>jwt-contract.md</code> §6.4 — <code>UPDATE ... WHERE revoked_at IS NULL RETURNING</code>) pra evitar falso <code>TOKEN_THEFT_DETECTED</code> em race condition.</li>
+</ul>
+<p><strong>Testes de aceitação:</strong></p>
+<ol>
+<li>Refresh com token válido → novo par emitido, antigo revogado</li>
+<li>Reutilização de token revogado → HTTP 401 + audit <code>TOKEN_THEFT_DETECTED</code> + revoga todos os tokens do agente</li>
+<li>Refresh de agente Android funciona idêntico ao Windows</li>
+</ol>
+<hr />
+<h3 id="48-header-x-agent-revoked-novo-em-responses">4.8 Header <code>X-Agent-Revoked</code> (novo — em responses)<a class="headerlink" href="#48-header-x-agent-revoked-novo-em-responses" title="Permanent link">&para;</a></h3>
+<p><strong>Contexto:</strong> quando o Marcos/gestor revoga o Agent Mobile do colaborador via portal (rodada futura), o backend precisa avisar o APK Android pra ele <strong>parar de coletar</strong> silenciosamente e ficar dormente.</p>
+<p><strong>Novo comportamento:</strong></p>
+<ul>
+<li><strong>Endpoint afetado:</strong> todos os endpoints autenticados por Device JWT (basicamente todos exceto vincular/validar).</li>
+<li><strong>Trigger:</strong> se o agente estiver marcado como <code>revogado_em IS NOT NULL</code> na tabela <code>agentes</code> (nova coluna futura, mapeada abaixo), o middleware Node responde:</li>
+<li>HTTP status <strong>403</strong></li>
+<li>Header <strong><code>X-Agent-Revoked: true</code></strong></li>
+<li>Body <code>{ codigo: "AGENT_REVOGADO", mensagem: "Este agente foi revogado. Coleta encerrada." }</code></li>
+</ul>
+<p><strong>Migration adicional (opcional MVP — pode ficar pra rodada futura de revogação self-service):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">agentes</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">revogado_em</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>
+<p>Nota: nesta rodada, coluna e header ficam <strong>implementados</strong> mas o mecanismo que <strong>seta</strong> <code>revogado_em</code> (endpoint <code>POST /api/v1/agent-mobile/revogar</code> chamado pelo colaborador via portal) fica pra rodada futura. Vale implementar agora pra APK Android já reagir corretamente quando o feature de revogação existir.</p>
+<p><strong>DTO Zod pra middleware:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// src/agent/middleware/revocation-check.middleware.ts</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">checkRevocation</span><span class="p">(</span><span class="nx">agenteId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="o">:</span><span class="w"> </span><span class="kt">Response</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">agente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">select</span><span class="p">().</span><span class="kr">from</span><span class="p">(</span><span class="nx">agentes</span><span class="p">).</span><span class="nx">where</span><span class="p">(</span><span class="nx">eq</span><span class="p">(</span><span class="nx">agentes</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">agenteId</span><span class="p">)).</span><span class="nx">limit</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">agente</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="o">?</span><span class="p">.</span><span class="nx">revogadoEm</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">'X-Agent-Revoked'</span><span class="p">,</span><span class="w"> </span><span class="s1">'true'</span><span class="p">);</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">403</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">codigo</span><span class="o">:</span><span class="w"> </span><span class="s1">'AGENT_REVOGADO'</span><span class="p">,</span><span class="w"> </span><span class="nx">mensagem</span><span class="o">:</span><span class="w"> </span><span class="s1">'Este agente foi revogado. Coleta encerrada.'</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Testes de aceitação:</strong></p>
+<ol>
+<li>Agente com <code>revogado_em=NULL</code> → requests passam normalmente</li>
+<li>Agente com <code>revogado_em=NOW()</code> → HTTP 403 + <code>X-Agent-Revoked: true</code> em qualquer endpoint autenticado</li>
+<li>Após 403, próximo request também retorna 403 (idempotente)</li>
+</ol>
+<hr />
+<h2 id="5-fluxo-end-to-end-do-agent-android-referencia">5. Fluxo end-to-end do Agent Android (referência)<a class="headerlink" href="#5-fluxo-end-to-end-do-agent-android-referencia" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>1. APK dispara POST /api/agente/v1/colaboradores/validar (X-Ativacao-Key)
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>   → resposta {existe: true}
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2. APK dispara POST /api/agente/dispositivos/vincular (X-Ativacao-Key)
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>   → body inclui dispositivoTipo=ANDROID
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>   → resposta {agenteId, usuarioId, deviceToken, refreshToken}
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>3. APK começa a coletar eventos
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>4. A cada 15min APK dispara POST /api/agent/events (srv-events-node, Device JWT)
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>5. A cada 6h APK dispara GET /api/agente/atualizacoes/verificar?sistemaOperacional=ANDROID&amp;versaoAtual=...
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>6. Sob demanda APK dispara POST /api/agente/auditoria/registrar (eventos AGENT_INSTALADO_ANDROID, etc.)
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>7. Em crash APK dispara POST /api/agent/error-report (tipo ANR/FATAL_CRASH)
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>8. Quando Device JWT expira APK dispara POST /api/agente/auth/refresh
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>9. Após install de update APK dispara POST /api/agente/atualizacoes/resultado
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>10. Se gestor revoga (futuro) → próximo request retorna 403 + X-Agent-Revoked → APK para de coletar
+</code></pre></div>
+<h2 id="6-testes-de-contrato-parity-fixtures">6. Testes de contrato (parity + fixtures)<a class="headerlink" href="#6-testes-de-contrato-parity-fixtures" title="Permanent link">&para;</a></h2>
+<p>Adicionar em <code>test/fixtures/</code>:</p>
+<ul>
+<li><code>vincular-android-request.json</code> — payload que APK Android envia</li>
+<li><code>vincular-android-response.json</code> — resposta esperada</li>
+<li><code>audit-android-events.json</code> — array com os 11 audit events Android + payloads exemplo</li>
+<li><code>error-report-anr.json</code> — payload de ANR</li>
+</ul>
+<p>Rodar contra srv-admin-node e validar contratos idênticos aos que o APK espera (documentados em <code>.brain/tecnologia/plans/2026-08-08-agent-android-byod-mvp.md</code> T29, T38, T39).</p>
+<h2 id="7-ordem-de-implementacao-sugerida-para-shuri">7. Ordem de implementação sugerida (para @Shuri)<a class="headerlink" href="#7-ordem-de-implementacao-sugerida-para-shuri" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Migrations Drizzle</strong> (schema-drift-report.md) — <code>dispositivo_tipo</code>, <code>sistema_operacional</code>, <code>revogado_em</code></li>
+<li><strong>Enum <code>TipoDispositivo</code></strong> (<code>src/enums/tipo-dispositivo.enum.ts</code>)</li>
+<li><strong>Zod DTO extension</strong> (<code>VincularAgenteBodyDto</code>, <code>VerificarAtualizacaoQueryDto</code>)</li>
+<li><strong>Service <code>AgentesService.vincular</code></strong> — persistir <code>dispositivo_tipo</code></li>
+<li><strong>Service <code>VersoesAgenteService.buscarMaisRecente(so)</code></strong> — filtro por SO</li>
+<li><strong>Middleware <code>RevocationCheckMiddleware</code></strong> — 403 + header</li>
+<li><strong>Testes de contrato + parity + unit</strong> — cobrir cada caso listado nas seções 4.1-4.8</li>
+<li><strong>Swagger docs</strong> — atualizar <code>@ApiOperation</code> de cada endpoint alterado com exemplos Android</li>
+</ol>
+<h2 id="8-definition-of-done">8. Definition of Done<a class="headerlink" href="#8-definition-of-done" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] Migrations aplicadas em staging + validadas</li>
+<li>[ ] 7 endpoints estendidos conforme seção 4</li>
+<li>[ ] Header <code>X-Agent-Revoked</code> implementado com middleware</li>
+<li>[ ] Enum <code>TipoDispositivo</code> + Zod DTOs criados</li>
+<li>[ ] Cobertura linha ≥80% + branch ≥95% nos arquivos alterados</li>
+<li>[ ] Fixtures em <code>test/fixtures/</code> cobrindo cenários Android</li>
+<li>[ ] Parity runner passa (contratos idênticos ao Java quando aplicável)</li>
+<li>[ ] Swagger atualizado com exemplos Android em cada endpoint</li>
+<li>[ ] Deploy staging + smoke test manual: vincular Agent Windows continua funcionando (regressão)</li>
+<li>[ ] Deploy prod aprovado por Marcos</li>
+</ul>
+<h2 id="9-dependencias-e-riscos">9. Dependências e riscos<a class="headerlink" href="#9-dependencias-e-riscos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dep/Risco</th>
+<th>Mitigação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regressão Windows (Agent existente quebra)</td>
+<td>Testes de contrato + parity runner mantidos; <code>dispositivo_tipo</code> tem DEFAULT <code>WINDOWS</code></td>
+</tr>
+<tr>
+<td>UNIQUE <code>(versao, sistema_operacional)</code> quebra se houver linha duplicada no legado</td>
+<td>Query auditoria antes da migration: <code>SELECT versao, COUNT(*) FROM versoes_agente GROUP BY versao HAVING COUNT(*) &gt; 1;</code> — se retornar linhas, resolver antes</td>
+</tr>
+<tr>
+<td>Race condition no refresh token durante migração</td>
+<td>Aplicar UPDATE atômico (<code>jwt-contract.md</code> §6.4) desde o dia 1 no Node</td>
+</tr>
+<tr>
+<td>Enum <code>ANDROID</code> chegar no Agent antes do backend suportar</td>
+<td>Ordem inegociável: srv-admin-node em PROD com essa spec ANTES do dev Android começar T29 (vinculação). Regra <code>feedback_enum_novo_backend_antes.md</code> aplicada.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-referencias-cruzadas">10. Referências cruzadas<a class="headerlink" href="#10-referencias-cruzadas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Spec principal Agent Android: <code>.brain/tecnologia/specs/2026-08-08-agent-android-byod-mvp-design.md</code></li>
+<li>Plano de implementação Agent Android: <code>.brain/tecnologia/plans/2026-08-08-agent-android-byod-mvp.md</code></li>
+<li>Contrato JWT (mantido inalterado): <code>.brain/tecnologia/autenticacao/jwt-contract.md</code></li>
+<li>Schema banco atual: <code>.brain/_shared/banco-dados.md</code> (<code>agentes</code>, <code>versoes_agente</code>, <code>audit_events</code>)</li>
+<li>srv-admin Java atual (referência de shape): <code>.brain/tecnologia/services/srv-admin/README.md</code></li>
+<li>Regra enum-antes-do-Agent: <code>feedback_enum_novo_backend_antes.md</code></li>
+<li>Regra "Java não muda": Marcos 2026-07-21 — Node herda e estende, Java fica congelado</li>
+</ul>
+<h2 id="11-fora-do-escopo-mapeamento-para-rodadas-futuras">11. Fora do escopo — mapeamento para rodadas futuras<a class="headerlink" href="#11-fora-do-escopo-mapeamento-para-rodadas-futuras" title="Permanent link">&para;</a></h2>
+<p>Documentar aqui pra @Shuri não implementar por engano:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Rodada futura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Endpoint <code>POST /api/v1/agent-mobile/gerar-apk</code> (portal-node — Gestor gera APK personalizado)</td>
+<td>Rodada portal</td>
+</tr>
+<tr>
+<td>Endpoint <code>POST /api/v1/agent-mobile/revogar</code> (colaborador revoga via portal)</td>
+<td>Rodada portal (usa <code>revogado_em</code> já criada aqui)</td>
+</tr>
+<tr>
+<td>Endpoint <code>POST /api/agente/logs/upload</code> (upload de logs sob demanda)</td>
+<td>Rodada logs remotos</td>
+</tr>
+<tr>
+<td><code>GET /api/agente/config</code> estendido com <code>enviarLogsAte</code> e <code>logLevel</code> dinâmico</td>
+<td>Rodada logs remotos</td>
+</tr>
+<tr>
+<td>Pipeline server-side de re-empacotamento APK (<code>apksigner</code> + inject <code>config.json</code>)</td>
+<td>Rodada portal</td>
+</tr>
+<tr>
+<td>Página pública <code>/agent-mobile/&lt;token&gt;</code> mobile-friendly</td>
+<td>Rodada portal</td>
+</tr>
+<tr>
+<td>Push notification de update pra APK Android</td>
+<td>Rodada notifications</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

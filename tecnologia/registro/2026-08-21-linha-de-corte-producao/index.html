@@ -1,0 +1,2156 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/registro/2026-08-21-linha-de-corte-producao/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Linha de corte para producao — Agent Windows (2026-08-21) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linha-de-corte-para-producao-agent-windows-2026-08-21" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linha de corte para producao — Agent Windows (2026-08-21)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-este-documento-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que este documento existe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-criterio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Criterio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-o-que-segura-cinco-itens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. O que segura — cinco itens
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. O que segura — cinco itens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notas-de-cada-um" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas de cada um
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-o-que-nao-segura-decidido-nao-esquecido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. O que NAO segura — decidido, nao esquecido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-o-que-de-fato-encerra-o-rollout-em-etapas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. O que de fato encerra — o rollout em etapas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-como-usar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Como usar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-em-2026-08-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado em 2026-08-21
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estado-em-2026-08-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado em 2026-08-24
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estado em 2026-08-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-mudou-de-verdade-hoje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que mudou de verdade hoje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nota-do-item-4-mudou-de-natureza-precisa-de-decisao-do-marcos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nota do item 4 — mudou de natureza, precisa de decisao do Marcos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#achado-operacional-que-nao-estava-em-nenhuma-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Achado operacional que nao estava em nenhuma lista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-do-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado do codigo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#posicao-da-natasha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Posicao da @Natasha
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2408-fim-da-tarde-o-mecanismo-rodou-em-maquina-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        24/08, fim da tarde — o mecanismo rodou em maquina real
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="24/08, fim da tarde — o mecanismo rodou em maquina real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-deixou-de-ser-promessa-e-virou-fato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que deixou de ser promessa e virou fato
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-5-aceito-em-2026-08-24-por-decisao-do-marcos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item 5 — ACEITO em 2026-08-24 por decisao do Marcos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Item 5 — ACEITO em 2026-08-24 por decisao do Marcos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setimo-achado-do-mesmo-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setimo achado do mesmo padrao
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="linha-de-corte-para-producao-agent-windows-2026-08-21">Linha de corte para producao — Agent Windows (2026-08-21)<a class="headerlink" href="#linha-de-corte-para-producao-agent-windows-2026-08-21" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Decisao:</strong> @Tony | <strong>Aprovador:</strong> Marcos
+<strong>Vale para:</strong> o que segura a ida do Agent Windows para producao. Nada mais.</p>
+<p><strong>Documento autoritativo.</strong> Achado novo nao entra aqui por ser grave; entra se cruzar o
+criterio da secao 1. Quem quiser incluir algo, argumenta contra o criterio, nao contra a lista.</p>
+</blockquote>
+<hr />
+<h2 id="por-que-este-documento-existe">Por que este documento existe<a class="headerlink" href="#por-que-este-documento-existe" title="Permanent link">&para;</a></h2>
+<p>Marcos, hoje: <em>"parece que toda hora aparece algo e nunca finalizamos isso"</em>.</p>
+<p>Ele esta certo, e a causa nao e a quantidade de achados — e a <strong>falta de uma linha definida</strong>. Sem
+criterio escrito, todo achado novo parece candidato a bloqueador, a lista so cresce e nao existe
+estado final possivel. <strong>A linha e responsabilidade do TL e nao tinha sido tracada.</strong> Esta e ela.</p>
+<hr />
+<h2 id="1-criterio">1. Criterio<a class="headerlink" href="#1-criterio" title="Permanent link">&para;</a></h2>
+<p>Segura producao <strong>apenas</strong> o que se encaixa em um destes:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Criterio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>Perde ou corrompe dado do colaborador em maquina individual</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Pode derrubar a frota sem caminho de volta</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Expoe credencial ou dado pessoal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nao segura:</strong> ruido de log, divida de disco, comentario defasado, defeito que so aparece em
+cenario fora do ICP, e qualquer coisa que o rollout em etapas (secao 4) consiga conter.</p>
+<hr />
+<h2 id="2-o-que-segura-cinco-itens">2. O que segura — cinco itens<a class="headerlink" href="#2-o-que-segura-cinco-itens" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>O que</th>
+<th>Criterio</th>
+<th>Dono</th>
+<th>Feito quando</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Um item invalido derruba o lote inteiro no <code>IngestionService</code></strong> (<code>safeParse</code> no corpo todo)</td>
+<td>A</td>
+<td>@Shuri</td>
+<td>O backend recusa item por item e aceita o resto do lote</td>
+<td>codigo pronto e publicado; sem teste em maquina</td>
+</tr>
+<tr>
+<td>~~2~~</td>
+<td>~~<code>eventos_sessao</code> sem UNIQUE~~</td>
+<td>—</td>
+<td>—</td>
+<td><strong>REMOVIDO em 2026-08-24 por decisao do Marcos</strong> — ver secao 3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3a</td>
+<td><strong>Ligar o rollback do auto-update ao backup que existe</strong></td>
+<td>B</td>
+<td>@Bucky</td>
+<td>Instalacao real, versao que quebra no startup: o Service volta sozinho na versao anterior</td>
+<td><strong>fechado em 24/08</strong> — mecanismo exercitado em maquina real pelo recall</td>
+</tr>
+<tr>
+<td>3b</td>
+<td><strong>Teste E2E de rollback rodando no CI</strong></td>
+<td>B</td>
+<td>@Bucky + @Vision</td>
+<td><code>e1-alt-rollback-crash.ps1</code> verde, contra a instalacao gerada pelo instalador de verdade</td>
+<td>em aberto; falta decidir a maquina</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Senha do banco de staging trocada</strong></td>
+<td>C</td>
+<td>@Vision</td>
+<td>Senha nova em uso, a antiga revogada</td>
+<td>em aberto; a senha passou pelo chat duas vezes</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>A telemetria do Watchdog nunca chega ao servidor</strong> — o reporter procura o token em texto puro, que o <code>ConfigManager</code> apaga do disco ao criptografar; a requisicao sai sem autenticacao e volta 401</td>
+<td><strong>secao 4</strong></td>
+<td>@Bucky</td>
+<td>Um evento do Watchdog aceito pelo backend em maquina real, <strong>e</strong> falha de envio aparecendo como falha no log</td>
+<td><strong>ACEITO em 2026-08-24 por decisao do Marcos</strong>; em correcao</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Sobre o criterio do item 5.</strong> Ele nao encaixa em A, B nem C — nao perde dado, nao derruba a
+frota, nao expoe credencial. Entrou por outro caminho: a <strong>secao 4</strong> deste documento diz que o
+que encerra a lista e o rollout em etapas, e o criterio de avanco do rollout e <em>"telemetria
+zero"</em>. Os eventos que nunca chegam sao exatamente os de seguranca de frota — volta automatica e
+modo de emergencia. Zero garantido por construcao nao e zero medido. <strong>E o primeiro item que
+entra por proteger o mecanismo de encerramento, e nao por um dos tres criterios diretos.</strong>
+Detalhe completo no bloco "Item 5" no fim deste documento.</p>
+</blockquote>
+<h3 id="notas-de-cada-um">Notas de cada um<a class="headerlink" href="#notas-de-cada-um" title="Permanent link">&para;</a></h3>
+<p><strong>1 — e o unico que piorou nesta rodada, por decisao minha.</strong> O teto do A-64 trocou "fila travada
+para sempre" por "descarta ate 100 eventos apos 5 tentativas". Foi a troca certa — a fila travada
+queimava a janela de emergencia de todo desligamento —, mas ela converteu um travamento visivel em
+<strong>perda de dado silenciosa</strong>. So o backend fecha isso. Enquanto nao fechar, a perda e real.</p>
+<p><strong>2 — removido em 2026-08-24, por decisao do Marcos.</strong> Ver secao 3.</p>
+<p><strong>3a e 3b — regra nossa, do <code>REGRAS-RELEASE.md</code> secao 5.2</strong>, e ela disparou porque <strong>eu alterei o
+<code>UpdateApplier</code></strong> (motivo <code>UPDATE</code> no lugar do texto livre). A regra existe exatamente para o caso
+em que uma versao ruim se instala sozinha na frota inteira.</p>
+<blockquote>
+<p><strong>Atualizado em 2026-08-24.</strong> Era um item so — "escrever o teste". Ao ir escrever, descobri que
+<strong>o rollback nao funciona</strong>: o <code>RollbackOrchestrator</code> procura o backup em
+<code>C:\Program Files\ManagerAgent\bin.previous</code>, que nao existe, enquanto o <code>UpdateApplier</code> grava em
+<code>C:\ProgramData\ManagerAgent\backups\pre-*</code>. Duas convencoes escritas em lados diferentes que
+nunca se encontraram. Hoje, versao que nao sobe = maquina sem captura ate reinstalar a mao.
+Detalhe e caminho de correcao: <code>registro/2026-08-24-rollback-nao-esta-ligado.md</code>.</p>
+<p>O 3b sem o 3a e teatro — o teste passaria no ambiente sintetico e continuaria mentindo.</p>
+</blockquote>
+<p><strong>4 — passou pelo chat em 20/08.</strong> Ja estava em aberto antes desta wave.</p>
+<hr />
+<h2 id="3-o-que-nao-segura-decidido-nao-esquecido">3. O que NAO segura — decidido, nao esquecido<a class="headerlink" href="#3-o-que-nao-segura-decidido-nao-esquecido" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>O que</th>
+<th>Por que fica fora</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A-66</strong> — <code>session-state-N.json</code> nao grava em sessao que trocou de dono</td>
+<td><strong>So acontece em maquina compartilhada entre pessoas. Marcos confirmou hoje: o cliente e maquina individual.</strong> Fora do ICP para este lancamento. Volta se vendermos para turno compartilhado (call center)</td>
+</tr>
+<tr>
+<td><strong>Nove mensagens/comentarios defasados</strong> (as tres do refinamento ja corrigidas, mais <code>WorkerLauncher.cs:361</code> e oito comentarios "backend deriva o status")</td>
+<td>Nao perde dado. Varredura de texto numa rodada propria, depois que nao houver comportamento aberto</td>
+</tr>
+<tr>
+<td><strong>Arquivo <code>.corrompido</code> nunca sai do disco</strong></td>
+<td>Divida de disco. Prazo entra junto com o passivo de eventos abertos, com o @Steve</td>
+</tr>
+<tr>
+<td><strong>Banco local sem teto de tamanho</strong> (nao ha retencao no Agent — confirmado: nenhuma referencia a retencao no codigo)</td>
+<td>Cresce ~1MB por dia por colaborador, e so enquanto o backend estiver fora do ar. O teto do A-64 ja tirou a causa que crescia para sempre</td>
+</tr>
+<tr>
+<td><strong>Passivo de eventos abertos</strong> (33 ociosidades, 27 janelas)</td>
+<td>Dado historico, decisao de produto com o @Steve. Nao impede o proximo evento de entrar certo</td>
+</tr>
+<tr>
+<td><strong>A-63 exercitado na maquina</strong></td>
+<td><strong>Fechado.</strong> O que inverteu a ordem em 15:21 foi um lancamento travado por 37s — nao se encena por vontade. Dois testes falham com a correcao desfeita, conferidos por @Tony e @Bucky separadamente. Isso basta</td>
+</tr>
+<tr>
+<td><strong><code>eventos_sessao</code> sem UNIQUE</strong> <em>(era o item 2)</em></td>
+<td><strong>Saiu da lista em 2026-08-24, decisao do Marcos.</strong> Eu tinha escrito que a trava no banco fechava a brecha do D5. <strong>Errado, e conferido no codigo:</strong> os dois LOGOUT daquele cenario carregam <code>ocorreuEm</code> diferentes — o do Service usa o instante do EOF do pipe, o do worker usaria o <code>UtcNow</code> dele. UNIQUE por igualdade exata nao junta os dois; fechar de verdade exigiria campo novo no contrato do Agent (<code>logon_id</code>) e deploy ordenado. Somado a isso, <strong>a duplicata do D5 nunca foi observada</strong> — as tres classes medidas (janela, ociosidade, reuniao) ja estao corrigidas. Protege so contra reenvio, que e classe real e menor. Volta com evidencia, se aparecer</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-o-que-de-fato-encerra-o-rollout-em-etapas">4. O que de fato encerra — o rollout em etapas<a class="headerlink" href="#4-o-que-de-fato-encerra-o-rollout-em-etapas" title="Permanent link">&para;</a></h2>
+<p><strong>A lista de achados nunca vai acabar. O que encerra e o rollout, nao a lista.</strong></p>
+<p>Ja esta escrito em <code>agent-desktop/REGRAS-RELEASE.md</code> secao 5.1 e no ADR-008. Cinco etapas, com
+telemetria zero como criterio de avanco:</p>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Config</th>
+<th>Minimo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Canario</td>
+<td><code>canary_only=true</code>, 1-3 empresas</td>
+<td>48h</td>
+</tr>
+<tr>
+<td>2. Opt-in 10%</td>
+<td><code>rollout_percent=10</code></td>
+<td>3 dias</td>
+</tr>
+<tr>
+<td>3. Opt-in 50%</td>
+<td><code>rollout_percent=50</code></td>
+<td>3 dias</td>
+</tr>
+<tr>
+<td>4. Opt-in 100%</td>
+<td><code>rollout_percent=100, obrigatoria=false</code></td>
+<td>7 dias</td>
+</tr>
+<tr>
+<td>5. Obrigatoria</td>
+<td><code>obrigatoria=true</code></td>
+<td>frota &gt;=95% na versao nova</td>
+</tr>
+</tbody>
+</table>
+<p>Botao de pausa em qualquer etapa:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">versoes_agente</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">pausada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">versao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'X.Y.Z'</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>E isto que permite ir para producao com bug conhecido.</strong> Sem o rollout, nenhuma lista seria
+suficiente, porque sempre aparece mais um. Com ele, o pior caso de um achado que escapou e uma
+empresa afetada por 48h, com volta imediata.</p>
+<hr />
+<h2 id="5-como-usar">5. Como usar<a class="headerlink" href="#5-como-usar" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Achado novo: passa pelo criterio da secao 1. Nao passou, vai para a proxima wave e <strong>nao se
+  discute de novo</strong>.</li>
+<li>Este documento so muda com decisao do Marcos registrada aqui.</li>
+<li>Os quatro itens da secao 2 sao o estado final. Fechados eles + rollout na etapa 1, vai para
+  producao.</li>
+</ul>
+<hr />
+<h2 id="estado-em-2026-08-21">Estado em 2026-08-21<a class="headerlink" href="#estado-em-2026-08-21" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent</td>
+<td>1.5.12 rodando na <code>DESKTOP-VMSM6LE</code>, fila de upload limpa, 1010 testes verdes</td>
+</tr>
+<tr>
+<td>Codigo</td>
+<td><strong>nao commitado, nao empurrado</strong></td>
+</tr>
+<tr>
+<td>A-63 / A-64 / A-65</td>
+<td>fechados. A-64 provado em maquina; A-63 provado por teste</td>
+</tr>
+<tr>
+<td>Itens da secao 2</td>
+<td><strong>quatro em aberto</strong> (1 com a @Shuri; 3a e 3b com o @Bucky; 4 com o @Vision). O item 2 saiu em 24/08</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Referencias:</strong> <code>registro/2026-08-21-refinamento-bucky-a63-a64-a65.md</code>,
+<code>registro/2026-08-21-review-tony-a63-a64-a65.md</code>, <code>registro/2026-08-21-bateria-1.5.12.md</code>,
+<code>registro/2026-08-21-decisoes-do-dia.md</code> (D7), <code>manager-srv-agent/HANDOFF-2026-08-21-A63-A64-A65.md</code>.</p>
+<hr />
+<h2 id="estado-em-2026-08-24">Estado em 2026-08-24<a class="headerlink" href="#estado-em-2026-08-24" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Registro de estado por @Tony. <strong>A secao 1 (criterio) e a lista de itens da secao 2 nao mudaram
+aqui</strong> — muda o que ja foi feito e o que ainda falta em cada um.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Dono</th>
+<th>Estado ao fim do dia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — lote nao cai inteiro</td>
+<td>@Shuri</td>
+<td><strong>codigo pronto e commitado.</strong> Nao testado em maquina</td>
+</tr>
+<tr>
+<td>3a — rollback ligado ao backup</td>
+<td>@Bucky</td>
+<td><strong>codigo pronto e commitado.</strong> Nao testado em maquina</td>
+</tr>
+<tr>
+<td>3b — teste E2E de rollback no CI</td>
+<td>@Bucky + @Vision</td>
+<td><strong>em aberto, nunca rodou.</strong> Depende de decisao de maquina</td>
+</tr>
+<tr>
+<td>4 — senha do staging</td>
+<td>@Vision / Marcos</td>
+<td><strong>em aberto.</strong> Ver nota abaixo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="o-que-mudou-de-verdade-hoje">O que mudou de verdade hoje<a class="headerlink" href="#o-que-mudou-de-verdade-hoje" title="Permanent link">&para;</a></h3>
+<p><strong>O 3a nao estava completo, e virou tres tarefas.</strong> Ligar o rollback ao backup nao bastava:</p>
+<ul>
+<li><strong>R-01</strong> — a maquina que voltava de uma versao quebrada <strong>reinstalava a mesma versao</strong> no ciclo
+  seguinte. Guarda no <code>UpdateCheckerWorker</code>, com normalizador de versao: os dois lados guardam a
+  versao em formatos diferentes (<code>1.5.12+hash</code> contra <code>1.5.12</code>) e a comparacao por texto simples
+  nunca casaria. Feito. <code>manager-srv-agent/HANDOFF-R01-STICKY.md</code>.</li>
+<li><strong>R-02</strong> — a guarda do R-01 nascia inerte: <code>WatchdogState.VersaoAtual</code> e escrito em <strong>um unico
+  lugar do produto</strong>, dentro do proprio rollback, e esta vazio em toda maquina da frota. A versao
+  quebrada passa a ser capturada antes de o script trocar os binarios. Destrava <strong>cinco</strong>
+  consumidores, a guarda entre eles — a auditoria reportava <code>versaoQuebrada: null</code> e a pasta da
+  versao quebrada saia como <code>bin.failed-unknown-*</code>. Feito.
+  <code>manager-srv-agent/HANDOFF-R02-VERSAO-QUEBRADA.md</code>.</li>
+<li><strong>R-03</strong> — recall de frota: mandar de volta quem <strong>ja tem</strong> a versao ruim, distinto do <code>pausada</code>,
+  que so impede novas entregas. Backend feito e commitado (@Shuri,
+  <code>manager-srv-admin-node/HANDOFF-R03-RECALL.md</code>); lado Agent em desenho com o @Bucky.</li>
+</ul>
+<p><strong>Terceira aparicao do mesmo padrao.</strong> O rollback quebrado (manha), o <code>VersaoAtual</code> vazio (tarde) e
+a assercao frouxa do <code>e1-alt</code> tem a mesma causa: <em>o teste e o codigo concordam entre si, e os dois
+discordam do instalador de verdade.</em> Nao e coincidencia e nao se resolve achando defeito por
+defeito — e o 3b que fecha, porque so ele exercita a instalacao real.</p>
+<h3 id="nota-do-item-4-mudou-de-natureza-precisa-de-decisao-do-marcos">Nota do item 4 — mudou de natureza, precisa de decisao do Marcos<a class="headerlink" href="#nota-do-item-4-mudou-de-natureza-precisa-de-decisao-do-marcos" title="Permanent link">&para;</a></h3>
+<p>A senha de staging <strong>passou pelo chat outra vez em 24/08</strong>. O item deixa de ser "trocar a senha":
+enquanto a troca depender de alguem colar o valor em algum canto, isso se repete. Proposta de
+redacao nova do "feito quando", <strong>pendente de decisao do Marcos</strong>:</p>
+<blockquote>
+<p>Senha nova em uso, a antiga revogada, <strong>e o @Vision com acesso ao painel</strong> — nenhuma troca futura
+passando por mensagem.</p>
+</blockquote>
+<p><strong>Em aberto, sem resposta:</strong> o staging e o mesmo projeto Supabase da producao? Se for, o item sobe
+para o criterio <strong>C</strong> (expoe credencial ou dado pessoal) e deixa de ser higiene.</p>
+<h3 id="achado-operacional-que-nao-estava-em-nenhuma-lista">Achado operacional que nao estava em nenhuma lista<a class="headerlink" href="#achado-operacional-que-nao-estava-em-nenhuma-lista" title="Permanent link">&para;</a></h3>
+<p>Rodar a suite de testes do Agent <strong>para os servicos de verdade da maquina que a roda</strong> — os oito
+testes de <code>RollbackCaminhoRealTests</code> disparam um script que para <code>ManagerAgent</code> e
+<code>ManagerAgentWatchdog</code> pelo nome, ~17s por vez. So nao acontece sempre por uma corrida ganha por
+acaso; em maquina mais lenta, acontece. <strong>Toda bateria rodada na <code>DESKTOP-VMSM6LE</code> pode ter aberto
+buraco de captura.</strong> Freio aprovado por @Tony e em aplicacao pelo @Bucky.</p>
+<p><strong>Nao muda a secao 1</strong>: nao segura producao — nao afeta maquina de cliente, so a de quem roda a
+suite. Fica registrado porque muda a leitura das baterias passadas, e isso e da @Natasha.</p>
+<h3 id="estado-do-codigo">Estado do codigo<a class="headerlink" href="#estado-do-codigo" title="Permanent link">&para;</a></h3>
+<p><strong>Commitado localmente em 24/08, autorizado pelo Marcos. Nada empurrado.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>Commit</th>
+<th>Testes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>manager-srv-agent</code></td>
+<td><code>c680cd2</code> (branch <code>staging</code>)</td>
+<td>1010 -&gt; <strong>1092</strong></td>
+</tr>
+<tr>
+<td><code>manager-srv-admin-node</code></td>
+<td><code>257096f</code> + merge <code>2910c9f</code></td>
+<td>1105 -&gt; <strong>1199</strong> (com o que veio do remoto)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="posicao-da-natasha">Posicao da @Natasha<a class="headerlink" href="#posicao-da-natasha" title="Permanent link">&para;</a></h3>
+<p><strong>Bloqueia a ida para producao.</strong> A peca que protege a frota nunca foi executada uma unica vez em
+maquina, e a regra 5.2 do <code>REGRAS-RELEASE</code> exige esse teste passando. @Tony sustenta o bloqueio.</p>
+<p><strong>Referencias de 24/08:</strong> <code>registro/2026-08-24-rollback-nao-esta-ligado.md</code>,
+<code>registro/2026-08-24-entrega-item1-e-rollback.md</code>,
+<code>registro/2026-08-24-refinamento-tony-R02-versao-quebrada.md</code>,
+<code>registro/2026-08-24-tarefa-bucky-R01-sticky.md</code>,
+<code>registro/2026-08-24-tarefa-shuri-R03-recall.md</code>,
+<code>registro/2026-08-24-tarefa-bucky-R03-recall-agent.md</code>.</p>
+<hr />
+<h2 id="2408-fim-da-tarde-o-mecanismo-rodou-em-maquina-real">24/08, fim da tarde — o mecanismo rodou em maquina real<a class="headerlink" href="#2408-fim-da-tarde-o-mecanismo-rodou-em-maquina-real" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Registro de @Tony. Marcos executou; @Tony acompanhou os logs ao vivo.
+Evidencia crua em <code>C:\Temp\ManagerAgent-Tests\2026-08-24\C11-recall.txt</code>.</p>
+</blockquote>
+<p><strong>O recall de frota foi disparado de verdade e funcionou fim a fim.</strong> E a primeira vez que a
+maquinaria de restauracao roda desde que existe.</p>
+<table>
+<thead>
+<tr>
+<th>Hora</th>
+<th>O que</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14:43</td>
+<td>maquina chega na 1.5.14 pela <strong>auto-atualizacao</strong> (nao foi instalacao manual)</td>
+</tr>
+<tr>
+<td>14:55:05</td>
+<td>Marcos revoga a 1.5.14; a ordem chega na primeira consulta, com o motivo integro</td>
+</tr>
+<tr>
+<td>14:56:04</td>
+<td>Watchdog pega a marca — 59s, um ciclo de poll</td>
+</tr>
+<tr>
+<td>14:56:05</td>
+<td>script de restauracao disparado; servicos param</td>
+</tr>
+<tr>
+<td>14:56:47</td>
+<td>Service volta na 1.5.13</td>
+</tr>
+<tr>
+<td>14:56:51</td>
+<td>reconciliacao: <code>SwapDone=true ServiceRunning=true Desfecho=Success</code></td>
+</tr>
+<tr>
+<td>14:56:55</td>
+<td>nova consulta: <strong>nao tenta reinstalar a 1.5.14</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>42 segundos sem captura. Nunca entrou em SOS.</strong></p>
+<h3 id="o-que-deixou-de-ser-promessa-e-virou-fato">O que deixou de ser promessa e virou fato<a class="headerlink" href="#o-que-deixou-de-ser-promessa-e-virou-fato" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Restauracao (a peca do item 3a)</td>
+<td>roda, em instalacao real</td>
+</tr>
+<tr>
+<td><strong>R-02</strong></td>
+<td><code>ultimaVersaoQuebrada = 1.5.14+793e743…</code> — de manha esse campo nascia vazio</td>
+</tr>
+<tr>
+<td>Nome da pasta da versao ruim</td>
+<td><code>bin.failed-1.5.14+793e743…</code>, e nao <code>bin.failed-unknown</code></td>
+</tr>
+<tr>
+<td><strong>R-01</strong></td>
+<td>sticky de 24h gravado; a versao revogada nao foi reoferecida</td>
+</tr>
+<tr>
+<td>Dono unico da restauracao</td>
+<td>o Service so marcou; o Watchdog executou — o desenho aprovado se sustentou</td>
+</tr>
+<tr>
+<td>Auto-update</td>
+<td>duas vezes no dia, 1.5.12→1.5.13 e 1.5.13→1.5.14, com checksum conferido</td>
+</tr>
+</tbody>
+</table>
+<p><strong>O item 3a pode ser dado como fechado em maquina.</strong> O 3b <strong>nao</strong> — ele e o teste automatizado, e
+continua sem rodar. O que rodou hoje foi uma execucao manual, uma vez.</p>
+<hr />
+<h2 id="item-5-aceito-em-2026-08-24-por-decisao-do-marcos">Item 5 — <strong>ACEITO em 2026-08-24 por decisao do Marcos</strong><a class="headerlink" href="#item-5-aceito-em-2026-08-24-por-decisao-do-marcos" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Recomendado por @Tony, aceito pelo Marcos no mesmo dia. Consta na lista da secao 2.
+A lista passa a ter <strong>cinco</strong> itens.</p>
+</blockquote>
+<p><strong>A telemetria do Watchdog nunca chega ao servidor.</strong> Descoberto porque o recall rodou de verdade:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>14:56:05 [Watchdog] WatchdogAudit: reported (evento=UPDATE_RECALL_TRIGGERED, status=401)
+</code></pre></div>
+<p><strong>Causa, rastreada no codigo:</strong> o <code>ConfigManager</code> criptografa o token da maquina e <strong>apaga o texto
+puro do disco</strong> (<code>ConfigManager.cs:244</code> — <code>config.DeviceToken = null; // remove do disco</code>). O
+<code>HttpWatchdogAuditReporter</code> abre o <code>config.json</code> na mao e procura <strong>so</strong> o campo em texto puro
+(<code>HttpWatchdogAuditReporter.cs:117</code>). Nao acha, e entao <strong>nem envia o cabecalho de autenticacao</strong>.
+O Watchdog nao tem uma linha de DPAPI e nao referencia o <code>ConfigManager</code>.</p>
+<p><strong>Alcance:</strong> nao e so o recall. Passam pelo mesmo reporter a volta automatica disparada, a volta
+automatica falhou, o recall disparado/falhou/recusado e a limpeza de artefatos. <strong>O canal inteiro
+de telemetria do Watchdog esta morto, em silencio</strong> — o codigo trata envio de audit como auxiliar
+e segue. O canal do Service funciona, porque usa o leitor certo; por isso ninguem notou.</p>
+<p><strong>Por que eu recomendo que segure.</strong> Nao encaixa literalmente em A, B nem C: nao perde dado, nao
+derruba a frota, nao expoe credencial. Mas a <strong>secao 4</strong> deste documento diz que o que encerra a
+lista e o rollout em etapas, e o criterio de avanco dele e <strong>"telemetria zero"</strong>. Os eventos que
+faltam sao exatamente os de seguranca de frota. Se eles nunca chegam, o zero e garantido por
+construcao: a rede que torna aceitavel ir para producao com bug conhecido esta com o sensor
+desligado.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dono</td>
+<td>@Bucky (em correcao)</td>
+</tr>
+<tr>
+<td>Feito quando</td>
+<td>um evento do Watchdog e aceito pelo backend em maquina real, e falha de envio aparece como falha no log</td>
+</tr>
+<tr>
+<td>Risco da correcao</td>
+<td>o leitor compartilhado parece <strong>escrever</strong> ao carregar; usar sem cuidado poe Service e Watchdog gravando o mesmo arquivo sem trava</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Aceito pelo Marcos em 24/08.</strong> A lista passa a ter cinco itens.</p>
+<h3 id="setimo-achado-do-mesmo-padrao">Setimo achado do mesmo padrao<a class="headerlink" href="#setimo-achado-do-mesmo-padrao" title="Permanent link">&para;</a></h3>
+<p>Nenhum dos sete defeitos do dia foi encontrado por teste automatizado. Todos por alguem abrindo o
+codigo, ou — este — por rodar o mecanismo de verdade uma unica vez. Os testes conferem que a
+chamada <strong>foi feita</strong>; nenhum confere que ela <strong>foi aceita</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

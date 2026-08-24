@@ -1,0 +1,2228 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/relatorios/historias/">
+      
+      
+        <link rel="prev" href="../contrato-relatorio-json/">
+      
+      
+        <link rel="next" href="../testes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Histórias - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#historias-relatorios-semanais-por-ia" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Histórias
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#epico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-geral-por-fase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status geral por fase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-1-manager-srv-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1 — manager-srv-ia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 1 — manager-srv-ia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-scaffold-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 1 — Scaffold do projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-entidades-jpa-e-repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 2 — Entidades JPA e repositórios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-dtos-de-entrada-e-saida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 3 — DTOs de entrada e saída
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-extratordadosservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 4 — ExtratorDadosService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-calculadorapilaresservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 5 — CalculadoraPilaresService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-calculadoraindicadoresservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 6 — CalculadoraIndicadoresService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-llmservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 7 — LlmService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-relatorioindividualservice-relatoriotimeservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 8 — RelatorioIndividualService + RelatorioTimeService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-orquestradorrelatorioservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 9 — OrquestradorRelatorioService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-scheduler-endpoint-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 10 — Scheduler + Endpoint manual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-11-emailnotificacaoservice-template-thymeleaf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 11 — EmailNotificacaoService + Template Thymeleaf
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-2-manager-srv-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 2 — manager-srv-portal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 2 — manager-srv-portal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-12-get-apiv1times-com-filtro-de-hierarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 12 — GET /api/v1/times com filtro de hierarquia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-13-apis-de-relatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 13 — APIs de relatório
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-14-export-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 14 — Export PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-3-frontend-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 3 — Frontend Angular
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 3 — Frontend Angular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-15-interfaces-typescript-relatoriosapiservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 15 — Interfaces TypeScript + RelatoriosApiService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-16-modulo-lazy-relatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 16 — Módulo lazy /relatorios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-17-filtrorelatoriocomponent-semananavigatorcomponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 17 — FiltroRelatorioComponent + SemanaNavigatorComponent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-18-relatoriotimecomponent-relatorioindividualcomponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 18 — RelatorioTimeComponent + RelatorioIndividualComponent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-19-relatoriospagecomponent-deeplinks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 19 — RelatoriosPageComponent + deeplinks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-20-validacao-end-to-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 20 — Validação end-to-end
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#epico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Épico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-geral-por-fase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status geral por fase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-1-manager-srv-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1 — manager-srv-ia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 1 — manager-srv-ia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-scaffold-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 1 — Scaffold do projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-entidades-jpa-e-repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 2 — Entidades JPA e repositórios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-dtos-de-entrada-e-saida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 3 — DTOs de entrada e saída
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-extratordadosservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 4 — ExtratorDadosService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-calculadorapilaresservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 5 — CalculadoraPilaresService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-calculadoraindicadoresservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 6 — CalculadoraIndicadoresService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-llmservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 7 — LlmService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-relatorioindividualservice-relatoriotimeservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 8 — RelatorioIndividualService + RelatorioTimeService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-orquestradorrelatorioservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 9 — OrquestradorRelatorioService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-scheduler-endpoint-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Task 10 — Scheduler + Endpoint manual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-11-emailnotificacaoservice-template-thymeleaf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 11 — EmailNotificacaoService + Template Thymeleaf
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-2-manager-srv-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 2 — manager-srv-portal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 2 — manager-srv-portal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-12-get-apiv1times-com-filtro-de-hierarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 12 — GET /api/v1/times com filtro de hierarquia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-13-apis-de-relatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 13 — APIs de relatório
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-14-export-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 14 — Export PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-3-frontend-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 3 — Frontend Angular
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fase 3 — Frontend Angular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-15-interfaces-typescript-relatoriosapiservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 15 — Interfaces TypeScript + RelatoriosApiService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-16-modulo-lazy-relatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 16 — Módulo lazy /relatorios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-17-filtrorelatoriocomponent-semananavigatorcomponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 17 — FiltroRelatorioComponent + SemanaNavigatorComponent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-18-relatoriotimecomponent-relatorioindividualcomponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 18 — RelatorioTimeComponent + RelatorioIndividualComponent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-19-relatoriospagecomponent-deeplinks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 19 — RelatoriosPageComponent + deeplinks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-20-validacao-end-to-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ Task 20 — Validação end-to-end
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="historias-relatorios-semanais-por-ia">Histórias — Relatórios Semanais por IA<a class="headerlink" href="#historias-relatorios-semanais-por-ia" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Domínio: @Steve | PO
+Última atualização: 2026-03-25</p>
+</blockquote>
+<hr />
+<h2 id="epico">Épico<a class="headerlink" href="#epico" title="Permanent link">&para;</a></h2>
+<p><strong>Como gestor, quero receber toda segunda-feira um diagnóstico completo do meu time para tomar decisões baseadas em dados, não em intuição.</strong></p>
+<hr />
+<h2 id="status-geral-por-fase">Status geral por fase<a class="headerlink" href="#status-geral-por-fase" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Tasks</th>
+<th>Concluídas</th>
+<th>Pendentes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fase 1 — <code>manager-srv-ia</code></td>
+<td>11</td>
+<td>10</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Fase 2 — <code>manager-srv-portal</code></td>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Fase 3 — Frontend Angular</td>
+<td>6</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>20</strong></td>
+<td><strong>10</strong></td>
+<td><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Testes implementados:</strong> 42 (todos passando)</p>
+<hr />
+<h2 id="fase-1-manager-srv-ia">Fase 1 — manager-srv-ia<a class="headerlink" href="#fase-1-manager-srv-ia" title="Permanent link">&para;</a></h2>
+<h3 id="task-1-scaffold-do-projeto">✅ Task 1 — Scaffold do projeto<a class="headerlink" href="#task-1-scaffold-do-projeto" title="Permanent link">&para;</a></h3>
+<p>Spring Boot 3.2.3, Java 17, Lombok, WebClient, Mail, Thymeleaf, PostgreSQL, JSONB</p>
+<h3 id="task-2-entidades-jpa-e-repositorios">✅ Task 2 — Entidades JPA e repositórios<a class="headerlink" href="#task-2-entidades-jpa-e-repositorios" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>RelatorioIndividual</code> + <code>RelatorioTime</code> com JSONB</li>
+<li>Repositórios com queries por colaborador/time/semana</li>
+</ul>
+<h3 id="task-3-dtos-de-entrada-e-saida">✅ Task 3 — DTOs de entrada e saída<a class="headerlink" href="#task-3-dtos-de-entrada-e-saida" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>InputLlmIndividualDTO</code>, <code>InputLlmTimeDTO</code></li>
+<li><code>RelatorioIndividualDTO</code> (com <code>getScoreIa()</code>), <code>RelatorioTimeDTO</code></li>
+</ul>
+<h3 id="task-4-extratordadosservice">✅ Task 4 — ExtratorDadosService<a class="headerlink" href="#task-4-extratordadosservice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Query nativa em <code>evento_atividade</code>, parser semana ISO, agregação por dia</li>
+<li>2 testes</li>
+</ul>
+<h3 id="task-5-calculadorapilaresservice">✅ Task 5 — CalculadoraPilaresService<a class="headerlink" href="#task-5-calculadorapilaresservice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>6 pilares com fórmulas exatas: Atividade, Foco, Consistência, Saúde, Fragmentação, Anomalias</li>
+<li><code>calcularIManagerScore</code> — soma ponderada</li>
+<li>14 testes</li>
+</ul>
+<h3 id="task-6-calculadoraindicadoresservice">✅ Task 6 — CalculadoraIndicadoresService<a class="headerlink" href="#task-6-calculadoraindicadoresservice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>6 indicadores: Burnout, Desengajamento, Sobrecarga Silenciosa, Instabilidade, Fadiga FDS, Horas Extras</li>
+<li><code>INDETERMINADO</code> quando sem histórico</li>
+<li>13 testes</li>
+</ul>
+<h3 id="task-7-llmservice">✅ Task 7 — LlmService<a class="headerlink" href="#task-7-llmservice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Suporte Anthropic + OpenAI, prompt caching condicional</li>
+<li>Retry 3× backoff 1s, timeout configurável</li>
+<li><code>validarJsonSaida</code> — verifica <code>score_ia</code> obrigatório</li>
+<li>4 testes</li>
+</ul>
+<h3 id="task-8-relatorioindividualservice-relatoriotimeservice">✅ Task 8 — RelatorioIndividualService + RelatorioTimeService<a class="headerlink" href="#task-8-relatorioindividualservice-relatoriotimeservice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prompts em <code>classpath:prompts/*.txt</code></li>
+<li>Re-tenta 1× em JSON inválido</li>
+<li>2 testes</li>
+</ul>
+<h3 id="task-9-orquestradorrelatorioservice">✅ Task 9 — OrquestradorRelatorioService<a class="headerlink" href="#task-9-orquestradorrelatorioservice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>N chamadas paralelas via <code>CompletableFuture.supplyAsync</code></li>
+<li>Idempotência: pula colaboradores já gerados (quando <code>forcar=false</code>)</li>
+<li>Tolerância a falhas: erro em 1 colaborador não para os demais</li>
+<li>Log de aviso quando time &gt; 20 membros</li>
+<li>5 testes</li>
+</ul>
+<h3 id="task-10-scheduler-endpoint-manual">✅ Task 10 — Scheduler + Endpoint manual<a class="headerlink" href="#task-10-scheduler-endpoint-manual" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>@Scheduled(cron)</code> toda segunda 00h00 fuso <code>America/Sao_Paulo</code></li>
+<li><code>@ConditionalOnProperty(relatorio.scheduler.enabled)</code></li>
+<li><code>AdminRelatorioController</code> — <code>@Profile("local")</code> — endpoints para disparo manual</li>
+</ul>
+<h3 id="task-11-emailnotificacaoservice-template-thymeleaf">⏳ Task 11 — EmailNotificacaoService + Template Thymeleaf<a class="headerlink" href="#task-11-emailnotificacaoservice-template-thymeleaf" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- <code>EmailNotificacaoService</code>: <code>JavaMailSender</code> + <code>SpringTemplateEngine</code>
+- Template <code>relatorio-semanal.html</code> (Thymeleaf)
+- <code>enviarRelatorio</code>, <code>contarMembrosAtencao</code></p>
+<hr />
+<h2 id="fase-2-manager-srv-portal">Fase 2 — manager-srv-portal<a class="headerlink" href="#fase-2-manager-srv-portal" title="Permanent link">&para;</a></h2>
+<h3 id="task-12-get-apiv1times-com-filtro-de-hierarquia">⏳ Task 12 — GET /api/v1/times com filtro de hierarquia<a class="headerlink" href="#task-12-get-apiv1times-com-filtro-de-hierarquia" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- <code>TimeController</code> — novo endpoint <code>/api/v1/times</code> (mantém <code>/api/times</code> por compatibilidade)
+- <code>TimeService</code> — <code>listarTimesVisiveis(gestorId, filtro, page, size)</code> com subtree por JWT
+- <code>TimeServiceHierarquiaTest</code></p>
+<h3 id="task-13-apis-de-relatorio">⏳ Task 13 — APIs de relatório<a class="headerlink" href="#task-13-apis-de-relatorio" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- <code>RelatorioController</code> — 3 endpoints: <code>/semanas</code>, <code>/time</code>, <code>/colaborador</code>
+- <code>RelatorioService</code> — busca nas tabelas, verifica permissão via JWT
+- <code>SemanaRelatorioDTO</code>, <code>RelatorioNaoEncontradoException</code>
+- <code>RelatorioControllerTest</code></p>
+<h3 id="task-14-export-pdf">⏳ Task 14 — Export PDF<a class="headerlink" href="#task-14-export-pdf" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- <code>GET /api/v1/relatorios/export/pdf?timeId=&amp;semana=&amp;tipo=&amp;colaboradorId=</code>
+- Tipos: <code>TIME</code> | <code>INDIVIDUAL</code> | <code>CONSOLIDADO</code>
+- Biblioteca: Flying Saucer / iText / JasperReports (a definir → ADR)</p>
+<hr />
+<h2 id="fase-3-frontend-angular">Fase 3 — Frontend Angular<a class="headerlink" href="#fase-3-frontend-angular" title="Permanent link">&para;</a></h2>
+<h3 id="task-15-interfaces-typescript-relatoriosapiservice">⏳ Task 15 — Interfaces TypeScript + RelatoriosApiService<a class="headerlink" href="#task-15-interfaces-typescript-relatoriosapiservice" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- <code>relatorio.model.ts</code> — interfaces completas
+- <code>relatorios-api.service.ts</code> — <code>getSemanas</code>, <code>getRelatorioTime</code>, <code>getRelatorioColaborador</code>, <code>exportPdf</code></p>
+<h3 id="task-16-modulo-lazy-relatorios">⏳ Task 16 — Módulo lazy /relatorios<a class="headerlink" href="#task-16-modulo-lazy-relatorios" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- <code>relatorios.module.ts</code> + rota lazy em <code>app-routing.module.ts</code></p>
+<h3 id="task-17-filtrorelatoriocomponent-semananavigatorcomponent">⏳ Task 17 — FiltroRelatorioComponent + SemanaNavigatorComponent<a class="headerlink" href="#task-17-filtrorelatoriocomponent-semananavigatorcomponent" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- Seleção de time + semana
+- Navegação anterior/próxima entre semanas disponíveis</p>
+<h3 id="task-18-relatoriotimecomponent-relatorioindividualcomponent">⏳ Task 18 — RelatorioTimeComponent + RelatorioIndividualComponent<a class="headerlink" href="#task-18-relatoriotimecomponent-relatorioindividualcomponent" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- Score + delta + tendência
+- Resumo executivo, ranking membros, dinâmicas coletivas
+- Pilares (radar/barras), indicadores psicológicos
+- Plano de ação, retrospectiva (condicional)
+- <code>@Output() colaboradorClicado</code> → abre relatório individual</p>
+<h3 id="task-19-relatoriospagecomponent-deeplinks">⏳ Task 19 — RelatoriosPageComponent + deeplinks<a class="headerlink" href="#task-19-relatoriospagecomponent-deeplinks" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- Página raiz que coordena todos os filhos
+- Query params: <code>?timeId=&amp;colaboradorId=&amp;semana=</code>
+- Deeplink de tela de time → <code>/relatorios?timeId=</code>
+- Deeplink de tela de colaborador → <code>/relatorios?timeId=&amp;colaboradorId=</code></p>
+<h3 id="task-20-validacao-end-to-end">⏳ Task 20 — Validação end-to-end<a class="headerlink" href="#task-20-validacao-end-to-end" title="Permanent link">&para;</a></h3>
+<p><strong>PENDENTE</strong>
+- Fluxo completo local com disparo manual
+- Estado vazio (sem relatórios), primeira semana (sem retrospectiva)
+- Export PDF para os 3 tipos</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

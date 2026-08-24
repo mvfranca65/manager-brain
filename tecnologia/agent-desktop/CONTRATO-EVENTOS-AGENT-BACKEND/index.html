@@ -1,0 +1,4983 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/agent-desktop/CONTRATO-EVENTOS-AGENT-BACKEND/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>CONTRATO EVENTOS AGENT BACKEND - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contrato-de-eventos-agent-desktop-backend" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CONTRATO EVENTOS AGENT BACKEND
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-voce-precisa-saber-em-2-minutos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. O que voce precisa saber em 2 minutos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. O que voce precisa saber em 2 minutos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-cinco-coisas-que-mais-derrubam-quem-escreve-api-nova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As cinco coisas que mais derrubam quem escreve API nova
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-transporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Transporte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Transporte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-endereco-e-metodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Endereco e metodo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cabecalhos-que-o-agent-envia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Cabecalhos que o Agent envia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-autenticacao-device-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Autenticacao — Device JWT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-tamanho-do-lote-e-cadencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Tamanho do lote e cadencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-o-que-acontece-quando-falha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 O que acontece quando falha
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-o-que-e-descartado-teto-do-a-64-perda-de-dado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 O que e descartado — teto do A-64 (PERDA DE DADO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-o-envelope-do-lote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. O envelope do lote
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. O envelope do lote">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-os-tres-campos-que-chegam-como-null-explicito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Os tres campos que chegam como null explicito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-aliases-historicos-aceitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Aliases historicos aceitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-status-do-colaborador-ativo-pausa-ausente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Status do colaborador — ATIVO / PAUSA / AUSENTE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Status do colaborador — ATIVO / PAUSA / AUSENTE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-quem-calcula-o-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Quem calcula: o Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-limiares-e-cadencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Limiares e cadencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-transicoes-possiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Transicoes possiveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-o-que-o-backend-recebe-e-faz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 O que o backend recebe e faz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aviso-o-campo-de-status-pode-mentir-e-nao-ha-como-o-backend-perceber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AVISO — o campo de status pode mentir, e nao ha como o backend perceber
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AVISO — o campo de status pode mentir, e nao ha como o backend perceber">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isto-e-latente-hoje-nao-ativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Isto e latente hoje, nao ativo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-irmao-mesma-forma-impacto-menor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso irmao, mesma forma, impacto menor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cada-tipo-de-evento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cada tipo de evento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Cada tipo de evento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-windowactivityevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 WindowActivityEvent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-idleevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 IdleEvent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-sessionevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 SessionEvent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-inputsummaryevent-activitysummaryevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 InputSummaryEvent (= ActivitySummaryEvent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-heartbeatevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 HeartbeatEvent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-statustransitionevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 StatusTransitionEvent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-meetingevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 MeetingEvent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-meetingsnapshotevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 MeetingSnapshotEvent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-phonecallevent-o-agent-windows-nunca-emite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 PhoneCallEvent — o Agent Windows nunca emite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#510-activitysummaryevent-e-inputactivitysummary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10 ActivitySummaryEvent e InputActivitySummary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-duplicatas-e-idempotencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Duplicatas e idempotencia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Duplicatas e idempotencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-as-tres-camadas-de-dedup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 As tres camadas de dedup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-chaves-unique-que-existem-hoje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Chaves UNIQUE que existem hoje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-o-que-faz-dois-eventos-serem-o-mesmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 O que faz dois eventos serem "o mesmo"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-reconciliacao-aberturafechamento-on-conflict-do-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Reconciliacao abertura/fechamento — ON CONFLICT ... DO UPDATE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-o-caso-nulls-not-distinct-2408" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 O caso NULLS NOT DISTINCT (24/08)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-onde-ainda-ha-colisao-possivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Onde ainda ha colisao possivel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Tempo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Tempo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-formato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Formato
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-qual-relogio-cada-carimbo-usa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Qual relogio cada carimbo usa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-armadilhas-ja-medidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Armadilhas ja medidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-o-contrato-de-erro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. O contrato de erro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. O contrato de erro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-202-accepted-o-caso-normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 202 Accepted — o caso normal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-motivosignorados-o-significado-exato-de-indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 motivosIgnorados — o significado exato de indice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-quando-vem-400" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Quando vem 400
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-os-outros-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Os outros status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-compatibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Compatibilidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Compatibilidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-tipo-de-evento-desconhecido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Tipo de evento desconhecido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-campo-novo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Campo novo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-versao-velha-de-agent-contra-backend-novo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Versao velha de Agent contra backend novo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-backend-novo-contra-agent-velho-e-a-ordem-de-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 Backend novo contra Agent velho — e a ORDEM DE DEPLOY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-o-canal-de-comando-recall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 O canal de comando (recall)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-o-que-o-agent-nunca-manda-lgpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. O que o Agent NUNCA manda (LGPD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. O que o Agent NUNCA manda (LGPD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dois-campos-que-merecem-leitura-atenta-antes-de-virarem-api-publica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dois campos que merecem leitura atenta antes de virarem API publica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-defeitos-abertos-que-afetam-quem-consome-o-contrato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Defeitos abertos que afetam quem consome o contrato
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Defeitos abertos que afetam quem consome o contrato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-ja-conhecidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Ja conhecidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-achados-novos-desta-leitura-nao-corrigidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Achados novos desta leitura — NAO corrigidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-o-que-ficou-nao-verificado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. O que ficou NAO VERIFICADO
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<blockquote>
+<p><strong>STATUS:</strong> ATIVO
+<strong>DATA:</strong> 2026-08-24
+<strong>DONO:</strong> @Bucky (Agent Desktop) — secoes de backend revisadas com @Shuri
+<strong>PARA:</strong> quem for criar ou alterar API que consome estes eventos</p>
+</blockquote>
+<h1 id="contrato-de-eventos-agent-desktop-backend">Contrato de eventos — Agent Desktop -&gt; backend<a class="headerlink" href="#contrato-de-eventos-agent-desktop-backend" title="Permanent link">&para;</a></h1>
+<p>Documento de referencia. Toda afirmacao aqui foi conferida no codigo e cita <code>arquivo:linha</code>.
+O que nao foi conferido esta marcado <strong>NAO VERIFICADO</strong> — nao ha afirmacao sem prova neste
+documento.</p>
+<p><strong>Prefixos de caminho usados nas citacoes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>prefixo</th>
+<th>repositorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AGENT/</code></td>
+<td><code>manager-srv-agent</code> (C#/.NET 8 — Windows)</td>
+</tr>
+<tr>
+<td><code>EVENTS/</code></td>
+<td><code>manager-srv-events-node</code> (recebe os eventos)</td>
+</tr>
+<tr>
+<td><code>ADMIN/</code></td>
+<td><code>manager-srv-admin-node</code> (vinculo, token, versao)</td>
+</tr>
+<tr>
+<td><code>BRAIN/</code></td>
+<td><code>manager-brain</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Versao do Agent analisada:</strong> 1.5.16 (<code>AGENT/src/ManagerAgent.Service/ManagerAgent.Service.csproj:8</code>,
+<code>AGENT/src/ManagerAgent.SessionWorker/ManagerAgent.SessionWorker.csproj:11</code>).</p>
+<p><strong>Qual codigo realmente executa.</strong> Existem duas arquiteturas no repositorio do Agent. A que roda
+hoje e a v2: <code>ManagerAgent.Service.exe</code> (servico, sessao 0) + <code>ManagerAgent.SessionWorker.exe</code>
+(um por sessao interativa). O <code>ManagerAgent.Tray</code> e a v1 legada: nao entra no pacote
+(<code>AGENT/scripts/build/build-pacote-e2e.ps1:92-93</code> lista apenas Service, SessionWorker, Watchdog e
+Configurator) e o instalador da v2 mata o processo dela
+(<code>AGENT/src/ManagerAgent.Installer/MigrationV1ToV2.cs:89</code>). <strong>Tudo neste documento descreve o
+caminho v2.</strong> Se voce encontrar <code>ManagerAgent.Tray/...</code> em alguma citacao de outro documento,
+esta olhando codigo que nao executa.</p>
+<hr />
+<h2 id="1-o-que-voce-precisa-saber-em-2-minutos">1. O que voce precisa saber em 2 minutos<a class="headerlink" href="#1-o-que-voce-precisa-saber-em-2-minutos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>pergunta</th>
+<th>resposta curta</th>
+<th>onde conferir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Endereco</td>
+<td><code>POST {baseUrlEvents}/api/agent/events</code></td>
+<td><code>AGENT/src/ManagerAgent.Service/Upload/HttpEventUploader.cs:113</code>; <code>EVENTS/src/modules/ingestion/ingestion.controller.ts:152,159</code> + <code>EVENTS/src/main.ts:71</code></td>
+</tr>
+<tr>
+<td>Producao</td>
+<td><code>https://api-events.imanagerportal.com</code></td>
+<td><code>AGENT/src/ManagerAgent.Service/appsettings.json:9</code></td>
+</tr>
+<tr>
+<td>Autenticacao</td>
+<td><code>Authorization: Bearer &lt;Device JWT&gt;</code> (HS256)</td>
+<td><code>AGENT/.../HttpEventUploader.cs:198-199</code>; <code>EVENTS/src/common/auth/device-jwt.guard.ts:34-35</code></td>
+</tr>
+<tr>
+<td>Validade do Device JWT</td>
+<td>2 horas (default 7200 s)</td>
+<td><code>ADMIN/src/common/config/env.schema.ts:85-89</code></td>
+</tr>
+<tr>
+<td>Validade do refresh token</td>
+<td>7 dias</td>
+<td><code>ADMIN/src/common/config/env.schema.ts:92-96</code></td>
+</tr>
+<tr>
+<td>Tamanho do lote</td>
+<td>100 eventos (Agent) / 1..1000 (backend)</td>
+<td><code>AGENT/.../UploadWorker.cs:29</code>; <code>EVENTS/src/modules/ingestion/dto/agent-event-batch.dto.ts:40-41</code></td>
+</tr>
+<tr>
+<td>Cadencia</td>
+<td>60 s, com envio imediato em fronteira de sessao</td>
+<td><code>AGENT/.../UploadWorker.cs:28</code>, <code>:239</code>, <code>:257-274</code></td>
+</tr>
+<tr>
+<td>Resposta normal</td>
+<td><strong>202 Accepted</strong></td>
+<td><code>EVENTS/src/modules/ingestion/ingestion.controller.ts:163</code></td>
+</tr>
+<tr>
+<td>Lote repetido</td>
+<td><strong>208 Already Reported</strong> (cache de 10 min, por processo)</td>
+<td><code>EVENTS/.../ingestion.controller.ts:149,291-293</code>; <code>EVENTS/src/modules/ingestion/services/dedup.service.ts:51-52</code></td>
+</tr>
+<tr>
+<td>Erro de LOTE</td>
+<td><strong>400</strong> <code>PAYLOAD_INVALIDO</code></td>
+<td><code>EVENTS/src/modules/ingestion/ingestion.service.ts:127-129</code></td>
+</tr>
+<tr>
+<td>Erro de ITEM</td>
+<td><strong>nunca 400</strong> — vai para <code>motivosIgnorados</code> no 202</td>
+<td><code>EVENTS/.../dto/agent-event-batch.dto.ts:443-444</code>, <code>:467-489</code></td>
+</tr>
+<tr>
+<td>Rate limit</td>
+<td>60 lotes/minuto por <code>instalacaoId</code>; <code>Retry-After: 60</code></td>
+<td><code>EVENTS/src/common/config/env.schema.ts:51-55</code>; <code>EVENTS/src/common/errors/global-exception.filter.ts:88-91</code></td>
+</tr>
+<tr>
+<td>Tipos de evento</td>
+<td>11 no enum do backend; o Agent Windows emite <strong>7</strong></td>
+<td><code>EVENTS/.../dto/agent-event-batch.dto.ts:62-74</code>; ver secao 3</td>
+</tr>
+<tr>
+<td>Quem calcula ATIVO/PAUSA/AUSENTE</td>
+<td><strong>o Agent</strong>, desde a 1.5.12. O backend so grava.</td>
+<td><code>AGENT/src/ManagerAgent.SessionWorker/Capture/UserStatusManager.cs:129-134</code>; ver secao 4</td>
+</tr>
+<tr>
+<td>Chaves UNIQUE</td>
+<td>so 3 tabelas tem; <code>eventos_sessao</code> <strong>nao tem</strong></td>
+<td>ver secao 5</td>
+</tr>
+<tr>
+<td>Fuso</td>
+<td>ISO 8601 <strong>com offset obrigatorio</strong>; colunas <code>timestamptz</code></td>
+<td><code>EVENTS/.../dto/agent-event-batch.dto.ts:206-209</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="as-cinco-coisas-que-mais-derrubam-quem-escreve-api-nova">As cinco coisas que mais derrubam quem escreve API nova<a class="headerlink" href="#as-cinco-coisas-que-mais-derrubam-quem-escreve-api-nova" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong><code>identificadorColaborador</code>, <code>instalacaoId</code> e <code>windowsUsername</code> chegam como <code>null</code> explicito,
+   nao ausentes.</strong> O envelope do Agent nao omite nulos
+   (<code>AGENT/.../HttpEventUploader.cs:29-34</code> — sem <code>DefaultIgnoreCondition</code>). O backend so passou a
+   aceitar isso em 24/08, trocando <code>.optional()</code> por <code>.nullish()</code>
+   (<code>EVENTS/.../dto/agent-event-batch.dto.ts:399-414</code>, justificativa em <code>:391-397</code>: 93 recusas
+   HTTP 400 medidas em 21/08, sempre em <code>windowsUsername</code>). Dentro de <code>dados</code>, ao contrario, nulo
+   e <strong>omitido</strong> (<code>AGENT/src/ManagerAgent.SessionWorker/Pipe/PipeEventBuffer.cs:18-22</code>).</li>
+<li><strong>Um item invalido nao derruba mais o lote, mas some em silencio.</strong> Ele vira <code>motivosIgnorados</code>
+   no 202 — e <strong>o Agent nao le o corpo da resposta em sucesso</strong>
+   (<code>AGENT/.../HttpEventUploader.cs:221-227</code> retorna sem ler), marcando tudo como enviado
+   (<code>AGENT/.../UploadWorker.cs:353-355</code>). Ninguem do lado do Agent sabe que perdeu o evento.</li>
+<li><strong>Ha perda de dado por teto de tentativas.</strong> Lote recusado por conteudo 5 vezes e <strong>descartado</strong>
+   (<code>AGENT/.../UploadWorker.cs:42</code>, <code>:396-421</code>). Ate 100 eventos por vez. Ver secao 1.6.</li>
+<li><strong><code>eventos_sessao</code> nao tem chave UNIQUE.</strong> LOGOUT em duplicata e possivel e conhecido — o
+   proprio Agent registra a brecha em <code>AGENT/src/ManagerAgent.Service/ManagerAgentService.cs:317-327</code>.</li>
+<li><strong>O campo de status pode mentir.</strong> Ver a caixa de destaque na secao 4.</li>
+</ol>
+<hr />
+<h2 id="2-transporte">2. Transporte<a class="headerlink" href="#2-transporte" title="Permanent link">&para;</a></h2>
+<h3 id="21-endereco-e-metodo">2.1 Endereco e metodo<a class="headerlink" href="#21-endereco-e-metodo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>valor</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metodo</td>
+<td><code>POST</code></td>
+<td><code>EVENTS/src/modules/ingestion/ingestion.controller.ts:159</code></td>
+</tr>
+<tr>
+<td>Caminho</td>
+<td><code>/api/agent/events</code></td>
+<td><code>@Controller('agent')</code> <code>:152</code> + <code>@Post('events')</code> <code>:159</code> + <code>setGlobalPrefix('api')</code> em <code>EVENTS/src/main.ts:71</code></td>
+</tr>
+<tr>
+<td>Montagem no Agent</td>
+<td><code>{config.BaseUrlEvents.TrimEnd('/')}/api/agent/events</code></td>
+<td><code>AGENT/.../HttpEventUploader.cs:112-113</code></td>
+</tr>
+<tr>
+<td><code>Content-Type</code></td>
+<td><code>application/json</code>, UTF-8</td>
+<td><code>AGENT/.../HttpEventUploader.cs:195</code></td>
+</tr>
+<tr>
+<td>Base URL de producao</td>
+<td><code>https://api-events.imanagerportal.com</code></td>
+<td><code>AGENT/src/ManagerAgent.Service/appsettings.json:9</code></td>
+</tr>
+<tr>
+<td>Onde a URL e guardada</td>
+<td><code>C:\ProgramData\ManagerAgent\config.json</code>, campo <code>baseUrlEvents</code></td>
+<td><code>AGENT/src/ManagerAgent.Shared/Config/ConfigPaths.cs:8-9,22-33,57</code>; <code>AGENT/src/ManagerAgent.Shared/Config/ConfigLocal.cs:11-12</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-cabecalhos-que-o-agent-envia">2.2 Cabecalhos que o Agent envia<a class="headerlink" href="#22-cabecalhos-que-o-agent-envia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>header</th>
+<th>quando</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Authorization: Bearer &lt;token&gt;</code></td>
+<td>sempre que houver token</td>
+<td><code>AGENT/.../HttpEventUploader.cs:198-199</code></td>
+</tr>
+<tr>
+<td><code>X-Installation-Id</code></td>
+<td>quando <code>config.InstalacaoId</code> nao e vazio</td>
+<td><code>AGENT/.../HttpEventUploader.cs:201-202</code></td>
+</tr>
+<tr>
+<td><code>X-Client-Dedup-Batch</code></td>
+<td>quando o hash do lote nao e vazio</td>
+<td><code>AGENT/.../HttpEventUploader.cs:204-205</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>X-Installation-Id</code> e ignorado pelo backend, de proposito</strong> — foi removido por ser falsificavel
+(<code>EVENTS/src/modules/ingestion/ingestion.service.ts:61-69</code>). A identidade vem so das claims do JWT.
+O Agent continua enviando; e ruido inofensivo, mas <strong>nao construa API que dependa dele</strong>.</p>
+<p><strong>O Agent NAO envia <code>X-Agent-Version</code>.</strong> Ver a consequencia na secao 9.3.</p>
+<h3 id="23-autenticacao-device-jwt">2.3 Autenticacao — Device JWT<a class="headerlink" href="#23-autenticacao-device-jwt" title="Permanent link">&para;</a></h3>
+<p><strong>Como nasce.</strong> Vinculacao em dois passos, ambos contra o <code>ADMIN</code>, autenticados pela chave de
+ativacao da empresa:</p>
+<table>
+<thead>
+<tr>
+<th>passo</th>
+<th>endpoint</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. valida colaborador</td>
+<td><code>POST {baseUrlAdmin}/api/agente/colaboradores/validar</code></td>
+<td><code>AGENT/src/ManagerAgent.Service/Linking/AgentLinkService.cs:129</code></td>
+</tr>
+<tr>
+<td>2. vincula dispositivo</td>
+<td><code>POST {baseUrlAdmin}/api/agente/dispositivos/vincular</code></td>
+<td><code>AGENT/.../AgentLinkService.cs:162</code>; <code>ADMIN/src/modules/agent-vinculacao/agent-vinculacao.controller.ts:94,155</code></td>
+</tr>
+</tbody>
+</table>
+<p>Corpo do passo 2 (<code>AGENT/.../AgentLinkService.cs:163-177</code>): <code>identificadorColaborador</code>,
+<code>instalacaoId</code>, <code>nomeMaquina</code>, <code>usuarioSessao</code> (fixo <code>"SYSTEM"</code>), <code>descricaoSo</code>, <code>versaoAgente</code>,
+<code>ip</code>, <code>hardwareFingerprint</code> (SHA-256; so o hash sai da maquina — <code>:154-159</code>),
+<code>dispositivoTipo</code> (fixo <code>"DESKTOP_WINDOWS"</code> — <code>:176</code>).</p>
+<p>Resposta (<code>ADMIN/src/modules/agent-vinculacao/dto/vincular-agente.response.dto.ts:25,37,45,54,63,73,83,93</code>):
+<code>statusVinculo</code> (<code>VINCULADO</code>|<code>JA_VINCULADO</code>), <code>colaboradorId</code>, <code>agenteId</code>, <code>instalacaoId</code>,
+<code>ultimoHeartbeatEm</code>, <strong><code>deviceToken</code></strong>, <strong><code>refreshToken</code></strong>. Nao ha <code>expiresIn</code>.
+O Agent guarda token e refresh em <code>AGENT/.../AgentLinkService.cs:204-211</code>.</p>
+<p><strong>Onde e guardado.</strong> <code>C:\ProgramData\ManagerAgent\config.json</code>, protegidos por DPAPI LocalMachine
+nos campos <code>deviceTokenDpapi</code> / <code>refreshTokenDpapi</code>
+(<code>AGENT/src/ManagerAgent.Shared/Config/ConfigLocal.cs:42-53</code>). Os campos em texto plano
+<code>deviceToken</code>/<code>refreshToken</code> existem so para config anterior a v1.3.0 (<code>:55-67</code>).</p>
+<p><strong>Claims</strong> (<code>ADMIN/src/common/auth/device-jwt.issuer.ts:78-89</code>):
+<code>sub</code> (agenteId, <strong>string</strong>), <code>tenant_id</code> (empresaId, numero), <code>usuario_id</code> (numero),
+<code>instalacao_id</code> (string), <code>cnpj</code> (string), <code>iss</code> = <code>manager-srv-admin</code>, <code>iat</code>, <code>exp</code>.
+Assinatura HS256, segredo <code>MANAGER_DEVICE_JWT_SECRET</code> (<code>:55</code>), minimo 32 chars
+(<code>ADMIN/src/common/config/env.schema.ts:80-82</code>).</p>
+<p>O <code>EVENTS</code> valida HS256 apenas (<code>EVENTS/src/common/auth/device-jwt.verifier.ts:35,84</code>),
+<code>clockTolerance: 0</code> (<code>:85</code>), e exige <code>sub</code>, <code>tenant_id</code>, <code>usuario_id</code>, <code>instalacao_id</code>
+(<code>:111-141</code>). <strong>Nao valida <code>iss</code>, <code>nbf</code> nem <code>kid</code></strong> — declarado em <code>:6-8,86</code>.</p>
+<p><strong>Validade e renovacao.</strong></p>
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>valor</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TTL do Device JWT</td>
+<td>7200 s (2 h), env <code>MANAGER_DEVICE_JWT_EXPIRATION_SECONDS</code></td>
+<td><code>ADMIN/src/common/config/env.schema.ts:85-89</code></td>
+</tr>
+<tr>
+<td>TTL do refresh token</td>
+<td>7 dias, env <code>MANAGER_DEVICE_REFRESH_TOKEN_EXPIRATION_DAYS</code></td>
+<td><code>ADMIN/src/common/config/env.schema.ts:92-96</code></td>
+</tr>
+<tr>
+<td>Endpoint de renovacao</td>
+<td><code>POST {baseUrlAdmin}/api/agente/auth/refresh</code>, corpo <code>{refreshToken}</code></td>
+<td><code>AGENT/src/ManagerAgent.Shared/Auth/TokenManager.cs:168,170</code>; <code>ADMIN/src/modules/agent-auth/agent-auth.controller.ts:72,76</code></td>
+</tr>
+<tr>
+<td>Quando o Agent renova</td>
+<td>quando faltam <strong>menos de 1 minuto</strong> para expirar</td>
+<td><code>AGENT/.../TokenManager.cs:205-218</code> (<code>ValidTo &lt; UtcNow.AddMinutes(1)</code>)</td>
+</tr>
+<tr>
+<td>Coordenacao entre processos</td>
+<td>mutex nomeado <code>Global\ManagerAgent.TokenRefresh</code>, timeout 30 s</td>
+<td><code>AGENT/.../TokenManager.cs:36-37,90-145</code></td>
+</tr>
+<tr>
+<td>Rotacao</td>
+<td>refresh token e de uso unico (revogado no ato)</td>
+<td><code>ADMIN/src/modules/agent-auth/agent-auth.repository.ts:137-145</code></td>
+</tr>
+<tr>
+<td>Rate limit do refresh</td>
+<td>20 req / 60 s <strong>por IP</strong></td>
+<td><code>ADMIN/src/modules/agent-auth/agent-auth.controller.ts:68-69,78-82</code></td>
+</tr>
+</tbody>
+</table>
+<p>O refresh e <code>@Public</code> (<code>ADMIN/.../agent-auth.controller.ts:77</code>) — o proprio refresh token e a
+credencial. <strong>Ele nunca devolve 403 e nunca emite <code>X-Agent-Revoked</code></strong>; um agente revogado ainda
+consegue token novo ali e so e barrado no proximo endpoint protegido
+(<code>ADMIN/src/common/auth/revocation-check.interceptor.ts:76-78</code>;
+<code>ADMIN/src/modules/agent-auth/agent-auth.repository.ts:206-219</code>).</p>
+<h3 id="24-tamanho-do-lote-e-cadencia">2.4 Tamanho do lote e cadencia<a class="headerlink" href="#24-tamanho-do-lote-e-cadencia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>valor</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eventos por lote (Agent)</td>
+<td>100</td>
+<td><code>AGENT/.../UploadWorker.cs:29</code></td>
+</tr>
+<tr>
+<td>Lotes por ciclo</td>
+<td><code>max(10, sessoesAtivas x 2)</code>, teto 50</td>
+<td><code>AGENT/.../UploadWorker.cs:30-31,430-441</code></td>
+</tr>
+<tr>
+<td>Intervalo do ciclo</td>
+<td>60 s</td>
+<td><code>AGENT/.../UploadWorker.cs:28</code></td>
+</tr>
+<tr>
+<td>Envio imediato</td>
+<td>LOCK, UNLOCK, LOGIN, LOGOUT furam os 60 s</td>
+<td><code>AGENT/.../UploadWorker.cs:239,257-274</code>; <code>AGENT/src/ManagerAgent.Shared/Session/SessionEventTypes.cs:30-31,40</code></td>
+</tr>
+<tr>
+<td>Minimo/maximo aceito pelo backend</td>
+<td>1 a 1000 eventos</td>
+<td><code>EVENTS/.../dto/agent-event-batch.dto.ts:40-41,416-420</code></td>
+</tr>
+<tr>
+<td>Agrupamento</td>
+<td>um lote por par (sessao Windows, usuario)</td>
+<td><code>AGENT/src/ManagerAgent.Service/Storage/SqliteEventBuffer.cs:411-458</code></td>
+</tr>
+<tr>
+<td>Buffer do SessionWorker</td>
+<td>10.000 itens em memoria; acima disso descarta o mais antigo</td>
+<td><code>AGENT/src/ManagerAgent.SessionWorker/Pipe/AutonomousBuffer.cs:17,185-186</code></td>
+</tr>
+<tr>
+<td>Dreno worker -&gt; servico</td>
+<td>a cada 10 s</td>
+<td><code>AGENT/src/ManagerAgent.SessionWorker/Worker.cs:96,418-419</code></td>
+</tr>
+<tr>
+<td>Limite do pipe</td>
+<td>10 MB por mensagem</td>
+<td><code>AGENT/src/ManagerAgent.Shared/Pipe/PipeProtocol.cs:12,33-35</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nao ha limite de bytes no corpo HTTP configurado em nenhum dos dois lados</strong> — NAO VERIFICADO se
+o proxy/Fly.io impoe um; nao ha nada no codigo dos repositorios.</p>
+<h3 id="25-o-que-acontece-quando-falha">2.5 O que acontece quando falha<a class="headerlink" href="#25-o-que-acontece-quando-falha" title="Permanent link">&para;</a></h3>
+<p>O Agent classifica o resultado em tres
+(<code>AGENT/src/ManagerAgent.Service/Upload/ResultadoEnvio.cs:74-90</code>):</p>
+<table>
+<thead>
+<tr>
+<th>resultado</th>
+<th>quando</th>
+<th>o que o Agent faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ok</code></td>
+<td>2xx, ou 208</td>
+<td>marca enviado e apaga do buffer (<code>UploadWorker.cs:353-355</code>)</td>
+</tr>
+<tr>
+<td><code>FalhaTransitoria</code></td>
+<td>sem rede, 5xx, timeout, <strong>408</strong>, <strong>429</strong>, 401 sem refresh, 403 com <code>X-Agent-Revoked</code></td>
+<td>volta para a fila, <strong>sem teto e sem contador</strong> (<code>UploadWorker.cs:360-365</code>)</td>
+</tr>
+<tr>
+<td><code>FalhaPermanente</code></td>
+<td>qualquer outro 4xx (400, 404, 412, 422...)</td>
+<td>conta uma tentativa; no teto, <strong>descarta</strong></td>
+</tr>
+</tbody>
+</table>
+<p>A classificacao esta em <code>AGENT/.../ResultadoEnvio.cs:109-122</code>: 401, 403, 408 e 429 sao
+explicitamente excluidos de "falha de conteudo".</p>
+<p>Dentro de uma unica chamada ha no maximo <strong>2 tentativas</strong> (<code>AGENT/.../HttpEventUploader.cs:22</code>),
+e a segunda so existe para reexecutar apos um refresh disparado por 401 (<code>:229-248</code>).
+Nao ha backoff: o retry real e o proximo ciclo de 60 s.</p>
+<p>Sem rede o ciclo nem comeca (<code>AGENT/.../UploadWorker.cs:294-299</code>).</p>
+<h3 id="26-o-que-e-descartado-teto-do-a-64-perda-de-dado">2.6 O que e descartado — teto do A-64 (PERDA DE DADO)<a class="headerlink" href="#26-o-que-e-descartado-teto-do-a-64-perda-de-dado" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Depois de 5 recusas por conteudo, o lote inteiro sai da fila sem ter sido enviado.</strong>
+Ate 100 eventos por vez, definitivamente perdidos.</p>
+</blockquote>
+<ul>
+<li>Teto: <code>MaxFalhasPermanentesPorLote = 5</code> (<code>AGENT/.../UploadWorker.cs:42</code>). Com o ciclo de 60 s,
+  isso da <strong>cinco minutos</strong>.</li>
+<li>A contagem e <strong>por linha</strong>, nao por lote, e sobrevive a reboot — coluna <code>tentativas_falha</code>
+  no SQLite local (<code>AGENT/.../SqliteEventBuffer.cs:91,519-564</code>).</li>
+<li>No teto, as linhas recebem <code>uploaded = 2</code> ("descartado") e um <code>ultimo_erro</code>
+  (<code>AGENT/.../SqliteEventBuffer.cs:509,570-603</code>), e somem na faxina de 24 h
+  (<code>:617-641</code>).</li>
+<li>E registrado <strong>um</strong> <code>LogError</code> no momento do descarte, nao um por ciclo
+  (<code>AGENT/.../UploadWorker.cs:413-418</code>).</li>
+<li>Falha passageira <strong>nao</strong> consome o teto (<code>AGENT/.../UploadWorker.cs:358-365</code>).</li>
+</ul>
+<p><strong>Por que isso importa para quem escreve API:</strong> um 400 novo introduzido pelo backend — um campo
+que passou a ser obrigatorio, um <code>max()</code> reduzido — apaga dados da frota inteira em cinco
+minutos, em silencio. <strong>Nunca aperte validacao de lote sem antes conferir o que a frota manda.</strong></p>
+<hr />
+<h2 id="3-o-envelope-do-lote">3. O envelope do lote<a class="headerlink" href="#3-o-envelope-do-lote" title="Permanent link">&para;</a></h2>
+<p>Serializado por <code>AGENT/.../HttpEventUploader.cs:169</code> com as opcoes de <code>:29-34</code>
+(camelCase, sem indentacao, <strong>sem <code>DefaultIgnoreCondition</code></strong>). Montado em <code>:152-167</code>.</p>
+<p>Validado por <code>AgentEventBatchEnvelopeSchema</code>
+(<code>EVENTS/.../dto/agent-event-batch.dto.ts:446-449</code>), cujos campos vem de <code>camposDeLote</code>
+(<code>:399-414</code>).</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>obrigatorio</th>
+<th>aceita <code>null</code>?</th>
+<th>limite</th>
+<th>o Agent manda</th>
+<th>citacao (Agent / backend)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>maquinaId</code></td>
+<td>string</td>
+<td><strong>sim</strong></td>
+<td>nao</td>
+<td>1..255</td>
+<td><code>Environment.MachineName</code></td>
+<td><code>HttpEventUploader.cs:154</code> / <code>dto:400</code></td>
+</tr>
+<tr>
+<td><code>identificadorColaborador</code></td>
+<td>string</td>
+<td>nao</td>
+<td><strong>sim (<code>.nullish()</code>)</strong></td>
+<td>1..64</td>
+<td><code>config.IdentificadorColaborador</code> — <strong><code>null</code> quando vazio</strong></td>
+<td><code>HttpEventUploader.cs:155</code>, <code>AgentEventBatchDto.cs:15-16</code> / <code>dto:401</code></td>
+</tr>
+<tr>
+<td><code>instalacaoId</code></td>
+<td>string</td>
+<td>nao</td>
+<td><strong>sim (<code>.nullish()</code>)</strong></td>
+<td>1..64</td>
+<td><code>config.InstalacaoId</code> — <strong><code>null</code> quando vazio</strong></td>
+<td><code>HttpEventUploader.cs:156</code>, <code>AgentEventBatchDto.cs:18-19</code> / <code>dto:402</code></td>
+</tr>
+<tr>
+<td><code>versaoAgente</code></td>
+<td>string</td>
+<td><strong>sim</strong></td>
+<td>nao</td>
+<td>1..50</td>
+<td>versao do assembly, <strong>4 partes</strong> (<code>1.5.16.0</code>)</td>
+<td><code>HttpEventUploader.cs:140,158</code> / <code>dto:403</code></td>
+</tr>
+<tr>
+<td><code>descricaoSo</code></td>
+<td>string</td>
+<td><strong>sim</strong></td>
+<td>nao</td>
+<td>1..255</td>
+<td><code>RuntimeInformation.OSDescription</code></td>
+<td><code>HttpEventUploader.cs:141,159</code> / <code>dto:404</code></td>
+</tr>
+<tr>
+<td><code>dispositivoTipo</code></td>
+<td>enum</td>
+<td><strong>sim</strong></td>
+<td>nao</td>
+<td>7 valores</td>
+<td><strong><code>"WINDOWS"</code></strong> (legado)</td>
+<td><code>HttpEventUploader.cs:144,160</code>, <code>DispositivoTipoDetector.cs:18,34-35</code> / <code>dto:405-411</code></td>
+</tr>
+<tr>
+<td><code>enviadoEm</code></td>
+<td>ISO 8601 c/ offset</td>
+<td><strong>sim</strong></td>
+<td>nao</td>
+<td>—</td>
+<td><code>DateTimeOffset.UtcNow</code></td>
+<td><code>HttpEventUploader.cs:161</code> / <code>dto:412</code></td>
+</tr>
+<tr>
+<td><code>windowsUsername</code></td>
+<td>string</td>
+<td>nao</td>
+<td><strong>sim (<code>.nullish()</code>)</strong></td>
+<td>0..255</td>
+<td>usuario Windows do lote — <strong><code>null</code> quando vazio</strong></td>
+<td><code>HttpEventUploader.cs:157</code>, <code>UploadWorker.cs:347</code> / <code>dto:413</code></td>
+</tr>
+<tr>
+<td><code>eventos</code></td>
+<td>array</td>
+<td><strong>sim</strong></td>
+<td>nao</td>
+<td>1..1000</td>
+<td>ate 100</td>
+<td><code>UploadWorker.cs:29</code> / <code>dto:416-420,448</code></td>
+</tr>
+</tbody>
+</table>
+<p>Cada item de <code>eventos</code> tem exatamente dois campos
+(<code>AGENT/src/ManagerAgent.Service/Upload/AgentEventBatchDto.cs:48-55</code>):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tipoEvento</code></td>
+<td>string</td>
+<td><code>AgentEventBatchDto.cs:50-51</code></td>
+</tr>
+<tr>
+<td><code>dados</code></td>
+<td>objeto</td>
+<td><code>AgentEventBatchDto.cs:53-54</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-os-tres-campos-que-chegam-como-null-explicito">3.1 Os tres campos que chegam como <code>null</code> explicito<a class="headerlink" href="#31-os-tres-campos-que-chegam-como-null-explicito" title="Permanent link">&para;</a></h3>
+<p><code>AgentEventBatchDto.IdentificadorColaborador</code>, <code>.InstalacaoId</code> e <code>.WindowsUsername</code> sao <code>string?</code>
+(<code>AGENT/.../AgentEventBatchDto.cs:16,19,22</code>). O serializador nao omite nulos
+(<code>AGENT/.../HttpEventUploader.cs:29-34</code>). Logo o corpo carrega literalmente
+<code>"windowsUsername": null</code>.</p>
+<p>Foi isso que derrubou lotes ate 24/08: <code>.optional()</code> do Zod aceita a chave <strong>ausente</strong> e recusa
+<code>null</code> <strong>explicito</strong>. A correcao trocou os tres para <code>.nullish()</code>
+(<code>EVENTS/.../dto/agent-event-batch.dto.ts:401,402,413</code>, justificativa em <code>:391-397</code>).</p>
+<p><strong>Regra para API nova: todo campo opcional de lote precisa ser <code>.nullish()</code>, nunca <code>.optional()</code>.</strong></p>
+<p><strong>Dentro de <code>dados</code> a regra e a oposta:</strong> o buffer do worker serializa com
+<code>JsonIgnoreCondition.WhenWritingNull</code> (<code>AGENT/src/ManagerAgent.SessionWorker/Pipe/PipeEventBuffer.cs:18-22</code>),
+entao um evento em andamento chega <strong>sem a chave</strong> <code>finalizadoEm</code>. Os schemas de item usam
+<code>.optional()</code> e isso esta correto para eles.</p>
+<h3 id="32-aliases-historicos-aceitos">3.2 Aliases historicos aceitos<a class="headerlink" href="#32-aliases-historicos-aceitos" title="Permanent link">&para;</a></h3>
+<p><strong>Nao existe nenhum alias de NOME DE CAMPO.</strong> O comentario em
+<code>EVENTS/.../dto/agent-event-batch.dto.ts:12-14</code> afirma que o controller normaliza
+<code>machineId -&gt; maquinaId</code> antes do parse. <strong>Isso nao existe no codigo</strong>: o controller passa
+<code>@Body() body: unknown</code> direto (<code>EVENTS/src/modules/ingestion/ingestion.controller.ts:266-289</code>) e
+o servico faz <code>safeParse</code> no corpo cru (<code>EVENTS/.../ingestion.service.ts:119</code>). Um agente que
+mandar <code>machineId</code> recebe <strong>400 PAYLOAD_INVALIDO</strong>.</p>
+<p>Os aliases que existem sao de <strong>valor</strong>, dentro dos schemas:</p>
+<table>
+<thead>
+<tr>
+<th>dominio</th>
+<th>alias -&gt; canonico</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SessionEvent</td>
+<td><code>LOGON -&gt; LOGIN</code>, <code>LOGOFF -&gt; LOGOUT</code></td>
+<td><code>dto:101-102,105-106</code></td>
+</tr>
+<tr>
+<td>UserStatus</td>
+<td><code>ONLINE -&gt; ATIVO</code>, <code>OFFLINE -&gt; AUSENTE</code>, <code>IDLE -&gt; AUSENTE</code>, <code>INATIVO -&gt; AUSENTE</code></td>
+<td><code>dto:129-132,135-138</code></td>
+</tr>
+<tr>
+<td>padraoDigitacao</td>
+<td><code>NORMAL</code>/<code>HUMAN</code>/<code>DIGITACAO_NORMAL -&gt; NATURAL</code></td>
+<td><code>dto:168-171,189-190</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>ROBO -&gt; ROBOTICO</code></td>
+<td><code>dto:170,191</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>PADRAO_TECLA_REPETIDA_SUSPEITO</code>/<code>BURST_MESMA_TECLA -&gt; REPETITIVO</code></td>
+<td><code>dto:172-173,192-193</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>NAVEGACAO_APENAS -&gt; IRREGULAR</code></td>
+<td><code>dto:174,194</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>MOUSE_APENAS -&gt; INDEFINIDO</code></td>
+<td><code>dto:175,195</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>CONTINUOUS -&gt; STEADY</code></td>
+<td><code>dto:176,196</code></td>
+</tr>
+<tr>
+<td>cliques</td>
+<td><code>cliquesMouseEsq/Dir/Meio -&gt; cliquesEsquerdo/Direito/Meio</code></td>
+<td><code>dto:273-275</code>; <code>activity-summary.handler.ts:128-130</code></td>
+</tr>
+<tr>
+<td>intervalo</td>
+<td><code>iniciadoEm/finalizadoEm -&gt; intervaloInicio/intervaloFim</code></td>
+<td><code>activity-summary.handler.ts:96-97</code></td>
+</tr>
+<tr>
+<td>tipo de sessao</td>
+<td><code>tipoEvento</code> e <code>tipoTransicao</code> — qualquer um serve</td>
+<td><code>dto:249-250</code>; <code>session.handler.ts:58</code></td>
+</tr>
+<tr>
+<td>tipoEvento</td>
+<td><code>InputActivitySummary</code> e <code>InputSummaryEvent</code> = <code>ActivitySummaryEvent</code></td>
+<td><code>handler-registry.ts:78-80</code></td>
+</tr>
+<tr>
+<td>dispositivo</td>
+<td><code>WINDOWS -&gt; DESKTOP_WINDOWS</code>, <code>MACOS -&gt; DESKTOP_MACOS</code>, <code>ANDROID -&gt; MOBILE_ANDROID</code>, <code>IOS -&gt; IOS</code></td>
+<td><code>normalizar-dispositivo.ts:74-82</code></td>
+</tr>
+</tbody>
+</table>
+<p>Todos os normalizadores de valor fazem <code>trim().toUpperCase()</code> antes
+(<code>dto:92,121,157</code>).</p>
+<hr />
+<h2 id="4-status-do-colaborador-ativo-pausa-ausente">4. Status do colaborador — ATIVO / PAUSA / AUSENTE<a class="headerlink" href="#4-status-do-colaborador-ativo-pausa-ausente" title="Permanent link">&para;</a></h2>
+<h3 id="41-quem-calcula-o-agent">4.1 Quem calcula: o Agent<a class="headerlink" href="#41-quem-calcula-o-agent" title="Permanent link">&para;</a></h3>
+<p><strong>Desde a versao 1.5.12.</strong> O arquivo <code>UserStatusManager.cs</code> foi reintroduzido no commit <code>c680cd2</code>,
+cujo <code>csproj</code> marca <code>&lt;Version&gt;1.5.12&lt;/Version&gt;</code> (verificado com
+<code>git log --diff-filter=A -- src/ManagerAgent.SessionWorker/Capture/UserStatusManager.cs</code> e
+<code>git show c680cd2:src/ManagerAgent.SessionWorker/ManagerAgent.SessionWorker.csproj</code>).</p>
+<blockquote>
+<p><strong>Divergencia de documentacao:</strong> o comentario do proprio codigo diz "v1.5.11: a regra voltou"
+(<code>AGENT/src/ManagerAgent.SessionWorker/Capture/DailyBoundaryWorker.cs:13,16</code>). O commit que
+trouxe o arquivo de volta carrega <code>&lt;Version&gt;1.5.12&lt;/Version&gt;</code>. Use <strong>1.5.12</strong> como corte.</p>
+</blockquote>
+<p><strong>Historico que importa (achado A-58).</strong> Entre a 1.5.0 e a 1.5.11 o Agent Windows parou de emitir
+<code>StatusTransitionEvent</code>, apostando que o backend derivaria o status. <strong>O backend nunca derivou —
+ele so grava o que recebe.</strong> Resultado: nenhuma transicao de status em maquina Windows entre
+2026-05-17 e a volta da regra
+(<code>AGENT/src/ManagerAgent.SessionWorker/Capture/Models/UserStatus.cs:6-8</code>;
+<code>AGENT/.../DailyBoundaryWorker.cs:11-14</code>).</p>
+<p><strong>Nao existe caminho legado no backend.</strong> Nao ha nenhum codigo em <code>EVENTS</code> que derive status a
+partir de ociosidade ou de resumo de input: o <code>StatusTransitionHandler</code> faz um <code>INSERT</code> simples e
+nada mais (<code>EVENTS/src/modules/ingestion/handlers/status-transition.handler.ts:34-55</code>). Se o Agent
+nao mandar, a tabela fica vazia.</p>
+<h3 id="42-limiares-e-cadencia">4.2 Limiares e cadencia<a class="headerlink" href="#42-limiares-e-cadencia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>valor efetivo</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATIVO -&gt; PAUSA</td>
+<td>silencio &gt;= <strong>5 minutos</strong></td>
+<td><code>AGENT/.../UserStatusManager.cs:50-51</code>; <code>AGENT/src/ManagerAgent.SessionWorker/appsettings.json:25</code></td>
+</tr>
+<tr>
+<td>PAUSA -&gt; AUSENTE</td>
+<td>silencio &gt;= <strong>15 minutos</strong></td>
+<td><code>AGENT/.../UserStatusManager.cs:52-53</code>; <code>appsettings.json:26</code></td>
+</tr>
+<tr>
+<td>Reavaliacao</td>
+<td>a cada <strong>30 s</strong></td>
+<td><code>AGENT/src/ManagerAgent.SessionWorker/Worker.cs:151-153</code>; <code>appsettings.json:27</code></td>
+</tr>
+<tr>
+<td>Fonte do silencio</td>
+<td><code>GetLastInputInfo</code> do Windows</td>
+<td><code>AGENT/.../Worker.cs:86-87</code>; <code>AGENT/src/ManagerAgent.SessionWorker/Capture/Infrastructure/WindowsIdleDetector.cs</code></td>
+</tr>
+<tr>
+<td>Config invertida (<code>ausente &lt;= pausa</code>)</td>
+<td>ignorada; volta para 5 e 15 com WARN</td>
+<td><code>AGENT/.../UserStatusManager.cs:58-66</code></td>
+</tr>
+<tr>
+<td>Config zerada/ausente</td>
+<td>vira o default, nunca zero</td>
+<td><code>AGENT/.../UserStatusManager.cs:50-53</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-transicoes-possiveis">4.3 Transicoes possiveis<a class="headerlink" href="#43-transicoes-possiveis" title="Permanent link">&para;</a></h3>
+<p>Classificacao pura (<code>AGENT/.../UserStatusManager.cs:129-134</code>):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>silencio &gt;= 15min -&gt; AUSENTE
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>silencio &gt;=  5min -&gt; PAUSA
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                  -&gt; ATIVO
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>de</th>
+<th>para</th>
+<th>quando</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATIVO</td>
+<td>PAUSA</td>
+<td>5 min de silencio</td>
+<td><code>:132</code></td>
+</tr>
+<tr>
+<td>ATIVO</td>
+<td><strong>AUSENTE</strong></td>
+<td>salto direto, quando a avaliacao perdeu a janela da PAUSA (maquina saturada, worker relancado) — <strong>e correto</strong></td>
+<td><code>:123-127,131</code></td>
+</tr>
+<tr>
+<td>PAUSA</td>
+<td>AUSENTE</td>
+<td>15 min de silencio</td>
+<td><code>:131</code></td>
+</tr>
+<tr>
+<td>PAUSA</td>
+<td>ATIVO</td>
+<td>qualquer interacao</td>
+<td><code>:133</code></td>
+</tr>
+<tr>
+<td>AUSENTE</td>
+<td>ATIVO</td>
+<td>qualquer interacao</td>
+<td><code>:133</code></td>
+</tr>
+<tr>
+<td>AUSENTE</td>
+<td>PAUSA</td>
+<td><strong>impossivel</strong> — o silencio so cresce</td>
+<td><code>:129-134</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Duas situacoes em que NAO ha evento:</strong></p>
+<ol>
+<li><strong>Primeira avaliacao apos o worker subir.</strong> O status inicial e adotado a partir do silencio
+   real, <strong>sem emitir transicao</strong> (<code>:79-88</code>). E de proposito: <code>statusAnterior</code> e obrigatorio no
+   schema e <code>NOT NULL</code> na tabela (<code>EVENTS/src/common/db/schema/eventos.schema.ts:142</code>), entao
+   toda transicao emitida ja tem de onde veio.</li>
+<li><strong>Fronteira de sessao</strong> (LOCK, UNLOCK, LOGIN, LOGOUT). O status volta a ATIVO <strong>sem emitir</strong>
+   (<code>AGENT/.../UserStatusManager.cs:108-121</code>;
+   <code>AGENT/src/ManagerAgent.SessionWorker/Capture/SessionEventService.cs:104-107</code>). O periodo
+   bloqueado ja esta descrito em <code>eventos_janela</code> e <code>eventos_ociosidade</code>, com mais precisao — e a
+   tabela de transicoes <strong>nao tem trava contra duplicata</strong>.</li>
+</ol>
+<p>A avaliacao fica <strong>dentro</strong> do portao de pausa do laco principal
+(<code>AGENT/.../Worker.cs:200-221</code>): com a captura suspensa nao se emite transicao
+(justificativa em <code>AGENT/.../Worker.cs:331-334</code>).</p>
+<h3 id="44-o-que-o-backend-recebe-e-faz">4.4 O que o backend recebe e faz<a class="headerlink" href="#44-o-que-o-backend-recebe-e-faz" title="Permanent link">&para;</a></h3>
+<p>Payload: ver secao 5 da tabela de eventos (<code>StatusTransitionEvent</code>).
+O handler faz <strong>INSERT puro, sem <code>ON CONFLICT</code></strong>
+(<code>EVENTS/src/modules/ingestion/handlers/status-transition.handler.ts:50-55</code>), nunca rejeita item
+(<code>:31,57</code>), e nao trunca <code>motivo</code> (<code>:45</code> — coerente com <code>varchar(255)</code> e o <code>max(255)</code> do Zod).</p>
+<p>Tabela <code>eventos_transicao_status</code> (<code>EVENTS/src/common/db/schema/eventos.schema.ts:139-154</code>).
+<code>status_anterior</code> e <code>status_novo</code> sao <code>varchar(32) NOT NULL</code> (<code>:142-143</code>).
+<code>agente_id</code> e <code>NOT NULL</code> aqui — diferente de <code>eventos_janela</code>/<code>ociosidade</code>/<code>sessao</code>, onde e
+nulavel (<code>:150</code> vs <code>:70,102,122</code>).</p>
+<hr />
+<blockquote>
+<h2 id="aviso-o-campo-de-status-pode-mentir-e-nao-ha-como-o-backend-perceber">AVISO — o campo de status pode mentir, e nao ha como o backend perceber<a class="headerlink" href="#aviso-o-campo-de-status-pode-mentir-e-nao-ha-como-o-backend-perceber" title="Permanent link">&para;</a></h2>
+<p><strong>O que acontece hoje.</strong> A conversao do enum interno para o texto que vai no evento tem um caso
+curinga:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// AGENT/src/ManagerAgent.SessionWorker/Capture/UserStatusManager.cs:145-151</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">internal</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Nome</span><span class="p">(</span><span class="n">UserStatus</span><span class="w"> </span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="k">switch</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">UserStatus</span><span class="p">.</span><span class="n">Ativo</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"ATIVO"</span><span class="p">,</span><span class="w">     </span><span class="c1">// :147</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">UserStatus</span><span class="p">.</span><span class="n">Pausa</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"PAUSA"</span><span class="p">,</span><span class="w">     </span><span class="c1">// :148</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">UserStatus</span><span class="p">.</span><span class="n">Ausente</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"AUSENTE"</span><span class="p">,</span><span class="w">   </span><span class="c1">// :149</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">_</span><span class="w">                  </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"ATIVO"</span><span class="w">      </span><span class="c1">// :150  &lt;-- aqui</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">};</span>
+</code></pre></div>
+<p><strong>O que o backend recebe.</strong> A string <code>"ATIVO"</code>, byte a byte identica a de um ATIVO de verdade.
+Ela passa pelo <code>userStatusNormalizer</code> sem marca nenhuma
+(<code>EVENTS/.../dto/agent-event-batch.dto.ts:125-128</code>) e e gravada em
+<code>eventos_transicao_status.status_novo</code> como qualquer outro ATIVO
+(<code>EVENTS/.../handlers/status-transition.handler.ts:43</code>).</p>
+<p><strong>O que o backend NAO tem como saber.</strong> Nada. Nao ha campo de confianca, nao ha motivo
+distinguivel — o <code>motivo</code> gerado nesse caminho e o mesmo texto do ATIVO legitimo
+(<code>AGENT/.../UserStatusManager.cs:136-139</code>). Uma API que somar tempo em ATIVO para calcular
+produtividade contaria como trabalho um estado que o Agent <strong>nao soube classificar</strong>.</p>
+<p><strong>Por que isto e diferente dos outros defeitos de 24/08.</strong> Os outros perdem dado ou ficam em
+silencio. Este <strong>afirma</strong>. Um dado ausente e visivel; um dado errado com cara de certo, nao.</p>
+<h3 id="isto-e-latente-hoje-nao-ativo">Isto e latente hoje, nao ativo<a class="headerlink" href="#isto-e-latente-hoje-nao-ativo" title="Permanent link">&para;</a></h3>
+<p>Conferido linha a linha, nesta versao:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Valores no enum <code>UserStatus</code></td>
+<td><strong>3</strong> — <code>Ativo</code> (<code>AGENT/src/ManagerAgent.SessionWorker/Capture/Models/UserStatus.cs:17</code>), <code>Pausa</code> (<code>:20</code>), <code>Ausente</code> (<code>:23</code>)</td>
+</tr>
+<tr>
+<td>Valores tratados no <code>switch</code></td>
+<td><strong>os 3</strong> — <code>:147</code>, <code>:148</code>, <code>:149</code></td>
+</tr>
+<tr>
+<td>Curinga alcancavel hoje?</td>
+<td><strong>nao</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Todos os tres valores estao tratados.</strong> O curinga e inalcancavel na 1.5.16, e o defeito e
+<strong>latente</strong>. Ele vira ativo no dia em que alguem acrescentar um quarto valor ao enum — e o
+agravante e que o proprio guarda-corpo do repositorio nao avisaria: <code>CS8509</code> esta promovido a
+erro de compilacao (<code>AGENT/Directory.Build.props:22</code>), mas <strong>um <code>switch</code> com ramo <code>_</code> nunca
+emite CS8509</strong>. O curinga desliga exatamente a rede que existe para pegar isso.</p>
+<h3 id="caso-irmao-mesma-forma-impacto-menor">Caso irmao, mesma forma, impacto menor<a class="headerlink" href="#caso-irmao-mesma-forma-impacto-menor" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// AGENT/src/ManagerAgent.SessionWorker/Capture/RenderConfianca.cs:30-37</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToApiString</span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="n">RenderConfianca</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="k">switch</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">RenderConfianca</span><span class="p">.</span><span class="n">Ausente</span><span class="w">               </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"AUSENTE"</span><span class="p">,</span><span class="w">                 </span><span class="c1">// :32</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">RenderConfianca</span><span class="p">.</span><span class="n">ProcessoNativoReuniao</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"PROCESSO_NATIVO_REUNIAO"</span><span class="p">,</span><span class="w"> </span><span class="c1">// :33</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">RenderConfianca</span><span class="p">.</span><span class="n">BrowserUrlReuniao</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"BROWSER_URL_REUNIAO"</span><span class="p">,</span><span class="w">     </span><span class="c1">// :34</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">RenderConfianca</span><span class="p">.</span><span class="n">Incerto</span><span class="w">               </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"INCERTO"</span><span class="p">,</span><span class="w">                 </span><span class="c1">// :35</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">_</span><span class="w">                                     </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">"INCERTO"</span><span class="w">                  </span><span class="c1">// :36  &lt;-- aqui</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">};</span>
+</code></pre></div>
+<p>Enum com <strong>4</strong> valores (<code>RenderConfianca.cs:13,17,20,24</code>), <strong>os 4 tratados</strong> — tambem latente.
+A diferenca que importa: aqui o rotulo do curinga e <code>INCERTO</code>, que o backend ja trata como "nao
+sei" (<code>EVENTS/.../dto/agent-event-batch.dto.ts:316,329</code>). <strong>A solucao certa ja existe e ja e
+usada dentro do proprio produto</strong> — o que falta e aplica-la ao status.</p>
+<p>Estes sao os <strong>dois unicos</strong> curingas que devolvem literal de string em todo o caminho de
+captura, Shared e Service (<code>grep -rn '_ =&gt; "'</code> em
+<code>src/ManagerAgent.SessionWorker</code>, <code>src/ManagerAgent.Shared</code>, <code>src/ManagerAgent.Service</code>).</p>
+<p>Registrado tambem como defeito aberto na secao 11 (D-4). <strong>A correcao nao esta decidida</strong> — o
+caminho natural seria o curinga registrar e degradar para um rotulo visivel, como o
+<code>RenderConfianca</code> faz, mas isso e tarefa, nao detalhe de documento.</p>
+</blockquote>
+<hr />
+<h2 id="5-cada-tipo-de-evento">5. Cada tipo de evento<a class="headerlink" href="#5-cada-tipo-de-evento" title="Permanent link">&para;</a></h2>
+<p>O enum do backend tem <strong>11 valores</strong> (<code>EVENTS/.../dto/agent-event-batch.dto.ts:62-74</code>).
+O Agent Windows 1.5.16 emite <strong>7</strong> deles.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th><code>tipoEvento</code></th>
+<th>o Agent Windows emite?</th>
+<th>tabela</th>
+<th>citacao da emissao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>WindowActivityEvent</code></td>
+<td><strong>sim</strong></td>
+<td><code>eventos_janela</code></td>
+<td><code>AGENT/.../WindowActivityService.cs:164,181,205,246</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>IdleEvent</code></td>
+<td><strong>sim</strong></td>
+<td><code>eventos_ociosidade</code></td>
+<td><code>AGENT/src/ManagerAgent.SessionWorker/Pipe/PipeEventBuffer.cs:55-59</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>HeartbeatEvent</code></td>
+<td><strong>sim</strong></td>
+<td><code>batimentos</code></td>
+<td><code>AGENT/.../HeartbeatService.cs:134</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>SessionEvent</code></td>
+<td><strong>sim</strong></td>
+<td><code>eventos_sessao</code></td>
+<td><code>AGENT/.../SessionEventService.cs:112</code>; <code>AGENT/src/ManagerAgent.Service/ManagerAgentService.cs:367-376</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>ActivitySummaryEvent</code></td>
+<td><strong>NAO</strong></td>
+<td><code>resumos_atividade_input</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>InputActivitySummary</code></td>
+<td><strong>NAO</strong></td>
+<td><code>resumos_atividade_input</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>InputSummaryEvent</code></td>
+<td><strong>sim</strong> (e este que sai)</td>
+<td><code>resumos_atividade_input</code></td>
+<td><code>AGENT/.../Worker.cs:325</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>StatusTransitionEvent</code></td>
+<td><strong>sim</strong></td>
+<td><code>eventos_transicao_status</code></td>
+<td><code>AGENT/.../Worker.cs:349-350</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>MeetingEvent</code></td>
+<td><strong>sim</strong></td>
+<td><code>eventos_reuniao</code></td>
+<td><code>AGENT/.../Worker.cs:407</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>MeetingSnapshotEvent</code></td>
+<td><strong>sim</strong></td>
+<td><code>eventos_reuniao_snapshot</code></td>
+<td><code>AGENT/.../MeetingSnapshotWorker.cs:124</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>PhoneCallEvent</code></td>
+<td><strong>NAO</strong> (so Android/iOS)</td>
+<td><code>eventos_chamada_telefonica</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Divergencia 1.</strong> O Agent Windows <strong>nunca</strong> manda <code>ActivitySummaryEvent</code>. Ele manda o nome
+legado <code>InputSummaryEvent</code> (<code>AGENT/.../Worker.cs:325</code>). Os tres caem no mesmo handler e na mesma
+tabela (<code>EVENTS/.../handler-registry.ts:78-80</code>), mas quem filtrar por <code>ActivitySummaryEvent</code>
+nao vera nenhum evento de Windows.</p>
+</blockquote>
+<p><strong>Ordem de despacho no backend</strong> (<code>EVENTS/.../handler-registry.ts:44-56</code>), sequencial, cada handler
+aguardado antes do proximo (<code>EVENTS/.../ingestion.service.ts:341-356</code>):
+Heartbeat, WindowActivity, Idle, Session, ActivitySummary, InputActivitySummary, InputSummaryEvent,
+StatusTransition, Meeting, MeetingSnapshot, PhoneCall.</p>
+<p><strong>Regra geral do backend para timestamp faltando:</strong> quando o timestamp do payload esta ausente ou
+nao parseia, o handler substitui por <code>ctx.enviadoEmFallback</code>, que e <strong>o <code>enviadoEm</code> do envelope</strong>
+(hora do Agent, nao do servidor) — <code>EVENTS/.../ingestion.service.ts:237</code>;
+<code>EVENTS/.../event-handler.interface.ts:28</code>. A unica excecao e <code>ActivitySummary</code>, que rejeita.</p>
+<hr />
+<h3 id="51-windowactivityevent">5.1 <code>WindowActivityEvent</code><a class="headerlink" href="#51-windowactivityevent" title="Permanent link">&para;</a></h3>
+<p><strong>Quando o Agent emite</strong> (<code>AGENT/src/ManagerAgent.SessionWorker/Capture/WindowActivityService.cs:11-29</code>):</p>
+<table>
+<thead>
+<tr>
+<th>momento</th>
+<th><code>finalizadoEm</code></th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>janela nova aguenta o debounce de <strong>1500 ms</strong></td>
+<td>ausente (evento ABERTO)</td>
+<td><code>:71,141-143,167-182</code></td>
+</tr>
+<tr>
+<td>a cada <strong>60 s</strong> enquanto segue em foco (snapshot)</td>
+<td>ausente; <code>iniciadoEm</code> <strong>nunca muda</strong></td>
+<td><code>:70,191-206</code></td>
+</tr>
+<tr>
+<td>troca de janela</td>
+<td>preenchido com o instante em que a nova ganhou foco</td>
+<td><code>:152-165</code></td>
+</tr>
+<tr>
+<td>ociosidade, LOCK, encerramento</td>
+<td>preenchido com o instante informado</td>
+<td><code>:208-261</code></td>
+</tr>
+<tr>
+<td>morte do worker sem despedida</td>
+<td>preenchido pelo <strong>Service</strong>, com a hora do EOF do pipe</td>
+<td><code>AGENT/src/ManagerAgent.Service/Resilience/OrphanWindowEventCloser.cs:51-97</code></td>
+</tr>
+</tbody>
+</table>
+<p>Filtros que impedem o evento de nascer (<code>:270-325</code>): processo vazio; prefixo em <code>ProcessosIgnorados</code>
+(<code>ManagerAgent</code>, <code>unknown</code> — <code>Config/ManagerAgentUploadOptions.cs:130-134</code>); substring em
+<code>TitulosIgnorados</code> (<code>:140-146</code>); <strong>processo de shell E titulo placeholder</strong> juntos (<code>:156-186</code>).
+"Mesma janela" = mesmo processo <strong>e</strong> mesmo dominio; trocar de aba no browser conta como janela
+nova (<code>:263-268</code>).</p>
+<p><strong>Payload</strong> (<code>AGENT/.../Capture/Models/EventoJanela.cs:19-30</code>, camelCase, nulos omitidos):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>obrig. no backend</th>
+<th>limite</th>
+<th>o Agent manda?</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nomeProcesso</code></td>
+<td>string</td>
+<td>nao (mas <code>min(1)</code> se vier)</td>
+<td>1..255</td>
+<td><strong>sim</strong></td>
+<td><code>EventoJanela.cs:21</code> / <code>dto:220</code></td>
+</tr>
+<tr>
+<td><code>tituloJanela</code></td>
+<td>string</td>
+<td>nao</td>
+<td>0..500</td>
+<td><strong>sim</strong></td>
+<td><code>EventoJanela.cs:23</code> / <code>dto:221</code></td>
+</tr>
+<tr>
+<td><code>iniciadoEm</code></td>
+<td>ISO c/ offset</td>
+<td>nao</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>EventoJanela.cs:25</code> / <code>dto:222</code></td>
+</tr>
+<tr>
+<td><code>finalizadoEm</code></td>
+<td>ISO c/ offset</td>
+<td>nao</td>
+<td>—</td>
+<td>so no fechamento</td>
+<td><code>EventoJanela.cs:27</code> / <code>dto:223</code></td>
+</tr>
+<tr>
+<td><code>statusUsuario</code></td>
+<td>enum</td>
+<td>nao</td>
+<td>—</td>
+<td><strong>NAO</strong></td>
+<td><code>dto:224</code></td>
+</tr>
+<tr>
+<td><code>urlDominio</code></td>
+<td>string (<code>null</code> -&gt; <code>undefined</code>)</td>
+<td>nao</td>
+<td>0..255</td>
+<td>so em browser</td>
+<td><code>EventoJanela.cs:29</code> / <code>dto:225,213-217</code></td>
+</tr>
+<tr>
+<td><code>ipOrigem</code></td>
+<td>string</td>
+<td>nao</td>
+<td>0..255</td>
+<td><strong>NAO</strong></td>
+<td><code>dto:226</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>O que o backend faz</strong> (<code>EVENTS/src/modules/ingestion/handlers/window-activity.handler.ts</code>):
+colapsa duplicatas do mesmo lote em memoria (<code>:69-110,163</code>) — obrigatorio, senao o Postgres devolve
+erro 21000 (<code>:160-161</code>) — e faz <strong><code>onConflictDoUpdate</code></strong> em
+<code>(agente_id, nome_processo, iniciado_em)</code> (<code>:174-175</code>), com
+<code>setWhere: finalizado_em IS NULL</code> (<code>:185</code>): <strong>uma vez fechada, a linha e imutavel</strong>.
+Campos mutaveis usam <code>COALESCE(excluded, atual)</code> (<code>:177-182</code>); <code>urlDominio</code> usa
+<code>COALESCE(NULLIF(excluded,''), atual)</code> (<code>:179</code>); <code>dispositivoTipo</code> e sempre sobrescrito (<code>:183</code>).
+<code>nomeProcesso</code> ausente vira <code>'DESCONHECIDO'</code> (<code>:57,128,138</code>).
+<strong>Nunca rejeita item</strong> (<code>:124,190</code>).</p>
+<p>Tabela <code>eventos_janela</code> (<code>EVENTS/src/common/db/schema/eventos.schema.ts:68-86</code>).
+Atencao: <code>titulo_janela</code> e <code>varchar(255)</code> na coluna (<code>:75</code>) enquanto o Zod aceita <strong>500</strong>
+(<code>dto:221</code>) — ver defeito D-6.</p>
+<hr />
+<h3 id="52-idleevent">5.2 <code>IdleEvent</code><a class="headerlink" href="#52-idleevent" title="Permanent link">&para;</a></h3>
+<p><strong>Quando o Agent emite</strong> (<code>AGENT/src/ManagerAgent.SessionWorker/Capture/IdleMonitorService.cs</code>):
+limiar de ociosidade <strong>60 s</strong> (<code>:61</code>; <code>appsettings.json:18</code>), verificado a cada <strong>5 s</strong>
+(<code>:62</code>; <code>appsettings.json:19</code>).</p>
+<table>
+<thead>
+<tr>
+<th>momento</th>
+<th><code>motivo</code> emitido</th>
+<th><code>finalizadoEm</code></th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ociosidade detectada (abertura)</td>
+<td><code>IdleStarted</code></td>
+<td>ausente</td>
+<td><code>:156,192</code></td>
+</tr>
+<tr>
+<td>input volta</td>
+<td><code>IdleTimeout</code></td>
+<td>preenchido</td>
+<td><code>:162</code></td>
+</tr>
+<tr>
+<td>camera/microfone ativos durante a ociosidade</td>
+<td><code>MediaActivity</code></td>
+<td>preenchido</td>
+<td><code>:117</code></td>
+</tr>
+<tr>
+<td>buraco de wall-clock (sleep/hibernate/hang)</td>
+<td><code>WallClockGap</code> / <code>WallClockGapBoundary</code></td>
+<td>preenchido</td>
+<td><code>:247,250</code></td>
+</tr>
+<tr>
+<td>flush externo (LOCK, corte diario, encerramento)</td>
+<td><code>ManualFlush</code></td>
+<td>preenchido</td>
+<td><code>:320</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ao abrir, o Agent <strong>fecha a janela em andamento antes</strong> e suspende a captura de janela, para os
+dois blocos ficarem encostados (<code>:174-190</code>). Nao ha snapshot periodico durante a ausencia (<code>:170-172</code>).
+Ociosidade com menos de <strong>60 s</strong> e descartada <strong>apenas se nada foi enviado ainda</strong>; se a abertura
+ja subiu, o fechamento e obrigatorio (<code>:34,342-349</code>).</p>
+<blockquote>
+<p><strong>Divergencia 2.</strong> O comentario <code>AGENT/.../Storage/IdleEventRecord.cs:214</code> lista os valores
+<code>"IdleTimeout" (default), "WallClockGap", "SystemSuspend", "ManualFlush"</code>. O codigo emite
+<strong><code>IdleStarted</code>, <code>IdleTimeout</code>, <code>MediaActivity</code>, <code>WallClockGap</code>, <code>WallClockGapBoundary</code> e
+<code>ManualFlush</code></strong> — <code>SystemSuspend</code> <strong>nunca</strong> e usado como motivo de ociosidade; ele e motivo de
+<code>SessionEvent LOCK</code> (<code>AGENT/.../PowerModeMonitor.cs:142,157</code>).</p>
+</blockquote>
+<p><strong>Payload</strong> (<code>AGENT/.../Capture/Storage/IdleEventRecord.cs:178-219</code>):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>obrig. no backend</th>
+<th>limite</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>iniciadoEm</code></td>
+<td>ISO c/ offset</td>
+<td><strong>sim</strong></td>
+<td>—</td>
+<td><code>IdleEventRecord.cs:191-192</code> / <code>dto:230</code></td>
+</tr>
+<tr>
+<td><code>finalizadoEm</code></td>
+<td>ISO c/ offset</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:202-203</code> / <code>dto:231</code></td>
+</tr>
+<tr>
+<td><code>motivo</code></td>
+<td>string (<code>null</code> -&gt; <code>undefined</code>)</td>
+<td>nao</td>
+<td>0..50</td>
+<td><code>:217-218</code> / <code>dto:233</code></td>
+</tr>
+<tr>
+<td><code>statusUsuario</code></td>
+<td>enum</td>
+<td>nao</td>
+<td>—</td>
+<td><strong>o Agent nao manda</strong> / <code>dto:232</code></td>
+</tr>
+<tr>
+<td><code>ipOrigem</code></td>
+<td>string</td>
+<td>nao</td>
+<td>0..255</td>
+<td><strong>o Agent nao manda</strong> / <code>dto:234</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Divergencia 3 — campos que o Agent manda e o backend joga fora.</strong> O <code>IdleEventRecord</code>
+serializa tambem <code>instalacaoId</code>, <code>machineId</code>, <code>userId</code>, <code>operatingSystemDescription</code>,
+<code>ipAddress</code>, <code>agentVersion</code>, <code>createdAtUtc</code> e <strong><code>duracaoSegundos</code></strong>
+(<code>AGENT/.../IdleEventRecord.cs:183-189,206-209</code>). Nenhum esta em <code>idlePayload</code>
+(<code>dto:229-235</code>), e <code>z.object</code> do Zod descarta chave desconhecida. <strong><code>duracaoSegundos</code> e
+calculado pelo Agent (<code>IdleMonitorService.cs:412</code>) e descartado</strong> — a duracao no banco e sempre
+derivada de <code>finalizado_em - iniciado_em</code>.</p>
+</blockquote>
+<p><strong>O que o backend faz</strong> (<code>EVENTS/src/modules/ingestion/handlers/idle.handler.ts</code>):
+colapsa por <code>agenteId::iniciadoEm</code> (<code>:70-72,84-93,141</code>), depois
+<strong><code>onConflictDoUpdate</code></strong> em <code>(agente_id, iniciado_em)</code> (<code>:151-152</code>) com
+<code>setWhere: finalizado_em IS NULL</code> (<code>:160</code>). <code>motivo</code> e <strong>truncado em 50</strong> (<code>:63,131</code>).
+Nunca rejeita item (<code>:116,165</code>).
+Tabela <code>eventos_ociosidade</code> (<code>EVENTS/.../eventos.schema.ts:100-115</code>), coluna <code>motivo varchar(50)</code> (<code>:113</code>).</p>
+<hr />
+<h3 id="53-sessionevent">5.3 <code>SessionEvent</code><a class="headerlink" href="#53-sessionevent" title="Permanent link">&para;</a></h3>
+<p><strong>Quando o Agent emite:</strong></p>
+<table>
+<thead>
+<tr>
+<th>tipo interno</th>
+<th>quando</th>
+<th><code>motivo</code> tipico</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LOGIN</code></td>
+<td>worker sobe numa sessao interativa</td>
+<td>—</td>
+<td><code>AGENT/.../SessionMonitor.cs:102,127</code></td>
+</tr>
+<tr>
+<td><code>LOGOUT</code></td>
+<td>desligamento do worker</td>
+<td><code>ServiceShutdown</code>, <code>SESSION_LOGOFF</code>, <code>MACHINE_SHUTDOWN</code>, <code>UPDATE</code>, <code>SERVICE_STOP</code>, <code>DUPLICATE_WORKER</code></td>
+<td><code>AGENT/.../Worker.cs:610,615</code>; <code>AGENT/src/ManagerAgent.Shared/Pipe/ShutdownReasons.cs:16,34,41,52,66</code></td>
+</tr>
+<tr>
+<td><code>LOGOUT</code> (emitido pelo <strong>Service</strong>)</td>
+<td>o worker morreu sem se despedir</td>
+<td><code>OsLogoff</code> (default)</td>
+<td><code>AGENT/src/ManagerAgent.Service/ManagerAgentService.cs:282,367-380</code></td>
+</tr>
+<tr>
+<td><code>LOCK</code></td>
+<td>tela bloqueada; ou suspensao</td>
+<td><code>SystemSuspend</code></td>
+<td><code>AGENT/.../LockScreenDetector.cs:195</code>; <code>AGENT/.../PowerModeMonitor.cs:142,157</code></td>
+</tr>
+<tr>
+<td><code>UNLOCK</code></td>
+<td>tela liberada; ou retorno da suspensao</td>
+<td><code>SystemResume</code></td>
+<td><code>AGENT/.../LockScreenDetector.cs:218</code>; <code>AGENT/.../PowerModeMonitor.cs:225</code></td>
+</tr>
+<tr>
+<td><code>SESSAO_INTERROMPIDA</code></td>
+<td>no startup, quando a sessao anterior nao fechou limpo</td>
+<td><code>NoCleanShutdownFlag</code></td>
+<td><code>AGENT/.../SessionMonitor.cs:236</code>; regra em <code>AGENT/src/ManagerAgent.Shared/Runtime/SessaoInterrompidaDecider.cs:135-164</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>LOCK</code>, <code>UNLOCK</code>, <code>LOGIN</code> e <code>LOGOUT</code> sao <strong>fronteira de sessao</strong> e disparam envio imediato nas duas
+pontas (<code>AGENT/src/ManagerAgent.Shared/Session/SessionEventTypes.cs:30-31,40</code>;
+<code>AGENT/.../SessionEventService.cs:124-128</code>; <code>AGENT/.../Pipe/PipeMessageHandler.cs:397-400</code>).
+<code>SESSAO_INTERROMPIDA</code> fica de fora de proposito (<code>SessionEventTypes.cs:17</code>).</p>
+<p><strong>Payload</strong> (<code>AGENT/.../Capture/Models/EventoSessao.cs:120-133</code>):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>obrig. no backend</th>
+<th>limite</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tipoEvento</code></td>
+<td>enum</td>
+<td>um dos dois e obrigatorio</td>
+<td>—</td>
+<td><code>EventoSessao.cs:122-123</code> / <code>dto:250</code></td>
+</tr>
+<tr>
+<td><code>tipoTransicao</code></td>
+<td>enum</td>
+<td>alternativa ao anterior</td>
+<td>—</td>
+<td>— / <code>dto:249</code></td>
+</tr>
+<tr>
+<td><code>ocorreuEm</code></td>
+<td>ISO c/ offset</td>
+<td><strong>sim</strong></td>
+<td>—</td>
+<td><code>EventoSessao.cs:125-126</code> / <code>dto:251</code></td>
+</tr>
+<tr>
+<td><code>motivo</code></td>
+<td>string (<code>null</code> -&gt; <code>undefined</code>)</td>
+<td>nao</td>
+<td>0..50</td>
+<td><code>EventoSessao.cs:131-132</code> / <code>dto:252</code></td>
+</tr>
+<tr>
+<td><code>ipOrigem</code></td>
+<td>string</td>
+<td>nao</td>
+<td>0..255</td>
+<td><strong>o Agent nao manda</strong> / <code>dto:253</code></td>
+</tr>
+</tbody>
+</table>
+<p>Valores aceitos: <code>LOGIN</code>, <code>LOGOUT</code>, <code>LOCK</code>, <code>UNLOCK</code>, <code>SESSAO_INTERROMPIDA</code>, mais os aliases
+<code>LOGON</code> e <code>LOGOFF</code> (<code>dto:96-102</code>). O Agent usa os canonicos
+(<code>AGENT/src/ManagerAgent.Shared/Session/SessionEventTypes.cs:21-28</code>).</p>
+<p><strong>O que o backend faz</strong> (<code>EVENTS/src/modules/ingestion/handlers/session.handler.ts</code>):
+<strong>INSERT puro, sem <code>ON CONFLICT</code></strong> (<code>:95-100</code>).
+<strong>Rejeita o item</strong> quando <code>tipoTransicao</code> e <code>tipoEvento</code> estao ambos ausentes, com motivo
+<code>"SessionEvent sem tipoTransicao/tipoEvento"</code> (<code>:58-66</code>). <code>motivo</code> truncado em 50 (<code>:27,68</code>).
+Emite um sinal <code>SINAL_EVENT_SESSION_SAVED</code> por linha (<code>:109-122</code>).
+Tabela <code>eventos_sessao</code> (<code>EVENTS/.../eventos.schema.ts:120-134</code>), coluna <code>tipo_evento varchar(32) NOT NULL</code> (<code>:129</code>).</p>
+<hr />
+<h3 id="54-inputsummaryevent-activitysummaryevent">5.4 <code>InputSummaryEvent</code> (= <code>ActivitySummaryEvent</code>)<a class="headerlink" href="#54-inputsummaryevent-activitysummaryevent" title="Permanent link">&para;</a></h3>
+<p><strong>Quando o Agent emite:</strong> a cada <strong>180 s</strong> em producao
+(<code>AGENT/.../Worker.cs:148-149,312-326</code>; <code>AGENT/src/ManagerAgent.SessionWorker/appsettings.json:21</code>
+— o <strong>default do codigo e 60 s</strong>, o appsettings manda 180).</p>
+<p><strong>Payload</strong> (<code>AGENT/.../Capture/Models/ResumoAtividadeEntrada.cs:196-263</code>):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>limite backend</th>
+<th>o Agent manda?</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>iniciadoEm</code></td>
+<td>ISO</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>ResumoAtividadeEntrada.cs:198-199</code> / <code>dto:263</code></td>
+</tr>
+<tr>
+<td><code>finalizadoEm</code></td>
+<td>ISO</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:201-202</code> / <code>dto:264</code></td>
+</tr>
+<tr>
+<td><code>intervaloInicio</code> / <code>intervaloFim</code></td>
+<td>ISO</td>
+<td>—</td>
+<td><strong>NAO</strong> (usa os dois de cima)</td>
+<td><code>dto:265-266</code>; fallback em <code>activity-summary.handler.ts:96-97</code></td>
+</tr>
+<tr>
+<td><code>teclasPressionadas</code></td>
+<td>int &gt;= 0, default 0</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:210-211</code> / <code>dto:267</code></td>
+</tr>
+<tr>
+<td><code>teclasDistintas</code></td>
+<td>int &gt;= 0, default 0</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:216-217</code> / <code>dto:268</code></td>
+</tr>
+<tr>
+<td><code>cliquesMouse</code></td>
+<td>int &gt;= 0, default 0</td>
+<td>—</td>
+<td><strong>NAO</strong></td>
+<td><code>dto:269</code></td>
+</tr>
+<tr>
+<td><code>cliquesEsquerdo</code> / <code>cliquesDireito</code> / <code>cliquesMeio</code></td>
+<td>int &gt;= 0</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:204-208,213-214</code> / <code>dto:270-272</code></td>
+</tr>
+<tr>
+<td><code>scrollsVertical</code></td>
+<td>int &gt;= 0</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:222-223</code> / <code>dto:276</code></td>
+</tr>
+<tr>
+<td><code>movimentosMouse</code></td>
+<td>int &gt;= 0, default 0</td>
+<td>—</td>
+<td><strong>NAO</strong></td>
+<td><code>dto:277</code></td>
+</tr>
+<tr>
+<td><code>distanciaMousePx</code></td>
+<td>int &gt;= 0</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:219-220</code> / <code>dto:278</code></td>
+</tr>
+<tr>
+<td><code>padraoDigitacao</code></td>
+<td>enum</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:225-226</code> / <code>dto:279</code></td>
+</tr>
+<tr>
+<td><code>posicaoClickBucketsTop5</code></td>
+<td>array de <code>{bucketX,bucketY,count}</code></td>
+<td><code>unknown</code> (nao valida)</td>
+<td><strong>sim</strong></td>
+<td><code>:231-232,253-263</code> / <code>dto:281</code></td>
+</tr>
+<tr>
+<td><code>deltaTCliquesAvgMs</code> / <code>deltaTCliquesStddevMs</code></td>
+<td>int &gt;= 0</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:234-238</code> / <code>dto:282-283</code></td>
+</tr>
+<tr>
+<td><code>teclaDominanteVk</code></td>
+<td>int</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:240-241</code> / <code>dto:284</code></td>
+</tr>
+<tr>
+<td><code>teclaDominanteSharePct</code></td>
+<td>numero 0..100</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:243-244</code> / <code>dto:285</code></td>
+</tr>
+<tr>
+<td><code>teclasNavegacao</code></td>
+<td>int &gt;= 0</td>
+<td>—</td>
+<td><strong>sim</strong></td>
+<td><code>:246-247</code> / <code>dto:286</code></td>
+</tr>
+<tr>
+<td><code>mouseJigglerSuspeito</code></td>
+<td>bool</td>
+<td>—</td>
+<td>so quando <code>true</code></td>
+<td><code>:249-250</code> / <code>dto:287</code></td>
+</tr>
+<tr>
+<td><code>ipOrigem</code></td>
+<td>string</td>
+<td>0..255</td>
+<td><strong>NAO</strong></td>
+<td><code>dto:288</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Divergencia 4 — tres colunas que nunca recebem dado real do Windows.</strong>
+<code>cliquesMouse</code> e <code>movimentosMouse</code> sao <code>NOT NULL</code> no banco
+(<code>EVENTS/.../eventos.schema.ts:248,251</code>) e tem <code>.default(0)</code> no Zod (<code>dto:269,277</code>). O
+<code>ResumoAtividadeEntrada</code> <strong>nao tem esses campos</strong> — logo as duas colunas ficam <strong>sempre 0</strong> em
+maquina Windows. Os cliques reais estao em <code>cliques_esquerdo</code>/<code>_direito</code>/<code>_meio</code>.</p>
+<p><strong>Divergencia 5 — <code>distanciaMousePx</code> nao e distancia.</strong> O valor e
+<code>movimentosMouse * 100</code> (<code>AGENT/.../InputActivityTracker.cs:435</code>) — uma contagem de eventos de
+movimento multiplicada por uma constante, nao pixels percorridos. <strong>Nao use este campo como
+distancia em nenhum calculo.</strong></p>
+<p><strong>Divergencia 6 — <code>padraoDigitacao</code>: o Agent so emite alias.</strong> Os valores gerados sao
+<code>NORMAL</code>, <code>BURST_MESMA_TECLA</code>, <code>NAVEGACAO_APENAS</code> e <code>MOUSE_APENAS</code>
+(<code>AGENT/.../InputActivityTracker.cs:403,407,411,417,421</code>). Nenhum e canonico. Depois da
+normalizacao (<code>dto:189-196</code>) o banco recebe <code>NATURAL</code>, <code>REPETITIVO</code>, <code>IRREGULAR</code> e <code>INDEFINIDO</code>.
+Os canonicos <code>ROBOTICO</code>, <code>BURST</code> e <code>STEADY</code> <strong>nunca aparecem vindos de Windows.</strong>
+Regras: <code>&gt;=30 teclas e tecla dominante &gt;=60%</code> -&gt; <code>BURST_MESMA_TECLA</code>;
+<code>&gt;=10 teclas e &gt;=90% de navegacao</code> -&gt; <code>NAVEGACAO_APENAS</code>; sem tecla mas com mouse -&gt;
+<code>MOUSE_APENAS</code>; resto (inclusive zero input) -&gt; <code>NORMAL</code> (<code>:398-422</code>).</p>
+</blockquote>
+<p><strong>O que o backend faz</strong> (<code>EVENTS/src/modules/ingestion/handlers/activity-summary.handler.ts</code>):
+atende os tres nomes (<code>:51-55</code>), <strong>INSERT puro</strong> (<code>:167-172</code>).
+<strong>Rejeita o item</strong> quando <code>intervaloInicio</code> <strong>ou</strong> <code>intervaloFim</code> nao resolve, com motivo
+<code>"ActivitySummary sem intervaloInicio/intervaloFim"</code> e <code>tipoEvento</code> <strong>fixo em
+<code>'ActivitySummaryEvent'</code></strong> mesmo que tenha vindo com outro nome (<code>:96-105</code>).
+E o <strong>unico</strong> handler sem <code>enviadoEmFallback</code>. <code>padraoDigitacao</code> ausente vira <code>'INDEFINIDO'</code>
+(<code>:134</code>); <code>teclasNavegacao ?? 0</code> (<code>:140</code>); <code>mouseJigglerSuspeito ?? false</code> (<code>:141</code>).
+Tabela <code>resumos_atividade_input</code> (<code>EVENTS/.../eventos.schema.ts:242-273</code>), com CHECK de
+<code>padrao_digitacao</code> em <code>EVENTS/drizzle/migrations/20260812000000_canonical_event_constraints.sql:69-70</code>.</p>
+<hr />
+<h3 id="55-heartbeatevent">5.5 <code>HeartbeatEvent</code><a class="headerlink" href="#55-heartbeatevent" title="Permanent link">&para;</a></h3>
+<p><strong>Quando o Agent emite:</strong> a cada <strong>120 s</strong> em producao
+(<code>AGENT/.../HeartbeatService.cs:113,118-137</code>; <code>AGENT/src/ManagerAgent.SessionWorker/appsettings.json:20</code>
+— o default do codigo e 60 s).</p>
+<p><strong>Payload</strong> (<code>AGENT/.../Capture/Models/EventoSinalVida.cs:136-145</code>):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>obrig. backend</th>
+<th>o Agent manda?</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enviadoEm</code></td>
+<td>ISO c/ offset</td>
+<td><strong>sim</strong></td>
+<td><strong>sim</strong></td>
+<td><code>EventoSinalVida.cs:140</code> / <code>dto:238</code></td>
+</tr>
+<tr>
+<td><code>eventosPendentes</code></td>
+<td>int &gt;= 0, default 0</td>
+<td>nao</td>
+<td><strong>sim</strong></td>
+<td><code>EventoSinalVida.cs:138</code> / <code>dto:239</code></td>
+</tr>
+<tr>
+<td><code>acessibilidadeAtiva</code></td>
+<td>bool</td>
+<td>nao</td>
+<td><strong>NAO</strong></td>
+<td><code>dto:245</code></td>
+</tr>
+<tr>
+<td><code>ipOrigem</code></td>
+<td>string 0..255</td>
+<td>nao</td>
+<td><strong>NAO</strong></td>
+<td><code>dto:240</code></td>
+</tr>
+<tr>
+<td><code>quantidadeMonitores</code></td>
+<td>int</td>
+<td>—</td>
+<td>manda, <strong>backend descarta</strong></td>
+<td><code>EventoSinalVida.cs:142</code></td>
+</tr>
+<tr>
+<td><code>redeDisponivel</code></td>
+<td>bool</td>
+<td>—</td>
+<td>manda, <strong>backend descarta</strong></td>
+<td><code>EventoSinalVida.cs:144</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>eventosPendentes</code> = buffer autonomo do worker + backlog do Service informado no ultimo PONG
+(<code>AGENT/.../Worker.cs:177-178</code>).</p>
+<blockquote>
+<p><strong>Divergencia 7.</strong> <code>acessibilidadeAtiva</code> existe no contrato (<code>dto:241-245</code>) e o backend o
+denormaliza em <code>agentes.acessibilidade_ativa</code>
+(<code>EVENTS/.../ingestion.service.ts:386-388,409-419</code>). <strong>O Agent Windows nunca envia o campo</strong>
+(<code>grep -rn "acessibilidadeAtiva" src/</code> no repositorio do Agent nao retorna nada). A coluna
+nunca e atualizada a partir de Windows.</p>
+</blockquote>
+<p><strong>O que o backend faz:</strong> <code>HeartbeatHandler</code> faz <strong>INSERT puro</strong> em <code>batimentos</code> (<code>:64-69</code>),
+usando <code>versaoAgente</code> e <code>descricaoSo</code> <strong>do envelope, nao do item</strong> (<code>:56-57</code>).
+Nunca rejeita item (<code>:45,71</code>).</p>
+<blockquote>
+<p><strong>Ponto que muda desenho de API:</strong> <code>agentes.ultimo_heartbeat_em</code> e atualizado em <strong>todo lote</strong>,
+tenha ele <code>HeartbeatEvent</code> ou nao — a chamada esta fora do dispatch, em
+<code>EVENTS/.../ingestion.service.ts:181-189,367-398</code>. Nao trate "ultimo heartbeat" como prova de
+que houve um <code>HeartbeatEvent</code>.</p>
+</blockquote>
+<hr />
+<h3 id="56-statustransitionevent">5.6 <code>StatusTransitionEvent</code><a class="headerlink" href="#56-statustransitionevent" title="Permanent link">&para;</a></h3>
+<p>Ver secao 4. Payload (<code>AGENT/.../Capture/Models/EventoTransicaoStatus.cs:164-191</code>):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>obrig. backend</th>
+<th>limite</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>statusAnterior</code></td>
+<td>enum</td>
+<td><strong>sim</strong></td>
+<td>—</td>
+<td><code>EventoTransicaoStatus.cs:174-175</code> / <code>dto:292</code></td>
+</tr>
+<tr>
+<td><code>statusNovo</code></td>
+<td>enum</td>
+<td><strong>sim</strong></td>
+<td>—</td>
+<td><code>:178-179</code> / <code>dto:293</code></td>
+</tr>
+<tr>
+<td><code>transicaoEm</code></td>
+<td>ISO c/ offset</td>
+<td><strong>sim</strong></td>
+<td>—</td>
+<td><code>:182-183</code> / <code>dto:294</code></td>
+</tr>
+<tr>
+<td><code>motivo</code></td>
+<td>string (<code>null</code> -&gt; <code>undefined</code>)</td>
+<td>nao</td>
+<td>0..255</td>
+<td><code>:189-190</code> / <code>dto:295</code></td>
+</tr>
+<tr>
+<td><code>ipOrigem</code></td>
+<td>string</td>
+<td>nao</td>
+<td>0..255</td>
+<td><strong>o Agent nao manda</strong> / <code>dto:296</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>motivo</code> gerado pelo Agent (<code>AGENT/.../UserStatusManager.cs:136-139</code>):
+<code>"Atividade do colaborador"</code> quando volta a ATIVO; <code>"Silencio de entrada (X -&gt; Y)"</code> nos demais.</p>
+<hr />
+<h3 id="57-meetingevent">5.7 <code>MeetingEvent</code><a class="headerlink" href="#57-meetingevent" title="Permanent link">&para;</a></h3>
+<p><strong>Quando o Agent emite</strong> (<code>AGENT/.../MeetingDetector.cs</code>):</p>
+<table>
+<thead>
+<tr>
+<th>momento</th>
+<th><code>finalizadoEm</code></th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reuniao confirmada apos <strong>1 minuto</strong> de deteccao continua</td>
+<td>ausente</td>
+<td><code>:265,325-348</code>; <code>Config/ManagerAgentUploadOptions.cs:100</code></td>
+</tr>
+<tr>
+<td>reuniao encerrada apos <strong>2 minutos</strong> sem sinal</td>
+<td>preenchido</td>
+<td><code>:266,378-396</code>; <code>ManagerAgentUploadOptions.cs:106</code></td>
+</tr>
+</tbody>
+</table>
+<p>Nos dois eventos <code>IniciadoEm = _detectedAt</code> (<code>:342,389</code>) — e o que reconcilia os dois no upsert.</p>
+<p><strong>Payload</strong> (<code>AGENT/.../Capture/Models/EventoReuniao.cs:35-68</code>):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>obrig. backend</th>
+<th>limite</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aplicativo</code></td>
+<td>string</td>
+<td>nao (desde 18/08)</td>
+<td>0..100</td>
+<td><code>EventoReuniao.cs:37-38</code> / <code>dto:307</code></td>
+</tr>
+<tr>
+<td><code>tituloReuniao</code></td>
+<td>string</td>
+<td>nao</td>
+<td>0..512</td>
+<td><code>:40-41</code> / <code>dto:308</code></td>
+</tr>
+<tr>
+<td><code>iniciadoEm</code></td>
+<td>ISO c/ offset</td>
+<td><strong>sim</strong></td>
+<td>—</td>
+<td><code>:43-44</code> / <code>dto:309</code></td>
+</tr>
+<tr>
+<td><code>finalizadoEm</code></td>
+<td>ISO c/ offset</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:46-47</code> / <code>dto:310</code></td>
+</tr>
+<tr>
+<td><code>cameraAtiva</code></td>
+<td>bool</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:49-50</code> / <code>dto:311</code></td>
+</tr>
+<tr>
+<td><code>microfoneAtivo</code></td>
+<td>bool</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:52-53</code> / <code>dto:312</code></td>
+</tr>
+<tr>
+<td><code>participantesDetectados</code></td>
+<td>int &gt;= 0</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:55-56</code> / <code>dto:313</code></td>
+</tr>
+<tr>
+<td><code>renderAtivo</code></td>
+<td>bool</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:61-62</code> / <code>dto:314</code></td>
+</tr>
+<tr>
+<td><code>renderConfianca</code></td>
+<td>enum de 4</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:66-67</code> / <code>dto:315-317</code></td>
+</tr>
+<tr>
+<td><code>ipOrigem</code></td>
+<td>string</td>
+<td>nao</td>
+<td>0..255</td>
+<td><strong>o Agent nao manda</strong> / <code>dto:318</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>O que o backend faz</strong> (<code>EVENTS/src/modules/ingestion/handlers/meeting.handler.ts</code>):
+colapsa em memoria com chave <code>(agenteId, aplicativo, iniciadoEm)</code> usando <code>JSON.stringify</code> no
+aplicativo, para casar com o <code>NULLS NOT DISTINCT</code> do indice (<code>:141-147</code>, justificativa <code>:128-139</code>);
+<strong><code>onConflictDoUpdate</code></strong> em <code>(agente_id, aplicativo, iniciado_em)</code> (<code>:287-288</code>) com
+<code>setWhere: finalizado_em IS NULL AND empresa_id = excluded.empresa_id</code> (<code>:300</code>) — <strong>o unico handler
+com guarda de tenant no <code>setWhere</code></strong> (<code>:273-277</code>).
+<code>cameraAtiva</code>, <code>microfoneAtivo</code>, <code>renderAtivo</code> e <code>dispositivoTipo</code> sao sobrescritos sem COALESCE
+(<code>:295-298</code>); o resto usa COALESCE (<code>:290-294</code>).
+Nunca rejeita item — <code>aplicativo</code> em branco vira <code>null</code> e a linha e gravada (<code>:223-234,348</code>).
+O pareamento do sinal emitido e <strong>por chave, nao por indice</strong>, porque <code>setWhere</code> pode derrubar
+linhas (<code>:314-327</code>).
+Tabela <code>eventos_reuniao</code> (<code>EVENTS/.../eventos.schema.ts:170-193</code>); <code>aplicativo</code> virou nulavel em
+<code>EVENTS/drizzle/migrations/20260818000000_eventos_reuniao_aplicativo_nullable.sql</code>.</p>
+<p><strong>Reconciliacao por igualdade exata, sem janela de tolerancia</strong> (<code>:58-66</code>).</p>
+<hr />
+<h3 id="58-meetingsnapshotevent">5.8 <code>MeetingSnapshotEvent</code><a class="headerlink" href="#58-meetingsnapshotevent" title="Permanent link">&para;</a></h3>
+<p><strong>Quando o Agent emite:</strong> a cada <strong>60 s</strong> enquanto a reuniao esta confirmada; o primeiro sai no
+ato (GUID novo) e o tick interno e de 5 s
+(<code>AGENT/.../MeetingSnapshotWorker.cs:30,34,89-126</code>).</p>
+<p><strong>Payload</strong> (<code>AGENT/.../Capture/Models/EventoReuniaoSnapshot.cs:86-115</code>):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>tipo</th>
+<th>obrig. backend</th>
+<th>limite</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reuniaoInstalacaoId</code></td>
+<td>string (GUID)</td>
+<td><strong>sim</strong></td>
+<td>1..36</td>
+<td><code>EventoReuniaoSnapshot.cs:90-91</code> / <code>dto:322</code></td>
+</tr>
+<tr>
+<td><code>aplicativo</code></td>
+<td>string</td>
+<td>nao</td>
+<td>0..100</td>
+<td><code>:93-94</code> / <code>dto:323</code></td>
+</tr>
+<tr>
+<td><code>capturadoEm</code></td>
+<td>ISO c/ offset</td>
+<td><strong>sim</strong></td>
+<td>—</td>
+<td><code>:96-97</code> / <code>dto:324</code></td>
+</tr>
+<tr>
+<td><code>cameraAtiva</code></td>
+<td>bool, default false</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:99-100</code> / <code>dto:325</code></td>
+</tr>
+<tr>
+<td><code>microfoneAtivo</code></td>
+<td>bool, default false</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:102-103</code> / <code>dto:326</code></td>
+</tr>
+<tr>
+<td><code>renderAtivo</code></td>
+<td>bool, default false</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:105-106</code> / <code>dto:327</code></td>
+</tr>
+<tr>
+<td><code>renderConfianca</code></td>
+<td>enum de 4</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:110-111</code> / <code>dto:328-330</code></td>
+</tr>
+<tr>
+<td><code>participantesDetectados</code></td>
+<td>int &gt;= 0</td>
+<td>nao</td>
+<td>—</td>
+<td><code>:113-114</code> / <code>dto:331</code></td>
+</tr>
+<tr>
+<td><code>ipOrigem</code></td>
+<td>string</td>
+<td>nao</td>
+<td>0..255</td>
+<td><strong>o Agent nao manda</strong> / <code>dto:332</code></td>
+</tr>
+</tbody>
+</table>
+<p>O GUID nasce quando a reuniao entra em <code>Confirmed</code>
+(<code>AGENT/.../MeetingDetector.cs:332</code>) e e limpo no encerramento (<code>:398</code>).</p>
+<blockquote>
+<p><strong>Divergencia 8 — o snapshot nao se liga ao evento pai por chave nenhuma.</strong>
+<code>reuniaoInstalacaoId</code> existe <strong>so</strong> no snapshot. O <code>EventoReuniao</code>
+(<code>AGENT/.../Capture/Models/EventoReuniao.cs:35-68</code>) nao tem o campo, <code>meetingPayload</code>
+(<code>dto:306-319</code>) nao o aceita, e <code>eventos_reuniao</code> nao tem a coluna
+(<code>EVENTS/.../eventos.schema.ts:170-193</code>). Para correlacionar snapshot com reuniao hoje so resta
+<code>(agente_id, aplicativo)</code> mais a janela de tempo. <strong>Quem for construir a API de "reuniao
+fantasma" precisa saber disso antes de comecar.</strong></p>
+</blockquote>
+<p><strong>O que o backend faz:</strong> <strong>INSERT puro, sem dedup nenhum</strong> — todo snapshot vira linha nova
+(<code>EVENTS/src/modules/ingestion/handlers/meeting-snapshot.handler.ts:49-54</code>). Nunca rejeita
+(<code>:27,56</code>). Nao grava <code>dispositivo_tipo</code> — a coluna nao existe nessa tabela
+(<code>EVENTS/.../eventos.schema.ts:198-216</code>).</p>
+<hr />
+<h3 id="59-phonecallevent-o-agent-windows-nunca-emite">5.9 <code>PhoneCallEvent</code> — o Agent Windows nunca emite<a class="headerlink" href="#59-phonecallevent-o-agent-windows-nunca-emite" title="Permanent link">&para;</a></h3>
+<p>Payload (<code>dto:335-339</code>): <code>tipoTransicao</code> (<code>CALL_START</code>|<code>CALL_END</code>, obrigatorio), <code>ocorreuEm</code>
+(obrigatorio), <code>ipOrigem</code>.</p>
+<p><strong>Se um lote com <code>dispositivoTipo</code> de desktop trouxer um <code>PhoneCallEvent</code>, TODOS os itens desse
+tipo sao rejeitados</strong> para <code>motivosIgnorados</code>, com o motivo
+<code>"PhoneCallEvent so aceito para dispositivos moveis (MOBILE_ANDROID); dispositivoTipo=..."</code>
+(<code>EVENTS/src/modules/ingestion/handlers/phone-call.handler.ts:42-49</code>). O texto cita so
+<code>MOBILE_ANDROID</code> embora <code>IOS</code> tambem passe na guarda (<code>normalizar-dispositivo.ts:103-105</code>).</p>
+<p>Ha ainda uma guarda de <strong>lote</strong> anterior: lote com <code>dispositivoTipo=IOS</code> que contenha qualquer
+outro tipo de evento recebe <strong>400 <code>DISPOSITIVO_TIPO_INVALIDO</code></strong>
+(<code>EVENTS/.../ingestion.service.ts:205-224</code>).</p>
+<p>Tabela <code>eventos_chamada_telefonica</code> (<code>EVENTS/.../eventos.schema.ts:310-318</code>) — sem coluna de numero
+ou duracao, por LGPD (<code>:306-309</code>).</p>
+<hr />
+<h3 id="510-activitysummaryevent-e-inputactivitysummary">5.10 <code>ActivitySummaryEvent</code> e <code>InputActivitySummary</code><a class="headerlink" href="#510-activitysummaryevent-e-inputactivitysummary" title="Permanent link">&para;</a></h3>
+<p>Mesmo shape e mesmo handler do 5.4. O Agent Windows nao emite nenhum dos dois.</p>
+<hr />
+<h2 id="6-duplicatas-e-idempotencia">6. Duplicatas e idempotencia<a class="headerlink" href="#6-duplicatas-e-idempotencia" title="Permanent link">&para;</a></h2>
+<h3 id="61-as-tres-camadas-de-dedup">6.1 As tres camadas de dedup<a class="headerlink" href="#61-as-tres-camadas-de-dedup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>camada</th>
+<th>onde</th>
+<th>escopo</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lote repetido (208)</td>
+<td>header <code>X-Client-Dedup-Batch</code></td>
+<td><strong>por processo</strong>, cache LRU de 10.000, TTL <strong>10 min</strong></td>
+<td><code>EVENTS/src/modules/ingestion/services/dedup.service.ts:51-52,119-138</code></td>
+</tr>
+<tr>
+<td>Lote no pipe</td>
+<td><code>received_batches</code> no SQLite do Agent</td>
+<td>por maquina, faxina de 1 h</td>
+<td><code>AGENT/.../SqliteEventBuffer.cs:99-102,631-632</code></td>
+</tr>
+<tr>
+<td>Linha no banco</td>
+<td>chaves UNIQUE + <code>ON CONFLICT DO UPDATE</code></td>
+<td>por empresa/agente</td>
+<td>ver 6.3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>O hash do lote</strong> e SHA-256 do concat <strong>ordenado</strong> das chaves por evento
+(<code>AGENT/src/ManagerAgent.Shared/Runtime/EventDedupKey.cs:72-82</code>); a chave por evento e
+SHA-256 de <code>tipoEvento|dadosJson|capturedAtIso</code>
+(<code>:62-66</code>), calculada na insercao no buffer (<code>AGENT/.../SqliteEventBuffer.cs:276</code>).</p>
+<p>O backend: header ausente ou em branco -&gt; sem dedup (<code>dedup.service.ts:120-122</code>); hash fora de
+<code>/^[0-9a-f]{64}$/</code> -&gt; <strong>processa normalmente, nao rejeita</strong> (<code>:55,124-126</code>); chave de cache =
+<code>instalacaoId:hash</code> (<code>:127</code>). Duplicata resolvida devolve <strong>208 com o corpo da resposta original</strong>
+(<code>ingestion.service.ts:151-162</code>; status em <code>ingestion.controller.ts:149,291-293</code>). Duplicata
+concorrente (<code>IN_FLIGHT</code>) espera a original e tambem recebe 208 (<code>:155-162</code>).</p>
+<blockquote>
+<p><strong>Limitacao declarada no proprio codigo:</strong> o cache e por processo. Com mais de uma replica atras
+do balanceador, o 208 nao funciona (<code>dedup.service.ts:36-42</code>).</p>
+</blockquote>
+<p>O Agent trata 208 como sucesso (<code>AGENT/.../HttpEventUploader.cs:213-219</code>).</p>
+<h3 id="62-chaves-unique-que-existem-hoje">6.2 Chaves UNIQUE que existem hoje<a class="headerlink" href="#62-chaves-unique-que-existem-hoje" title="Permanent link">&para;</a></h3>
+<p><strong>Nenhuma esta declarada no schema TypeScript.</strong> Todos os <code>pgTable</code> em
+<code>EVENTS/src/common/db/schema/eventos.schema.ts</code> sao a forma de 2 argumentos, sem callback de
+indice (o proprio arquivo diz isso em <code>:65-66,96-98,166-168</code>). As chaves vivem <strong>so nas migrations
+SQL</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>tabela</th>
+<th>indice</th>
+<th>colunas</th>
+<th><code>NULLS NOT DISTINCT</code>?</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eventos_janela</code></td>
+<td><code>uq_eventos_janela_agente_processo_inicio</code></td>
+<td><code>(agente_id, nome_processo, iniciado_em)</code></td>
+<td><strong>nao</strong></td>
+<td><code>EVENTS/drizzle/migrations/20260815000000_uq_eventos_janela_sessao.sql:72-73</code></td>
+</tr>
+<tr>
+<td><code>eventos_ociosidade</code></td>
+<td><code>uq_eventos_ociosidade_agente_inicio</code></td>
+<td><code>(agente_id, iniciado_em)</code></td>
+<td><strong>nao</strong></td>
+<td><code>EVENTS/drizzle/migrations/20260815010000_uq_eventos_ociosidade_sessao.sql:92-93</code></td>
+</tr>
+<tr>
+<td><code>eventos_reuniao</code></td>
+<td><code>uq_eventos_reuniao_agente_app_inicio</code></td>
+<td><code>(agente_id, aplicativo, iniciado_em)</code></td>
+<td><strong>SIM</strong></td>
+<td><code>EVENTS/drizzle/migrations/20260821000000_uq_eventos_reuniao_sessao.sql:180-181</code></td>
+</tr>
+<tr>
+<td><code>eventos_sessao</code></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>nao existe</strong></td>
+</tr>
+<tr>
+<td><code>eventos_transicao_status</code></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>nao existe</strong></td>
+</tr>
+<tr>
+<td><code>eventos_reuniao_snapshot</code></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>nao existe</strong></td>
+</tr>
+<tr>
+<td><code>batimentos</code></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>nao existe</strong></td>
+</tr>
+<tr>
+<td><code>resumos_atividade_input</code></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>nao existe</strong></td>
+</tr>
+<tr>
+<td><code>eventos_chamada_telefonica</code></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>nao existe</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Os tres indices sao <strong>totais</strong>, sem <code>WHERE</code> — nao sao parciais
+(<code>20260815000000:12-14</code>). Nenhum usa <code>CREATE INDEX CONCURRENTLY</code>, porque o migrator roda cada
+arquivo em transacao (<code>20260815000000:41-45</code>, <code>20260821000000:80,96</code>).</p>
+<blockquote>
+<p>Um <code>uq_eventos_ociosidade_agente_periodo</code> foi citado por anos no cabecalho do handler de
+ociosidade e <strong>nunca existiu no banco</strong> (<code>EVENTS/.../handlers/idle.handler.ts:26-33</code>;
+<code>20260815010000_uq_eventos_ociosidade_sessao.sql:24-32</code>). O <code>onConflictDoNothing</code> antigo nunca
+teve conflito para descartar.</p>
+</blockquote>
+<h3 id="63-o-que-faz-dois-eventos-serem-o-mesmo">6.3 O que faz dois eventos serem "o mesmo"<a class="headerlink" href="#63-o-que-faz-dois-eventos-serem-o-mesmo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>tipo</th>
+<th>chave</th>
+<th>consequencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>janela</td>
+<td>agente + processo + <code>iniciadoEm</code> <strong>exato</strong></td>
+<td>snapshot e fechamento reconciliam com a abertura</td>
+</tr>
+<tr>
+<td>ociosidade</td>
+<td>agente + <code>iniciadoEm</code> <strong>exato</strong></td>
+<td>idem</td>
+</tr>
+<tr>
+<td>reuniao</td>
+<td>agente + aplicativo + <code>iniciadoEm</code> <strong>exato</strong></td>
+<td>idem</td>
+</tr>
+<tr>
+<td>resto</td>
+<td>nada</td>
+<td>toda emissao vira linha nova</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Igualdade exata de timestamp, sem tolerancia</strong> (<code>EVENTS/.../meeting.handler.ts:58-66</code>). Como o
+<code>iniciadoEm</code> vem do Agent, <strong>um ajuste de relogio entre a abertura e o fechamento produz duas
+linhas</strong> — exatamente a duplicacao que os indices existem para evitar.</p>
+<h3 id="64-reconciliacao-aberturafechamento-on-conflict-do-update">6.4 Reconciliacao abertura/fechamento — <code>ON CONFLICT ... DO UPDATE</code><a class="headerlink" href="#64-reconciliacao-aberturafechamento-on-conflict-do-update" title="Permanent link">&para;</a></h3>
+<p>Os tres handlers com upsert seguem a mesma forma:</p>
+<ol>
+<li><strong>Colapso em memoria</strong> do que veio no mesmo lote — obrigatorio, senao o Postgres devolve
+   erro 21000 por atualizar a mesma chave duas vezes no mesmo comando
+   (<code>window-activity.handler.ts:160-161</code>).
+   Regra do merge: <strong><code>finalizadoEm</code> primeiro nao-nulo vence</strong>; demais campos mutaveis, ultimo
+   nao-nulo vence; <code>criadoEm</code> mantem o primeiro
+   (<code>window-activity.handler.ts:91-97</code>; <code>idle.handler.ts:87-91</code>; <code>meeting.handler.ts:183-191</code>).</li>
+<li><strong><code>onConflictDoUpdate</code></strong> com <code>COALESCE(excluded.X, atual.X)</code> nos campos nulaveis.</li>
+<li><strong><code>setWhere: finalizado_em IS NULL</code></strong> — <strong>uma vez fechada, a linha e imutavel</strong>
+   (<code>window-activity.handler.ts:185</code>; <code>idle.handler.ts:160</code>; <code>meeting.handler.ts:300</code>).</li>
+</ol>
+<blockquote>
+<p><strong>Armadilha de contagem.</strong> Linha barrada pelo <code>setWhere</code> <strong>nao volta no <code>RETURNING</code></strong>
+(<code>EVENTS/.../handler-utils.ts:26-31</code>). Por isso <code>inseridos</code> pode ser menor que o numero de
+eventos enviados (<code>window-activity.handler.ts:190</code>), e por isso <code>meeting.handler.ts</code> pareia por
+chave e nao por indice (<code>:314-327</code>). <strong>Nao escreva API que case resposta com pedido por
+posicao.</strong></p>
+</blockquote>
+<h3 id="65-o-caso-nulls-not-distinct-2408">6.5 O caso <code>NULLS NOT DISTINCT</code> (24/08)<a class="headerlink" href="#65-o-caso-nulls-not-distinct-2408" title="Permanent link">&para;</a></h3>
+<p>Em 18/08 <code>eventos_reuniao.aplicativo</code> deixou de ser <code>NOT NULL</code>
+(<code>EVENTS/drizzle/migrations/20260818000000_eventos_reuniao_aplicativo_nullable.sql</code>) para que uma
+reuniao sem aplicativo detectado nao derrubasse o evento.</p>
+<p>Isso quebrou o upsert em silencio: <strong>o default do Postgres em UNIQUE e <code>NULLS DISTINCT</code></strong> — duas
+linhas com <code>aplicativo = NULL</code> nunca colidem, e o <code>ON CONFLICT</code> nunca acharia a linha aberta da
+reuniao que a propria 18/08 tinha passado a salvar. Cada fechamento viraria uma segunda linha
+(<code>20260821000000_uq_eventos_reuniao_sessao.sql:99-123</code>).</p>
+<p>A correcao de 24/08 tem tres partes, e as tres importam para quem replicar o padrao:</p>
+<ol>
+<li><code>CREATE UNIQUE INDEX ... NULLS NOT DISTINCT</code> (Postgres 15+; o projeto roda 16) —
+   <code>20260821000000:180-181</code>.</li>
+<li>Um <strong><code>DROP INDEX IF EXISTS</code> defensivo antes</strong> (<code>:174</code>): <code>CREATE UNIQUE INDEX IF NOT EXISTS</code>
+   sozinho nao recria um indice que ja existe sem a propriedade (<code>:167-173</code>).</li>
+<li>O colapso em memoria do handler precisou usar <code>JSON.stringify(aplicativo)</code> para que <code>NULL</code>
+   vire <code>null</code> e um aplicativo literalmente chamado <code>"null"</code> continue distinto — as duas pontas
+   <strong>tem de concordar</strong> (<code>meeting.handler.ts:128-147</code>).</li>
+</ol>
+<p><code>NULLS NOT DISTINCT</code> aparece <strong>uma unica vez</strong> em todo o SQL de producao.</p>
+<blockquote>
+<p><strong>Para API nova:</strong> <code>ON CONFLICT (a, b, c)</code> infere o indice pela lista de colunas, e a
+propriedade <code>NULLS NOT DISTINCT</code> vem junto (<code>20260821000000:122-123</code>). Se alguma coluna da sua
+chave for nulavel e voce nao declarar <code>NULLS NOT DISTINCT</code>, <strong>o upsert vira insert e ninguem
+percebe.</strong></p>
+</blockquote>
+<h3 id="66-onde-ainda-ha-colisao-possivel">6.6 Onde ainda ha colisao possivel<a class="headerlink" href="#66-onde-ainda-ha-colisao-possivel" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>caso</th>
+<th>por que</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LOGOUT em duplicata</strong></td>
+<td><code>eventos_sessao</code> nao tem UNIQUE. O Agent tem duas guardas locais (despedida registrada; consulta ao buffer numa janela de 2 min), mas se o pipe estiver caido o LOGOUT do worker sobe depois, de outro processo, possivelmente apos reboot</td>
+<td><code>AGENT/src/ManagerAgent.Service/ManagerAgentService.cs:286-315,317-327</code>; <code>AGENT/.../SqliteEventBuffer.cs:302-345</code></td>
+</tr>
+<tr>
+<td>Transicao de status duplicada</td>
+<td>tabela sem trava; e por isso que o Agent nao emite na fronteira de sessao nem no corte diario</td>
+<td><code>AGENT/.../IUserStatusManager.cs:162-168</code>; <code>AGENT/.../DailyBoundaryWorker.cs:16-19</code></td>
+</tr>
+<tr>
+<td>Snapshot de reuniao repetido</td>
+<td>INSERT puro</td>
+<td><code>EVENTS/.../meeting-snapshot.handler.ts:49-54</code></td>
+</tr>
+<tr>
+<td>Heartbeat / resumo repetido</td>
+<td>INSERT puro</td>
+<td><code>heartbeat.handler.ts:64-69</code>; <code>activity-summary.handler.ts:167-172</code></td>
+</tr>
+<tr>
+<td>Lote reenviado apos 10 min</td>
+<td>cache de dedup expirou</td>
+<td><code>dedup.service.ts:52</code></td>
+</tr>
+<tr>
+<td>Lote reenviado para outra replica</td>
+<td>cache e por processo</td>
+<td><code>dedup.service.ts:36-42</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-tempo">7. Tempo<a class="headerlink" href="#7-tempo" title="Permanent link">&para;</a></h2>
+<h3 id="71-formato">7.1 Formato<a class="headerlink" href="#71-formato" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>regra</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formato exigido</td>
+<td>ISO 8601 <strong>com offset obrigatorio</strong></td>
+<td><code>EVENTS/.../dto/agent-event-batch.dto.ts:206-209</code> (<code>z.iso.datetime({offset:true})</code>)</td>
+</tr>
+<tr>
+<td>Mensagem de erro</td>
+<td><code>"timestamp deve ser ISO 8601 com offset"</code></td>
+<td><code>dto:208</code></td>
+</tr>
+<tr>
+<td>Colunas</td>
+<td><strong><code>timestamptz</code></strong> em todas as tabelas</td>
+<td><code>EVENTS/src/common/db/schema/eventos.schema.ts</code> — nenhum <code>withTimezone:false</code> no repo</td>
+</tr>
+<tr>
+<td>Precisao</td>
+<td><code>precision: 6</code> nas colunas antigas; sem precisao explicita nas novas</td>
+<td>ex. <code>:72</code> vs <code>:204</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nao ha configuracao de fuso em lugar nenhum</strong> do <code>EVENTS</code>: nem no <code>Dockerfile</code>, nem no
+<code>docker-compose.yml</code>, nem no cliente <code>postgres.js</code>
+(<code>EVENTS/src/common/db/db.client.ts:48-54</code> — so <code>prepare</code>, <code>ssl</code>, <code>max</code>, timeouts). A correcao
+depende inteiramente de <code>timestamptz</code> + o offset que o Agent manda.</p>
+<h3 id="72-qual-relogio-cada-carimbo-usa">7.2 Qual relogio cada carimbo usa<a class="headerlink" href="#72-qual-relogio-cada-carimbo-usa" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>carimbo</th>
+<th>relogio</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enviadoEm</code> (envelope)</td>
+<td><code>DateTimeOffset.UtcNow</code> — <strong>UTC, offset +00:00</strong></td>
+<td><code>AGENT/.../HttpEventUploader.cs:161</code></td>
+</tr>
+<tr>
+<td>Janela, heartbeat, resumo, reuniao, status</td>
+<td><code>DateTimeOffset.Now</code> — <strong>hora local com offset</strong> (ex. <code>-03:00</code>)</td>
+<td><code>AGENT/.../Worker.cs:202</code> (o <code>now</code> do laco)</td>
+</tr>
+<tr>
+<td>Ociosidade</td>
+<td><code>DateTimeOffset.UtcNow</code></td>
+<td><code>AGENT/.../IdleMonitorService.cs:95,413</code></td>
+</tr>
+<tr>
+<td>Snapshot de reuniao</td>
+<td><code>DateTimeOffset.UtcNow</code></td>
+<td><code>AGENT/.../MeetingSnapshotWorker.cs:62</code></td>
+</tr>
+<tr>
+<td><code>LOGOUT</code> emitido pelo Service</td>
+<td>hora do EOF do pipe, ou <code>UtcNow</code></td>
+<td><code>AGENT/src/ManagerAgent.Service/ManagerAgentService.cs:299</code></td>
+</tr>
+<tr>
+<td>Fechamento de janela orfa</td>
+<td>hora do EOF do pipe</td>
+<td><code>AGENT/.../OrphanWindowEventCloser.cs:51,80</code></td>
+</tr>
+<tr>
+<td><code>criado_em</code> (todas as tabelas)</td>
+<td><strong><code>new Date()</code> do Node</strong>, um por invocacao de handler</td>
+<td>ex. <code>window-activity.handler.ts:136,154</code></td>
+</tr>
+<tr>
+<td><code>agentes.ultimo_heartbeat_em</code></td>
+<td><code>new Date()</code> do Node</td>
+<td><code>EVENTS/.../ingestion.service.ts:373,382</code></td>
+</tr>
+<tr>
+<td>Timestamp faltando no payload</td>
+<td><strong><code>enviadoEm</code> do envelope</strong> (hora do Agent)</td>
+<td><code>EVENTS/.../ingestion.service.ts:237</code>; <code>event-handler.interface.ts:28</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Consequencia pratica:</strong> dentro do mesmo lote convivem carimbos com offset <code>-03:00</code> (janela) e
+<code>+00:00</code> (ociosidade). Como todos carregam offset e todas as colunas sao <code>timestamptz</code>, o
+instante e o mesmo — mas <strong>nunca compare a string</strong> e nunca assuma que o offset e uniforme.</p>
+</blockquote>
+<h3 id="73-armadilhas-ja-medidas">7.3 Armadilhas ja medidas<a class="headerlink" href="#73-armadilhas-ja-medidas" title="Permanent link">&para;</a></h3>
+<p><strong>a) Fim anterior ao inicio (achado A-30, reaberto).</strong>
+A ociosidade e datada <strong>retroativamente</strong> na ultima interacao do usuario, mas so e detectada quando
+cruza o limiar de 60 s. Uma janela que ganha foco dentro desse intervalo silencioso — worker
+reiniciando, aplicativo roubando foco — abre legitimamente e, ate 59 s depois, recebe um fim
+anterior ao proprio inicio.</p>
+<p>O Agent <strong>nao descarta</strong> o evento (ele ja foi emitido como aberto; engolir o fechamento o deixaria
+orfao para sempre — achado A-35). Ele fecha com <strong>duracao ZERO</strong> e loga WARN
+(<code>AGENT/.../WindowActivityService.cs:216-239</code>). O mesmo clamp existe na troca de janela
+(<code>:158-160</code>).</p>
+<p>Ate a 1.5.5 isso virava um bloco de <strong>1 ms</strong> — valor fabricado com cara de dado real.</p>
+<p><strong>Medicao:</strong> o registro de regressivo de 18/08 aponta o evento <code>49253</code> com 1 ms as 14:48:26, com o
+worker subindo (<code>BRAIN/docs/tecnologia/registro/2026-08-24-regressivo-definitivo-agent.md:659-671</code>;
+placar em <code>:102,146</code>).
+<strong>NAO VERIFICADO:</strong> a ocorrencia especifica de 24/08 "na troca de servico" citada no pedido. O que
+esta registrado e a medicao de 18/08 acima; nao encontrei registro datado de 24/08 para este
+sintoma. O caminho de codigo e o mesmo nos dois casos.</p>
+<p><strong>Para quem consome:</strong> blocos de <code>finalizado_em = iniciado_em</code> (duracao 0) existem e sao
+legitimos — significam "nao houve atividade", nao "erro". Filtre-os; nao os trate como dado ruim.</p>
+<p><strong>b) Ajuste de relogio parte o intervalo.</strong> Ver 6.3.</p>
+<p><strong>c) Buraco de wall-clock.</strong> Se o processo dormiu (S3/S4) ou o SO travou, <code>GetLastInputInfo</code> e
+<code>TickCount</code> nao veem o buraco. O Agent compara wall-clock entre ciclos e, se o delta passar de
+<code>2 x intervalo + 30 s</code> (= 40 s na config atual), emite um <code>IdleEvent</code> sintetico cobrindo o periodo,
+com motivo <code>WallClockGap</code> (<code>AGENT/.../IdleMonitorService.cs:217-253</code>).</p>
+<p><strong>d) Ociosidade reaberta apos restart.</strong> O inicio persistido e reaproveitado quando o recalculo cai
+dentro de <strong>5 s</strong> dele; fora disso comeca uma nova (<code>AGENT/.../IdleMonitorService.cs:41,140-154</code>).
+E o que evita duas linhas nao reconciliadas (achado A-48).</p>
+<p><strong>e) Corte diario.</strong> O <code>DailyBoundaryWorker</code> flusha ociosidade e janela as 23:59 <strong>em hora local</strong>
+(<code>AGENT/.../DailyBoundaryWorker.cs:50-51</code>) para que nenhum bloco atravesse a fronteira do dia.</p>
+<hr />
+<h2 id="8-o-contrato-de-erro">8. O contrato de erro<a class="headerlink" href="#8-o-contrato-de-erro" title="Permanent link">&para;</a></h2>
+<h3 id="81-202-accepted-o-caso-normal">8.1 202 Accepted — o caso normal<a class="headerlink" href="#81-202-accepted-o-caso-normal" title="Permanent link">&para;</a></h3>
+<p>Corpo (<code>EVENTS/.../dto/agent-event-batch.dto.ts:537-602</code>):</p>
+<table>
+<thead>
+<tr>
+<th>campo</th>
+<th>significado</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aceito</code></td>
+<td>bool</td>
+<td><code>dto:538-539</code></td>
+</tr>
+<tr>
+<td><code>totalEventos</code></td>
+<td><strong>linhas efetivamente gravadas</strong></td>
+<td><code>dto:541-545</code>; <strong>valor real</strong> em <code>EVENTS/.../ingestion.service.ts:249</code></td>
+</tr>
+<tr>
+<td><code>eventosJanela</code>, <code>eventosInatividade</code>, <code>eventosSessao</code>, <code>resumosEntrada</code>, <code>eventosHeartbeat</code>, <code>eventosTransicaoStatus</code>, <code>eventosReuniao</code>, <code>eventosReuniaoSnapshot</code>, <code>eventosChamadaTelefonica</code></td>
+<td>contadores por tipo</td>
+<td><code>dto:547-594</code>; <code>ingestion.service.ts:250-261</code></td>
+</tr>
+<tr>
+<td><code>motivosIgnorados</code></td>
+<td>array de <code>{indice, tipoEvento, motivo}</code></td>
+<td><code>dto:520-535,596-601</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Divergencia 9.</strong> A descricao Swagger de <code>totalEventos</code> diz "aceitas + ignoradas"
+(<code>dto:541-545</code>). O valor real e <code>dispatchResult.totalInseridos</code>
+(<code>EVENTS/.../ingestion.service.ts:249</code>) — <strong>so o que foi gravado</strong>. Nao use este campo para
+conferir se o lote chegou inteiro.</p>
+</blockquote>
+<p><code>resumosEntrada</code> soma os tres aliases de activity summary
+(<code>EVENTS/.../ingestion.service.ts:253-256</code>).</p>
+<h3 id="82-motivosignorados-o-significado-exato-de-indice">8.2 <code>motivosIgnorados</code> — o significado exato de <code>indice</code><a class="headerlink" href="#82-motivosignorados-o-significado-exato-de-indice" title="Permanent link">&para;</a></h3>
+<p><strong><code>indice</code> e sempre a posicao no array <code>eventos</code> do lote ORIGINAL</strong>, comecando em 0. Nunca a
+posicao numa lista filtrada. A cadeia inteira:</p>
+<ol>
+<li><code>validarEventos</code> itera <code>crus.entries()</code> sobre o array intocado e guarda a posicao tanto para o
+   item valido quanto para o rejeitado (<code>dto:474-486</code>; doc em <code>:462-465</code>).</li>
+<li>O item valido carrega a posicao em <code>EventoComIndice.indice</code> (<code>dto:455-458</code>).</li>
+<li>O agrupamento por tipo usa <code>evento.indice</code>, <strong>nao</strong> a posicao no array agrupado
+   (<code>EVENTS/.../ingestion.service.ts:334</code>, comentario em <code>:323-326</code>).</li>
+<li>O handler recebe <code>originalIndices</code> e le <code>originalIndices[i] ?? i</code>
+   (<code>session.handler.ts:57</code>; <code>activity-summary.handler.ts:95</code>; <code>phone-call.handler.ts:44</code>).</li>
+</ol>
+<p><strong>O array nao vem ordenado por <code>indice</code>.</strong> Ele e montado como
+<code>[...rejeitados pelo schema, ...rejeitados pelos handlers]</code>
+(<code>EVENTS/.../ingestion.service.ts:264</code>) — os primeiros em ordem de lote, os segundos em ordem de
+despacho (<code>:355</code>). Ordene voce mesmo se precisar.</p>
+<p><code>tipoEvento</code> do motivo e "melhor esforco": extraido do objeto cru, truncado em 64 chars, ou
+<code>"(desconhecido)"</code> (<code>dto:495-501</code>). <code>motivo</code> sao as 3 primeiras issues do Zod, truncadas em 500
+(<code>dto:504-510</code>).</p>
+<p><strong>Todos os pontos que geram <code>motivosIgnorados</code>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>origem</th>
+<th>condicao</th>
+<th>motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>schema do item</td>
+<td>qualquer falha no <code>AgentEventItemSchema</code> (inclui <code>tipoEvento</code> desconhecido)</td>
+<td>issues do Zod</td>
+</tr>
+<tr>
+<td><code>SessionHandler</code></td>
+<td><code>tipoTransicao</code> e <code>tipoEvento</code> ambos ausentes</td>
+<td><code>"SessionEvent sem tipoTransicao/tipoEvento"</code> (<code>session.handler.ts:59-65</code>)</td>
+</tr>
+<tr>
+<td><code>ActivitySummaryHandler</code></td>
+<td><code>intervaloInicio</code> <strong>ou</strong> <code>intervaloFim</code> nao resolve</td>
+<td><code>"ActivitySummary sem intervaloInicio/intervaloFim"</code> (<code>activity-summary.handler.ts:98-105</code>)</td>
+</tr>
+<tr>
+<td><code>PhoneCallHandler</code></td>
+<td><code>dispositivoTipo</code> nao e movel</td>
+<td><code>"PhoneCallEvent so aceito para dispositivos moveis..."</code> (<code>phone-call.handler.ts:42-49</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Os outros seis handlers <strong>nunca</strong> rejeitam item.</p>
+<blockquote>
+<p><strong>O QUE O AGENT FAZ COM ISSO: NADA.</strong> Em resposta 2xx ele retorna sem ler o corpo
+(<code>AGENT/.../HttpEventUploader.cs:221-227</code>) e o <code>UploadWorker</code> marca todos os eventos como
+enviados (<code>AGENT/.../UploadWorker.cs:353-355</code>), removendo-os do buffer. <strong>Evento rejeitado
+individualmente esta perdido e ninguem do lado do Agent fica sabendo.</strong> Ver defeito D-3.</p>
+</blockquote>
+<h3 id="83-quando-vem-400">8.3 Quando vem 400<a class="headerlink" href="#83-quando-vem-400" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>codigo</th>
+<th>quando</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PAYLOAD_INVALIDO</code></td>
+<td>falha no <strong>envelope</strong>: campo de lote faltando, tipo errado, <code>eventos</code> vazio ou &gt; 1000, <code>enviadoEm</code> sem offset, <code>dispositivoTipo</code> fora do enum, ou <strong>qualquer nome de campo desconhecido no lugar do canonico</strong></td>
+<td><code>EVENTS/.../ingestion.service.ts:119,127-129</code>; <code>detalhes.issues</code> em <code>:122-126</code></td>
+</tr>
+<tr>
+<td><code>DISPOSITIVO_TIPO_INVALIDO</code></td>
+<td><strong>apenas</strong> lote com <code>dispositivoTipo=IOS</code> contendo evento que nao seja <code>PhoneCallEvent</code></td>
+<td><code>EVENTS/.../ingestion.service.ts:205-224</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Divergencia 10.</strong> <code>EVENTS/src/common/errors/error-codes.ts:29</code> e
+<code>dto:6-7</code> afirmam que <code>dispositivoTipo</code> ausente ou invalido devolve
+<code>DISPOSITIVO_TIPO_INVALIDO</code>. <strong>Nao devolve</strong> — cai no Zod e vira <code>PAYLOAD_INVALIDO</code>. O unico
+ponto que lanca aquele codigo e a guarda de composicao de lote IOS.</p>
+</blockquote>
+<p><strong>A regra que vale hoje: erro de LOTE e 400; erro de ITEM nunca e 400</strong>
+(<code>dto:443-444</code>). Isso mudou em 24/08, e mudou por causa do teto do A-64: da 1.5.12 em diante um
+unico item invalido podia levar ate 99 eventos bons junto, em silencio (<code>dto:436-444</code>).</p>
+<h3 id="84-os-outros-status">8.4 Os outros status<a class="headerlink" href="#84-os-outros-status" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>status</th>
+<th>codigo</th>
+<th>quando</th>
+<th>o Agent faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>208</strong></td>
+<td>—</td>
+<td>lote ja processado (hash)</td>
+<td>trata como sucesso (<code>HttpEventUploader.cs:213-219</code>)</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td><code>TOKEN_EXPIRADO</code> / <code>TOKEN_INVALIDO</code> / <code>CHAVE_INVALIDA</code></td>
+<td>JWT ruim, ausente ou fora do esquema Bearer</td>
+<td>forca refresh e <strong>retenta a mesma tentativa</strong>; se o refresh falhar, <code>FalhaTransitoria</code> <strong>e marca revogado</strong> (<code>HttpEventUploader.cs:229-248</code>)</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td><code>EMPRESA_BLOQUEADA</code>, <code>USUARIO_INATIVO</code>, <code>DISPOSITIVO_DESVINCULADO</code>, <code>AGENT_REVOGADO</code></td>
+<td>guardas de negocio (<code>EVENTS/src/modules/ingestion/guards/device-guards.service.ts:48-78</code>); <code>AGENT_REVOGADO</code> e o unico que emite o header <code>X-Agent-Revoked: 'true'</code> (<code>EVENTS/src/common/auth/revocation-check.middleware.ts:39,167-169</code>, acionado pelo interceptor em <code>EVENTS/src/common/auth/revocation-check.interceptor.ts:23-34</code> e <code>EVENTS/.../ingestion.controller.ts:161</code>)</td>
+<td><strong>so age se vier o header <code>X-Agent-Revoked: true</code></strong>; ai suspende a captura. 403 sem o header cai no ramo generico e vira <code>FalhaTransitoria</code> (<code>HttpEventUploader.cs:62-65,250-264</code>)</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td><code>DISPOSITIVO_NAO_CADASTRADO</code></td>
+<td>agente ou empresa nao existe (<code>EVENTS/.../services/empresa-resolver.service.ts:110-136</code>)</td>
+<td><code>FalhaPermanente</code> -&gt; <strong>descarta apos 5 ciclos</strong></td>
+</tr>
+<tr>
+<td><strong>412</strong></td>
+<td><code>DISPOSITIVO_NAO_VINCULADO</code></td>
+<td><code>usuario_ref_id</code> nulo (<code>empresa-resolver.service.ts:118-124</code>)</td>
+<td><code>FalhaPermanente</code> -&gt; <strong>descarta apos 5 ciclos</strong></td>
+</tr>
+<tr>
+<td><strong>429</strong></td>
+<td><code>RATE_LIMITED</code></td>
+<td>&gt; 60 lotes/min por <code>instalacaoId</code></td>
+<td><code>FalhaTransitoria</code>, retenta para sempre (<code>ResultadoEnvio.cs:119</code>)</td>
+</tr>
+<tr>
+<td><strong>5xx</strong></td>
+<td>—</td>
+<td>erro interno</td>
+<td><code>FalhaTransitoria</code></td>
+</tr>
+</tbody>
+</table>
+<p>O <code>Retry-After: 60</code> e fixo e vem do filtro global, nao do controller
+(<code>EVENTS/src/common/errors/global-exception.filter.ts:88-91</code>). <strong>O Agent nao le esse header</strong> —
+ele simplesmente espera o proximo ciclo de 60 s.</p>
+<p><strong>Corpo de erro</strong> (<code>EVENTS/src/common/errors/base.exception.ts:30-58</code>):
+<code>{ codigo, mensagem, detalhes, requestId? }</code>. <code>detalhes</code> sempre presente (<code>{}</code> quando vazio);
+<code>requestId</code> vem do contexto de correlacao (<code>global-exception.filter.ts:77-86</code>).</p>
+<blockquote>
+<p><strong>404 e 412 sao permanentes para o Agent.</strong> Uma maquina que perdeu o vinculo do lado do backend
+perde ate 100 eventos a cada cinco minutos, em vez de segurar a fila. Isso e deliberado
+(<code>ResultadoEnvio.cs:98-107</code>), mas quem administrar vinculos precisa saber.</p>
+</blockquote>
+<hr />
+<h2 id="9-compatibilidade">9. Compatibilidade<a class="headerlink" href="#9-compatibilidade" title="Permanent link">&para;</a></h2>
+<h3 id="91-tipo-de-evento-desconhecido">9.1 Tipo de evento desconhecido<a class="headerlink" href="#91-tipo-de-evento-desconhecido" title="Permanent link">&para;</a></h3>
+<p>O <code>AgentEventItemSchema</code> e uma <code>discriminatedUnion</code> por <code>tipoEvento</code>
+(<code>dto:346-376</code>). Tipo fora dos 11 <strong>nao casa com nenhum branch</strong> -&gt; falha o parse do item -&gt;
+vai para <code>motivosIgnorados</code> com o nome truncado em 64 chars (<code>dto:481-486,495-501</code>).
+<strong>Nao derruba o lote.</strong> O <code>handler-registry.get()</code> tambem devolve <code>undefined</code> para tipo
+desconhecido (<code>handler-registry.ts:89-91</code>), mas na pratica o Zod barra antes.</p>
+<h3 id="92-campo-novo">9.2 Campo novo<a class="headerlink" href="#92-campo-novo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>direcao</th>
+<th>comportamento</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent manda campo que o backend nao conhece <strong>dentro de <code>dados</code></strong></td>
+<td><code>z.object</code> do Zod <strong>descarta</strong> a chave; o evento e aceito</td>
+<td>comportamento padrao do <code>z.object</code>; caso real em 5.2 (Divergencia 3)</td>
+</tr>
+<tr>
+<td>Agent manda campo que o backend nao conhece <strong>no envelope</strong></td>
+<td>o envelope tambem e <code>z.object</code> sem <code>.strict()</code> (<code>dto:446-449</code>) — descartado, sem 400</td>
+<td><code>dto:446-449</code></td>
+</tr>
+<tr>
+<td>Backend passa a exigir campo que o Agent antigo nao manda</td>
+<td><strong>400 no lote inteiro</strong> -&gt; descarte apos 5 minutos</td>
+<td>secao 2.6</td>
+</tr>
+<tr>
+<td>Backend acrescenta campo opcional</td>
+<td>Agent antigo continua funcionando</td>
+<td>ex. <code>acessibilidadeAtiva</code> em <code>dto:241-245</code></td>
+</tr>
+<tr>
+<td>Backend acrescenta campo na <strong>resposta</strong></td>
+<td>o Agent nao le a resposta em sucesso</td>
+<td><code>HttpEventUploader.cs:221-227</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-versao-velha-de-agent-contra-backend-novo">9.3 Versao velha de Agent contra backend novo<a class="headerlink" href="#93-versao-velha-de-agent-contra-backend-novo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>situacao</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aliases de valor</td>
+<td><strong>ainda obrigatorios</strong> enquanto a 1.5.x nao dominar; sunset previsto para 100% da frota em 1.5.0+</td>
+<td><code>dto:81-84</code></td>
+</tr>
+<tr>
+<td><code>versaoAgente</code> que o Agent manda</td>
+<td><code>1.5.16.0</code> — <strong>4 partes</strong>, versao do assembly</td>
+<td><code>AGENT/.../HttpEventUploader.cs:140</code></td>
+</tr>
+<tr>
+<td><code>versaoAgente</code> que o contrato de update usa</td>
+<td><code>1.5.16</code> — 3 partes</td>
+<td><code>AGENT/src/ManagerAgent.Shared/Runtime/VersaoSemVer.cs:22-24,41-55</code></td>
+</tr>
+<tr>
+<td><code>dispositivoTipo</code> nos eventos</td>
+<td><code>WINDOWS</code> (legado), normalizado para <code>DESKTOP_WINDOWS</code></td>
+<td><code>AGENT/src/ManagerAgent.Shared/Runtime/DispositivoTipoDetector.cs:18,34-35</code>; <code>EVENTS/.../normalizar-dispositivo.ts:74-75</code></td>
+</tr>
+<tr>
+<td><code>dispositivoTipo</code> na vinculacao</td>
+<td><code>DESKTOP_WINDOWS</code> (canonico)</td>
+<td><code>AGENT/.../AgentLinkService.cs:176</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Divergencia 11 — o mesmo Agent manda dois valores diferentes de <code>dispositivoTipo</code>.</strong>
+<code>WINDOWS</code> para o <code>EVENTS</code>, <code>DESKTOP_WINDOWS</code> para o <code>ADMIN</code>. Os dois sao aceitos, mas API que
+comparar os dois campos sem normalizar vai errar.</p>
+<p><strong>Divergencia 12 — os cabecalhos de upgrade nunca sao emitidos para o Agent Windows.</strong>
+<code>X-Manager-Upgrade-Available</code> e <code>X-Manager-Upgrade-Required</code> so sao calculados quando a
+requisicao traz <code>X-Agent-Version</code>; sem esse header o backend nem consulta o banco
+(<code>EVENTS/src/modules/ingestion/services/upgrade-header.service.ts:107-110</code>, aplicacao em
+<code>EVENTS/.../ingestion.controller.ts:302-308</code>). <strong>O Agent envia apenas tres headers</strong>
+(<code>AGENT/.../HttpEventUploader.cs:198-205</code>) e <code>X-Agent-Version</code> nao esta entre eles. Todo o
+mecanismo esta morto para Windows. Ver defeito D-2.</p>
+</blockquote>
+<h3 id="94-backend-novo-contra-agent-velho-e-a-ordem-de-deploy">9.4 Backend novo contra Agent velho — e a ORDEM DE DEPLOY<a class="headerlink" href="#94-backend-novo-contra-agent-velho-e-a-ordem-de-deploy" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>BACKEND PRIMEIRO, AGENT DEPOIS. Sempre.</strong></p>
+</blockquote>
+<p>A razao esta na assimetria de quem pode esperar:</p>
+<ul>
+<li>O <strong>backend</strong> e um lugar so, atualizado em minutos, e pode aceitar o formato velho e o novo ao
+  mesmo tempo. Todos os aliases da secao 3.2 existem exatamente por isso.</li>
+<li>O <strong>Agent</strong> e a frota. Ele se atualiza sozinho, mas <strong>a cada 6 horas</strong>
+  (<code>AGENT/src/ManagerAgent.Service/Update/UpdateCheckerWorker.cs:23</code>), com jitter inicial de ate
+  30 minutos (<code>AGENT/src/ManagerAgent.Service/appsettings.json:20</code>), e so quando a maquina esta
+  ligada. Uma maquina desligada uma semana volta na versao antiga.</li>
+</ul>
+<p>Se o Agent for primeiro, ele manda um formato que o backend ainda nao aceita: <strong>400 em todo lote</strong>,
+e o teto do A-64 apaga os eventos em cinco minutos (secao 2.6). Se o backend for primeiro, o pior
+caso e uma coluna nova ficar nula ate a frota alcancar.</p>
+<p><strong>Regra pratica:</strong> todo campo novo nasce <strong>opcional</strong> no backend e so pode virar obrigatorio
+quando a frota inteira o mandar. E a mesma regra ja escrita em <code>dto:46-48</code> para tipo de evento
+novo, generalizada.</p>
+<h3 id="95-o-canal-de-comando-recall">9.5 O canal de comando (recall)<a class="headerlink" href="#95-o-canal-de-comando-recall" title="Permanent link">&para;</a></h3>
+<p>Nao ha endpoint de comando. O unico canal backend-&gt;Agent e a <strong>resposta do endpoint de
+atualizacao</strong>, <code>GET {baseUrlAdmin}/api/agente/atualizacoes/verificar?versaoAtual=...</code>
+(<code>AGENT/.../UpdateCheckerWorker.cs:602</code>;
+<code>ADMIN/src/modules/agent-update/agent-update.controller.ts:103,118</code>).</p>
+<p>O recall vem como <code>recallSolicitado: true</code> <strong>junto com <code>atualizacaoDisponivel: false</code></strong>
+(<code>ADMIN/src/modules/agent-update/agent-update.service.ts:312-316</code>;
+<code>AGENT/src/ManagerAgent.Service/Update/UpdateDownloader.cs:241-246</code>). Um agente que trate recall
+depois de um <code>if (!temUpdate) return;</code> <strong>nao trata recall nenhum</strong> — era exatamente esse o defeito
+corrigido em <code>AGENT/.../UpdateDownloader.cs:55-70</code>.</p>
+<p>O backend nao diz para qual versao voltar: quem sabe e a maquina, que guarda uma unica versao
+anterior (<code>ADMIN/src/modules/agent-update/dto/verificar-atualizacao.response.dto.ts:117-127</code>).</p>
+<hr />
+<h2 id="10-o-que-o-agent-nunca-manda-lgpd">10. O que o Agent NUNCA manda (LGPD)<a class="headerlink" href="#10-o-que-o-agent-nunca-manda-lgpd" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>nao envia</th>
+<th>envia no lugar</th>
+<th>onde isso e garantido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Teclas digitadas</strong></td>
+<td>apenas <strong>contagens</strong>: total, distintas, navegacao</td>
+<td><code>AGENT/.../InputActivityTracker.cs:273-281</code> — <code>RecordKey(vkCode)</code> incrementa um <code>Dictionary&lt;int,int&gt;</code> (<code>:49</code>). Nao ha nenhuma string acumulada em todo o arquivo.</td>
+</tr>
+<tr>
+<td><strong>Tela / screenshot</strong></td>
+<td>nada</td>
+<td>nao existe captura de tela em nenhum ponto do repositorio</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>apenas dois booleanos (camera/microfone ativos)</td>
+<td><code>AGENT/.../MediaDeviceMonitor.cs:159-181</code> — le <code>AudioSessionState</code> via WASAPI; nunca abre buffer de audio</td>
+</tr>
+<tr>
+<td><strong>Camera / imagem</strong></td>
+<td>apenas o booleano</td>
+<td><code>AGENT/.../MediaDeviceMonitor.cs:186-200</code> — le a chave de consentimento do registro do Windows, nao o dispositivo</td>
+</tr>
+<tr>
+<td><strong>URL completa</strong></td>
+<td>apenas o <strong>dominio</strong></td>
+<td><code>AGENT/src/ManagerAgent.SessionWorker/Capture/BrowserUrlParser.cs:13-15</code> — o regex <code>https?://([^/\s\)]+)</code> captura <strong>so o host</strong>; a partir da primeira <code>/</code> nada e capturado (<code>:67-68</code>)</td>
+</tr>
+<tr>
+<td><strong>Conteudo de documento ou formulario</strong></td>
+<td>apenas o <strong>titulo da janela</strong></td>
+<td><code>AGENT/.../Capture/Models/EventoJanela.cs:23</code></td>
+</tr>
+<tr>
+<td><strong>Numero de telefone / duracao de chamada</strong></td>
+<td>so <code>CALL_START</code>/<code>CALL_END</code> (e nem isso em Windows)</td>
+<td><code>EVENTS/src/common/db/schema/eventos.schema.ts:306-309</code></td>
+</tr>
+<tr>
+<td><strong>Identificadores de hardware individuais</strong></td>
+<td>apenas o <strong>hash SHA-256</strong></td>
+<td><code>AGENT/.../AgentLinkService.cs:154-159</code> — BIOS/MB/CPU/MAC/Volume ficam em <code>installation.db</code> local</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quando nao ha URL</strong>, o parser cai numa tabela de titulos conhecidos que devolve tambem apenas um
+dominio (<code>BrowserUrlParser.cs:17-58,70-75</code>) — ex.: titulo contendo "WhatsApp" vira
+<code>web.whatsapp.com</code>. Nao ha caminho, query string nem fragmento em lugar nenhum.</p>
+<p><strong>Ruido de shell nao vira evento</strong>: area de trabalho, bandeja e menu iniciar sao descartados
+quando o processo e de shell <strong>e</strong> o titulo e placeholder
+(<code>AGENT/.../WindowActivityService.cs:289-298</code>;
+<code>AGENT/.../Config/ManagerAgentUploadOptions.cs:156-186</code>).</p>
+<h3 id="dois-campos-que-merecem-leitura-atenta-antes-de-virarem-api-publica">Dois campos que merecem leitura atenta antes de virarem API publica<a class="headerlink" href="#dois-campos-que-merecem-leitura-atenta-antes-de-virarem-api-publica" title="Permanent link">&para;</a></h3>
+<p>Nenhum dos dois viola os limites acima, mas os dois sao mais especificos do que "contagem":</p>
+<ol>
+<li><strong><code>teclaDominanteVk</code></strong> — o codigo de virtual-key da tecla mais pressionada no intervalo, e o
+   percentual dela (<code>AGENT/.../InputActivityTracker.cs:384-391,443-444</code>). Nao e conteudo — nao ha
+   sequencia nem contexto —, mas <strong>identifica uma tecla</strong>. Coluna <code>tecla_dominante_vk integer</code>
+   (<code>EVENTS/.../eventos.schema.ts:268</code>).</li>
+<li><strong><code>posicaoClickBucketsTop5</code></strong> — os cinco pontos mais clicados da tela, em blocos de <strong>50x50
+   pixels</strong> (<code>AGENT/.../InputActivityTracker.cs:307,342-357</code>). Nao e a tela, e uma grade grossa de
+   coordenadas. Coluna <code>posicao_click_buckets_top5 jsonb</code> (<code>EVENTS/.../eventos.schema.ts:265</code>),
+   <strong>sem validacao de shape</strong> no Zod (<code>dto:281</code> usa <code>z.unknown()</code>).</li>
+</ol>
+<p>Os dois existem para detectar automacao (auto-clicker, mouse jiggler) —
+<code>AGENT/.../InputActivityTracker.cs:17</code>. Se forem expostos em API de gestor, e decisao de produto,
+nao de engenharia.</p>
+<hr />
+<h2 id="11-defeitos-abertos-que-afetam-quem-consome-o-contrato">11. Defeitos abertos que afetam quem consome o contrato<a class="headerlink" href="#11-defeitos-abertos-que-afetam-quem-consome-o-contrato" title="Permanent link">&para;</a></h2>
+<h3 id="111-ja-conhecidos">11.1 Ja conhecidos<a class="headerlink" href="#111-ja-conhecidos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>uma linha</th>
+<th>citacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A-62</strong></td>
+<td><code>eventos_sessao</code> nao tem UNIQUE: LOGOUT em duplicata continua possivel quando o pipe cai e o evento do worker sobe depois, de outro processo. As guardas do Agent tornam o caso raro; so uma trava no banco o tornaria impossivel.</td>
+<td><code>AGENT/src/ManagerAgent.Service/ManagerAgentService.cs:317-327</code>; ausencia confirmada em <code>EVENTS/drizzle/migrations/</code></td>
+</tr>
+<tr>
+<td><strong>A-64</strong></td>
+<td>Lote recusado por conteudo 5 vezes e <strong>descartado</strong> — ate 100 eventos perdidos por vez, com um unico log de erro.</td>
+<td><code>AGENT/.../UploadWorker.cs:42,396-421</code></td>
+</tr>
+<tr>
+<td><strong>Recall so alcanca quem ja entende o comando</strong></td>
+<td>O recall e um campo novo na resposta de update; Agent anterior a <strong>1.5.12</strong> ignora o campo em silencio e segue o fluxo normal. Frota antiga nao pode ser revogada.</td>
+<td><code>AGENT/.../UpdateDownloader.cs:236-242</code>; <code>git show 39d20e3:.../ManagerAgent.Service.csproj</code> = <code>1.5.12</code>; limitacao declarada em <code>ADMIN/src/modules/fleet-health/fleet-health.controller.ts:342-350</code></td>
+</tr>
+<tr>
+<td><strong><code>/health</code> nao informa a versao da aplicacao</strong></td>
+<td>Os dois backends devolvem <code>version</code>, mas e o <strong>SHA do git truncado em 7 chars</strong> (ou a string <code>unknown</code>), nunca um semver. Nao da para conferir qual release esta no ar.</td>
+<td><code>EVENTS/src/modules/health/health.controller.ts:94-103</code>; <code>ADMIN/src/modules/health/health.controller.ts:55,62,74-80</code></td>
+</tr>
+<tr>
+<td><strong>Revogacao existe, mas ninguem a liga</strong></td>
+<td><code>agentes.revogado_em</code> e <strong>so lido</strong>, nunca escrito: <code>grep -rn "revogado_em\|revogadoEm" src/</code> nos dois backends devolve apenas leituras, e nao ha endpoint de revogacao em nenhuma das listas de rota. O recurso esta dormente.</td>
+<td><code>ADMIN/src/common/auth/revocation-check.interceptor.ts:89</code>; <code>ADMIN/src/common/db/schema/agentes.schema.ts:10,41-42</code>; <code>EVENTS/src/common/auth/revocation-check.middleware.ts:78-85</code>; <code>EVENTS/src/modules/ingestion/services/empresa-resolver.service.ts:48,92</code></td>
+</tr>
+<tr>
+<td><strong>Dedup de lote nao sobrevive a mais de uma replica</strong></td>
+<td>O cache do 208 e por processo.</td>
+<td><code>EVENTS/.../services/dedup.service.ts:36-42</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-achados-novos-desta-leitura-nao-corrigidos">11.2 Achados novos desta leitura — NAO corrigidos<a class="headerlink" href="#112-achados-novos-desta-leitura-nao-corrigidos" title="Permanent link">&para;</a></h3>
+<p>Registrados aqui porque a tarefa era ler, nao consertar.</p>
+<p><strong>D-1 — Falha passageira no refresh de token revoga a maquina, e a revogacao nao se desfaz sozinha.
+(GRAVE)</strong></p>
+<p>Cadeia conferida:</p>
+<ol>
+<li><code>TokenManager.RefreshTokenAsync</code> lanca <code>TokenRefreshFailedException</code> em <strong>qualquer</strong> status
+   nao-2xx do <code>/api/agente/auth/refresh</code> — <code>AGENT/src/ManagerAgent.Shared/Auth/TokenManager.cs:180-186</code>.</li>
+<li>O <code>HttpEventUploader</code> captura essa excecao e chama <code>MarkRevokedOnRefreshFailure</code>, que marca o
+   dispositivo como <strong>revogado</strong> sem olhar o status —
+   <code>AGENT/.../HttpEventUploader.cs:78-81,121-131,240-247</code>.</li>
+<li>O comentario XML logo acima afirma que "o <code>TokenManager</code> so lanca em 401/403 do endpoint de
+   refresh" (<code>HttpEventUploader.cs:69-71</code>). <strong>Isso e falso</strong> — ver 1.</li>
+<li>O <code>/refresh</code> do <code>ADMIN</code> devolve <strong>429</strong> ao passar de 20 requisicoes por minuto <strong>por IP</strong>
+   (<code>ADMIN/src/modules/agent-auth/agent-auth.controller.ts:68-69,108-113</code>). Varias maquinas atras
+   do mesmo NAT corporativo compartilham o IP. 5xx tambem chega ali.</li>
+<li><code>MarkRevoked</code> grava <code>revogadoEm</code> no <code>config.json</code>, que <strong>sobrevive a reboot</strong>
+   (<code>AGENT/src/ManagerAgent.Service/Linking/LinkStatus.cs:188-208</code>;
+   <code>AGENT/src/ManagerAgent.Shared/Config/ConfigLocal.cs:77-78</code>).</li>
+<li>Com a marca, <code>CanCapture</code> vira <code>false</code> (<code>LinkStatus.cs:96-97</code>) e o <code>UploadWorker</code> <strong>pausa a
+   captura de todas as sessoes</strong> a cada ciclo (<code>AGENT/.../UploadWorker.cs:104-107,115-163</code>).</li>
+<li><code>ClearRevocation</code> tem <strong>um unico chamador</strong>, dentro do caminho completo de vinculacao
+   (<code>AGENT/.../AgentLinkService.cs:244</code>) — e esse caminho <strong>nunca e alcancado</strong>, porque
+   <code>EnsureLinkedAsync</code> retorna <code>AlreadyLinked</code> logo no inicio quando ja ha token e data no config
+   (<code>AGENT/.../AgentLinkService.cs:84-85</code>).</li>
+</ol>
+<p><strong>Efeito:</strong> um 429 ou um 5xx passageiro no endpoint de refresh para a captura da maquina <strong>em
+definitivo</strong>, ate alguem re-vincular a mao. O envio continua (o <code>AlreadyLinked</code> nao interrompe o
+ciclo), entao a maquina fica "viva" no painel enquanto nao produz mais nenhum evento.
+<strong>Para quem consome o contrato:</strong> uma maquina pode ficar silenciosa por um erro de rede, sem
+nenhum sinal do lado do backend.</p>
+<p><strong>D-2 — Os cabecalhos de upgrade nunca chegam ao Agent Windows.</strong>
+O backend so calcula <code>X-Manager-Upgrade-Available</code> / <code>X-Manager-Upgrade-Required</code> quando a
+requisicao traz <code>X-Agent-Version</code>
+(<code>EVENTS/.../services/upgrade-header.service.ts:107-110</code>), e o Agent envia apenas <code>Authorization</code>,
+<code>X-Installation-Id</code> e <code>X-Client-Dedup-Batch</code> (<code>AGENT/.../HttpEventUploader.cs:198-205</code>).
+O mecanismo esta completo dos dois lados e desligado por um header que ninguem manda.</p>
+<p><strong>D-3 — <code>motivosIgnorados</code> nao chega a lugar nenhum.</strong>
+O Agent nao le o corpo da resposta em 2xx (<code>AGENT/.../HttpEventUploader.cs:221-227</code>) e marca tudo
+como enviado (<code>AGENT/.../UploadWorker.cs:353-355</code>). Evento rejeitado individualmente e apagado do
+buffer sem registro local. O campo existe, e completo, e e escrito com cuidado — e nenhum
+consumidor o le.</p>
+<p><strong>D-4 — Curinga que decide "ATIVO".</strong> Ver a caixa de destaque na secao 4.
+Latente hoje (<code>UserStatus</code> tem 3 valores, os 3 tratados — <code>AGENT/src/ManagerAgent.SessionWorker/Capture/Models/UserStatus.cs:17,20,23</code> vs
+<code>UserStatusManager.cs:147-149</code>), ativo no dia em que o enum crescer. Agravante: o curinga desliga
+o <code>CS8509</code> promovido a erro em <code>AGENT/Directory.Build.props:22</code>, que e justamente a rede que
+pegaria isso no build. Caso irmao, mesma forma, impacto menor:
+<code>AGENT/.../RenderConfianca.cs:36</code> (<code>_ =&gt; "INCERTO"</code>), tambem latente, e cujo rotulo o backend ja
+trata como "nao sei" — <strong>a forma certa ja existe dentro do produto</strong>.</p>
+<p><strong>D-5 — O manual do Agent descreve um formato que nao existe.</strong>
+<code>BRAIN/docs/tecnologia/agent-desktop/MANUAL-COMPLETO.md:169-179,207-216</code> mostra payloads com os
+campos <code>tipo</code>, <code>aplicativo</code>, <code>titulo</code>, <code>duracao</code>, <code>idle</code>, <code>usuarioWindows</code>, <code>maquina</code>, <code>uptime</code> —
+<strong>nenhum existe no formato real</strong>. Os tipos de sessao listados em <code>:199-204</code>
+(<code>SessionLogon</code>, <code>SessionLogoff</code>, <code>SessionLock</code>, <code>SessionUnlock</code>, <code>SessionRemoteConnect</code>,
+<code>SessionRemoteDisconnect</code>) <strong>nao sao aceitos por nenhum schema</strong> (<code>dto:96-102</code>). A frequencia de
+captura de janela em <code>:166</code> ("a cada 5 segundos") tambem nao bate: o laco roda a cada 1 s
+(<code>appsettings.json:17</code>), com debounce de 1500 ms e snapshot de 60 s. Quem escrever API a partir
+desse manual escreve API errada.</p>
+<p><strong>D-6 — <code>tituloJanela</code>: o Zod aceita 500, a coluna tem 255.</strong>
+<code>dto:221</code> permite <code>max(500)</code>; <code>EVENTS/src/common/db/schema/eventos.schema.ts:75</code> declara
+<code>varchar(255)</code>. O handler nao trunca (<code>window-activity.handler.ts:148</code>).
+<strong>NAO VERIFICADO</strong> qual e o efeito real em Postgres — um titulo entre 256 e 500 chars deveria
+gerar erro <code>22001</code> no INSERT, o que derrubaria o lote com 500; nao consegui confirmar sem tocar
+no banco, e a regra da tarefa proibe encostar nos servicos. <code>eventos_reuniao.titulo_reuniao</code> nao
+tem esse problema (<code>varchar(512)</code> em <code>:185</code> contra <code>max(512)</code> em <code>dto:308</code>).</p>
+<p><strong>D-7 — <code>dispositivo_tipo</code> nao existe em todas as tabelas, ao contrario do que o schema afirma.</strong>
+<code>EVENTS/src/common/db/schema/eventos.schema.ts:22-26</code> diz que a coluna foi para toda tabela
+<code>eventos_*</code>. <code>eventos_atividade</code> e <code>eventos_reuniao_snapshot</code> nao a tem; a migration cobre 7
+tabelas (<code>EVENTS/drizzle/migrations/20260808000000_android_dispositivo_tipo.sql:26,37,48,59,70,81,92</code>).</p>
+<hr />
+<h2 id="12-o-que-ficou-nao-verificado">12. O que ficou NAO VERIFICADO<a class="headerlink" href="#12-o-que-ficou-nao-verificado" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>por que</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limite de bytes do corpo HTTP</td>
+<td>Nao ha nada nos dois repositorios. Um limite de proxy/Fly.io e plausivel e nao pode ser conferido por leitura de codigo.</td>
+</tr>
+<tr>
+<td>A ocorrencia de 24/08 de "fim anterior ao inicio na troca de servico"</td>
+<td>O caminho de codigo esta confirmado (secao 7.3a). A medicao que encontrei no cerebro e de <strong>18/08</strong> (evento 49253, 1 ms). Nao ha registro datado de 24/08 para este sintoma.</td>
+</tr>
+<tr>
+<td>Efeito real de <code>tituloJanela</code> entre 256 e 500 chars</td>
+<td>Exige executar contra o banco; a tarefa proibe encostar nos servicos. Ver D-6.</td>
+</tr>
+<tr>
+<td>Se a UNIQUE <code>uk_agente_empresa_instalacao</code> existe de fato em producao</td>
+<td>Esta declarada em comentario (<code>ADMIN/src/common/db/schema/agentes.schema.ts:44-47</code>) e no baseline de teste (<code>EVENTS/test/fixtures/baseline.sql:1034</code>), mas nao ha <code>.unique()</code> no Drizzle nem migration nos repositorios lidos.</td>
+</tr>
+<tr>
+<td>Comportamento do Agent Android</td>
+<td>Fora do escopo. Este documento cobre Windows; <code>manager-srv-agent-android</code> nao foi lido.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

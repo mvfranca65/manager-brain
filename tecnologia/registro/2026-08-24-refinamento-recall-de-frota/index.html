@@ -1,0 +1,1671 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/registro/2026-08-24-refinamento-recall-de-frota/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Refinamento — recall de frota, e duas coisas que faltam antes dele (2026-08-24) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#refinamento-recall-de-frota-e-duas-coisas-que-faltam-antes-dele-2026-08-24" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Refinamento — recall de frota, e duas coisas que faltam antes dele (2026-08-24)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-existe-hoje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que existe hoje
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="refinamento-recall-de-frota-e-duas-coisas-que-faltam-antes-dele-2026-08-24">Refinamento — recall de frota, e duas coisas que faltam antes dele (2026-08-24)<a class="headerlink" href="#refinamento-recall-de-frota-e-duas-coisas-que-faltam-antes-dele-2026-08-24" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>De:</strong> @Tony | <strong>Aprovador:</strong> Marcos
+<strong>Origem:</strong> pergunta do Marcos — <em>"se eu quiser fazer rollback de uma implantacao, isso e
+possivel? Eu disparar algo que vai voltar a versao em todas as maquinas"</em></p>
+<p><strong>Resposta curta: hoje nao.</strong> E investigando o porque, achei dois defeitos que tornam o
+rollback <strong>automatico</strong> incompleto. Os dois vem antes do recall.</p>
+</blockquote>
+<hr />
+<h2 id="o-que-existe-hoje">O que existe hoje<a class="headerlink" href="#o-que-existe-hoje" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Mecanismo</th>
+<th>O que faz</th>
+<th>O que NAO faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>versoes_agente.pausada = true</code> (kill switch, manual via <code>fleet-health</code>)</td>
+<td>para de entregar a versao a quem ainda nao pegou</td>
+<td>nao mexe em quem ja atualizou</td>
+</tr>
+<tr>
+<td><code>rollout_percent</code></td>
+<td>limita exposicao daqui para frente</td>
+<td>idem</td>
+</tr>
+<tr>
+<td>Rollback automatico (3a, feito hoje)</td>
+<td>volta a versao anterior <strong>quando o Service nao sobe 3x</strong></td>
+<td>nao age se a versao sobe e esta errada de outro jeito</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Republicar a versao antiga nao funciona.</strong> <code>agent-update.service.ts</code> so oferece candidata que
+passe em <code>isVersaoMaior(candidata, versaoAtual)</code>; maquina na 1.5.12 recebe "voce esta atualizado".
+O Agent tem uma segunda trava pelo mesmo motivo (A-46). As duas estao certas — evitam laco de
+reinstalacao —, e sao exatamente o que impede um downgrade.</p>
+<hr />
+<h1 id="r-01-o-sticky-nao-e-lido-por-ninguem">R-01 — o sticky nao e lido por ninguem<a class="headerlink" href="#r-01-o-sticky-nao-e-lido-por-ninguem" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: ALTA.</strong> <strong>Nao e item novo: e o 3a incompleto.</strong> Sem isto, o rollback que acabamos de
+consertar se desfaz sozinho.</p>
+<h2 id="evidencia">Evidencia<a class="headerlink" href="#evidencia" title="Permanent link">&para;</a></h2>
+<p><code>StickyVersion</code> e <code>StickyUntil</code> sao <strong>gravados</strong> apos um rollback e lidos em <strong>um lugar so</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>WatchdogState.cs:31,34            &lt;- definicao
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>WatchdogService.cs:142            &lt;- `stickyAtiva`, para NAO repetir rollback
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>WatchdogService.cs:304,305        &lt;- escrita apos rollback bem-sucedido
+</code></pre></div>
+<p>O <code>UpdateCheckerWorker</code> <strong>nao consulta sticky</strong>. Ele so consulta <code>SosMode</code>
+(<code>UpdateCheckerWorker.cs:213-220</code>). E o rollback bem-sucedido deixa <code>SosMode = false</code>.</p>
+<h2 id="o-que-acontece-hoje-em-ordem">O que acontece hoje, em ordem<a class="headerlink" href="#o-que-acontece-hoje-em-ordem" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Maquina na 1.5.13 (quebrada). Falha 3x. Rollback devolve a 1.5.12. Sticky ate +24h.</li>
+<li>Ate 6h depois, o <code>UpdateCheckerWorker</code> roda. <code>SosMode</code> e false, entao ele segue. Pergunta ao
+   backend estando na 1.5.12; o backend oferece a 1.5.13 — que continua publicada, porque
+   <strong>a pausa e manual</strong> (<code>fleet-health.service.ts</code>, <code>pausarVersao</code>) e ninguem apertou o botao.</li>
+<li>Baixa, instala, quebra de novo.</li>
+<li>Falha 3x outra vez. Agora o Watchdog ve <code>stickyAtiva</code> e <strong>nao reverte</strong>.</li>
+</ol>
+<p><strong>Fim: a maquina fica quebrada ate a sticky vencer.</strong> O sticky, que existe para proteger, e o que
+prende. E o rollback automatico existe justamente para o caso em que ninguem esta olhando —
+madrugada, fim de semana.</p>
+<h2 id="o-que-fazer">O que fazer<a class="headerlink" href="#o-que-fazer" title="Permanent link">&para;</a></h2>
+<p>O <code>UpdateCheckerWorker</code> passa a recusar instalar a versao registrada em <code>UltimaVersaoQuebrada</code>
+enquanto <code>StickyUntil</code> estiver no futuro. Um <code>if</code>, no mesmo ponto em que ele ja consulta o estado
+para <code>SosMode</code>.</p>
+<p><strong>So isso.</strong> Nao mexer no criterio de 3 falhas, na duracao da sticky, nem no <code>SosMode</code>.</p>
+<h2 id="aceite">Aceite<a class="headerlink" href="#aceite" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Estado com <code>UltimaVersaoQuebrada = X</code> e <code>StickyUntil</code> no futuro: o ciclo de update <strong>nao</strong>
+  instala X, e registra por que pulou.</li>
+<li>Versao <strong>diferente</strong> de X continua sendo instalada normalmente — sticky nao congela a maquina,
+  so barra a versao que quebrou.</li>
+<li><code>StickyUntil</code> no passado: volta a instalar X (uma versao republicada corrigida com o mesmo
+  numero e caso legitimo; e o operador tem o kill switch se nao for).</li>
+<li>Sem <code>WatchdogState</code> no disco (cliente novo): segue como hoje, sem bloquear.</li>
+</ul>
+<p><strong>Dono: @Bucky.</strong> So Agent, sem contrato novo, sem deploy ordenado.</p>
+<hr />
+<h1 id="r-02-o-modo-sos-e-porta-de-mao-unica">R-02 — o modo SOS e porta de mao unica<a class="headerlink" href="#r-02-o-modo-sos-e-porta-de-mao-unica" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: ALTA.</strong> Item novo — proponho para a linha de corte, decisao do Marcos.</p>
+<h2 id="evidencia_1">Evidencia<a class="headerlink" href="#evidencia_1" title="Permanent link">&para;</a></h2>
+<p><code>UpdateCheckerWorker.cs:213</code> diz que a maquina sai do SOS <em>"via header
+<code>X-Manager-Sos-Recovery-Available</code> 3x consecutivos OU intervencao manual"</em>, e
+<code>WatchdogState.SosRecoveryHeaderCount</code> existe para contar isso.</p>
+<p><strong>Esse header nao existe em lugar nenhum.</strong> Varri os tres repositorios:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>manager-srv-agent        -&gt; so os dois comentarios acima
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>manager-srv-admin-node   -&gt; nenhuma ocorrencia
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>manager-srv-events-node  -&gt; nenhuma ocorrencia
+</code></pre></div>
+<p>Ninguem envia, ninguem le, o contador nunca incrementa.</p>
+<h2 id="consequencia">Consequencia<a class="headerlink" href="#consequencia" title="Permanent link">&para;</a></h2>
+<p>Maquina que entra em SOS <strong>para de se atualizar para sempre</strong>. A unica saida documentada e
+"intervencao manual", e manual aqui significa alguem editando <code>watchdog-state.json</code> <strong>naquela
+maquina</strong> — nao ha comando remoto para limpar SOS.</p>
+<p>Combinado com o R-01: a maquina que passa pelo laco acima acaba em SOS e nao volta mais sozinha.
+O <code>fleet-health</code> ja lista quem esta em SOS — da para <strong>ver</strong>, nao da para <strong>agir</strong>.</p>
+<h2 id="o-que-fazer_1">O que fazer<a class="headerlink" href="#o-que-fazer_1" title="Permanent link">&para;</a></h2>
+<p>Fechar o que ja foi desenhado: o backend passa a responder o header quando a versao que quebrou
+foi pausada ou substituida, e o Agent conta 3 consecutivos para sair do SOS. Ou, se o desenho de
+header nao se sustentar, um campo na resposta do <code>verificar</code> com o mesmo efeito.</p>
+<p><strong>Traga o desenho antes de escrever</strong> — decidir entre header e campo de resposta e contrato, e o
+<code>verificar</code> tem paridade byte-a-byte com o Java.</p>
+<p><strong>Dono: @Bucky (Agent) + @Shuri (srv-admin-node).</strong></p>
+<hr />
+<h1 id="r-03-recall-de-frota-o-que-o-marcos-pediu">R-03 — recall de frota (o que o Marcos pediu)<a class="headerlink" href="#r-03-recall-de-frota-o-que-o-marcos-pediu" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: MEDIA.</strong> Nao segura producao — <strong>desde que o rollout gradual seja respeitado</strong>. Com
+canario de 48h e 10%, uma versao ruim alcanca poucas maquinas antes de ser pausada. O recall e o
+que protege quando ela passa das etapas e chega a 100%.</p>
+<p><strong>Depende do R-01.</strong> Sem ele, a maquina reverte e reinstala a versao revogada no ciclo seguinte.</p>
+<h2 id="mecanismo-reverter-local-nao-baixar-versao-antiga">Mecanismo: reverter local, nao baixar versao antiga<a class="headerlink" href="#mecanismo-reverter-local-nao-baixar-versao-antiga" title="Permanent link">&para;</a></h2>
+<p><strong>Recomendo reusar o <code>bin.previous</code> e o <code>run-rollback.ps1</code></strong> que ja existem em cada maquina.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Reverter local</th>
+<th>Baixar versao antiga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custo por maquina</td>
+<td>zero — o backup ja esta no disco</td>
+<td>~310MB</td>
+</tr>
+<tr>
+<td>Alcance</td>
+<td><strong>uma versao para tras</strong></td>
+<td>qualquer versao publicada</td>
+</tr>
+<tr>
+<td>Muda o <code>verificar</code>?</td>
+<td>nao mexe na comparacao de versao</td>
+<td>exige relaxar <code>isVersaoMaior</code> — paridade com o Java</td>
+</tr>
+<tr>
+<td>Reusa o que foi feito hoje</td>
+<td>sim, inteiro</td>
+<td>nao</td>
+</tr>
+</tbody>
+</table>
+<p>O caso real e "a versao que acabamos de subir esta ruim, volta uma". Reverter local resolve isso e
+nao paga nada. Baixar versao antiga fica para uma fase 2, <strong>se</strong> aparecer necessidade medida.</p>
+<p><strong>Limite, e tem de estar visivel na tela de quem dispara:</strong> o <code>bin.previous</code> guarda <strong>uma</strong> versao.
+Se a frota ja andou duas vezes, o recall leva para a penultima, nao para a que se quer.</p>
+<h2 id="como-a-ordem-chega-ate-a-maquina">Como a ordem chega ate a maquina<a class="headerlink" href="#como-a-ordem-chega-ate-a-maquina" title="Permanent link">&para;</a></h2>
+<p>Pela resposta do <code>verificar</code>, que o Service ja consulta — <strong>sem canal novo</strong>.</p>
+<p><strong>Latencia: ate 6 horas.</strong> E o intervalo do <code>UpdateCheckerWorker</code>. Para um recall, e muito.
+Duas saidas, e <strong>quero a sua decisao, Marcos</strong>:</p>
+<ul>
+<li><strong>aceitar as 6h</strong> — mais simples, nada novo;</li>
+<li><strong>encurtar o intervalo</strong> quando houver recall pendente. Ja existe
+  <code>updateCheckIntervalSecondsOverride</code> no config (usado em teste), entao o mecanismo existe.</li>
+</ul>
+<p>Nao vou pendurar isso no heartbeat de 60s do <code>srv-events</code>: aquele e o caminho quente da ingestao,
+e misturar controle de frota com ingestao de evento acopla duas coisas que precisam falhar
+separado.</p>
+<h2 id="lado-do-backend">Lado do backend<a class="headerlink" href="#lado-do-backend" title="Permanent link">&para;</a></h2>
+<p>Coluna nova em <code>versoes_agente</code>, <strong>separada da <code>pausada</code></strong> — as duas dizem coisas diferentes:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pausada</code></td>
+<td>nao entregue a quem ainda nao tem</td>
+</tr>
+<tr>
+<td><code>revogada</code> <em>(nova)</em></td>
+<td><strong>quem ja tem, devolva</strong></td>
+</tr>
+</tbody>
+</table>
+<p>No <code>verificar</code>: se a versao <strong>atual do agente</strong> esta revogada, a resposta manda reverter em vez de
+oferecer update. Campo novo, aditivo — Agent antigo ignora (<code>@JsonIgnoreProperties</code>).</p>
+<p><strong>Registrar a divergencia no <code>manager-parity-runner</code></strong>, nao esconder: o Java nao tem este campo.</p>
+<h2 id="ordem-de-deploy-regra-dura">Ordem de deploy — regra dura<a class="headerlink" href="#ordem-de-deploy-regra-dura" title="Permanent link">&para;</a></h2>
+<p><code>REGRAS-RELEASE</code> secao 3: backend primeiro, Agent depois.</p>
+<p><strong>E a consequencia que precisa ser dita com todas as letras:</strong> o recall so funciona em maquina que
+entende o comando. A frota de hoje (1.5.12) vai ignorar. <strong>O recall protege as versoes lancadas
+DEPOIS de ele existir, nunca a que estiver rodando quando ele for publicado.</strong></p>
+<h2 id="seguranca-e-observabilidade">Seguranca e observabilidade<a class="headerlink" href="#seguranca-e-observabilidade" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Disparar recall e destrutivo em toda a frota. Endpoint autenticado, com motivo obrigatorio e
+  audit — nao um <code>UPDATE</code> no banco a mao. O <code>fleet-health</code> ja tem o molde do <code>pausarVersao</code>.</li>
+<li><strong>Revogar deve pausar junto</strong>, sempre. Revogar sem pausar manda a maquina voltar e o ciclo
+  seguinte reinstala.</li>
+<li>Idempotente: maquina que ja esta na versao alvo nao faz nada.</li>
+<li>Sem <code>bin.previous</code> (primeiro update do cliente): nao ha para onde voltar. <strong>Reporta e nao
+  quebra</strong> — e essa maquina precisa aparecer numa lista, senao o recall parece completo e nao esta.</li>
+<li>Acompanhar pelo que ja existe: <code>agentes.versao_agente</code> (a query da secao 5 do <code>REGRAS-RELEASE</code>)
+  mostra a frota migrando de volta.</li>
+</ul>
+<h2 id="aceite_1">Aceite<a class="headerlink" href="#aceite_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Versao marcada como revogada + pausada: maquina naquela versao volta para a anterior sozinha,
+  dentro do intervalo acordado.</li>
+<li>Maquina em outra versao ignora.</li>
+<li>Maquina sem backup reporta e continua funcionando na versao atual.</li>
+<li>Depois de voltar, <strong>nao reinstala a versao revogada</strong> (e o R-01 agindo).</li>
+<li>Agent anterior ao recall ignora o campo e nao quebra.</li>
+<li>Recall registrado em audit, com autor e motivo.</li>
+</ul>
+<p><strong>Donos: @Shuri</strong> (coluna, <code>verificar</code>, endpoint, paridade) <strong>+ @Bucky</strong> (obedecer o comando,
+reusando <code>run-rollback.ps1</code>).</p>
+<hr />
+<h1 id="ordem">Ordem<a class="headerlink" href="#ordem" title="Permanent link">&para;</a></h1>
+<ol>
+<li><strong>R-01</strong> — @Bucky. Pequeno, so Agent, e sem ele o 3a se desfaz sozinho.</li>
+<li><strong>R-02</strong> — desenho antes de codigo.</li>
+<li><strong>R-03</strong> — depois do R-01.</li>
+</ol>
+<h2 id="o-que-peco-ao-marcos">O que peco ao Marcos<a class="headerlink" href="#o-que-peco-ao-marcos" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>R-01 entra como parte do 3a?</strong> Minha leitura: sim — "o Service volta sozinho" inclui
+   <em>continuar</em> na versao boa. Nao e item novo na lista.</li>
+<li><strong>R-02 entra na linha de corte?</strong> Minha leitura: sim, criterio B — maquina em SOS nao volta
+   sem visita.</li>
+<li><strong>R-03: 6 horas de latencia serve, ou encurta o intervalo?</strong></li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

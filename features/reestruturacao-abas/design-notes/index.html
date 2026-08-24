@@ -1,0 +1,1942 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/reestruturacao-abas/design-notes/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Design Notes — Reestruturação das Abas - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#design-notes-reestruturacao-das-abas" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Design Notes — Reestruturação das Abas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parecer-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parecer Geral
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-pergunta-guia-no-topo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Pergunta-guia no topo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Pergunta-guia no topo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-aprovado-com-ajuste-menor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avaliação: APROVADO com ajuste menor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-textos-descritivos-nos-kpis-guia-contextual-ba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Textos descritivos nos KPIs (Guia contextual B+A)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Textos descritivos nos KPIs (Guia contextual B+A)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-aprovado-spec-correta-atencao-na-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avaliação: APROVADO — spec correta, atenção na implementação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-frase-acionavel-card-com-borda-lateral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Frase acionável — card com borda lateral
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Frase acionável — card com borda lateral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-aprovado-com-especificacao-de-borda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avaliação: APROVADO com especificação de borda
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-layout-hibrido-top-apps-eventos-lado-a-lado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Layout híbrido — Top Apps + Eventos lado a lado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Layout híbrido — Top Apps + Eventos lado a lado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-aprovado-proporcao-12-e-correta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avaliação: APROVADO — proporção 1:2 é correta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-graficos-de-tendencia-de-foco-barras-empilhadas-com-cores-por-profundidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gráficos de Tendência de Foco — barras empilhadas com cores por profundidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gráficos de Tendência de Foco — barras empilhadas com cores por profundidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-aprovado-com-refinamento-de-paleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avaliação: APROVADO com refinamento de paleta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-comparacao-com-time-nos-kpis-do-resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Comparação com time nos KPIs do Resumo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Comparação com time nos KPIs do Resumo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-aprovado-posicao-e-estilo-corretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avaliação: APROVADO — posição e estilo corretos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-seletor-personalizado-discreto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Seletor "Personalizado ▾" discreto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Seletor &#34;Personalizado ▾&#34; discreto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-aprovado-comportamento-correto-especificado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avaliação: APROVADO — comportamento correto especificado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-de-aprovacoes-e-ajustes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo de Aprovações e Ajustes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nota-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nota final
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="design-notes-reestruturacao-das-abas">Design Notes — Reestruturação das Abas<a class="headerlink" href="#design-notes-reestruturacao-das-abas" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Autor: @Groot (UX/UI Designer)
+Data: 2026-04-06
+Referência: spec.md (aprovada brainstorm 2026-04-06)</p>
+</blockquote>
+<hr />
+<h2 id="parecer-geral">Parecer Geral<a class="headerlink" href="#parecer-geral" title="Permanent link">&para;</a></h2>
+<p>O mockup está bem estruturado e alinhado com o design system do Manager. Os papéis das abas estão claramente diferenciados. As observações abaixo são ajustes de refinamento — nenhum é bloqueante para implementação.</p>
+<hr />
+<h2 id="1-pergunta-guia-no-topo">1. Pergunta-guia no topo<a class="headerlink" href="#1-pergunta-guia-no-topo" title="Permanent link">&para;</a></h2>
+<h3 id="avaliacao-aprovado-com-ajuste-menor">Avaliação: APROVADO com ajuste menor<a class="headerlink" href="#avaliacao-aprovado-com-ajuste-menor" title="Permanent link">&para;</a></h3>
+<p>A pergunta-guia como elemento visual de orientação é uma boa decisão de UX. Ela ancora o gestor no propósito da aba antes de processar os dados.</p>
+<p><strong>Recomendação de estilo:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">.aba-question-guide</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">18px</span><span class="o">;</span><span class="w">          </span><span class="o">//</span><span class="w"> </span><span class="nt">H3</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">peso</span><span class="w"> </span><span class="nt">suficiente</span><span class="w"> </span><span class="nt">para</span><span class="w"> </span><span class="nt">ser</span><span class="w"> </span><span class="nt">percebida</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">600</span><span class="o">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#1e293b</span><span class="o">;</span><span class="w">           </span><span class="o">//</span><span class="w"> </span><span class="nv">$header-color</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">tom</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">autoridade</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">margin-bottom</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">line-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="nc">.4</span><span class="o">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Atenção:</strong> Não usar <code>font-size: 24px</code> (H2) — a pergunta é orientadora, não é o título da página. Não deve competir com o nome do colaborador no header superior. 18px com <code>font-weight: 600</code> é o equilíbrio certo.</p>
+<p><strong>Espaçamento:</strong> <code>margin-top: 0</code> se vier logo abaixo do seletor de data/período. <code>margin-bottom: 20px</code> antes dos KPIs.</p>
+<hr />
+<h2 id="2-textos-descritivos-nos-kpis-guia-contextual-ba">2. Textos descritivos nos KPIs (Guia contextual B+A)<a class="headerlink" href="#2-textos-descritivos-nos-kpis-guia-contextual-ba" title="Permanent link">&para;</a></h2>
+<h3 id="avaliacao-aprovado-spec-correta-atencao-na-implementacao">Avaliação: APROVADO — spec correta, atenção na implementação<a class="headerlink" href="#avaliacao-aprovado-spec-correta-atencao-na-implementacao" title="Permanent link">&para;</a></h3>
+<p>A spec define corretamente: <code>font-size: 12px</code>, <code>color: #94a3b8</code>, sem bold, uma linha apenas. Isso é adequado — é texto de suporte, não de destaque.</p>
+<p><strong>O risco real é de poluição visual se mal posicionado.</strong> Recomendações:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nc">.kpi-description</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">12px</span><span class="o">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#94a3b8</span><span class="o">;</span><span class="w">           </span><span class="o">//</span><span class="w"> </span><span class="nt">slate-400</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">discreto</span><span class="w"> </span><span class="nt">mas</span><span class="w"> </span><span class="nt">legível</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">400</span><span class="o">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">line-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="nc">.4</span><span class="o">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">margin-top</span><span class="nd">:</span><span class="w"> </span><span class="nt">4px</span><span class="o">;</span><span class="w">          </span><span class="o">//</span><span class="w"> </span><span class="nt">colado</span><span class="w"> </span><span class="nt">ao</span><span class="w"> </span><span class="nt">valor</span><span class="w"> </span><span class="nt">do</span><span class="w"> </span><span class="nt">KPI</span><span class="o">,</span><span class="w"> </span><span class="nt">não</span><span class="w"> </span><span class="nt">flutuando</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">block</span><span class="o">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">white-space</span><span class="nd">:</span><span class="w"> </span><span class="nt">nowrap</span><span class="o">;</span><span class="w">      </span><span class="o">//</span><span class="w"> </span><span class="nt">CRÍTICO</span><span class="nd">:</span><span class="w"> </span><span class="nt">evitar</span><span class="w"> </span><span class="nt">quebra</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">linha</span><span class="w"> </span><span class="nt">no</span><span class="w"> </span><span class="nt">card</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">overflow</span><span class="nd">:</span><span class="w"> </span><span class="nt">hidden</span><span class="o">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nt">text-overflow</span><span class="nd">:</span><span class="w"> </span><span class="nt">ellipsis</span><span class="o">;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Posição dentro do KPI card:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>┌─────────────────────────┐
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>│  Jornada Total           │  ← label, 12px #94a3b8
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│  10h 21min               │  ← valor, 24px #1e293b bold
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│  Do início ao fim do dia │  ← descrição, 12px #94a3b8
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>└─────────────────────────┘
+</code></pre></div></p>
+<p>O valor principal deve ser <code>font-size: 24px</code>, <code>font-weight: 700</code>. A descrição abaixo com 4px de gap. Sem essa hierarquia clara, o texto polui.</p>
+<hr />
+<h2 id="3-frase-acionavel-card-com-borda-lateral">3. Frase acionável — card com borda lateral<a class="headerlink" href="#3-frase-acionavel-card-com-borda-lateral" title="Permanent link">&para;</a></h2>
+<h3 id="avaliacao-aprovado-com-especificacao-de-borda">Avaliação: APROVADO com especificação de borda<a class="headerlink" href="#avaliacao-aprovado-com-especificacao-de-borda" title="Permanent link">&para;</a></h3>
+<p>A borda lateral colorida é o padrão de alert/insight do sistema — decisão correta. A cor da borda deve refletir o estado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nc">.actionable-insight</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#f8fafc</span><span class="o">;</span><span class="w">           </span><span class="o">//</span><span class="w"> </span><span class="nt">fundo</span><span class="w"> </span><span class="nt">levemente</span><span class="w"> </span><span class="nt">off-white</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#e5e7eb</span><span class="o">;</span><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nv">$border-color</span><span class="w"> </span><span class="nt">padrão</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">border-left</span><span class="nd">:</span><span class="w"> </span><span class="nt">4px</span><span class="w"> </span><span class="nt">solid</span><span class="o">;</span><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="nt">borda</span><span class="w"> </span><span class="nt">lateral</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">destaque</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">14px</span><span class="o">;</span><span class="w">           </span><span class="o">//</span><span class="w"> </span><span class="nv">$border-radius</span><span class="w"> </span><span class="nt">do</span><span class="w"> </span><span class="nt">sistema</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">12px</span><span class="w"> </span><span class="nt">16px</span><span class="o">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">margin</span><span class="nd">:</span><span class="w"> </span><span class="nt">16px</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="nt">Estados</span><span class="w"> </span><span class="nt">por</span><span class="w"> </span><span class="nt">tipo</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">insight</span><span class="nd">:</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="k">&amp;</span><span class="nc">.estado-alerta</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nt">border-left-color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#dc2626</span><span class="o">;</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="nt">vermelho</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">sobrecarga</span><span class="o">/</span><span class="nt">excedido</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="k">&amp;</span><span class="nc">.estado-atencao</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="nt">border-left-color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#f59e0b</span><span class="o">;</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="nt">amarelo</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">acima</span><span class="w"> </span><span class="nt">do</span><span class="w"> </span><span class="nt">habitual</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="k">&amp;</span><span class="nc">.estado-ok</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="nt">border-left-color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#16a34a</span><span class="o">;</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="nt">verde</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">dentro</span><span class="w"> </span><span class="nt">do</span><span class="w"> </span><span class="nt">esperado</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">  </span><span class="k">&amp;</span><span class="nc">.estado-neutro</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="nt">border-left-color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#4f46e5</span><span class="o">;</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="nt">azul-índigo</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">informativo</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">  </span><span class="nc">.insight-text</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">13px</span><span class="o">;</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#374151</span><span class="o">;</span><span class="w">              </span><span class="o">//</span><span class="w"> </span><span class="nt">slate-700</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">legível</span><span class="w"> </span><span class="nt">mas</span><span class="w"> </span><span class="nt">não</span><span class="w"> </span><span class="nt">pesado</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">400</span><span class="o">;</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">    </span><span class="nt">line-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="nc">.5</span><span class="o">;</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Atenção:</strong> <code>border-radius: 14px</code> com <code>border-left</code> mais espessa cria um efeito visual indesejado no canto superior esquerdo em alguns browsers. Solução: aplicar o <code>border-left</code> como <code>box-shadow</code> interno ou usar <code>border-left-width: 4px</code> com <code>border-radius</code> apenas nos cantos direitos via clip-path não — simplesmente testar no browser e ajustar se necessário. Na prática, <code>border-radius: 8px</code> funciona melhor para cards de alert com borda lateral.</p>
+<p><strong>Revisão de border-radius:</strong> Sugestão de usar <code>border-radius: 8px</code> neste componente específico (não 14px), pois cards de insight/alert com borda lateral têm melhor aparência com radius menor. O 14px fica bem para KPI cards e cards de conteúdo, mas não em banners de alerta.</p>
+<hr />
+<h2 id="4-layout-hibrido-top-apps-eventos-lado-a-lado">4. Layout híbrido — Top Apps + Eventos lado a lado<a class="headerlink" href="#4-layout-hibrido-top-apps-eventos-lado-a-lado" title="Permanent link">&para;</a></h2>
+<h3 id="avaliacao-aprovado-proporcao-12-e-correta">Avaliação: APROVADO — proporção 1:2 é correta<a class="headerlink" href="#avaliacao-aprovado-proporcao-12-e-correta" title="Permanent link">&para;</a></h3>
+<p>A proporção <code>flex: 1</code> (Top Apps) e <code>flex: 2</code> (Eventos) está bem dimensionada. O Top Apps é uma lista compacta de 5 itens; Eventos precisa de mais espaço para exibir timestamps e texto.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nc">.hybrid-layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">gap</span><span class="nd">:</span><span class="w"> </span><span class="nt">16px</span><span class="o">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex-start</span><span class="o">;</span><span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="nt">alinhar</span><span class="w"> </span><span class="nt">pelo</span><span class="w"> </span><span class="nt">topo</span><span class="o">,</span><span class="w"> </span><span class="nt">não</span><span class="w"> </span><span class="nt">esticar</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nc">.top-apps-section</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">flex</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="o">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">min-width</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span><span class="w">            </span><span class="o">//</span><span class="w"> </span><span class="nt">evita</span><span class="w"> </span><span class="nt">overflow</span><span class="w"> </span><span class="nt">em</span><span class="w"> </span><span class="nt">flex</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="nc">.events-section</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="nt">flex</span><span class="nd">:</span><span class="w"> </span><span class="nt">2</span><span class="o">;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="nt">min-width</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">  </span><span class="c1">// Responsivo — empilha em &lt; 768px</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">  </span><span class="k">@media</span><span class="w"> </span><span class="p">(</span><span class="no">max-width</span><span class="o">:</span><span class="w"> </span><span class="mi">767</span><span class="kt">px</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="nt">flex-direction</span><span class="nd">:</span><span class="w"> </span><span class="nt">column</span><span class="o">;</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="nc">.top-apps-section</span><span class="o">,</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="nc">.events-section</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">      </span><span class="nt">flex</span><span class="nd">:</span><span class="w"> </span><span class="nt">none</span><span class="o">;</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">      </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Ponto de atenção:</strong> Em telas entre 768px e 1024px (tablets), a coluna de Top Apps pode ficar estreita demais com <code>flex: 1</code>. Considerar <code>min-width: 200px</code> para o Top Apps e <code>min-width: 320px</code> para Eventos, com breakpoint de empilhamento em 900px ao invés de 768px.</p>
+<hr />
+<h2 id="5-graficos-de-tendencia-de-foco-barras-empilhadas-com-cores-por-profundidade">5. Gráficos de Tendência de Foco — barras empilhadas com cores por profundidade<a class="headerlink" href="#5-graficos-de-tendencia-de-foco-barras-empilhadas-com-cores-por-profundidade" title="Permanent link">&para;</a></h2>
+<h3 id="avaliacao-aprovado-com-refinamento-de-paleta">Avaliação: APROVADO com refinamento de paleta<a class="headerlink" href="#avaliacao-aprovado-com-refinamento-de-paleta" title="Permanent link">&para;</a></h3>
+<p>A lógica de cores por profundidade de sessão está correta conceitualmente. Sugestão de refinamento para coerência com o design system (azul-índigo como primário):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Paleta de foco — do mais raso ao mais profundo</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">$foco-raso</span><span class="o">:</span><span class="w">    </span><span class="mh">#fef08a</span><span class="p">;</span><span class="w">   </span><span class="c1">// amarelo — 5-20min (atenção fragmentada)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nv">$foco-leve</span><span class="o">:</span><span class="w">    </span><span class="mh">#a5b4fc</span><span class="p">;</span><span class="w">   </span><span class="c1">// indigo-300 — 20-40min (produtivo)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nv">$foco-bom</span><span class="o">:</span><span class="w">     </span><span class="mh">#6366f1</span><span class="p">;</span><span class="w">   </span><span class="c1">// indigo-500 — 40-60min (bom foco)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nv">$foco-deep</span><span class="o">:</span><span class="w">    </span><span class="mh">#3730a3</span><span class="p">;</span><span class="w">   </span><span class="c1">// indigo-800 — 60min+ (deep work)</span>
+</code></pre></div>
+<p><strong>Justificativa:</strong> Usar a família indigo (em vez de azul genérico) mantém coerência com <code>$primary: #4f46e5</code>. O amarelo para sessões rasas cria contraste semântico claro (atenção vs. profundidade).</p>
+<p><strong>Legenda obrigatória:</strong> O gráfico PRECISA de legenda visual inline, abaixo do título. Sem ela, o gestor não consegue interpretar as cores.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>● Raso (5-20min)  ● Produtivo (20-40min)  ● Bom foco (40-60min)  ● Deep work (60min+)
+</code></pre></div>
+<p>Fonte 11px, <code>color: #6b7280</code>, espaçamento <code>gap: 12px</code> entre os itens.</p>
+<p><strong>Frase acionável abaixo do gráfico:</strong> Manter em <code>font-size: 13px</code>, <code>color: #374151</code>. Separar do gráfico com <code>margin-top: 12px</code> e uma linha divisória <code>border-top: 1px solid #f1f5f9</code> (muito sutil).</p>
+<hr />
+<h2 id="6-comparacao-com-time-nos-kpis-do-resumo">6. Comparação com time nos KPIs do Resumo<a class="headerlink" href="#6-comparacao-com-time-nos-kpis-do-resumo" title="Permanent link">&para;</a></h2>
+<h3 id="avaliacao-aprovado-posicao-e-estilo-corretos">Avaliação: APROVADO — posição e estilo corretos<a class="headerlink" href="#avaliacao-aprovado-posicao-e-estilo-corretos" title="Permanent link">&para;</a></h3>
+<p>A linha de comparação abaixo do valor principal é o padrão mais limpo. Não competir com o valor principal é a prioridade.</p>
+<p><strong>Especificação:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nc">.team-comparison</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">gap</span><span class="nd">:</span><span class="w"> </span><span class="nt">6px</span><span class="o">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">margin-top</span><span class="nd">:</span><span class="w"> </span><span class="nt">6px</span><span class="o">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="nc">.team-label</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">11px</span><span class="o">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#9ca3af</span><span class="o">;</span><span class="w">          </span><span class="o">//</span><span class="w"> </span><span class="nt">slate-400</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">mais</span><span class="w"> </span><span class="nt">discreto</span><span class="w"> </span><span class="nt">que</span><span class="w"> </span><span class="nt">o</span><span class="w"> </span><span class="nt">texto</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">descrição</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">400</span><span class="o">;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span><span class="nc">.comparison-indicator</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">11px</span><span class="o">;</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">600</span><span class="o">;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="k">&amp;</span><span class="nc">.acima</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">      </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#16a34a</span><span class="o">;</span><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="nt">verde</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">acima</span><span class="w"> </span><span class="nt">do</span><span class="w"> </span><span class="nt">padrão</span><span class="w"> </span><span class="o">(</span><span class="nt">positivo</span><span class="w"> </span><span class="nt">para</span><span class="w"> </span><span class="nt">foco</span><span class="o">,</span><span class="w"> </span><span class="nt">negativo</span><span class="w"> </span><span class="nt">para</span><span class="w"> </span><span class="nt">ausência</span><span class="o">)</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="k">&amp;</span><span class="nc">.dentro</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">      </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#9ca3af</span><span class="o">;</span><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="nt">neutro</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="k">&amp;</span><span class="nc">.abaixo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">      </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#dc2626</span><span class="o">;</span><span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="nt">vermelho</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="nt">abaixo</span><span class="w"> </span><span class="nt">do</span><span class="w"> </span><span class="nt">padrão</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Exemplo visual no card:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>┌─────────────────────────┐
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>│  Tempo Ativo Médio       │
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>│  6h 42min                │
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>│  Média do time: 5h 30min ↑ acima │
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>└─────────────────────────┘
+</code></pre></div></p>
+<p><strong>Atenção semântica:</strong> "Acima" e "abaixo" têm valência diferente dependendo do KPI:
+- Jornada alta → negativo (risco de sobrecarga)
+- Tempo ativo alto → positivo
+- Ausência alta → negativo
+- Foco alto → positivo</p>
+<p>O indicador visual (cor + seta) deve refletir essa semântica, não apenas o valor relativo. Isso é lógica de apresentação — o backend ou o frontend precisa saber a direção "desejável" de cada KPI para colorir corretamente.</p>
+<hr />
+<h2 id="7-seletor-personalizado-discreto">7. Seletor "Personalizado ▾" discreto<a class="headerlink" href="#7-seletor-personalizado-discreto" title="Permanent link">&para;</a></h2>
+<h3 id="avaliacao-aprovado-comportamento-correto-especificado">Avaliação: APROVADO — comportamento correto especificado<a class="headerlink" href="#avaliacao-aprovado-comportamento-correto-especificado" title="Permanent link">&para;</a></h3>
+<p>A spec define pills para Hoje/7dias/15dias/30dias e "Personalizado ▾" que abre calendar picker. O padrão de pills já existe no sistema, mas é importante garantir consistência visual:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nc">.period-pills</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">gap</span><span class="nd">:</span><span class="w"> </span><span class="nt">8px</span><span class="o">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="nt">flex-wrap</span><span class="nd">:</span><span class="w"> </span><span class="nt">wrap</span><span class="o">;</span><span class="w">          </span><span class="o">//</span><span class="w"> </span><span class="nt">wrap</span><span class="w"> </span><span class="nt">em</span><span class="w"> </span><span class="nt">mobile</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span><span class="nc">.pill</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">6px</span><span class="w"> </span><span class="nt">14px</span><span class="o">;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span><span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nt">pill</span><span class="w"> </span><span class="nt">format</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">13px</span><span class="o">;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">500</span><span class="o">;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="nt">cursor</span><span class="nd">:</span><span class="w"> </span><span class="nt">pointer</span><span class="o">;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="nt">transition</span><span class="nd">:</span><span class="w"> </span><span class="nt">all</span><span class="w"> </span><span class="nt">0</span><span class="nc">.15s</span><span class="w"> </span><span class="nt">ease</span><span class="o">;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#e5e7eb</span><span class="o">;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">white</span><span class="o">;</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#6b7280</span><span class="o">;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">    </span><span class="k">&amp;</span><span class="nd">:hover</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">      </span><span class="nt">border-color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#4f46e5</span><span class="o">;</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">      </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#4f46e5</span><span class="o">;</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">    </span><span class="k">&amp;</span><span class="nc">.active</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">      </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#4f46e5</span><span class="o">;</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">      </span><span class="nt">border-color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#4f46e5</span><span class="o">;</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">      </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">white</span><span class="o">;</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="w">  </span><span class="c1">// Pill "Personalizado" — visual idêntico mas com chevron</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="w">  </span><span class="nc">.pill-custom</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="w">    </span><span class="k">@extend</span><span class="w"> </span><span class="nc">.pill</span><span class="o">;</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="w">    </span><span class="k">&amp;</span><span class="nc">.has-custom-range</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="w">      </span><span class="c1">// Quando um range customizado está ativo, mostrar como "ativo"</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="w">      </span><span class="c1">// mas com borda tracejada para indicar que é diferente das pills fixas</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="w">      </span><span class="nt">border-style</span><span class="nd">:</span><span class="w"> </span><span class="nt">dashed</span><span class="o">;</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="w">      </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#eef2ff</span><span class="o">;</span><span class="w">   </span><span class="o">//</span><span class="w"> </span><span class="nt">indigo-50</span>
+<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="w">      </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#4f46e5</span><span class="o">;</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a><span class="w">      </span><span class="nt">border-color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#4f46e5</span><span class="o">;</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>O chevron "▾"</strong> deve ser um ícone SVG pequeno (12px), não o caractere unicode, para melhor controle de alinhamento vertical.</p>
+<p><strong>Quando personalizado está ativo:</strong> Mostrar o range selecionado dentro ou ao lado da pill — ex: "12 Mar – 25 Mar ▾". Truncar se necessário com <code>max-width: 180px</code>.</p>
+<hr />
+<h2 id="resumo-de-aprovacoes-e-ajustes">Resumo de Aprovações e Ajustes<a class="headerlink" href="#resumo-de-aprovacoes-e-ajustes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Status</th>
+<th>Prioridade do ajuste</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pergunta-guia</td>
+<td>Aprovado</td>
+<td>Garantir font-size 18px, não 24px</td>
+</tr>
+<tr>
+<td>Textos descritivos KPIs</td>
+<td>Aprovado</td>
+<td><code>white-space: nowrap</code> obrigatório</td>
+</tr>
+<tr>
+<td>Frase acionável</td>
+<td>Aprovado</td>
+<td>Usar <code>border-radius: 8px</code> (não 14px)</td>
+</tr>
+<tr>
+<td>Layout híbrido 1:2</td>
+<td>Aprovado</td>
+<td>Revisar breakpoint em 900px</td>
+</tr>
+<tr>
+<td>Barras foco empilhadas</td>
+<td>Aprovado</td>
+<td>Paleta indigo + legenda obrigatória</td>
+</tr>
+<tr>
+<td>Comparação com time</td>
+<td>Aprovado</td>
+<td>Semântica de cor por KPI</td>
+</tr>
+<tr>
+<td>Seletor Personalizado</td>
+<td>Aprovado</td>
+<td>Ícone SVG, estado "range ativo"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="nota-final">Nota final<a class="headerlink" href="#nota-final" title="Permanent link">&para;</a></h2>
+<p>O spec está maduro e implementável. Os ajustes acima são de refinamento visual — nenhum muda a estrutura ou o comportamento definido. Liberado para implementação com atenção aos pontos de CSS destacados acima.</p>
+<p><strong>Próximo passo:</strong> @Tony e time de frontend podem iniciar. Recomendo que o primeiro PR inclua os KPI cards com textos descritivos para validação visual antes de avançar para os gráficos.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

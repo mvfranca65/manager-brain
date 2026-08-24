@@ -1,0 +1,1773 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/agent-desktop/REFINAMENTO-TELA-DIAGNOSTICO/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>REFINAMENTO TELA DIAGNOSTICO - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#refinamento-tela-de-diagnostico-do-agent-windows" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              REFINAMENTO TELA DIAGNOSTICO
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-ja-existe-e-ninguem-precisa-reconstruir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. O que ja existe (e ninguem precisa reconstruir)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. O que ja existe (e ninguem precisa reconstruir)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menu-da-bandeja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Menu da bandeja
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-sobre-ja-e-80-da-tela-pedida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O "Sobre" ja e 80% da tela pedida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-dados-de-saude-ja-trafegam-pelo-pipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Os dados de saude ja trafegam pelo pipe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-o-que-falta-tecnicamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. O que falta tecnicamente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-limites-de-lgpd-inegociaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Limites de LGPD (inegociaveis)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-onde-mora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Onde mora
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-quebra-de-tarefas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Quebra de tarefas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-o-que-eu-recomendo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. O que eu recomendo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<blockquote>
+<p><strong>DATA:</strong> 2026-08-18 | <strong>AUTOR:</strong> @Tony (refinamento tecnico) | <strong>PEDIDO POR:</strong> Marcos
+<strong>ESTADO:</strong> aguardando escopo do @Steve e desenho do @Groot. <strong>Nao ha codigo escrito.</strong>
+<strong>SEQUENCIA:</strong> entra depois que a 1.5.5 fechar. Abrir feature no meio de uma validacao foi como o A-32 nasceu.</p>
+</blockquote>
+<h1 id="refinamento-tela-de-diagnostico-do-agent-windows">Refinamento — Tela de Diagnostico do Agent Windows<a class="headerlink" href="#refinamento-tela-de-diagnostico-do-agent-windows" title="Permanent link">&para;</a></h1>
+<p>Pedido: uma tela de monitoramento no proprio Agent, aberta pelo menu da bandeja, no lugar de
+depender de script e log para saber se o agente esta saudavel.</p>
+<p>Este documento nao decide <strong>se</strong> a feature entra nem <strong>como</strong> ela vai parecer. Decide <strong>como
+construir</strong>, se e quando entrar, e mostra o que ja existe — que e mais do que parece.</p>
+<hr />
+<h2 id="1-o-que-ja-existe-e-ninguem-precisa-reconstruir">1. O que ja existe (e ninguem precisa reconstruir)<a class="headerlink" href="#1-o-que-ja-existe-e-ninguem-precisa-reconstruir" title="Permanent link">&para;</a></h2>
+<h3 id="menu-da-bandeja">Menu da bandeja<a class="headerlink" href="#menu-da-bandeja" title="Permanent link">&para;</a></h3>
+<p><code>TrayIconManager.CreateContextMenu</code> ja tem:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>O que faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cabecalho <code>iManager - vX.Y.Z</code></td>
+<td>Versao, desabilitado</td>
+</tr>
+<tr>
+<td>Ferramentas &gt; Verificacao de Saude</td>
+<td><code>health-check.ps1</code></td>
+</tr>
+<tr>
+<td>Ferramentas &gt; Logs em Tempo Real</td>
+<td><code>monitorar-logs.ps1</code></td>
+</tr>
+<tr>
+<td>Ferramentas &gt; Exportar Diagnostico</td>
+<td><code>coletar-diagnostico.ps1</code></td>
+</tr>
+<tr>
+<td>Ferramentas &gt; Limpar Dados e Reiniciar</td>
+<td><code>limpar-reset.ps1</code>, com confirmacao</td>
+</tr>
+<tr>
+<td>Sobre</td>
+<td>MessageBox com identificacao e status</td>
+</tr>
+</tbody>
+</table>
+<h3 id="o-sobre-ja-e-80-da-tela-pedida">O "Sobre" ja e 80% da tela pedida<a class="headerlink" href="#o-sobre-ja-e-80-da-tela-pedida" title="Permanent link">&para;</a></h3>
+<p><code>TrayIconManager.ShowAbout()</code> ja mostra versao, identificador do colaborador, conta Windows,
+<code>instalacaoId</code> (adicionado pelo achado A-04) e status corrente. Falta ser <strong>viva</strong> em vez de
+um retrato estatico, e ganhar os numeros de fila e envio.</p>
+<h3 id="os-dados-de-saude-ja-trafegam-pelo-pipe">Os dados de saude ja trafegam pelo pipe<a class="headerlink" href="#os-dados-de-saude-ja-trafegam-pelo-pipe" title="Permanent link">&para;</a></h3>
+<p><code>PongMessage</code> (<code>ManagerAgent.Shared/Pipe/PipeMessages.cs</code>) ja carrega:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Vira o que na tela</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>backendReachable</code></td>
+<td>"Conexao com o servidor"</td>
+</tr>
+<tr>
+<td><code>bufferCount</code></td>
+<td>Parte de "Eventos pendentes" (backlog do Service)</td>
+</tr>
+<tr>
+<td><code>lastUploadStatus</code></td>
+<td>Base de "Ultimo envio"</td>
+</tr>
+</tbody>
+</table>
+<p>E o worker ja soma os dois lados da fila:
+<code>_heartbeatService.SetPendingEventsProvider(() =&gt; _autonomousBuffer.PendingCount + _serviceBufferCount)</code>
+(achado A-23).</p>
+<p><strong>Conclusao:</strong> a feature e majoritariamente <strong>apresentacao</strong>. Nao ha coleta nova a implementar,
+o que muda bastante a estimativa e o risco.</p>
+<hr />
+<h2 id="2-o-que-falta-tecnicamente">2. O que falta tecnicamente<a class="headerlink" href="#2-o-que-falta-tecnicamente" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Lacuna</th>
+<th>Impacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>PongMessage</code> nao traz <strong>quando</strong> foi o ultimo envio, so um status em texto</td>
+<td>Sem isso nao da para escrever "ha 42s". Exige campo novo no contrato do pipe — <strong>os dois lados</strong> (Service emite, Worker consome)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>O worker recebe o PONG mas nao guarda <code>backendReachable</code> / <code>lastUploadStatus</code> em lugar que o Tray enxergue</td>
+<td>Precisa de um estado de saude compartilhado entre <code>Worker</code> e <code>TrayIconManager</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>PING roda a cada 60s</td>
+<td>Dado de ate 1 minuto de idade. Aceitavel para "ultimo envio", ruim para a sensacao de tela viva. Solucao: a janela pede um PING sob demanda ao abrir e a cada refresh</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>TrayIconManager</code> hoje so sabe status, nao saude</td>
+<td>A janela nao pode virar um segundo dono de estado — o dado tem de descer do Worker, nunca ser coletado pela tela</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Regra que nao se negocia:</strong> a tela <strong>le</strong> estado, nunca coleta. Se a janela consultar o SO ou o
+banco por conta propria, viram duas fontes de verdade — que e exatamente o achado A-33, e custou
+2 LOCK e 2 UNLOCK por ciclo mais 15s de tela de bloqueio contabilizada como trabalho.</p>
+<hr />
+<h2 id="3-limites-de-lgpd-inegociaveis">3. Limites de LGPD (inegociaveis)<a class="headerlink" href="#3-limites-de-lgpd-inegociaveis" title="Permanent link">&para;</a></h2>
+<p>A tela e visivel para o <strong>colaborador</strong>. Isso a torna, ao mesmo tempo, uma oportunidade e um risco.</p>
+<p><strong>Pode mostrar:</strong> versao, identificador do colaborador, conta Windows, <code>instalacaoId</code>, status
+(monitorando / pausado / aguardando vinculacao / erro), contadores agregados (eventos pendentes),
+horario do ultimo envio, conectividade com o servidor.</p>
+<p><strong>Nao pode mostrar:</strong> titulo de janela, nome de processo capturado, dominio visitado, conteudo de
+qualquer natureza. Nem o proprio historico de atividade do colaborador.</p>
+<p>O motivo nao e so legal: o Agent nao e um visualizador de atividade. Mostrar o que foi capturado
+transforma uma tela de suporte em um painel de vigilancia — e a tela pode estar aberta com alguem
+olhando por cima do ombro, ou num compartilhamento de tela.</p>
+<p><strong>A favor da feature:</strong> transparencia sobre o que o agente esta fazendo reforca o posicionamento
+declarado do produto ("visibilidade sem vigilancia"). Uma tela que diz o que o agente monitora e
+que ele esta funcionando e argumento de venda, nao passivo.</p>
+<hr />
+<h2 id="4-onde-mora">4. Onde mora<a class="headerlink" href="#4-onde-mora" title="Permanent link">&para;</a></h2>
+<p><code>ManagerAgent.SessionWorker</code>, junto do Tray. Motivos:</p>
+<ul>
+<li>O loop de mensagens do WinForms ja roda ali (<code>TrayApplicationContext</code>).</li>
+<li>E o processo que roda na sessao do usuario — o Service e SYSTEM e nao tem desktop.</li>
+<li>O estado ja esta ali: status do tray, buffer autonomo, PONG do Service.</li>
+</ul>
+<p><strong>Nao</strong> criar projeto novo. <strong>Nao</strong> colocar no <code>ManagerAgent.Tray</code> — esse projeto e legado da v1,
+nem e empacotado no v2 (o instalador so faz <code>taskkill</code> nele).</p>
+<p>Cuidado herdado do achado A-29: qualquer janela nova precisa ser descartada no encerramento do
+loop de mensagens, senao o processo nao sai sozinho no SHUTDOWN e volta a ser morto de fora.</p>
+<hr />
+<h2 id="5-quebra-de-tarefas">5. Quebra de tarefas<a class="headerlink" href="#5-quebra-de-tarefas" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tarefa</th>
+<th>Dono</th>
+<th>Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-01</td>
+<td>Definir escopo: quais campos, quem ve, quando abre</td>
+<td><strong>@Steve</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>D-02</td>
+<td>Desenho da janela (layout, textos, estados de erro)</td>
+<td><strong>@Groot</strong></td>
+<td>D-01</td>
+</tr>
+<tr>
+<td>D-03</td>
+<td><code>PongMessage</code> ganha <code>lastUploadAt</code>; Service preenche</td>
+<td>@Bucky</td>
+<td>D-01</td>
+</tr>
+<tr>
+<td>D-04</td>
+<td>Estado de saude no Worker, alimentado pelo PONG e exposto ao Tray</td>
+<td>@Bucky</td>
+<td>D-03</td>
+</tr>
+<tr>
+<td>D-05</td>
+<td>PING sob demanda (abrir a janela forca atualizacao)</td>
+<td>@Bucky</td>
+<td>D-04</td>
+</tr>
+<tr>
+<td>D-06</td>
+<td>A janela em si, substituindo o MessageBox do "Sobre"</td>
+<td>@Bucky</td>
+<td>D-02, D-04</td>
+</tr>
+<tr>
+<td>D-07</td>
+<td>Descarte no encerramento do loop de mensagens (licao do A-29)</td>
+<td>@Bucky</td>
+<td>D-06</td>
+</tr>
+<tr>
+<td>D-08</td>
+<td>Testes: estado de saude, formatacao de "ha Xs", degradacao sem PONG</td>
+<td>@Bucky</td>
+<td>D-04</td>
+</tr>
+<tr>
+<td>D-09</td>
+<td>Teste de guarda LGPD: a janela nunca recebe titulo nem processo</td>
+<td>@Bucky</td>
+<td>D-06</td>
+</tr>
+<tr>
+<td>D-10</td>
+<td>Roteiro de teste manual (sem rede, sem Service, sem vinculacao)</td>
+<td>@Natasha</td>
+<td>D-06</td>
+</tr>
+</tbody>
+</table>
+<p><strong>D-09 merece destaque.</strong> Mesmo padrao do <code>LGPDContentFilterTest</code> do Agent Android: um teste que
+trava a sabotagem futura, garantindo por reflexao que o modelo da tela nao aceita <code>string</code> de
+titulo ou processo. Sem isso, basta alguem "melhorar" a tela um ano depois para virar painel de
+vigilancia sem ninguem perceber.</p>
+<hr />
+<h2 id="6-o-que-eu-recomendo">6. O que eu recomendo<a class="headerlink" href="#6-o-que-eu-recomendo" title="Permanent link">&para;</a></h2>
+<p><strong>Fazer, mas depois da 1.5.5.</strong> A feature e barata (apresentacao de dado que ja existe), reduz
+chamado de suporte e reforca o posicionamento do produto.</p>
+<p>Duas ressalvas:</p>
+<ol>
+<li><strong>Nao vira substituto do log.</strong> Para depurar defeito como os desta rodada — evento aberto para
+   sempre, LOCK duplicado, LOGIN falso — o que serve e o log e o banco. A tela responde
+   "o agente esta funcionando?", nao "por que este evento saiu errado?". Se ela for vendida
+   internamente como fim dos scripts de diagnostico, vai decepcionar.</li>
+<li><strong>A pergunta que o @Steve precisa responder antes:</strong> a tela e para o <strong>colaborador</strong> se
+   tranquilizar, ou para o <strong>suporte</strong> diagnosticar remotamente? As duas respostas geram telas
+   diferentes. Se for suporte, o <code>coletar-diagnostico.ps1</code> ja resolve e talvez o certo seja
+   melhorar o que existe em vez de abrir janela nova.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

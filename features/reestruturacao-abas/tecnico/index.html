@@ -1,0 +1,3149 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/reestruturacao-abas/tecnico/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Reestruturação das Abas — Refinamento Técnico - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reestruturacao-das-abas-refinamento-tecnico" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reestruturação das Abas — Refinamento Técnico
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#decisoes-de-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisões de arquitetura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decisões de arquitetura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-novas-apis-vs-extensao-das-existentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Novas APIs vs extensão das existentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-frase-acionavel-backend-ou-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Frase acionável — backend ou frontend?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-media-do-time-como-calcular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Média do time — como calcular
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-manager-srv-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend (manager-srv-portal)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend (manager-srv-portal)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apis-novas-a-criar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APIs novas a criar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs novas a criar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-post-apiv2eventosusuarioidtendencia-periodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. POST /api/v2/eventos/{usuarioId}/tendencia-periodo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-post-apiv2eventosusuarioidmedia-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. POST /api/v2/eventos/{usuarioId}/media-time
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apis-existentes-modificacoes-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APIs existentes — modificações necessárias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs existentes — modificações necessárias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv2eventosusuarioidresumo-periodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v2/eventos/{usuarioId}/resumo-periodo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-apiv2eventosusuarioidtimelinecompleto-a-criar-equivalente-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /api/v2/eventos/{usuarioId}/timeline/completo (a criar — equivalente v2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#novos-dtos-resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Novos DTOs — resumo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend-manager-fed-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend (manager-fed-portal)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frontend (manager-fed-portal)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-a-criar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes a criar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes a criar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aba-dia-a-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aba "Dia a Dia"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aba-resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aba "Resumo"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-a-modificar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes a modificar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes a modificar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colaboradordetalhecomponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ColaboradorDetalheComponent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-visao-geralcomponentts-e-tab-timelinecomponentts-aba-indicadores-atual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tab-visao-geral.component.ts e tab-timeline.component.ts (aba Indicadores atual)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serviços
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Serviços">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colaboradoresservice-colaboradoresapiservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ColaboradoresService / ColaboradoresApiService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos-typescript-a-criar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos TypeScript a criar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graficos-de-tendencia-decisao-de-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gráficos de tendência — decisão de implementação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frase-acionavel-logica-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frase acionável — lógica frontend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frase acionável — lógica frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frase-do-dia-aba-dia-a-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frase do dia (aba Dia a Dia)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frase-de-foco-aba-resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frase de foco (aba Resumo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout-hibrido-responsividade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout híbrido — responsividade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefas-ordenadas-por-dependencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tarefas ordenadas por dependência
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tarefas ordenadas por dependência">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-1-backend-novos-dtos-e-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FASE 1 — Backend: novos DTOs e endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-2-frontend-servicos-e-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FASE 2 — Frontend: serviços e modelos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-3-frontend-aba-dia-a-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FASE 3 — Frontend: aba Dia a Dia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-4-frontend-aba-resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FASE 4 — Frontend: aba Resumo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-5-frontend-integracao-no-detalhe-do-colaborador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FASE 5 — Frontend: integração no detalhe do colaborador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-6-qa-e-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FASE 6 — QA e cleanup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pontos-de-atencao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontos de atenção
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h10-distribuicao-de-horarios-de-foco-refinamento-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H10 — Distribuição de horários de foco (refinamento técnico)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="H10 — Distribuição de horários de foco (refinamento técnico)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexto-e-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto e diagnóstico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-novo-dto-faixahorariaresposta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Novo DTO: FaixaHorariaResposta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-novo-dto-distribuicaofocoporfaixaresposta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Novo DTO: DistribuicaoFocoPorFaixaResposta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-extensao-do-tendenciaperiodoresposta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Extensão do TendenciaPeriodoResposta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-logica-de-calculo-no-tendenciaperiodoservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Lógica de cálculo no TendenciaPeriodoService
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-integracao-no-tendenciaperiodoservicecalcular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Integração no TendenciaPeriodoService.calcular()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-nenhuma-alteracao-no-eventoscontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Nenhuma alteração no EventosController
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-novos-modelos-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Novos modelos TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-novos-input-no-tendenciafococomponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Novos @Input() no TendenciaFocoComponent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-propagacao-no-tabresumocomponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Propagação no TabResumoComponent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-exibicao-no-template-tendencia-fococomponenthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Exibição no template tendencia-foco.component.html
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-logica-typescript-no-tendenciafococomponent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Lógica TypeScript no TendenciaFocoComponent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-scss-no-tendencia-fococomponentscss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. SCSS no tendencia-foco.component.scss
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tarefas-ordenadas-por-dependencia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tarefas ordenadas por dependência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pontos-de-atencao-especificos-da-h10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontos de atenção específicos da H10
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reestruturacao-das-abas-refinamento-tecnico">Reestruturação das Abas — Refinamento Técnico<a class="headerlink" href="#reestruturacao-das-abas-refinamento-tecnico" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Domínio: @Tony | Tech Lead
+Data: 2026-04-06
+Status: refinamento aprovado — pronto para desenvolvimento</p>
+</blockquote>
+<hr />
+<h2 id="decisoes-de-arquitetura">Decisões de arquitetura<a class="headerlink" href="#decisoes-de-arquitetura" title="Permanent link">&para;</a></h2>
+<h3 id="1-novas-apis-vs-extensao-das-existentes">1. Novas APIs vs extensão das existentes<a class="headerlink" href="#1-novas-apis-vs-extensao-das-existentes" title="Permanent link">&para;</a></h3>
+<p>Decisão: <strong>endpoints separados</strong> para tendência e média do time.
+Justificativa: o <code>resumo-periodo</code> já retorna KPIs médios. Adicionar tendência por dia e sessões de foco como campos nele tornaria o payload pesado e acoplaria concerns diferentes. Endpoints separados permitem carregar em paralelo no frontend via <code>forkJoin</code>.</p>
+<h3 id="2-frase-acionavel-backend-ou-frontend">2. Frase acionável — backend ou frontend?<a class="headerlink" href="#2-frase-acionavel-backend-ou-frontend" title="Permanent link">&para;</a></h3>
+<p>Decisão: <strong>frontend</strong>, inicialmente.
+Justificativa: a lógica de classificação (fragmentado/equilibrado/deep work) é puramente derivada dos dados já retornados. Não requer acesso ao banco. Frontend calcula em memória, sem roundtrip. Revisitar se a lógica escalar para ML/LLM no futuro.</p>
+<h3 id="3-media-do-time-como-calcular">3. Média do time — como calcular<a class="headerlink" href="#3-media-do-time-como-calcular" title="Permanent link">&para;</a></h3>
+<p>Decisão: endpoint <code>/media-time</code> recebe <code>dataInicio</code> + <code>dataFim</code>. O backend identifica o time do colaborador via <code>relacionamentos_hierarquicos</code> (papel = MEMBRO), agrega os KPIs médios dos membros do mesmo time no período, e retorna os valores. Query JPQL com <code>GROUP BY</code> + <code>AVG</code> sobre os campos de resumo já calculados.</p>
+<hr />
+<h2 id="backend-manager-srv-portal">Backend (manager-srv-portal)<a class="headerlink" href="#backend-manager-srv-portal" title="Permanent link">&para;</a></h2>
+<h3 id="apis-novas-a-criar">APIs novas a criar<a class="headerlink" href="#apis-novas-a-criar" title="Permanent link">&para;</a></h3>
+<h4 id="1-post-apiv2eventosusuarioidtendencia-periodo">1. <code>POST /api/v2/eventos/{usuarioId}/tendencia-periodo</code><a class="headerlink" href="#1-post-apiv2eventosusuarioidtendencia-periodo" title="Permanent link">&para;</a></h4>
+<p><strong>Responsável:</strong> @Thor
+<strong>Descrição:</strong> retorna os KPIs de cada dia do período, para renderizar os gráficos de barras de tendência de jornada e de foco.</p>
+<p><strong>Request body:</strong> <code>ResumoPeriodoColaboradorRequest</code> (reutiliza DTO existente)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"dataInicio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-03-30"</span><span class="p">,</span><span class="w"> </span><span class="nt">"dataFim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-04-05"</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Response DTO a criar:</strong> <code>TendenciaPeriodoResposta</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// TendenciaPeriodoResposta.java</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TendenciaPeriodoResposta</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">colaboradorId</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">dataInicio</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">dataFim</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">DiaTendenciaResposta</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dias</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">// DiaTendenciaResposta.java</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DiaTendenciaResposta</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">diaSemana</span><span class="p">;</span><span class="w">          </span><span class="c1">// "Seg", "Ter", ... para label no gráfico</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="c1">// Jornada do dia</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">jornadaMinutos</span><span class="p">;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Boolean</span><span class="w"> </span><span class="n">jornadaExcedida</span><span class="p">;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">jornadaEsperadaMinutos</span><span class="p">;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="c1">// Sessões de foco do dia (para gráfico de barras empilhadas)</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">SessaoFocoDiaResposta</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sessoesFoco</span><span class="p">;</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">totalSessoesFoco</span><span class="p">;</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">maiorSessaoFocoSegundos</span><span class="p">;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">tempoTotalFocoSegundos</span><span class="p">;</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="c1">// Classificação do dia (calculada pelo backend)</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ClassificacaoDiaFoco</span><span class="w"> </span><span class="n">classificacao</span><span class="p">;</span><span class="w"> </span><span class="c1">// FRAGMENTADO | EQUILIBRADO | DEEP_WORK | SEM_DADOS</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="p">}</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="c1">// SessaoFocoDiaResposta.java</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SessaoFocoDiaResposta</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">duracaoSegundos</span><span class="p">;</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">faixa</span><span class="p">;</span><span class="w"> </span><span class="c1">// "RASO" (5-20min) | "PRODUTIVO" (20-40min) | "BOM_FOCO" (40-60min) | "DEEP_WORK" (60min+)</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Lógica de classificação por dia (backend):</strong>
+- <code>FRAGMENTADO</code>: totalSessoesFoco &gt; 5 E maiorSessaoFocoSegundos &lt; 1800 (30min)
+- <code>EQUILIBRADO</code>: totalSessoesFoco entre 2-5 OU maiorSessaoFoco entre 1800-3600
+- <code>DEEP_WORK</code>: alguma sessão &gt; 3600 E totalSessoesFoco &lt; 4
+- <code>SEM_DADOS</code>: dia sem eventos</p>
+<p><strong>Nota de implementação:</strong> reutilizar a query de sessões de foco já existente no <code>TimelineColaboradorService</code>. Iterar dia a dia no range do período, executar a lógica de detecção de sessões para cada data, montar o DTO.</p>
+<hr />
+<h4 id="2-post-apiv2eventosusuarioidmedia-time">2. <code>POST /api/v2/eventos/{usuarioId}/media-time</code><a class="headerlink" href="#2-post-apiv2eventosusuarioidmedia-time" title="Permanent link">&para;</a></h4>
+<p><strong>Responsável:</strong> @Vision
+<strong>Descrição:</strong> retorna os KPIs médios do time ao qual o colaborador pertence no mesmo período.</p>
+<p><strong>Request body:</strong> <code>ResumoPeriodoColaboradorRequest</code> (reutiliza)</p>
+<p><strong>Response DTO a criar:</strong> <code>MediaTimeResposta</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// MediaTimeResposta.java</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MediaTimeResposta</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">colaboradorId</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">dataInicio</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">dataFim</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">membrosConsiderados</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">jornadaMediaMinutos</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">tempoAtivoMedioMinutos</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">tempoPausaMedioMinutos</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">tempoTotalFocoMedioSegundos</span><span class="p">;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">maiorSessaoFocoMedioSegundos</span><span class="p">;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Lógica de implementação:</strong>
+1. Identificar o time do colaborador: buscar <code>RelacionamentoHierarquico</code> onde <code>usuarioId</code> é membro (papel COLABORADOR/MEMBRO) e obter o <code>timeEquipeId</code>.
+2. Buscar todos os membros ativos do mesmo time (excluindo o próprio colaborador).
+3. Para cada membro, calcular o resumo do período usando a lógica existente em <code>TimelineColaboradorService.calcularResumoPeriodo</code>.
+4. Agregar os resultados com <code>AVG</code> em memória (ou JPQL se performance exigir).
+5. Retornar <code>membrosConsiderados = 0</code> e todos os campos nulos se o colaborador não pertencer a nenhum time — frontend trata ausência silenciosamente.</p>
+<p><strong>Acesso:</strong> validar via <code>accessService.exigirAcessoAoUsuario(usuarioId)</code> (padrão v2).</p>
+<hr />
+<h3 id="apis-existentes-modificacoes-necessarias">APIs existentes — modificações necessárias<a class="headerlink" href="#apis-existentes-modificacoes-necessarias" title="Permanent link">&para;</a></h3>
+<h4 id="post-apiv2eventosusuarioidresumo-periodo"><code>POST /api/v2/eventos/{usuarioId}/resumo-periodo</code><a class="headerlink" href="#post-apiv2eventosusuarioidresumo-periodo" title="Permanent link">&para;</a></h4>
+<p><strong>Sem alteração estrutural.</strong> O <code>ResumoPeriodoColaboradorResponse</code> já contém <code>maiorSessaoFocoFormatada</code>, <code>totalSessoesFoco</code> e <code>tempoTotalFocoSegundos</code>. O campo <code>foco médio</code> da aba Resumo usa <code>maiorSessaoFocoFormatada</code> como valor principal.</p>
+<p><strong>Adicionar campo opcional:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Em ResumoPeriodoColaboradorResponse.java — adicionar:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">focoMedioSegundos</span><span class="p">;</span><span class="w">  </span><span class="c1">// média da maior sessão de foco por dia (para KPI "Foco médio")</span>
+</code></pre></div>
+Atualmente <code>maiorSessaoFocoSegundos</code> retorna o pico do período inteiro. O KPI "Foco médio" da spec pede a média da maior sessão por dia. Adicionar cálculo no <code>TimelineColaboradorService.calcularResumoPeriodo</code>.</p>
+<h4 id="post-apiv2eventosusuarioidtimelinecompleto-a-criar-equivalente-v2"><code>POST /api/v2/eventos/{usuarioId}/timeline/completo</code> (a criar — equivalente v2)<a class="headerlink" href="#post-apiv2eventosusuarioidtimelinecompleto-a-criar-equivalente-v2" title="Permanent link">&para;</a></h4>
+<p>Atualmente só existe <code>/api/eventos/{colaboradorId}/timeline/completo</code> (v1). Criar endpoint v2 com <code>accessService.exigirAcessoAoUsuario</code>.</p>
+<p><strong>Responsável:</strong> @Thor
+<strong>DTO:</strong> sem alteração — reutiliza <code>TimelineCompletaResposta</code>.</p>
+<hr />
+<h3 id="novos-dtos-resumo">Novos DTOs — resumo<a class="headerlink" href="#novos-dtos-resumo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>DTO</th>
+<th>Arquivo</th>
+<th>Responsável</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TendenciaPeriodoResposta</code></td>
+<td><code>dto/TendenciaPeriodoResposta.java</code></td>
+<td>@Thor</td>
+</tr>
+<tr>
+<td><code>DiaTendenciaResposta</code></td>
+<td><code>dto/DiaTendenciaResposta.java</code></td>
+<td>@Thor</td>
+</tr>
+<tr>
+<td><code>SessaoFocoDiaResposta</code></td>
+<td><code>dto/SessaoFocoDiaResposta.java</code></td>
+<td>@Thor</td>
+</tr>
+<tr>
+<td><code>ClassificacaoDiaFoco</code></td>
+<td><code>dto/ClassificacaoDiaFoco.java</code> (enum)</td>
+<td>@Thor</td>
+</tr>
+<tr>
+<td><code>MediaTimeResposta</code></td>
+<td><code>dto/MediaTimeResposta.java</code></td>
+<td>@Vision</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="frontend-manager-fed-portal">Frontend (manager-fed-portal)<a class="headerlink" href="#frontend-manager-fed-portal" title="Permanent link">&para;</a></h2>
+<h3 id="componentes-a-criar">Componentes a criar<a class="headerlink" href="#componentes-a-criar" title="Permanent link">&para;</a></h3>
+<h4 id="aba-dia-a-dia">Aba "Dia a Dia"<a class="headerlink" href="#aba-dia-a-dia" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Arquivo</th>
+<th>Responsável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TabDiaDiaComponent</code></td>
+<td><code>tab-dia-dia/tab-dia-dia.component.ts</code></td>
+<td>@Peter</td>
+<td>Container principal da aba. Gerencia seletor de data e orquestra chamada ao <code>timeline/completo</code>.</td>
+</tr>
+<tr>
+<td><code>DiaDiaKpisComponent</code></td>
+<td><code>tab-dia-dia/components/dia-dia-kpis.component.ts</code></td>
+<td>@Miles</td>
+<td>4 cards KPI do dia. Recebe <code>TimelineCompletaResponse</code>.</td>
+</tr>
+<tr>
+<td><code>FraseAcionavelDiaComponent</code></td>
+<td><code>tab-dia-dia/components/frase-acionavel-dia.component.ts</code></td>
+<td>@Miles</td>
+<td>Card com borda colorida. Lógica de geração da frase no próprio componente (TypeScript puro).</td>
+</tr>
+<tr>
+<td><code>DateNavComponent</code></td>
+<td><code>tab-dia-dia/components/date-nav.component.ts</code></td>
+<td>@Miles</td>
+<td>Botões "Dia anterior" / "Próximo dia" + seletor calendário (PrimeNG <code>p-calendar</code>). Emite <code>EventEmitter&lt;Date&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>TopAppsDiaComponent</code></td>
+<td><code>tab-dia-dia/components/top-apps-dia.component.ts</code></td>
+<td>@Miles</td>
+<td>Lista de top 5 apps com barras proporcionais. Reutiliza estrutura do componente atual de top apps.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota:</strong> <code>visao-geral-timeline.component.ts</code> e <code>visao-geral-eventos.component.ts</code> existentes serão <strong>movidos</strong> para dentro de <code>tab-dia-dia/components/</code> com renomeação:
+- <code>visao-geral-timeline.component.ts</code> → <code>timeline-24h.component.ts</code>
+- <code>visao-geral-eventos.component.ts</code> → <code>eventos-detalhados.component.ts</code></p>
+<h4 id="aba-resumo">Aba "Resumo"<a class="headerlink" href="#aba-resumo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Arquivo</th>
+<th>Responsável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TabResumoComponent</code></td>
+<td><code>tab-resumo/tab-resumo.component.ts</code></td>
+<td>@Peter</td>
+<td>Container principal. Gerencia pills de período, chama <code>resumo-periodo</code>, <code>tendencia-periodo</code> e <code>media-time</code> em <code>forkJoin</code>.</td>
+</tr>
+<tr>
+<td><code>ResumoKpisComponent</code></td>
+<td><code>tab-resumo/components/resumo-kpis.component.ts</code></td>
+<td>@Miles</td>
+<td>4 cards KPI médios. Inclui linha comparativa com o time abaixo de cada valor.</td>
+</tr>
+<tr>
+<td><code>PillPeriodoComponent</code></td>
+<td><code>tab-resumo/components/pill-periodo.component.ts</code></td>
+<td>@Miles</td>
+<td>Pills Hoje/7d/15d/30d + "Personalizado ▾" com <code>p-calendar</code> range. Emite <code>EventEmitter&lt;{inicio: Date, fim: Date}&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>TendenciaJornadaComponent</code></td>
+<td><code>tab-resumo/components/tendencia-jornada.component.ts</code></td>
+<td>@Peter</td>
+<td>Gráfico de barras verticais por dia. Barras vermelhas quando <code>jornadaExcedida = true</code>. Usa <strong>barras CSS puras</strong> (sem PrimeNG Charts) para evitar dependência pesada.</td>
+</tr>
+<tr>
+<td><code>TendenciaFocoComponent</code></td>
+<td><code>tab-resumo/components/tendencia-foco.component.ts</code></td>
+<td>@Peter</td>
+<td>Gráfico de barras empilhadas por dia (sessões individuais). Cores por faixa. Frase acionável abaixo. Usa <strong>barras CSS puras</strong>.</td>
+</tr>
+<tr>
+<td><code>DonutDistribuicaoComponent</code></td>
+<td><code>tab-resumo/components/donut-distribuicao.component.ts</code></td>
+<td>@Miles</td>
+<td>Donut de distribuição Ativo/Pausa/Ausente com percentuais. Usa PrimeNG <code>p-chart</code> (Chart.js) — justificado pois o donut é complexo demais para CSS puro.</td>
+</tr>
+<tr>
+<td><code>TopAppsPeriodoComponent</code></td>
+<td><code>tab-resumo/components/top-apps-periodo.component.ts</code></td>
+<td>@Miles</td>
+<td>Top 5 apps do período. Estrutura idêntica ao <code>TopAppsDiaComponent</code> — considerar componente compartilhado <code>TopAppsListComponent</code>.</td>
+</tr>
+<tr>
+<td><code>FraseAcionavelFocoComponent</code></td>
+<td><code>tab-resumo/components/frase-acionavel-foco.component.ts</code></td>
+<td>@Miles</td>
+<td>Frase gerada a partir da classificação dos dias (recebe <code>DiaTendencia[]</code> já classificados pelo backend).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="componentes-a-modificar">Componentes a modificar<a class="headerlink" href="#componentes-a-modificar" title="Permanent link">&para;</a></h3>
+<h4 id="colaboradordetalhecomponent"><code>ColaboradorDetalheComponent</code><a class="headerlink" href="#colaboradordetalhecomponent" title="Permanent link">&para;</a></h4>
+<p><strong>Arquivo:</strong> <code>colaborador-detalhe.component.ts</code> / <code>.html</code></p>
+<p>Mudanças:
+1. Renomear as abas no array <code>tabs</code>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// Antes:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'overview'</span><span class="p">,</span><span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'Visão Geral'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'indicadores'</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'Indicadores'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">// Depois:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'dia-dia'</span><span class="p">,</span><span class="w">  </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'Dia a Dia'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'resumo'</span><span class="p">,</span><span class="w">   </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'Resumo'</span><span class="w"> </span><span class="p">},</span>
+</code></pre></div>
+2. Substituir renderização condicional no template: <code>*ngIf="activeTab === 'dia-dia'"</code> e <code>*ngIf="activeTab === 'resumo'"</code>.
+3. Remover lógica de KPIs, top apps, donut e timeline do componente pai — esses estados migram para <code>TabDiaDiaComponent</code> e <code>TabResumoComponent</code> (cada aba gerencia seu próprio estado e chamadas HTTP).
+4. Manter <code>activeTab = 'dia-dia'</code> como default (era <code>'overview'</code>).</p>
+<p><strong>Sem alteração de rota</strong> — a rota <code>membro/:id</code> não muda. Não há query params de aba. Estado da aba é local ao componente.</p>
+<h4 id="tab-visao-geralcomponentts-e-tab-timelinecomponentts-aba-indicadores-atual"><code>tab-visao-geral.component.ts</code> e <code>tab-timeline.component.ts</code> (aba Indicadores atual)<a class="headerlink" href="#tab-visao-geralcomponentts-e-tab-timelinecomponentts-aba-indicadores-atual" title="Permanent link">&para;</a></h4>
+<p>Esses componentes serão <strong>descontinuados</strong>. Lógica útil é extraída para os novos componentes de <code>tab-dia-dia</code> e <code>tab-resumo</code>. Não deletar imediatamente — manter comentados até validação em QA para facilitar rollback se necessário.</p>
+<hr />
+<h3 id="servicos">Serviços<a class="headerlink" href="#servicos" title="Permanent link">&para;</a></h3>
+<h4 id="colaboradoresservice-colaboradoresapiservice"><code>ColaboradoresService</code> / <code>ColaboradoresApiService</code><a class="headerlink" href="#colaboradoresservice-colaboradoresapiservice" title="Permanent link">&para;</a></h4>
+<p>Adicionar métodos para as novas APIs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Em colaboradores-api.service.ts (ou colaboradores.service.ts — verificar qual é o canônico)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nx">tendenciaPeriodo</span><span class="p">(</span><span class="nx">usuarioId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="o">:</span><span class="w"> </span><span class="kt">ResumoPeriodoRequest</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">TendenciaPeriodoResponse</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="nx">TendenciaPeriodoResponse</span><span class="o">&gt;</span><span class="p">(</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="sb">`/api/v2/eventos/</span><span class="si">${</span><span class="nx">usuarioId</span><span class="si">}</span><span class="sb">/tendencia-periodo`</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="p">);</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nx">mediaTime</span><span class="p">(</span><span class="nx">usuarioId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="o">:</span><span class="w"> </span><span class="kt">ResumoPeriodoRequest</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">MediaTimeResponse</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="nx">MediaTimeResponse</span><span class="o">&gt;</span><span class="p">(</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="sb">`/api/v2/eventos/</span><span class="si">${</span><span class="nx">usuarioId</span><span class="si">}</span><span class="sb">/media-time`</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="p">);</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="nx">timelineCompletoV2</span><span class="p">(</span><span class="nx">usuarioId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">filtro</span><span class="o">:</span><span class="w"> </span><span class="kt">TimelineFiltroRequest</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">TimelineCompletaResponse</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">post</span><span class="o">&lt;</span><span class="nx">TimelineCompletaResponse</span><span class="o">&gt;</span><span class="p">(</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="sb">`/api/v2/eventos/</span><span class="si">${</span><span class="nx">usuarioId</span><span class="si">}</span><span class="sb">/timeline/completo`</span><span class="p">,</span><span class="w"> </span><span class="nx">filtro</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">  </span><span class="p">);</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="modelos-typescript-a-criar">Modelos TypeScript a criar<a class="headerlink" href="#modelos-typescript-a-criar" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// tendencia-periodo.models.ts</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">TendenciaPeriodoResponse</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nx">colaboradorId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nx">dataInicio</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nx">dataFim</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nx">dias</span><span class="o">:</span><span class="w"> </span><span class="kt">DiaTendencia</span><span class="p">[];</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">}</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">DiaTendencia</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">  </span><span class="nx">diaSemana</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">  </span><span class="nx">jornadaMinutos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">  </span><span class="nx">jornadaExcedida</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">  </span><span class="nx">jornadaEsperadaMinutos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">  </span><span class="nx">sessoesFoco</span><span class="o">:</span><span class="w"> </span><span class="kt">SessaoFoco</span><span class="p">[];</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">  </span><span class="nx">totalSessoesFoco</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">  </span><span class="nx">maiorSessaoFocoSegundos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">  </span><span class="nx">tempoTotalFocoSegundos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">  </span><span class="nx">classificacao</span><span class="o">:</span><span class="w"> </span><span class="s1">'FRAGMENTADO'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'EQUILIBRADO'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'DEEP_WORK'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'SEM_DADOS'</span><span class="p">;</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="p">}</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">SessaoFoco</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">  </span><span class="nx">duracaoSegundos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">  </span><span class="nx">faixa</span><span class="o">:</span><span class="w"> </span><span class="s1">'RASO'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'PRODUTIVO'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'BOM_FOCO'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'DEEP_WORK'</span><span class="p">;</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="p">}</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="c1">// media-time.models.ts</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">MediaTimeResponse</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">  </span><span class="nx">colaboradorId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">  </span><span class="nx">dataInicio</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">  </span><span class="nx">dataFim</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">  </span><span class="nx">membrosConsiderados</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">  </span><span class="nx">jornadaMediaMinutos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">  </span><span class="nx">tempoAtivoMedioMinutos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">  </span><span class="nx">tempoPausaMedioMinutos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="w">  </span><span class="nx">tempoTotalFocoMedioSegundos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">  </span><span class="nx">maiorSessaoFocoMedioSegundos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="graficos-de-tendencia-decisao-de-implementacao">Gráficos de tendência — decisão de implementação<a class="headerlink" href="#graficos-de-tendencia-decisao-de-implementacao" title="Permanent link">&para;</a></h3>
+<p><strong>Barras de tendência de jornada e foco: CSS puro (não PrimeNG Charts).</strong></p>
+<p>Motivo: os dados são simples (valor por dia, cor por condição). CSS puro é:
+- Sem dependência de Chart.js para um gráfico trivial
+- Mais controlável para as cores condicionais (vermelho quando excedido)
+- Mais leve (sem biblioteca externa carregando)
+- Mais fácil de estilizar dentro do design system existente</p>
+<p>Estrutura de barra CSS:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"barra-container"</span><span class="p">&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"barra"</span> <span class="err">[</span><span class="na">style</span><span class="err">.</span><span class="na">height</span><span class="err">.%]="</span><span class="na">alturaRelativa</span><span class="err">(</span><span class="na">dia</span><span class="err">)"</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>       <span class="err">[</span><span class="na">class</span><span class="err">.</span><span class="na">excedida</span><span class="err">]="</span><span class="na">dia</span><span class="err">.</span><span class="na">jornadaExcedida</span><span class="err">"</span><span class="p">&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"label"</span><span class="p">&gt;</span>{{ dia.diaSemana }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p><strong>Donut de distribuição: PrimeNG <code>p-chart</code> (Chart.js).</strong>
+Justificado pois donut com segmentos e legendas em CSS é impraticável sem reescrever o que já existe na lib.</p>
+<hr />
+<h3 id="frase-acionavel-logica-frontend">Frase acionável — lógica frontend<a class="headerlink" href="#frase-acionavel-logica-frontend" title="Permanent link">&para;</a></h3>
+<h4 id="frase-do-dia-aba-dia-a-dia">Frase do dia (aba Dia a Dia)<a class="headerlink" href="#frase-do-dia-aba-dia-a-dia" title="Permanent link">&para;</a></h4>
+<p>Função pura em <code>FraseAcionavelDiaComponent</code>, recebe <code>TimelineCompletaResponse</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">gerarFraseDia</span><span class="p">(</span><span class="nx">kpis</span><span class="o">:</span><span class="w"> </span><span class="kt">TimelineCompletaResponse</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">FraseAcionavel</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">excesso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">kpis</span><span class="p">.</span><span class="nx">jornadaTotalSegundos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">kpis</span><span class="p">.</span><span class="nx">jornadaEsperadaMinutos</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="p">);</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">kpis</span><span class="p">.</span><span class="nx">jornadaExcedida</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">excesso</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">excessoFormatado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">formatarDuracao</span><span class="p">(</span><span class="nx">excesso</span><span class="p">);</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="sb">`Jornada </span><span class="si">${</span><span class="nx">kpis</span><span class="p">.</span><span class="nx">jornadaTotalFormatada</span><span class="si">}</span><span class="sb"> — </span><span class="si">${</span><span class="nx">excessoFormatado</span><span class="si">}</span><span class="sb"> acima do esperado. Verifique se há sobrecarga.`</span><span class="p">,</span><span class="w"> </span><span class="nx">cor</span><span class="o">:</span><span class="w"> </span><span class="s1">'vermelho'</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="c1">// demais regras...</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="frase-de-foco-aba-resumo">Frase de foco (aba Resumo)<a class="headerlink" href="#frase-de-foco-aba-resumo" title="Permanent link">&para;</a></h4>
+<p>Função em <code>FraseAcionavelFocoComponent</code>, recebe <code>DiaTendencia[]</code> (já classificados pelo backend):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">gerarFraseFoco</span><span class="p">(</span><span class="nx">dias</span><span class="o">:</span><span class="w"> </span><span class="kt">DiaTendencia</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">diasComDados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dias</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">classificacao</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">'SEM_DADOS'</span><span class="p">);</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">fragmentados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">diasComDados</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">classificacao</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'FRAGMENTADO'</span><span class="p">).</span><span class="nx">length</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">deepWork</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">diasComDados</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">d</span><span class="p">.</span><span class="nx">classificacao</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'DEEP_WORK'</span><span class="p">).</span><span class="nx">length</span><span class="p">;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="c1">// regras de texto conforme spec...</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="layout-hibrido-responsividade">Layout híbrido — responsividade<a class="headerlink" href="#layout-hibrido-responsividade" title="Permanent link">&para;</a></h3>
+<p>Implementar com Flexbox SCSS no padrão do design system:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// Padrão para seção inferior (Top Apps + Eventos ou Top Apps + Donut)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nc">.layout-hibrido</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="nt">gap</span><span class="nd">:</span><span class="w"> </span><span class="nt">16px</span><span class="o">;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="nc">.coluna-esquerda</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">flex</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="o">;</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// 1/3</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="nc">.coluna-direita</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">flex</span><span class="nd">:</span><span class="w"> </span><span class="nt">2</span><span class="o">;</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// 2/3</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span><span class="k">@media</span><span class="w"> </span><span class="p">(</span><span class="no">max-width</span><span class="o">:</span><span class="w"> </span><span class="mi">768</span><span class="kt">px</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="nt">flex-direction</span><span class="nd">:</span><span class="w"> </span><span class="nt">column</span><span class="o">;</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="tarefas-ordenadas-por-dependencia">Tarefas ordenadas por dependência<a class="headerlink" href="#tarefas-ordenadas-por-dependencia" title="Permanent link">&para;</a></h2>
+<h3 id="fase-1-backend-novos-dtos-e-endpoints">FASE 1 — Backend: novos DTOs e endpoints<a class="headerlink" href="#fase-1-backend-novos-dtos-e-endpoints" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tarefa</th>
+<th>Responsável</th>
+<th>Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BE-01</td>
+<td>Criar DTOs <code>DiaTendenciaResposta</code>, <code>SessaoFocoDiaResposta</code>, <code>TendenciaPeriodoResposta</code>, enum <code>ClassificacaoDiaFoco</code></td>
+<td>@Thor</td>
+<td>—</td>
+</tr>
+<tr>
+<td>BE-02</td>
+<td>Criar serviço <code>TendenciaPeriodoService</code> com lógica de cálculo por dia (reutilizando sessões de foco existentes)</td>
+<td>@Thor</td>
+<td>BE-01</td>
+</tr>
+<tr>
+<td>BE-03</td>
+<td>Criar endpoint <code>POST /api/v2/eventos/{usuarioId}/tendencia-periodo</code> em <code>EventosController</code></td>
+<td>@Thor</td>
+<td>BE-02</td>
+</tr>
+<tr>
+<td>BE-04</td>
+<td>Criar DTO <code>MediaTimeResposta</code></td>
+<td>@Vision</td>
+<td>—</td>
+</tr>
+<tr>
+<td>BE-05</td>
+<td>Criar serviço <code>MediaTimeService</code> com lógica de agregação por time</td>
+<td>@Vision</td>
+<td>BE-04</td>
+</tr>
+<tr>
+<td>BE-06</td>
+<td>Criar endpoint <code>POST /api/v2/eventos/{usuarioId}/media-time</code> em <code>EventosController</code></td>
+<td>@Vision</td>
+<td>BE-05</td>
+</tr>
+<tr>
+<td>BE-07</td>
+<td>Adicionar campo <code>focoMedioSegundos</code> em <code>ResumoPeriodoColaboradorResponse</code> + cálculo em <code>TimelineColaboradorService</code></td>
+<td>@Vision</td>
+<td>—</td>
+</tr>
+<tr>
+<td>BE-08</td>
+<td>Criar endpoint <code>POST /api/v2/eventos/{usuarioId}/timeline/completo</code> (v2 com <code>accessService</code>)</td>
+<td>@Thor</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fase-2-frontend-servicos-e-modelos">FASE 2 — Frontend: serviços e modelos<a class="headerlink" href="#fase-2-frontend-servicos-e-modelos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tarefa</th>
+<th>Responsável</th>
+<th>Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FE-01</td>
+<td>Criar modelos TypeScript <code>TendenciaPeriodoResponse</code>, <code>DiaTendencia</code>, <code>SessaoFoco</code>, <code>MediaTimeResponse</code></td>
+<td>@Miles</td>
+<td>BE-01 (contrato)</td>
+</tr>
+<tr>
+<td>FE-02</td>
+<td>Adicionar métodos <code>tendenciaPeriodo()</code>, <code>mediaTime()</code>, <code>timelineCompletoV2()</code> no service</td>
+<td>@Miles</td>
+<td>FE-01</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fase-3-frontend-aba-dia-a-dia">FASE 3 — Frontend: aba Dia a Dia<a class="headerlink" href="#fase-3-frontend-aba-dia-a-dia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tarefa</th>
+<th>Responsável</th>
+<th>Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FE-03</td>
+<td>Criar <code>DateNavComponent</code> (navegação de datas)</td>
+<td>@Miles</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-04</td>
+<td>Criar <code>DiaDiaKpisComponent</code> (4 cards KPI do dia)</td>
+<td>@Miles</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-05</td>
+<td>Criar <code>FraseAcionavelDiaComponent</code> com lógica de geração</td>
+<td>@Miles</td>
+<td>FE-04</td>
+</tr>
+<tr>
+<td>FE-06</td>
+<td>Mover e renomear <code>visao-geral-timeline</code> → <code>timeline-24h.component</code></td>
+<td>@Miles</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-07</td>
+<td>Mover e renomear <code>visao-geral-eventos</code> → <code>eventos-detalhados.component</code></td>
+<td>@Miles</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-08</td>
+<td>Criar <code>TopAppsDiaComponent</code> (ou extrair componente compartilhado)</td>
+<td>@Miles</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-09</td>
+<td>Criar <code>TabDiaDiaComponent</code> — orquestra FE-03..08, chama <code>timelineCompletoV2()</code></td>
+<td>@Peter</td>
+<td>FE-02, FE-03..08</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fase-4-frontend-aba-resumo">FASE 4 — Frontend: aba Resumo<a class="headerlink" href="#fase-4-frontend-aba-resumo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tarefa</th>
+<th>Responsável</th>
+<th>Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FE-10</td>
+<td>Criar <code>PillPeriodoComponent</code> (pills + calendário custom)</td>
+<td>@Miles</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-11</td>
+<td>Criar <code>ResumoKpisComponent</code> com linha comparativa do time</td>
+<td>@Miles</td>
+<td>FE-01</td>
+</tr>
+<tr>
+<td>FE-12</td>
+<td>Criar <code>TendenciaJornadaComponent</code> (barras CSS por dia)</td>
+<td>@Peter</td>
+<td>FE-01</td>
+</tr>
+<tr>
+<td>FE-13</td>
+<td>Criar <code>TendenciaFocoComponent</code> (barras empilhadas CSS)</td>
+<td>@Peter</td>
+<td>FE-01</td>
+</tr>
+<tr>
+<td>FE-14</td>
+<td>Criar <code>DonutDistribuicaoComponent</code> (PrimeNG <code>p-chart</code>)</td>
+<td>@Miles</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-15</td>
+<td>Criar <code>TopAppsPeriodoComponent</code></td>
+<td>@Miles</td>
+<td>FE-08 (componente base)</td>
+</tr>
+<tr>
+<td>FE-16</td>
+<td>Criar <code>FraseAcionavelFocoComponent</code></td>
+<td>@Miles</td>
+<td>FE-01</td>
+</tr>
+<tr>
+<td>FE-17</td>
+<td>Criar <code>TabResumoComponent</code> — orquestra FE-10..16, <code>forkJoin</code> nas 3 APIs</td>
+<td>@Peter</td>
+<td>FE-02, FE-10..16</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fase-5-frontend-integracao-no-detalhe-do-colaborador">FASE 5 — Frontend: integração no detalhe do colaborador<a class="headerlink" href="#fase-5-frontend-integracao-no-detalhe-do-colaborador" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tarefa</th>
+<th>Responsável</th>
+<th>Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FE-18</td>
+<td>Atualizar <code>ColaboradorDetalheComponent</code>: renomear abas, trocar renderização, limpar estado legado</td>
+<td>@Peter</td>
+<td>FE-09, FE-17</td>
+</tr>
+<tr>
+<td>FE-19</td>
+<td>Declarar novos componentes no <code>ColaboradoresModule</code></td>
+<td>@Peter</td>
+<td>FE-09, FE-17</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fase-6-qa-e-cleanup">FASE 6 — QA e cleanup<a class="headerlink" href="#fase-6-qa-e-cleanup" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tarefa</th>
+<th>Responsável</th>
+<th>Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QA-01</td>
+<td>Validar Dia a Dia: KPIs do dia, timeline, eventos paginados, frase acionável</td>
+<td>@Natasha</td>
+<td>FE-18</td>
+</tr>
+<tr>
+<td>QA-02</td>
+<td>Validar Resumo: KPIs médios, comparativo time, tendência jornada, tendência foco, donut</td>
+<td>@Natasha</td>
+<td>FE-18</td>
+</tr>
+<tr>
+<td>QA-03</td>
+<td>Validar responsividade (&lt; 768px): empilhamento das colunas</td>
+<td>@Natasha</td>
+<td>FE-18</td>
+</tr>
+<tr>
+<td>QA-04</td>
+<td>Remover componentes legados (<code>tab-visao-geral</code>, <code>tab-indicadores</code>) após aprovação</td>
+<td>@Peter</td>
+<td>QA-01, QA-02</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pontos-de-atencao">Pontos de atenção<a class="headerlink" href="#pontos-de-atencao" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Multitenancy:</strong> todos os endpoints v2 usam <code>accessService.exigirAcessoAoUsuario(usuarioId)</code> que já valida <code>tenant_id</code>. Não dispensar esse check.</p>
+</li>
+<li>
+<p><strong>Performance — <code>media-time</code>:</strong> se o time tiver muitos membros e o período for longo (30 dias), o cálculo síncrono pode ser lento. @Vision deve medir o tempo de resposta com dados reais e avaliar se é necessário cachear ou calcular assincronamente. Threshold aceitável: &lt; 2s.</p>
+</li>
+<li>
+<p><strong>Colaborador sem time:</strong> endpoint <code>/media-time</code> retorna <code>membrosConsiderados: 0</code> e campos nulos. O <code>ResumoKpisComponent</code> deve esconder a linha comparativa nesses casos — não mostrar "Média do time: --".</p>
+</li>
+<li>
+<p><strong>Fuso horário:</strong> <code>LocalDate</code> no backend não tem fuso. Frontend envia datas no padrão ISO <code>yyyy-MM-dd</code>. Sem offset de timezone. Manter comportamento atual.</p>
+</li>
+<li>
+<p><strong>Rollback seguro:</strong> abas antigas (<code>tab-visao-geral</code>, <code>tab-indicadores</code>) ficam no código até <code>QA-04</code> ser aprovado. Renomear via toggle de aba no <code>ColaboradorDetalheComponent</code> é suficiente para esconder sem deletar.</p>
+</li>
+</ol>
+<hr />
+<h2 id="h10-distribuicao-de-horarios-de-foco-refinamento-tecnico">H10 — Distribuição de horários de foco (refinamento técnico)<a class="headerlink" href="#h10-distribuicao-de-horarios-de-foco-refinamento-tecnico" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Responsável: @Tony | Data: 2026-04-06</p>
+</blockquote>
+<h3 id="contexto-e-diagnostico">Contexto e diagnóstico<a class="headerlink" href="#contexto-e-diagnostico" title="Permanent link">&para;</a></h3>
+<p>A H10 pede que, ao lado da frase acionável do <code>TendenciaFocoComponent</code>, apareça a distribuição percentual das sessões de foco por faixa horária (manhã / tarde / noite). O backend <strong>já tem todos os dados necessários</strong>: o <code>TendenciaPeriodoService</code> identifica, monta e devolve sessões de foco individuais com <code>duracaoSegundos</code> e <code>faixa</code>, e os eventos brutos carregados do banco via <code>EventoJanelaRepository</code> e <code>EventoOciosidadeRepository</code> contêm <code>iniciadoEm</code> como <code>Instant</code> (timestamp completo com fuso <code>America/Sao_Paulo</code>). A conversão <code>ev.getInicio().atZone(ZONA).toLocalDate()</code> já está implementada no service — trivial estender para <code>toLocalTime()</code> e classificar por faixa horária.</p>
+<p><strong>Não é necessária nova query ao banco.</strong> Os eventos já são carregados para o período inteiro (4 queries). A classificação por faixa horária é computada em memória sobre os mesmos blocos ATIVIDADE que já formam as sessões.</p>
+<hr />
+<h3 id="backend">Backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h3>
+<h4 id="1-novo-dto-faixahorariaresposta">1. Novo DTO: <code>FaixaHorariaResposta</code><a class="headerlink" href="#1-novo-dto-faixahorariaresposta" title="Permanent link">&para;</a></h4>
+<p>Criar o arquivo <code>dto/FaixaHorariaResposta.java</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.olimpo.manager.dto</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">lombok.Builder</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">lombok.Getter</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nd">@Getter</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="nd">@Builder</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FaixaHorariaResposta</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalSessoes</span><span class="p">;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tempoTotalMinutos</span><span class="p">;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">percentual</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="2-novo-dto-distribuicaofocoporfaixaresposta">2. Novo DTO: <code>DistribuicaoFocoPorFaixaResposta</code><a class="headerlink" href="#2-novo-dto-distribuicaofocoporfaixaresposta" title="Permanent link">&para;</a></h4>
+<p>Criar o arquivo <code>dto/DistribuicaoFocoPorFaixaResposta.java</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.olimpo.manager.dto</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">lombok.Builder</span><span class="p">;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">lombok.Getter</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nd">@Getter</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="nd">@Builder</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DistribuicaoFocoPorFaixaResposta</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">FaixaHorariaResposta</span><span class="w"> </span><span class="n">manha</span><span class="p">;</span><span class="w">   </span><span class="c1">// 06:00–11:59</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">FaixaHorariaResposta</span><span class="w"> </span><span class="n">tarde</span><span class="p">;</span><span class="w">   </span><span class="c1">// 12:00–17:59</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">FaixaHorariaResposta</span><span class="w"> </span><span class="n">noite</span><span class="p">;</span><span class="w">   </span><span class="c1">// 18:00–05:59</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="3-extensao-do-tendenciaperiodoresposta">3. Extensão do <code>TendenciaPeriodoResposta</code><a class="headerlink" href="#3-extensao-do-tendenciaperiodoresposta" title="Permanent link">&para;</a></h4>
+<p>Adicionar o campo <code>distribuicaoFocoPorFaixa</code> no DTO existente <code>TendenciaPeriodoResposta.java</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// Em TendenciaPeriodoResposta.java — adicionar campo:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">private</span><span class="w"> </span><span class="n">DistribuicaoFocoPorFaixaResposta</span><span class="w"> </span><span class="n">distribuicaoFocoPorFaixa</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Decisão de localização:</strong> o campo vai em <code>TendenciaPeriodoResposta</code> (não em <code>ResumoPeriodoColaboradorResponse</code>) porque a distribuição é derivada das sessões de foco por dia — dados já calculados pelo <code>TendenciaPeriodoService</code>. Adicionar no <code>resumo-periodo</code> obrigaria duplicar a lógica de sessões naquele service, que hoje só trabalha com KPIs agregados. O frontend já consome <code>tendencia-periodo</code> no <code>TabResumoComponent</code> via <code>forkJoin</code>, portanto nenhuma chamada adicional é necessária.</p>
+<h4 id="4-logica-de-calculo-no-tendenciaperiodoservice">4. Lógica de cálculo no <code>TendenciaPeriodoService</code><a class="headerlink" href="#4-logica-de-calculo-no-tendenciaperiodoservice" title="Permanent link">&para;</a></h4>
+<p>O <code>TendenciaPeriodoService</code> já itera sobre <code>List&lt;BlocoTemporalResposta&gt;</code> filtrados por <code>ATIVIDADE</code> no método <code>calcularSessoesFocoIndividuais</code>. O horário de início de cada bloco está disponível como <code>LocalTime inicioBloco = LocalTime.parse(bloco.getInicio())</code>.</p>
+<p>Adicionar método privado <code>calcularDistribuicaoPorFaixa</code> no <code>TendenciaPeriodoService</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">private</span><span class="w"> </span><span class="n">DistribuicaoFocoPorFaixaResposta</span><span class="w"> </span><span class="nf">calcularDistribuicaoPorFaixa</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">DiaTendenciaResposta</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dias</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sessManha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">sessTarde</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">sessNoite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">minManha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">minTarde</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">minNoite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">DiaTendenciaResposta</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">dias</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">        </span><span class="c1">// Necessário que DiaTendenciaResposta exponha os blocos de atividade com horário de início</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">        </span><span class="c1">// Ver nota de implementação abaixo</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">SessaoFocoComInicioInterno</span><span class="w"> </span><span class="n">sessao</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">dia</span><span class="p">.</span><span class="na">getSessoesComInicio</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">            </span><span class="n">LocalTime</span><span class="w"> </span><span class="n">inicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sessao</span><span class="p">.</span><span class="na">getHorarioInicio</span><span class="p">();</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">            </span><span class="kt">long</span><span class="w"> </span><span class="n">minutos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sessao</span><span class="p">.</span><span class="na">getDuracaoSegundos</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inicio</span><span class="p">.</span><span class="na">getHour</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">inicio</span><span class="p">.</span><span class="na">getHour</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">                </span><span class="n">sessManha</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="n">minManha</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">minutos</span><span class="p">;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inicio</span><span class="p">.</span><span class="na">getHour</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">inicio</span><span class="p">.</span><span class="na">getHour</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">                </span><span class="n">sessTarde</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="n">minTarde</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">minutos</span><span class="p">;</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">                </span><span class="n">sessNoite</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="n">minNoite</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">minutos</span><span class="p">;</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">totalSessoes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sessManha</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sessTarde</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sessNoite</span><span class="p">;</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DistribuicaoFocoPorFaixaResposta</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">            </span><span class="p">.</span><span class="na">manha</span><span class="p">(</span><span class="n">FaixaHorariaResposta</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">                    </span><span class="p">.</span><span class="na">totalSessoes</span><span class="p">(</span><span class="n">sessManha</span><span class="p">)</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">                    </span><span class="p">.</span><span class="na">tempoTotalMinutos</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">minManha</span><span class="p">)</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">                    </span><span class="p">.</span><span class="na">percentual</span><span class="p">(</span><span class="n">totalSessoes</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">0f</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="n">sessManha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">totalSessoes</span><span class="p">)</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="w">                    </span><span class="p">.</span><span class="na">build</span><span class="p">())</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="w">            </span><span class="p">.</span><span class="na">tarde</span><span class="p">(</span><span class="n">FaixaHorariaResposta</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">                    </span><span class="p">.</span><span class="na">totalSessoes</span><span class="p">(</span><span class="n">sessTarde</span><span class="p">)</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="w">                    </span><span class="p">.</span><span class="na">tempoTotalMinutos</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">minTarde</span><span class="p">)</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="w">                    </span><span class="p">.</span><span class="na">percentual</span><span class="p">(</span><span class="n">totalSessoes</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">0f</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="n">sessTarde</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">totalSessoes</span><span class="p">)</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="w">                    </span><span class="p">.</span><span class="na">build</span><span class="p">())</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="w">            </span><span class="p">.</span><span class="na">noite</span><span class="p">(</span><span class="n">FaixaHorariaResposta</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">                    </span><span class="p">.</span><span class="na">totalSessoes</span><span class="p">(</span><span class="n">sessNoite</span><span class="p">)</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="w">                    </span><span class="p">.</span><span class="na">tempoTotalMinutos</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">minNoite</span><span class="p">)</span>
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="w">                    </span><span class="p">.</span><span class="na">percentual</span><span class="p">(</span><span class="n">totalSessoes</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">0f</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="n">sessNoite</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">totalSessoes</span><span class="p">)</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="w">                    </span><span class="p">.</span><span class="na">build</span><span class="p">())</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="w">            </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Nota de implementação — horário de início das sessões:</strong></p>
+<p>O método <code>calcularSessoesFocoIndividuais</code> já lê <code>LocalTime inicioBloco = LocalTime.parse(bloco.getInicio())</code> para cada bloco ATIVIDADE. O ponto de início de cada sessão agregada corresponde ao <code>inicioBloco</code> do <strong>primeiro bloco</strong> da sessão (antes de entrar no loop de gap). @Thor deve:</p>
+<ol>
+<li>Refatorar <code>calcularSessoesFocoIndividuais</code> para capturar e retornar o <code>horarioInicio</code> de cada sessão — ou criar uma estrutura interna <code>SessaoFocoComInicio</code> (não exposta na API) usada apenas para o cálculo da distribuição.</li>
+<li>Passar essa lista estendida para <code>calcularDistribuicaoPorFaixa</code> antes de montar o <code>TendenciaPeriodoResposta</code>.</li>
+<li>O <code>SessaoFocoDiaResposta</code> (DTO de API) <strong>não precisa ser alterado</strong> — o <code>horarioInicio</code> é usado apenas internamente para calcular a distribuição e não deve ser serializado.</li>
+</ol>
+<p><strong>Formato de <code>bloco.getInicio()</code>:</strong> os blocos usam <code>String</code> no formato <code>"HH:mm"</code> ou <code>"HH:mm:ss"</code> — verificar o formato exato em <code>BlocoTemporalResposta</code> antes de implementar o <code>LocalTime.parse</code>. Se necessário, usar <code>LocalTime.parse(bloco.getInicio(), DateTimeFormatter.ofPattern("HH:mm"))</code>.</p>
+<h4 id="5-integracao-no-tendenciaperiodoservicecalcular">5. Integração no <code>TendenciaPeriodoService.calcular()</code><a class="headerlink" href="#5-integracao-no-tendenciaperiodoservicecalcular" title="Permanent link">&para;</a></h4>
+<p>No método <code>calcular()</code>, após montar a lista <code>dias</code>, invocar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">DistribuicaoFocoPorFaixaResposta</span><span class="w"> </span><span class="n">distribuicao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularDistribuicaoPorFaixa</span><span class="p">(</span><span class="n">dias</span><span class="p">);</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">return</span><span class="w"> </span><span class="n">TendenciaPeriodoResposta</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="p">.</span><span class="na">colaboradorId</span><span class="p">(</span><span class="n">usuarioId</span><span class="p">)</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">        </span><span class="p">.</span><span class="na">dataInicio</span><span class="p">(</span><span class="n">dataInicio</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">        </span><span class="p">.</span><span class="na">dataFim</span><span class="p">(</span><span class="n">dataFim</span><span class="p">)</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">        </span><span class="p">.</span><span class="na">diasConsiderados</span><span class="p">(...)</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">        </span><span class="p">.</span><span class="na">dias</span><span class="p">(</span><span class="n">dias</span><span class="p">)</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">        </span><span class="p">.</span><span class="na">distribuicaoFocoPorFaixa</span><span class="p">(</span><span class="n">distribuicao</span><span class="p">)</span><span class="w">   </span><span class="c1">// campo novo</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">        </span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</code></pre></div>
+<h4 id="6-nenhuma-alteracao-no-eventoscontroller">6. Nenhuma alteração no <code>EventosController</code><a class="headerlink" href="#6-nenhuma-alteracao-no-eventoscontroller" title="Permanent link">&para;</a></h4>
+<p>O endpoint <code>POST /api/v2/eventos/{usuarioId}/tendencia-periodo</code> já existe e já retorna <code>TendenciaPeriodoResposta</code>. Como o campo <code>distribuicaoFocoPorFaixa</code> é adicionado ao DTO, ele será serializado automaticamente por Jackson. <strong>Nenhuma alteração no controller é necessária.</strong></p>
+<p><strong>Responsável backend:</strong> @Thor</p>
+<hr />
+<h3 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h3>
+<h4 id="1-novos-modelos-typescript">1. Novos modelos TypeScript<a class="headerlink" href="#1-novos-modelos-typescript" title="Permanent link">&para;</a></h4>
+<p>Em <code>tendencia-periodo.models.ts</code> (ou no próprio <code>tab-resumo.component.ts</code> onde as interfaces já estão declaradas), adicionar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">// Adicionar em tab-resumo.component.ts (junto com DiaTendenciaApi, SessaoFocoApi, etc.)</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">FaixaHoraria</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="nx">totalSessoes</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="nx">tempoTotalMinutos</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span><span class="nx">percentual</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">}</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">DistribuicaoFocoPorFaixa</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">  </span><span class="nx">manha</span><span class="o">:</span><span class="w"> </span><span class="kt">FaixaHoraria</span><span class="p">;</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">  </span><span class="nx">tarde</span><span class="o">:</span><span class="w"> </span><span class="kt">FaixaHoraria</span><span class="p">;</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">  </span><span class="nx">noite</span><span class="o">:</span><span class="w"> </span><span class="kt">FaixaHoraria</span><span class="p">;</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="p">}</span>
+</code></pre></div>
+<p>Estender <code>TendenciaPeriodoResponse</code> já declarada em <code>tab-resumo.component.ts</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">TendenciaPeriodoResponse</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="nx">colaboradorId</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="nx">dataInicio</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="nx">dataFim</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">  </span><span class="nx">dias</span><span class="o">:</span><span class="w"> </span><span class="kt">DiaTendenciaApi</span><span class="p">[];</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">  </span><span class="nx">distribuicaoFocoPorFaixa?</span><span class="o">:</span><span class="w"> </span><span class="kt">DistribuicaoFocoPorFaixa</span><span class="p">;</span><span class="w">  </span><span class="c1">// campo novo — opcional por segurança</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="2-novos-input-no-tendenciafococomponent">2. Novos <code>@Input()</code> no <code>TendenciaFocoComponent</code><a class="headerlink" href="#2-novos-input-no-tendenciafococomponent" title="Permanent link">&para;</a></h4>
+<p>Em <code>tendencia-foco.component.ts</code>, adicionar dois <code>@Input()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">@Input</span><span class="p">()</span><span class="w"> </span><span class="nx">distribuicao</span><span class="o">:</span><span class="w"> </span><span class="kt">DistribuicaoFocoPorFaixa</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="c1">// distribuicao: objeto com manha/tarde/noite recebido do TabResumoComponent</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="c1">// Quando null (sem sessões no período), a seção não é exibida no template</span>
+</code></pre></div>
+<p>O tipo <code>DistribuicaoFocoPorFaixa</code> deve ser importado de <code>tab-resumo.component.ts</code> ou extraído para um arquivo de modelos compartilhado se o tamanho do componente justificar.</p>
+<h4 id="3-propagacao-no-tabresumocomponent">3. Propagação no <code>TabResumoComponent</code><a class="headerlink" href="#3-propagacao-no-tabresumocomponent" title="Permanent link">&para;</a></h4>
+<p>No <code>atualizarTendencias()</code> de <code>tab-resumo.component.ts</code>, capturar o campo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// Adicionar propriedade ao componente:</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nx">distribuicaoFoco</span><span class="o">:</span><span class="w"> </span><span class="kt">DistribuicaoFocoPorFaixa</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="c1">// Em atualizarTendencias():</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">this</span><span class="p">.</span><span class="nx">distribuicaoFoco</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tendencia</span><span class="p">.</span><span class="nx">distribuicaoFocoPorFaixa</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</code></pre></div>
+<p>No template <code>tab-resumo.component.html</code>, passar o input para o componente de tendência:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">app-tendencia-foco</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>  <span class="err">[</span><span class="na">dias</span><span class="err">]="</span><span class="na">diasFoco</span><span class="err">"</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>  <span class="err">[</span><span class="na">totalSessoes</span><span class="err">]="</span><span class="na">totalSessoesFoco</span><span class="err">"</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>  <span class="err">[</span><span class="na">maiorSessaoFormatada</span><span class="err">]="</span><span class="na">maiorSessaoFormatada</span><span class="err">"</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>  <span class="err">[</span><span class="na">tempoTotalFocoFormatado</span><span class="err">]="</span><span class="na">tempoTotalFocoFormatado</span><span class="err">"</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>  <span class="err">[</span><span class="na">frase</span><span class="err">]="</span><span class="na">fraseFoco</span><span class="err">?.</span><span class="na">texto</span><span class="err">"</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>  <span class="err">[</span><span class="na">fraseTipo</span><span class="err">]="</span><span class="na">fraseFoco</span><span class="err">?.</span><span class="na">tipo</span><span class="err">"</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>  <span class="err">[</span><span class="na">distribuicao</span><span class="err">]="</span><span class="na">distribuicaoFoco</span><span class="err">"</span><span class="p">&gt;</span>   <span class="cm">&lt;!-- novo binding --&gt;</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="p">&lt;/</span><span class="nt">app-tendencia-foco</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="4-exibicao-no-template-tendencia-fococomponenthtml">4. Exibição no template <code>tendencia-foco.component.html</code><a class="headerlink" href="#4-exibicao-no-template-tendencia-fococomponenthtml" title="Permanent link">&para;</a></h4>
+<p>Adicionar a seção abaixo da frase acionável existente, condicionada a <code>distribuicao</code> não nulo e <code>totalSessoes &gt; 0</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="cm">&lt;!-- Seção de distribuição por faixa horária — exibir somente quando há sessões --&gt;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"distribuicao-faixa"</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">"distribuicao &amp;&amp; totalSessoes &gt; 0"</span><span class="p">&gt;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"distribuicao-pills"</span><span class="p">&gt;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    <span class="cm">&lt;!-- Manhã --&gt;</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"pill"</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>          <span class="err">[</span><span class="na">class</span><span class="err">.</span><span class="na">pill--destaque</span><span class="err">]="</span><span class="na">faixaDominante </span><span class="o">=</span><span class="s">==</span> <span class="err">'</span><span class="na">manha</span><span class="err">'"</span><span class="p">&gt;</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>      Manhã {{ percentualInteiro(distribuicao.manha.percentual) }}%
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    <span class="cm">&lt;!-- Tarde --&gt;</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"pill"</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>          <span class="err">[</span><span class="na">class</span><span class="err">.</span><span class="na">pill--destaque</span><span class="err">]="</span><span class="na">faixaDominante </span><span class="o">=</span><span class="s">==</span> <span class="err">'</span><span class="na">tarde</span><span class="err">'"</span><span class="p">&gt;</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>      Tarde {{ percentualInteiro(distribuicao.tarde.percentual) }}%
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>    <span class="cm">&lt;!-- Noite --&gt;</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"pill"</span>
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>          <span class="err">[</span><span class="na">class</span><span class="err">.</span><span class="na">pill--destaque</span><span class="err">]="</span><span class="na">faixaDominante </span><span class="o">=</span><span class="s">==</span> <span class="err">'</span><span class="na">noite</span><span class="err">'"</span><span class="p">&gt;</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>      Noite {{ percentualInteiro(distribuicao.noite.percentual) }}%
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"distribuicao-frase"</span><span class="p">&gt;</span>{{ fraseDistribuicao }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="5-logica-typescript-no-tendenciafococomponent">5. Lógica TypeScript no <code>TendenciaFocoComponent</code><a class="headerlink" href="#5-logica-typescript-no-tendenciafococomponent" title="Permanent link">&para;</a></h4>
+<p>Adicionar getters e método no componente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="cm">/** Faixa com maior percentual de sessões. */</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nx">get</span><span class="w"> </span><span class="nx">faixaDominante</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="s1">'manha'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'tarde'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'noite'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">distribuicao</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">manha</span><span class="p">,</span><span class="w"> </span><span class="nx">tarde</span><span class="p">,</span><span class="w"> </span><span class="nx">noite</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">distribuicao</span><span class="p">;</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">manha</span><span class="p">.</span><span class="nx">percentual</span><span class="p">,</span><span class="w"> </span><span class="nx">tarde</span><span class="p">.</span><span class="nx">percentual</span><span class="p">,</span><span class="w"> </span><span class="nx">noite</span><span class="p">.</span><span class="nx">percentual</span><span class="p">);</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">max</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">manha</span><span class="p">.</span><span class="nx">percentual</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">max</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s1">'manha'</span><span class="p">;</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">tarde</span><span class="p">.</span><span class="nx">percentual</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">max</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s1">'tarde'</span><span class="p">;</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s1">'noite'</span><span class="p">;</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="p">}</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="cm">/** Frase descritiva automática conforme regras da spec. */</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="nx">get</span><span class="w"> </span><span class="nx">fraseDistribuicao</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">distribuicao</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s1">''</span><span class="p">;</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">manha</span><span class="p">,</span><span class="w"> </span><span class="nx">tarde</span><span class="p">,</span><span class="w"> </span><span class="nx">noite</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">distribuicao</span><span class="p">;</span>
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">manha</span><span class="p">.</span><span class="nx">percentual</span><span class="p">,</span><span class="w"> </span><span class="nx">tarde</span><span class="p">.</span><span class="nx">percentual</span><span class="p">,</span><span class="w"> </span><span class="nx">noite</span><span class="p">.</span><span class="nx">percentual</span><span class="p">);</span>
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">manha</span><span class="p">.</span><span class="nx">percentual</span><span class="p">,</span><span class="w"> </span><span class="nx">tarde</span><span class="p">.</span><span class="nx">percentual</span><span class="p">,</span><span class="w"> </span><span class="nx">noite</span><span class="p">.</span><span class="nx">percentual</span><span class="p">);</span>
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">min</span><span class="p">;</span>
+<a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a>
+<a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">diff</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s1">'Foco distribuído de forma equilibrada ao longo do dia.'</span><span class="p">;</span>
+<a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a>
+<a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dominante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">faixaDominante</span><span class="p">;</span>
+<a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">manha</span><span class="o">:</span><span class="w"> </span><span class="s1">'manhã'</span><span class="p">,</span><span class="w"> </span><span class="nx">tarde</span><span class="o">:</span><span class="w"> </span><span class="s1">'tarde'</span><span class="p">,</span><span class="w"> </span><span class="nx">noite</span><span class="o">:</span><span class="w"> </span><span class="s1">'noite'</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">pct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">max</span><span class="p">);</span>
+<a id="__codelineno-22-27" name="__codelineno-22-27" href="#__codelineno-22-27"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="sb">`Maior concentração de foco pela </span><span class="si">${</span><span class="nx">labels</span><span class="p">[</span><span class="nx">dominante</span><span class="o">!</span><span class="p">]</span><span class="si">}</span><span class="sb"> (</span><span class="si">${</span><span class="nx">pct</span><span class="si">}</span><span class="sb">% das sessões).`</span><span class="p">;</span>
+<a id="__codelineno-22-28" name="__codelineno-22-28" href="#__codelineno-22-28"></a><span class="p">}</span>
+<a id="__codelineno-22-29" name="__codelineno-22-29" href="#__codelineno-22-29"></a>
+<a id="__codelineno-22-30" name="__codelineno-22-30" href="#__codelineno-22-30"></a><span class="cm">/** Arredonda percentual para inteiro. */</span>
+<a id="__codelineno-22-31" name="__codelineno-22-31" href="#__codelineno-22-31"></a><span class="nx">percentualInteiro</span><span class="p">(</span><span class="nx">valor</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-32" name="__codelineno-22-32" href="#__codelineno-22-32"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">valor</span><span class="p">);</span>
+<a id="__codelineno-22-33" name="__codelineno-22-33" href="#__codelineno-22-33"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="6-scss-no-tendencia-fococomponentscss">6. SCSS no <code>tendencia-foco.component.scss</code><a class="headerlink" href="#6-scss-no-tendencia-fococomponentscss" title="Permanent link">&para;</a></h4>
+<p>Seguir o design system (border-radius <code>14px</code>, azul-índigo para destaque, fonte 13px, cor <code>#64748b</code>):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nc">.distribuicao-faixa</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="nt">margin-top</span><span class="nd">:</span><span class="w"> </span><span class="nt">12px</span><span class="o">;</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">}</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="nc">.distribuicao-pills</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">  </span><span class="nt">gap</span><span class="nd">:</span><span class="w"> </span><span class="nt">8px</span><span class="o">;</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">  </span><span class="nt">flex-wrap</span><span class="nd">:</span><span class="w"> </span><span class="nt">wrap</span><span class="o">;</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">  </span><span class="nt">margin-bottom</span><span class="nd">:</span><span class="w"> </span><span class="nt">6px</span><span class="o">;</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="p">}</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="nc">.pill</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">inline-flex</span><span class="o">;</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">3px</span><span class="w"> </span><span class="nt">10px</span><span class="o">;</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">14px</span><span class="o">;</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">13px</span><span class="o">;</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#64748b</span><span class="o">;</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#e5e7eb</span><span class="o">;</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#f8fafc</span><span class="o">;</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="w">  </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">400</span><span class="o">;</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a><span class="w">  </span><span class="k">&amp;</span><span class="nt">--destaque</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a><span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#4f46e5</span><span class="o">;</span><span class="w">   </span><span class="o">//</span><span class="w"> </span><span class="nt">azul-índigo</span>
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a><span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#fff</span><span class="o">;</span>
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a><span class="w">    </span><span class="nt">border-color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#4f46e5</span><span class="o">;</span>
+<a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a><span class="w">    </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">500</span><span class="o">;</span>
+<a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-23-29" name="__codelineno-23-29" href="#__codelineno-23-29"></a><span class="p">}</span>
+<a id="__codelineno-23-30" name="__codelineno-23-30" href="#__codelineno-23-30"></a>
+<a id="__codelineno-23-31" name="__codelineno-23-31" href="#__codelineno-23-31"></a><span class="nc">.distribuicao-frase</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-32" name="__codelineno-23-32" href="#__codelineno-23-32"></a><span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">13px</span><span class="o">;</span>
+<a id="__codelineno-23-33" name="__codelineno-23-33" href="#__codelineno-23-33"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#64748b</span><span class="o">;</span>
+<a id="__codelineno-23-34" name="__codelineno-23-34" href="#__codelineno-23-34"></a><span class="w">  </span><span class="nt">margin</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-23-35" name="__codelineno-23-35" href="#__codelineno-23-35"></a><span class="w">  </span><span class="nt">line-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="nc">.4</span><span class="o">;</span>
+<a id="__codelineno-23-36" name="__codelineno-23-36" href="#__codelineno-23-36"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Responsável frontend:</strong> @Miles</p>
+<hr />
+<h3 id="tarefas-ordenadas-por-dependencia_1">Tarefas ordenadas por dependência<a class="headerlink" href="#tarefas-ordenadas-por-dependencia_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tarefa</th>
+<th>Responsável</th>
+<th>Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H10-BE-01</td>
+<td>Criar DTOs <code>FaixaHorariaResposta</code> e <code>DistribuicaoFocoPorFaixaResposta</code></td>
+<td>@Thor</td>
+<td>—</td>
+</tr>
+<tr>
+<td>H10-BE-02</td>
+<td>Adicionar campo <code>distribuicaoFocoPorFaixa</code> em <code>TendenciaPeriodoResposta</code></td>
+<td>@Thor</td>
+<td>H10-BE-01</td>
+</tr>
+<tr>
+<td>H10-BE-03</td>
+<td>Refatorar <code>calcularSessoesFocoIndividuais</code> em <code>TendenciaPeriodoService</code> para capturar <code>horarioInicio</code> de cada sessão (estrutura interna — não exposta na API)</td>
+<td>@Thor</td>
+<td>—</td>
+</tr>
+<tr>
+<td>H10-BE-04</td>
+<td>Implementar método <code>calcularDistribuicaoPorFaixa</code> em <code>TendenciaPeriodoService</code></td>
+<td>@Thor</td>
+<td>H10-BE-01, H10-BE-03</td>
+</tr>
+<tr>
+<td>H10-BE-05</td>
+<td>Integrar <code>calcularDistribuicaoPorFaixa</code> no método <code>calcular()</code> e popular o campo no <code>TendenciaPeriodoResposta</code> retornado</td>
+<td>@Thor</td>
+<td>H10-BE-02, H10-BE-04</td>
+</tr>
+<tr>
+<td>H10-FE-01</td>
+<td>Adicionar interfaces <code>FaixaHoraria</code> e <code>DistribuicaoFocoPorFaixa</code> e estender <code>TendenciaPeriodoResponse</code> com campo opcional em <code>tab-resumo.component.ts</code></td>
+<td>@Miles</td>
+<td>H10-BE-02 (contrato)</td>
+</tr>
+<tr>
+<td>H10-FE-02</td>
+<td>Adicionar <code>@Input() distribuicao</code> no <code>TendenciaFocoComponent</code> e implementar getters <code>faixaDominante</code>, <code>fraseDistribuicao</code> e método <code>percentualInteiro</code></td>
+<td>@Miles</td>
+<td>H10-FE-01</td>
+</tr>
+<tr>
+<td>H10-FE-03</td>
+<td>Adicionar bloco HTML da seção de distribuição (pills + frase) no <code>tendencia-foco.component.html</code></td>
+<td>@Miles</td>
+<td>H10-FE-02</td>
+</tr>
+<tr>
+<td>H10-FE-04</td>
+<td>Adicionar estilos SCSS das pills e frase no <code>tendencia-foco.component.scss</code></td>
+<td>@Miles</td>
+<td>H10-FE-03</td>
+</tr>
+<tr>
+<td>H10-FE-05</td>
+<td>Propagar <code>distribuicaoFoco</code> no <code>TabResumoComponent</code>: capturar em <code>atualizarTendencias()</code> e bindar no template</td>
+<td>@Miles</td>
+<td>H10-FE-02</td>
+</tr>
+<tr>
+<td>H10-QA-01</td>
+<td>Validar exibição das pills com dados reais (percentuais arredondados, pill dominante destacada, frase correta)</td>
+<td>@Natasha</td>
+<td>H10-FE-05</td>
+</tr>
+<tr>
+<td>H10-QA-02</td>
+<td>Validar caso sem sessões no período (seção não exibida)</td>
+<td>@Natasha</td>
+<td>H10-FE-05</td>
+</tr>
+<tr>
+<td>H10-QA-03</td>
+<td>Validar caso equilibrado (diferença &lt; 10pp → frase "distribuído de forma equilibrada")</td>
+<td>@Natasha</td>
+<td>H10-FE-05</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="pontos-de-atencao-especificos-da-h10">Pontos de atenção específicos da H10<a class="headerlink" href="#pontos-de-atencao-especificos-da-h10" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Formato de <code>bloco.getInicio()</code> em <code>BlocoTemporalResposta</code>:</strong> verificar se o campo é <code>"HH:mm"</code> ou <code>"HH:mm:ss"</code> antes de usar <code>LocalTime.parse</code>. Usar <code>DateTimeFormatter</code> explícito se o formato variar entre blocos.</p>
+</li>
+<li>
+<p><strong>Sessão que cruza meia-noite:</strong> raro mas possível (noite → madrugada). A faixa é classificada pelo <strong>horário de início</strong> da sessão, conforme a spec. Sessões que iniciam às 23:50 são <code>noite</code> mesmo que terminem na madrugada.</p>
+</li>
+<li>
+<p><strong>Rollback de campo opcional:</strong> o campo <code>distribuicaoFocoPorFaixa</code> é <code>@Nullable</code> no DTO e <code>optional</code> na interface TypeScript (<code>?</code>). Se por algum motivo o campo não vier na resposta (versão de backend desatualizada), o frontend não quebra — <code>*ngIf="distribuicao &amp;&amp; totalSessoes &gt; 0"</code> garante isso.</p>
+</li>
+<li>
+<p><strong>Percentual arredondado para exibição:</strong> o backend retorna <code>float</code> com casas decimais. O frontend arredonda com <code>Math.round()</code> para exibição — não truncar. A soma dos três arredondamentos pode resultar em 99% ou 101% em casos limite; isso é aceitável e equivale ao comportamento padrão de UI do design system.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

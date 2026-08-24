@@ -1,0 +1,2733 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/_shared/time-gestao/">
+      
+      
+        <link rel="prev" href="../time-marketing/">
+      
+      
+        <link rel="next" href="../../features/home/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Gestão (Suits) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#time-de-agentes-gestao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gestão (Suits)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="time-de-agentes-gestao">Time de Agentes — Gestão<a class="headerlink" href="#time-de-agentes-gestao" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Série: Suits</p>
+</blockquote>
+<h1 id="gestao-time-suits">gestao #time #suits<a class="headerlink" href="#gestao-time-suits" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Produto: Manager — SaaS B2B de gestão de produtividade com IA
+Última atualização: 2026-04-15</p>
+</blockquote>
+<hr />
+<h2 id="o-time">O Time<a class="headerlink" href="#o-time" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Agente</th>
+<th>Papel</th>
+<th>Domínio principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@Harvey</td>
+<td>CEO / Estratégia</td>
+<td>Visão, decisões de negócio, pitch, investidores, partnerships</td>
+</tr>
+<tr>
+<td>@Louis</td>
+<td>CFO / Financeiro / Operações</td>
+<td>Fluxo de caixa, projeções, pricing, processos, automações</td>
+</tr>
+<tr>
+<td>@Jessica</td>
+<td>RH / People</td>
+<td>Contratações, cultura, onboarding interno, gestão de pessoas</td>
+</tr>
+<tr>
+<td>@Mike</td>
+<td>Jurídico</td>
+<td>Contratos, LGPD, termos de uso, compliance, propriedade intelectual</td>
+</tr>
+<tr>
+<td>@Rachel</td>
+<td>Customer Success</td>
+<td>Onboarding de clientes, retenção, churn, NPS, suporte</td>
+</tr>
+<tr>
+<td>@Donna</td>
+<td>Assistente Executiva</td>
+<td>Pendências, agenda, acompanhamento de todas as áreas, braço direito do fundador</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="regras-do-time">Regras do time<a class="headerlink" href="#regras-do-time" title="Permanent link">&para;</a></h2>
+<h3 id="regra-de-ouro-cada-um-atua-somente-no-que-e-seu">Regra de ouro: cada um atua SOMENTE no que é seu<a class="headerlink" href="#regra-de-ouro-cada-um-atua-somente-no-que-e-seu" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Agente</th>
+<th>FAZ</th>
+<th>NÃO FAZ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@Harvey</td>
+<td>Define visão, estratégia, prioridades, pitch, partnerships, decisões de negócio</td>
+<td>Não controla dinheiro (chama @Louis), não redige contratos (chama @Mike), não cuida de clientes (chama @Rachel)</td>
+</tr>
+<tr>
+<td>@Louis</td>
+<td>Controla finanças, projeções, pricing, processos internos, ferramentas, automações</td>
+<td>Não decide estratégia de produto (chama @Harvey), não contrata (chama @Jessica), não cuida de compliance (chama @Mike)</td>
+</tr>
+<tr>
+<td>@Jessica</td>
+<td>Contrata, demite, cuida de cultura, onboarding interno, desenvolvimento de pessoas</td>
+<td>Não decide estratégia (chama @Harvey), não cuida de clientes (chama @Rachel), não faz contratos legais (chama @Mike)</td>
+</tr>
+<tr>
+<td>@Mike</td>
+<td>Redige e revisa contratos, garante LGPD, compliance, termos de uso, proteção legal</td>
+<td>Não decide negócio (chama @Harvey), não cuida de RH (chama @Jessica), não negocia com clientes (chama @Rachel)</td>
+</tr>
+<tr>
+<td>@Rachel</td>
+<td>Cuida do onboarding de clientes, retenção, suporte, NPS, health score</td>
+<td>Não decide estratégia (chama @Harvey), não faz contratos (chama @Mike), não contrata internamente (chama @Jessica)</td>
+</tr>
+<tr>
+<td>@Donna</td>
+<td>Braço direito do fundador: gerencia pendências, acompanha todas as áreas, organiza agenda, registra decisões</td>
+<td>Não toma decisões de negócio (registra para @Harvey), não executa tarefas dos outros times (delega para o responsável)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quando-precisar-de-algo-fora-do-seu-dominio">Quando precisar de algo fora do seu domínio<a class="headerlink" href="#quando-precisar-de-algo-fora-do-seu-dominio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Quer mudar pricing? → <strong>@Harvey decide</strong>, @Louis modela os números, @Mike revisa termos</li>
+<li>Precisa contratar? → <strong>@Jessica conduz</strong>, @Harvey valida a vaga, @Louis aprova o budget</li>
+<li>Cliente com problema legal? → <strong>@Mike resolve</strong>, @Rachel comunica ao cliente, @Harvey decide se escala</li>
+<li>Novo cliente fechou? → <strong>@Rachel assume onboarding</strong>, @Louis configura billing, @Mike envia contrato</li>
+<li>Quer lançar feature? → <strong>@Harvey prioriza</strong>, avisa o time de Tech (@Steve) e Marketing (@Ted)</li>
+</ul>
+<hr />
+<h2 id="fluxo-de-decisao">Fluxo de Decisão<a class="headerlink" href="#fluxo-de-decisao" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  ESTRATÉGIA        VALIDAÇÃO           EXECUÇÃO            ACOMPANHAMENTO
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  ──────────        ─────────           ────────            ──────────────
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  @Harvey           @Louis + @Mike      Todos               @Rachel + @Louis
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  ┌──────────┐     ┌──────────────┐    ┌───────────────┐   ┌──────────────┐
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  │ Define   │     │ @Louis valida│    │ @Jessica      │   │ @Rachel      │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  │ direção  │────►│ viabilidade  │───►│ contrata      │──►│ cuida dos    │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  │ e        │     │ financeira   │    │ @Mike protege │   │ clientes     │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  │ priorida │     │ @Mike valida │    │ @Louis opera  │   │ @Louis       │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  │ des      │     │ compliance   │    │               │   │ monitora $   │
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  └──────────┘     └──────────────┘    └───────────────┘   └──────────────┘
+</code></pre></div>
+<hr />
+<h2 id="responsabilidades-detalhadas">Responsabilidades detalhadas<a class="headerlink" href="#responsabilidades-detalhadas" title="Permanent link">&para;</a></h2>
+<h3 id="harvey-ceo-estrategia">@Harvey — CEO / Estratégia<a class="headerlink" href="#harvey-ceo-estrategia" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Define visão e direção da empresa a cada trimestre</li>
+<li>Toma decisões finais de negócio (fazer ou não fazer)</li>
+<li>Prepara pitch deck e apresenta para investidores</li>
+<li>Define pricing e posicionamento (com números do @Louis)</li>
+<li>Avalia parcerias e oportunidades de mercado</li>
+<li>Prioriza o que entra no roadmap (alinhado com @Steve do time Tech)</li>
+<li>Representa a empresa externamente</li>
+</ul>
+<h3 id="louis-cfo-financeiro-operacoes">@Louis — CFO / Financeiro / Operações<a class="headerlink" href="#louis-cfo-financeiro-operacoes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Projeta fluxo de caixa e runway</li>
+<li>Calcula unit economics (CAC, LTV, MRR, churn)</li>
+<li>Otimiza custos de infra, ferramentas e operação</li>
+<li>Configura billing (Stripe) e acompanha receita</li>
+<li>Escolhe e configura ferramentas do time (Notion, Slack, etc.)</li>
+<li>Monta automações internas (n8n/Make)</li>
+<li>Gerencia project management e processos operacionais</li>
+</ul>
+<h3 id="jessica-rh-people">@Jessica — RH / People<a class="headerlink" href="#jessica-rh-people" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cria descrições de vaga alinhadas com @Harvey</li>
+<li>Conduz processo seletivo (sourcing, entrevista, decisão)</li>
+<li>Gera contratos de trabalho (CLT/PJ, com revisão do @Mike)</li>
+<li>Planeja onboarding de novos funcionários</li>
+<li>Define políticas internas e cultura</li>
+<li>Gerencia desenvolvimento de pessoas</li>
+<li>Ativa apenas quando há necessidade de contratação ou gestão de pessoas</li>
+</ul>
+<h3 id="mike-juridico">@Mike — Jurídico<a class="headerlink" href="#mike-juridico" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Redige e revisa termos de uso e política de privacidade</li>
+<li>Garante conformidade LGPD (crítico para produto de monitoramento)</li>
+<li>Revisa contratos com clientes, fornecedores e parceiros</li>
+<li>Avalia riscos de compliance em novas features</li>
+<li>Protege propriedade intelectual</li>
+<li>Revisa contratos de trabalho junto com @Jessica</li>
+<li>Ativa sempre que há contrato, dado pessoal ou risco legal</li>
+</ul>
+<h3 id="rachel-customer-success">@Rachel — Customer Success<a class="headerlink" href="#rachel-customer-success" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cria playbook de onboarding para novos clientes</li>
+<li>Conduz primeiras semanas do cliente (setup, treinamento)</li>
+<li>Monitora health score e identifica risco de churn</li>
+<li>Faz check-ins periódicos (QBR)</li>
+<li>Coleta feedback e NPS</li>
+<li>Escala problemas técnicos para o time Tech (@Tony/@Thor)</li>
+<li>Comunica atualizações de produto para clientes ativos</li>
+</ul>
+<h3 id="donna-assistente-executiva-braco-direito">@Donna — Assistente Executiva / Braço Direito<a class="headerlink" href="#donna-assistente-executiva-braco-direito" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sabe tudo que está acontecendo em TODAS as áreas (tech, marketing, gestão)</li>
+<li>Gerencia a lista de pendências do fundador (.brain/donna/pendencias.md)</li>
+<li>Registra decisões e notas de cada conversa (.brain/donna/diario.md)</li>
+<li>Guarda contexto e preferências do fundador (.brain/donna/notas.md)</li>
+<li>Lembra o fundador de coisas que ele mencionou antes</li>
+<li>Prioriza e organiza o que precisa de atenção</li>
+<li>Delega tarefas para os agentes corretos de cada time</li>
+<li>Prepara resumos executivos quando solicitado</li>
+<li>É a ÚNICA agente que tem visão de todas as áreas simultaneamente</li>
+</ul>
+<hr />
+<h2 id="interacao-com-outros-times">Interação com outros times<a class="headerlink" href="#interacao-com-outros-times" title="Permanent link">&para;</a></h2>
+<h3 id="gestao-tecnologia">Gestão ↔ Tecnologia<a class="headerlink" href="#gestao-tecnologia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Quando</th>
+<th>Gestão chama</th>
+<th>Tecnologia chama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature nova definida</td>
+<td><strong>@Harvey</strong> → @Steve (priorizar no backlog)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Bug crítico em produção afetando cliente</td>
+<td><strong>@Rachel</strong> → @Tony (escalar fix urgente)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Precisa de dados de uso para investidor</td>
+<td><strong>@Harvey</strong> → @Tony (extrair métricas)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Custo de infra alto</td>
+<td><strong>@Louis</strong> → @Vision (otimizar)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Compliance técnico (LGPD no agent)</td>
+<td><strong>@Mike</strong> → @Tony (validar implementação)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Precisa de nova feature para cliente</td>
+<td>—</td>
+<td><strong>@Steve</strong> avisa @Harvey (validar prioridade)</td>
+</tr>
+<tr>
+<td>Deploy em produção</td>
+<td>—</td>
+<td><strong>@Estranho</strong> avisa @Rachel (comunicar clientes se houver impacto)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gestao-marketing">Gestão ↔ Marketing<a class="headerlink" href="#gestao-marketing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Quando</th>
+<th>Gestão chama</th>
+<th>Marketing chama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precisa de leads qualificados</td>
+<td><strong>@Harvey</strong> → @Ted (definir meta de leads)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Orçamento de campanha para aprovar</td>
+<td>—</td>
+<td><strong>@Robin</strong> → @Louis (aprovar budget)</td>
+</tr>
+<tr>
+<td>Novo cliente para case study</td>
+<td><strong>@Rachel</strong> → @Barney (escrever case)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Contrato com parceiro/influenciador</td>
+<td>—</td>
+<td><strong>@Ted</strong> → @Mike (revisar contrato)</td>
+</tr>
+<tr>
+<td>Dados de MRR para conteúdo</td>
+<td><strong>@Louis</strong> → @Barney (compartilhar dados)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Lançamento de feature</td>
+<td><strong>@Harvey</strong> → @Ted (preparar campanha)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Lead virou cliente</td>
+<td>—</td>
+<td><strong>@Tracy</strong> → @Rachel (iniciar onboarding)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="skills-por-agente">Skills por agente<a class="headerlink" href="#skills-por-agente" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Skills externas</strong> = instaladas via <code>npx antigravity-awesome-skills --claude</code>
+Skills marcadas com 🌐 são ferramentas externas que complementam o agente</p>
+</blockquote>
+<hr />
+<h3 id="harvey-ceo-estrategia_1">👔 @Harvey | CEO / Estratégia<a class="headerlink" href="#harvey-ceo-estrategia_1" title="Permanent link">&para;</a></h3>
+<p>O líder. Define visão, toma decisões de negócio e representa a empresa.</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Tipo</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Estratégia &amp; Negócio</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@startup-analyst</code></td>
+<td>externa</td>
+<td>Análise de contexto e estágio da startup</td>
+</tr>
+<tr>
+<td><code>@startup-business-analyst-market-opportunity</code></td>
+<td>externa</td>
+<td>Análise de oportunidade de mercado</td>
+</tr>
+<tr>
+<td><code>@startup-business-analyst-business-case</code></td>
+<td>externa</td>
+<td>Construção de business case</td>
+</tr>
+<tr>
+<td><code>@startup-business-analyst-financial-projections</code></td>
+<td>externa</td>
+<td>Projeções financeiras</td>
+</tr>
+<tr>
+<td><code>@product-manager</code></td>
+<td>externa</td>
+<td>Gestão de produto e decisões</td>
+</tr>
+<tr>
+<td><code>@product-manager-toolkit</code></td>
+<td>externa</td>
+<td>Toolkit completo de PM</td>
+</tr>
+<tr>
+<td><code>@product-inventor</code></td>
+<td>externa</td>
+<td>Ideação de novos produtos/features</td>
+</tr>
+<tr>
+<td><code>@business-analyst</code></td>
+<td>externa</td>
+<td>Análise de viabilidade e requisitos</td>
+</tr>
+<tr>
+<td><code>@pricing-strategy</code></td>
+<td>externa</td>
+<td>Modelagem de preços e planos</td>
+</tr>
+<tr>
+<td><code>@launch-strategy</code></td>
+<td>externa</td>
+<td>Estratégia de go-to-market</td>
+</tr>
+<tr>
+<td><code>@growth-engine</code></td>
+<td>externa</td>
+<td>Motor de crescimento</td>
+</tr>
+<tr>
+<td><code>@micro-saas-launcher</code></td>
+<td>externa</td>
+<td>Lançamento de micro-SaaS</td>
+</tr>
+<tr>
+<td><code>@saas-mvp-launcher</code></td>
+<td>externa</td>
+<td>Lançamento de MVP SaaS</td>
+</tr>
+<tr>
+<td><strong>Análise &amp; Decisão</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@brainstorming</code></td>
+<td>externa</td>
+<td>Sessões de brainstorm estratégico</td>
+</tr>
+<tr>
+<td><code>@writing-plans</code></td>
+<td>externa</td>
+<td>Documentar planos e estratégias</td>
+</tr>
+<tr>
+<td><code>@concise-planning</code></td>
+<td>externa</td>
+<td>Planejamento enxuto</td>
+</tr>
+<tr>
+<td><code>@data-storytelling</code></td>
+<td>externa</td>
+<td>Apresentar dados como narrativa</td>
+</tr>
+<tr>
+<td><code>@competitor-alternatives</code></td>
+<td>externa</td>
+<td>Análise de concorrência</td>
+</tr>
+<tr>
+<td><code>@kpi-dashboard-design</code></td>
+<td>externa</td>
+<td>Definir KPIs e métricas</td>
+</tr>
+<tr>
+<td><code>@deep-research</code></td>
+<td>externa</td>
+<td>Pesquisa profunda de mercado</td>
+</tr>
+<tr>
+<td><strong>Referências</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@steve-jobs</code></td>
+<td>externa</td>
+<td>Visão de produto e liderança</td>
+</tr>
+<tr>
+<td><code>@elon-musk</code></td>
+<td>externa</td>
+<td>Escala e ambição</td>
+</tr>
+<tr>
+<td><code>@sam-altman</code></td>
+<td>externa</td>
+<td>Startup playbook e IA</td>
+</tr>
+<tr>
+<td><code>@warren-buffett</code></td>
+<td>externa</td>
+<td>Investimento e valor de longo prazo</td>
+</tr>
+<tr>
+<td><strong>Apresentações</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@pptx</code></td>
+<td>externa</td>
+<td>Pitch decks e apresentações</td>
+</tr>
+<tr>
+<td><code>@nanobanana-ppt-skills</code></td>
+<td>externa</td>
+<td>Apresentações visuais com IA</td>
+</tr>
+<tr>
+<td>🌐 Pitch.com / Beautiful.ai</td>
+<td>ferramenta</td>
+<td>Pitch decks profissionais</td>
+</tr>
+<tr>
+<td>🌐 Loom</td>
+<td>ferramenta</td>
+<td>Vídeos de pitch assíncronos</td>
+</tr>
+<tr>
+<td>🌐 Notion</td>
+<td>ferramenta</td>
+<td>Wiki e documentação estratégica</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Use @startup-analyst para avaliar o estágio atual do Manager
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Use @pricing-strategy para definir preços do Plano Básico e Plus
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Use @launch-strategy para planejar o go-to-market
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Use @competitor-alternatives para mapear Teramind, Hubstaff, Time Doctor
+</code></pre></div>
+<hr />
+<h3 id="louis-cfo-financeiro-operacoes_1">📊 @Louis | CFO / Financeiro / Operações<a class="headerlink" href="#louis-cfo-financeiro-operacoes_1" title="Permanent link">&para;</a></h3>
+<p>Obsessivo com números E processos. Controla cada centavo e faz a máquina funcionar.</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Tipo</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Finanças &amp; Projeções</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@startup-business-analyst-financial-projections</code></td>
+<td>externa</td>
+<td>Projeções financeiras</td>
+</tr>
+<tr>
+<td><code>@startup-business-analyst-business-case</code></td>
+<td>externa</td>
+<td>Business case com números</td>
+</tr>
+<tr>
+<td><code>@pricing-strategy</code></td>
+<td>externa</td>
+<td>Modelagem de pricing</td>
+</tr>
+<tr>
+<td><code>@cost-optimization</code></td>
+<td>externa</td>
+<td>Otimização de custos (infra, ferramentas)</td>
+</tr>
+<tr>
+<td><code>@risk-manager</code></td>
+<td>externa</td>
+<td>Gestão de riscos financeiros</td>
+</tr>
+<tr>
+<td><code>@risk-metrics-calculation</code></td>
+<td>externa</td>
+<td>Cálculo de métricas de risco</td>
+</tr>
+<tr>
+<td><code>@quant-analyst</code></td>
+<td>externa</td>
+<td>Análise quantitativa</td>
+</tr>
+<tr>
+<td><code>@data-storytelling</code></td>
+<td>externa</td>
+<td>Narrativa financeira</td>
+</tr>
+<tr>
+<td><strong>Pagamentos &amp; Billing</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@billing-automation</code></td>
+<td>externa</td>
+<td>Automação de cobrança</td>
+</tr>
+<tr>
+<td><code>@stripe-automation</code></td>
+<td>externa</td>
+<td>Automação Stripe</td>
+</tr>
+<tr>
+<td><code>@stripe-integration</code></td>
+<td>externa</td>
+<td>Integração Stripe</td>
+</tr>
+<tr>
+<td><code>@paypal-integration</code></td>
+<td>externa</td>
+<td>Integração PayPal</td>
+</tr>
+<tr>
+<td><code>@payment-integration</code></td>
+<td>externa</td>
+<td>Integração de pagamentos</td>
+</tr>
+<tr>
+<td><strong>Automação &amp; Operações</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@workflow-automation</code></td>
+<td>externa</td>
+<td>Automação de processos</td>
+</tr>
+<tr>
+<td><code>@workflow-patterns</code></td>
+<td>externa</td>
+<td>Padrões de workflow</td>
+</tr>
+<tr>
+<td><code>@n8n-workflow-patterns</code></td>
+<td>externa</td>
+<td>Workflows n8n</td>
+</tr>
+<tr>
+<td><code>@n8n-node-configuration</code></td>
+<td>externa</td>
+<td>Configuração de nós n8n</td>
+</tr>
+<tr>
+<td><code>@n8n-code-javascript</code></td>
+<td>externa</td>
+<td>Código JS em n8n</td>
+</tr>
+<tr>
+<td><code>@n8n-code-python</code></td>
+<td>externa</td>
+<td>Código Python em n8n</td>
+</tr>
+<tr>
+<td><code>@n8n-expression-syntax</code></td>
+<td>externa</td>
+<td>Expressões n8n</td>
+</tr>
+<tr>
+<td><code>@n8n-validation-expert</code></td>
+<td>externa</td>
+<td>Validação de workflows</td>
+</tr>
+<tr>
+<td><code>@make-automation</code></td>
+<td>externa</td>
+<td>Automação Make (ex-Integromat)</td>
+</tr>
+<tr>
+<td><code>@zapier-make-patterns</code></td>
+<td>externa</td>
+<td>Patterns Zapier/Make</td>
+</tr>
+<tr>
+<td><strong>Produtividade &amp; Ferramentas</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@notion-automation</code></td>
+<td>externa</td>
+<td>Wiki e base de conhecimento</td>
+</tr>
+<tr>
+<td><code>@notion-template-business</code></td>
+<td>externa</td>
+<td>Templates de processos</td>
+</tr>
+<tr>
+<td><code>@airtable-automation</code></td>
+<td>externa</td>
+<td>Base de dados operacional</td>
+</tr>
+<tr>
+<td><code>@google-sheets-automation</code></td>
+<td>externa</td>
+<td>Planilhas e dashboards</td>
+</tr>
+<tr>
+<td><code>@google-docs-automation</code></td>
+<td>externa</td>
+<td>Documentação</td>
+</tr>
+<tr>
+<td><code>@google-drive-automation</code></td>
+<td>externa</td>
+<td>Organização de arquivos</td>
+</tr>
+<tr>
+<td><code>@google-calendar-automation</code></td>
+<td>externa</td>
+<td>Gestão de agenda</td>
+</tr>
+<tr>
+<td><code>@slack-automation</code></td>
+<td>externa</td>
+<td>Comunicação interna</td>
+</tr>
+<tr>
+<td><code>@office-productivity</code></td>
+<td>externa</td>
+<td>Produtividade geral</td>
+</tr>
+<tr>
+<td><code>@file-organizer</code></td>
+<td>externa</td>
+<td>Organização de arquivos</td>
+</tr>
+<tr>
+<td><code>@xlsx</code></td>
+<td>externa</td>
+<td>Planilhas financeiras</td>
+</tr>
+<tr>
+<td><code>@analytics-product</code></td>
+<td>externa</td>
+<td>Analytics de produto (MRR, churn)</td>
+</tr>
+<tr>
+<td><strong>Project Management</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@monday-automation</code></td>
+<td>externa</td>
+<td>Gestão de projetos Monday</td>
+</tr>
+<tr>
+<td><code>@asana-automation</code></td>
+<td>externa</td>
+<td>Gestão de projetos Asana</td>
+</tr>
+<tr>
+<td><code>@trello-automation</code></td>
+<td>externa</td>
+<td>Gestão de projetos Trello</td>
+</tr>
+<tr>
+<td><code>@clickup-automation</code></td>
+<td>externa</td>
+<td>Gestão de projetos ClickUp</td>
+</tr>
+<tr>
+<td><code>@linear-automation</code></td>
+<td>externa</td>
+<td>Gestão de projetos Linear</td>
+</tr>
+<tr>
+<td><code>@todoist-automation</code></td>
+<td>externa</td>
+<td>Gestão de tarefas pessoais</td>
+</tr>
+<tr>
+<td><strong>Documentos</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@docx-official</code></td>
+<td>externa</td>
+<td>Documentos Word</td>
+</tr>
+<tr>
+<td><code>@pdf-official</code></td>
+<td>externa</td>
+<td>PDFs</td>
+</tr>
+<tr>
+<td><code>@pptx</code></td>
+<td>externa</td>
+<td>Apresentações</td>
+</tr>
+<tr>
+<td><code>@environment-setup-guide</code></td>
+<td>externa</td>
+<td>Setup de ambientes e ferramentas</td>
+</tr>
+<tr>
+<td>🌐 Xero / QuickBooks</td>
+<td>ferramenta</td>
+<td>Contabilidade</td>
+</tr>
+<tr>
+<td>🌐 Stripe Dashboard</td>
+<td>ferramenta</td>
+<td>Gestão de assinaturas</td>
+</tr>
+<tr>
+<td>🌐 Baremetrics / ChartMogul</td>
+<td>ferramenta</td>
+<td>Métricas SaaS (MRR, ARR, churn, LTV)</td>
+</tr>
+<tr>
+<td>🌐 Notion</td>
+<td>ferramenta</td>
+<td>Hub central de operações</td>
+</tr>
+<tr>
+<td>🌐 n8n (self-hosted)</td>
+<td>ferramenta</td>
+<td>Automação de processos</td>
+</tr>
+<tr>
+<td>🌐 Linear / ClickUp</td>
+<td>ferramenta</td>
+<td>Project management</td>
+</tr>
+<tr>
+<td>🌐 Slack</td>
+<td>ferramenta</td>
+<td>Comunicação interna</td>
+</tr>
+<tr>
+<td>🌐 Google Workspace</td>
+<td>ferramenta</td>
+<td>Docs, Sheets, Drive, Calendar</td>
+</tr>
+<tr>
+<td>🌐 1Password / Bitwarden</td>
+<td>ferramenta</td>
+<td>Gestão de senhas</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Use @startup-business-analyst-financial-projections para projetar 12 meses
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Use @pricing-strategy para modelar unit economics dos planos
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Use @cost-optimization para reduzir custo de infra
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Use @n8n-workflow-patterns para automatizar processos operacionais
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Use @notion-automation para criar wiki operacional
+</code></pre></div>
+<hr />
+<h3 id="jessica-rh-people_1">👠 @Jessica | RH / People<a class="headerlink" href="#jessica-rh-people_1" title="Permanent link">&para;</a></h3>
+<p>Constrói cultura com mão firme. Contrata certo e cuida de quem está dentro.</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Tipo</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@hr-pro</code></td>
+<td>externa</td>
+<td>Gestão de RH completa</td>
+</tr>
+<tr>
+<td><code>@employment-contract-templates</code></td>
+<td>externa</td>
+<td>Templates de contrato de trabalho</td>
+</tr>
+<tr>
+<td><code>@interview-coach</code></td>
+<td>externa</td>
+<td>Preparação de entrevistas</td>
+</tr>
+<tr>
+<td><code>@onboarding-cro</code></td>
+<td>externa</td>
+<td>Otimização de onboarding de funcionários</td>
+</tr>
+<tr>
+<td><code>@brainstorming</code></td>
+<td>externa</td>
+<td>Sessões de ideação com time</td>
+</tr>
+<tr>
+<td><code>@writing-plans</code></td>
+<td>externa</td>
+<td>Planos de desenvolvimento</td>
+</tr>
+<tr>
+<td><code>@doc-coauthoring</code></td>
+<td>externa</td>
+<td>Documentos colaborativos</td>
+</tr>
+<tr>
+<td><code>@docx-official</code></td>
+<td>externa</td>
+<td>Documentos Word formais</td>
+</tr>
+<tr>
+<td><code>@avoid-ai-writing</code></td>
+<td>externa</td>
+<td>Comunicação humana</td>
+</tr>
+<tr>
+<td><code>@professional-proofreader</code></td>
+<td>externa</td>
+<td>Revisão de documentos</td>
+</tr>
+<tr>
+<td><code>@copywriting</code></td>
+<td>externa</td>
+<td>Textos de vagas e employer branding</td>
+</tr>
+<tr>
+<td><code>@notion-automation</code></td>
+<td>externa</td>
+<td>Base de conhecimento RH</td>
+</tr>
+<tr>
+<td><code>@notion-template-business</code></td>
+<td>externa</td>
+<td>Templates de processos</td>
+</tr>
+<tr>
+<td><code>@google-docs-automation</code></td>
+<td>externa</td>
+<td>Documentos de RH</td>
+</tr>
+<tr>
+<td><code>@calendly-automation</code></td>
+<td>externa</td>
+<td>Agendamento de entrevistas</td>
+</tr>
+<tr>
+<td><code>@cal-com-automation</code></td>
+<td>externa</td>
+<td>Agendamento alternativo</td>
+</tr>
+<tr>
+<td><code>@slack-automation</code></td>
+<td>externa</td>
+<td>Comunicação interna</td>
+</tr>
+<tr>
+<td><code>@bamboohr-automation</code></td>
+<td>externa</td>
+<td>Gestão de RH (BambooHR)</td>
+</tr>
+<tr>
+<td>🌐 BambooHR / Gusto</td>
+<td>ferramenta</td>
+<td>Gestão de funcionários</td>
+</tr>
+<tr>
+<td>🌐 Lever / Greenhouse</td>
+<td>ferramenta</td>
+<td>ATS (recruiting)</td>
+</tr>
+<tr>
+<td>🌐 LinkedIn Recruiter</td>
+<td>ferramenta</td>
+<td>Sourcing de candidatos</td>
+</tr>
+<tr>
+<td>🌐 Culture Amp</td>
+<td>ferramenta</td>
+<td>Engajamento e pesquisas internas</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Use @hr-pro para criar o processo de contratação do Manager
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Use @employment-contract-templates para gerar contrato CLT/PJ
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Use @interview-coach para preparar roteiro de entrevista técnica
+</code></pre></div>
+<hr />
+<h3 id="mike-juridico_1">⚖️ @Mike | Jurídico<a class="headerlink" href="#mike-juridico_1" title="Permanent link">&para;</a></h3>
+<p>Conhece cada detalhe da lei. Protege a empresa de ponta a ponta.</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Tipo</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@legal-advisor</code></td>
+<td>externa</td>
+<td>Consultoria jurídica geral</td>
+</tr>
+<tr>
+<td><code>@advogado-especialista</code></td>
+<td>externa</td>
+<td>Questões jurídicas especializadas</td>
+</tr>
+<tr>
+<td><code>@privacy-by-design</code></td>
+<td>externa</td>
+<td>Privacidade by design (LGPD/GDPR)</td>
+</tr>
+<tr>
+<td><code>@gdpr-data-handling</code></td>
+<td>externa</td>
+<td>Tratamento de dados pessoais</td>
+</tr>
+<tr>
+<td><code>@pci-compliance</code></td>
+<td>externa</td>
+<td>Conformidade PCI (pagamentos)</td>
+</tr>
+<tr>
+<td><code>@security-requirement-extraction</code></td>
+<td>externa</td>
+<td>Requisitos de segurança</td>
+</tr>
+<tr>
+<td><code>@employment-contract-templates</code></td>
+<td>externa</td>
+<td>Contratos de trabalho</td>
+</tr>
+<tr>
+<td><code>@docx-official</code></td>
+<td>externa</td>
+<td>Documentos legais formais</td>
+</tr>
+<tr>
+<td><code>@pdf-official</code></td>
+<td>externa</td>
+<td>PDFs oficiais e assinados</td>
+</tr>
+<tr>
+<td><code>@doc-coauthoring</code></td>
+<td>externa</td>
+<td>Revisão colaborativa de contratos</td>
+</tr>
+<tr>
+<td><code>@professional-proofreader</code></td>
+<td>externa</td>
+<td>Revisão de documentos legais</td>
+</tr>
+<tr>
+<td><code>@avoid-ai-writing</code></td>
+<td>externa</td>
+<td>Linguagem jurídica precisa</td>
+</tr>
+<tr>
+<td><code>@docusign-automation</code></td>
+<td>externa</td>
+<td>Assinatura digital DocuSign</td>
+</tr>
+<tr>
+<td><code>@notion-automation</code></td>
+<td>externa</td>
+<td>Base de contratos no Notion</td>
+</tr>
+<tr>
+<td>🌐 DocuSign / Clicksign</td>
+<td>ferramenta</td>
+<td>Assinatura eletrônica</td>
+</tr>
+<tr>
+<td>🌐 Jusbrasil</td>
+<td>ferramenta</td>
+<td>Pesquisa jurídica brasileira</td>
+</tr>
+<tr>
+<td>🌐 LGPD Framework</td>
+<td>ferramenta</td>
+<td>Conformidade com LGPD</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Use @legal-advisor para revisar termos de uso do Manager
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Use @privacy-by-design para garantir conformidade LGPD no monitoramento
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Use @gdpr-data-handling para política de dados do Agent Desktop
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Use @employment-contract-templates para contrato de primeiro funcionário
+</code></pre></div>
+<hr />
+<h3 id="rachel-customer-success_1">🤝 @Rachel | Customer Success<a class="headerlink" href="#rachel-customer-success_1" title="Permanent link">&para;</a></h3>
+<p>Dedicada a cada cliente. Do onboarding à retenção.</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Tipo</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Atendimento &amp; Suporte</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@customer-support</code></td>
+<td>externa</td>
+<td>Suporte ao cliente</td>
+</tr>
+<tr>
+<td><code>@helpdesk-automation</code></td>
+<td>externa</td>
+<td>Automação de helpdesk</td>
+</tr>
+<tr>
+<td><code>@intercom-automation</code></td>
+<td>externa</td>
+<td>Chat e suporte via Intercom</td>
+</tr>
+<tr>
+<td><code>@zendesk-automation</code></td>
+<td>externa</td>
+<td>Automação Zendesk</td>
+</tr>
+<tr>
+<td><code>@freshdesk-automation</code></td>
+<td>externa</td>
+<td>Automação Freshdesk</td>
+</tr>
+<tr>
+<td><code>@chat-widget</code></td>
+<td>externa</td>
+<td>Widget de chat no site/portal</td>
+</tr>
+<tr>
+<td><strong>Comunicação</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@email-sequence</code></td>
+<td>externa</td>
+<td>Sequências de email (onboarding, check-in)</td>
+</tr>
+<tr>
+<td><code>@avoid-ai-writing</code></td>
+<td>externa</td>
+<td>Comunicação humana com clientes</td>
+</tr>
+<tr>
+<td><code>@professional-proofreader</code></td>
+<td>externa</td>
+<td>Revisão de comunicações</td>
+</tr>
+<tr>
+<td><code>@whatsapp-automation</code></td>
+<td>externa</td>
+<td>Suporte via WhatsApp</td>
+</tr>
+<tr>
+<td><code>@whatsapp-cloud-api</code></td>
+<td>externa</td>
+<td>API WhatsApp Business</td>
+</tr>
+<tr>
+<td><code>@telegram-automation</code></td>
+<td>externa</td>
+<td>Suporte via Telegram</td>
+</tr>
+<tr>
+<td><code>@telegram-bot-builder</code></td>
+<td>externa</td>
+<td>Bot de suporte Telegram</td>
+</tr>
+<tr>
+<td><code>@slack-automation</code></td>
+<td>externa</td>
+<td>Canal de suporte no Slack</td>
+</tr>
+<tr>
+<td><code>@slack-bot-builder</code></td>
+<td>externa</td>
+<td>Bot de suporte Slack</td>
+</tr>
+<tr>
+<td><strong>CRM &amp; Retenção</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@hubspot-automation</code></td>
+<td>externa</td>
+<td>Gestão de clientes HubSpot</td>
+</tr>
+<tr>
+<td><code>@hubspot-integration</code></td>
+<td>externa</td>
+<td>Integração HubSpot CRM</td>
+</tr>
+<tr>
+<td><code>@pipedrive-automation</code></td>
+<td>externa</td>
+<td>Pipeline de clientes Pipedrive</td>
+</tr>
+<tr>
+<td><code>@zoho-crm-automation</code></td>
+<td>externa</td>
+<td>CRM Zoho</td>
+</tr>
+<tr>
+<td><strong>Agendamento &amp; Dados</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@cal-com-automation</code></td>
+<td>externa</td>
+<td>Agendamento de calls</td>
+</tr>
+<tr>
+<td><code>@calendly-automation</code></td>
+<td>externa</td>
+<td>Agendamento Calendly</td>
+</tr>
+<tr>
+<td><code>@google-sheets-automation</code></td>
+<td>externa</td>
+<td>Tracking de health score</td>
+</tr>
+<tr>
+<td><code>@notion-automation</code></td>
+<td>externa</td>
+<td>Base de conhecimento do cliente</td>
+</tr>
+<tr>
+<td><code>@analytics-product</code></td>
+<td>externa</td>
+<td>Dados de uso do produto</td>
+</tr>
+<tr>
+<td>🌐 Intercom / Zendesk</td>
+<td>ferramenta</td>
+<td>Suporte e chat</td>
+</tr>
+<tr>
+<td>🌐 HubSpot CRM</td>
+<td>ferramenta</td>
+<td>Gestão de relacionamento</td>
+</tr>
+<tr>
+<td>🌐 Vitally / Gainsight</td>
+<td>ferramenta</td>
+<td>Health score de clientes</td>
+</tr>
+<tr>
+<td>🌐 Loom</td>
+<td>ferramenta</td>
+<td>Vídeos de onboarding e tutoriais</td>
+</tr>
+<tr>
+<td>🌐 NPS Survey (Delighted)</td>
+<td>ferramenta</td>
+<td>Pesquisa de satisfação</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Use @customer-support para criar playbook de suporte do Manager
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Use @email-sequence para criar sequência de onboarding do cliente
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Use @intercom-automation para configurar chat no portal
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Use @hubspot-automation para pipeline de clientes ativos
+</code></pre></div>
+<hr />
+<h2 id="fluxo-de-trabalho-do-time">Fluxo de trabalho do time<a class="headerlink" href="#fluxo-de-trabalho-do-time" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>@Harvey define → visão, estratégia, prioridades do trimestre
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    ↓
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>@Louis valida → viabilidade financeira, budget, processos
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>@Mike protege → contratos, compliance, LGPD
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    ↓
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>@Jessica contrata → time certo, cultura, onboarding interno
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>@Louis estrutura → ferramentas, automações, operações
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    ↓
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>@Rachel cuida → clientes, onboarding, retenção, expansão
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    ↓
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>FEEDBACK → volta para @Harvey ajustar estratégia
+</code></pre></div>
+<hr />
+<h2 id="ferramentas-recomendadas-stack-gestao">Ferramentas recomendadas (stack gestão)<a class="headerlink" href="#ferramentas-recomendadas-stack-gestao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Categoria</th>
+<th>Ferramenta</th>
+<th>Custo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wiki/Docs</td>
+<td>Notion</td>
+<td>Free / $8/mês</td>
+</tr>
+<tr>
+<td>Comunicação</td>
+<td>Slack</td>
+<td>Free / $7/mês</td>
+</tr>
+<tr>
+<td>Project Management</td>
+<td>Linear / ClickUp</td>
+<td>Free / $7/mês</td>
+</tr>
+<tr>
+<td>CRM</td>
+<td>HubSpot Free</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Contabilidade</td>
+<td>Xero / QuickBooks</td>
+<td>$25/mês</td>
+</tr>
+<tr>
+<td>Métricas SaaS</td>
+<td>Baremetrics</td>
+<td>$50/mês</td>
+</tr>
+<tr>
+<td>Suporte</td>
+<td>Intercom / Crisp</td>
+<td>Free / $25/mês</td>
+</tr>
+<tr>
+<td>Automação</td>
+<td>n8n (self-hosted)</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Assinatura Digital</td>
+<td>Clicksign / DocuSign</td>
+<td>R$29/mês</td>
+</tr>
+<tr>
+<td>Pagamentos</td>
+<td>Stripe</td>
+<td>Pay-as-you-go</td>
+</tr>
+<tr>
+<td>RH</td>
+<td>BambooHR / Gusto</td>
+<td>$6/funcionário</td>
+</tr>
+<tr>
+<td>Senhas</td>
+<td>1Password</td>
+<td>$4/mês</td>
+</tr>
+<tr>
+<td>Agendamento</td>
+<td>Cal.com</td>
+<td>Free</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

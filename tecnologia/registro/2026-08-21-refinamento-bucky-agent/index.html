@@ -1,0 +1,1760 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/registro/2026-08-21-refinamento-bucky-agent/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Refinamento para @Bucky — Agent Windows (2026-08-21) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#refinamento-para-bucky-agent-windows-2026-08-21" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Refinamento para @Bucky — Agent Windows (2026-08-21)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ordem-sugerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordem sugerida
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="refinamento-para-bucky-agent-windows-2026-08-21">Refinamento para @Bucky — Agent Windows (2026-08-21)<a class="headerlink" href="#refinamento-para-bucky-agent-windows-2026-08-21" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>De:</strong> @Tony | <strong>Para:</strong> @Bucky | <strong>Aprovador:</strong> Marcos
+<strong>Origem:</strong> testes manuais da bateria 1.5.10, executados na <code>DESKTOP-VMSM6LE</code> em 20/08
+<strong>Binario testado:</strong> 1.5.10.0 compilado 20/08 10:49 — inclui a ADR-001 e o A-52</p>
+<p><strong>Regras:</strong> nao commite, nao faca push. As quatro suites tem que terminar verdes
+(hoje 753). <code>.ps1</code> em ASCII puro. Codigo em ingles, comentario em portugues.
+Ao terminar cada item, pare e reporte antes de seguir para o proximo.</p>
+</blockquote>
+<hr />
+<h2 id="ordem-sugerida">Ordem sugerida<a class="headerlink" href="#ordem-sugerida" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>A-62</strong> (logoff sem LOGOUT) — maior impacto em relatorio, e a correcao abre caminho para os outros</li>
+<li><strong>A-56</strong> (suspensao) — mesmo padrao, resolve o worker orfao</li>
+<li><strong>A-61</strong> (relance no shutdown) — cai junto com o A-56 se a correcao for a de fundo</li>
+<li><strong>A-58</strong> (status ATIVO/PAUSA/AUSENTE) — independente, e o de maior valor de produto</li>
+<li><strong>A-60</strong> (buffer do segundo usuario) — independente</li>
+</ol>
+<hr />
+<h1 id="o-padrao-comum-a-56-a-61-e-a-62">O padrao comum: A-56, A-61 e A-62<a class="headerlink" href="#o-padrao-comum-a-56-a-61-e-a-62" title="Permanent link">&para;</a></h1>
+<p>Antes dos itens, o diagnostico que os une, porque ele pode mudar como voce ataca os tres.</p>
+<p><strong>O agent trata acoes normais do sistema operacional como falha.</strong> Suspender, desligar e
+sair da conta sao as tres coisas mais rotineiras que um usuario faz. Nas tres, hoje:</p>
+<ul>
+<li>o <code>WorkerWatchdog</code> declara o worker morto e tenta relancar</li>
+<li>a flag de shutdown limpo nao e marcada</li>
+<li>o proximo login emite <strong>SESSAO_INTERROMPIDA</strong> (motivo <code>NoCleanShutdownFlag</code>), evento que
+  significa crash ou queda de energia</li>
+</ul>
+<p>Na base de staging ha <strong>86 SESSAO_INTERROMPIDA em 3 dias</strong> so nesta maquina. O evento
+perdeu o significado: se dispara na rotina, ninguem consegue usa-lo para detectar anomalia
+de verdade.</p>
+<p>Se voce enxergar uma correcao de fundo que resolva os tres — por exemplo, o Service passar a
+reconhecer estados do sistema (suspensao, shutdown, logoff) e propagar isso para o Watchdog e
+para a marca de shutdown limpo — traga a proposta antes de implementar item por item.
+Prefiro discutir uma correcao estrutural a aprovar tres remendos.</p>
+<hr />
+<h1 id="a-62-logoff-nunca-gera-logout">A-62 — logoff nunca gera LOGOUT<a class="headerlink" href="#a-62-logoff-nunca-gera-logout" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: ALTA.</strong> Nao existe registro de fim de expediente.</p>
+<h2 id="o-desenho-esta-certo-a-ordem-dos-fatos-nao">O desenho esta certo; a ordem dos fatos, nao<a class="headerlink" href="#o-desenho-esta-certo-a-ordem-dos-fatos-nao" title="Permanent link">&para;</a></h2>
+<p>O codigo ja preve tudo:</p>
+<ul>
+<li><code>ManagerAgentService.HandleLogoff</code> (linha ~181) envia <code>ShutdownMessage</code> com
+  <code>Reason = "SESSION_LOGOFF"</code>, <code>GracePeriodMs = 3000</code></li>
+<li><code>Worker.HandleShutdownAsync</code> responde certo: emite LOGOUT explicito via
+  <code>_sessionMonitor.AddExternalEvent("LOGOUT", ...)</code>, drena para o buffer e marca a flag de
+  shutdown limpo</li>
+</ul>
+<h2 id="o-que-foi-medido-no-logoff-real-2008-2344">O que foi medido no logoff real (20/08, 23:44)<a class="headerlink" href="#o-que-foi-medido-no-logoff-real-2008-2344" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>23:44:11.983  PipeServer: worker disconnected (EOF). Session=1     &lt;- o Windows ja matou o worker
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>23:44:12.005  Evento de janela fechado por morte do worker          &lt;- A-35 funcionou
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>23:44:12.015  WorkerWatchdog: attempting re-launch for Session=1    &lt;- relanca no meio do logoff
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>23:44:12.964  WTS session change: Reason="SessionLogoff"            &lt;- o Service SO AGORA sabe
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>23:44:12.975  Handling logoff for session 1                          -&gt; manda ShutdownMessage
+</code></pre></div>
+<p><strong>O worker morreu 1 segundo antes de o Service saber do logoff.</strong> A <code>ShutdownMessage</code> vai
+para um processo que nao existe mais.</p>
+<h2 id="consequencias">Consequencias<a class="headerlink" href="#consequencias" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Nunca ha LOGOUT. A jornada nao tem fechamento — so o LOGIN do dia seguinte.</li>
+<li>Todo logoff vira SESSAO_INTERROMPIDA.</li>
+<li>O A-36 (upload imediato de fronteira de sessao) fica sem efeito no logoff.</li>
+</ol>
+<h2 id="o-que-precisa-ser-feito">O que precisa ser feito<a class="headerlink" href="#o-que-precisa-ser-feito" title="Permanent link">&para;</a></h2>
+<p><strong>O Service nao pode depender de avisar o worker — o Windows nao da esse tempo.</strong></p>
+<p>Caminho recomendado: <strong>o Service emite o LOGOUT.</strong> Ele ja recebe <code>SessionLogoff</code> do WTS e ja
+sabe agir sozinho nesse caminho — o "Evento de janela fechado por morte do worker
+(WorkerDied)" prova que ele consegue fabricar evento sem o worker. O mesmo ponto pode:</p>
+<ul>
+<li>emitir o evento de sessao LOGOUT daquela sessao</li>
+<li>marcar a flag de shutdown limpo daquela sessao, para o proximo login nao acusar
+  SESSAO_INTERROMPIDA</li>
+</ul>
+<p>Alternativa que avaliei e <strong>nao</strong> recomendo: o worker assinar <code>SystemEvents.SessionEnding</code>.
+Depende de o processo receber a mensagem a tempo, e o log mostra que o Windows nao coopera.</p>
+<p><strong>Se voce discordar do caminho, diga antes de implementar.</strong> Voce conhece o ciclo de vida
+melhor que eu.</p>
+<h2 id="aceite">Aceite<a class="headerlink" href="#aceite" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Logoff real gera <strong>um LOGOUT</strong>, com o horario do logoff.</li>
+<li>O login seguinte <strong>nao</strong> emite SESSAO_INTERROMPIDA.</li>
+<li>O LOGOUT chega ao banco sem esperar o proximo boot (o A-36 volta a ter efeito).</li>
+<li>Teste automatizado cobrindo o caminho "Service recebe SessionLogoff com worker ja morto".</li>
+</ul>
+<hr />
+<h1 id="a-56-suspensao-gera-falso-sessao_interrompida-e-deixa-worker-orfao">A-56 — suspensao gera falso SESSAO_INTERROMPIDA e deixa worker orfao<a class="headerlink" href="#a-56-suspensao-gera-falso-sessao_interrompida-e-deixa-worker-orfao" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: ALTA.</strong> Nao perde dado, mas duplica processo e polui relatorio.</p>
+<h2 id="o-que-foi-medido-2008-suspensao-de-2min">O que foi medido (20/08, suspensao de ~2min)<a class="headerlink" href="#o-que-foi-medido-2008-suspensao-de-2min" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>22:44:40  suspensao. O worker para de pingar (a maquina dorme)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>22:47:03  WorkerWatchdog: "dead worker detected. PID=20420, last ping was 174s ago"
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>22:47:04  o worker 20420 ACORDA e reconecta - ele nunca esteve morto
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>22:47:11  o Watchdog lanca o PID 23836 assim mesmo
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>22:47:12  23836 conecta e e registrado
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>22:47:13  20420 tenta reconectar -&gt; "CONNECT rejected: PID mismatch"
+</code></pre></div>
+<p><strong>Dois SessionWorker vivos na mesma sessao.</strong> O guard do Service funciona e so aceita um no
+pipe — mas ninguem mata o outro.</p>
+<p>Medido 6h depois: o orfao seguia vivo com <strong>136MB e 410s de CPU acumulados</strong>, mostrando um
+<strong>segundo icone na bandeja</strong>. Foi assim que o Marcos notou.</p>
+<h2 id="por-que-acontece">Por que acontece<a class="headerlink" href="#por-que-acontece" title="Permanent link">&para;</a></h2>
+<p><code>WorkerWatchdog.HeartbeatTimeout</code> e 90s fixos e <strong>o watchdog nao conhece suspensao</strong> —
+<code>grep</code> por PowerMode/Suspend/Resume no arquivo nao acha nada. Enquanto a maquina dorme, o
+relogio corre e o ping nao chega.</p>
+<p>O <code>SessionWorker</code> tem <code>PowerModeMonitor</code> e trata Suspend/Resume corretamente. Quem nao trata
+e o lado do Service.</p>
+<h2 id="o-que-precisa-ser-feito_1">O que precisa ser feito<a class="headerlink" href="#o-que-precisa-ser-feito_1" title="Permanent link">&para;</a></h2>
+<p>Duas frentes. <strong>A primeira sozinha ja resolve o pior sintoma:</strong></p>
+<ol>
+<li><strong>Matar antes de relancar.</strong> Se o watchdog decidiu que o worker morreu, o processo tem de
+   ser encerrado antes do relancamento. Hoje ele so remove do registro
+   (<code>Worker removed from registry</code>) e lanca outro.</li>
+<li><strong>Ensinar o watchdog sobre suspensao.</strong> O Service pode ouvir
+   <code>SystemEvents.PowerModeChanged</code> e reiniciar a contagem do heartbeat no Resume, em vez de
+   contar o tempo dormido. Isso evita o falso positivo na origem, e o falso
+   SESSAO_INTERROMPIDA cai junto.</li>
+</ol>
+<h2 id="ponto-explicito-do-marcos">Ponto explicito do Marcos<a class="headerlink" href="#ponto-explicito-do-marcos" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>"Eliminar e sempre ter apenas um agent rodando."</p>
+</blockquote>
+<p>Nao basta corrigir o caminho da suspensao. Ele quer a <strong>garantia estrutural</strong> de que existe
+no maximo um SessionWorker por sessao, por qualquer caminho.</p>
+<p>Hoje a garantia e parcial: o Service <strong>rejeita</strong> a conexao do worker excedente
+("CONNECT rejected: PID mismatch"), mas nao <strong>encerra</strong> o processo. Um worker rejeitado
+continua vivo, consumindo memoria e mostrando icone, ate alguem matar na mao.</p>
+<p>Caminhos conhecidos que produzem worker excedente:
+- suspensao (este achado, comprovado)
+- revogacao seguida de re-vinculacao (voce mesmo previu no review da ADR-001)
+- o teste de reconciliacao da suite (A-32, ja contido com <code>RequiresIsolation</code>)</p>
+<p><strong>A rejeicao precisa virar um caminho ativo: quem e rejeitado por PID mismatch deve ser
+encerrado, nao ignorado.</strong></p>
+<h2 id="aceite_1">Aceite<a class="headerlink" href="#aceite_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Suspender e acordar <strong>nao</strong> deixa worker orfao.</li>
+<li>Suspender e acordar <strong>nao</strong> gera SESSAO_INTERROMPIDA.</li>
+<li>Worker rejeitado por PID mismatch e encerrado.</li>
+<li>Teste automatizado para o cenario "worker declarado morto que volta a conectar".</li>
+</ul>
+<hr />
+<h1 id="a-61-o-watchdog-relanca-workers-durante-o-desligamento">A-61 — o Watchdog relanca workers durante o desligamento<a class="headerlink" href="#a-61-o-watchdog-relanca-workers-durante-o-desligamento" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: BAIXA.</strong> Ruido, sem perda de dado.</p>
+<p>Na sequencia do reboot de 20/08:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>23:36:16  worker S1 morre (EOF)  -&gt; Watchdog relanca PID 21664
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>23:36:21  SessionLogoff S1       -&gt; morre de novo
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>23:36:21  worker S2 morre (EOF)  -&gt; Watchdog relanca PID 21320
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>23:36:23  SessionLogoff S2       -&gt; morre de novo
+</code></pre></div>
+<p>Dois processos nascem e morrem em segundos, enquanto a maquina esta desligando. O Watchdog
+trata o EOF do pipe como morte a recuperar, sem saber que ha um shutdown em curso.</p>
+<p>Sem consequencia pratica. <strong>Provavelmente sai de graca junto com o A-56 ou o A-62</strong>, se a
+correcao for a de fundo. Se depois deles isto ainda acontecer, ai vale um guard proprio: nao
+relancar quando o Service esta parando ou quando a sessao esta em logoff.</p>
+<h2 id="aceite_2">Aceite<a class="headerlink" href="#aceite_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Reboot e shutdown nao produzem lancamento de worker.</li>
+</ul>
+<hr />
+<h1 id="a-58-ativopausaausente-nao-e-gerado-desde-maio">A-58 — ATIVO/PAUSA/AUSENTE nao e gerado desde maio<a class="headerlink" href="#a-58-ativopausaausente-nao-e-gerado-desde-maio" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: ALTA — e funcionalidade de produto, visivel para o gestor.</strong>
+<strong>Decisao do Marcos: comportamento igual ao Android.</strong></p>
+<h2 id="o-que-foi-medido">O que foi medido<a class="headerlink" href="#o-que-foi-medido" title="Permanent link">&para;</a></h2>
+<p><code>eventos_transicao_status</code>, base de staging:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>agente 29: 244 transicoes, ultima em 2026-05-15
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>agente 30: 204 transicoes, ultima em 2026-05-15
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>agente 31: 200 transicoes, ultima em 2026-05-17
+</code></pre></div>
+<p><strong>Nada depois de 17/05.</strong> O agente 51 (a maquina de teste, ativa hoje) nao tem nenhuma.</p>
+<h2 id="por-que-este-item-e-seu-e-nao-do-shuri">Por que este item e SEU, e nao do @Shuri<a class="headerlink" href="#por-que-este-item-e-seu-e-nao-do-shuri" title="Permanent link">&para;</a></h2>
+<p>Cheguei a considerar que o backend deveria derivar. O Marcos decidiu <strong>comportamento igual
+ao Android</strong>, e no Android quem calcula e emite e o proprio agent. Alem disso:</p>
+<ul>
+<li>O <code>srv-events-node</code> <strong>ja tem</strong> <code>StatusTransitionHandler</code>, que persiste o evento recebido.
+  Nada precisa mudar no backend — ele grava assim que o evento chegar.</li>
+<li>O agent Windows parou de emitir na v1.5.0. Esta escrito em
+  <code>DailyBoundaryWorker.cs:11</code>: <em>"v1.5.0: Agent nao emite mais StatusTransitionEvent (backend
+  deriva status)"</em>. O backend nunca derivou.</li>
+</ul>
+<h2 id="o-codigo-ja-existiu-no-windows-e-foi-apagado">O codigo ja existiu no Windows, e foi apagado<a class="headerlink" href="#o-codigo-ja-existiu-no-windows-e-foi-apagado" title="Permanent link">&para;</a></h2>
+<p>Nao e escrever do zero. O commit <strong>b45e181</strong> ("feat: Novos eventos", 12/08/2026) removeu:</p>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Linhas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Capture/UserStatusManager.cs</code></td>
+<td>213</td>
+</tr>
+<tr>
+<td><code>Capture/IUserStatusManager.cs</code></td>
+<td>62</td>
+</tr>
+<tr>
+<td><code>Capture/Models/UserStatus.cs</code></td>
+<td>22</td>
+</tr>
+<tr>
+<td><code>Capture/Models/EventoTransicaoStatus.cs</code></td>
+<td>29</td>
+</tr>
+</tbody>
+</table>
+<p>O cabecalho do arquivo removido dizia: <em>"Transicoes: Ativo -&gt; Pausa (5min) -&gt; Ausente (15min
+total)"</em>, com os limites vindos de <code>opts.LimitePausaMinutos</code> (5) e <code>opts.LimiteAusenteMinutos</code>
+(15) — que tambem sairam do <code>ManagerAgentUploadOptions</code>.</p>
+<p>Recupere com <code>git show b45e181^:src/ManagerAgent.SessionWorker/Capture/UserStatusManager.cs</code>.</p>
+<h2 id="o-comportamento-do-android-que-e-o-alvo">O comportamento do Android, que e o alvo<a class="headerlink" href="#o-comportamento-do-android-que-e-o-alvo" title="Permanent link">&para;</a></h2>
+<p><code>StatusTransitionCalculator.kt</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Regra</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATIVO -&gt; PAUSA</td>
+<td>5 minutos sem interacao</td>
+</tr>
+<tr>
+<td>-&gt; AUSENTE</td>
+<td>15 minutos sem interacao</td>
+</tr>
+<tr>
+<td>Volta a ATIVO</td>
+<td>qualquer interacao, imediatamente</td>
+</tr>
+<tr>
+<td>Frequencia de avaliacao</td>
+<td>~30s</td>
+</tr>
+</tbody>
+</table>
+<p>O evento e um <strong>marcador pontual</strong> (<code>statusAnterior</code>, <code>statusNovo</code>, <code>transicaoEm</code>), sem par
+abertura/fechamento — nao existe linha que fique orfa com campo nulo. O comentario do arquivo
+Android confirma: <em>"Thresholds alinhados com o desktop Windows Agent (5min pausa / 15min
+ausente)"</em>. O Android e um port do codigo que voce vai restaurar.</p>
+<p>Detalhe que vale copiar: o Android trata <code>resetSessionBoundary()</code> (lock, troca de sessao)
+voltando a ATIVO <strong>sem emitir transicao</strong>, e documenta o porque. Vale o mesmo criterio aqui.</p>
+<h2 id="o-que-precisa-ser-feito_2">O que precisa ser feito<a class="headerlink" href="#o-que-precisa-ser-feito_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Restaurar o <code>UserStatusManager</code> e os modelos, adaptados ao codigo atual do SessionWorker
+   (o arquivo e de antes de varias mudancas — nao aplique o diff cego).</li>
+<li>Devolver <code>LimitePausaMinutos</code> e <code>LimiteAusenteMinutos</code> ao <code>ManagerAgentUploadOptions</code>, com
+   o padrao defensivo <code>&gt; 0 ? valor : default</code> que ja e usado no <code>HeartbeatService</code>.
+   <strong>Atencao:</strong> se voce adicionar as chaves ao <code>appsettings</code>, os testes
+   <code>AppSettingsKeysAreReadTests</code> e <code>CaptureOptionsHaveConsumersTests</code> vao cobrar consumidor
+   real — o que e exatamente o desejado aqui.</li>
+<li>Ligar ao <code>IdleMonitorService</code>, que era quem o alimentava (<code>IUserStatusManager _statusManager</code>).</li>
+<li>Emitir pelo caminho normal de eventos, para o <code>StatusTransitionHandler</code> do backend receber.</li>
+<li>Conferir a paridade de contrato com o Android — mesmos nomes de status e formato de
+   <code>transicaoEm</code>. Se divergir, alinhe com o @Sam.</li>
+</ol>
+<h2 id="aceite_3">Aceite<a class="headerlink" href="#aceite_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Uma maquina Windows parada 6 minutos gera PAUSA; parada 16, gera AUSENTE; ao voltar a
+  mexer, gera ATIVO.</li>
+<li>Os eventos chegam em <code>eventos_transicao_status</code> com <code>agente_id</code> correto.</li>
+<li>Testes unitarios cobrindo cada transicao e a volta imediata a ATIVO.</li>
+<li>Contrato identico ao do Android.</li>
+</ul>
+<hr />
+<h1 id="a-60-o-segundo-usuario-da-maquina-nao-consegue-gravar-no-buffer-local">A-60 — o segundo usuario da maquina nao consegue gravar no buffer local<a class="headerlink" href="#a-60-o-segundo-usuario-da-maquina-nao-consegue-gravar-no-buffer-local" title="Permanent link">&para;</a></h1>
+<p><strong>Severidade: ALTA. Perda de evento.</strong>
+<strong>Decisao do Marcos: "podemos evoluir e melhorar isso."</strong></p>
+<h2 id="o-que-foi-medido_1">O que foi medido<a class="headerlink" href="#o-que-foi-medido_1" title="Permanent link">&para;</a></h2>
+<p>O worker da sessao 2 (usuario "Marcos") registrou <strong>7 erros</strong> entre 23:29:57 e 23:36:00:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[ERR] [SessionWorker] [S2] Error in capture loop iteration
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Microsoft.Data.Sqlite.SqliteException: SQLite Error 8: 'attempt to write a readonly database'
+</code></pre></div>
+<p>A causa esta nas permissoes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>autonomous-buffer.db      dono: DESKTOP-VMSM6LE\NoisyTech
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                          BUILTIN\Usuarios -&gt; ReadAndExecute, Synchronize   (sem escrita)
+</code></pre></div>
+<p>A <strong>pasta</strong> <code>data\</code> concede Write ao grupo Usuarios, mas os <strong>arquivos</strong> criados pelo primeiro
+usuario ficam com apenas ReadAndExecute para os demais. O SQLite precisa modificar o arquivo
+existente e criar <code>-wal</code>/<code>-shm</code>; sem isso, abre em somente-leitura e falha.</p>
+<h2 id="impacto">Impacto<a class="headerlink" href="#impacto" title="Permanent link">&para;</a></h2>
+<p>O buffer autonomo e a rede de seguranca do worker: e nele que os eventos ficam quando o pipe
+com o Service esta indisponivel. Para o segundo usuario essa rede <strong>nao existe</strong> — o loop de
+captura quebra com [ERR] em vez de guardar.</p>
+<p>Enquanto o pipe estiver de pe, os eventos passam direto para o Service (que roda como SYSTEM
+e grava sem problema). O prejuizo aparece exatamente quando mais importa: pipe caido, Service
+reiniciando, update em andamento.</p>
+<h2 id="detalhe-que-aponta-a-correcao">Detalhe que aponta a correcao<a class="headerlink" href="#detalhe-que-aponta-a-correcao" title="Permanent link">&para;</a></h2>
+<p><code>session-state-1.json</code> e <code>session-state-2.json</code> sao <strong>por sessao</strong> — cada usuario tem o seu, e
+por isso funcionam. O <code>autonomous-buffer.db</code> e <strong>unico e compartilhado</strong>.</p>
+<p>Duas saidas:</p>
+<ol>
+<li><strong>Buffer por sessao</strong> (<code>autonomous-buffer-S1.db</code>, <code>-S2.db</code>), no mesmo padrao que o
+   <code>session-state</code> ja usa. Resolve a disputa e a permissao de uma vez.</li>
+<li><strong>ACL explicita</strong> nos arquivos de dados no momento da criacao, concedendo Modify aos
+   usuarios interativos. Ha precedente no codigo: o <code>HeartbeatWriter</code> aplica ACL propria
+   ("Heartbeat ACL aplicada. Sids=[SYSTEM]").</li>
+</ol>
+<p><strong>Prefiro a 1</strong>: nao depende de acertar ACL, e dois workers escrevendo no mesmo SQLite e
+disputa que nao precisa existir. Mas a decisao e sua — se enxergar problema em multiplicar
+arquivo de buffer (retencao, drenagem, limpeza na desinstalacao), traga.</p>
+<h2 id="aceite_4">Aceite<a class="headerlink" href="#aceite_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Um segundo usuario Windows usa a maquina sem nenhum [ERR] de banco somente-leitura.</li>
+<li>Com o pipe derrubado, os eventos do segundo usuario sao preservados e sobem depois.</li>
+<li>Teste cobrindo escrita concorrente ou isolamento por sessao, conforme o caminho escolhido.</li>
+</ul>
+<hr />
+<h2 id="contexto-que-voce-vai-precisar">Contexto que voce vai precisar<a class="headerlink" href="#contexto-que-voce-vai-precisar" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Registro completo dos testes manuais: <code>registro/2026-08-20-achados-manuais-1.5.10.md</code></li>
+<li>Estado da bateria e o que ficou pendente: <code>registro/2026-08-20-bateria-1.5.10.md</code></li>
+<li>ADR do vinculo (implementada por voce hoje): <code>agent-desktop/adr/ADR-001-captura-exige-vinculo-ativo.md</code></li>
+</ul>
+<p><strong>Nao entram nesta leva:</strong> A-55 (URL no titulo — Marcos aceitou como esta, igual ao A-47) e
+A-59 (vinculo por maquina — decidido, fica assim).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

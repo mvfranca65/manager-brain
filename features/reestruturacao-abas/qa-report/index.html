@@ -1,0 +1,2275 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/features/reestruturacao-abas/qa-report/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>QA Report — Reestruturação das Abas (Detalhe do Colaborador) - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qa-report-reestruturacao-das-abas-detalhe-do-colaborador" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              QA Report — Reestruturação das Abas (Detalhe do Colaborador)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resultado-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado Geral
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-backend-apis-compilam-e-testes-passam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Backend — APIs compilam e testes passam
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Backend — APIs compilam e testes passam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-build-e-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Build e testes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-endpoints-em-eventoscontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Endpoints em EventosController
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-dtos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 DTOs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-statusonlineservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 StatusOnlineService
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-frontend-build-limpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Frontend — Build limpo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Frontend — Build limpo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-build-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Build Angular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-componentes-novos-existencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Componentes novos — existência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-declaracoes-no-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Declarações no módulo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-integration-tabs-conectadas-corretamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Integration — Tabs conectadas corretamente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Integration — Tabs conectadas corretamente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-colaborador-detalhecomponenthtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 colaborador-detalhe.component.html
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-colaborador-detalhecomponentts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 colaborador-detalhe.component.ts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-spec-compliance-cross-reference-com-historiasmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Spec compliance — Cross-reference com historias.md
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Spec compliance — Cross-reference com historias.md">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h1-reestruturacao-das-abas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H1 — Reestruturação das abas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h2-aba-dia-a-dia-pergunta-guia-kpis-do-dia-textos-descritivos-e-tooltips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H2 — Aba Dia a Dia: pergunta-guia, KPIs do dia, textos descritivos e tooltips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h3-aba-dia-a-dia-frase-acionavel-automatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H3 — Aba Dia a Dia: frase acionável automática
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h4-aba-dia-a-dia-layout-hibrido-top-apps-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H4 — Aba Dia a Dia: layout híbrido Top Apps + Eventos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h5-aba-resumo-kpis-medios-com-comparacao-do-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H5 — Aba Resumo: KPIs médios com comparação do time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h6-aba-resumo-grafico-de-tendencia-de-jornada-por-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H6 — Aba Resumo: gráfico de tendência de jornada por dia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h7-aba-resumo-grafico-tendencia-de-foco-com-barras-empilhadas-e-frase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H7 — Aba Resumo: gráfico tendência de foco com barras empilhadas e frase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h8-aba-resumo-seletor-de-periodo-com-personalizado-discreto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H8 — Aba Resumo: seletor de período com "Personalizado" discreto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h9-apis-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H9 — APIs backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-code-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Code Quality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Code Quality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo Executivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#falhas-detalhadas-o-que-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Falhas Detalhadas — O que fazer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Falhas Detalhadas — O que fazer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fail-1-h2-textos-descritivos-e-tooltips-ausentes-nos-kpi-cards-da-aba-dia-a-dia-medio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAIL-1: H2 — Textos descritivos e tooltips ausentes nos KPI cards da aba Dia a Dia (MÉDIO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fail-2-h3-frase-acionavel-nao-menciona-excedente-especifico-baixo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAIL-2: H3 — Frase acionável não menciona excedente específico (BAIXO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fail-3-h3-frase-ausente-acima-do-habitual-sem-comparacao-com-media-baixo-gap-de-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAIL-3: H3 — Frase "ausente acima do habitual" sem comparação com média (BAIXO / GAP DE API)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisao-de-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisão de Deploy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="qa-report-reestruturacao-das-abas-detalhe-do-colaborador">QA Report — Reestruturação das Abas (Detalhe do Colaborador)<a class="headerlink" href="#qa-report-reestruturacao-das-abas-detalhe-do-colaborador" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Autora: @Natasha (QA Engineer)
+Data: 2026-04-06
+Branch: feature/pre-reestruturacao
+Baseado em: spec.md, historias.md, tecnico.md, design-notes.md</p>
+</blockquote>
+<hr />
+<h2 id="resultado-geral">Resultado Geral<a class="headerlink" href="#resultado-geral" title="Permanent link">&para;</a></h2>
+<p><strong>BLOQUEIO PARCIAL — deploy condicional</strong></p>
+<p>O núcleo da feature está funcional. Backend compila, testes passam, frontend builda sem erros. Porém há 2 gaps de spec identificados nas histórias H2 e H3 que precisam ser endereçados antes do merge na main.</p>
+<hr />
+<h2 id="1-backend-apis-compilam-e-testes-passam">1. Backend — APIs compilam e testes passam<a class="headerlink" href="#1-backend-apis-compilam-e-testes-passam" title="Permanent link">&para;</a></h2>
+<h3 id="11-build-e-testes">1.1 Build e testes<a class="headerlink" href="#11-build-e-testes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>./mvnw test</code> encerrou com <code>BUILD SUCCESS</code></li>
+<li>121 testes rodados, 0 falhas, 0 erros, 1 skipped (ApplicationContext — esperado)</li>
+</ul>
+<h3 id="12-endpoints-em-eventoscontroller">1.2 Endpoints em EventosController<a class="headerlink" href="#12-endpoints-em-eventoscontroller" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>POST /api/v2/eventos/{usuarioId}/tendencia-periodo</code> existe (linha 304)</li>
+<li><strong>PASS</strong> — <code>POST /api/v2/eventos/{usuarioId}/media-time</code> existe (linha 269)</li>
+<li>Ambos validam via <code>accessService.exigirAcessoAoUsuario(usuarioId)</code> — multitenancy OK</li>
+</ul>
+<h3 id="13-dtos">1.3 DTOs<a class="headerlink" href="#13-dtos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>TendenciaPeriodoResposta</code> existe em <code>dto/TendenciaPeriodoResposta.java</code></li>
+<li><strong>PASS</strong> — <code>DiaTendenciaResposta</code> existe em <code>dto/DiaTendenciaResposta.java</code></li>
+<li><strong>PASS</strong> — <code>SessaoFocoDiaResposta</code> existe em <code>dto/SessaoFocoDiaResposta.java</code></li>
+<li><strong>PASS</strong> — <code>MediaTimeResposta</code> existe em <code>dto/MediaTimeResposta.java</code></li>
+</ul>
+<h3 id="14-services">1.4 Services<a class="headerlink" href="#14-services" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>TendenciaPeriodoService</code> existe</li>
+<li><strong>PASS</strong> — <code>MediaTimeService</code> existe</li>
+</ul>
+<h3 id="15-statusonlineservice">1.5 StatusOnlineService<a class="headerlink" href="#15-statusonlineservice" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — não foram encontrados TODO/FIXME ou System.out no serviço</li>
+</ul>
+<hr />
+<h2 id="2-frontend-build-limpo">2. Frontend — Build limpo<a class="headerlink" href="#2-frontend-build-limpo" title="Permanent link">&para;</a></h2>
+<h3 id="21-build-angular">2.1 Build Angular<a class="headerlink" href="#21-build-angular" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>npx ng build</code> encerra com <code>Build at: 2026-04-06T14:33:30.289Z</code> sem erros</li>
+<li>Warnings presentes são todos pré-existentes (optional chain em modal-criar-usuario-portal, colaborador-form-modal, e dependências CommonJS de exceljs/file-saver). Nenhum relacionado à feature nova.</li>
+</ul>
+<h3 id="22-componentes-novos-existencia">2.2 Componentes novos — existência<a class="headerlink" href="#22-componentes-novos-existencia" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>tab-dia-dia</code> existe em <code>components/tab-dia-dia/</code></li>
+<li><strong>PASS</strong> — <code>tab-resumo</code> existe em <code>components/tab-resumo/</code></li>
+<li><strong>PASS</strong> — <code>kpi-card</code> existe em <code>components/kpi-card/</code></li>
+<li><strong>PASS</strong> — <code>frase-acionavel</code> existe em <code>components/frase-acionavel/</code></li>
+<li><strong>PASS</strong> — <code>pill-periodo</code> existe em <code>components/pill-periodo/</code></li>
+<li><strong>PASS</strong> — <code>tendencia-jornada</code> existe em <code>components/tendencia-jornada/</code></li>
+<li><strong>PASS</strong> — <code>tendencia-foco</code> existe em <code>components/tendencia-foco/</code></li>
+</ul>
+<h3 id="23-services">2.3 Services<a class="headerlink" href="#23-services" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>KpiComparacaoService</code> existe em <code>services/kpi-comparacao.service.ts</code></li>
+<li><strong>PASS</strong> — <code>ColaboradoresService</code> possui métodos <code>tendenciaPeriodo()</code> e <code>mediaTime()</code> apontando para os endpoints v2 corretos</li>
+</ul>
+<h3 id="24-declaracoes-no-modulo">2.4 Declarações no módulo<a class="headerlink" href="#24-declaracoes-no-modulo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>colaboradores.module.ts</code> declara: <code>TabDiaDiaComponent</code>, <code>TabResumoComponent</code>, <code>KpiCardComponent</code>, <code>PillPeriodoComponent</code>, <code>TendenciaJornadaComponent</code>, <code>TendenciaFocoComponent</code>, <code>FraseAcionavelComponent</code></li>
+</ul>
+<hr />
+<h2 id="3-integration-tabs-conectadas-corretamente">3. Integration — Tabs conectadas corretamente<a class="headerlink" href="#3-integration-tabs-conectadas-corretamente" title="Permanent link">&para;</a></h2>
+<h3 id="31-colaborador-detalhecomponenthtml">3.1 colaborador-detalhe.component.html<a class="headerlink" href="#31-colaborador-detalhecomponenthtml" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>*ngIf="activeTab === 'dia-a-dia'"</code> renderiza <code>&lt;app-tab-dia-dia&gt;</code></li>
+<li><strong>PASS</strong> — <code>*ngIf="activeTab === 'resumo'"</code> renderiza <code>&lt;app-tab-resumo&gt;</code></li>
+</ul>
+<h3 id="32-colaborador-detalhecomponentts">3.2 colaborador-detalhe.component.ts<a class="headerlink" href="#32-colaborador-detalhecomponentts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — <code>activeTab = 'dia-a-dia'</code> como default</li>
+<li><strong>PASS</strong> — Array <code>tabs</code> configurado como:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'dia-a-dia'</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'Dia a Dia'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'resumo'</span><span class="p">,</span><span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'Resumo'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'timeline'</span><span class="p">,</span><span class="w">  </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'Timeline 360°'</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">'dados'</span><span class="p">,</span><span class="w">     </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">'Detalhes do Colaborador'</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></li>
+<li>Ordem correta: Dia a Dia | Resumo | Timeline 360° | Detalhes</li>
+</ul>
+<p><strong>Observação:</strong> O <code>activeTab</code> usa <code>'dia-a-dia'</code> (com hífen simples), mas o template HTML usa <code>*ngIf="activeTab === 'dia-a-dia'"</code>. Consistente. Sem risco de mismatch.</p>
+<hr />
+<h2 id="4-spec-compliance-cross-reference-com-historiasmd">4. Spec compliance — Cross-reference com historias.md<a class="headerlink" href="#4-spec-compliance-cross-reference-com-historiasmd" title="Permanent link">&para;</a></h2>
+<h3 id="h1-reestruturacao-das-abas">H1 — Reestruturação das abas<a class="headerlink" href="#h1-reestruturacao-das-abas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — "Visão Geral" renomeada para "Dia a Dia"</li>
+<li><strong>PASS</strong> — "Indicadores" renomeada para "Resumo"</li>
+<li><strong>PASS</strong> — "Dia a Dia" é aba default</li>
+<li><strong>PASS</strong> — Abas "Timeline 360°" e "Detalhes" intactas</li>
+<li><strong>PASS</strong> — Ordem correta das abas</li>
+<li><strong>PASS</strong> — Nenhum KPI duplicado entre as abas</li>
+</ul>
+<h3 id="h2-aba-dia-a-dia-pergunta-guia-kpis-do-dia-textos-descritivos-e-tooltips">H2 — Aba Dia a Dia: pergunta-guia, KPIs do dia, textos descritivos e tooltips<a class="headerlink" href="#h2-aba-dia-a-dia-pergunta-guia-kpis-do-dia-textos-descritivos-e-tooltips" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Pergunta-guia "O que aconteceu hoje?" presente no topo</li>
+<li><strong>PASS</strong> — 4 cards KPI em linha: Jornada total, Tempo ativo, Tempo em pausa, Tempo ausente</li>
+<li><strong>PASS</strong> — "Tempo ausente" exibe subtítulo "inclui almoço"</li>
+<li><strong>PASS</strong> — Botões "Dia anterior" / "Próximo dia" presentes</li>
+<li><strong>PASS</strong> — Seletor de data com p-calendar presente</li>
+<li><strong>FAIL</strong> — <strong>Os KPI cards da aba Dia a Dia NÃO exibem textos descritivos por seção.</strong> O template <code>tab-dia-dia.component.html</code> renderiza os cards com <code>*ngFor</code> sobre o array <code>cards: TimelineCard[]</code>, e o modelo <code>TimelineCard</code> não possui campo <code>descricao</code>. A spec exige linha de texto 12px / <code>#94a3b8</code> / sem bold em cada KPI (Jornada, Tempo ativo, Pausa, Ausente). Os textos estão definidos na spec mas não foram implementados nesta aba.</li>
+<li><strong>FAIL</strong> — <strong>Os KPI cards da aba Dia a Dia NÃO exibem ícone "?" com tooltip.</strong> A spec define tooltips para: Jornada total, Tempo ativo, Tempo em pausa, Tempo ausente. O modelo <code>TimelineCard</code> não tem campo <code>tooltipTexto</code>. A aba Resumo usa corretamente <code>app-kpi-card</code> com <code>tooltipTexto</code> como @Input, mas a aba Dia a Dia usa cards inline sem esse suporte.</li>
+</ul>
+<p><strong>O que precisa ser corrigido (H2):</strong>
+1. Adicionar campos <code>descricao</code> e <code>tooltipTexto</code> ao modelo <code>TimelineCard</code> (ou criar cards estáticos por tipo ao invés de <code>*ngFor</code> genérico).
+2. Renderizar o texto descritivo em cada KPI card da aba Dia a Dia.
+3. Renderizar o ícone "?" com <code>menu-tooltip</code> nos cards que têm tooltip definido na spec.</p>
+<h3 id="h3-aba-dia-a-dia-frase-acionavel-automatica">H3 — Aba Dia a Dia: frase acionável automática<a class="headerlink" href="#h3-aba-dia-a-dia-frase-acionavel-automatica" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Frase acionável presente em card com classe CSS de borda colorida (<code>.frase--sucesso</code>, <code>.frase--atencao</code>, <code>.frase--alerta</code>)</li>
+<li><strong>PASS</strong> — Frase gerada automaticamente a partir dos KPIs do dia</li>
+<li><strong>PASS</strong> — Quando dia dentro do esperado: informa percentual ativo ("Dia dentro do esperado. X% de aproveitamento ativo.")</li>
+<li><strong>FAIL</strong> — <strong>Quando jornada excedida, a frase NÃO menciona o excedente específico.</strong> O spec define: "Jornada 10h 21min — <strong>2h 21min acima do esperado</strong>. Verifique se há sobrecarga." A implementação atual gera: "Jornada 10h 21min — <strong>acima do esperado</strong>. Verifique se há sobrecarga." — sem calcular e exibir o excesso em horas/min.</li>
+<li><strong>FAIL</strong> — <strong>Quando tempo ausente acima do habitual, a frase NÃO inclui a comparação com a média.</strong> O spec define: "Tempo ausente acima do habitual — <strong>1h 20min vs média de 45min</strong>." A implementação atual gera apenas: "Tempo ausente acima do habitual." sem a comparação. Nota: isso requer dados históricos de média de ausência do colaborador, que a API atual (<code>timeline/completo</code>) pode não retornar. Necessário verificar com o @Tony se o campo <code>mediaAusenteMinutos</code> deve ser adicionado ao <code>TimelineCompletaResponse</code>.</li>
+</ul>
+<p><strong>O que precisa ser corrigido (H3):</strong>
+1. No método <code>gerarFraseDia()</code> de <code>tab-dia-dia.component.ts</code>, calcular o excedente em segundos: <code>const excesso = jornada - (jornadaEsperadaMinutos * 60)</code> e formatar para incluir na frase.
+2. Para a frase de "ausente acima do habitual": avaliar com @Tony se a API fornece a média histórica. Se sim, adicionar ao <code>TimelineCompletaResponse</code> e usar no cálculo. Se não, marcar como gap de API (H9 parcial).</p>
+<h3 id="h4-aba-dia-a-dia-layout-hibrido-top-apps-eventos">H4 — Aba Dia a Dia: layout híbrido Top Apps + Eventos<a class="headerlink" href="#h4-aba-dia-a-dia-layout-hibrido-top-apps-eventos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Layout <code>.layout-hibrido</code> com <code>.coluna-esquerda</code> e <code>.coluna-direita</code> implementado</li>
+<li><strong>PASS</strong> — Top 5 Apps do dia à esquerda com barras proporcionais</li>
+<li><strong>PASS</strong> — Eventos Detalhados à direita com paginação (opções 10, 30, 50, 100 via <code>pageSizeOptions</code>)</li>
+<li><strong>PASS</strong> — KPIs e Timeline temporal acima dos dois painéis (largura total)</li>
+<li><strong>PASS</strong> — Timeline exibe blocos: verde (atividade), amarelo (pausa), cinza (ausente)</li>
+<li><strong>PASS</strong> — Textos descritivos presentes para "Top 5 Apps do dia" e "Eventos Detalhados"</li>
+<li><strong>OBSERVAÇÃO</strong> — Responsividade mobile não foi verificada via execução (ambiente CLI). O SCSS usa <code>@media (max-width: 768px)</code> conforme spec — assumido correto, mas precisa de validação visual no browser.</li>
+</ul>
+<h3 id="h5-aba-resumo-kpis-medios-com-comparacao-do-time">H5 — Aba Resumo: KPIs médios com comparação do time<a class="headerlink" href="#h5-aba-resumo-kpis-medios-com-comparacao-do-time" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Pergunta-guia "Qual o padrão desse colaborador?" presente</li>
+<li><strong>PASS</strong> — 4 cards KPI médio usando <code>app-kpi-card</code>: Jornada média, Tempo ativo médio, Pausa médio, Foco médio</li>
+<li><strong>PASS</strong> — Jornada média exibe alerta quando excedida (<code>[alerta]="jornadaExcedida"</code>)</li>
+<li><strong>PASS</strong> — Card "Foco médio" usa cor verde e subtítulo com contagem de sessões</li>
+<li><strong>PASS</strong> — Comparação com time via <code>mediaTime</code> e <code>mediaTimeStatus</code> em cada card</li>
+<li><strong>PASS</strong> — Textos descritivos em cada card usando o campo <code>descricao</code> do <code>app-kpi-card</code></li>
+<li><strong>PASS</strong> — Tooltip "?" no card "Foco médio" com texto correto da spec</li>
+<li><strong>PASS</strong> — Quando <code>membrosConsiderados === 0</code>, comparação é ocultada silenciosamente (<code>this.comparacao = null</code>)</li>
+<li><strong>PASS</strong> — Semântica de comparação correta por KPI implementada em <code>KpiComparacaoService</code> com comentários claros</li>
+</ul>
+<h3 id="h6-aba-resumo-grafico-de-tendencia-de-jornada-por-dia">H6 — Aba Resumo: gráfico de tendência de jornada por dia<a class="headerlink" href="#h6-aba-resumo-grafico-de-tendencia-de-jornada-por-dia" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Gráfico <code>app-tendencia-jornada</code> com barras verticais CSS, uma por dia</li>
+<li><strong>PASS</strong> — Barras vermelhas quando <code>jornadaExcedida === true</code> (cor <code>#dc2626</code>)</li>
+<li><strong>PASS</strong> — Barras verdes no estado padrão (cor <code>#22c55e</code>)</li>
+<li><strong>PASS</strong> — Texto descritivo "Evolução da jornada ao longo dos dias. Dias vermelhos excederam o esperado. Veja se é pontual ou um padrão." presente</li>
+<li><strong>PASS</strong> — Gráfico atualiza ao mudar período (vinculado ao <code>diasJornada</code> que é recalculado no <code>forkJoin</code>)</li>
+</ul>
+<h3 id="h7-aba-resumo-grafico-tendencia-de-foco-com-barras-empilhadas-e-frase">H7 — Aba Resumo: gráfico tendência de foco com barras empilhadas e frase<a class="headerlink" href="#h7-aba-resumo-grafico-tendencia-de-foco-com-barras-empilhadas-e-frase" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Gráfico <code>app-tendencia-foco</code> com barras empilhadas CSS por dia</li>
+<li><strong>PASS</strong> — Paleta implementada conforme design-notes.md (família indigo): RASO <code>#fef08a</code>, PRODUTIVO <code>#a5b4fc</code>, BOM_FOCO <code>#6366f1</code>, DEEP_WORK <code>#3730a3</code></li>
+<li><strong>PASS</strong> — Legenda inline com as 4 faixas</li>
+<li><strong>PASS</strong> — Subtítulo "X sessões no período · maior: Xh Xmin" via getter <code>subtituloGrafico</code></li>
+<li><strong>PASS</strong> — Tooltip "?" com texto correto da spec: "Uma sessão de foco é um período de trabalho contínuo sem interrupções maiores que 2 minutos. Só sessões acima de 5 minutos são contadas."</li>
+<li><strong>PASS</strong> — Frase acionável de foco gerada automaticamente abaixo do gráfico</li>
+<li><strong>PASS</strong> — Lógica de classificação: FRAGMENTADO, EQUILIBRADO, DEEP_WORK implementada em <code>gerarFraseFoco()</code> com frases exemplares corretas</li>
+<li><strong>PASS</strong> — Gráfico atualiza ao mudar período</li>
+</ul>
+<h3 id="h8-aba-resumo-seletor-de-periodo-com-personalizado-discreto">H8 — Aba Resumo: seletor de período com "Personalizado" discreto<a class="headerlink" href="#h8-aba-resumo-seletor-de-periodo-com-personalizado-discreto" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Pills exibidas: Hoje | 7 dias | 15 dias | 30 dias</li>
+<li><strong>PASS</strong> — Período default: <code>'7d'</code></li>
+<li><strong>PASS</strong> — Pill "Personalizado ▾" com ícone SVG (não caractere unicode) — implementado em <code>pill-periodo.component.html</code></li>
+<li><strong>PASS</strong> — Calendar picker oculto por padrão, abre ao clicar em "Personalizado"</li>
+<li><strong>PASS</strong> — Estado visual "ativo" com classe CSS distinta para custom range</li>
+<li><strong>PASS</strong> — Quando custom range ativo, exibe as datas no label da pill</li>
+<li><strong>PASS</strong> — Todos os componentes da aba Resumo atualizam ao trocar o período</li>
+</ul>
+<h3 id="h9-apis-backend">H9 — APIs backend<a class="headerlink" href="#h9-apis-backend" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Endpoint <code>POST /api/v2/eventos/{usuarioId}/tendencia-periodo</code> retorna array com jornada e sessões de foco por dia</li>
+<li><strong>PASS</strong> — Endpoint <code>POST /api/v2/eventos/{usuarioId}/media-time</code> retorna KPIs médios do time</li>
+<li><strong>PASS</strong> — Ambos aceitam <code>dataInicio</code> / <code>dataFim</code> via <code>ResumoPeriodoColaboradorRequest</code></li>
+<li><strong>PASS</strong> — Dados de foco incluem campo <code>faixa</code> para classificação por duração</li>
+<li><strong>PASS</strong> — Lógica de sessão de foco (&gt;5min, sem interrupção &gt;2min) é responsabilidade do <code>TendenciaPeriodoService</code></li>
+<li><strong>PASS</strong> — Contratos TypeScript documentados em <code>tab-resumo.component.ts</code> (<code>TendenciaPeriodoResponse</code>, <code>DiaTendenciaApi</code>, <code>SessaoFocoApi</code>, <code>MediaTimeResponse</code>)</li>
+</ul>
+<hr />
+<h2 id="5-code-quality">5. Code Quality<a class="headerlink" href="#5-code-quality" title="Permanent link">&para;</a></h2>
+<h3 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Nenhum <code>TODO</code> / <code>FIXME</code> nos novos componentes (<code>/components/*.ts</code>)</li>
+<li><strong>PASS</strong> — Nenhum <code>console.log</code> nos novos componentes</li>
+<li><strong>PASS</strong> — Nenhuma string hardcoded que deveria ser configurável (jornada esperada 480min é passada como <code>@Input</code> no <code>tendencia-jornada</code>, não hardcoded no template)</li>
+<li><strong>PASS</strong> — Null safety: uso extensivo de <code>?? 0</code>, <code>?? '--'</code>, <code>catchError(() =&gt; of(null))</code>, <code>if (!colaboradorId) return</code></li>
+</ul>
+<h3 id="backend">Backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PASS</strong> — Nenhum <code>TODO</code> / <code>FIXME</code> nos novos services (<code>TendenciaPeriodoService</code>, <code>MediaTimeService</code>)</li>
+<li><strong>PASS</strong> — Nenhum <code>System.out.print</code> nos novos services</li>
+<li><strong>OBSERVAÇÃO</strong> — Existe um <code>// TODO(MINOR-3)</code> em <code>UsuarioPortalAvatarUrlBuilder.java</code>, mas é pré-existente e não relacionado a esta feature</li>
+</ul>
+<hr />
+<h2 id="resumo-executivo">Resumo Executivo<a class="headerlink" href="#resumo-executivo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Item</th>
+<th>Status</th>
+<th>Severidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BE-1</td>
+<td>Backend compila + testes passam (121/121)</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>BE-2</td>
+<td>Endpoint POST tendencia-periodo existe</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>BE-3</td>
+<td>Endpoint POST media-time existe</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>BE-4</td>
+<td>DTOs TendenciaPeriodoResposta, DiaTendenciaResposta, SessaoFocoDiaResposta, MediaTimeResposta</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>BE-5</td>
+<td>Services TendenciaPeriodoService, MediaTimeService</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-1</td>
+<td>Build Angular limpo (sem erros)</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-2</td>
+<td>Componentes tab-dia-dia, tab-resumo, kpi-card, frase-acionavel, pill-periodo, tendencia-jornada, tendencia-foco</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-3</td>
+<td>KpiComparacaoService existe</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-4</td>
+<td>Métodos tendenciaPeriodo(), mediaTime() no service</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>FE-5</td>
+<td>Declarações corretas no colaboradores.module.ts</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>INT-1</td>
+<td>Abas 'dia-a-dia' e 'resumo' renderizam componentes corretos</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>INT-2</td>
+<td>Tabs renomeadas corretamente, default correto</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>H1</td>
+<td>Abas renomeadas, ordem correta, default correto</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>Textos descritivos nos KPI cards do Dia a Dia</td>
+<td><strong>FAIL</strong></td>
+<td>MÉDIO</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>Tooltips "?" nos KPI cards do Dia a Dia</td>
+<td><strong>FAIL</strong></td>
+<td>MÉDIO</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Frase inclui excedente específico (Xh Xmin acima do esperado)</td>
+<td><strong>FAIL</strong></td>
+<td>BAIXO</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Frase ausente inclui comparação com média histórica</td>
+<td><strong>FAIL</strong></td>
+<td>BAIXO</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>Layout híbrido Top Apps + Eventos</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>KPIs médios com comparação do time</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>Gráfico tendência jornada</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>Gráfico tendência foco (barras empilhadas + frase)</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>H8</td>
+<td>Seletor período com Personalizado discreto</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>H9</td>
+<td>APIs backend novas</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>QC-1</td>
+<td>Sem TODO/FIXME no código novo</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>QC-2</td>
+<td>Sem console.log</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+<tr>
+<td>QC-3</td>
+<td>Null safety em caminhos críticos</td>
+<td>PASS</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="falhas-detalhadas-o-que-fazer">Falhas Detalhadas — O que fazer<a class="headerlink" href="#falhas-detalhadas-o-que-fazer" title="Permanent link">&para;</a></h2>
+<h3 id="fail-1-h2-textos-descritivos-e-tooltips-ausentes-nos-kpi-cards-da-aba-dia-a-dia-medio">FAIL-1: H2 — Textos descritivos e tooltips ausentes nos KPI cards da aba Dia a Dia (MÉDIO)<a class="headerlink" href="#fail-1-h2-textos-descritivos-e-tooltips-ausentes-nos-kpi-cards-da-aba-dia-a-dia-medio" title="Permanent link">&para;</a></h3>
+<p><strong>Problema:</strong> O componente <code>tab-dia-dia.component.html</code> renderiza KPI cards via <code>*ngFor</code> sobre <code>cards: TimelineCard[]</code>. O modelo <code>TimelineCard</code> (em <code>timeline.models.ts</code>) não possui campos <code>descricao</code> ou <code>tooltipTexto</code>. Em consequência, nenhum texto descritivo nem ícone "?" com tooltip aparece nos 4 cards de KPI da aba Dia a Dia.</p>
+<p><strong>A aba Resumo faz corretamente</strong> via <code>app-kpi-card</code> com <code>@Input() descricao</code> e <code>@Input() tooltipTexto</code> — mas a aba Dia a Dia não usa esse componente.</p>
+<p><strong>Fix sugerido (@Miles):</strong>
+Opção A (preferida): Converter os KPI cards da aba Dia a Dia para usar <code>app-kpi-card</code> com cards estáticos em vez de <code>*ngFor</code> genérico. Isso permite passar os textos descritivos e tooltips corretos conforme spec.</p>
+<p>Opção B: Adicionar campos <code>descricao?: string</code> e <code>tooltipTexto?: string</code> ao <code>TimelineCard</code> e popular no <code>ColaboradorDetalheComponent</code> ao criar os <code>defaultTimelineCards</code>.</p>
+<p>Textos a implementar (da spec):
+- Jornada total: descricao = "Quanto tempo durou o dia de trabalho, do início ao fim. Se estiver acima do esperado, pode indicar sobrecarga." | tooltip = "Calculado do primeiro ao último evento detectado. A jornada esperada é configurada no perfil do colaborador (padrão: 8h)."
+- Tempo ativo: descricao = "Quanto tempo o colaborador esteve usando o computador. Compare com a jornada para ver o aproveitamento do dia." | tooltip = "Inclui digitação, cliques e uso de aplicativos. Pausas menores que 5 minutos não interrompem o tempo ativo."
+- Tempo em pausa: descricao = "Pequenas pausas durante o dia. Pausas saudáveis são normais e esperadas." | tooltip = "Detectado automaticamente quando não há atividade por mais de 5 minutos. Pausas acima de 30 minutos viram 'ausente'."
+- Tempo ausente: descricao = "Períodos longos sem atividade, como almoço ou saída antecipada. Verifique se está dentro do esperado." | tooltip = "Inclui almoço, reuniões fora do computador e qualquer intervalo acima de 30 minutos."</p>
+<hr />
+<h3 id="fail-2-h3-frase-acionavel-nao-menciona-excedente-especifico-baixo">FAIL-2: H3 — Frase acionável não menciona excedente específico (BAIXO)<a class="headerlink" href="#fail-2-h3-frase-acionavel-nao-menciona-excedente-especifico-baixo" title="Permanent link">&para;</a></h3>
+<p><strong>Problema:</strong> Em <code>tab-dia-dia.component.ts</code>, método <code>gerarFraseDia()</code>, quando a jornada é excedida a frase gerada é:
+<code>"Jornada 10h 21min — acima do esperado. Verifique se há sobrecarga."</code></p>
+<p>O spec exige:
+<code>"Jornada 10h 21min — 2h 21min acima do esperado. Verifique se há sobrecarga."</code></p>
+<p>O componente já recebe <code>jornadaTotalSegundos</code> como <code>@Input</code>. O <code>@Input() jornadaExcedida = false</code> indica quando foi excedida, mas o componente não recebe a jornada esperada em segundos para calcular o excesso.</p>
+<p><strong>Fix sugerido (@Miles):</strong>
+1. Adicionar <code>@Input() jornadaEsperadaMinutos = 480</code> ao <code>TabDiaDiaComponent</code>.
+2. No método <code>gerarFraseDia()</code>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">jornadaEsperadaSegundos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">jornadaEsperadaMinutos</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="mf">480</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">excesso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jornada</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">jornadaEsperadaSegundos</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">excessoFormatado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">formatarSegundos</span><span class="p">(</span><span class="nx">excesso</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="sb">`Jornada </span><span class="si">${</span><span class="nx">jornadaLabel</span><span class="si">}</span><span class="sb"> — </span><span class="si">${</span><span class="nx">excessoFormatado</span><span class="si">}</span><span class="sb"> acima do esperado. Verifique se há sobrecarga.`</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nx">tipo</span><span class="o">:</span><span class="w"> </span><span class="s1">'atencao'</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">};</span>
+</code></pre></div>
+3. Passar <code>[jornadaEsperadaMinutos]</code> do <code>ColaboradorDetalheComponent</code> para <code>app-tab-dia-dia</code>.</p>
+<hr />
+<h3 id="fail-3-h3-frase-ausente-acima-do-habitual-sem-comparacao-com-media-baixo-gap-de-api">FAIL-3: H3 — Frase "ausente acima do habitual" sem comparação com média (BAIXO / GAP DE API)<a class="headerlink" href="#fail-3-h3-frase-ausente-acima-do-habitual-sem-comparacao-com-media-baixo-gap-de-api" title="Permanent link">&para;</a></h3>
+<p><strong>Problema:</strong> A frase gerada é "Tempo ausente acima do habitual." sem incluir "Xh Xmin vs média de Ymin".</p>
+<p><strong>Análise:</strong> A API <code>timeline/completo</code> não retorna a média histórica de ausência do colaborador. Isso é um gap de dados — a lógica de comparação existe na spec mas o backend não provê o dado necessário.</p>
+<p><strong>Ação recomendada:</strong>
+- @Tony: avaliar se <code>TimelineCompletaResponse</code> deve incluir campo <code>mediaAusenteHabitualMinutos</code> (calculado via histórico dos últimos 30 dias, por exemplo).
+- Até que o dado exista na API, a implementação atual ("Tempo ausente acima do habitual.") é aceitável como fallback.
+- Registrar como dívida técnica (não bloqueia o deploy desta feature).</p>
+<hr />
+<h2 id="decisao-de-deploy">Decisão de Deploy<a class="headerlink" href="#decisao-de-deploy" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Cenário</th>
+<th>Recomendação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deploy com FAIL-1 (textos/tooltips ausentes no Dia a Dia)</td>
+<td><strong>NÃO aprovado</strong> — a spec é explícita e o Resumo já implementou corretamente. Gap visível ao gestor.</td>
+</tr>
+<tr>
+<td>Deploy com FAIL-2 (frase sem excedente específico)</td>
+<td><strong>Aprovado condicionalmente</strong> — o comportamento atual não é errado, apenas incompleto. Pode seguir como v1.1.</td>
+</tr>
+<tr>
+<td>Deploy com FAIL-3 (frase ausente sem comparação)</td>
+<td><strong>Aprovado</strong> — requer dado de API que não existe. Registrar como dívida técnica.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Veredito final: BLOQUEADO até resolução de FAIL-1.</strong>
+FAIL-2 pode ser resolvido junto ou entrar como issue imediata pós-merge.
+FAIL-3 fica em backlog aguardando decisão de @Tony sobre a API.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

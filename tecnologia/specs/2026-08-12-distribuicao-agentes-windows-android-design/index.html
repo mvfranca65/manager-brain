@@ -1,0 +1,2091 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/specs/2026-08-12-distribuicao-agentes-windows-android-design/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Especificação — Distribuição de Agents Windows e Android pelo Portal - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#especificacao-distribuicao-de-agents-windows-e-android-pelo-portal" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Especificação — Distribuição de Agents Windows e Android pelo Portal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-escopo-e-decisoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Escopo e decisões
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Escopo e decisões">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-decisoes-fechadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Decisões fechadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-fora-de-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Fora de escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estado-atual-e-lacunas-confirmadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Estado atual e lacunas confirmadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-contratos-de-publicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Contratos de publicação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Contratos de publicação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-post-apiadminreleases-srv-admin-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 POST /api/admin/releases — srv-admin-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-download-inicial-personalizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Download inicial personalizado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Download inicial personalizado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-contrato-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Contrato Portal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-contrato-interno-admin-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Contrato interno admin-node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-seguranca-e-infraestrutura-da-assinatura-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Segurança e infraestrutura da assinatura Android
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-portal-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Portal Web
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-primeiro-uso-e-vinculo-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Primeiro uso e vínculo Android
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-plano-de-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Plano de implementação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Plano de implementação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-a-admin-node-releases-e-artefatos-shuri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase A — Admin-node releases e artefatos (@Shuri)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-b-download-e-assinatura-shuri-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase B — Download e assinatura (@Shuri + @Vision)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-c-portal-petermiles-shuri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase C — Portal (@Peter/Miles + Shuri)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-d-agent-android-sam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase D — Agent Android (@Sam)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-criterios-de-aceite-e-testes-ponta-a-ponta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Critérios de aceite e testes ponta a ponta
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Critérios de aceite e testes ponta a ponta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-arquivosrepositorios-impactados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Arquivos/repositórios impactados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-dependencias-e-ordem-de-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Dependências e ordem de deploy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="especificacao-distribuicao-de-agents-windows-e-android-pelo-portal">Especificação — Distribuição de Agents Windows e Android pelo Portal<a class="headerlink" href="#especificacao-distribuicao-de-agents-windows-e-android-pelo-portal" title="Permanent link">&para;</a></h1>
+<p><strong>Status:</strong> pronta para implementação<br />
+<strong>Data:</strong> 2026-08-12<br />
+<strong>Owners:</strong> @Tony (coordenação), @Shuri (Node), @Sam (Android), @Peter/Miles (Portal), @Natasha (QA), @Vision (infra/segredos)</p>
+<h2 id="1-objetivo">1. Objetivo<a class="headerlink" href="#1-objetivo" title="Permanent link">&para;</a></h2>
+<p>Concluir a publicação e a distribuição autenticada de dois agentes pelo Portal:</p>
+<ul>
+<li><strong>Windows:</strong> instalador ZIP personalizado por empresa, mantendo o fluxo atual.</li>
+<li><strong>Android:</strong> APK-base publicado por versão, personalizado por empresa no download, re-assinado e entregue pelo mesmo fluxo do Portal.</li>
+</ul>
+<p>O Portal Web nunca chama <code>srv-admin-node</code> diretamente. Todo tráfego do navegador é exclusivamente para <code>srv-portal-node</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>fed-portal ── JWT do portal ──&gt; srv-portal-node ── chave interna da empresa ──&gt; srv-admin-node
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                                                        │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                                                Windows: ZIP + appsettings.json
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                                Android: APK + assets/config.json + assinatura
+</code></pre></div>
+<h2 id="2-escopo-e-decisoes">2. Escopo e decisões<a class="headerlink" href="#2-escopo-e-decisoes" title="Permanent link">&para;</a></h2>
+<h3 id="21-decisoes-fechadas">2.1 Decisões fechadas<a class="headerlink" href="#21-decisoes-fechadas" title="Permanent link">&para;</a></h3>
+<ol>
+<li>A aba <strong>Agent</strong> substitui o card macOS por <strong>Android</strong>.</li>
+<li>A tela apresenta Windows e Android apenas quando existir release ativo para cada plataforma.</li>
+<li>A rota canônica externa é <code>GET /api/instalador/download/:sistemaOperacional</code> no <code>srv-portal-node</code>.</li>
+<li>A rota legada <code>GET /api/instalador/download</code> continua e equivale a <code>WINDOWS</code>.</li>
+<li>O APK é <strong>um artefato por empresa e versão</strong>, não por colaborador. O colaborador é confirmado na primeira abertura do app.</li>
+<li>O browser não recebe JWT, chave de ativação, URL de storage ou credencial de assinatura na URL. O download ocorre por <code>HttpClient</code> autenticado.</li>
+<li><code>versoes_agente.sistema_operacional</code> usa o vocabulário de release: <code>WINDOWS</code> e <code>ANDROID</code>. O vínculo do dispositivo usa o vocabulário canônico: <code>DESKTOP_WINDOWS</code> e <code>MOBILE_ANDROID</code>. Não misturar os dois contratos.</li>
+</ol>
+<h3 id="22-fora-de-escopo">2.2 Fora de escopo<a class="headerlink" href="#22-fora-de-escopo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>macOS e iOS;</li>
+<li>distribuição por Google Play ou MDM;</li>
+<li>personalização por colaborador no binário;</li>
+<li>exposição pública de link personalizado;</li>
+<li>alteração dos serviços Java mortos.</li>
+</ul>
+<h2 id="3-estado-atual-e-lacunas-confirmadas">3. Estado atual e lacunas confirmadas<a class="headerlink" href="#3-estado-atual-e-lacunas-confirmadas" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Capacidade</th>
+<th style="text-align: right;">Windows</th>
+<th style="text-align: right;">Android</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Release por <code>sistemaOperacional</code> no admin-node</td>
+<td style="text-align: right;">Sim</td>
+<td style="text-align: right;">Metadado sim; artefato não</td>
+</tr>
+<tr>
+<td>Upload de artefato correto</td>
+<td style="text-align: right;">Sim, ZIP</td>
+<td style="text-align: right;">Não, APK é rejeitado</td>
+</tr>
+<tr>
+<td>Chave de storage segregada por plataforma</td>
+<td style="text-align: right;">Não</td>
+<td style="text-align: right;">Não</td>
+</tr>
+<tr>
+<td>Verificação de update por SO</td>
+<td style="text-align: right;">Sim</td>
+<td style="text-align: right;">Consulta sim; URL/chave ainda incorreta</td>
+</tr>
+<tr>
+<td>Download inicial pelo portal</td>
+<td style="text-align: right;">Sim após rota parametrizada</td>
+<td style="text-align: right;">Não</td>
+</tr>
+<tr>
+<td>Configuração por empresa</td>
+<td style="text-align: right;">Sim, ZIP</td>
+<td style="text-align: right;">Não</td>
+</tr>
+<tr>
+<td>Assinatura válida após personalização</td>
+<td style="text-align: right;">N/A ZIP</td>
+<td style="text-align: right;">Não existe</td>
+</tr>
+<tr>
+<td>Confirmação do colaborador no primeiro uso</td>
+<td style="text-align: right;">Sim</td>
+<td style="text-align: right;">Implementada no app; requer testes integrados</td>
+</tr>
+</tbody>
+</table>
+<p>Lacunas técnicas que impedem Android hoje:</p>
+<ul>
+<li><code>POST /api/admin/releases</code> exige nome e extensão <code>.zip</code>, com MIME fixo <code>application/zip</code>.</li>
+<li>A chave S3 atual não contém plataforma; uma versão Android pode colidir com Windows.</li>
+<li>A geração de URL de update calcula sempre a chave Windows.</li>
+<li>O download do admin escolhe a última versão sem filtrar plataforma e só reescreve <code>appsettings.json</code> de ZIP.</li>
+<li>O <code>srv-portal-node</code> bloqueia <code>ANDROID</code> antes de chamar upstream e a sua metadata só representa Windows/macOS.</li>
+</ul>
+<h2 id="4-contratos-de-publicacao">4. Contratos de publicação<a class="headerlink" href="#4-contratos-de-publicacao" title="Permanent link">&para;</a></h2>
+<h3 id="41-post-apiadminreleases-srv-admin-node">4.1 <code>POST /api/admin/releases</code> — <code>srv-admin-node</code><a class="headerlink" href="#41-post-apiadminreleases-srv-admin-node" title="Permanent link">&para;</a></h3>
+<p>Mantém <code>multipart/form-data</code>, <code>arquivo</code>, <code>versao</code>, <code>changelog?</code>, <code>obrigatoria?</code> e <code>sistemaOperacional</code>.</p>
+<table>
+<thead>
+<tr>
+<th>sistemaOperacional</th>
+<th>Nome obrigatório</th>
+<th>Extensão</th>
+<th>Content-Type</th>
+<th>Chave do objeto base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WINDOWS</code></td>
+<td><code>ManagerAgent-Installer-v{versao}.zip</code></td>
+<td><code>.zip</code></td>
+<td><code>application/zip</code></td>
+<td><code>releases/WINDOWS/{versao}/ManagerAgent-Installer-v{versao}.zip</code></td>
+</tr>
+<tr>
+<td><code>ANDROID</code></td>
+<td><code>ManagerAgent-Android-v{versao}.apk</code></td>
+<td><code>.apk</code></td>
+<td><code>application/vnd.android.package-archive</code></td>
+<td><code>releases/ANDROID/{versao}/ManagerAgent-Android-v{versao}.apk</code></td>
+</tr>
+</tbody>
+</table>
+<p>Regras:</p>
+<ol>
+<li>Validar o nome, extensão e MIME esperado pelo SO antes do hash/upload.</li>
+<li>Unicidade continua <code>(versao, sistema_operacional)</code>.</li>
+<li>Persistir <code>url_download</code>, checksum e tamanho do <strong>artefato-base</strong> publicado.</li>
+<li><code>url_download</code> não é retornada ao fed-portal como link público de instalação. É informação administrativa/auto-update.</li>
+<li>A listagem e inativação devem receber <code>sistemaOperacional</code> e usar exatamente o mesmo vocabulário de release.</li>
+</ol>
+<h2 id="5-download-inicial-personalizado">5. Download inicial personalizado<a class="headerlink" href="#5-download-inicial-personalizado" title="Permanent link">&para;</a></h2>
+<h3 id="51-contrato-portal">5.1 Contrato Portal<a class="headerlink" href="#51-contrato-portal" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">GET /api/instalador/download/WINDOWS</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">GET /api/instalador/download/ANDROID</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="err">Authorization: Bearer &lt;portal-jwt&gt;</span>
+</code></pre></div>
+<p>O <code>srv-portal-node</code> deve:</p>
+<ol>
+<li>validar o JWT do Portal;</li>
+<li>resolver <code>empresaId</code> pelo contexto tenant;</li>
+<li>recuperar a chave de ativação da empresa no banco;</li>
+<li>chamar internamente o <code>srv-admin-node</code>, sem redirecionar o browser;</li>
+<li>fazer streaming da resposta;</li>
+<li>emitir <code>INSTALLER_DOWNLOADED</code> somente após upstream aceitar a solicitação, com <code>empresaId</code>, <code>usuarioId</code>, IP, User-Agent e <code>sistemaOperacional</code>;</li>
+<li>retornar <code>Content-Type</code>, <code>Content-Disposition</code> e <code>Content-Length</code> do upstream.</li>
+</ol>
+<p>Erros estáveis:</p>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th style="text-align: right;">Status</th>
+<th>Código</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JWT ausente/inválido</td>
+<td style="text-align: right;">401</td>
+<td>padrão de autenticação</td>
+</tr>
+<tr>
+<td>empresa sem chave</td>
+<td style="text-align: right;">404</td>
+<td><code>MANAGER.INSTALADOR.CHAVE_AUSENTE</code></td>
+</tr>
+<tr>
+<td>SO inválido</td>
+<td style="text-align: right;">400</td>
+<td><code>MANAGER.INSTALADOR.SISTEMA_OPERACIONAL_INVALIDO</code></td>
+</tr>
+<tr>
+<td>sem release ativo para o SO</td>
+<td style="text-align: right;">404</td>
+<td><code>MANAGER.INSTALADOR.RELEASE_NAO_DISPONIVEL</code></td>
+</tr>
+<tr>
+<td>falha do admin/worker/storage</td>
+<td style="text-align: right;">502</td>
+<td><code>MANAGER.INSTALADOR.UPSTREAM_FALHOU</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-contrato-interno-admin-node">5.2 Contrato interno admin-node<a class="headerlink" href="#52-contrato-interno-admin-node" title="Permanent link">&para;</a></h3>
+<p>Adicionar endpoint literal antes do endpoint público por chave:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="err">GET /api/agente/atualizacoes/instalador/download/:sistemaOperacional</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="err">X-Ativacao-Key: &lt;chave-da-empresa&gt;</span>
+</code></pre></div>
+<p>Compatibilidade: <code>GET /api/agente/atualizacoes/instalador/download</code> continua Windows. Aceitar <code>Authorization</code> legado no admin-node enquanto o portal migra para <code>X-Ativacao-Key</code>; novos chamados internos usam somente <code>X-Ativacao-Key</code>.</p>
+<p>O endpoint deve buscar a última versão <strong>ativa e não pausada</strong> para o SO solicitado. O caminho público existente <code>/instalador/:chaveEmpresa</code> não deve ser usado pelo Portal nem receber Android neste escopo, porque mantém chave na URL.</p>
+<h3 id="53-windows">5.3 Windows<a class="headerlink" href="#53-windows" title="Permanent link">&para;</a></h3>
+<p>Manter a implementação atual, tornando todas as consultas/chaves explicitamente <code>WINDOWS</code>:</p>
+<ul>
+<li>obter o ZIP-base da chave S3 Windows;</li>
+<li>reescrever <code>appsettings.json</code> com chave de ativação e endpoints;</li>
+<li>stream do ZIP com <code>Content-Type: application/octet-stream</code> e filename <code>ManagerAgent-Installer-{Empresa}.zip</code>;</li>
+<li>sem carregar o arquivo inteiro em memória.</li>
+</ul>
+<h3 id="54-android">5.4 Android<a class="headerlink" href="#54-android" title="Permanent link">&para;</a></h3>
+<p>O APK-base contém <code>assets/config.json</code> com placeholders. No download:</p>
+<ol>
+<li>buscar o APK-base ativo Android no storage;</li>
+<li>criar diretório temporário exclusivo com permissões restritas;</li>
+<li>substituir somente <code>assets/config.json</code> por JSON validado:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">"ambiente"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prod|staging"</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">"chaveAtivacao"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;chave da empresa&gt;"</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">"nomeEmpresa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;nome da empresa&gt;"</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>executar <code>zipalign</code> no APK modificado;</li>
+<li>executar <code>apksigner sign</code> com a chave de assinatura de release;</li>
+<li>executar <code>apksigner verify --verbose --print-certs</code> e falhar sem enviar bytes se a verificação falhar;</li>
+<li>opcionalmente armazenar em cache privado por <code>(empresaId, versao, hashConfig, ambiente)</code> com TTL/versionamento; nunca reutilizar artefato entre empresas;</li>
+<li>stream do APK com <code>Content-Type: application/vnd.android.package-archive</code> e filename <code>ManagerAgent-Android-{Empresa}-v{versao}.apk</code>.</li>
+</ol>
+<p>Modificar um APK invalida a assinatura; por isso <code>zipalign</code> e <code>apksigner</code> são obrigatórios. Nesta fase, o <code>srv-admin-node</code> executa essas ferramentas no seu container, com keystore montado como segredo protegido e sem jamais expor seus caminhos, alias ou senhas. A extração para worker isolado permanece uma evolução operacional, sem alterar o contrato.</p>
+<h2 id="6-seguranca-e-infraestrutura-da-assinatura-android">6. Segurança e infraestrutura da assinatura Android<a class="headerlink" href="#6-seguranca-e-infraestrutura-da-assinatura-android" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Keystore, alias e senhas ficam em Secret Manager/KMS/volume protegido montado somente no <code>srv-admin-node</code>; nunca em Git, banco, logs, frontend ou respostas HTTP.</li>
+<li>O processo aceita somente APK-base identificado por versão Android já publicada e configuração derivada do <code>empresaId</code>; não aceita caminho, shell argument ou JSON arbitrário do cliente.</li>
+<li>Arquivos temporários são removidos em <code>finally</code>, inclusive em erro/cancelamento. Logs não podem conter chave de ativação.</li>
+<li>A mesma chave de assinatura deve ser usada em todas as versões distribuídas por sideload, ou Android recusará atualização sobre instalação existente.</li>
+<li>O APK personalizado é entregue apenas pelo proxy autenticado do Portal. Não gerar URL S3 pública, presigned URL para browser ou link com chave/token.</li>
+</ol>
+<h2 id="7-portal-web">7. Portal Web<a class="headerlink" href="#7-portal-web" title="Permanent link">&para;</a></h2>
+<p>Na aba <strong>Agent</strong>:</p>
+<ul>
+<li>trocar a coluna macOS por Android;</li>
+<li>título: <code>Android</code>;</li>
+<li>requisito: <code>Android 8.0 ou superior</code> (minSdk 26);</li>
+<li>detalhe: tamanho e SHA-256 do APK-base publicado;</li>
+<li>botão chama <code>InstaladorApiService.download('ANDROID')</code> por <code>HttpClient</code> e salva Blob;</li>
+<li>não usar <code>window.open</code>; o interceptor injeta <code>Authorization: Bearer</code>;</li>
+<li>o card fica desabilitado quando a metadata Android estiver ausente;</li>
+<li>remover labels, tooltips, links e testes que tratam macOS como segundo artefato publicado.</li>
+</ul>
+<p><code>GET /api/instalador/versao-vigente</code> deve evoluir para retornar dados independentes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">"windows"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"versao"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.5.1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"publicadoEm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w"> </span><span class="nt">"tamanhoBytes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"checksumSha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w"> </span><span class="nt">"disponivel"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">"android"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"versao"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w"> </span><span class="nt">"publicadoEm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w"> </span><span class="nt">"tamanhoBytes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"checksumSha256"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w"> </span><span class="nt">"disponivel"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>Não retornar URL de download direto para nenhum SO. A resposta pode manter temporariamente o shape Windows atual como compatibilidade, mas novos consumidores usam o objeto por plataforma.</p>
+<h2 id="8-primeiro-uso-e-vinculo-android">8. Primeiro uso e vínculo Android<a class="headerlink" href="#8-primeiro-uso-e-vinculo-android" title="Permanent link">&para;</a></h2>
+<p>Após instalar o APK personalizado:</p>
+<ol>
+<li><code>ConfigReader</code> lê empresa e chave do <code>assets/config.json</code>;</li>
+<li>usuário informa matrícula ou e-mail;</li>
+<li>app chama <code>POST /api/agente/v1/colaboradores/validar</code> com <code>X-Ativacao-Key</code>;</li>
+<li>API retorna <code>nomeCompleto</code>; app pergunta <strong>“Você é {nomeCompleto}?”</strong>;</li>
+<li>somente em <strong>“Sim, sou eu”</strong> persiste o identificador, solicita permissões e chama <code>POST /api/agente/dispositivos/vincular</code>;</li>
+<li>vínculo envia <code>dispositivoTipo=MOBILE_ANDROID</code>, recebe Device JWT + refresh token e inicia a coleta;</li>
+<li>em “Não, corrigir”, falha de validação ou falha de vínculo, não inicia coleta e não preserva um vínculo indevido.</li>
+</ol>
+<p>Correção obrigatória antes de E2E: alinhar o enum aceito pelo <code>srv-admin-node</code> para <code>MOBILE_ANDROID</code> no vínculo e confirmar o DTO real da validação (<code>colaboradorId</code> versus <code>usuarioId</code>) com teste de contrato, sem aliases silenciosos.</p>
+<h2 id="9-plano-de-implementacao">9. Plano de implementação<a class="headerlink" href="#9-plano-de-implementacao" title="Permanent link">&para;</a></h2>
+<h3 id="fase-a-admin-node-releases-e-artefatos-shuri">Fase A — Admin-node releases e artefatos (@Shuri)<a class="headerlink" href="#fase-a-admin-node-releases-e-artefatos-shuri" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Centralizar <code>ReleasePlatformMetadata</code> (SO, extensão, MIME, filename, chave S3).</li>
+<li>Aplicar metadados no controller, service, DTO/Swagger, upload e testes.</li>
+<li>Atualizar <code>keyForRelease</code> e presign de auto-update para usar SO.</li>
+<li>Garantir coexistência Windows/Android com mesma versão sem overwrite.</li>
+</ol>
+<h3 id="fase-b-download-e-assinatura-shuri-vision">Fase B — Download e assinatura (@Shuri + @Vision)<a class="headerlink" href="#fase-b-download-e-assinatura-shuri-vision" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Criar lookup <code>buscarUltimaVersaoAtivaPorSO</code>.</li>
+<li>Separar o personalizador Windows do gerador Android.</li>
+<li>Personalizar, alinhar, assinar e verificar APK no container seguro do <code>srv-admin-node</code>.</li>
+<li>Criar endpoint interno de download por SO e preservar endpoint Windows legado.</li>
+<li>Propagar SO, MIME e filename para <code>srv-portal-node</code>.</li>
+</ol>
+<h3 id="fase-c-portal-petermiles-shuri">Fase C — Portal (@Peter/Miles + Shuri)<a class="headerlink" href="#fase-c-portal-petermiles-shuri" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Expandir metadata por plataforma no <code>srv-portal-node</code>.</li>
+<li>Substituir macOS por Android na aba Agent.</li>
+<li>Manter downloads em Blob autenticado e mensagens de erro coerentes.</li>
+</ol>
+<h3 id="fase-d-agent-android-sam">Fase D — Agent Android (@Sam)<a class="headerlink" href="#fase-d-agent-android-sam" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Consolidar teste de contrato da validação e do vínculo.</li>
+<li>Cobrir UI de confirmação: aceitar, corrigir, nome ausente e falha de vínculo.</li>
+<li>Validar APK personalizado, assinatura e atualização sobre versão anterior no emulador/device.</li>
+</ol>
+<h2 id="10-criterios-de-aceite-e-testes-ponta-a-ponta">10. Critérios de aceite e testes ponta a ponta<a class="headerlink" href="#10-criterios-de-aceite-e-testes-ponta-a-ponta" title="Permanent link">&para;</a></h2>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<ul>
+<li>publicar ZIP Windows válido;</li>
+<li>listar e verificar update Windows retorna URL/chave Windows;</li>
+<li><code>GET /api/instalador/download/WINDOWS</code> com JWT retorna ZIP personalizado;</li>
+<li>rota sem SO retorna o mesmo comportamento Windows;</li>
+<li>empresa A e B recebem configurações diferentes;</li>
+<li>audit registra SO <code>WINDOWS</code>, usuário, tenant, IP e UA.</li>
+</ul>
+<h3 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h3>
+<ul>
+<li>publicar <code>ManagerAgent-Android-vX.Y.Z.apk</code> com <code>sistemaOperacional=ANDROID</code>;</li>
+<li>upload grava MIME e chave S3 Android; publicação da mesma versão Windows não é sobrescrita;</li>
+<li>verificar update Android retorna APK Android, checksum e tamanho Android;</li>
+<li><code>GET /api/instalador/download/ANDROID</code> com JWT retorna APK com MIME e nome corretos;</li>
+<li>extração controlada em teste confirma <code>assets/config.json</code> da empresa correta;</li>
+<li><code>apksigner verify</code> passa; APK instala em emulador/API 26+;</li>
+<li>usuário valida identificador, vê o nome, confirma explicitamente e recebe vínculo <code>MOBILE_ANDROID</code>;</li>
+<li>“Não, corrigir” não aciona permissões, vínculo, token ou coleta;</li>
+<li>empresa sem chave, release ausente, SO inválido e falha da assinatura retornam códigos estáveis sem vazar segredos;</li>
+<li>download Android registra audit com <code>sistemaOperacional=ANDROID</code>.</li>
+</ul>
+<h2 id="11-arquivosrepositorios-impactados">11. Arquivos/repositórios impactados<a class="headerlink" href="#11-arquivosrepositorios-impactados" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Repositório</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Backend/manager-srv-admin-node</code></td>
+<td>publicação multi-artefato, lookup por SO, update URL, personalizador Windows/Android e assinatura</td>
+</tr>
+<tr>
+<td><code>Backend/manager-srv-portal-node</code></td>
+<td>autenticação portal, tenant/chave, proxy por SO, audit e metadata por plataforma</td>
+</tr>
+<tr>
+<td><code>Frontend/manager-fed-portal</code></td>
+<td>card Android, metadata, download autenticado Blob e testes</td>
+</tr>
+<tr>
+<td><code>Agente/manager-srv-agent-android</code></td>
+<td>leitura config, confirmação da identidade, vínculo e testes UI/contrato</td>
+</tr>
+<tr>
+<td>Infraestrutura</td>
+<td>imagem do admin com Android Build Tools, Secret Manager/KMS, mount de keystore, permissões storage e observabilidade</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-dependencias-e-ordem-de-deploy">12. Dependências e ordem de deploy<a class="headerlink" href="#12-dependencias-e-ordem-de-deploy" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Infra do admin + segredos de assinatura Android.</li>
+<li>Admin-node: modelo de release/keys por SO e upload APK.</li>
+<li>Admin-node: download APK personalizado e verificações.</li>
+<li>Portal-node: proxy Android e metadata por plataforma.</li>
+<li>Fed-portal: trocar card macOS por Android, inicialmente feature-flag/disabled até release Android publicado.</li>
+<li>APK Android: confirmação de colaborador e testes integrados.</li>
+<li>Staging E2E; somente depois habilitar Android em produção.</li>
+</ol>
+<p>Rollback: inativar apenas o release Android na API de releases; o Portal volta a desabilitar o card Android sem afetar Windows.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2235 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/agent-desktop/GUIA-RELEASE/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>GUIA RELEASE - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-de-release-manager-agent" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GUIA RELEASE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-requisitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ferramentas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ferramentas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acessos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acessos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-bump-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Bump de Versao
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-build-do-pacote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Build do Pacote
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Build do Pacote">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-manual-por-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build manual por componente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-verificar-checksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Verificar Checksums
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-testes-pre-regressivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Testes Pre-Regressivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-commit-e-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Commit e Tag
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-deploy-manager-srv-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Deploy manager-srv-admin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-deploy-manager-srv-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Deploy manager-srv-events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-upload-do-instalador-ao-servidor-de-atualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Upload do Instalador ao Servidor de Atualizacao
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Upload do Instalador ao Servidor de Atualizacao">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedimento-de-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedimento de upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-validacao-pos-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Validacao Pos-Deploy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-distribuicao-ao-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Distribuicao ao Cliente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencia-caminhos-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencia: Caminhos Importantes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentos-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentos Relacionados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-pre-release-antes-de-distribuir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist Pre-Release (antes de distribuir)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklist Pre-Release (antes de distribuir)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-codigo-e-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Codigo e Build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Configuracao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-testes-locais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Testes Locais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-pacote-de-instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pacote de Instalacao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-teste-de-instalacao-maquina-limpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Teste de Instalacao (Maquina Limpa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-teste-de-migracao-v1-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Teste de Migracao V1 → V2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-teste-de-desinstalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Teste de Desinstalacao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-teste-de-multi-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Teste de Multi-sessao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-teste-de-auto-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Teste de Auto-Update
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Seguranca
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-compatibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Compatibilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-tratamento-de-erros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Tratamento de Erros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-final-distribuicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Final + Distribuicao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-flags-nao-distribuir-se" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red Flags — NAO distribuir se
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<blockquote>
+<p><strong>STATUS:</strong> ATIVO
+<strong>DATA:</strong> 2026-06-11
+<strong>DONO:</strong> @Tony (TL)
+<strong>REVISADO POR:</strong> @Tony</p>
+</blockquote>
+<h1 id="guia-de-release-manager-agent">Guia de Release — Manager Agent<a class="headerlink" href="#guia-de-release-manager-agent" title="Permanent link">&para;</a></h1>
+<p><strong>Versao:</strong> 2.0.0
+<strong>Data:</strong> 2026-06-11
+<strong>Objetivo:</strong> Passo a passo completo para criar e publicar uma nova versao do Manager Agent V2.</p>
+<p><strong>Nota CI/CD:</strong> A automacao de build via GitHub Actions esta documentada em <code>../../../specs/MVP2/ci-cd-github-actions.md</code>. Quando implementada, os passos de build manual serao substituidos pelo pipeline automatico (GitHub Actions + ghcr.io + webhook Coolify).</p>
+<hr />
+<h2 id="indice">Indice<a class="headerlink" href="#indice" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#pre-requisitos">Pre-requisitos</a></li>
+<li><a href="#1-bump-de-versao">Bump de Versao</a></li>
+<li><a href="#2-build-do-pacote">Build do Pacote</a></li>
+<li><a href="#3-verificar-checksums">Verificar Checksums</a></li>
+<li><a href="#4-testes-pre-regressivos">Testes Pre-Regressivos</a></li>
+<li><a href="#5-commit-e-tag">Commit e Tag</a></li>
+<li><a href="#6-deploy-manager-srv-admin">Deploy manager-srv-admin</a></li>
+<li><a href="#7-deploy-manager-srv-events">Deploy manager-srv-events</a></li>
+<li><a href="#8-upload-do-instalador-ao-servidor-de-atualizacao">Upload do Instalador ao Servidor de Atualizacao</a></li>
+<li><a href="#9-validacao-pos-deploy">Validacao Pos-Deploy</a></li>
+<li><a href="#10-distribuicao-ao-cliente">Distribuicao ao Cliente</a></li>
+</ol>
+<hr />
+<h2 id="pre-requisitos">Pre-requisitos<a class="headerlink" href="#pre-requisitos" title="Permanent link">&para;</a></h2>
+<h3 id="ferramentas">Ferramentas<a class="headerlink" href="#ferramentas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] .NET 8 SDK instalado (<code>dotnet --version</code>)</li>
+<li>[ ] PowerShell 5.1 ou superior</li>
+<li>[ ] Inno Setup 6 instalado (necessario para <code>build-pacote-instalacao.ps1</code>)</li>
+<li>[ ] <code>git</code> instalado e configurado</li>
+<li>[ ] Acesso ao servidor de deploy (Hetzner + Coolify ou equivalente)</li>
+</ul>
+<h3 id="acessos">Acessos<a class="headerlink" href="#acessos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Acesso ao repositorio GitHub com permissao de push e criacao de tags</li>
+<li>[ ] Acesso ao painel de deploy de <code>manager-srv-admin</code> e <code>manager-srv-events</code></li>
+<li>[ ] Chave de ativacao UUID da empresa-alvo (para embutir no instalador, se aplicavel)</li>
+</ul>
+<hr />
+<h2 id="1-bump-de-versao">1. Bump de Versao<a class="headerlink" href="#1-bump-de-versao" title="Permanent link">&para;</a></h2>
+<p>Editar a propriedade <code>&lt;Version&gt;</code> nos <strong>sete</strong> projetos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>src\ManagerAgent.Configurator\ManagerAgent.Configurator.csproj
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>src\ManagerAgent.Installer\ManagerAgent.Installer.csproj
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>src\ManagerAgent.Service\ManagerAgent.Service.csproj
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>src\ManagerAgent.SessionWorker\ManagerAgent.SessionWorker.csproj
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>src\ManagerAgent.Shared\ManagerAgent.Shared.csproj
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>src\ManagerAgent.Tray\ManagerAgent.Tray.csproj
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>src\ManagerAgent.Watchdog\ManagerAgent.Watchdog.csproj
+</code></pre></div>
+<blockquote>
+<p><strong>Corrigido em 2026-08-24 (@Tony).</strong> Este trecho dizia "quatro projetos" e listava
+Service, SessionWorker, Shared e Installer. Sao <strong>sete</strong> — faltavam Configurator, Tray e
+Watchdog. Quem seguisse a lista antiga geraria um pacote com tres binarios na versao velha,
+<strong>inclusive o Watchdog</strong>, que e quem decide rollback e sticky comparando versao. Confira sempre
+com o comando abaixo em vez de confiar na lista:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Select-String</span> <span class="n">-Path</span> <span class="n">src</span><span class="p">\*\*.</span><span class="n">csproj</span> <span class="n">-Pattern</span> <span class="s1">'&lt;Version&gt;'</span>
+</code></pre></div>
+</blockquote>
+<p>Nao ha versao para editar no <code>instalador\ManagerAgent-v2.iss</code>: ele le a <code>ProductVersion</code> do
+<code>ManagerAgent.Service.exe</code> ja compilado e corta o <code>+hash</code> sozinho. O nome do pacote
+(<code>ManagerAgent-Setup-vX.Y.Z.exe</code>) sai dai.</p>
+<p>Alterar para a nova versao seguindo <a href="https://semver.org/">SemVer</a>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;Version&gt;</span>X.Y.Z<span class="nt">&lt;/Version&gt;</span>
+</code></pre></div>
+<p>Regra de versionamento:
+- <strong>MAJOR</strong> — quebras de compatibilidade com protocolo de pipe ou formato de config
+- <strong>MINOR</strong> — novas funcionalidades retrocompativeis
+- <strong>PATCH</strong> — correcoes de bugs</p>
+<hr />
+<h2 id="2-build-do-pacote">2. Build do Pacote<a class="headerlink" href="#2-build-do-pacote" title="Permanent link">&para;</a></h2>
+<p>A partir do diretorio raiz do repositorio (<code>manager-srv-agent</code>):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.\</span><span class="n">scripts</span><span class="p">\</span><span class="n">build</span><span class="p">\</span><span class="n">build-pacote-instalacao</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p>O script realiza as seguintes etapas:</p>
+<ol>
+<li>Publica <code>ManagerAgent.Service</code> em Release/win-x64 self-contained para <code>dist/service</code></li>
+<li>Publica <code>ManagerAgent.SessionWorker</code> em Release/win-x64 self-contained para <code>dist/worker</code></li>
+<li>Compila <code>ManagerAgent.Installer</code> (DLL auxiliar do Inno Setup)</li>
+<li>Executa o script Inno Setup para gerar o instalador EXE</li>
+<li>Gera o arquivo de checksum SHA-256 do EXE</li>
+</ol>
+<p>Verificar que o build terminou sem erros:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Build: 0 errors, 0 warnings
+</code></pre></div>
+<h3 id="build-manual-por-componente">Build manual por componente<a class="headerlink" href="#build-manual-por-componente" title="Permanent link">&para;</a></h3>
+<p>Caso necessario publicar individualmente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c"># Service</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">dotnet</span> <span class="n">publish</span> <span class="n">src</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Service</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Service</span><span class="p">.</span><span class="n">csproj</span> <span class="p">`</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">-c</span> <span class="n">Release</span> <span class="n">-r</span> <span class="n">win-x64</span> <span class="p">-</span><span class="n">-self-contained</span> <span class="n">true</span> <span class="n">-o</span> <span class="n">dist</span><span class="p">/</span><span class="n">service</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c"># SessionWorker</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">dotnet</span> <span class="n">publish</span> <span class="n">src</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">SessionWorker</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">SessionWorker</span><span class="p">.</span><span class="n">csproj</span> <span class="p">`</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">-c</span> <span class="n">Release</span> <span class="n">-r</span> <span class="n">win-x64</span> <span class="p">-</span><span class="n">-self-contained</span> <span class="n">true</span> <span class="n">-o</span> <span class="n">dist</span><span class="p">/</span><span class="n">worker</span>
+</code></pre></div>
+<hr />
+<h2 id="3-verificar-checksums">3. Verificar Checksums<a class="headerlink" href="#3-verificar-checksums" title="Permanent link">&para;</a></h2>
+<p>Confirmar que o arquivo de checksum foi gerado corretamente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">Get-Content</span> <span class="s2">"dist\checksum-vX.Y.Z.txt"</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c"># Deve exibir o hash SHA-256 do instalador EXE</span>
+</code></pre></div>
+<p>Comparar manualmente com o EXE gerado para validar integridade:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">Get-FileHash</span> <span class="s2">"dist\ManagerAgent-Installer-vX.Y.Z.exe"</span> <span class="n">-Algorithm</span> <span class="n">SHA256</span>
+</code></pre></div>
+<p>Os dois valores devem ser identicos.</p>
+<hr />
+<h2 id="4-testes-pre-regressivos">4. Testes Pre-Regressivos<a class="headerlink" href="#4-testes-pre-regressivos" title="Permanent link">&para;</a></h2>
+<p>Antes de fazer o release, executar os testes automatizados:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">dotnet</span> <span class="n">test</span> <span class="n">tests</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Service</span><span class="p">.</span><span class="n">Tests</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Service</span><span class="p">.</span><span class="n">Tests</span><span class="p">.</span><span class="n">csproj</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">dotnet</span> <span class="n">test</span> <span class="n">tests</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">SessionWorker</span><span class="p">.</span><span class="n">Tests</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">SessionWorker</span><span class="p">.</span><span class="n">Tests</span><span class="p">.</span><span class="n">csproj</span>
+</code></pre></div>
+<p>Todos os testes devem passar sem falhas.</p>
+<p>Em seguida, consultar <a href="../PLANO-TESTES-REGRESSIVOS/">PLANO-TESTES-REGRESSIVOS.md</a> para o roteiro completo de testes manuais em maquina limpa, incluindo:</p>
+<ul>
+<li>Instalacao limpa em VM ou maquina de teste Windows</li>
+<li>Verificacao que o Service e registrado e inicia automaticamente (Session 0)</li>
+<li>Verificacao que o SessionWorker e lancado pelo Service na sessao interativa</li>
+<li>Icone da bandeja aparece e menu responde conforme <code>menuVisivel</code></li>
+<li>Vinculacao do agente ao backend de staging via <code>AgentLinkService</code></li>
+<li>Captura de janelas ativas nos logs (<code>WindowActivityService</code>)</li>
+<li>Upload de eventos chegando ao backend (<code>UploadWorker</code>)</li>
+<li>Heartbeat registrado nos logs (<code>HeartbeatService</code>)</li>
+<li>Deteccao de ociosidade funcionando (<code>IdleMonitorService</code>)</li>
+<li>Comunicacao via Named Pipe (Service &lt;-&gt; SessionWorker) sem erros</li>
+<li>Fallback para <code>AutonomousBuffer</code> quando pipe nao disponivel</li>
+<li>Auto-atualizacao: simular endpoint retornando versao nova, verificar fluxo Plano A/B/C</li>
+<li>Desinstalacao limpa sem residuos em <code>C:\ProgramData\ManagerAgent</code></li>
+</ul>
+<hr />
+<h2 id="5-commit-e-tag">5. Commit e Tag<a class="headerlink" href="#5-commit-e-tag" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">git</span> <span class="n">add</span> <span class="n">src</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Service</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Service</span><span class="p">.</span><span class="n">csproj</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">git</span> <span class="n">add</span> <span class="n">src</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">SessionWorker</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">SessionWorker</span><span class="p">.</span><span class="n">csproj</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">git</span> <span class="n">add</span> <span class="n">src</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Shared</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Shared</span><span class="p">.</span><span class="n">csproj</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">git</span> <span class="n">add</span> <span class="n">src</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Installer</span><span class="p">/</span><span class="n">ManagerAgent</span><span class="p">.</span><span class="n">Installer</span><span class="p">.</span><span class="n">csproj</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">git</span> <span class="n">commit</span> <span class="n">-m</span> <span class="s2">"release: vX.Y.Z"</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">git</span> <span class="n">tag</span> <span class="n">vX</span><span class="p">.</span><span class="n">Y</span><span class="p">.</span><span class="n">Z</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">git</span> <span class="n">push</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">git</span> <span class="n">push</span> <span class="p">-</span><span class="n">-tags</span>
+</code></pre></div>
+<p>Usar o mesmo numero de versao do <code>.csproj</code> no nome da tag.</p>
+<hr />
+<h2 id="6-deploy-manager-srv-admin">6. Deploy manager-srv-admin<a class="headerlink" href="#6-deploy-manager-srv-admin" title="Permanent link">&para;</a></h2>
+<p>Acessar o painel Coolify (ou provedor de deploy configurado) e fazer deploy da imagem atualizada de <code>manager-srv-admin</code>.</p>
+<p>Apos o deploy, verificar saude:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>GET https://admin.imanagerportal.com/actuator/health
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a># Esperado: {"status":"UP"}
+</code></pre></div>
+<hr />
+<h2 id="7-deploy-manager-srv-events">7. Deploy manager-srv-events<a class="headerlink" href="#7-deploy-manager-srv-events" title="Permanent link">&para;</a></h2>
+<p>Acessar o painel e fazer deploy da imagem atualizada de <code>manager-srv-events</code>.</p>
+<p>Verificar saude:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>GET https://api-events.imanagerportal.com/actuator/health
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a># Esperado: {"status":"UP"}
+</code></pre></div>
+<hr />
+<h2 id="8-upload-do-instalador-ao-servidor-de-atualizacao">8. Upload do Instalador ao Servidor de Atualizacao<a class="headerlink" href="#8-upload-do-instalador-ao-servidor-de-atualizacao" title="Permanent link">&para;</a></h2>
+<p>O mecanismo de auto-atualizacao do agente funciona da seguinte forma:</p>
+<ul>
+<li>O <code>UpdateCheckerWorker</code> consulta <code>{baseUrlAdmin}/api/agente/atualizacoes/verificar</code> a cada 6 horas</li>
+<li>O endpoint retorna a versao mais recente disponivel e a URL de download do ZIP</li>
+<li>O <code>UpdateDownloader</code> baixa o ZIP e verifica o hash SHA-256</li>
+<li>O <code>UpdateApplier</code> aplica a atualizacao via:</li>
+<li><strong>Plano A</strong> — schtask com script PS1</li>
+<li><strong>Plano B</strong> — schtask com script BAT (fallback)</li>
+<li><strong>Plano C</strong> — rename in-process (fallback final)</li>
+<li>Arquivos de flag utilizados: <code>update-in-progress.flag</code>, <code>update-success.flag</code>, <code>update-failed.flag</code></li>
+</ul>
+<h3 id="procedimento-de-upload">Procedimento de upload<a class="headerlink" href="#procedimento-de-upload" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Empacotar o instalador EXE e o checksum em um ZIP de distribuicao (se aplicavel ao servidor)</li>
+<li>Fazer upload para o endpoint de distribuicao configurado no <code>manager-srv-admin</code></li>
+<li>Atualizar o registro de versao no backend para que o endpoint <code>/api/agente/atualizacoes/verificar</code> retorne a nova versao</li>
+</ol>
+<p>Verificar que o endpoint retorna a nova versao:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>GET https://admin.imanagerportal.com/api/agente/versao
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a># Esperado: {"versao":"X.Y.Z","url":"https://..."}
+</code></pre></div>
+<hr />
+<h2 id="9-validacao-pos-deploy">9. Validacao Pos-Deploy<a class="headerlink" href="#9-validacao-pos-deploy" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] Health check <code>manager-srv-admin</code> retorna <code>UP</code></li>
+<li>[ ] Health check <code>manager-srv-events</code> retorna <code>UP</code></li>
+<li>[ ] Endpoint de versao retorna a nova versao <code>X.Y.Z</code></li>
+<li>[ ] Vincular um dispositivo de teste ao backend de producao e verificar:</li>
+<li>[ ] Service inicia e registra no log: <code>[INF] [Service] [AgentLinkService] Dispositivo vinculado</code></li>
+<li>[ ] SessionWorker e lancado pelo Service e aparece na bandeja</li>
+<li>[ ] Upload de eventos chega ao banco (verificar via painel admin)</li>
+<li>[ ] Heartbeat registrado nos logs do worker</li>
+<li>[ ] Agentes existentes recebem a notificacao de nova versao em ate 6 horas</li>
+<li>[ ] Processo de auto-atualizacao concluido com sucesso (verificar <code>update-success.flag</code>)</li>
+</ul>
+<hr />
+<h2 id="10-distribuicao-ao-cliente">10. Distribuicao ao Cliente<a class="headerlink" href="#10-distribuicao-ao-cliente" title="Permanent link">&para;</a></h2>
+<p>Para instalacao em novos dispositivos ou reinstalacao:</p>
+<ol>
+<li>
+<p>Enviar o instalador EXE ao cliente:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>dist\ManagerAgent-Installer-vX.Y.Z.exe
+</code></pre></div></p>
+</li>
+<li>
+<p>Enviar o checksum correspondente para que o cliente possa validar a integridade:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>dist\checksum-vX.Y.Z.txt
+</code></pre></div></p>
+</li>
+<li>
+<p>Orientar o cliente a executar o instalador como Administrador:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Clicar com botao direito em ManagerAgent-Installer-vX.Y.Z.exe &gt; Executar como Administrador
+</code></pre></div></p>
+</li>
+<li>
+<p>O instalador registra o Windows Service, copia os binarios e executa o <code>SelfTest</code> pos-instalacao.</p>
+</li>
+<li>
+<p>Confirmar com o cliente que:</p>
+</li>
+<li>O icone da bandeja apareceu na sessao do usuario</li>
+<li>O agente foi vinculado com sucesso (verificar logs em <code>C:\ProgramData\ManagerAgent\logs\</code>)</li>
+</ol>
+<hr />
+<h2 id="referencia-caminhos-importantes">Referencia: Caminhos Importantes<a class="headerlink" href="#referencia-caminhos-importantes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Caminho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Configuracao</td>
+<td><code>C:\ProgramData\ManagerAgent\config.json</code></td>
+</tr>
+<tr>
+<td>Logs do Service</td>
+<td><code>C:\ProgramData\ManagerAgent\logs\service-YYYYMMDD.log</code></td>
+</tr>
+<tr>
+<td>Logs do Worker</td>
+<td><code>C:\ProgramData\ManagerAgent\logs\worker-YYYYMMDD.log</code></td>
+</tr>
+<tr>
+<td>Buffer SQLite</td>
+<td><code>C:\ProgramData\ManagerAgent\eventos.db</code></td>
+</tr>
+<tr>
+<td>Flag de atualizacao</td>
+<td><code>C:\ProgramData\ManagerAgent\update-*.flag</code></td>
+</tr>
+<tr>
+<td>Script de build</td>
+<td><code>scripts\build\build-pacote-instalacao.ps1</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="documentos-relacionados">Documentos Relacionados<a class="headerlink" href="#documentos-relacionados" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../PLANO-TESTES-REGRESSIVOS/">PLANO-TESTES-REGRESSIVOS.md</a> — Roteiro detalhado de testes manuais</li>
+<li><a href="../MANUAL-COMPLETO/">MANUAL-COMPLETO.md</a> — Referencia completa do agente (inclui arquitetura, instalacao, dev)</li>
+</ul>
+<hr />
+<h2 id="checklist-pre-release-antes-de-distribuir">Checklist Pre-Release (antes de distribuir)<a class="headerlink" href="#checklist-pre-release-antes-de-distribuir" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Absorvido do CHECKLIST-PRODUCAO.md em 2026-06-11.</p>
+</blockquote>
+<h3 id="1-codigo-e-build">1. Codigo e Build<a class="headerlink" href="#1-codigo-e-build" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Codigo compila sem erros: <code>dotnet build ManagerAgent.sln -c Release</code> → 0 erros, 0 avisos</li>
+<li>[ ] Todos os testes passam: <code>.\test-vinculacao.ps1</code> → todos [OK]</li>
+<li>[ ] Versao atualizada em <code>.csproj</code> (Service e SessionWorker): <code>&lt;Version&gt;X.Y.Z&lt;/Version&gt;</code></li>
+<li>[ ] Changelog atualizado no commit de release</li>
+</ul>
+<h3 id="2-configuracao">2. Configuracao<a class="headerlink" href="#2-configuracao" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] URLs de producao corretas em <code>ConfigPaths.cs</code>: <code>BaseUrlAdmin = "https://admin.imanagerportal.com"</code> e <code>BaseUrlEvents = "https://api-events.imanagerportal.com"</code></li>
+<li>[ ] Chave de ativacao valida (testar com <code>.\test-vinculacao.ps1</code>)</li>
+<li>[ ] Endpoint de auto-update configurado e respondendo</li>
+<li>[ ] <code>config.json</code> com estrutura correta (campos: <code>baseUrlAdmin</code>, <code>baseUrlEvents</code>, <code>chaveAtivacaoEmpresa</code>, <code>identificadorColaborador</code>, <code>instalacaoId</code>, <code>deviceToken</code>, <code>menuVisivel</code>)</li>
+</ul>
+<h3 id="3-testes-locais">3. Testes Locais<a class="headerlink" href="#3-testes-locais" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Servico inicia: <code>Start-Service ManagerAgent</code> + <code>Get-Service ManagerAgent</code> → Status <code>Running</code></li>
+<li>[ ] SessionWorker iniciado pelo servico: <code>Get-Process -Name "ManagerAgent.SessionWorker"</code> → ativo</li>
+<li>[ ] Captura janelas reais (log: <code>[INF] Evento de janela iniciado: chrome</code>)</li>
+<li>[ ] Upload funciona (log: <code>[INF] Upload realizado com sucesso</code>)</li>
+<li>[ ] Heartbeats sendo enviados (log: <code>[INF] Heartbeat ManagerAgent</code>)</li>
+<li>[ ] Deteccao de idle funciona (deixar idle 5 min, verificar logs)</li>
+<li>[ ] Logs escritos em ambos os arquivos (<code>service-YYYYMMDD.log</code> e <code>worker-YYYYMMDD.log</code>)</li>
+<li>[ ] Logs rotacionam diariamente</li>
+<li>[ ] Comunicacao via named pipe sem erros nos logs</li>
+</ul>
+<h3 id="4-pacote-de-instalacao">4. Pacote de Instalacao<a class="headerlink" href="#4-pacote-de-instalacao" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <code>.\build-pacote-instalacao.ps1</code> executa sem erros</li>
+<li>[ ] Instalador gerado: <code>instalador/ManagerAgent-Setup.exe</code> (~20-30 MB)</li>
+<li>[ ] Conteudo do instalador inclui todos os binarios e scripts de diagnostico</li>
+</ul>
+<h3 id="5-teste-de-instalacao-maquina-limpa">5. Teste de Instalacao (Maquina Limpa)<a class="headerlink" href="#5-teste-de-instalacao-maquina-limpa" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Executar <code>ManagerAgent-Setup.exe</code> como Admin → instalacao completa sem erros</li>
+<li>[ ] Binarios em <code>C:\Program Files\ManagerAgent\</code> + dados em <code>C:\ProgramData\ManagerAgent\</code></li>
+<li>[ ] Servico registrado: <code>Get-Service ManagerAgent</code> → <code>StartType: Automatic</code>, <code>Status: Running</code></li>
+<li>[ ] Recuperacao SCM configurada (1s, 5s, 30s)</li>
+<li>[ ] <code>config.json</code> criado com <code>instalacaoId</code> GUID + <code>deviceToken</code> criptografado DPAPI</li>
+<li>[ ] SessionWorker iniciado automaticamente</li>
+<li>[ ] <code>test-vinculacao.ps1</code> → tudo OK</li>
+<li>[ ] Logs mostram captura real de janelas + upload funciona</li>
+</ul>
+<h3 id="6-teste-de-migracao-v1-v2">6. Teste de Migracao V1 → V2<a class="headerlink" href="#6-teste-de-migracao-v1-v2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Instalar sobre maquina com V1 (se aplicavel)</li>
+<li>[ ] <code>MigrationV1ToV2</code> executada automaticamente</li>
+<li>[ ] Dados preservados (<code>config.json</code>, <code>buffer.db</code>, logs)</li>
+<li>[ ] Nova versao inicia corretamente com mesma vinculacao (mesmo <code>instalacaoId</code>)</li>
+<li>[ ] Nenhuma referencia ao executavel antigo remanescente</li>
+</ul>
+<h3 id="7-teste-de-desinstalacao">7. Teste de Desinstalacao<a class="headerlink" href="#7-teste-de-desinstalacao" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <code>"C:\Program Files\ManagerAgent\unins000.exe" /VERYSILENT</code> executa sem erros</li>
+<li>[ ] Servico parado e removido do SCM</li>
+<li>[ ] Processos encerrados (Service + SessionWorker)</li>
+<li>[ ] Binarios removidos de <code>C:\Program Files\ManagerAgent\</code></li>
+</ul>
+<h3 id="8-teste-de-multi-sessao">8. Teste de Multi-sessao<a class="headerlink" href="#8-teste-de-multi-sessao" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] 2+ usuarios logados simultaneamente → um SessionWorker por usuario ativo</li>
+<li>[ ] Logs de cada usuario separados</li>
+<li>[ ] Captura de janelas independente por sessao</li>
+</ul>
+<h3 id="9-teste-de-auto-update">9. Teste de Auto-Update<a class="headerlink" href="#9-teste-de-auto-update" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Agente verifica atualizacao a cada 6 horas (log: <code>[INF] Verificando atualizacoes</code>)</li>
+<li>[ ] Endpoint de atualizacao respondendo</li>
+<li>[ ] Mecanismo fallback (Plano A/B/C) configurado</li>
+<li>[ ] Atualizacao silenciosa sem interrupcao perceptivel</li>
+</ul>
+<h3 id="10-seguranca">10. Seguranca<a class="headerlink" href="#10-seguranca" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Nenhuma senha ou credencial hardcoded</li>
+<li>[ ] HTTPS obrigatorio em todas as chamadas ao backend</li>
+<li>[ ] DeviceToken criptografado com DPAPI (verificar <code>config.json</code>)</li>
+<li>[ ] Named pipe com ACL restrita (usuario da sessao + SYSTEM apenas)</li>
+<li>[ ] Servico rodando como SYSTEM</li>
+<li>[ ] Logs nao expõem dados sensiveis</li>
+<li>[ ] Sem debug leftovers (<code>Console.WriteLine</code>, <code>#if DEBUG</code>)</li>
+</ul>
+<h3 id="11-performance">11. Performance<a class="headerlink" href="#11-performance" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] CPU do servico em idle &lt; 1%: <code>Get-Process -Name "ManagerAgent.Service" | Select-Object CPU, WorkingSet</code></li>
+<li>[ ] CPU do SessionWorker em idle &lt; 1%</li>
+<li>[ ] RAM total (Service + SessionWorker) &lt; 100 MB em idle</li>
+<li>[ ] Sem memory leak (rodar 1 hora, RAM constante)</li>
+<li>[ ] Buffer SQLite nao cresce indefinidamente apos uploads bem-sucedidos</li>
+</ul>
+<h3 id="12-compatibilidade">12. Compatibilidade<a class="headerlink" href="#12-compatibilidade" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Funciona no Windows 10 (64-bit)</li>
+<li>[ ] Funciona no Windows 11 (64-bit)</li>
+<li>[ ] Funciona com UAC habilitado</li>
+<li>[ ] Funciona em conta de usuario padrao (SessionWorker)</li>
+<li>[ ] Funciona em multiplos monitores e com DPI scaling (125%, 150%)</li>
+</ul>
+<h3 id="13-tratamento-de-erros">13. Tratamento de Erros<a class="headerlink" href="#13-tratamento-de-erros" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Falha de rede nao crasha o agente (servico permanece <code>Running</code>)</li>
+<li>[ ] API offline nao impede captura local (eventos salvos no buffer SQLite)</li>
+<li>[ ] Erro no upload retenta automaticamente com backoff</li>
+<li>[ ] Colaborador invalido: log <code>[ERR] Colaborador nao existe</code></li>
+<li>[ ] Config invalido: log <code>[WRN] Configuracao incompleta</code></li>
+<li>[ ] Falha do SessionWorker e detectada e o servico reinicia o worker</li>
+</ul>
+<h3 id="14-final-distribuicao">14. Final + Distribuicao<a class="headerlink" href="#14-final-distribuicao" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Todos os arquivos no Git commitados e tag de versao criada: <code>git tag vX.Y.Z &amp;&amp; git push --tags</code></li>
+<li>[ ] Release notes escritas</li>
+<li>[ ] Instalador final: <code>instalador/ManagerAgent-Setup.exe</code></li>
+<li>[ ] SHA256 calculado: <code>Get-FileHash instalador\ManagerAgent-Setup.exe -Algorithm SHA256</code></li>
+<li>[ ] Arquivo enviado para distribuicao segura</li>
+<li>[ ] Suporte preparado para perguntas</li>
+</ul>
+<h3 id="red-flags-nao-distribuir-se">Red Flags — NAO distribuir se<a class="headerlink" href="#red-flags-nao-distribuir-se" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Codigo nao compila</li>
+<li>Teste de vinculacao falha</li>
+<li>Servico nao registra no SCM ou nao inicia automaticamente</li>
+<li>SessionWorker nao e lancado pelo servico</li>
+<li>Captura mostra "unknown" constantemente</li>
+<li>Upload nao funciona em teste</li>
+<li>RAM total &gt; 200 MB sem razao</li>
+<li>Agente crasha ao desconectar internet</li>
+<li>Instalador falha em maquina limpa</li>
+<li>Desinstalador nao remove o servico</li>
+<li>Logs com erros constantes</li>
+<li>DeviceToken nao esta criptografado com DPAPI</li>
+<li>Named pipe sem ACL restrita</li>
+</ul>
+<hr />
+<p><strong>Sign-Off</strong></p>
+<p>Checklist completado por: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Data: <strong><em>_</em></strong><strong><em>_</em></strong><em> | Versao: <strong><em>_</em></strong><strong><em>_</em></strong></em> | Assinatura: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p><em>Qualidade antes de velocidade. Melhor atrasar um dia do que distribuir com bugs.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

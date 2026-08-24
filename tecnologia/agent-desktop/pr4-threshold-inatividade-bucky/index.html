@@ -1,0 +1,1798 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação interna do Manager — SaaS B2B de gestão de produtividade com IA">
+      
+      
+      
+        <link rel="canonical" href="https://mvfranca65.github.io/manager-brain/tecnologia/agent-desktop/pr4-threshold-inatividade-bucky/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Pr4 threshold inatividade bucky - Manager Brain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pr-4-agent-c-threshold-inatividade-bucky" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../.." title="Manager Brain" class="md-header__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manager Brain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pr4 threshold inatividade bucky
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manager Brain" class="md-nav__button md-logo" aria-label="Manager Brain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manager Brain
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../INDEX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    O que é o Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/arquitetura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/padroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Times
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Times
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-tecnologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tecnologia (Marvel)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marketing (HIMYM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_shared/time-gestao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestão (Suits)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Gestor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Gestor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/colaboradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/hierarquia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features — Colaborador
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features — Colaborador
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-painel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Painel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meus-relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meus Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/meu-perfil/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meu Perfil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios — Detalhes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Relatórios — Detalhes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/contrato-relatorio-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contrato JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/historias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/relatorios/testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Componentes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donna
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Donna
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/pendencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pendências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../donna/notas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sprint/atual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-mudar-visao-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. O que mudar — visao geral
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-repo-e-contexto-critico-codigo-duplicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Repo e contexto critico — CODIGO DUPLICADO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-mapa-de-mudancas-arquivo-por-arquivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Mapa de mudancas — arquivo por arquivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Mapa de mudancas — arquivo por arquivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-manageragentuploadoptionscs-em-todas-as-copias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 ManagerAgentUploadOptions.cs (em todas as copias)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-appsettingsjson-em-todas-as-copias-com-bloco-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 appsettings.json (em todas as copias com bloco Capture)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-userstatusmanagercs-em-todas-as-copias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 UserStatusManager.cs (em todas as copias)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-userstatuscs-enum-em-todas-as-copias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 UserStatus.cs (enum — em todas as copias)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-getstatusstringuserstatus-ou-similar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 GetStatusString(UserStatus) ou similar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-versionamento-csproj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Versionamento (csproj)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Testes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-regras-absolutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Regras absolutas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-relatorio-que-voce-deve-devolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Relatorio que voce deve devolver
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-coordenacao-pos-pr4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Coordenacao pos-PR4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-estimativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Estimativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<blockquote>
+<p><strong>STATUS:</strong> PRONTO PARA INICIAR
+<strong>DATA:</strong> 2026-06-17
+<strong>DONO:</strong> @Bucky (Backend Dev C# / Agent Desktop)
+<strong>COORDENA:</strong> @Tony
+<strong>DEPENDE DE:</strong> PR 1 (srv-portal) e PR 2 (srv-events + V103) — ambos commitados localmente, aguardando push do Marcos</p>
+</blockquote>
+<h1 id="pr-4-agent-c-threshold-inatividade-bucky">PR 4 — Agent C# threshold inatividade (Bucky)<a class="headerlink" href="#pr-4-agent-c-threshold-inatividade-bucky" title="Permanent link">&para;</a></h1>
+<p>Este e o <strong>PR 4</strong> da spec <code>../../tecnologia/specs/2026-06-17-ajuste-thresholds-inatividade-design.md</code>. PR 1 (@Thor — srv-portal), PR 2 (@Thor — srv-events + V103 + 2 fixes srv-ia) e analise do @Jarvis ja estao concluidos. Falta o Agent C#.</p>
+<hr />
+<h2 id="1-o-que-mudar-visao-geral">1. O que mudar — visao geral<a class="headerlink" href="#1-o-que-mudar-visao-geral" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Hoje</th>
+<th>Depois</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATIVO (era "Online")</td>
+<td>&lt; 5 min sem atividade</td>
+<td>&lt; 5 min sem atividade</td>
+</tr>
+<tr>
+<td>PAUSA (era "Ausente" no Agent)</td>
+<td>5 a 30 min sem atividade</td>
+<td><strong>5 a 15 min sem atividade</strong></td>
+</tr>
+<tr>
+<td>AUSENTE (era "Inativo" no Agent)</td>
+<td>&gt; 30 min sem atividade</td>
+<td><strong>&gt; 15 min sem atividade</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Tres frentes:
+1. <strong>Threshold</strong>: AUSENTE de 30min → 15min
+2. <strong>Renomeacao</strong> de propriedades, enums e strings
+3. <strong>Strings serializadas</strong> enviadas ao backend mudam de "Online"/"Ausente"/"Inativo" para "ATIVO"/"PAUSA"/"AUSENTE"</p>
+<hr />
+<h2 id="2-repo-e-contexto-critico-codigo-duplicado">2. Repo e contexto critico — CODIGO DUPLICADO<a class="headerlink" href="#2-repo-e-contexto-critico-codigo-duplicado" title="Permanent link">&para;</a></h2>
+<p><strong>Caminho:</strong> <code>/Users/Olimpo/Documents/Athena/Projetos/Agente/manager-srv-agent/</code></p>
+<p><strong>Existem ate 3 copias</strong> do mesmo codigo:
+- <code>src/ManagerAgent.Service/</code> (servico Windows legado)
+- <code>src/ManagerAgent.SessionWorker/</code> (worker novo)
+- <code>src/ManagerAgent.Tray/</code> (tray icon — confirmar se tem <code>appsettings.json</code> afetado)</p>
+<p><strong>Comeca mapeando:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>/Users/Olimpo/Documents/Athena/Projetos/Agente/manager-srv-agent
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>find<span class="w"> </span>src<span class="w"> </span>-name<span class="w"> </span><span class="s2">"ManagerAgentUploadOptions.cs"</span><span class="w"> </span>-o<span class="w"> </span>-name<span class="w"> </span><span class="s2">"UserStatusManager.cs"</span><span class="w"> </span>-o<span class="w"> </span>-name<span class="w"> </span><span class="s2">"UserStatus.cs"</span><span class="w"> </span>-o<span class="w"> </span>-name<span class="w"> </span><span class="s2">"appsettings.json"</span>
+</code></pre></div></p>
+<p><strong>Voce precisa tocar em TODAS as copias</strong> — debito tecnico conhecido. Quando refatorarmos para projeto compartilhado (item MVP3), elimina-se a duplicacao.</p>
+<hr />
+<h2 id="3-mapa-de-mudancas-arquivo-por-arquivo">3. Mapa de mudancas — arquivo por arquivo<a class="headerlink" href="#3-mapa-de-mudancas-arquivo-por-arquivo" title="Permanent link">&para;</a></h2>
+<h3 id="31-manageragentuploadoptionscs-em-todas-as-copias">3.1 <code>ManagerAgentUploadOptions.cs</code> (em todas as copias)<a class="headerlink" href="#31-manageragentuploadoptionscs-em-todas-as-copias" title="Permanent link">&para;</a></h3>
+<p>Hoje (linhas 75-84):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">/// &lt;summary&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">/// Tempo (minutos) sem atividade para transição do status Online → Ausente.</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">/// Padrão: 5.</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">/// &lt;/summary&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LimiteAusenteMinutos</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">/// &lt;summary&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">/// Tempo (minutos) sem atividade para transição do status Ausente → Inativo.</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">/// Padrão: 30.</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">/// &lt;/summary&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LimiteInativoMinutos</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</code></pre></div></p>
+<p>Depois:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">/// &lt;summary&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">/// Tempo (minutos) sem atividade para transição do status Ativo → Pausa.</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">/// Padrão: 5.</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">/// &lt;/summary&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LimitePausaMinutos</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">/// &lt;summary&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">/// Tempo (minutos) sem atividade para transição do status Pausa → Ausente.</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">/// Padrão: 15.</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">/// &lt;/summary&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LimiteAusenteMinutos</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Atencao:</strong> <code>LimiteAusenteMinutos</code> MUDOU DE SEMANTICA — antes era a primeira transicao (5min); agora e a segunda (15min, antes era 30min <code>LimiteInativoMinutos</code>). Cuidado pra nao confundir.</p>
+<h3 id="32-appsettingsjson-em-todas-as-copias-com-bloco-capture">3.2 <code>appsettings.json</code> (em todas as copias com bloco Capture)<a class="headerlink" href="#32-appsettingsjson-em-todas-as-copias-com-bloco-capture" title="Permanent link">&para;</a></h3>
+<p>Antes:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">"LimiteAusenteMinutos"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">"LimiteInativoMinutos"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span>
+</code></pre></div></p>
+<p>Depois:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">"LimitePausaMinutos"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">"LimiteAusenteMinutos"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span>
+</code></pre></div></p>
+<p>Localizacao tipica: <code>src/ManagerAgent.Service/appsettings.json</code>, <code>src/ManagerAgent.SessionWorker/appsettings.json</code>. Se houver <code>appsettings.Development.json</code> ou <code>appsettings.Production.json</code>, atualizar tambem.</p>
+<h3 id="33-userstatusmanagercs-em-todas-as-copias">3.3 <code>UserStatusManager.cs</code> (em todas as copias)<a class="headerlink" href="#33-userstatusmanagercs-em-todas-as-copias" title="Permanent link">&para;</a></h3>
+<p><strong>Comentario de classe:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// ANTES</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">/// Transições: Online → Ausente (10min) → Inativo (30min total)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">// DEPOIS</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">/// Transições: Ativo → Pausa (5min) → Ausente (15min total)</span>
+</code></pre></div></p>
+<p><strong>Campos privados:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// ANTES</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">TimeSpan</span><span class="w"> </span><span class="n">_ausenteThreshold</span><span class="p">;</span><span class="w">  </span><span class="c1">// antigo 10/5min</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">TimeSpan</span><span class="w"> </span><span class="n">_inativoThreshold</span><span class="p">;</span><span class="w">  </span><span class="c1">// antigo 30min</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">// DEPOIS</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">TimeSpan</span><span class="w"> </span><span class="n">_pausaThreshold</span><span class="p">;</span><span class="w">    </span><span class="c1">// 5min</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">TimeSpan</span><span class="w"> </span><span class="n">_ausenteThreshold</span><span class="p">;</span><span class="w">  </span><span class="c1">// 15min — REUTILIZA O NOME, semantica nova</span>
+</code></pre></div></p>
+<p><strong>Construtor:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// ANTES</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">_ausenteThreshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromMinutes</span><span class="p">(</span><span class="n">opts</span><span class="p">.</span><span class="n">LimiteAusenteMinutos</span><span class="p">);</span><span class="w">  </span><span class="c1">// 5</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">_inativoThreshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromMinutes</span><span class="p">(</span><span class="n">opts</span><span class="p">.</span><span class="n">LimiteInativoMinutos</span><span class="p">);</span><span class="w">  </span><span class="c1">// 30</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">_currentStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UserStatus</span><span class="p">.</span><span class="n">Online</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1">// DEPOIS</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">_pausaThreshold</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromMinutes</span><span class="p">(</span><span class="n">opts</span><span class="p">.</span><span class="n">LimitePausaMinutos</span><span class="p">);</span><span class="w">    </span><span class="c1">// 5</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">_ausenteThreshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromMinutes</span><span class="p">(</span><span class="n">opts</span><span class="p">.</span><span class="n">LimiteAusenteMinutos</span><span class="p">);</span><span class="w">  </span><span class="c1">// 15</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">_currentStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UserStatus</span><span class="p">.</span><span class="n">Ativo</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Metodos <code>RegisterActivity</code> e <code>CheckIdleTransition</code>:</strong>
+- Todas as referencias a <code>UserStatus.Online</code> → <code>UserStatus.Ativo</code>
+- Todas as referencias a <code>UserStatus.Ausente</code> (status antigo, 5min) → <code>UserStatus.Pausa</code>
+- Todas as referencias a <code>UserStatus.Inativo</code> (status antigo, 30min) → <code>UserStatus.Ausente</code>
+- Mensagens de log: <code>"Idle timeout 30min"</code> → <code>"Idle timeout 15min"</code>; <code>"Idle timeout 10min"</code> → <code>"Idle timeout 5min"</code></p>
+<h3 id="34-userstatuscs-enum-em-todas-as-copias">3.4 <code>UserStatus.cs</code> (enum — em todas as copias)<a class="headerlink" href="#34-userstatuscs-enum-em-todas-as-copias" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// ANTES</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">public</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="n">UserStatus</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Online</span><span class="p">,</span><span class="w"> </span><span class="n">Ausente</span><span class="p">,</span><span class="w"> </span><span class="n">Inativo</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">// DEPOIS</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">public</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="n">UserStatus</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Ativo</span><span class="p">,</span><span class="w"> </span><span class="n">Pausa</span><span class="p">,</span><span class="w"> </span><span class="n">Ausente</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="35-getstatusstringuserstatus-ou-similar">3.5 <code>GetStatusString(UserStatus)</code> ou similar<a class="headerlink" href="#35-getstatusstringuserstatus-ou-similar" title="Permanent link">&para;</a></h3>
+<p>Localizar onde o status e serializado para enviar ao backend. Atualizar mapeamento:
+- <code>UserStatus.Ativo</code> → <code>"ATIVO"</code>
+- <code>UserStatus.Pausa</code> → <code>"PAUSA"</code>
+- <code>UserStatus.Ausente</code> → <code>"AUSENTE"</code></p>
+<p>(Uppercase. O backend <code>srv-events</code> ja aceita esses 3 valores diretamente — e tem aliases legados ONLINE→ATIVO, INATIVO→AUSENTE caso o Agent antigo envie algo no meio da transicao.)</p>
+<hr />
+<h2 id="4-versionamento-csproj">4. Versionamento (csproj)<a class="headerlink" href="#4-versionamento-csproj" title="Permanent link">&para;</a></h2>
+<p>Bumpar versao no <code>*.csproj</code> (ex: 1.4.0 → 1.5.0). Encontrar com:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">"*.csproj"</span><span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-l<span class="w"> </span><span class="s2">"Version"</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</code></pre></div></p>
+<p>Provavelmente em <code>ManagerAgent.Service.csproj</code>, <code>ManagerAgent.SessionWorker.csproj</code>, <code>ManagerAgent.Tray.csproj</code>.</p>
+<p><strong>NAO publique o instalador no Tigris S3 nem registre em <code>versoes_agente</code> no banco</strong> — isso depende de credenciais que o Marcos+@Vision controlam. Apenas bumpe o numero no codigo e avise no relatorio.</p>
+<hr />
+<h2 id="5-testes">5. Testes<a class="headerlink" href="#5-testes" title="Permanent link">&para;</a></h2>
+<p><code>dotnet test</code> precisa passar 100%. Tipicamente em <code>tests/ManagerAgent.Service.Tests/UserStatusManagerTests.cs</code> (ou equivalente).</p>
+<p>Atualizar:
+- Mocks de <code>IOptions&lt;ManagerAgentUploadOptions&gt;</code> para usar os novos nomes de propriedades.
+- Assertions de transicoes para verificar <code>UserStatus.Pausa</code> (em 5min) e <code>UserStatus.Ausente</code> (em 15min).
+- Strings esperadas em eventos de transicao serializados.</p>
+<hr />
+<h2 id="6-regras-absolutas">6. Regras absolutas<a class="headerlink" href="#6-regras-absolutas" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>NAO faca commit, NAO crie branch, NAO push.</strong> Marcos comita e pusha apos validar.</li>
+<li><strong>Limpeza:</strong> <code>bin/</code>, <code>obj/</code>, <code>.vs/</code> NAO entram em <code>git status --short</code>. Se aparecerem, confirmar <code>.gitignore</code> e fazer <code>git rm --cached -r bin/ obj/ .vs/</code> se necessario.</li>
+<li>NAO toque em outros services: srv-portal, srv-events, srv-admin, srv-ia, fed-portal estao fora do seu escopo.</li>
+<li>Idioma do codigo = ingles, comentarios e Javadoc = portugues (regra <code>_shared/padroes.md</code>).</li>
+<li><strong>Privacidade inegociavel</strong> (<code>_shared/lgpd-operacional.md</code>): nada de keylog, screenshot, audio, camera, conteudo de arquivos, URL completa.</li>
+</ol>
+<hr />
+<h2 id="7-relatorio-que-voce-deve-devolver">7. Relatorio que voce deve devolver<a class="headerlink" href="#7-relatorio-que-voce-deve-devolver" title="Permanent link">&para;</a></h2>
+<p>Quando terminar, devolva relatorio com:</p>
+<ol>
+<li><strong>Mapa de copias</strong> encontradas (caminhos dos arquivos duplicados que tocou)</li>
+<li><strong>Lista de arquivos modificados</strong> + 1 linha por arquivo</li>
+<li><strong>Diff resumido do <code>appsettings.json</code></strong> em cada copia</li>
+<li><strong>Output de <code>dotnet test</code></strong> (passou? falhou? quantos?)</li>
+<li><strong>Versao antiga e nova</strong> dos <code>.csproj</code> que voce bumpou</li>
+<li><strong><code>git status --short</code></strong> confirmando que <code>bin/obj/.vs</code> nao aparecem</li>
+<li><strong>Decisoes arquiteturais proprias</strong> que voce tomou (inconsistencia entre copias, codigo duplicado dificil de manter, etc.)</li>
+<li><strong>Perguntas pendentes</strong> se houver</li>
+</ol>
+<p>NAO comite. So devolve o relatorio.</p>
+<hr />
+<h2 id="8-coordenacao-pos-pr4">8. Coordenacao pos-PR4<a class="headerlink" href="#8-coordenacao-pos-pr4" title="Permanent link">&para;</a></h2>
+<p>Apos seu PR 4 estar pronto:
+- @Tony (eu) revisa o codigo
+- @Natasha valida QA (instalador + comportamento de status em maquina real)
+- Voce ajusta testes ate 100% verde
+- Marcos coordena com @Vision: publicacao no Tigris S3 + registro em <code>versoes_agente.obrigatoria=true</code> (sem clientes em prod, podemos marcar obrigatorio).</p>
+<hr />
+<h2 id="9-estimativa">9. Estimativa<a class="headerlink" href="#9-estimativa" title="Permanent link">&para;</a></h2>
+<p>~3h pelos numeros da spec (consolidado de T4.1 a T4.5; T4.6 a T4.9 ficam com Marcos+@Vision).</p>
+<hr />
+<h2 id="10-referencias">10. Referencias<a class="headerlink" href="#10-referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Spec mae: <code>../../tecnologia/specs/2026-06-17-ajuste-thresholds-inatividade-design.md</code></li>
+<li>PR 1 (Thor): srv-portal — commitado em <code>feature/threshold-inatividade-pr1</code> local</li>
+<li>PR 2 (Thor): srv-events + V103 + 2 fixes srv-ia — codigo no working tree, aguardando commit do Marcos</li>
+<li>Analise @Jarvis: secao 8 da spec mae confirma zero impacto no srv-ia</li>
+<li>Definicao do agent: <code>/Users/Olimpo/Documents/Athena/Projetos/.claude/agents/bucky.md</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
