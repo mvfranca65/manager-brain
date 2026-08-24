@@ -33,15 +33,24 @@ cenario fora do ICP, e qualquer coisa que o rollout em etapas (secao 4) consiga 
 
 ---
 
-## 2. O que segura — quatro itens
+## 2. O que segura — cinco itens
 
-| # | O que | Criterio | Dono | Feito quando |
-|---|---|---|---|---|
-| 1 | **Um item invalido derruba o lote inteiro no `IngestionService`** (`safeParse` no corpo todo) | A | @Shuri | O backend recusa item por item e aceita o resto do lote |
-| ~~2~~ | ~~`eventos_sessao` sem UNIQUE~~ | — | — | **REMOVIDO em 2026-08-24 por decisao do Marcos** — ver secao 3 |
-| 3a | **Ligar o rollback do auto-update ao backup que existe** | B | @Bucky | Instalacao real, versao que quebra no startup: o Service volta sozinho na versao anterior |
-| 3b | **Teste E2E de rollback rodando no CI** | B | @Bucky + @Vision | `e1-alt-rollback-crash.ps1` verde, contra a instalacao gerada pelo instalador de verdade |
-| 4 | **Senha do banco de staging trocada** | C | @Vision | Senha nova em uso, a antiga revogada |
+| # | O que | Criterio | Dono | Feito quando | Estado |
+|---|---|---|---|---|---|
+| 1 | **Um item invalido derruba o lote inteiro no `IngestionService`** (`safeParse` no corpo todo) | A | @Shuri | O backend recusa item por item e aceita o resto do lote | codigo pronto e publicado; sem teste em maquina |
+| ~~2~~ | ~~`eventos_sessao` sem UNIQUE~~ | — | — | **REMOVIDO em 2026-08-24 por decisao do Marcos** — ver secao 3 | — |
+| 3a | **Ligar o rollback do auto-update ao backup que existe** | B | @Bucky | Instalacao real, versao que quebra no startup: o Service volta sozinho na versao anterior | **fechado em 24/08** — mecanismo exercitado em maquina real pelo recall |
+| 3b | **Teste E2E de rollback rodando no CI** | B | @Bucky + @Vision | `e1-alt-rollback-crash.ps1` verde, contra a instalacao gerada pelo instalador de verdade | em aberto; falta decidir a maquina |
+| 4 | **Senha do banco de staging trocada** | C | @Vision | Senha nova em uso, a antiga revogada | em aberto; a senha passou pelo chat duas vezes |
+| **5** | **A telemetria do Watchdog nunca chega ao servidor** — o reporter procura o token em texto puro, que o `ConfigManager` apaga do disco ao criptografar; a requisicao sai sem autenticacao e volta 401 | **secao 4** | @Bucky | Um evento do Watchdog aceito pelo backend em maquina real, **e** falha de envio aparecendo como falha no log | **ACEITO em 2026-08-24 por decisao do Marcos**; em correcao |
+
+> **Sobre o criterio do item 5.** Ele nao encaixa em A, B nem C — nao perde dado, nao derruba a
+> frota, nao expoe credencial. Entrou por outro caminho: a **secao 4** deste documento diz que o
+> que encerra a lista e o rollout em etapas, e o criterio de avanco do rollout e *"telemetria
+> zero"*. Os eventos que nunca chegam sao exatamente os de seguranca de frota — volta automatica e
+> modo de emergencia. Zero garantido por construcao nao e zero medido. **E o primeiro item que
+> entra por proteger o mecanismo de encerramento, e nao por um dos tres criterios diretos.**
+> Detalhe completo no bloco "Item 5" no fim deste documento.
 
 ### Notas de cada um
 
@@ -212,3 +221,84 @@ maquina, e a regra 5.2 do `REGRAS-RELEASE` exige esse teste passando. @Tony sust
 `registro/2026-08-24-tarefa-bucky-R01-sticky.md`,
 `registro/2026-08-24-tarefa-shuri-R03-recall.md`,
 `registro/2026-08-24-tarefa-bucky-R03-recall-agent.md`.
+
+---
+
+## 24/08, fim da tarde — o mecanismo rodou em maquina real
+
+> Registro de @Tony. Marcos executou; @Tony acompanhou os logs ao vivo.
+> Evidencia crua em `C:\Temp\ManagerAgent-Tests\2026-08-24\C11-recall.txt`.
+
+**O recall de frota foi disparado de verdade e funcionou fim a fim.** E a primeira vez que a
+maquinaria de restauracao roda desde que existe.
+
+| Hora | O que |
+|---|---|
+| 14:43 | maquina chega na 1.5.14 pela **auto-atualizacao** (nao foi instalacao manual) |
+| 14:55:05 | Marcos revoga a 1.5.14; a ordem chega na primeira consulta, com o motivo integro |
+| 14:56:04 | Watchdog pega a marca — 59s, um ciclo de poll |
+| 14:56:05 | script de restauracao disparado; servicos param |
+| 14:56:47 | Service volta na 1.5.13 |
+| 14:56:51 | reconciliacao: `SwapDone=true ServiceRunning=true Desfecho=Success` |
+| 14:56:55 | nova consulta: **nao tenta reinstalar a 1.5.14** |
+
+**42 segundos sem captura. Nunca entrou em SOS.**
+
+### O que deixou de ser promessa e virou fato
+
+| | |
+|---|---|
+| Restauracao (a peca do item 3a) | roda, em instalacao real |
+| **R-02** | `ultimaVersaoQuebrada = 1.5.14+793e743…` — de manha esse campo nascia vazio |
+| Nome da pasta da versao ruim | `bin.failed-1.5.14+793e743…`, e nao `bin.failed-unknown` |
+| **R-01** | sticky de 24h gravado; a versao revogada nao foi reoferecida |
+| Dono unico da restauracao | o Service so marcou; o Watchdog executou — o desenho aprovado se sustentou |
+| Auto-update | duas vezes no dia, 1.5.12→1.5.13 e 1.5.13→1.5.14, com checksum conferido |
+
+**O item 3a pode ser dado como fechado em maquina.** O 3b **nao** — ele e o teste automatizado, e
+continua sem rodar. O que rodou hoje foi uma execucao manual, uma vez.
+
+---
+
+## Item 5 — **ACEITO em 2026-08-24 por decisao do Marcos**
+
+> Recomendado por @Tony, aceito pelo Marcos no mesmo dia. Consta na lista da secao 2.
+> A lista passa a ter **cinco** itens.
+
+**A telemetria do Watchdog nunca chega ao servidor.** Descoberto porque o recall rodou de verdade:
+
+```
+14:56:05 [Watchdog] WatchdogAudit: reported (evento=UPDATE_RECALL_TRIGGERED, status=401)
+```
+
+**Causa, rastreada no codigo:** o `ConfigManager` criptografa o token da maquina e **apaga o texto
+puro do disco** (`ConfigManager.cs:244` — `config.DeviceToken = null; // remove do disco`). O
+`HttpWatchdogAuditReporter` abre o `config.json` na mao e procura **so** o campo em texto puro
+(`HttpWatchdogAuditReporter.cs:117`). Nao acha, e entao **nem envia o cabecalho de autenticacao**.
+O Watchdog nao tem uma linha de DPAPI e nao referencia o `ConfigManager`.
+
+**Alcance:** nao e so o recall. Passam pelo mesmo reporter a volta automatica disparada, a volta
+automatica falhou, o recall disparado/falhou/recusado e a limpeza de artefatos. **O canal inteiro
+de telemetria do Watchdog esta morto, em silencio** — o codigo trata envio de audit como auxiliar
+e segue. O canal do Service funciona, porque usa o leitor certo; por isso ninguem notou.
+
+**Por que eu recomendo que segure.** Nao encaixa literalmente em A, B nem C: nao perde dado, nao
+derruba a frota, nao expoe credencial. Mas a **secao 4** deste documento diz que o que encerra a
+lista e o rollout em etapas, e o criterio de avanco dele e **"telemetria zero"**. Os eventos que
+faltam sao exatamente os de seguranca de frota. Se eles nunca chegam, o zero e garantido por
+construcao: a rede que torna aceitavel ir para producao com bug conhecido esta com o sensor
+desligado.
+
+| | |
+|---|---|
+| Dono | @Bucky (em correcao) |
+| Feito quando | um evento do Watchdog e aceito pelo backend em maquina real, e falha de envio aparece como falha no log |
+| Risco da correcao | o leitor compartilhado parece **escrever** ao carregar; usar sem cuidado poe Service e Watchdog gravando o mesmo arquivo sem trava |
+
+**Aceito pelo Marcos em 24/08.** A lista passa a ter cinco itens.
+
+### Setimo achado do mesmo padrao
+
+Nenhum dos sete defeitos do dia foi encontrado por teste automatizado. Todos por alguem abrindo o
+codigo, ou — este — por rodar o mecanismo de verdade uma unica vez. Os testes conferem que a
+chamada **foi feita**; nenhum confere que ela **foi aceita**.

@@ -1,9 +1,28 @@
-> **STATUS:** ATIVO
-> **DATA:** 2026-06-11
-> **DONO:** @Natasha (QA)
-> **REVISADO POR:** @Tony
+> **STATUS: HISTORICO — NAO E MAIS O ROTEIRO VIGENTE.**
+> **SUBSTITUIDO EM 2026-08-24 POR:** `registro/2026-08-24-regressivo-definitivo-agent.md`
+> **DATA ORIGINAL:** 2026-06-11 | **DONO:** @Natasha (QA) | **REVISADO POR:** @Tony
+>
+> ## Leia isto antes de usar qualquer coisa daqui
+>
+> Este plano foi absorvido pelo roteiro definitivo. **Nao o execute como esta** — ele tem tres
+> erros que reprovam produto correto, e eles ja foram corrigidos no roteiro novo:
+>
+> | Aqui | Certo |
+> |---|---|
+> | `R1.1.13` — recovery do SCM em `1s/5s/30s` | o instalador configura **`5s/10s/30s`** |
+> | `R1.1.6` — 5 scripts em `scripts\` | sao **6** (entraram `test-vinculacao` e `desvincular`) |
+> | Teste `10.1` — "Plan A = PS1 via schtasks" | Plan A e **WMI `Win32_Process.Create`** desde a v1.3.10; `schtasks` virou Plan B |
+>
+> Ele tambem nao conhece o servico `ManagerAgentWatchdog`, o rollback, o recall, o bloco de LGPD,
+> a vinculacao/Device JWT nem os limiares ATIVO/PAUSA/AUSENTE.
+>
+> **Por que ele foi mantido, e nao apagado:** (1) os ~500 identificadores `Rx.y.z` daqui sao citados
+> por numero em codigo de teste e em documentos historicos, e a secao 18 do roteiro novo faz o
+> de-para; (2) o bloco de **migracao V1 -> V2** (testes 11.1 a 11.3) **so existe aqui** — foi cortado
+> do roteiro novo por nao haver maquina V1 conhecida no escopo do canario, e **nao foi verificado**
+> se resta alguma na frota. Se aparecer uma, o cenario esta intacto abaixo.
 
-# Plano de Testes Regressivos - Manager Agent V2
+# Plano de Testes Regressivos - Manager Agent V2 (HISTORICO)
 
 **Versao:** 2.0.0
 **Data:** 2026-06-11
